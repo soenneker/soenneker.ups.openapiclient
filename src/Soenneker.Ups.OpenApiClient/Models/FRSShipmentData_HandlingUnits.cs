@@ -39,7 +39,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string Quantity { get; set; }
 #endif
         /// <summary>Handling Unit Type for Density based rating.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type? Type { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.FRSShipmentData_HandlingUnits"/> and sets the default values.
         /// </summary>
@@ -68,7 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "AdjustedHeight", n => { AdjustedHeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_AdjustedHeight>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_AdjustedHeight.CreateFromDiscriminatorValue); } },
                 { "Dimensions", n => { Dimensions = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Dimensions>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Dimensions.CreateFromDiscriminatorValue); } },
                 { "Quantity", n => { Quantity = n.GetStringValue(); } },
-                { "Type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type>(); } },
+                { "Type", n => { Type = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_AdjustedHeight>("AdjustedHeight", AdjustedHeight);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Dimensions>("Dimensions", Dimensions);
             writer.WriteStringValue("Quantity", Quantity);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type>("Type", Type);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type>("Type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
