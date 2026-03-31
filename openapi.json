@@ -894,8 +894,8 @@
                 "paymentInformation": {
                   "txnId": "TXN20250716001",
                   "method": "card",
-                  "issuerIdNumber": "411111",
-                  "lastDigits": "4242",
+                  "issuerIdNumber": 411111,
+                  "lastDigits": 4242,
                   "issuer": "Visa"
                 },
                 "products": [
@@ -904,7 +904,7 @@
                     "name": "Wireless Bluetooth Headphones"
                   }
                 ],
-                "orderValue": "199.99",
+                "orderValue": 199.99,
                 "currencyCode": "USD",
                 "orderId": "ORDER1001",
                 "orderCreatedAt": "2025-07-16T10:53:11.893Z"
@@ -936,23 +936,23 @@
                   "$ref": "#/components/schemas/ChargebackVerifyResponseV1"
                 },
                 "example": {
-                  "superScore": "500",
+                  "superScore": 500,
                   "decision": "review",
                   "categoryScores": {
                     "addressReliabilityScore": {
-                      "score": "520",
+                      "score": 520,
                       "rank": "medium"
                     },
                     "digitalIdentityScore": {
-                      "score": "999",
+                      "score": 999,
                       "rank": "high"
                     },
                     "proxyScore": {
-                      "score": "0",
+                      "score": 0,
                       "rank": "no_risk"
                     },
                     "paymentReliabilityScore": {
-                      "score": "140",
+                      "score": 140,
                       "rank": "low"
                     }
                   }
@@ -1698,7 +1698,7 @@
                             }
                           ],
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -1732,7 +1732,7 @@
                           "isRequired": "Y",
                           "requirementConditions": null,
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -1766,7 +1766,7 @@
                           "isRequired": "N",
                           "requirementConditions": null,
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -1800,7 +1800,7 @@
                           "isRequired": "N",
                           "requirementConditions": null,
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -1834,7 +1834,7 @@
                           "isRequired": "N",
                           "requirementConditions": null,
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -1868,7 +1868,7 @@
                           "isRequired": "N",
                           "requirementConditions": null,
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -1902,7 +1902,7 @@
                           "isRequired": "N",
                           "requirementConditions": null,
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -1936,7 +1936,7 @@
                           "isRequired": "N",
                           "requirementConditions": null,
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -1970,7 +1970,7 @@
                           "isRequired": "Y",
                           "requirementConditions": null,
                           "fieldType": "textbox",
-                          "allowedValueCount": "1",
+                          "allowedValueCount": 1,
                           "validation": {
                             "minLength": null,
                             "maxLength": null,
@@ -3282,7 +3282,7 @@
                         "state": "GA",
                         "zipCode": "30068",
                         "country": "US",
-                        "score": "988",
+                        "score": 988,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3299,7 +3299,7 @@
                         "state": "GA",
                         "zipCode": "30169",
                         "country": "US",
-                        "score": "870",
+                        "score": 870,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3316,7 +3316,7 @@
                         "state": "GA",
                         "zipCode": "20169",
                         "country": "US",
-                        "score": "650",
+                        "score": 650,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3333,7 +3333,7 @@
                         "state": "GA",
                         "zipCode": "20169",
                         "country": "US",
-                        "score": "350",
+                        "score": 350,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3350,7 +3350,7 @@
                         "state": "GA",
                         "zipCode": "20169",
                         "country": "US",
-                        "score": "250",
+                        "score": 250,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3374,7 +3374,7 @@
                     "value": {
                       "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
                       "title": "One or more validation errors occurred.",
-                      "status": "400",
+                      "status": 400,
                       "traceId": "00-c6bf8291d14e90ddd363d057cc837f39-897c1324fd309af2-00",
                       "errors": {
                         "State": [
@@ -3387,7 +3387,7 @@
                     "value": {
                       "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
                       "title": "One or more validation errors occurred.",
-                      "status": "400",
+                      "status": 400,
                       "traceId": "00-c6bf8291d14e90ddd363d057cc837f39-897c1324fd309af2-00",
                       "errors": {
                         "Street": [
@@ -3400,7 +3400,7 @@
                     "value": {
                       "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
                       "title": "One or more validation errors occurred.",
-                      "status": "400",
+                      "status": 400,
                       "traceId": "00-c6bf8291d14e90ddd363d057cc837f39-897c1324fd309af2-00",
                       "errors": {
                         "City": [
@@ -3413,7 +3413,7 @@
                     "value": {
                       "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
                       "title": "One or more validation errors occurred.",
-                      "status": "400",
+                      "status": 400,
                       "traceId": "00-c6bf8291d14e90ddd363d057cc837f39-897c1324fd309af2-00",
                       "errors": {
                         "ZipCode": [
@@ -3503,7 +3503,7 @@
                         "state": "GA",
                         "zipCode": "30068",
                         "country": "US",
-                        "score": "988",
+                        "score": 988,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3520,7 +3520,7 @@
                         "state": "GA",
                         "zipCode": "30169",
                         "country": "US",
-                        "score": "870",
+                        "score": 870,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3537,7 +3537,7 @@
                         "state": "GA",
                         "zipCode": "20169",
                         "country": "US",
-                        "score": "650",
+                        "score": 650,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3554,7 +3554,7 @@
                         "state": "GA",
                         "zipCode": "20169",
                         "country": "US",
-                        "score": "350",
+                        "score": 350,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3571,7 +3571,7 @@
                         "state": "GA",
                         "zipCode": "20169",
                         "country": "US",
-                        "score": "250",
+                        "score": 250,
                         "resiComFlag": "Residential"
                       }
                     }
@@ -3595,7 +3595,7 @@
                     "value": {
                       "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
                       "title": "One or more validation errors occurred.",
-                      "status": "400",
+                      "status": 400,
                       "traceId": "00-c6bf8291d14e90ddd363d057cc837f39-897c1324fd309af2-00",
                       "errors": {
                         "State": [
@@ -3608,7 +3608,7 @@
                     "value": {
                       "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
                       "title": "One or more validation errors occurred.",
-                      "status": "400",
+                      "status": 400,
                       "traceId": "00-c6bf8291d14e90ddd363d057cc837f39-897c1324fd309af2-00",
                       "errors": {
                         "Street": [
@@ -3621,7 +3621,7 @@
                     "value": {
                       "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
                       "title": "One or more validation errors occurred.",
-                      "status": "400",
+                      "status": 400,
                       "traceId": "00-c6bf8291d14e90ddd363d057cc837f39-897c1324fd309af2-00",
                       "errors": {
                         "City": [
@@ -3634,7 +3634,7 @@
                     "value": {
                       "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
                       "title": "One or more validation errors occurred.",
-                      "status": "400",
+                      "status": 400,
                       "traceId": "00-c6bf8291d14e90ddd363d057cc837f39-897c1324fd309af2-00",
                       "errors": {
                         "ZipCode": [
@@ -3813,7 +3813,7 @@
                         "transactionId": "ASR1212",
                         "statusCode": "000",
                         "statusMsg": "Success",
-                        "success": "true",
+                        "success": true,
                         "addrToken": "2",
                         "errors": null,
                         "warnings": null,
@@ -3826,8 +3826,8 @@
                             "totalCharge": "0.00",
                             "chargeCurrency": "USD",
                             "estDeliveryDate": "20250220",
-                            "residentialIndicator": "false",
-                            "additionalHandlingIndicator": "false",
+                            "residentialIndicator": false,
+                            "additionalHandlingIndicator": false,
                             "downgradeServiceCode": null,
                             "oversizeCode": null,
                             "serviceCode": "012",
@@ -3842,9 +3842,9 @@
                                 "transportationCharge": "0.00",
                                 "totalCharge": "21.00",
                                 "interceptOption": "AA",
-                                "displayShipperPaidInterceptCharges": "false",
-                                "shipperPaidInterceptCharges": "false",
-                                "successful": "true",
+                                "displayShipperPaidInterceptCharges": false,
+                                "shipperPaidInterceptCharges": false,
+                                "successful": true,
                                 "currencyCode": "USD"
                               },
                               {
@@ -3853,9 +3853,9 @@
                                 "transportationCharge": "0.00",
                                 "totalCharge": "21.00",
                                 "interceptOption": "FD",
-                                "displayShipperPaidInterceptCharges": "false",
-                                "shipperPaidInterceptCharges": "false",
-                                "successful": "true",
+                                "displayShipperPaidInterceptCharges": false,
+                                "shipperPaidInterceptCharges": false,
+                                "successful": true,
                                 "currencyCode": "USD"
                               },
                               {
@@ -3864,20 +3864,20 @@
                                 "transportationCharge": "0.00",
                                 "totalCharge": "21.00",
                                 "interceptOption": "RS",
-                                "displayShipperPaidInterceptCharges": "false",
-                                "shipperPaidInterceptCharges": "false",
-                                "successful": "true",
+                                "displayShipperPaidInterceptCharges": false,
+                                "shipperPaidInterceptCharges": false,
+                                "successful": true,
                                 "currencyCode": "USD"
                               }
                             ],
                             "shipperName": "ACME Inc.",
                             "preTaxTotalCharge": "25.00",
                             "taxDisclaimerIndicator": "NTA",
-                            "displayShipperPaidInterceptCharges": "false",
-                            "shipperPaidInterceptCharges": "false",
-                            "shipperPaidTransportationCharges": "false",
-                            "displayShipperPaidTransportationCharges": "false",
-                            "chargesPaidByThirdPartyShipper": "false",
+                            "displayShipperPaidInterceptCharges": false,
+                            "shipperPaidInterceptCharges": false,
+                            "shipperPaidTransportationCharges": false,
+                            "displayShipperPaidTransportationCharges": false,
+                            "chargesPaidByThirdPartyShipper": false,
                             "taxes": [
                               {
                                 "tax": "City",
@@ -3907,7 +3907,7 @@
                         "transactionId": "ASR1212",
                         "statusCode": "000",
                         "statusMsg": "Success",
-                        "success": "true",
+                        "success": true,
                         "addrToken": "2",
                         "errors": null,
                         "warnings": null,
@@ -3920,8 +3920,8 @@
                             "totalCharge": "40.00",
                             "chargeCurrency": "USD",
                             "estDeliveryDate": "20250220",
-                            "residentialIndicator": "false",
-                            "additionalHandlingIndicator": "false",
+                            "residentialIndicator": false,
+                            "additionalHandlingIndicator": false,
                             "downgradeServiceCode": null,
                             "oversizeCode": null,
                             "serviceCode": "012",
@@ -3932,11 +3932,11 @@
                             "shipperName": "ACME Inc.",
                             "preTaxTotalCharge": "25.00",
                             "taxDisclaimerIndicator": "NTA",
-                            "displayShipperPaidInterceptCharges": "false",
-                            "shipperPaidInterceptCharges": "false",
-                            "shipperPaidTransportationCharges": "false",
-                            "displayShipperPaidTransportationCharges": "false",
-                            "chargesPaidByThirdPartyShipper": "false",
+                            "displayShipperPaidInterceptCharges": false,
+                            "shipperPaidInterceptCharges": false,
+                            "shipperPaidTransportationCharges": false,
+                            "displayShipperPaidTransportationCharges": false,
+                            "chargesPaidByThirdPartyShipper": false,
                             "taxes": [
                               {
                                 "tax": "City",
@@ -4126,7 +4126,7 @@
                         "transactionId": "b2e514fc8a2",
                         "statusCode": "000",
                         "statusMsg": "SUCCESS",
-                        "success": "true",
+                        "success": true,
                         "errors": null,
                         "warnings": null,
                         "commonEligibilityMap": [
@@ -4138,14 +4138,14 @@
                               "cancelEligibility": "NOT_ELIGIBLE",
                               "dateOptionsforFutureDelivery": [
                                 {
-                                  "date": "20250110",
+                                  "date": 20250110,
                                   "dayOfWeekText": "Friday",
-                                  "dayOfWeekNumber": "06"
+                                  "dayOfWeekNumber": 6
                                 },
                                 {
-                                  "date": "20250115",
+                                  "date": 20250115,
                                   "dayOfWeekText": "Wednesday",
-                                  "dayOfWeekNumber": "04"
+                                  "dayOfWeekNumber": 4
                                 }
                               ]
                             }
@@ -4202,7 +4202,7 @@
                         "transactionId": "b2e514fc8a2",
                         "statusCode": "500",
                         "statusMsg": "ERROR",
-                        "success": "false",
+                        "success": false,
                         "errors": [
                           {
                             "errorCode": "500",
@@ -4366,7 +4366,7 @@
                   "emailAddress": "aups@ups.com",
                   "altTelephone": "+12345678",
                   "altPhoneExt": "+1",
-                  "displayPhoneNumber": "false"
+                  "displayPhoneNumber": false
                 },
                 "newDeliveryAddress": {
                   "addressNickName": "John's new address",
@@ -4424,7 +4424,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "true",
+                      "success": true,
                       "errors": null,
                       "subStatusCode": ""
                     }
@@ -4435,7 +4435,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "500",
                       "statusMsg": "System Error",
-                      "success": "false",
+                      "success": false,
                       "errors": [
                         {
                           "errorCode": "500",
@@ -4598,7 +4598,7 @@
                   "emailAddress": "aups@ups.com",
                   "altTelephone": "+3522098238",
                   "altPhoneExt": "+3",
-                  "displayPhoneNumber": "false"
+                  "displayPhoneNumber": false
                 }
               }
             }
@@ -4633,7 +4633,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "true",
+                      "success": true,
                       "errors": null,
                       "subStatusCode": ""
                     }
@@ -4644,7 +4644,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "false",
+                      "success": false,
                       "errors": [
                         {
                           "errorCode": "500",
@@ -4807,7 +4807,7 @@
                   "emailAddress": "aups@ups.com",
                   "altTelephone": "+19887654321",
                   "altPhoneExt": "+12",
-                  "displayPhoneNumber": "false"
+                  "displayPhoneNumber": false
                 },
                 "reasonForReturn": "AM"
               }
@@ -4843,7 +4843,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "true",
+                      "success": true,
                       "errors": null,
                       "subStatusCode": ""
                     }
@@ -4854,7 +4854,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "false",
+                      "success": false,
                       "errors": [
                         {
                           "errorCode": "500",
@@ -5017,7 +5017,7 @@
                   "emailAddress": "aups@ups.com",
                   "altTelephone": "+19887654321",
                   "altPhoneExt": "+12",
-                  "displayPhoneNumber": "false"
+                  "displayPhoneNumber": false
                 },
                 "deliveryDate": "20240904"
               }
@@ -5053,7 +5053,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "true",
+                      "success": true,
                       "errors": null,
                       "subStatusCode": ""
                     }
@@ -5064,7 +5064,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "false",
+                      "success": false,
                       "errors": [
                         {
                           "errorCode": "500",
@@ -5227,7 +5227,7 @@
                   "emailAddress": "aups@ups.com",
                   "altTelephone": "+19881234567",
                   "altPhoneExt": "+12",
-                  "displayPhoneNumber": "true"
+                  "displayPhoneNumber": true
                 }
               }
             }
@@ -5262,7 +5262,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "true",
+                      "success": true,
                       "errors": null,
                       "subStatusCode": ""
                     }
@@ -5273,7 +5273,7 @@
                       "transactionId": "ASR1212",
                       "statusCode": "000",
                       "statusMsg": "Success",
-                      "success": "false",
+                      "success": false,
                       "errors": [
                         {
                           "errorCode": "500",
@@ -5479,15 +5479,15 @@
                   "readyTime": "09:15:59",
                   "closeTime": "17:02:59",
                   "dropoffTime": "18:00:00",
-                  "weight": "54",
+                  "weight": 54,
                   "freightType": "PALLET",
-                  "isMetric": "false",
+                  "isMetric": false,
                   "orderDescription": "Shipment of electronics",
                   "shipperReference": "SHIP123",
                   "consigneeReference": "CON123",
                   "currencyCode": "USD",
-                  "requestPickup": "true",
-                  "requestBoL": "true",
+                  "requestPickup": true,
+                  "requestBoL": true,
                   "countryOfManufacture": [
                     "US",
                     "MX",
@@ -5496,11 +5496,11 @@
                   "items": [
                     {
                       "description": "Laptop",
-                      "count": "1",
-                      "length": "15",
-                      "width": "10",
-                      "height": "1",
-                      "weight": "5",
+                      "count": 1,
+                      "length": 15,
+                      "width": 10,
+                      "height": 1,
+                      "weight": 5,
                       "details": [
                         {
                           "key": "serialNumber",
@@ -5510,11 +5510,11 @@
                     },
                     {
                       "description": "Monitor",
-                      "count": "1",
-                      "length": "24",
-                      "width": "18",
-                      "height": "5",
-                      "weight": "15",
+                      "count": 1,
+                      "length": 24,
+                      "width": 18,
+                      "height": 5,
+                      "weight": 15,
                       "details": [
                         {
                           "key": "serialNumber",
@@ -5610,31 +5610,31 @@
                     "rates": [
                       {
                         "serviceType": "AM",
-                        "guaranteedDelivery": "true",
+                        "guaranteedDelivery": true,
                         "deliveryTime": "2025-05-14 12:00:00Z",
                         "holdAtAirportTime": "2025-05-14 17:00:00Z",
                         "totalCharge": {
                           "amount": "1170.71",
                           "currencyCode": "USD"
                         },
-                        "billableWeight": "151",
+                        "billableWeight": 151,
                         "weightUnit": "LBS",
-                        "dimensionalWeight": "47",
-                        "minimumBillableWeightApplied": "true",
-                        "contractRate": "false",
+                        "dimensionalWeight": 47,
+                        "minimumBillableWeightApplied": true,
+                        "contractRate": false,
                         "charges": [
                           {
                             "role": "Carrier",
                             "code": "FRT",
                             "description": "Air Freight Shipping - Included",
-                            "amount": "250.75",
+                            "amount": 250.75,
                             "currencyCode": "USD"
                           },
                           {
                             "role": "Agent",
                             "code": "FEE",
                             "description": "Fuel Surcharge - Included",
-                            "amount": "45.00",
+                            "amount": 45,
                             "currencyCode": "USD"
                           }
                         ]
@@ -5885,21 +5885,21 @@
                   "readyTime": "20:00:00",
                   "closeTime": "22:00:00",
                   "dropoffTime": "21:00:00",
-                  "weight": "54",
+                  "weight": 54,
                   "freightType": "PALLET",
                   "orderDescription": "WIDGETS",
                   "shipperReference": "ABC123",
                   "consigneeReference": "Z30010021",
                   "currency": "USD",
-                  "isMetric": "false",
+                  "isMetric": false,
                   "items": [
                     {
                       "itemDescription": "White Leather Men's Sneakers",
-                      "count": "1",
-                      "length": "10",
-                      "width": "18",
-                      "height": "10",
-                      "weight": "26",
+                      "count": 1,
+                      "length": 10,
+                      "width": 18,
+                      "height": 10,
+                      "weight": 26,
                       "details": [
                         {
                           "key": "CostPerUnit",
@@ -5913,11 +5913,11 @@
                     },
                     {
                       "itemDescription": "Green floral midi female dress.",
-                      "count": "1",
-                      "length": "10",
-                      "width": "18",
-                      "height": "10",
-                      "weight": "26"
+                      "count": 1,
+                      "length": 10,
+                      "width": 18,
+                      "height": 10,
+                      "weight": 26
                     }
                   ],
                   "countryOfManufacture": [
@@ -6120,7 +6120,7 @@
                         "readyTime": "11:00:00",
                         "closeTime": "17:00:00",
                         "dropoffTime": "11:10:00",
-                        "weight": "54",
+                        "weight": 54,
                         "freightType": "PALLET",
                         "orderDescription": "Apparels",
                         "shipperReference": "Z30010021",
@@ -6220,12 +6220,12 @@
                           }
                         ],
                         "rates": {
-                          "amount": "1526.74",
+                          "amount": 1526.74,
                           "currencyCode": "USD"
                         },
                         "sortCode": "U-BOS",
                         "gateway": "ATL",
-                        "count": "2",
+                        "count": 2,
                         "labelService": "ND",
                         "serviceDesc": "UPS Next Day Air Freight - NGS"
                       }
@@ -7032,31 +7032,31 @@
                           "countryCode": "US"
                         },
                         "shipDate": "2025-07-24",
-                        "statusCode": "8",
+                        "statusCode": 8,
                         "status": "Posted",
                         "description": "LOTS OF STUFF",
                         "manifestNumber": "M934567890",
                         "shipperReference": "SHIPPER REF",
                         "consigneeReference": "CONSIGNEE REF",
-                        "isMetric": "true",
+                        "isMetric": true,
                         "items": {
-                          "totalWeight": "14",
+                          "totalWeight": 14,
                           "weightUnit": "LB",
-                          "totalPieceCount": "2",
+                          "totalPieceCount": 2,
                           "item": [
                             {
-                              "count": "1",
-                              "length": "10",
-                              "width": "10",
-                              "height": "10",
-                              "weight": "10"
+                              "count": 1,
+                              "length": 10,
+                              "width": 10,
+                              "height": 10,
+                              "weight": 10
                             },
                             {
-                              "count": "1",
-                              "length": "10",
-                              "width": "10",
-                              "height": "10",
-                              "weight": "10"
+                              "count": 1,
+                              "length": 10,
+                              "width": 10,
+                              "height": 10,
+                              "weight": 10
                             }
                           ]
                         }
@@ -7393,7 +7393,7 @@
                         "readyTime": "11:00:00",
                         "closeTime": "17:00:00",
                         "dropoffTime": "11:10:00",
-                        "weight": "54",
+                        "weight": 54,
                         "freightType": "PALLET",
                         "orderDescription": "Apparels",
                         "shipperReference": "Z30010021",
@@ -7493,12 +7493,12 @@
                           }
                         ],
                         "rates": {
-                          "amount": "1526.74",
+                          "amount": 1526.74,
                           "currencyCode": "USD"
                         },
                         "sortCode": "U-BOS",
                         "gateway": "ATL",
-                        "count": "2",
+                        "count": 2,
                         "labelService": "ND",
                         "serviceDesc": "UPS Next Day Air Freight - NGS"
                       }
@@ -7745,8 +7745,8 @@
             "description": "The flag indicating whether a manifest should be generated.",
             "schema": {
               "type": "boolean",
-              "default": "true",
-              "example": "true"
+              "default": true,
+              "example": true
             }
           },
           {
@@ -7814,9 +7814,9 @@
                   "response": {
                     "account": "123456789",
                     "pickupDate": "2025-07-24",
-                    "shipmentCount": "1",
-                    "pieceCount": "2",
-                    "weight": "200",
+                    "shipmentCount": 1,
+                    "pieceCount": 2,
+                    "weight": 200,
                     "weightUnit": "LBS",
                     "manifest": {
                       "manifestNumber": "M810000091",
@@ -7832,11 +7832,11 @@
                       },
                       "shipments": [
                         {
-                          "number": "1",
+                          "number": 1,
                           "shipmentNumber": "9100010271",
                           "serviceType": "AM",
                           "paymentType": "OTH/THD",
-                          "weight": "54",
+                          "weight": 54,
                           "currency": "USD",
                           "shipperReference": "36566355",
                           "consigneeReference": "BATCH NO: B35",
@@ -7858,49 +7858,49 @@
                           {
                             "serviceCode": "CX",
                             "serviceName": "UPS Express® Freight",
-                            "freightChargesAmount": "24.45",
-                            "surchargesAmount": "45.87",
-                            "addedChargesAmount": "33.2",
-                            "billedAmount": "55",
-                            "shipmentCount": "1",
-                            "itemCount": "1",
-                            "totalWeight": "20",
-                            "pieceCount": "2"
+                            "freightChargesAmount": 24.45,
+                            "surchargesAmount": 45.87,
+                            "addedChargesAmount": 33.2,
+                            "billedAmount": 55,
+                            "shipmentCount": 1,
+                            "itemCount": 1,
+                            "totalWeight": 20,
+                            "pieceCount": 2
                           },
                           {
                             "serviceCode": "D2",
                             "serviceName": "UPS 2nd Day Air® Freight NGS",
-                            "freightChargesAmount": "24.45",
-                            "surchargesAmount": "45.87",
-                            "addedChargesAmount": "33.2",
-                            "billedAmount": "45.2",
-                            "shipmentCount": "1",
-                            "itemCount": "1",
-                            "totalWeight": "20",
-                            "pieceCount": "2"
+                            "freightChargesAmount": 24.45,
+                            "surchargesAmount": 45.87,
+                            "addedChargesAmount": 33.2,
+                            "billedAmount": 45.2,
+                            "shipmentCount": 1,
+                            "itemCount": 1,
+                            "totalWeight": 20,
+                            "pieceCount": 2
                           }
                         ],
                         "serviceTotal": {
-                          "freightChargesAmount": "24.45",
-                          "surchargesAmount": "45.87",
-                          "addedChargesAmount": "33.2",
-                          "billedAmount": "100.2",
-                          "shipmentCount": "1",
-                          "itemCount": "1",
-                          "totalWeight": "20",
-                          "pieceCount": "4"
+                          "freightChargesAmount": 24.45,
+                          "surchargesAmount": 45.87,
+                          "addedChargesAmount": 33.2,
+                          "billedAmount": 100.2,
+                          "shipmentCount": 1,
+                          "itemCount": 1,
+                          "totalWeight": 20,
+                          "pieceCount": 4
                         },
                         "dailyPickupTotals": {
-                          "shipmentCount": "1",
-                          "itemCount": "1",
-                          "totalWeight": "20",
-                          "pieceCount": "4"
+                          "shipmentCount": 1,
+                          "itemCount": 1,
+                          "totalWeight": 20,
+                          "pieceCount": 4
                         },
                         "currentPickupTotals": {
-                          "shipmentCount": "1",
-                          "itemCount": "1",
-                          "totalWeight": "20",
-                          "pieceCount": "4"
+                          "shipmentCount": 1,
+                          "itemCount": 1,
+                          "totalWeight": 20,
+                          "pieceCount": 4
                         }
                       }
                     },
@@ -8429,26 +8429,26 @@
                   "readyTime": "09:00:00",
                   "closeTime": "17:00:00",
                   "dropoffTime": "16:00:00",
-                  "weight": "25.5",
+                  "weight": 25.5,
                   "freightType": "PALLET",
-                  "isMetric": "true",
+                  "isMetric": true,
                   "orderDescription": "Electronics shipment",
                   "shipperReference": "REF123",
                   "consigneeReference": "CREF456",
                   "currency": "USD",
-                  "requestPickup": "true",
-                  "requestBoL": "false",
+                  "requestPickup": true,
+                  "requestBoL": false,
                   "countryOfManufacture": [
                     "US"
                   ],
                   "items": [
                     {
                       "description": "Laptop",
-                      "count": "10",
-                      "length": "38.5",
-                      "width": "25.0",
-                      "height": "2.5",
-                      "weight": "2.0",
+                      "count": 10,
+                      "length": 38.5,
+                      "width": 25,
+                      "height": 2.5,
+                      "weight": 2,
                       "details": [
                         {
                           "key": "serialNumber",
@@ -8458,11 +8458,11 @@
                     },
                     {
                       "description": "Monitor",
-                      "count": "5",
-                      "length": "60.0",
-                      "width": "35.0",
-                      "height": "8.0",
-                      "weight": "5.5",
+                      "count": 5,
+                      "length": 60,
+                      "width": 35,
+                      "height": 8,
+                      "weight": 5.5,
                       "details": [
                         {
                           "key": "serialNumber",
@@ -8605,29 +8605,29 @@
                     "rates": [
                       {
                         "serviceType": "AM",
-                        "guaranteedDelivery": "true",
+                        "guaranteedDelivery": true,
                         "deliveryTime": "2025-08-12T10:00:00Z",
                         "holdAtAirportTime": "2025-08-12T12:00:00Z",
-                        "totalCharge": "150.75",
+                        "totalCharge": 150.75,
                         "currency": "USD",
-                        "billableWeight": "30.0",
+                        "billableWeight": 30,
                         "weightUnit": "KG",
-                        "dimensionalWeight": "28.0",
-                        "minimumBillableWeightApplied": "false",
-                        "contractRate": "false",
+                        "dimensionalWeight": 28,
+                        "minimumBillableWeightApplied": false,
+                        "contractRate": false,
                         "charges": [
                           {
                             "role": "SHPR",
                             "code": "FRT",
                             "description": "Freight Charge",
-                            "amount": "120.00",
+                            "amount": 120,
                             "currency": "USD"
                           },
                           {
                             "role": "SHPR",
                             "code": "FSC",
                             "description": "Fuel Surcharge",
-                            "amount": "30.75",
+                            "amount": 30.75,
                             "currency": "USD"
                           }
                         ]
@@ -8874,9 +8874,9 @@
                       "movementType": "DTD",
                       "movementTypeCode": "DTA",
                       "rateType": "Market",
-                      "transitTime": "16",
+                      "transitTime": 16,
                       "validTill": "2024-12-24T00:00:00Z",
-                      "validity": "7",
+                      "validity": 7,
                       "portOfLoad": "DEP01",
                       "portOfDischarge": "USP0B",
                       "createdDate": "2024-12-17T05:19:25.7966667Z",
@@ -8897,7 +8897,7 @@
                         {
                           "type": "SHPR",
                           "accountNumber": null,
-                          "isPayor": "true",
+                          "isPayor": true,
                           "contactDetail": {
                             "name": null,
                             "emailAddress": null,
@@ -8922,7 +8922,7 @@
                         {
                           "type": "CONS",
                           "accountNumber": null,
-                          "isPayor": "false",
+                          "isPayor": false,
                           "contactDetail": {
                             "name": null,
                             "emailAddress": null,
@@ -8947,24 +8947,24 @@
                       ],
                       "cargoDetails": {
                         "insuredValueCurrency": "USD",
-                        "insuredValue": "5600",
+                        "insuredValue": 5600,
                         "customsValueCurrency": "USD",
-                        "customsValue": "5600",
+                        "customsValue": 5600,
                         "commodityName": "Leather Dressings",
                         "fclCargoItems": [ ],
                         "cargoItems": [
                           {
-                            "quantity": "11",
+                            "quantity": 11,
                             "packageType": "Pallets",
                             "packageTypeCode": "PLT",
                             "weightDetail": {
-                              "weight": "12",
+                              "weight": 12,
                               "unitOfMeasurement": "kg"
                             },
                             "dimensions": {
-                              "length": "1.1",
-                              "width": "1.1",
-                              "height": "0.2",
+                              "length": 1.1,
+                              "width": 1.1,
+                              "height": 0.2,
                               "unitOfMeasurement": "M"
                             }
                           }
@@ -8982,49 +8982,49 @@
                             {
                               "chargeType": "OF1",
                               "description": "OCEAN FRT. LCL",
-                              "chargeAmount": "1153.53",
+                              "chargeAmount": 1153.53,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "774",
                               "description": "FUEL SURCHARGE - DEST",
-                              "chargeAmount": "346.06",
+                              "chargeAmount": 346.06,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "PU",
                               "description": "PICK UP",
-                              "chargeAmount": "215.38",
+                              "chargeAmount": 215.38,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "90",
                               "description": "EXPORT CUSTOMS CLEARANCE FEE",
-                              "chargeAmount": "59.23",
+                              "chargeAmount": 59.23,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "D95",
                               "description": "ISF FILING FEE NVO",
-                              "chargeAmount": "50",
+                              "chargeAmount": 50,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "777",
                               "description": "FUEL SURCHARGE - ORIG",
-                              "chargeAmount": "43.08",
+                              "chargeAmount": 43.08,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "568",
                               "description": "AMS FEE",
-                              "chargeAmount": "35",
+                              "chargeAmount": 35,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "IN",
                               "description": "INSURANCE",
-                              "chargeAmount": "25",
+                              "chargeAmount": 25,
                               "currency": "USD"
                             }
                           ]
@@ -9035,7 +9035,7 @@
                             {
                               "chargeType": "07",
                               "description": "CUSTOMS BROKERAGE CHARGE - DEST",
-                              "chargeAmount": "145",
+                              "chargeAmount": 145,
                               "currency": "USD"
                             }
                           ]
@@ -9265,9 +9265,9 @@
                   "response": {
                     "account": "123456789",
                     "pickupDate": "2025-07-24",
-                    "shipmentCount": "1",
-                    "pieceCount": "2",
-                    "weight": "200",
+                    "shipmentCount": 1,
+                    "pieceCount": 2,
+                    "weight": 200,
                     "weightUnit": "LBS",
                     "manifest": {
                       "manifestNumber": "M810000091",
@@ -9285,11 +9285,11 @@
                       },
                       "shipments": [
                         {
-                          "number": "1",
+                          "number": 1,
                           "shipmentNumber": "9100010271",
                           "serviceType": "AM",
                           "paymentType": "OTH/THD",
-                          "weight": "54",
+                          "weight": 54,
                           "orderDescription": "Lots of Stuff",
                           "currency": "USD",
                           "shipperReference": "Z30010021",
@@ -9312,49 +9312,49 @@
                           {
                             "serviceCode": "CX",
                             "serviceName": "UPS Express® Freight",
-                            "freightChargesAmount": "24.45",
-                            "surchargesAmount": "45.87",
-                            "addedChargesAmount": "33.2",
-                            "billedAmount": "55",
-                            "shipmentCount": "1",
-                            "itemCount": "1",
-                            "totalWeight": "20",
-                            "pieceCount": "2"
+                            "freightChargesAmount": 24.45,
+                            "surchargesAmount": 45.87,
+                            "addedChargesAmount": 33.2,
+                            "billedAmount": 55,
+                            "shipmentCount": 1,
+                            "itemCount": 1,
+                            "totalWeight": 20,
+                            "pieceCount": 2
                           },
                           {
                             "serviceCode": "D2",
                             "serviceName": "UPS 2nd Day Air® Freight NGS",
-                            "freightChargesAmount": "24.45",
-                            "surchargesAmount": "45.87",
-                            "addedChargesAmount": "33.2",
-                            "billedAmount": "45.2",
-                            "shipmentCount": "1",
-                            "itemCount": "1",
-                            "totalWeight": "20",
-                            "pieceCount": "2"
+                            "freightChargesAmount": 24.45,
+                            "surchargesAmount": 45.87,
+                            "addedChargesAmount": 33.2,
+                            "billedAmount": 45.2,
+                            "shipmentCount": 1,
+                            "itemCount": 1,
+                            "totalWeight": 20,
+                            "pieceCount": 2
                           }
                         ],
                         "serviceTotal": {
-                          "freightChargesAmount": "24.45",
-                          "surchargesAmount": "45.87",
-                          "addedChargesAmount": "33.2",
-                          "billedAmount": "100.2",
-                          "shipmentCount": "1",
-                          "itemCount": "1",
-                          "totalWeight": "20",
-                          "pieceCount": "2"
+                          "freightChargesAmount": 24.45,
+                          "surchargesAmount": 45.87,
+                          "addedChargesAmount": 33.2,
+                          "billedAmount": 100.2,
+                          "shipmentCount": 1,
+                          "itemCount": 1,
+                          "totalWeight": 20,
+                          "pieceCount": 2
                         },
                         "dailyPickupTotals": {
-                          "shipmentCount": "1",
-                          "itemCount": "1",
-                          "totalWeight": "20",
-                          "pieceCount": "2"
+                          "shipmentCount": 1,
+                          "itemCount": 1,
+                          "totalWeight": 20,
+                          "pieceCount": 2
                         },
                         "currentPickupTotals": {
-                          "shipmentCount": "1",
-                          "itemCount": "1",
-                          "totalWeight": "20",
-                          "pieceCount": "2"
+                          "shipmentCount": 1,
+                          "itemCount": 1,
+                          "totalWeight": 20,
+                          "pieceCount": 2
                         }
                       }
                     },
@@ -11513,48 +11513,48 @@
                 },
                 "shipmentDetails": {
                   "insuredValueCurrency": "USD",
-                  "insuredValue": "0",
+                  "insuredValue": 0,
                   "customsValueCurrency": "USD",
-                  "customsValue": "0",
+                  "customsValue": 0,
                   "commodityName": "Book",
                   "cargoItems": [
                     {
-                      "quantity": "1",
+                      "quantity": 1,
                       "packageType": "Pallet",
                       "packageTypeCode": "PLT",
                       "weight": {
-                        "weight": "5",
+                        "weight": 5,
                         "unitOfMeasurement": "LB"
                       },
                       "dimensions": {
-                        "length": "3",
-                        "width": "8",
-                        "height": "3",
+                        "length": 3,
+                        "width": 8,
+                        "height": 3,
                         "unitOfMeasurement": "in"
                       },
                       "fclCargoItems": [ ]
                     },
                     {
-                      "quantity": "1",
+                      "quantity": 1,
                       "packageType": "Pallet",
                       "packageTypeCode": "PLT",
                       "weight": {
-                        "weight": "2",
+                        "weight": 2,
                         "unitOfMeasurement": "LB"
                       },
                       "dimensions": {
-                        "length": "1",
-                        "width": "8",
-                        "height": "4",
+                        "length": 1,
+                        "width": 8,
+                        "height": 4,
                         "unitOfMeasurement": "in"
                       },
                       "fclCargoItems": [ ]
                     }
                   ],
-                  "isHazmat": "true",
-                  "isReefer": "true",
-                  "isLithium": "true",
-                  "isRestricted": "true",
+                  "isHazmat": true,
+                  "isReefer": true,
+                  "isLithium": true,
+                  "isRestricted": true,
                   "isStackable": "N",
                   "isForkliftable": "N",
                   "isTiltable": "N"
@@ -11672,12 +11672,12 @@
                       "quoteId": "AEA10002864",
                       "status": "ShipmentPending",
                       "serviceType": "DF",
-                      "transitTime": "3",
+                      "transitTime": 3,
                       "serviceLine": "Air",
                       "serviceGroup": "NAAF",
                       "confirmationId": "326250024",
                       "createDate": "2025-11-22T15:48:54.8774961Z",
-                      "netTotal": "0",
+                      "netTotal": 0,
                       "validTill": "0001-01-01T00:00:00Z",
                       "originPort": {
                         "code": "",
@@ -11692,15 +11692,15 @@
                         "rateType": "Market",
                         "message": "",
                         "currencyCode": "USD",
-                        "actualTotalPrice": "290.26",
-                        "netTotalPrice": "290.26",
+                        "actualTotalPrice": 290.26,
+                        "netTotalPrice": 290.26,
                         "discountDetail": {
-                          "discount": "0",
-                          "discountPercent": "0",
+                          "discount": 0,
+                          "discountPercent": 0,
                           "discountValidTill": "2025-12-31T00:00:00Z"
                         }
                       },
-                      "estimateChargableWeight": "7",
+                      "estimateChargableWeight": 7,
                       "estimateChargableWeightUnit": "lb",
                       "chargeDetails": [
                         {
@@ -11708,27 +11708,27 @@
                           "charges": [
                             {
                               "chargeType": "AF",
-                              "chargeAmount": "176.07",
+                              "chargeAmount": 176.07,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "35",
-                              "chargeAmount": "50",
+                              "chargeAmount": 50,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "33",
-                              "chargeAmount": "43.19",
+                              "chargeAmount": 43.19,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "83",
-                              "chargeAmount": "15",
+                              "chargeAmount": 15,
                               "currency": "USD"
                             },
                             {
                               "chargeType": "MINADJ",
-                              "chargeAmount": "6",
+                              "chargeAmount": 6,
                               "currency": "USD"
                             }
                           ]
@@ -11742,7 +11742,7 @@
                           "charges": [
                             {
                               "chargeType": "961",
-                              "chargeAmount": "0",
+                              "chargeAmount": 0,
                               "currency": "USD"
                             }
                           ]
@@ -11977,15 +11977,15 @@
                       "confirmationId": "328250356",
                       "shipmentNumber": "3460137351",
                       "serviceType": "DF",
-                      "transitTime": "3",
+                      "transitTime": 3,
                       "serviceLine": "Air",
                       "serviceGroup": "NAAF",
                       "movementTypeCode": "DTD",
                       "incoTermType": "EXW",
                       "createDate": "2025-11-24T07:24:41.1456919",
-                      "netTotal": "0",
+                      "netTotal": 0,
                       "validTill": "0001-01-01T00:00:00",
-                      "validity": "0",
+                      "validity": 0,
                       "originPort": {
                         "portCode": "",
                         "portName": "",
@@ -12006,18 +12006,18 @@
                         "rateType": "Market",
                         "rateDescription": "Applied Market Rates For PA, as published rates (GCNAAF) were resolved for 'AF' charge",
                         "currencyCode": "USD",
-                        "actualTotalPrice": "535.26",
-                        "netTotalPrice": "535.26",
+                        "actualTotalPrice": 535.26,
+                        "netTotalPrice": 535.26,
                         "discountDetail": {
-                          "discount": "0",
-                          "discountPercent": "0",
-                          "eligibleDiscount": "0",
-                          "eligibleDiscountPercent": "0",
+                          "discount": 0,
+                          "discountPercent": 0,
+                          "eligibleDiscount": 0,
+                          "eligibleDiscountPercent": 0,
                           "discountAdjustedFor": "",
                           "discountValidTill": ""
                         }
                       },
-                      "estimateChargableWeight": "7",
+                      "estimateChargableWeight": 7,
                       "estimateChargableWeightUnit": "lb",
                       "chargeDetails": [
                         {
@@ -12034,42 +12034,42 @@
                             {
                               "chargeType": "961",
                               "description": "NON-CONFORMING CARGO",
-                              "chargeAmount": "245",
+                              "chargeAmount": 245,
                               "currency": "USD",
                               "originalChargeAmount": ""
                             },
                             {
                               "chargeType": "AF",
                               "description": "AIR FREIGHT",
-                              "chargeAmount": "176.07",
+                              "chargeAmount": 176.07,
                               "currency": "USD",
                               "originalChargeAmount": ""
                             },
                             {
                               "chargeType": "35",
                               "description": "CANADIAN IMPORT TERMINATION FEE",
-                              "chargeAmount": "50",
+                              "chargeAmount": 50,
                               "currency": "USD",
                               "originalChargeAmount": ""
                             },
                             {
                               "chargeType": "33",
                               "description": "FUEL-INDEX",
-                              "chargeAmount": "43.19",
+                              "chargeAmount": 43.19,
                               "currency": "USD",
                               "originalChargeAmount": ""
                             },
                             {
                               "chargeType": "83",
                               "description": "US EXPORT COMPLIANCE FEE",
-                              "chargeAmount": "15",
+                              "chargeAmount": 15,
                               "currency": "USD",
                               "originalChargeAmount": ""
                             },
                             {
                               "chargeType": "MINADJ",
                               "description": "MINIMUM INVOICE ADJUSTMENT",
-                              "chargeAmount": "6",
+                              "chargeAmount": 6,
                               "currency": "USD",
                               "originalChargeAmount": ""
                             }
@@ -12156,36 +12156,36 @@
                       ],
                       "shipmentDetails": {
                         "insuredValuecurrency": "USD",
-                        "insuredValue": "0",
+                        "insuredValue": 0,
                         "customsValuecurrency": "USD",
-                        "customsValue": "0",
+                        "customsValue": 0,
                         "commodityName": "Books",
                         "fclCargoItems": [ ],
                         "lclCargoItems": [ ],
                         "airCargoItems": [
                           {
-                            "quantity": "1",
+                            "quantity": 1,
                             "weight": {
-                              "weight": "5",
+                              "weight": 5,
                               "unitOfMeasurement": "lb"
                             },
                             "dimensions": {
-                              "length": "3",
-                              "width": "8",
-                              "height": "3",
+                              "length": 3,
+                              "width": 8,
+                              "height": 3,
                               "unitOfMeasurement": "in"
                             }
                           },
                           {
-                            "quantity": "1",
+                            "quantity": 1,
                             "weight": {
-                              "weight": "2",
+                              "weight": 2,
                               "unitOfMeasurement": "lb"
                             },
                             "dimensions": {
-                              "length": "1",
-                              "width": "8",
-                              "height": "4",
+                              "length": 1,
+                              "width": 8,
+                              "height": 4,
                               "unitOfMeasurement": "in"
                             }
                           }
@@ -13066,11 +13066,11 @@
                   "exportCountryCode": "CA",
                   "transModes": "INT_AIR",
                   "transportCost": {
-                    "value": "999",
+                    "value": 999,
                     "currencyCode": "USD"
                   },
                   "insuranceCost": {
-                    "value": "3000",
+                    "value": 3000,
                     "currencyCode": "USD"
                   },
                   "shipmentType": "Sale",
@@ -13091,29 +13091,29 @@
                     "city": "Sandy Springs",
                     "countryCode": "US",
                     "stateProvinceCode": "GA",
-                    "residentialAddressIndicator": "false"
+                    "residentialAddressIndicator": false
                   },
                   "shipmentItems": [
                     {
                       "partNumber": "40093ADA2",
                       "quantity": {
-                        "value": "12",
+                        "value": 12,
                         "unitOfMeasure": "pallets"
                       },
                       "grossWeight": {
-                        "value": "1250",
+                        "value": 1250,
                         "unitOfMeasure": "kg"
                       },
                       "unitPrice": {
-                        "value": "1999",
+                        "value": 1999,
                         "currencyCode": "USD"
                       },
                       "originCountryCode": "GB",
                       "description": "Surcoil Hose - Flush End - Long",
                       "dimension": {
-                        "length": "48",
-                        "width": "48",
-                        "height": "60",
+                        "length": 48,
+                        "width": 48,
+                        "height": 60,
                         "unitOfMeasure": "IN"
                       }
                     },
@@ -13121,22 +13121,22 @@
                       "partNumber": "AF4535635",
                       "originCountryCode": "GB",
                       "quantity": {
-                        "value": "10",
+                        "value": 10,
                         "unitOfMeasure": "barrels"
                       },
                       "grossWeight": {
-                        "value": "1500",
+                        "value": 1500,
                         "unitOfMeasure": "lb"
                       },
                       "unitPrice": {
-                        "value": "1000",
+                        "value": 1000,
                         "currencyCode": "USD"
                       },
                       "description": "Cord 5mm PK50 Yellow/Red",
                       "dimension": {
-                        "length": "24",
-                        "width": "24",
-                        "height": "36",
+                        "length": 24,
+                        "width": 24,
+                        "height": 36,
                         "unitOfMeasure": "IN"
                       }
                     }
@@ -13169,12 +13169,12 @@
                   "gcTotal": [
                     {
                       "type": "Shipper",
-                      "value": "89.2",
+                      "value": 89.2,
                       "currencyCode": "USD"
                     },
                     {
                       "type": "Buyer",
-                      "value": "100.2",
+                      "value": 100.2,
                       "currencyCode": "CAD"
                     }
                   ]
@@ -13334,7 +13334,7 @@
                 "description": "UPS monetization header indicating the full completion of the API service. \nA value of 1 would indicate a completed transaction, while a value of 0 would be the default for uncomplete.\nA value of 1 should be present whenever the \"noMoreQuestions\" field is set to true.",
                 "schema": {
                   "type": "integer",
-                  "example": "1"
+                  "example": 1
                 }
               }
             },
@@ -13693,7 +13693,7 @@
                 "description": "UPS monetization header indicating the full completion of the API service. \nA value of 1 would indicate a completed transaction, while a value of 0 would be the default for uncomplete.\nA value of 1 should be present whenever the \"noMoreQuestions\" field is set to true.",
                 "schema": {
                   "type": "integer",
-                  "example": "1"
+                  "example": 1
                 }
               }
             },
@@ -14286,7 +14286,7 @@
                   "value": {
                     "currencyCode": "GBP",
                     "transID": "325467165",
-                    "allowPartialLandedCostResult": "false",
+                    "allowPartialLandedCostResult": false,
                     "shipment": {
                       "id": "ShipmentID83",
                       "importCountryCode": "GB",
@@ -14301,7 +14301,7 @@
                           "grossWeightUnit": "",
                           "priceEach": "125",
                           "hsCode": "400932",
-                          "quantity": "24",
+                          "quantity": 24,
                           "UOM": "Each",
                           "originCountryCode": "GB",
                           "commodityCurrencyCode": "GBP",
@@ -14313,7 +14313,7 @@
                           "grossWeightUnit": "",
                           "priceEach": "0.5",
                           "hsCode": "",
-                          "quantity": "900",
+                          "quantity": 900,
                           "UOM": "Each",
                           "originCountryCode": "GB",
                           "commodityCurrencyCode": "GBP",
@@ -14349,45 +14349,45 @@
                         "brokerageFeeItems": [
                           {
                             "chargeName": "DisbursementFee",
-                            "chargeAmount": "19.05"
+                            "chargeAmount": 19.05
                           },
                           {
                             "chargeName": "EntryPreparationFee",
-                            "chargeAmount": "5.6"
+                            "chargeAmount": 5.6
                           }
                         ],
-                        "totalBrokerageFees": "24.65",
-                        "totalDuties": "60",
-                        "totalCommodityLevelTaxesAndFees": "0",
-                        "totalShipmentLevelTaxesAndFees": "0",
-                        "totalVAT": "702",
-                        "totalDutyandTax": "762",
-                        "grandTotal": "786.65",
+                        "totalBrokerageFees": 24.65,
+                        "totalDuties": 60,
+                        "totalCommodityLevelTaxesAndFees": 0,
+                        "totalShipmentLevelTaxesAndFees": 0,
+                        "totalVAT": 702,
+                        "totalDutyandTax": 762,
+                        "grandTotal": 786.65,
                         "importCountryCode": "GB",
                         "shipmentItems": [
                           {
                             "commodityId": "1",
-                            "commodityDuty": "60",
-                            "totalCommodityTaxesAndFees": "0",
-                            "commodityVAT": "612",
-                            "totalCommodityDutyandTax": "672",
+                            "commodityDuty": 60,
+                            "totalCommodityTaxesAndFees": 0,
+                            "commodityVAT": 612,
+                            "totalCommodityDutyandTax": 672,
                             "commodityCurrencyCode": "GBP",
-                            "isCalculable": "true",
+                            "isCalculable": true,
                             "hsCode": "4009320090"
                           },
                           {
                             "commodityId": "4",
-                            "commodityDuty": "0",
-                            "totalCommodityTaxesAndFees": "0",
-                            "commodityVAT": "90",
-                            "totalCommodityDutyandTax": "90",
+                            "commodityDuty": 0,
+                            "totalCommodityTaxesAndFees": 0,
+                            "commodityVAT": 90,
+                            "totalCommodityDutyandTax": 90,
                             "commodityCurrencyCode": "GBP",
-                            "isCalculable": "true",
+                            "isCalculable": true,
                             "hsCode": "8546901000"
                           }
                         ]
                       },
-                      "alversion": "0",
+                      "alversion": 0,
                       "dpversion": null,
                       "transID": "325467165",
                       "error": null,
@@ -14510,7 +14510,7 @@
                   "value": {
                     "currencyCode": "GBP",
                     "transID": "325467165",
-                    "allowPartialLandedCostResult": "false",
+                    "allowPartialLandedCostResult": false,
                     "shipment": {
                       "id": "ShipmentID83",
                       "importCountryCode": "GB",
@@ -14525,7 +14525,7 @@
                           "grossWeightUnit": "",
                           "priceEach": "125",
                           "hsCode": "400932",
-                          "quantity": "24",
+                          "quantity": 24,
                           "UOM": "Each",
                           "originCountryCode": "GB",
                           "commodityCurrencyCode": "GBP",
@@ -14537,7 +14537,7 @@
                           "grossWeightUnit": "",
                           "priceEach": "0.5",
                           "hsCode": "",
-                          "quantity": "900",
+                          "quantity": 900,
                           "UOM": "Each",
                           "originCountryCode": "GB",
                           "commodityCurrencyCode": "GBP",
@@ -14573,45 +14573,45 @@
                         "brokerageFeeItems": [
                           {
                             "chargeName": "DisbursementFee",
-                            "chargeAmount": "19.05"
+                            "chargeAmount": 19.05
                           },
                           {
                             "chargeName": "EntryPreparationFee",
-                            "chargeAmount": "5.6"
+                            "chargeAmount": 5.6
                           }
                         ],
-                        "totalBrokerageFees": "24.65",
-                        "totalDuties": "60",
-                        "totalCommodityLevelTaxesAndFees": "0",
-                        "totalShipmentLevelTaxesAndFees": "0",
-                        "totalVAT": "702",
-                        "totalDutyandTax": "762",
-                        "grandTotal": "786.65",
+                        "totalBrokerageFees": 24.65,
+                        "totalDuties": 60,
+                        "totalCommodityLevelTaxesAndFees": 0,
+                        "totalShipmentLevelTaxesAndFees": 0,
+                        "totalVAT": 702,
+                        "totalDutyandTax": 762,
+                        "grandTotal": 786.65,
                         "importCountryCode": "GB",
                         "shipmentItems": [
                           {
                             "commodityId": "1",
-                            "commodityDuty": "60",
-                            "totalCommodityTaxesAndFees": "0",
-                            "commodityVAT": "612",
-                            "totalCommodityDutyandTax": "672",
+                            "commodityDuty": 60,
+                            "totalCommodityTaxesAndFees": 0,
+                            "commodityVAT": 612,
+                            "totalCommodityDutyandTax": 672,
                             "commodityCurrencyCode": "GBP",
-                            "isCalculable": "true",
+                            "isCalculable": true,
                             "hsCode": "4009320090"
                           },
                           {
                             "commodityId": "4",
-                            "commodityDuty": "0",
-                            "totalCommodityTaxesAndFees": "0",
-                            "commodityVAT": "90",
-                            "totalCommodityDutyandTax": "90",
+                            "commodityDuty": 0,
+                            "totalCommodityTaxesAndFees": 0,
+                            "commodityVAT": 90,
+                            "totalCommodityDutyandTax": 90,
                             "commodityCurrencyCode": "GBP",
-                            "isCalculable": "true",
+                            "isCalculable": true,
                             "hsCode": "8546901000"
                           }
                         ]
                       },
-                      "alversion": "0",
+                      "alversion": 0,
                       "dpversion": null,
                       "transID": "325467165",
                       "error": null,
@@ -25404,7 +25404,7 @@
                         "MasterEUConsolidationIndicator": "0",
                         "MasterHasDocBox": "0",
                         "MasterShipmentChgType": "FOB",
-                        "VendorCollectIDNumberExemptIndicator": "false",
+                        "VendorCollectIDNumberExemptIndicator": false,
                         "PortOfEntry": {
                           "Name": "Seagirt Terminal, Port of Baltimore",
                           "Consignee": "John Doe",
@@ -28345,7 +28345,7 @@
                     "shipDate": "2019-05-01",
                     "shipTime": "",
                     "residentialIndicator": "",
-                    "avvFlag": "true",
+                    "avvFlag": true,
                     "numberOfPackages": "1"
                   }
                 }
@@ -28759,7 +28759,7 @@
             "description": "This is used to support pagination of package results. The offset is a 0-based index which defines the starting record to be returned.",
             "schema": {
               "type": "string",
-              "default": "0"
+              "default": 0
             }
           },
           {
@@ -28768,7 +28768,7 @@
             "description": "This is used to support pagination of package results. The count is the maximum number of packages to return starting with the offset.",
             "schema": {
               "type": "string",
-              "default": "50"
+              "default": 50
             }
           },
           {
@@ -29206,7 +29206,7 @@
             "description": "This is used to support pagination of package results. The offset is a 0-based index which defines the starting record to be returned.",
             "schema": {
               "type": "string",
-              "default": "0"
+              "default": 0
             }
           },
           {
@@ -29215,7 +29215,7 @@
             "description": "This is used to support pagination of package results. The count is the maximum number of packages to return starting with the offset.",
             "schema": {
               "type": "string",
-              "default": "50"
+              "default": 50
             }
           },
           {
@@ -29892,23 +29892,23 @@
                   },
                   "packages": [
                     {
-                      "numberOfIdenticalUnits": "1",
+                      "numberOfIdenticalUnits": 1,
                       "handlingUnits": {
                         "type": "BOXES",
                         "dimensions": {
-                          "length": "48.0",
-                          "width": "40.0",
-                          "height": "36.0",
+                          "length": 48,
+                          "width": 40,
+                          "height": 36,
                           "unitOfMeasurement": "IN"
                         },
                         "packageWeight": {
-                          "weight": "10.0",
+                          "weight": 10,
                           "unitOfMeasurement": "LBS"
                         },
-                        "freightClass": "150",
+                        "freightClass": 150,
                         "transportationService": {
-                          "airService": "1",
-                          "groundService": "1"
+                          "airService": 1,
+                          "groundService": 1
                         }
                       }
                     }
@@ -33414,14 +33414,14 @@
                 "minimum": 1,
                 "type": "integer",
                 "description": "First 6 digits of the card number (issuer identification number)",
-                "example": "411111"
+                "example": 411111
               },
               "lastDigits": {
                 "maximum": 9999,
                 "minimum": 0,
                 "type": "integer",
                 "description": "Last 4 digits of the card used",
-                "example": "4242"
+                "example": 4242
               },
               "issuer": {
                 "maxLength": 32,
@@ -33471,7 +33471,7 @@
             "type": "number",
             "description": "Total order value",
             "format": "float",
-            "example": "199.99"
+            "example": 199.99
           },
           "currencyCode": {
             "maxLength": 3,
@@ -33508,7 +33508,7 @@
             "minimum": 0,
             "type": "number",
             "description": "Overall risk score from 0 (lowest) to 999 (highest risk)",
-            "example": "585"
+            "example": 585
           },
           "decision": {
             "enum": [
@@ -33671,7 +33671,7 @@
             "minimum": 0,
             "type": "number",
             "description": "Score value for this risk category, range 0 to 999",
-            "example": "710"
+            "example": 710
           },
           "rank": {
             "enum": [
@@ -34061,8 +34061,8 @@
                         "minLength": 1,
                         "type": "integer",
                         "description": "Number of occurnces allowed for this field",
-                        "default": "1",
-                        "example": "1"
+                        "default": 1,
+                        "example": 1
                       },
                       "validation": {
                         "required": [
@@ -34081,7 +34081,7 @@
                             "type": "integer",
                             "description": "The min length allowed for text fields",
                             "nullable": true,
-                            "example": "1"
+                            "example": 1
                           },
                           "maxLength": {
                             "maximum": 100,
@@ -34091,7 +34091,7 @@
                             "type": "integer",
                             "description": "The max length allowed for text fields",
                             "nullable": true,
-                            "example": "10"
+                            "example": 10
                           },
                           "errorMessage": {
                             "type": "string",
@@ -37316,12 +37316,12 @@
                         "residentialIndicator": {
                           "type": "boolean",
                           "description": "Ship to residential indicator.",
-                          "default": "false"
+                          "default": false
                         },
                         "additionalHandlingIndicator": {
                           "type": "boolean",
                           "description": "Additional handling indicator. May be set by NRF during rating.",
-                          "default": "false"
+                          "default": false
                         },
                         "downgradeServiceCode": {
                           "maxLength": 3,
@@ -37392,27 +37392,27 @@
                         "displayShipperPaidInterceptCharges": {
                           "type": "boolean",
                           "description": "Indicates if a message should be displayed that the shipper has paid for the charges related to the intercept",
-                          "default": "false"
+                          "default": false
                         },
                         "shipperPaidInterceptCharges": {
                           "type": "boolean",
                           "description": "Indicates if charges related to the intercept are paid by the shipper.",
-                          "default": "false"
+                          "default": false
                         },
                         "shipperPaidTransportationCharges": {
                           "type": "boolean",
                           "description": "Indicates if charges related to transportation are paid by the shipper. Applicable only for Redirect to Another Address.",
-                          "default": "false"
+                          "default": false
                         },
                         "displayShipperPaidTransportationCharges": {
                           "type": "boolean",
                           "description": "Indicates if a message should be displayed that the shipper has paid for the charges related to transportation. \nApplicable only for Redirect to Another Address and Redirect to UPS Location intercepts. TRUE - display a message\nthat the shipper has paid the transportation charges.\n",
-                          "default": "false"
+                          "default": false
                         },
                         "chargesPaidByThirdPartyShipper": {
                           "type": "boolean",
                           "description": "Indicates if the charges were paid by a third-party shipper and must be supplied by trusted end clients only.\n\n| CODE  | DESCRIPTION                                     |\n| :--:  | :--                                             |\n| TRUE  | the charges were paid by a third-party shipper. |\n| FALSE | the charges were paid by the original shipper.  |\n",
-                          "default": "false"
+                          "default": false
                         },
                         "taxes": {
                           "minItems": 1,
@@ -37535,13 +37535,13 @@
           "displayShipperPaidInterceptCharges": {
             "type": "boolean",
             "description": "Indicates if a message should be displayed that the shipper has paid for the charges related to the intercept.",
-            "default": "false"
+            "default": false
           },
           "shipperPaidInterceptCharges": {
             "type": "boolean",
             "description": "Indicates if charges related to the intercept are paid by the shipper.",
-            "default": "false",
-            "example": "false"
+            "default": false,
+            "example": false
           },
           "successful": {
             "type": "boolean"
@@ -37909,7 +37909,7 @@
               "displayPhoneNumber": {
                 "type": "boolean",
                 "description": "Indicates if the phone number of a UAP can be displayed to external clients.",
-                "default": "false"
+                "default": false
               }
             }
           },
@@ -38143,7 +38143,7 @@
           "success": {
             "type": "boolean",
             "description": "Indicates if the transaction is considered successful.",
-            "default": "false"
+            "default": false
           },
           "errors": {
             "type": "array",
@@ -38200,7 +38200,7 @@
           "success": {
             "type": "boolean",
             "description": "Indicates if the transaction is considered successful.",
-            "default": "false"
+            "default": false
           },
           "warnings": {
             "type": "object",
@@ -38380,7 +38380,7 @@
               "success": {
                 "type": "boolean",
                 "description": "Indicates if the transaction is considered successful.",
-                "default": "false"
+                "default": false
               },
               "errors": {
                 "type": "array",
@@ -38519,7 +38519,7 @@
                 "$ref": "#/components/schemas/ApolloTimeV1"
               },
               "weight": {
-                "maximum": 999999.99,
+                "maximum": 1000000,
                 "type": "number",
                 "description": "Total weight of the shipment.",
                 "format": "float"
@@ -38535,7 +38535,7 @@
               "isMetric": {
                 "type": "boolean",
                 "description": "Indicates whether the shipment uses metric units of measurement.",
-                "default": "false"
+                "default": false
               },
               "orderDescription": {
                 "type": "string",
@@ -38563,12 +38563,12 @@
               "requestPickup": {
                 "type": "boolean",
                 "description": "Indicates whether a pickup request is included.",
-                "default": "false"
+                "default": false
               },
               "requestBoL": {
                 "type": "boolean",
                 "description": "Indicates whether a Bill of Lading (BoL) is requested.",
-                "default": "false"
+                "default": false
               },
               "countryOfManufacture": {
                 "minItems": 1,
@@ -38600,7 +38600,7 @@
                       "maximum": 99999,
                       "type": "integer",
                       "description": "Quantity of the item.",
-                      "example": "1"
+                      "example": 1
                     },
                     "length": {
                       "$ref": "#/components/schemas/ApolloDimensionV1"
@@ -38612,7 +38612,7 @@
                       "$ref": "#/components/schemas/ApolloDimensionV1"
                     },
                     "weight": {
-                      "maximum": 999999.99,
+                      "maximum": 1000000,
                       "minimum": 0.1,
                       "type": "number",
                       "description": "Weight of the item.",
@@ -38687,7 +38687,7 @@
                     "guaranteedDelivery": {
                       "type": "boolean",
                       "description": "Indicates if delivery is guaranteed.",
-                      "default": "false"
+                      "default": false
                     },
                     "deliveryTime": {
                       "$ref": "#/components/schemas/ApolloDateTimeV1"
@@ -38715,12 +38715,12 @@
                     "minimumBillableWeightApplied": {
                       "type": "boolean",
                       "description": "Indicates if the minimum billable weight was applied.",
-                      "default": "false"
+                      "default": false
                     },
                     "contractRate": {
                       "type": "boolean",
                       "description": "Indicates if the contract rate applies.",
-                      "default": "false"
+                      "default": false
                     },
                     "charges": {
                       "minItems": 1,
@@ -38746,7 +38746,7 @@
                           "amount": {
                             "type": "number",
                             "description": "The charge amount",
-                            "example": "250.75"
+                            "example": 250.75
                           },
                           "currencyCode": {
                             "type": "string",
@@ -38869,7 +38869,7 @@
                 "type": "number",
                 "description": "Total weight of the shipment. Required if items are missing weight entry",
                 "format": "float",
-                "example": "54"
+                "example": 54
               },
               "freightType": {
                 "enum": [
@@ -38910,7 +38910,7 @@
               "isMetric": {
                 "type": "boolean",
                 "description": "A flag to indicate if the measurements are metric",
-                "default": "false",
+                "default": false,
                 "nullable": true
               },
               "items": {
@@ -39269,7 +39269,7 @@
                       "type": "integer",
                       "description": "TThe code indicating the status of the Order",
                       "format": "int32",
-                      "example": "8"
+                      "example": 8
                     },
                     "status": {
                       "minLength": 1,
@@ -39309,7 +39309,7 @@
                     "isMetric": {
                       "type": "boolean",
                       "description": "The flag indicating whether the measurements are metric",
-                      "default": "false"
+                      "default": false
                     },
                     "items": {
                       "required": [
@@ -39325,7 +39325,7 @@
                           "type": "integer",
                           "description": "The total weight of the Items in the Order",
                           "format": "int32",
-                          "example": "14"
+                          "example": 14
                         },
                         "weightUnit": {
                           "enum": [
@@ -39341,7 +39341,7 @@
                           "type": "integer",
                           "description": "The total number of Pieces in the Order",
                           "format": "int32",
-                          "example": "2"
+                          "example": 2
                         },
                         "item": {
                           "minItems": 1,
@@ -39361,35 +39361,35 @@
                                 "type": "integer",
                                 "description": "The number of components in the item",
                                 "format": "int32",
-                                "example": "1"
+                                "example": 1
                               },
                               "length": {
                                 "minimum": 1,
                                 "type": "number",
                                 "description": "The length of each component in the item",
                                 "format": "float",
-                                "example": "10"
+                                "example": 10
                               },
                               "width": {
                                 "minimum": 1,
                                 "type": "number",
                                 "description": "The width of each component in the item",
                                 "format": "float",
-                                "example": "10"
+                                "example": 10
                               },
                               "height": {
                                 "minimum": 1,
                                 "type": "number",
                                 "description": "The height of each component in the item",
                                 "format": "float",
-                                "example": "10"
+                                "example": 10
                               },
                               "weight": {
                                 "minimum": 1,
                                 "type": "number",
                                 "description": "The weight of each component in the item",
                                 "format": "float",
-                                "example": "10"
+                                "example": 10
                               }
                             },
                             "additionalProperties": false,
@@ -39446,7 +39446,7 @@
                 "type": "integer",
                 "description": "The count of all Shipments that are submitted for processing",
                 "format": "int32",
-                "example": "2"
+                "example": 2
               },
               "pieceCount": {
                 "minimum": 1,
@@ -39454,7 +39454,7 @@
                 "type": "integer",
                 "description": "The count of all pieces in all the shipments submitted",
                 "format": "int32",
-                "example": "2"
+                "example": 2
               },
               "weight": {
                 "minimum": 1,
@@ -39462,7 +39462,7 @@
                 "type": "number",
                 "description": "The total weight of all the shipments",
                 "format": "float",
-                "example": "2"
+                "example": 2
               },
               "weightUnit": {
                 "type": "string",
@@ -39537,7 +39537,7 @@
                           "type": "number",
                           "description": "The total weight of the shipment",
                           "format": "float",
-                          "example": "10"
+                          "example": 10
                         },
                         "orderDescription": {
                           "minLength": 1,
@@ -39610,7 +39610,7 @@
                               "type": "integer",
                               "description": "number of shipments using this service associated with this manifest",
                               "format": "int32",
-                              "example": "3"
+                              "example": 3
                             },
                             "itemCount": {
                               "minimum": 1,
@@ -39618,7 +39618,7 @@
                               "type": "integer",
                               "description": "The total number items in those shipments",
                               "format": "int32",
-                              "example": "3"
+                              "example": 3
                             },
                             "totalWeight": {
                               "minimum": 1,
@@ -39626,7 +39626,7 @@
                               "type": "number",
                               "description": "The total weight of the items",
                               "format": "double",
-                              "example": "3"
+                              "example": 3
                             },
                             "freightChargesAmount": {
                               "$ref": "#/components/schemas/ApolloAmountV1"
@@ -39686,7 +39686,7 @@
                               "type": "integer",
                               "description": "The total number pieces for this service",
                               "format": "int32",
-                              "example": "3"
+                              "example": 3
                             }
                           },
                           "additionalProperties": false,
@@ -39724,7 +39724,7 @@
                             "type": "integer",
                             "description": "The count of all pieces in all the shipments submitted",
                             "format": "int32",
-                            "example": "3"
+                            "example": 3
                           },
                           "totalWeight": {
                             "type": "number",
@@ -40200,7 +40200,7 @@
             "description": "A total number of this item",
             "format": "int32",
             "nullable": true,
-            "example": "10"
+            "example": 10
           },
           "length": {
             "maximum": 999,
@@ -40208,7 +40208,7 @@
             "type": "number",
             "description": "Length of this item",
             "format": "float",
-            "example": "10"
+            "example": 10
           },
           "width": {
             "maximum": 999,
@@ -40216,7 +40216,7 @@
             "type": "number",
             "description": "Width of this item",
             "format": "float",
-            "example": "10"
+            "example": 10
           },
           "height": {
             "maximum": 999,
@@ -40224,7 +40224,7 @@
             "type": "number",
             "description": "Height of this item",
             "format": "float",
-            "example": "10"
+            "example": 10
           },
           "weight": {
             "maximum": 99999,
@@ -40232,7 +40232,7 @@
             "type": "number",
             "description": "Total weight of these items",
             "format": "float",
-            "example": "10"
+            "example": 10
           },
           "details": {
             "$ref": "#/components/schemas/ApolloCustomArrayV1"
@@ -40343,13 +40343,13 @@
                     "$ref": "#/components/schemas/ApolloTimeV1"
                   },
                   "weight": {
-                    "maximum": 999999.99,
+                    "maximum": 1000000,
                     "minimum": 1,
                     "minLength": 1,
                     "type": "number",
                     "description": "Total weight of the shipment.",
                     "format": "float",
-                    "example": "10"
+                    "example": 10
                   },
                   "freightType": {
                     "enum": [
@@ -40453,7 +40453,7 @@
                     "type": "integer",
                     "description": "The total number of items in the order",
                     "format": "int32",
-                    "example": "2"
+                    "example": 2
                   },
                   "labelService": {
                     "minLength": 1,
@@ -40621,28 +40621,28 @@
             "minLength": 1,
             "type": "integer",
             "format": "int32",
-            "example": "10"
+            "example": 10
           },
           "itemCount": {
             "minimum": 1,
             "minLength": 1,
             "type": "integer",
             "format": "int32",
-            "example": "10"
+            "example": 10
           },
           "pieceCount": {
             "minimum": 1,
             "minLength": 1,
             "type": "integer",
             "format": "int32",
-            "example": "10"
+            "example": 10
           },
           "totalWeight": {
             "minimum": 1,
             "minLength": 1,
             "type": "number",
             "format": "double",
-            "example": "10"
+            "example": 10
           }
         },
         "additionalProperties": false
@@ -40886,7 +40886,7 @@
             "type": "number",
             "description": "Amount of the charge.",
             "format": "double",
-            "example": "359.16"
+            "example": 359.16
           },
           "currencyCode": {
             "type": "string",
@@ -41221,7 +41221,7 @@
             "type": "number",
             "description": "Total weight of the shipment.",
             "format": "decimal",
-            "example": "25.5"
+            "example": 25.5
           },
           "freightType": {
             "enum": [
@@ -41235,7 +41235,7 @@
           "isMetric": {
             "type": "boolean",
             "description": "Boolean value which indicates whether the shipment uses metric.",
-            "example": "true"
+            "example": true
           },
           "orderDescription": {
             "type": "string",
@@ -41262,12 +41262,12 @@
           "requestPickup": {
             "type": "boolean",
             "description": "Boolean value which indicates whether a pickup request is included.",
-            "example": "true"
+            "example": true
           },
           "requestBoL": {
             "type": "boolean",
             "description": "Boolean value which Indicates whether a Bill of Lading (BoL) is requested.",
-            "example": "false"
+            "example": false
           },
           "countryOfManufacture": {
             "type": "array",
@@ -41315,7 +41315,7 @@
             "minimum": 1,
             "type": "integer",
             "description": "Number of identical items in the shipment.",
-            "example": "10"
+            "example": 10
           },
           "length": {
             "maximum": 999.9,
@@ -41323,7 +41323,7 @@
             "type": "number",
             "description": "Length of the shipment item in centimeters.",
             "format": "decimal",
-            "example": "38.5"
+            "example": 38.5
           },
           "width": {
             "maximum": 999.9,
@@ -41331,7 +41331,7 @@
             "type": "number",
             "description": "Width of the shipment item in centimeters.",
             "format": "decimal",
-            "example": "25.0"
+            "example": 25
           },
           "height": {
             "maximum": 999.9,
@@ -41339,7 +41339,7 @@
             "type": "number",
             "description": "Height of the shipment item in centimeters.",
             "format": "decimal",
-            "example": "2.5"
+            "example": 2.5
           },
           "weight": {
             "maximum": 99999,
@@ -41347,7 +41347,7 @@
             "type": "number",
             "description": "Weight of the shipment item in kilograms.",
             "format": "decimal",
-            "example": "2.0"
+            "example": 2
           },
           "details": {
             "$ref": "#/components/schemas/ApolloCustomArrayV1"
@@ -41448,7 +41448,7 @@
           "guaranteedDelivery": {
             "type": "boolean",
             "description": "Indicates if delivery is guaranteed.",
-            "example": "true"
+            "example": true
           },
           "deliveryTime": {
             "type": "string",
@@ -41472,7 +41472,7 @@
             "type": "number",
             "description": "The billable weight.",
             "format": "decimal",
-            "example": "30.0"
+            "example": 30
           },
           "weightUnit": {
             "type": "string",
@@ -41483,17 +41483,17 @@
             "type": "number",
             "description": "The dimensional weight.",
             "format": "decimal",
-            "example": "28.0"
+            "example": 28
           },
           "minimumBillableWeightApplied": {
             "type": "boolean",
             "description": "Indicates if the minimum billable weight was applied.",
-            "example": "false"
+            "example": false
           },
           "contractRate": {
             "type": "boolean",
             "description": "Indicates if the contract rate applies.",
-            "example": "false"
+            "example": false
           },
           "charges": {
             "type": "array",
@@ -41956,7 +41956,7 @@
           "insuredValue": {
             "type": "number",
             "description": "Insured value of the shipment.",
-            "example": "0"
+            "example": 0
           },
           "customsValueCurrency": {
             "maxLength": 3,
@@ -41969,7 +41969,7 @@
           "customsValue": {
             "type": "number",
             "description": "Customs value of the shipment.",
-            "example": "0"
+            "example": 0
           },
           "commodityName": {
             "maxLength": 40,
@@ -41988,22 +41988,22 @@
           "isHazmat": {
             "type": "boolean",
             "description": "Indicates if the shipment contains hazardous materials.",
-            "example": "true"
+            "example": true
           },
           "isReefer": {
             "type": "boolean",
             "description": "Indicates if the shipment requires refrigeration.",
-            "example": "true"
+            "example": true
           },
           "isLithium": {
             "type": "boolean",
             "description": "Indicates if the shipment contains lithium batteries.",
-            "example": "true"
+            "example": true
           },
           "isRestricted": {
             "type": "boolean",
             "description": "Indicates if the shipment contains restricted items.",
-            "example": "true"
+            "example": true
           },
           "isStackable": {
             "maxLength": 1,
@@ -42043,7 +42043,7 @@
             "minimum": 1,
             "type": "integer",
             "description": "Number of items in the cargo.",
-            "example": "1"
+            "example": 1
           },
           "packageType": {
             "maxLength": 20,
@@ -42078,7 +42078,7 @@
         "properties": {
           "weight": {
             "type": "number",
-            "example": "5"
+            "example": 5
           },
           "unitOfMeasurement": {
             "type": "string",
@@ -42091,15 +42091,15 @@
         "properties": {
           "length": {
             "type": "number",
-            "example": "3"
+            "example": 3
           },
           "width": {
             "type": "number",
-            "example": "8"
+            "example": 8
           },
           "height": {
             "type": "number",
-            "example": "3"
+            "example": 3
           },
           "unitOfMeasurement": {
             "type": "string",
@@ -42118,7 +42118,7 @@
           "noOfContainers": {
             "type": "integer",
             "description": "Number of containers for this equipment type.",
-            "example": "1"
+            "example": 1
           }
         }
       },
@@ -42320,7 +42320,7 @@
           },
           "transitTime": {
             "type": "integer",
-            "example": "3"
+            "example": 3
           },
           "serviceLine": {
             "type": "string",
@@ -42341,7 +42341,7 @@
           },
           "netTotal": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "validTill": {
             "type": "string",
@@ -42366,7 +42366,7 @@
           },
           "estimateChargableWeight": {
             "type": "number",
-            "example": "7"
+            "example": 7
           },
           "estimateChargableWeightUnit": {
             "type": "string",
@@ -42407,11 +42407,11 @@
           },
           "actualTotalPrice": {
             "type": "number",
-            "example": "290.26"
+            "example": 290.26
           },
           "netTotalPrice": {
             "type": "number",
-            "example": "290.26"
+            "example": 290.26
           },
           "discountDetail": {
             "$ref": "#/components/schemas/DiscountDetail"
@@ -42423,11 +42423,11 @@
         "properties": {
           "discount": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "discountPercent": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "discountValidTill": {
             "type": "string",
@@ -42464,7 +42464,7 @@
           },
           "chargeAmount": {
             "type": "number",
-            "example": "176.07"
+            "example": 176.07
           },
           "currency": {
             "type": "string",
@@ -42629,7 +42629,7 @@
           },
           "transitTime": {
             "type": "integer",
-            "example": "3"
+            "example": 3
           },
           "serviceLine": {
             "type": "string",
@@ -42654,7 +42654,7 @@
           },
           "netTotal": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "validTill": {
             "type": "string",
@@ -42663,7 +42663,7 @@
           },
           "validity": {
             "type": "integer",
-            "example": "0"
+            "example": 0
           },
           "originPort": {
             "$ref": "#/components/schemas/Location"
@@ -42684,7 +42684,7 @@
           },
           "estimateChargableWeight": {
             "type": "number",
-            "example": "7"
+            "example": 7
           },
           "estimateChargableWeightUnit": {
             "type": "string",
@@ -42752,11 +42752,11 @@
           },
           "actualTotalPrice": {
             "type": "number",
-            "example": "535.26"
+            "example": 535.26
           },
           "netTotalPrice": {
             "type": "number",
-            "example": "535.26"
+            "example": 535.26
           },
           "discountDetail": {
             "$ref": "#/components/schemas/DiscountDetailV1"
@@ -42768,19 +42768,19 @@
         "properties": {
           "discount": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "discountPercent": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "eligibleDiscount": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "eligibleDiscountPercent": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "discountAdjustedFor": {
             "type": "string",
@@ -42820,7 +42820,7 @@
           },
           "chargeAmount": {
             "type": "number",
-            "example": "245"
+            "example": 245
           },
           "currency": {
             "type": "string",
@@ -42909,7 +42909,7 @@
           },
           "insuredValue": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "customsValueCurrency": {
             "type": "string",
@@ -42917,7 +42917,7 @@
           },
           "customsValue": {
             "type": "number",
-            "example": "0"
+            "example": 0
           },
           "commodityName": {
             "type": "string",
@@ -42961,7 +42961,7 @@
         "properties": {
           "quantity": {
             "type": "integer",
-            "example": "1"
+            "example": 1
           },
           "weight": {
             "$ref": "#/components/schemas/WeightDetail"
@@ -43081,7 +43081,7 @@
           "transitTime": {
             "type": "integer",
             "description": "Transit time in minutes.",
-            "example": "16"
+            "example": 16
           },
           "validTill": {
             "type": "string",
@@ -43093,7 +43093,7 @@
           "validity": {
             "type": "integer",
             "description": "Validity period of the shipment in days.",
-            "example": "7"
+            "example": 7
           },
           "portOfLoad": {
             "type": "string",
@@ -43166,7 +43166,7 @@
           "isPayor": {
             "type": "boolean",
             "description": "Indicates whether the party is designated as the payor.",
-            "example": "true"
+            "example": true
           },
           "contactDetail": {
             "$ref": "#/components/schemas/ContactDetailV1"
@@ -43280,7 +43280,7 @@
           "insuredValue": {
             "type": "number",
             "description": "Insured value of the item.",
-            "example": "5600"
+            "example": 5600
           },
           "customsValueCurrency": {
             "type": "string",
@@ -43290,7 +43290,7 @@
           "customsValue": {
             "type": "number",
             "description": "Customs value of the item.",
-            "example": "5600"
+            "example": 5600
           },
           "commodityName": {
             "type": "string",
@@ -43371,7 +43371,7 @@
           "chargeAmount": {
             "type": "number",
             "description": "Amount to be charged for a transaction.",
-            "example": "1153.53"
+            "example": 1153.53
           },
           "currency": {
             "type": "string",
@@ -43394,7 +43394,7 @@
           "quantity": {
             "type": "integer",
             "description": "Quantity of the LCL cargo item.",
-            "example": "11"
+            "example": 11
           },
           "packageType": {
             "type": "string",
@@ -44419,12 +44419,12 @@
                 "properties": {
                   "residentialAddressIndicator": {
                     "enum": [
-                      "true",
-                      "false"
+                      true,
+                      false
                     ],
                     "type": "boolean",
                     "description": "Indicate as true if the shipTo address is classified as residential (vs. commercial). Valid only for US50 addresses.\nNeeded for internal rate call to calculate transportCost if that is needed and not provided.\n",
-                    "example": "true"
+                    "example": true
                   }
                 }
               }
@@ -44457,7 +44457,7 @@
               "value": {
                 "type": "integer",
                 "description": "The weight value. If this field is specified, the unitOfMeasure field must also be specified.  If this field is not specified,\nunitOfMeasure must be not be set to anything but null.\n",
-                "example": "4"
+                "example": 4
               },
               "unitOfMeasure": {
                 "enum": [
@@ -44487,7 +44487,7 @@
               "value": {
                 "type": "integer",
                 "description": "Item count.",
-                "example": "4"
+                "example": 4
               },
               "unitOfMeasure": {
                 "type": "string",
@@ -44528,19 +44528,19 @@
                 "type": "number",
                 "description": "package length (no limit).",
                 "format": "decimal",
-                "example": "1"
+                "example": 1
               },
               "width": {
                 "type": "number",
                 "description": "package width (no limit).",
                 "format": "decimal",
-                "example": "2"
+                "example": 2
               },
               "height": {
                 "type": "number",
                 "description": "package height (no limit).",
                 "format": "decimal",
-                "example": "3"
+                "example": 3
               },
               "unitOfMeasure": {
                 "enum": [
@@ -44952,7 +44952,7 @@
           "assumed": {
             "type": "boolean",
             "description": "Identifies whether the API selected an answer to the corresponding question without having to explicitly ask it to the user. The value true means that the answer was assumed by the API, while false means that the answer was selected by the user.",
-            "example": "true"
+            "example": true
           }
         }
       },
@@ -44978,15 +44978,15 @@
             "example": "01012100"
           },
           "confidence": {
-            "maximum": 1.0,
-            "minimum": 0.0,
+            "maximum": 1,
+            "minimum": 0,
             "type": "number",
             "description": "A value between 0.00 and 1.00 representing the APIs likeliness for a suggestedHts to be the final HTS code. A value of 1.00 can also be interpreted as 100% confidence."
           },
           "noMoreQuestions": {
             "type": "boolean",
             "description": "This field will be marked as true when the API doesn't have any more questions to ask the user. In this case, the questions list will be empty and the most complete \"actualHts\" is provided.",
-            "default": "false"
+            "default": false
           },
           "questions": {
             "type": "array",
@@ -45076,7 +45076,7 @@
           "assumed": {
             "type": "boolean",
             "description": "Identifies whether the API selected an answer to the corresponding question without having to explicitly ask it to the user.",
-            "default": "false"
+            "default": false
           }
         }
       },
@@ -45277,7 +45277,7 @@
             "maximum": 1,
             "type": "number",
             "description": "Specifies the Freight charge or transport costs, which are used for tariff calculations. Landed cost result might have some dependency on the freight charges in some countries. Therefore, freight amount should be always provided for accurate Landed Cost result. \n\nAllowed values:\n 1. Any non-negative floating-point number. \n2. Numeric value with optional decimal value.",
-            "example": "100.6"
+            "example": 100.6
           },
           "shipmentType": {
             "maximum": 1,
@@ -45317,7 +45317,7 @@
             "maximum": 1,
             "type": "number",
             "description": "Specifies the gross weight of the commodity as any non-negative value.",
-            "example": "10.34"
+            "example": 10.34
           },
           "grossWeightUnit": {
             "maximum": 1,
@@ -45330,7 +45330,7 @@
             "maximum": 1,
             "type": "number",
             "description": "Specifies the price for each commodity unit in the settlement currency. The total price of the entire number of shipmentItems may not exceed 999999999999.99",
-            "example": "346.32"
+            "example": 346.32
           },
           "commodityCurrencyCode": {
             "maximum": 1,
@@ -45534,7 +45534,7 @@
             "maximum": 1,
             "type": "number",
             "description": "Fee amount for the brokerage charges.",
-            "example": "10.56"
+            "example": 10.56
           }
         }
       },
@@ -45772,7 +45772,7 @@
             "maximum": 1,
             "type": "number",
             "description": "Specifies the Freight charge or transport costs, which are used for tariff calculations. Landed cost result might have some dependency on the freight charges in some countries. Therefore, freight amount should be always provided for accurate Landed Cost result. \n\nAllowed values:\n 1. Any non-negative floating-point number. \n2. Numeric value with optional decimal value.",
-            "example": "100.6"
+            "example": 100.6
           },
           "shipmentType": {
             "maximum": 1,
@@ -45812,7 +45812,7 @@
             "maximum": 1,
             "type": "number",
             "description": "Specifies the gross weight of the commodity as any non-negative value.",
-            "example": "10.34"
+            "example": 10.34
           },
           "grossWeightUnit": {
             "maximum": 1,
@@ -45825,7 +45825,7 @@
             "maximum": 1,
             "type": "number",
             "description": "Specifies the price for each commodity unit in the settlement currency. The total price of the entire number of shipmentItems may not exceed 999999999999.99",
-            "example": "346.32"
+            "example": 346.32
           },
           "commodityCurrencyCode": {
             "maximum": 1,
@@ -46029,7 +46029,7 @@
             "maximum": 1,
             "type": "number",
             "description": "Fee amount for the brokerage charges.",
-            "example": "10.56"
+            "example": 10.56
           }
         }
       },
@@ -65646,7 +65646,7 @@
             "type": "string",
             "description": "Postal code",
             "example": {
-              "1": "30005",
+              "1": 30005,
               "2": "30005-4616"
             }
           },
@@ -65683,7 +65683,7 @@
             "type": "string",
             "description": "The final destination postal code.",
             "example": {
-              "1": "30005",
+              "1": 30005,
               "2": "30005-4616"
             }
           },
@@ -65735,7 +65735,7 @@
               "ClearancePortCode": {
                 "type": "string",
                 "description": "Port code",
-                "example": "56982"
+                "example": 56982
               },
               "Consignee": {
                 "maxLength": 35,
@@ -70528,13 +70528,13 @@
             "minimum": 0.01,
             "type": "string",
             "description": "Price per unit of the product being shipped.",
-            "example": "2"
+            "example": 2
           },
           "NumberOfUnits": {
             "minimum": 1,
             "type": "string",
             "description": "Number of units of the product being shipped.",
-            "example": "3"
+            "example": 3
           },
           "ProductNumber": {
             "pattern": "^(?!\\s*$)[a-zA-Z0-9 ]{1,20}$",
@@ -70703,7 +70703,7 @@
             "minimum": 1,
             "type": "string",
             "description": "Number of identical units in the package/ltl.",
-            "example": "1"
+            "example": 1
           },
           "HandlingUnits": {
             "$ref": "#/components/schemas/LTL_Handling_Units"
@@ -70733,7 +70733,7 @@
             "minimum": 1,
             "type": "string",
             "description": "Quantity of handling units.",
-            "example": "1"
+            "example": 1
           },
           "Type": {
             "enum": [
@@ -70773,7 +70773,7 @@
             ],
             "type": "string",
             "description": "Freight class of the handling unit.\n\nValid values are:\n\n- 50 = over 50 lbs - Fits on standard shrink-wrapped 4X4 pallet, very durable\n- 55 = 35-50 pounds - Bricks, cement, mortar, hardwood flooring\n- 60 = 30-35 pounds - Car accessories & car parts\n- 65 = 22.5-30 pounds - Car accessories & car parts, bottled beverages, books in boxes\n- 70 = 15 to 22.5 pounds - Car accessories & car parts, food items, automobile engines\n- 77.5 = 13.5 to 15 pounds - Tires, bathroom fixtures\n- 85 =\t12-13.5 pounds - Crated machinery, cast iron stoves\n- 92.5 = 10.5-12 pounds - Computers, monitors, refrigerators\n- 100 =\t9-10.5 pounds - Boat covers, car covers, canvas, wine cases, caskets\n- 110 =\t8-9 pounds - Cabinets, framed artwork, table saw\n- 125 =\t7-8 pounds - Small Household appliances\n- 150 =\t6-7 pounds - Auto sheet metal parts, bookcases\n- 175 =\t5-6 pounds - Clothing, couches stuffed furniture\n- 200 =\t4-5 pounds - Auto sheet metal parts, aircraft parts, aluminum table, packaged mattresses\n- 250 =\t3-4 pounds - Bamboo furniture, mattress and box spring, plasma TV\n- 300 =\t2-3 pounds - Wood cabinets, tables, chairs setup, model boats\n- 400 =\t1-2 pounds - Deer antlers\n- 500 =\tLess than 1 lbs - Bags of gold dust, ping pong balls\n",
-            "example": "150"
+            "example": 150
           },
           "Dimensions": {
             "$ref": "#/components/schemas/LTL_Dimensions"
@@ -70831,21 +70831,21 @@
             "minimum": 0.01,
             "type": "string",
             "description": "Length of the package/ltl.",
-            "example": "48"
+            "example": 48
           },
           "Width": {
             "maximum": 99.99,
             "minimum": 0.01,
             "type": "string",
             "description": "Width of the package/ltl.",
-            "example": "40"
+            "example": 40
           },
           "Height": {
             "maximum": 99.99,
             "minimum": 0.01,
             "type": "string",
             "description": "Height of the package/ltl.",
-            "example": "36"
+            "example": 36
           },
           "UnitOfMeasurement": {
             "enum": [
@@ -70875,7 +70875,7 @@
             "minimum": 0.01,
             "type": "string",
             "description": "Weight of the package/ltl.",
-            "example": "10"
+            "example": 10
           },
           "UnitOfMeasurement": {
             "enum": [
@@ -70940,7 +70940,7 @@
             "pattern": "^[0-9]+(\\.[0-9]{1,2})?$",
             "type": "string",
             "description": "The amount the shipper or receiver pays to cover the cost associated with the LTL Charges.",
-            "example": "2"
+            "example": 2
           },
           "ChargeDescription": {
             "pattern": "^(?!\\s*$)[a-zA-Z0-9 ]{1,30}$",
@@ -70969,7 +70969,7 @@
             ],
             "type": "string",
             "description": "The type of notification request.\n\nValid values are:\n\n- 001 = QV Ship Notification\n- 002 = QV Delivery Notification\n- 003 = QV Exception Notification\n",
-            "example": "6"
+            "example": 6
           },
           "MediaTypeCode": {
             "enum": [
@@ -70978,7 +70978,7 @@
             ],
             "type": "string",
             "description": "The media type code for the notification.\n\nValid values are:\n\n- 03 = Email\n- 04 = Fax\n",
-            "example": "03"
+            "example": 3
           },
           "Language": {
             "pattern": "^[A-Z]{3}$",
@@ -76579,7 +76579,7 @@
             "type": "integer",
             "description": "The total number of packages in the shipment. Note that this number may be greater than the number of returned packages in the response. In such cases subsequent calls are needed to get additional packages.",
             "format": "int32",
-            "example": "2"
+            "example": 2
           },
           "paymentInformation": {
             "type": "array",
@@ -76669,7 +76669,7 @@
           "paid": {
             "type": "boolean",
             "description": "The indication for whether the payment is paid or not. Valid values: 'true' the payment is paid. 'false' the payment is not paid.",
-            "example": "false"
+            "example": false
           },
           "paymentMethod": {
             "type": "string",
@@ -77259,7 +77259,7 @@
             "type": "integer",
             "description": "The total number of packages in the shipment. Note that this number may be greater than the number of returned packages in the response. In such cases subsequent calls are needed to get additional packages.",
             "format": "int32",
-            "example": "2"
+            "example": 2
           },
           "paymentInformation": {
             "type": "array",
@@ -77349,7 +77349,7 @@
           "paid": {
             "type": "boolean",
             "description": "The indication for whether the payment is paid or not. Valid values: 'true' the payment is paid. 'false' the payment is not paid.",
-            "example": "false"
+            "example": false
           },
           "paymentMethod": {
             "type": "string",
@@ -77701,7 +77701,7 @@
             "minimum": 1,
             "type": "integer",
             "description": "Number of identical units in the package/ltl.",
-            "example": "1"
+            "example": 1
           },
           "handlingUnits": {
             "$ref": "#/components/schemas/HandlingUnits"
@@ -77741,28 +77741,28 @@
           },
           "freightClass": {
             "enum": [
-              "50",
-              "55",
-              "60",
-              "65",
-              "70",
-              "77.5",
-              "85",
-              "92.5",
-              "100",
-              "110",
-              "125",
-              "150",
-              "175",
-              "200",
-              "250",
-              "300",
-              "400",
-              "500"
+              50,
+              55,
+              60,
+              65,
+              70,
+              77.5,
+              85,
+              92.5,
+              100,
+              110,
+              125,
+              150,
+              175,
+              200,
+              250,
+              300,
+              400,
+              500
             ],
             "type": "number",
             "description": "Freight class of the handling unit.\n| Code  | Description                                                                              |\n| :--:  | :--------------------------------------------------------------------------------------: |\n| 50    | over 50 lbs - Fits on standard shrink-wrapped 4X4 pallet, very durable                   |\n| 55    | 35-50 pounds - Bricks, cement, mortar, hardwood flooring                                 |\n| 60    | 30-35 pounds - Car accessories & car parts                                               |\n| 65    | 22.5-30 pounds - Car accessories & car parts, bottled beverages, books in boxes          |\n| 70    | 15 to 22.5 pounds - Car accessories & car parts, food items, automobile engines          |\n| 77.5  | 13.5 to 15 pounds - Tires, bathroom fixtures                                             |\n| 85    | 12-13.5 pounds - Crated machinery, cast iron stoves                                      |\n| 92.5  | 10.5-12 pounds - Computers, monitors, refrigerators                                      |\n| 100   | 9-10.5 pounds - Boat covers, car covers, canvas, wine cases, caskets                     |\n| 110   | 8-9 pounds - Cabinets, framed artwork, table saw                                         |\n| 125   | 7-8 pounds - Small Household appliances                                                  |\n| 150   | 6-7 pounds - Auto sheet metal parts, bookcases                                           |\n| 175   | 5-6 pounds - Clothing, couches stuffed furniture                                         |\n| 200   | 4-5 pounds - Auto sheet metal parts, aircraft parts, aluminum table, packaged mattresses |\n| 250   | 3-4 pounds - Bamboo furniture, mattress and box spring, plasma TV                        |\n| 300   | 2-3 pounds - Wood cabinets, tables, chairs setup, model boats                            |\n| 400   | 1-2 pounds - Deer antlers                                                                |\n| 500   | Less than 1 lbs - Bags of gold dust, ping pong balls                                     |\n",
-            "example": "150"
+            "example": 150
           },
           "transportationService": {
             "required": [
@@ -77776,14 +77776,14 @@
                 "minimum": 0,
                 "type": "integer",
                 "description": "Number of packages for air service. If groundService is 0, this must be at least 1.",
-                "example": "1"
+                "example": 1
               },
               "groundService": {
                 "maximum": 999,
                 "minimum": 0,
                 "type": "integer",
                 "description": "Number of packages for ground service. If airService is 0, this must be at least 1.",
-                "example": "1"
+                "example": 1
               }
             },
             "description": "Specifies the transportation service options for the handling unit, including the number of packages for air and ground services."
@@ -77799,11 +77799,11 @@
         "type": "object",
         "properties": {
           "weight": {
-            "maximum": 5000.00,
+            "maximum": 5000,
             "minimum": 0.01,
             "type": "number",
             "description": "Weight of the package/ltl.",
-            "example": "10.0"
+            "example": 10
           },
           "unitOfMeasurement": {
             "enum": [
@@ -77828,24 +77828,24 @@
         "properties": {
           "length": {
             "maximum": 99.99,
-            "minimum": 1.00,
+            "minimum": 1,
             "type": "number",
             "description": "Length of the package/ltl.",
-            "example": "48.0"
+            "example": 48
           },
           "width": {
             "maximum": 99.99,
-            "minimum": 1.00,
+            "minimum": 1,
             "type": "number",
             "description": "Width of the package/ltl.",
-            "example": "40.0"
+            "example": 40
           },
           "height": {
             "maximum": 99.99,
-            "minimum": 1.00,
+            "minimum": 1,
             "type": "number",
             "description": "Height of the package/ltl.",
-            "example": "36.0"
+            "example": 36
           },
           "unitOfMeasurement": {
             "enum": [
@@ -78282,7 +78282,7 @@
           "isMatched": {
             "type": "boolean",
             "description": "Whether the description guidance service has matched a keyword from the shipment description",
-            "default": "false"
+            "default": false
           },
           "message": {
             "pattern": "^[\\s\\S]*$",
@@ -78410,22 +78410,22 @@
           "evaluateDescriptions": {
             "type": "boolean",
             "description": "Whether the user has requested description guidance",
-            "default": "true"
+            "default": true
           },
           "evaluatePoaRequirements": {
             "type": "boolean",
             "description": "Whether the user has requested Power of Attorney (POA) requirements",
-            "default": "true"
+            "default": true
           },
           "evaluateAdvancedImportExportRequirements": {
             "type": "boolean",
             "description": "Whether the user has requested an Advanced Import/Export Compliance review",
-            "default": "false"
+            "default": false
           },
           "evaluateImportExportRequirements": {
             "type": "boolean",
             "description": "Whether the user has requested an Import/Export Compliance review",
-            "default": "true"
+            "default": true
           },
           "shipment": {
             "$ref": "#/components/schemas/UPSExportAssure_ShipmentRequest"
@@ -78497,7 +78497,7 @@
         "type": "object",
         "properties": {
           "shipmentValue": {
-            "maximum": 999999999999.99,
+            "maximum": 1E+12,
             "type": "number",
             "description": "The total monetary value of all items included in the shipment",
             "format": "double"
@@ -78758,7 +78758,7 @@
             "description": "Description of the contents of the shipment. This description is required if the `evaluateDescriptions` flag is set to true."
           },
           "grossWeight": {
-            "maximum": 999999999999.99,
+            "maximum": 1E+12,
             "pattern": "^(\\d{1,12})(\\.\\d{1,2})?$",
             "type": "number",
             "description": "The gross weight of the entire Shipment. If this field is not specified, `grossWeightUnit` must be `null`.",
@@ -78862,7 +78862,7 @@
             "$ref": "#/components/schemas/CountryCodes"
           },
           "amountValue": {
-            "maximum": 999999999999.99,
+            "maximum": 1E+12,
             "type": "number",
             "description": "Total value of the items in the shipment.",
             "format": "double"
@@ -80942,9 +80942,9 @@
         "summary": "Description Guidance Request",
         "value": {
           "transID": "c5d87df5-ac58-4ff7-9f96-103debe66496",
-          "evaluateDescriptions": "true",
-          "evaluatePoaRequirements": "false",
-          "evaluateImportExportRequirements": "false",
+          "evaluateDescriptions": true,
+          "evaluatePoaRequirements": false,
+          "evaluateImportExportRequirements": false,
           "shipment": {
             "id": "47cb07b6-69f1-4ded-95ff-953fee2667de",
             "importCountryCode": "CA",
@@ -80953,7 +80953,7 @@
             "transModes": "INT_AIR",
             "shipmentType": "GIFT",
             "shipmentDescription": "gifts",
-            "grossWeight": "15",
+            "grossWeight": 15,
             "grossWeightUnit": "KG",
             "shipmentItems": [
               {
@@ -80962,9 +80962,9 @@
                 "hsCode": "6109.10.0004",
                 "description": "t-shirts",
                 "originCountryCode": "US",
-                "amountValue": "1200",
+                "amountValue": 1200,
                 "currencyCode": "USD",
-                "quantity": "5",
+                "quantity": 5,
                 "UOM": "Dozen"
               },
               {
@@ -80973,9 +80973,9 @@
                 "hsCode": "6109.10.0042",
                 "description": "t-shirts",
                 "originCountryCode": "US",
-                "amountValue": "2400",
+                "amountValue": 2400,
                 "currencyCode": "USD",
-                "quantity": "10",
+                "quantity": 10,
                 "UOM": "Dozen"
               }
             ]
@@ -80986,9 +80986,9 @@
         "summary": "POA Guidance Request",
         "value": {
           "transID": "c5d87df5-ac58-4ff7-9f96-103debe66496",
-          "evaluateDescriptions": "false",
-          "evaluatePoaRequirements": "false",
-          "evaluateImportExportRequirements": "true",
+          "evaluateDescriptions": false,
+          "evaluatePoaRequirements": false,
+          "evaluateImportExportRequirements": true,
           "shipment": {
             "importerName": "Ford",
             "importerCity": "Detroit",
@@ -81005,7 +81005,7 @@
             "transModes": "INT_AIR",
             "shipmentType": "COMM",
             "shipmentDescription": "gifts",
-            "grossWeight": "15",
+            "grossWeight": 15,
             "grossWeightUnit": "KG",
             "shipmentItems": [
               {
@@ -81014,9 +81014,9 @@
                 "hsCode": "6109.10.0004",
                 "description": "t-shirts",
                 "originCountryCode": "US",
-                "amountValue": "1200",
+                "amountValue": 1200,
                 "currencyCode": "USD",
-                "quantity": "5",
+                "quantity": 5,
                 "UOM": "Dozen"
               },
               {
@@ -81025,9 +81025,9 @@
                 "hsCode": "6109.10.0042",
                 "description": "t-shirts",
                 "originCountryCode": "CU",
-                "amountValue": "2400",
+                "amountValue": 2400,
                 "currencyCode": "USD",
-                "quantity": "10",
+                "quantity": 10,
                 "UOM": "Dozen"
               }
             ]
@@ -81038,9 +81038,9 @@
         "summary": "Import Export Compliance Request",
         "value": {
           "transID": "c5d87df5-ac58-4ff7-9f96-103debe66496",
-          "evaluateDescriptions": "false",
-          "evaluatePoaRequirements": "false",
-          "evaluateImportExportRequirements": "true",
+          "evaluateDescriptions": false,
+          "evaluatePoaRequirements": false,
+          "evaluateImportExportRequirements": true,
           "shipment": {
             "id": "47cb07b6-69f1-4ded-95ff-953fee2667de",
             "importCountryCode": "CA",
@@ -81048,7 +81048,7 @@
             "translationLocale": "EN",
             "transModes": "INT_AIR",
             "shipmentType": "COMM",
-            "grossWeight": "15",
+            "grossWeight": 15,
             "grossWeightUnit": "KG",
             "shipmentItems": [
               {
@@ -81057,9 +81057,9 @@
                 "hsCode": "6109.10.0004",
                 "description": "t-shirts",
                 "originCountryCode": "US",
-                "amountValue": "1200",
+                "amountValue": 1200,
                 "currencyCode": "USD",
-                "quantity": "5",
+                "quantity": 5,
                 "UOM": "Dozen"
               },
               {
@@ -81068,9 +81068,9 @@
                 "hsCode": "6109.10.0042",
                 "description": "t-shirts",
                 "originCountryCode": "CU",
-                "amountValue": "2400",
+                "amountValue": 2400,
                 "currencyCode": "USD",
-                "quantity": "10",
+                "quantity": 10,
                 "UOM": "Dozen"
               }
             ]
@@ -81081,9 +81081,9 @@
         "summary": "All Guidance Request",
         "value": {
           "transID": "c5d87df5-ac58-4ff7-9f96-103debe66496",
-          "evaluateDescriptions": "true",
-          "evaluatePoaRequirements": "true",
-          "evaluateImportExportRequirements": "true",
+          "evaluateDescriptions": true,
+          "evaluatePoaRequirements": true,
+          "evaluateImportExportRequirements": true,
           "shipment": {
             "importerName": "Ford",
             "importerCity": "Detroit",
@@ -81100,7 +81100,7 @@
             "transModes": "INT_AIR",
             "shipmentType": "COMM",
             "shipmentDescription": "shirts",
-            "grossWeight": "15",
+            "grossWeight": 15,
             "grossWeightUnit": "KG",
             "shipmentItems": [
               {
@@ -81109,9 +81109,9 @@
                 "hsCode": "6109.10.0004",
                 "description": "t-shirts",
                 "originCountryCode": "US",
-                "amountValue": "1200",
+                "amountValue": 1200,
                 "currencyCode": "USD",
-                "quantity": "5",
+                "quantity": 5,
                 "UOM": "Dozen"
               },
               {
@@ -81120,9 +81120,9 @@
                 "hsCode": "6109.10.0042",
                 "description": "t-shirts",
                 "originCountryCode": "CU",
-                "amountValue": "2400",
+                "amountValue": 2400,
                 "currencyCode": "USD",
-                "quantity": "10",
+                "quantity": 10,
                 "UOM": "Dozen"
               }
             ]
@@ -81135,37 +81135,37 @@
           "transID": "28b210b9-e686-4617-8cf4-9973e3ed4087",
           "shipment": {
             "id": "a5de8df8-0ada-45d6-ae36-b7dbc4d6f127",
-            "hasCommodityWarnings": "true",
+            "hasCommodityWarnings": true,
             "descriptionGuidance": {
-              "isMatched": "true",
+              "isMatched": true,
               "message": "Men's and women's cotton sport shirts",
               "sourceListName": "global",
               "matchedKeyword": "Gift"
             },
             "poaCompliance": {
-              "importerPoaRequiredFlag": "true",
+              "importerPoaRequiredFlag": true,
               "importerEvaluationCriteria": "Description",
               "importerPoaOnFileIndicator": "Yes",
               "importerCommodityId": "8e369c86-6c1f-4fbd-bd0c-55de5107e5ff",
               "importerCommodityDescription": "t-shirts",
-              "exporterPoaRequiredFlag": "true",
+              "exporterPoaRequiredFlag": true,
               "exporterEvaluationCriteria": "Description",
               "exporterPoaOnFileIndicator": "Yes",
               "exporterCommodityId": "8e369c86-6c1f-4fbd-bd0c-55de5107e5ff",
               "exporterCommodityDescription": "t-shirts",
-              "exporterOnlineFormFlag": "true",
+              "exporterOnlineFormFlag": true,
               "exporterDocuSignTemplateId": "c0375e04-0c6e-4e56-b01d-30b2f4b613bd"
             },
             "importExportCompliance": {
-              "shipmentValue": "3600",
+              "shipmentValue": 3600,
               "shipmentCurrencyCode": "USD",
               "translationLocale": "EN",
-              "hasShipmentWarnings": "true",
-              "hasCommodityWarnings": "true",
+              "hasShipmentWarnings": true,
+              "hasCommodityWarnings": true,
               "commodityWarningsMessage": "Your shipment may have compliance considerations; see below for additional detail",
-              "isShipmentOverGiftValueThreshold": "true",
+              "isShipmentOverGiftValueThreshold": true,
               "shipmentOverGiftValueThresholdMessage": "Your shipment may not be considered as a gift by Customs authorities due to the shipment value provided",
-              "isShipmentOverGiftWeightThreshold": "false",
+              "isShipmentOverGiftWeightThreshold": false,
               "shipmentOverGiftWeightThresholdMessage": ""
             },
             "shipmentItems": [
@@ -81194,37 +81194,37 @@
           "transID": "28b210b9-e686-4617-8cf4-9973e3ed4087",
           "shipment": {
             "id": "47cb07b6-69f1-4ded-95ff-953fee2667de",
-            "hasCommodityWarnings": "true",
+            "hasCommodityWarnings": true,
             "descriptionGuidance": {
-              "isMatched": "false",
+              "isMatched": false,
               "message": "",
               "sourceListName": "global",
               "matchedKeyword": "Gift"
             },
             "importExportCompliance": {
-              "shipmentValue": "3600",
+              "shipmentValue": 3600,
               "shipmentCurrencyCode": "USD",
               "translationLocale": "EN",
-              "hasShipmentWarnings": "true",
-              "hasCommodityWarnings": "true",
-              "isShipmentOverGiftValueThreshold": "true",
+              "hasShipmentWarnings": true,
+              "hasCommodityWarnings": true,
+              "isShipmentOverGiftValueThreshold": true,
               "shipmentOverGiftValueThresholdMessage": "Your shipment may not be considered as a gift by Customs authorities due to the shipment value provided.",
-              "isShipmentOverGiftWeightThreshold": "false",
+              "isShipmentOverGiftWeightThreshold": false,
               "shipmentOverGiftWeightThresholdMessage": "",
               "commodityWarningsMessage": "Your shipment may have compliance considerations see below for additional detail"
             },
             "poaCompliance": {
-              "importerPoaRequiredFlag": "true",
+              "importerPoaRequiredFlag": true,
               "importerEvaluationCriteria": "Description",
               "importerPoaOnFileIndicator": "Yes",
               "importerCommodityId": "8e369c86-6c1f-4fbd-bd0c-55de5107e5ff",
               "importerCommodityDescription": "t-shirts",
-              "exporterPoaRequiredFlag": "true",
+              "exporterPoaRequiredFlag": true,
               "exporterEvaluationCriteria": "Description",
               "exporterPoaOnFileIndicator": "Yes",
               "exporterCommodityId": "8e369c86-6c1f-4fbd-bd0c-55de5107e5ff",
               "exporterCommodityDescription": "t-shirts",
-              "exporterOnlineFormFlag": "true",
+              "exporterOnlineFormFlag": true,
               "exporterDocuSignTemplateId": "c0375e04-0c6e-4e56-b01d-30b2f4b613bd"
             },
             "shipmentItems": [
@@ -81253,16 +81253,16 @@
           "transID": "28b210b9-e686-4617-8cf4-9973e3ed4087",
           "shipment": {
             "id": "47cb07b6-69f1-4ded-95ff-953fee2667de",
-            "hasCommodityWarnings": "true",
+            "hasCommodityWarnings": true,
             "importExportCompliance": {
-              "shipmentValue": "3600",
+              "shipmentValue": 3600,
               "shipmentCurrencyCode": "USD",
               "translationLocale": "EN",
-              "hasShipmentWarnings": "true",
-              "hasCommodityWarnings": "true",
-              "isShipmentOverGiftValueThreshold": "true",
+              "hasShipmentWarnings": true,
+              "hasCommodityWarnings": true,
+              "isShipmentOverGiftValueThreshold": true,
               "shipmentOverGiftValueThresholdMessage": "Your shipment may not be considered as a gift by Customs authorities due to the shipment value provided.",
-              "isShipmentOverGiftWeightThreshold": "false",
+              "isShipmentOverGiftWeightThreshold": false,
               "shipmentOverGiftWeightThresholdMessage": "",
               "commodityWarningsMessage": "Your shipment may have compliance considerations see below for additional detail"
             },
@@ -81272,9 +81272,9 @@
                 "hsCode": "6109.10.0004",
                 "description": "t-shirts",
                 "importExportCompliance": {
-                  "isUpsProhibited": "false",
+                  "isUpsProhibited": false,
                   "upsProhibitedMessage": "",
-                  "isTranslatedIndicator": "false",
+                  "isTranslatedIndicator": false,
                   "complianceOutput": [
                     {
                       "categoryType": "Export",
@@ -81337,9 +81337,9 @@
                 "hsCode": "6109.10.0042",
                 "description": "t-shirts",
                 "importExportCompliance": {
-                  "isUpsProhibited": "false",
+                  "isUpsProhibited": false,
                   "upsProhibitedMessage": "",
-                  "isTranslatedIndicator": "false",
+                  "isTranslatedIndicator": false,
                   "complianceOutput": [
                     {
                       "categoryType": "Export",
@@ -81412,37 +81412,37 @@
           "transID": "28b210b9-e686-4617-8cf4-9973e3ed4087",
           "shipment": {
             "id": "47cb07b6-69f1-4ded-95ff-953fee2667de",
-            "hasCommodityWarnings": "true",
+            "hasCommodityWarnings": true,
             "importExportCompliance": {
-              "shipmentValue": "3600",
+              "shipmentValue": 3600,
               "shipmentCurrencyCode": "USD",
               "translationLocale": "EN",
-              "hasShipmentWarnings": "true",
-              "hasCommodityWarnings": "true",
-              "isShipmentOverGiftValueThreshold": "true",
+              "hasShipmentWarnings": true,
+              "hasCommodityWarnings": true,
+              "isShipmentOverGiftValueThreshold": true,
               "shipmentOverGiftValueThresholdMessage": "Your shipment may not be considered as a gift by Customs authorities due to the shipment value provided.",
-              "isShipmentOverGiftWeightThreshold": "false",
+              "isShipmentOverGiftWeightThreshold": false,
               "shipmentOverGiftWeightThresholdMessage": "",
               "commodityWarningsMessage": "Your shipment may have compliance considerations see below for additional detail"
             },
             "descriptionGuidance": {
-              "isMatched": "true",
+              "isMatched": true,
               "message": "Men's and women's cotton sport shirts",
               "sourceListName": "global",
               "matchedKeyword": "Gift"
             },
             "poaCompliance": {
-              "importerPoaRequiredFlag": "true",
+              "importerPoaRequiredFlag": true,
               "importerEvaluationCriteria": "Description",
               "importerPoaOnFileIndicator": "Yes",
               "importerCommodityId": "8e369c86-6c1f-4fbd-bd0c-55de5107e5ff",
               "importerCommodityDescription": "t-shirts",
-              "exporterPoaRequiredFlag": "true",
+              "exporterPoaRequiredFlag": true,
               "exporterEvaluationCriteria": "Description",
               "exporterPoaOnFileIndicator": "Yes",
               "exporterCommodityId": "8e369c86-6c1f-4fbd-bd0c-55de5107e5ff",
               "exporterCommodityDescription": "t-shirts",
-              "exporterOnlineFormFlag": "true",
+              "exporterOnlineFormFlag": true,
               "exporterDocuSignTemplateId": "c0375e04-0c6e-4e56-b01d-30b2f4b613bd"
             },
             "shipmentItems": [
@@ -81451,9 +81451,9 @@
                 "hsCode": "6109.10.0004",
                 "description": "t-shirts",
                 "importExportCompliance": {
-                  "isUpsProhibited": "false",
+                  "isUpsProhibited": false,
                   "upsProhibitedMessage": "",
-                  "isTranslatedIndicator": "false",
+                  "isTranslatedIndicator": false,
                   "complianceOutput": [
                     {
                       "categoryType": "Export",
@@ -81516,9 +81516,9 @@
                 "hsCode": "6109.10.0042",
                 "description": "t-shirts",
                 "importExportCompliance": {
-                  "isUpsProhibited": "false",
+                  "isUpsProhibited": false,
                   "upsProhibitedMessage": "",
-                  "isTranslatedIndicator": "false",
+                  "isTranslatedIndicator": false,
                   "complianceOutput": [
                     {
                       "categoryType": "Export",
@@ -81591,37 +81591,37 @@
           "transID": "WSCM003769601129231354517251D4CF",
           "shipment": {
             "id": "WSEXPID20231129135451752",
-            "hasCommodityWarnings": "true",
+            "hasCommodityWarnings": true,
             "descriptionGuidance": {
-              "isMatched": "true",
+              "isMatched": true,
               "message": "DVD Player Stereo",
               "sourceListName": "US origin",
               "matchedKeyword": "GOODS"
             },
             "poaCompliance": {
-              "importerPoaRequiredFlag": "true",
+              "importerPoaRequiredFlag": true,
               "importerEvaluationCriteria": "Description",
               "importerPoaOnFileIndicator": "Yes",
               "importerCommodityId": "8e369c86-6c1f-4fbd-bd0c-55de5107e5ff",
               "importerCommodityDescription": "t-shirts",
-              "exporterPoaRequiredFlag": "true",
+              "exporterPoaRequiredFlag": true,
               "exporterEvaluationCriteria": "Description",
               "exporterPoaOnFileIndicator": "Yes",
               "exporterCommodityId": "8e369c86-6c1f-4fbd-bd0c-55de5107e5ff",
               "exporterCommodityDescription": "t-shirts",
-              "exporterOnlineFormFlag": "true",
+              "exporterOnlineFormFlag": true,
               "exporterDocuSignTemplateId": "c0375e04-0c6e-4e56-b01d-30b2f4b613bd"
             },
             "importExportCompliance": {
-              "shipmentValue": "2365",
+              "shipmentValue": 2365,
               "shipmentCurrencyCode": "USD",
               "translationLocale": "EN",
-              "hasShipmentWarnings": "false",
-              "hasCommodityWarnings": "false",
+              "hasShipmentWarnings": false,
+              "hasCommodityWarnings": false,
               "commodityWarningsMessage": "sample message",
-              "isShipmentOverGiftValueThreshold": "false",
+              "isShipmentOverGiftValueThreshold": false,
               "shipmentOverGiftValueThresholdMessage": "sample message",
-              "isShipmentOverGiftWeightThreshold": "false",
+              "isShipmentOverGiftWeightThreshold": false,
               "shipmentOverGiftWeightThresholdMessage": "sample message"
             },
             "shipmentItems": [
@@ -81630,15 +81630,15 @@
                 "hsCode": "900150",
                 "description": "DESCRIPTION",
                 "descriptionGuidance": {
-                  "isMatched": "true",
+                  "isMatched": true,
                   "message": "provide a color and size",
                   "sourceListName": "Global",
                   "matchedKeyword": "DESCRIPTION"
                 },
                 "importExportCompliance": {
-                  "isUpsProhibited": "false",
+                  "isUpsProhibited": false,
                   "upsProhibitedMessage": "",
-                  "isTranslatedIndicator": "false",
+                  "isTranslatedIndicator": false,
                   "complianceOutput": [
                     {
                       "categoryType": "Export",
@@ -81723,37 +81723,37 @@
           "transID": "1234",
           "shipment": {
             "id": "1234",
-            "hasCommodityWarnings": "true",
+            "hasCommodityWarnings": true,
             "descriptionGuidance": {
-              "isMatched": "true",
+              "isMatched": true,
               "message": "DVD Player Stereo",
               "sourceListName": "US destination",
               "matchedKeyword": "GOODS"
             },
             "poaCompliance": {
-              "importerPoaRequiredFlag": "true",
+              "importerPoaRequiredFlag": true,
               "importerEvaluationCriteria": "HTS PGA",
               "importerPoaOnFileIndicator": "No",
               "importerCommodityId": "Test102",
               "importerCommodityDescription": "EQUIPMENTS",
-              "exporterPoaRequiredFlag": "false",
+              "exporterPoaRequiredFlag": false,
               "exporterEvaluationCriteria": "Value",
               "exporterPoaOnFileIndicator": "Yes",
               "exporterCommodityId": "order_2",
               "exporterCommodityDescription": "computers",
-              "exporterOnlineFormFlag": "false",
+              "exporterOnlineFormFlag": false,
               "exporterDocuSignTemplateId": "3c499118-346d-41d8-99db-faf852b77888"
             },
             "importExportCompliance": {
-              "shipmentValue": "2.00",
+              "shipmentValue": 2,
               "shipmentCurrencyCode": "USD",
               "translationLocale": "EN",
-              "hasShipmentWarnings": "true",
-              "hasCommodityWarnings": "true",
+              "hasShipmentWarnings": true,
+              "hasCommodityWarnings": true,
               "commodityWarningsMessage": "Your shipment may have additional clearance considerations see below for detail",
-              "isShipmentOverGiftValueThreshold": "true",
+              "isShipmentOverGiftValueThreshold": true,
               "shipmentOverGiftValueThresholdMessage": "Your shipment may not be considered as a gift by Customs authorities due to the shipment value provided.",
-              "isShipmentOverGiftWeightThreshold": "true",
+              "isShipmentOverGiftWeightThreshold": true,
               "shipmentOverGiftWeightThresholdMessage": "Your shipment may not be considered as a gift by Customs authorities due to the shipment weight provided."
             },
             "shipmentItems": [
@@ -81762,15 +81762,15 @@
                 "hsCode": "2106909999",
                 "description": "tshirt",
                 "descriptionGuidance": {
-                  "isMatched": "true",
+                  "isMatched": true,
                   "message": "Men's Shirts Lingerie Girls' Vests Boys' Jackets",
                   "sourceListName": "Global",
                   "matchedKeyword": "tshirt"
                 },
                 "importExportCompliance": {
-                  "isUpsProhibited": "false",
+                  "isUpsProhibited": false,
                   "upsProhibitedMessage": null,
-                  "isTranslatedIndicator": "false",
+                  "isTranslatedIndicator": false,
                   "complianceOutput": [
                     {
                       "categoryType": "Import",

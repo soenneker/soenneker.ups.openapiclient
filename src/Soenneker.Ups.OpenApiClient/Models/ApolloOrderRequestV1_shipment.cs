@@ -101,7 +101,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public ApolloOrderRequestV1_shipment()
         {
             Currency = "USD";
-            IsMetric = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -14,7 +14,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class BSIS_v1_Shipment_shipToAddress : global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_Address, IParsable
     {
         /// <summary>Indicate as true if the shipTo address is classified as residential (vs. commercial). Valid only for US50 addresses.Needed for internal rate call to calculate transportCost if that is needed and not provided.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_Shipment_shipToAddress_residentialAddressIndicator? ResidentialAddressIndicator { get; set; }
+        public bool? ResidentialAddressIndicator { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "residentialAddressIndicator", n => { ResidentialAddressIndicator = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_Shipment_shipToAddress_residentialAddressIndicator>(); } },
+                { "residentialAddressIndicator", n => { ResidentialAddressIndicator = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_Shipment_shipToAddress_residentialAddressIndicator>("residentialAddressIndicator", ResidentialAddressIndicator);
+            writer.WriteBoolValue("residentialAddressIndicator", ResidentialAddressIndicator);
         }
     }
 }
