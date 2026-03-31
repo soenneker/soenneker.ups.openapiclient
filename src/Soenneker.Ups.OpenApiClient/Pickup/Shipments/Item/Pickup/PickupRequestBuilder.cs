@@ -16,15 +16,15 @@ namespace Soenneker.Ups.OpenApiClient.Pickup.Shipments.Item.Pickup
     public partial class PickupRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.Pickup.shipments.item.pickup.item collection</summary>
-        /// <param name="position">&quot;Valid Values: 01 = AccountNumber, 02 = PRN&quot;</param>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Pickup.Shipments.Item.Pickup.Item.CancelByItemRequestBuilder"/></returns>
-        public global::Soenneker.Ups.OpenApiClient.Pickup.Shipments.Item.Pickup.Item.CancelByItemRequestBuilder this[string position]
+        /// <param name="position">Type of pickup. Valid values:oncallsmartboth. Length 6</param>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Pickup.Shipments.Item.Pickup.Item.WithPickuptypeItemRequestBuilder"/></returns>
+        public global::Soenneker.Ups.OpenApiClient.Pickup.Shipments.Item.Pickup.Item.WithPickuptypeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("CancelBy%2Did", position);
-                return new global::Soenneker.Ups.OpenApiClient.Pickup.Shipments.Item.Pickup.Item.CancelByItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("pickuptype", position);
+                return new global::Soenneker.Ups.OpenApiClient.Pickup.Shipments.Item.Pickup.Item.WithPickuptypeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

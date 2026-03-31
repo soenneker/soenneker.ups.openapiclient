@@ -25,7 +25,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public List<global::Soenneker.Ups.OpenApiClient.Models.WorldEaseShipmentManagement_Error> Errors { get; set; }
 #endif
         /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
+        public override string Message { get => MessageEscaped ?? string.Empty; }
+        /// <summary>The primary error message.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MessageEscaped { get; set; }
+#nullable restore
+#else
+        public string MessageEscaped { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.WorldEaseShipmentManagement_ErrorResponse"/> and sets the default values.
         /// </summary>
@@ -52,6 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.WorldEaseShipmentManagement_Error>(global::Soenneker.Ups.OpenApiClient.Models.WorldEaseShipmentManagement_Error.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "message", n => { MessageEscaped = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -62,6 +71,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.WorldEaseShipmentManagement_Error>("errors", Errors);
+            writer.WriteStringValue("message", MessageEscaped);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

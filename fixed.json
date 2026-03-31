@@ -12553,9 +12553,7 @@
             "Pickup_OAuth2": [ ]
           }
         ]
-      }
-    },
-    "/Pickup/shipments/{version}/pickup/{CancelBy}": {
+      },
       "delete": {
         "tags": [
           "Pickup"
@@ -12590,7 +12588,7 @@
             }
           },
           {
-            "name": "CancelBy",
+            "name": "pickuptype",
             "in": "path",
             "description": "\"Valid Values: 01 = AccountNumber, 02 = PRN\"",
             "required": true,
@@ -64616,6 +64614,10 @@
             "items": {
               "$ref": "#/components/schemas/TimeInTransit_errors"
             }
+          },
+          "message": {
+            "type": "string",
+            "description": "The primary error message."
           }
         }
       },
@@ -69346,6 +69348,10 @@
               "$ref": "#/components/schemas/WorldEaseShipmentManagement_Error"
             },
             "description": "error payload - array containing one or more Errors"
+          },
+          "message": {
+            "type": "string",
+            "description": "The primary error message."
           }
         },
         "description": "Error response entity"
