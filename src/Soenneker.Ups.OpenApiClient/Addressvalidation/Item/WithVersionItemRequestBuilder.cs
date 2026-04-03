@@ -27,19 +27,6 @@ namespace Soenneker.Ups.OpenApiClient.Addressvalidation.Item
                 return new global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
-        /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.addressvalidation.item.item collection</summary>
-        /// <param name="position">Identifies the optional processing to be performed. If not present or invalid value then an error will be sent back.Valid values:- 1 - Address Validation- 2 - Address Classification- 3 - Address Validation and Address Classification.For a list of valid values, refer to Address Validation API Supported Countries or Territories in the Appendix.</param>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder"/></returns>
-        [Obsolete("This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.")]
-        public global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                if (!string.IsNullOrWhiteSpace(position)) urlTplParams.Add("requestoption", position);
-                return new global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.WithVersionItemRequestBuilder"/> and sets the default values.
         /// </summary>
