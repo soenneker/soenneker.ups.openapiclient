@@ -42,13 +42,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService TransportationService { get; set; }
 #endif
         /// <summary>The type of handling unit, such as boxes, crates, or pallets, used to describe how the shipment is packaged and handled.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type Type { get; set; }
-#endif
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits"/> and sets the default values.
         /// </summary>
@@ -78,7 +72,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "freightClass", n => { FreightClass = n.GetDoubleValue(); } },
                 { "packageWeight", n => { PackageWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight>(global::Soenneker.Ups.OpenApiClient.Models.PackageWeight.CreateFromDiscriminatorValue); } },
                 { "transportationService", n => { TransportationService = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type>(); } },
             };
         }
         /// <summary>
@@ -92,7 +86,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteDoubleValue("freightClass", FreightClass);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight>("packageWeight", PackageWeight);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService>("transportationService", TransportationService);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_Type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
