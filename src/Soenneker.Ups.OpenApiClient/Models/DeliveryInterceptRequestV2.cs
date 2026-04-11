@@ -31,10 +31,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Reason for return code. Required only for RS intercept type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonForReturn { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? ReasonForReturn { get; set; }
 #nullable restore
 #else
-        public string ReasonForReturn { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch ReasonForReturn { get; set; }
 #endif
         /// <summary>The requesterContactInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,10 +47,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The request type of the intercept being performed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? RequestType { get; set; }
 #nullable restore
 #else
-        public string RequestType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch RequestType { get; set; }
 #endif
         /// <summary>Special Instructions sent to the driver. Available only to AA intercept type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,8 +80,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "deliveryDate", n => { DeliveryDate = n.GetStringValue(); } },
                 { "newDeliveryAddress", n => { NewDeliveryAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2_newDeliveryAddress>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2_newDeliveryAddress.CreateFromDiscriminatorValue); } },
-                { "reasonForReturn", n => { ReasonForReturn = n.GetStringValue(); } },
-                { "requestType", n => { RequestType = n.GetStringValue(); } },
+                { "reasonForReturn", n => { ReasonForReturn = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "requestType", n => { RequestType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "requesterContactInfo", n => { RequesterContactInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2_requesterContactInfo>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2_requesterContactInfo.CreateFromDiscriminatorValue); } },
                 { "specialInstructions", n => { SpecialInstructions = n.GetStringValue(); } },
             };
@@ -95,9 +95,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("deliveryDate", DeliveryDate);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2_newDeliveryAddress>("newDeliveryAddress", NewDeliveryAddress);
-            writer.WriteStringValue("reasonForReturn", ReasonForReturn);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("reasonForReturn", ReasonForReturn);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2_requesterContactInfo>("requesterContactInfo", RequesterContactInfo);
-            writer.WriteStringValue("requestType", RequestType);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("requestType", RequestType);
             writer.WriteStringValue("specialInstructions", SpecialInstructions);
         }
     }

@@ -15,10 +15,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Intercept option to be mentioned to find the charges</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InterceptOption { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? InterceptOption { get; set; }
 #nullable restore
 #else
-        public string InterceptOption { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch InterceptOption { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,7 +38,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "interceptOption", n => { InterceptOption = n.GetStringValue(); } },
+                { "interceptOption", n => { InterceptOption = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("interceptOption", InterceptOption);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("interceptOption", InterceptOption);
         }
     }
 }

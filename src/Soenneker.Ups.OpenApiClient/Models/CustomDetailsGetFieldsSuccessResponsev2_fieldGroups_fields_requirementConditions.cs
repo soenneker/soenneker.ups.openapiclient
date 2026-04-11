@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The operator used when evaluating the rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? Operator { get; set; }
 #nullable restore
 #else
-        public string Operator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch Operator { get; set; }
 #endif
         /// <summary>The value used when evaluating the rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "fieldKey", n => { FieldKey = n.GetStringValue(); } },
                 { "logicalOperator", n => { LogicalOperator = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_requirementConditions_logicalOperator>(); } },
-                { "operator", n => { Operator = n.GetStringValue(); } },
+                { "operator", n => { Operator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -72,7 +72,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("fieldKey", FieldKey);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_requirementConditions_logicalOperator>("logicalOperator", LogicalOperator);
-            writer.WriteStringValue("operator", Operator);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("operator", Operator);
             writer.WriteStringValue("value", Value);
         }
     }

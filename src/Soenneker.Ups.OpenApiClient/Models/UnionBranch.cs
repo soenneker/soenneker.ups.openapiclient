@@ -9,43 +9,29 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaymentTerm : IAdditionalDataHolder, IParsable
+    public partial class UnionBranch : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The code representing the payment term.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? Code { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch Code { get; set; }
-#endif
-        /// <summary>The type of payment term (e.g., Shipper, Consignee, ThridParty).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch Type { get; set; }
-#endif
+        /// <summary>The value property</summary>
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch_value? Value { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UnionBranch"/> and sets the default values.
         /// </summary>
-        public PaymentTerm()
+        public UnionBranch()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.UnionBranch"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.UnionBranch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm();
+            return new global::Soenneker.Ups.OpenApiClient.Models.UnionBranch();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +41,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch_value>(); } },
             };
         }
         /// <summary>
@@ -66,8 +51,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch_value>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

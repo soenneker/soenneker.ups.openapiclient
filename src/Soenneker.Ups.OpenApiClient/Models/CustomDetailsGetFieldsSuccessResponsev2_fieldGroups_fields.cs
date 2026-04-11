@@ -19,10 +19,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Returns the conditionality of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsRequired { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? IsRequired { get; set; }
 #nullable restore
 #else
-        public string IsRequired { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch IsRequired { get; set; }
 #endif
         /// <summary>Alias used to identify the field when mapping to downstream systems.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,7 +110,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "allowedValueCount", n => { AllowedValueCount = n.GetIntValue(); } },
                 { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_fieldType>(); } },
-                { "isRequired", n => { IsRequired = n.GetStringValue(); } },
+                { "isRequired", n => { IsRequired = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "keyAlias", n => { KeyAlias = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "level", n => { Level = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_level>(); } },
@@ -131,7 +131,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("allowedValueCount", AllowedValueCount);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_fieldType>("fieldType", FieldType);
-            writer.WriteStringValue("isRequired", IsRequired);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("isRequired", IsRequired);
             writer.WriteStringValue("keyAlias", KeyAlias);
             writer.WriteStringValue("label", Label);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_level>("level", Level);

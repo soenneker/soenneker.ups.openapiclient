@@ -16,10 +16,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>defines which type of values to look for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? DataType { get; set; }
 #nullable restore
 #else
-        public string DataType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch DataType { get; set; }
 #endif
         /// <summary>Error Message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dataType", n => { DataType = n.GetStringValue(); } },
+                { "dataType", n => { DataType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
                 { "listValues", n => { ListValues = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_validation_listValues>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_validation_listValues.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "maxLength", n => { MaxLength = n.GetIntValue(); } },
@@ -82,7 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("dataType", DataType);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("dataType", DataType);
             writer.WriteStringValue("errorMessage", ErrorMessage);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_validation_listValues>("listValues", ListValues);
             writer.WriteIntValue("maxLength", MaxLength);

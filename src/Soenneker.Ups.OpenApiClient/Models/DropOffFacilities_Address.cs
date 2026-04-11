@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Address Line of the Facility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressLine { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? AddressLine { get; set; }
 #nullable restore
 #else
-        public string AddressLine { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch AddressLine { get; set; }
 #endif
         /// <summary>Facilities City.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AddressLine", n => { AddressLine = n.GetStringValue(); } },
+                { "AddressLine", n => { AddressLine = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "City", n => { City = n.GetStringValue(); } },
                 { "CountryCode", n => { CountryCode = n.GetStringValue(); } },
                 { "PostalCode", n => { PostalCode = n.GetStringValue(); } },
@@ -103,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("AddressLine", AddressLine);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("AddressLine", AddressLine);
             writer.WriteStringValue("City", City);
             writer.WriteStringValue("CountryCode", CountryCode);
             writer.WriteStringValue("PostalCode", PostalCode);

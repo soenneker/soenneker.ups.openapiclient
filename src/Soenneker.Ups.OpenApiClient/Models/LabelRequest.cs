@@ -7,21 +7,20 @@ using System.IO;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>
-    /// Label formatting options including layout and format (e.g., PDF, ZPL, SVG).
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloAirShipRequestV1_label : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class LabelRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A list of label detail fields and values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label_details? Details { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequest_details? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label_details Details { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequest_details Details { get; set; }
 #endif
         /// <summary>The output format for the label (e.g., PDF, ZPL, SVG).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,21 +39,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string Layout { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRequest"/> and sets the default values.
         /// </summary>
-        public ApolloAirShipRequestV1_label()
+        public LabelRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.LabelRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label();
+            return new global::Soenneker.Ups.OpenApiClient.Models.LabelRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label_details>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label_details.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequest_details>(global::Soenneker.Ups.OpenApiClient.Models.LabelRequest_details.CreateFromDiscriminatorValue); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
             };
@@ -76,7 +75,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1_label_details>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequest_details>("details", Details);
             writer.WriteStringValue("format", Format);
             writer.WriteStringValue("layout", Layout);
             writer.WriteAdditionalData(AdditionalData);

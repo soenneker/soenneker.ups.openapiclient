@@ -71,10 +71,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates what direction of movement the fields pertain to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? ShipmentType { get; set; }
 #nullable restore
 #else
-        public string ShipmentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch ShipmentType { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -101,7 +101,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "groupKey", n => { GroupKey = n.GetStringValue(); } },
                 { "regulation", n => { Regulation = n.GetStringValue(); } },
                 { "regulationSections", n => { RegulationSections = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "shipmentType", n => { ShipmentType = n.GetStringValue(); } },
+                { "shipmentType", n => { ShipmentType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -118,7 +118,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("groupKey", GroupKey);
             writer.WriteStringValue("regulation", Regulation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>("regulationSections", RegulationSections);
-            writer.WriteStringValue("shipmentType", ShipmentType);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("shipmentType", ShipmentType);
         }
     }
 }

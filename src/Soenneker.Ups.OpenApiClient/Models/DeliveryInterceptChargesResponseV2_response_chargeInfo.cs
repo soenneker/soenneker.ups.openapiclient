@@ -141,10 +141,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates if a tax disclaimer message should be displayed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxDisclaimerIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? TaxDisclaimerIndicator { get; set; }
 #nullable restore
 #else
-        public string TaxDisclaimerIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch TaxDisclaimerIndicator { get; set; }
 #endif
         /// <summary>Taxes for EU/Mexico/Canada  country  movement. This array is unbounded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,7 +225,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "shipperName", n => { ShipperName = n.GetStringValue(); } },
                 { "shipperPaidInterceptCharges", n => { ShipperPaidInterceptCharges = n.GetBoolValue(); } },
                 { "shipperPaidTransportationCharges", n => { ShipperPaidTransportationCharges = n.GetBoolValue(); } },
-                { "taxDisclaimerIndicator", n => { TaxDisclaimerIndicator = n.GetStringValue(); } },
+                { "taxDisclaimerIndicator", n => { TaxDisclaimerIndicator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2_response_chargeInfo_taxes>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2_response_chargeInfo_taxes.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "totalCharge", n => { TotalCharge = n.GetStringValue(); } },
                 { "totalTax", n => { TotalTax = n.GetStringValue(); } },
@@ -261,7 +261,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipperName", ShipperName);
             writer.WriteBoolValue("shipperPaidInterceptCharges", ShipperPaidInterceptCharges);
             writer.WriteBoolValue("shipperPaidTransportationCharges", ShipperPaidTransportationCharges);
-            writer.WriteStringValue("taxDisclaimerIndicator", TaxDisclaimerIndicator);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("taxDisclaimerIndicator", TaxDisclaimerIndicator);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2_response_chargeInfo_taxes>("taxes", Taxes);
             writer.WriteStringValue("totalCharge", TotalCharge);
             writer.WriteStringValue("totalTax", TotalTax);

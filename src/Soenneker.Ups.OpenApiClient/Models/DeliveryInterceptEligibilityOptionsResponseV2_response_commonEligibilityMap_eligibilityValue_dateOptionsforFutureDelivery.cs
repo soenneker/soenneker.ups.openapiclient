@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Provides the number of the day of the week</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DayOfWeekNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? DayOfWeekNumber { get; set; }
 #nullable restore
 #else
-        public string DayOfWeekNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch DayOfWeekNumber { get; set; }
 #endif
         /// <summary>Provides the day of the week</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2_response_commonEligibilityMap_eligibilityValue_dateOptionsforFutureDelivery_dayOfWeekText? DayOfWeekText { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "date", n => { Date = n.GetStringValue(); } },
-                { "dayOfWeekNumber", n => { DayOfWeekNumber = n.GetStringValue(); } },
+                { "dayOfWeekNumber", n => { DayOfWeekNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "dayOfWeekText", n => { DayOfWeekText = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2_response_commonEligibilityMap_eligibilityValue_dateOptionsforFutureDelivery_dayOfWeekText>(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("date", Date);
-            writer.WriteStringValue("dayOfWeekNumber", DayOfWeekNumber);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("dayOfWeekNumber", DayOfWeekNumber);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2_response_commonEligibilityMap_eligibilityValue_dateOptionsforFutureDelivery_dayOfWeekText>("dayOfWeekText", DayOfWeekText);
             writer.WriteAdditionalData(AdditionalData);
         }
