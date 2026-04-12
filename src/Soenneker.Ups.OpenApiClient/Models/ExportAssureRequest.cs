@@ -24,10 +24,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This object contains all necessary details about a shipment for compliance evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentRequest? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentRequest? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentRequest Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentRequest Shipment { get; set; }
 #endif
         /// <summary>The unique, reference identifier that correlates an API request with its response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "evaluateDescriptions", n => { EvaluateDescriptions = n.GetBoolValue(); } },
                 { "evaluateImportExportRequirements", n => { EvaluateImportExportRequirements = n.GetBoolValue(); } },
                 { "evaluatePoaRequirements", n => { EvaluatePoaRequirements = n.GetBoolValue(); } },
-                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentRequest>(global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentRequest.CreateFromDiscriminatorValue); } },
+                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentRequest>(global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentRequest.CreateFromDiscriminatorValue); } },
                 { "transID", n => { TransID = n.GetStringValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("evaluateDescriptions", EvaluateDescriptions);
             writer.WriteBoolValue("evaluateImportExportRequirements", EvaluateImportExportRequirements);
             writer.WriteBoolValue("evaluatePoaRequirements", EvaluatePoaRequirements);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentRequest>("shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentRequest>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
         }
     }

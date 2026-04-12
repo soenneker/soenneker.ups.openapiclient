@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container which contains Proof of Delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation_pod? Pod { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod? Pod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation_pod Pod { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod Pod { get; set; }
 #endif
         /// <summary>The individual who took possession of the package at delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "deliveryPhoto", n => { DeliveryPhoto = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto.CreateFromDiscriminatorValue); } },
                 { "location", n => { Location = n.GetStringValue(); } },
-                { "pod", n => { Pod = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation_pod>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation_pod.CreateFromDiscriminatorValue); } },
+                { "pod", n => { Pod = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod.CreateFromDiscriminatorValue); } },
                 { "receivedBy", n => { ReceivedBy = n.GetStringValue(); } },
                 { "signature", n => { Signature = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Signature>(global::Soenneker.Ups.OpenApiClient.Models.Signature.CreateFromDiscriminatorValue); } },
             };
@@ -96,7 +96,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto>("deliveryPhoto", DeliveryPhoto);
             writer.WriteStringValue("location", Location);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation_pod>("pod", Pod);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod>("pod", Pod);
             writer.WriteStringValue("receivedBy", ReceivedBy);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Signature>("signature", Signature);
             writer.WriteAdditionalData(AdditionalData);

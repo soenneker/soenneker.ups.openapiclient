@@ -28,10 +28,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A message explaining the reason for any prohibited shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? UpsProhibitedMessage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage? UpsProhibitedMessage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch UpsProhibitedMessage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage UpsProhibitedMessage { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +54,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "complianceOutput", n => { ComplianceOutput = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails>(global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "isTranslatedIndicator", n => { IsTranslatedIndicator = n.GetBoolValue(); } },
                 { "isUpsProhibited", n => { IsUpsProhibited = n.GetBoolValue(); } },
-                { "upsProhibitedMessage", n => { UpsProhibitedMessage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "upsProhibitedMessage", n => { UpsProhibitedMessage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage>(global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails>("complianceOutput", ComplianceOutput);
             writer.WriteBoolValue("isTranslatedIndicator", IsTranslatedIndicator);
             writer.WriteBoolValue("isUpsProhibited", IsUpsProhibited);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("upsProhibitedMessage", UpsProhibitedMessage);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage>("upsProhibitedMessage", UpsProhibitedMessage);
         }
     }
 }

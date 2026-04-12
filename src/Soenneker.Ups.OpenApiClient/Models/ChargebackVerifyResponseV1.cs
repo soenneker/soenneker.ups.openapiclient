@@ -15,10 +15,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Detailed category risk scores</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_categoryScores? CategoryScores { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores? CategoryScores { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_categoryScores CategoryScores { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores CategoryScores { get; set; }
 #endif
         /// <summary>Risk decision—whether to reject, review, or undecided</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_decision? Decision { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "categoryScores", n => { CategoryScores = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_categoryScores>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_categoryScores.CreateFromDiscriminatorValue); } },
+                { "categoryScores", n => { CategoryScores = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores.CreateFromDiscriminatorValue); } },
                 { "decision", n => { Decision = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_decision>(); } },
                 { "superScore", n => { SuperScore = n.GetDoubleValue(); } },
             };
@@ -54,7 +54,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_categoryScores>("categoryScores", CategoryScores);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores>("categoryScores", CategoryScores);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_decision>("decision", Decision);
             writer.WriteDoubleValue("superScore", SuperScore);
         }

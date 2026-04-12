@@ -16,13 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;Unit of measurement of the weight.| Code  | Description || :--:  | :--         || KGS   | Kilograms   || LBS   | Pounds      |&quot;</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_UnitOfMeasurement? UnitOfMeasurement { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_UnitOfMeasurement UnitOfMeasurement { get; set; }
-#endif
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_unitOfMeasurement? UnitOfMeasurement { get; set; }
         /// <summary>Weight of the package/ltl.</summary>
         public double? Weight { get; set; }
         /// <summary>
@@ -50,7 +44,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "unitOfMeasurement", n => { UnitOfMeasurement = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_UnitOfMeasurement>(global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_UnitOfMeasurement.CreateFromDiscriminatorValue); } },
+                { "unitOfMeasurement", n => { UnitOfMeasurement = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_unitOfMeasurement>(); } },
                 { "weight", n => { Weight = n.GetDoubleValue(); } },
             };
         }
@@ -61,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_UnitOfMeasurement>("unitOfMeasurement", UnitOfMeasurement);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_unitOfMeasurement>("unitOfMeasurement", UnitOfMeasurement);
             writer.WriteDoubleValue("weight", Weight);
             writer.WriteAdditionalData(AdditionalData);
         }

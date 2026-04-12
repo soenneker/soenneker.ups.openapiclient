@@ -39,10 +39,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of containers for product metadata groups</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item>? ProductMetaData { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>? ProductMetaData { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item> ProductMetaData { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item> ProductMetaData { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -65,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "commodityCode", n => { CommodityCode = n.GetStringValue(); } },
                 { "productDescription", n => { ProductDescription = n.GetStringValue(); } },
                 { "productId", n => { ProductId = n.GetStringValue(); } },
-                { "productMetaData", n => { ProductMetaData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "productMetaData", n => { ProductMetaData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -78,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("commodityCode", CommodityCode);
             writer.WriteStringValue("productDescription", ProductDescription);
             writer.WriteStringValue("productId", ProductId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item>("productMetaData", ProductMetaData);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>("productMetaData", ProductMetaData);
         }
     }
 }

@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains Pre-Notification response components.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponse"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponse_Response.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponse_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

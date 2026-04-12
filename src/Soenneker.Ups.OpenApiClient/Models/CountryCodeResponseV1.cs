@@ -33,10 +33,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array containing one or more warning objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item>? Warnings { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? Warnings { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item> Warnings { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> Warnings { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.CountryCodeResponseV1"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "countries", n => { Countries = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CountryCodeV1>(global::Soenneker.Ups.OpenApiClient.Models.CountryCodeV1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CountryCodeV1>("countries", Countries);
             writer.WriteStringValue("message", Message);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item>("warnings", Warnings);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Dimensions for the handling unit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_Dimensions? Dimensions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensions? Dimensions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_Dimensions Dimensions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensions Dimensions { get; set; }
 #endif
         /// <summary>&quot;Freight class of the handling unit.| Code  | Description                                                                              || :--:  | :--------------------------------------------------------------------------------------: || 50    | over 50 lbs - Fits on standard shrink-wrapped 4X4 pallet, very durable                   || 55    | 35-50 pounds - Bricks, cement, mortar, hardwood flooring                                 || 60    | 30-35 pounds - Car accessories &amp; car parts                                               || 65    | 22.5-30 pounds - Car accessories &amp; car parts, bottled beverages, books in boxes          || 70    | 15 to 22.5 pounds - Car accessories &amp; car parts, food items, automobile engines          || 77.5  | 13.5 to 15 pounds - Tires, bathroom fixtures                                             || 85    | 12-13.5 pounds - Crated machinery, cast iron stoves                                      || 92.5  | 10.5-12 pounds - Computers, monitors, refrigerators                                      || 100   | 9-10.5 pounds - Boat covers, car covers, canvas, wine cases, caskets                     || 110   | 8-9 pounds - Cabinets, framed artwork, table saw                                         || 125   | 7-8 pounds - Small Household appliances                                                  || 150   | 6-7 pounds - Auto sheet metal parts, bookcases                                           || 175   | 5-6 pounds - Clothing, couches stuffed furniture                                         || 200   | 4-5 pounds - Auto sheet metal parts, aircraft parts, aluminum table, packaged mattresses || 250   | 3-4 pounds - Bamboo furniture, mattress and box spring, plasma TV                        || 300   | 2-3 pounds - Wood cabinets, tables, chairs setup, model boats                            || 400   | 1-2 pounds - Deer antlers                                                                || 500   | Less than 1 lbs - Bags of gold dust, ping pong balls                                     |&quot;</summary>
         public double? FreightClass { get; set; }
@@ -36,10 +36,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Specifies the transportation service options for the handling unit, including the number of packages for air and ground services.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService? TransportationService { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsTransportationService? TransportationService { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService TransportationService { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsTransportationService TransportationService { get; set; }
 #endif
         /// <summary>The type of handling unit, such as boxes, crates, or pallets, used to describe how the shipment is packaged and handled.</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type? Type { get; set; }
@@ -68,10 +68,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dimensions", n => { Dimensions = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_Dimensions>(global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_Dimensions.CreateFromDiscriminatorValue); } },
+                { "dimensions", n => { Dimensions = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensions>(global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensions.CreateFromDiscriminatorValue); } },
                 { "freightClass", n => { FreightClass = n.GetDoubleValue(); } },
                 { "packageWeight", n => { PackageWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight>(global::Soenneker.Ups.OpenApiClient.Models.PackageWeight.CreateFromDiscriminatorValue); } },
-                { "transportationService", n => { TransportationService = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService.CreateFromDiscriminatorValue); } },
+                { "transportationService", n => { TransportationService = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsTransportationService>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsTransportationService.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type>(); } },
             };
         }
@@ -82,10 +82,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_Dimensions>("dimensions", Dimensions);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensions>("dimensions", Dimensions);
             writer.WriteDoubleValue("freightClass", FreightClass);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight>("packageWeight", PackageWeight);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_transportationService>("transportationService", TransportationService);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsTransportationService>("transportationService", TransportationService);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

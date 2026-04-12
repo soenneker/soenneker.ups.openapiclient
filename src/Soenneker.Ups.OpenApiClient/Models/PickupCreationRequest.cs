@@ -34,18 +34,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container will be used to indicate Service options, add optional Original service center, destination address and shipment details related to the UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_FreightOptions? FreightOptions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestFreightOptions? FreightOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_FreightOptions FreightOptions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestFreightOptions FreightOptions { get; set; }
 #endif
         /// <summary>Container for pickup notification</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Notification? Notification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification? Notification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Notification Notification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification Notification { get; set; }
 #endif
         /// <summary>&quot;Indicates if at least any package is over 70 lbs or 32 kgs. Valid values: Y = Over weight N = Not over weight (default)  Not required for WWEF service.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,26 +66,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The container of pickup address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupAddress? PickupAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupAddress? PickupAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupAddress PickupAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupAddress PickupAddress { get; set; }
 #endif
         /// <summary>The container of desired pickup date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupDateInfo? PickupDateInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupDateInfo? PickupDateInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupDateInfo PickupDateInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupDateInfo PickupDateInfo { get; set; }
 #endif
         /// <summary>The PickupPiece property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupPiece>? PickupPiece { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece>? PickupPiece { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupPiece> PickupPiece { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece> PickupPiece { get; set; }
 #endif
         /// <summary>Rate Type with which pickup is rated. Possible RateChart values for different regions will be:US 48 origin:- 1 – Daily Rates- 3 – Standard List Rates- 4 – Retail Rates. Alaska/Hawaii origin:- 1 – Daily Rates- 3 – Standard List Rates- 4 – Retail Rates.All Other origins:- 1 – Rates- 5 - Regional Rates- 6 - General List Rates.3 and 4 do not apply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,10 +114,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Common element for all services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest Request { get; set; }
 #endif
         /// <summary>&quot;Service Category.Applicable to the following countries:BE, FR, DE, IT, MX, NL, PL, ES, GB Valid values: 01 - domestic (default)02 - international03 - transborder&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -130,10 +130,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>On-call pickup shipper or requestor information.   Must provide when choose to pay the pickup by shipper account number, BillThirdParty account number, or BillReceiver account number. It is optional if the shipper chooses any other payment method. However, it is highly recommended to provide if available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Shipper? Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestShipper? Shipper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Shipper Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestShipper Shipper { get; set; }
 #endif
         /// <summary>This element should be set to &quot;Y&quot; in the request to indicate that user has pre-printed shipping labels for all the packages, otherwise this will be treated as false.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -162,26 +162,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for the total weight of all the items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TotalWeight? TotalWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTotalWeight? TotalWeight { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TotalWeight TotalWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTotalWeight TotalWeight { get; set; }
 #endif
         /// <summary>The TrackingData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingData>? TrackingData { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingData>? TrackingData { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingData> TrackingData { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingData> TrackingData { get; set; }
 #endif
         /// <summary>Container for Tracking Number with its associated reference numbers.  This container should be populated to provide visibility into shipment tied to pickup being scheduled.  TrackingDataWithReferenceNumber and TrackingData container cannot be present at the same time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingDataWithReferenceNumber? TrackingDataWithReferenceNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingDataWithReferenceNumber? TrackingDataWithReferenceNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingDataWithReferenceNumber TrackingDataWithReferenceNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingDataWithReferenceNumber TrackingDataWithReferenceNumber { get; set; }
 #endif
         /// <summary>Indicates whether to return user level promo discount for the on-callpickups. Valid values:Y = Rate this pickup with user level promo discountN = Do not rate this pickup with user level promo discount(default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -218,25 +218,25 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "AlternateAddressIndicator", n => { AlternateAddressIndicator = n.GetStringValue(); } },
                 { "CashType", n => { CashType = n.GetStringValue(); } },
-                { "FreightOptions", n => { FreightOptions = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_FreightOptions>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_FreightOptions.CreateFromDiscriminatorValue); } },
-                { "Notification", n => { Notification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Notification>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Notification.CreateFromDiscriminatorValue); } },
+                { "FreightOptions", n => { FreightOptions = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestFreightOptions>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestFreightOptions.CreateFromDiscriminatorValue); } },
+                { "Notification", n => { Notification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification.CreateFromDiscriminatorValue); } },
                 { "OverweightIndicator", n => { OverweightIndicator = n.GetStringValue(); } },
                 { "PaymentMethod", n => { PaymentMethod = n.GetStringValue(); } },
-                { "PickupAddress", n => { PickupAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupAddress>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupAddress.CreateFromDiscriminatorValue); } },
-                { "PickupDateInfo", n => { PickupDateInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupDateInfo>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupDateInfo.CreateFromDiscriminatorValue); } },
-                { "PickupPiece", n => { PickupPiece = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupPiece>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupPiece.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "PickupAddress", n => { PickupAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupAddress>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupAddress.CreateFromDiscriminatorValue); } },
+                { "PickupDateInfo", n => { PickupDateInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupDateInfo>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupDateInfo.CreateFromDiscriminatorValue); } },
+                { "PickupPiece", n => { PickupPiece = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "RateChartType", n => { RateChartType = n.GetStringValue(); } },
                 { "RatePickupIndicator", n => { RatePickupIndicator = n.GetStringValue(); } },
                 { "ReferenceNumber", n => { ReferenceNumber = n.GetStringValue(); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest.CreateFromDiscriminatorValue); } },
                 { "ServiceCategory", n => { ServiceCategory = n.GetStringValue(); } },
-                { "Shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Shipper>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Shipper.CreateFromDiscriminatorValue); } },
+                { "Shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestShipper>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestShipper.CreateFromDiscriminatorValue); } },
                 { "ShippingLabelsAvailable", n => { ShippingLabelsAvailable = n.GetStringValue(); } },
                 { "SpecialInstruction", n => { SpecialInstruction = n.GetStringValue(); } },
                 { "TaxInformationIndicator", n => { TaxInformationIndicator = n.GetStringValue(); } },
-                { "TotalWeight", n => { TotalWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TotalWeight>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TotalWeight.CreateFromDiscriminatorValue); } },
-                { "TrackingData", n => { TrackingData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingData>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingData.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "TrackingDataWithReferenceNumber", n => { TrackingDataWithReferenceNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingDataWithReferenceNumber>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingDataWithReferenceNumber.CreateFromDiscriminatorValue); } },
+                { "TotalWeight", n => { TotalWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTotalWeight>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTotalWeight.CreateFromDiscriminatorValue); } },
+                { "TrackingData", n => { TrackingData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingData>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingData.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "TrackingDataWithReferenceNumber", n => { TrackingDataWithReferenceNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingDataWithReferenceNumber>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingDataWithReferenceNumber.CreateFromDiscriminatorValue); } },
                 { "UserLevelDiscountIndicator", n => { UserLevelDiscountIndicator = n.GetStringValue(); } },
             };
         }
@@ -249,25 +249,25 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AlternateAddressIndicator", AlternateAddressIndicator);
             writer.WriteStringValue("CashType", CashType);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_FreightOptions>("FreightOptions", FreightOptions);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Notification>("Notification", Notification);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestFreightOptions>("FreightOptions", FreightOptions);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification>("Notification", Notification);
             writer.WriteStringValue("OverweightIndicator", OverweightIndicator);
             writer.WriteStringValue("PaymentMethod", PaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupAddress>("PickupAddress", PickupAddress);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupDateInfo>("PickupDateInfo", PickupDateInfo);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_PickupPiece>("PickupPiece", PickupPiece);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupAddress>("PickupAddress", PickupAddress);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupDateInfo>("PickupDateInfo", PickupDateInfo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece>("PickupPiece", PickupPiece);
             writer.WriteStringValue("RateChartType", RateChartType);
             writer.WriteStringValue("RatePickupIndicator", RatePickupIndicator);
             writer.WriteStringValue("ReferenceNumber", ReferenceNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest>("Request", Request);
             writer.WriteStringValue("ServiceCategory", ServiceCategory);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Shipper>("Shipper", Shipper);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestShipper>("Shipper", Shipper);
             writer.WriteStringValue("ShippingLabelsAvailable", ShippingLabelsAvailable);
             writer.WriteStringValue("SpecialInstruction", SpecialInstruction);
             writer.WriteStringValue("TaxInformationIndicator", TaxInformationIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TotalWeight>("TotalWeight", TotalWeight);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingData>("TrackingData", TrackingData);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_TrackingDataWithReferenceNumber>("TrackingDataWithReferenceNumber", TrackingDataWithReferenceNumber);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTotalWeight>("TotalWeight", TotalWeight);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingData>("TrackingData", TrackingData);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestTrackingDataWithReferenceNumber>("TrackingDataWithReferenceNumber", TrackingDataWithReferenceNumber);
             writer.WriteStringValue("UserLevelDiscountIndicator", UserLevelDiscountIndicator);
             writer.WriteAdditionalData(AdditionalData);
         }

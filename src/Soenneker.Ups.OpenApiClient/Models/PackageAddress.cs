@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The container which has the physical address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Address? Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyAddress? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Address Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyAddress Address { get; set; }
 #endif
         /// <summary>The specific name of an individual associated with the address segment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Address>(global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Address.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyAddress>(global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyAddress.CreateFromDiscriminatorValue); } },
                 { "attentionName", n => { AttentionName = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyAddress>("address", Address);
             writer.WriteStringValue("attentionName", AttentionName);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("type", Type);

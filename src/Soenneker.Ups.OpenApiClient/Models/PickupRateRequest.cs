@@ -26,18 +26,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The address to pickup the packages</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupAddress? PickupAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress? PickupAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupAddress PickupAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress PickupAddress { get; set; }
 #endif
         /// <summary>&quot;Required if the ServiceDateOption is: 03 A Specific-Day Pickup&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupDateInfo? PickupDateInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo? PickupDateInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupDateInfo PickupDateInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo PickupDateInfo { get; set; }
 #endif
         /// <summary>Rate Type with which pickup is rated. Possible RateChart values for different regions will be:US 48 origin:1 – Daily Rates3 – Standard List Rates4 – Retail Rates. Alaska/Hawaii origin:1 – Daily Rates3 – Standard List Rates4 – Retail Rates.All Other origins:1 – Rates5 - Regional Rates6 - General List Rates.3 and 4 do not apply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Common element for all services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest Request { get; set; }
 #endif
         /// <summary>Indicates the pickup timeframe.- 01 = Same-Day Pickup- 02 = Future-Day Pickup- 03 = A Specific-Day PickupIf 03 is selected, then PickupDate, EarliestReadyTime, and LatestClosetime must be specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,10 +66,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Shipper account information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_ShipperAccount? ShipperAccount { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount? ShipperAccount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_ShipperAccount ShipperAccount { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount ShipperAccount { get; set; }
 #endif
         /// <summary>Indicates whether to return detailed taxes for on-callpickups.Valid values:- Y = Rate this pickup with taxes- N = Do not rate this pickup with taxes (default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,12 +113,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AlternateAddressIndicator", n => { AlternateAddressIndicator = n.GetStringValue(); } },
-                { "PickupAddress", n => { PickupAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupAddress>(global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupAddress.CreateFromDiscriminatorValue); } },
-                { "PickupDateInfo", n => { PickupDateInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupDateInfo>(global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupDateInfo.CreateFromDiscriminatorValue); } },
+                { "PickupAddress", n => { PickupAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress>(global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress.CreateFromDiscriminatorValue); } },
+                { "PickupDateInfo", n => { PickupDateInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo>(global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo.CreateFromDiscriminatorValue); } },
                 { "RateChartType", n => { RateChartType = n.GetStringValue(); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_Request.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest.CreateFromDiscriminatorValue); } },
                 { "ServiceDateOption", n => { ServiceDateOption = n.GetStringValue(); } },
-                { "ShipperAccount", n => { ShipperAccount = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_ShipperAccount>(global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_ShipperAccount.CreateFromDiscriminatorValue); } },
+                { "ShipperAccount", n => { ShipperAccount = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount>(global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount.CreateFromDiscriminatorValue); } },
                 { "TaxInformationIndicator", n => { TaxInformationIndicator = n.GetStringValue(); } },
                 { "UserLevelDiscountIndicator", n => { UserLevelDiscountIndicator = n.GetStringValue(); } },
             };
@@ -131,12 +131,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AlternateAddressIndicator", AlternateAddressIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupAddress>("PickupAddress", PickupAddress);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_PickupDateInfo>("PickupDateInfo", PickupDateInfo);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress>("PickupAddress", PickupAddress);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo>("PickupDateInfo", PickupDateInfo);
             writer.WriteStringValue("RateChartType", RateChartType);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_Request>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest>("Request", Request);
             writer.WriteStringValue("ServiceDateOption", ServiceDateOption);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequest_ShipperAccount>("ShipperAccount", ShipperAccount);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount>("ShipperAccount", ShipperAccount);
             writer.WriteStringValue("TaxInformationIndicator", TaxInformationIndicator);
             writer.WriteStringValue("UserLevelDiscountIndicator", UserLevelDiscountIndicator);
             writer.WriteAdditionalData(AdditionalData);

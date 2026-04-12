@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains the generated documents</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DocumentResponse_documents? Documents { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DocumentResponseDocuments? Documents { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DocumentResponse_documents Documents { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DocumentResponseDocuments Documents { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DocumentResponse"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "documents", n => { Documents = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentResponse_documents>(global::Soenneker.Ups.OpenApiClient.Models.DocumentResponse_documents.CreateFromDiscriminatorValue); } },
+                { "documents", n => { Documents = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentResponseDocuments>(global::Soenneker.Ups.OpenApiClient.Models.DocumentResponseDocuments.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentResponse_documents>("documents", Documents);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentResponseDocuments>("documents", Documents);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

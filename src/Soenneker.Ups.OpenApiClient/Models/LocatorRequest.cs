@@ -42,26 +42,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The Location search criteria container allows the user to further define the basis to which they wish to receive the UPS locations. Only relevant when the user requests a Location search (request option 1).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_LocationSearchCriteria? LocationSearchCriteria { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria? LocationSearchCriteria { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_LocationSearchCriteria LocationSearchCriteria { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria LocationSearchCriteria { get; set; }
 #endif
         /// <summary>Container for origin address information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_OriginAddress? OriginAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress? OriginAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_OriginAddress OriginAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress OriginAddress { get; set; }
 #endif
         /// <summary>N/A</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest Request { get; set; }
 #endif
         /// <summary>&quot;Valid values: 01-Proximity Search Details02-Address Search Details03-Proximity Search Summary04-Address Search Summary05-Freight Will Call Search. Either OptionType 03 or 04 is required.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,34 +74,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>ServiceGeoUnit Container. Required to search for the freight facility information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_ServiceGeoUnit? ServiceGeoUnit { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit? ServiceGeoUnit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_ServiceGeoUnit ServiceGeoUnit { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit ServiceGeoUnit { get; set; }
 #endif
         /// <summary>Container for Sort Criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_SortCriteria? SortCriteria { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria? SortCriteria { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_SortCriteria SortCriteria { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria SortCriteria { get; set; }
 #endif
         /// <summary>Contains the locale information for the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Translate? Translate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate? Translate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Translate Translate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate Translate { get; set; }
 #endif
         /// <summary>Distance unit of measurement. This is required for location requests (request option 1).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_UnitOfMeasurement? UnitOfMeasurement { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement? UnitOfMeasurement { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_UnitOfMeasurement UnitOfMeasurement { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement UnitOfMeasurement { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest"/> and sets the default values.
@@ -131,14 +131,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "AllowAllConfidenceLevels", n => { AllowAllConfidenceLevels = n.GetStringValue(); } },
                 { "FreightIndicator", n => { FreightIndicator = n.GetStringValue(); } },
                 { "LocationID", n => { LocationID = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "LocationSearchCriteria", n => { LocationSearchCriteria = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_LocationSearchCriteria>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_LocationSearchCriteria.CreateFromDiscriminatorValue); } },
-                { "OriginAddress", n => { OriginAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_OriginAddress>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_OriginAddress.CreateFromDiscriminatorValue); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Request.CreateFromDiscriminatorValue); } },
+                { "LocationSearchCriteria", n => { LocationSearchCriteria = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria.CreateFromDiscriminatorValue); } },
+                { "OriginAddress", n => { OriginAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest.CreateFromDiscriminatorValue); } },
                 { "SearchOptionCode", n => { SearchOptionCode = n.GetStringValue(); } },
-                { "ServiceGeoUnit", n => { ServiceGeoUnit = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_ServiceGeoUnit>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_ServiceGeoUnit.CreateFromDiscriminatorValue); } },
-                { "SortCriteria", n => { SortCriteria = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_SortCriteria>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_SortCriteria.CreateFromDiscriminatorValue); } },
-                { "Translate", n => { Translate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Translate>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Translate.CreateFromDiscriminatorValue); } },
-                { "UnitOfMeasurement", n => { UnitOfMeasurement = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_UnitOfMeasurement>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_UnitOfMeasurement.CreateFromDiscriminatorValue); } },
+                { "ServiceGeoUnit", n => { ServiceGeoUnit = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit.CreateFromDiscriminatorValue); } },
+                { "SortCriteria", n => { SortCriteria = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria.CreateFromDiscriminatorValue); } },
+                { "Translate", n => { Translate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate.CreateFromDiscriminatorValue); } },
+                { "UnitOfMeasurement", n => { UnitOfMeasurement = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement>(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -151,14 +151,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("AllowAllConfidenceLevels", AllowAllConfidenceLevels);
             writer.WriteStringValue("FreightIndicator", FreightIndicator);
             writer.WriteCollectionOfPrimitiveValues<string>("LocationID", LocationID);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_LocationSearchCriteria>("LocationSearchCriteria", LocationSearchCriteria);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_OriginAddress>("OriginAddress", OriginAddress);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Request>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria>("LocationSearchCriteria", LocationSearchCriteria);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress>("OriginAddress", OriginAddress);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest>("Request", Request);
             writer.WriteStringValue("SearchOptionCode", SearchOptionCode);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_ServiceGeoUnit>("ServiceGeoUnit", ServiceGeoUnit);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_SortCriteria>("SortCriteria", SortCriteria);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_Translate>("Translate", Translate);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest_UnitOfMeasurement>("UnitOfMeasurement", UnitOfMeasurement);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit>("ServiceGeoUnit", ServiceGeoUnit);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria>("SortCriteria", SortCriteria);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate>("Translate", Translate);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement>("UnitOfMeasurement", UnitOfMeasurement);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

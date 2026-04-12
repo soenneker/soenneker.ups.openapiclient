@@ -36,33 +36,33 @@ namespace Soenneker.Ups.OpenApiClient.Landedcost.Item.Quotes
         /// <summary>
         /// The Landed Cost Quote API allows you to estimate the all-inclusive cost of international shipments - including applicable duties, VAT, taxes, brokerage fees, and other fees. Required parameters include the currency and shipment details, such as the commodity ID, price, quantity, and country code of origin.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponse"/></returns>
         /// <param name="body">The root element for the Landed Cost document.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCost_ErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCost_ErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCost_ErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCost_ErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.LandedCost_ErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.LandedCost_ErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.LandedCost_ErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Ups.OpenApiClient.Models.LandedCost_ErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Landed Cost Quote API allows you to estimate the all-inclusive cost of international shipments - including applicable duties, VAT, taxes, brokerage fees, and other fees. Required parameters include the currency and shipment details, such as the commodity ID, price, quantity, and country code of origin.
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.Landedcost.Item.Quotes
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.LandedCost_LandedCostRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

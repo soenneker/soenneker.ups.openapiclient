@@ -26,26 +26,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Geocode is the latitude and longitude of the origin address. The Geocode is provided in the first successful response. Required to be returned when the origin address or phone number is submitted in the request.Will not be returned when the  requestoption =64</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Geocode? Geocode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode? Geocode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Geocode Geocode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode Geocode { get; set; }
 #endif
         /// <summary>Container for Response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse Response { get; set; }
 #endif
         /// <summary>Container for search results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_SearchResults? SearchResults { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults? SearchResults { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_SearchResults SearchResults { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults SearchResults { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse"/> and sets the default values.
@@ -73,9 +73,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AllowAllConfidenceLevels", n => { AllowAllConfidenceLevels = n.GetStringValue(); } },
-                { "Geocode", n => { Geocode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Geocode>(global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Geocode.CreateFromDiscriminatorValue); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Response.CreateFromDiscriminatorValue); } },
-                { "SearchResults", n => { SearchResults = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_SearchResults>(global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_SearchResults.CreateFromDiscriminatorValue); } },
+                { "Geocode", n => { Geocode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode>(global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse.CreateFromDiscriminatorValue); } },
+                { "SearchResults", n => { SearchResults = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults>(global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -86,9 +86,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AllowAllConfidenceLevels", AllowAllConfidenceLevels);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Geocode>("Geocode", Geocode);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_Response>("Response", Response);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse_SearchResults>("SearchResults", SearchResults);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode>("Geocode", Geocode);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults>("SearchResults", SearchResults);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

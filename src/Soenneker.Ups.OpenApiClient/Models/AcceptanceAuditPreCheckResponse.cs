@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Package Results container.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_PackageResults>? PackageResults { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults>? PackageResults { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_PackageResults> PackageResults { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults> PackageResults { get; set; }
 #endif
         /// <summary>The Regulatory set associated with every regulated shipment. This is same Regulation set present in the request that is played back in response.  Valid values:ADR49CFRIATATDG</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,18 +34,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains Dangerous Goods Utility Acceptance Audit Pre-check response components.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse Response { get; set; }
 #endif
         /// <summary>UPS service type. This is same UPS Service present in the request that is played back in response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Service? Service { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService? Service { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Service Service { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService Service { get; set; }
 #endif
         /// <summary>Shipper&apos;s six digit account number. This is same account number present in the request that is played back in response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,10 +80,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "PackageResults", n => { PackageResults = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_PackageResults>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_PackageResults.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "PackageResults", n => { PackageResults = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "RegulationSet", n => { RegulationSet = n.GetStringValue(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Response.CreateFromDiscriminatorValue); } },
-                { "Service", n => { Service = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Service>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Service.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse.CreateFromDiscriminatorValue); } },
+                { "Service", n => { Service = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService.CreateFromDiscriminatorValue); } },
                 { "ShipperNumber", n => { ShipperNumber = n.GetStringValue(); } },
             };
         }
@@ -94,10 +94,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_PackageResults>("PackageResults", PackageResults);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults>("PackageResults", PackageResults);
             writer.WriteStringValue("RegulationSet", RegulationSet);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Response>("Response", Response);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse_Service>("Service", Service);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService>("Service", Service);
             writer.WriteStringValue("ShipperNumber", ShipperNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

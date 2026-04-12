@@ -26,18 +26,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains Dangerous Goods Utility Acceptance Audit Pre-check request criteria elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestRequest Request { get; set; }
 #endif
         /// <summary>Contains shipment information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Shipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestShipment? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Shipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestShipment Shipment { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest"/> and sets the default values.
@@ -65,8 +65,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "OriginRecordTransactionTimestamp", n => { OriginRecordTransactionTimestamp = n.GetStringValue(); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Request.CreateFromDiscriminatorValue); } },
-                { "Shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Shipment>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Shipment.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestRequest.CreateFromDiscriminatorValue); } },
+                { "Shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestShipment>(global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestShipment.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,8 +77,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("OriginRecordTransactionTimestamp", OriginRecordTransactionTimestamp);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Request>("Request", Request);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequest_Shipment>("Shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestRequest>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckRequestShipment>("Shipment", Shipment);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

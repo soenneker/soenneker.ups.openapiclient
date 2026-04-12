@@ -115,11 +115,11 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1?> PatchAsync(List<global::Soenneker.Ups.OpenApiClient.Models.ApolloPatchReplaceReqV1_item> body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1?> PatchAsync(List<global::Soenneker.Ups.OpenApiClient.Models.ApolloPatchReplaceReqV1Item> body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1> PatchAsync(List<global::Soenneker.Ups.OpenApiClient.Models.ApolloPatchReplaceReqV1_item> body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1> PatchAsync(List<global::Soenneker.Ups.OpenApiClient.Models.ApolloPatchReplaceReqV1Item> body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderPatchQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -210,11 +210,11 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.Ups.OpenApiClient.Models.ApolloPatchReplaceReqV1_item> body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.Ups.OpenApiClient.Models.ApolloPatchReplaceReqV1Item> body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderPatchQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.Ups.OpenApiClient.Models.ApolloPatchReplaceReqV1_item> body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderPatchQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPatchRequestInformation(List<global::Soenneker.Ups.OpenApiClient.Models.ApolloPatchReplaceReqV1Item> body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderPatchQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

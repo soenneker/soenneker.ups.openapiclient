@@ -40,10 +40,10 @@ namespace Soenneker.Ups.OpenApiClient.Pickup.Item.Servicecenterlocations
         /// <param name="body">N/A  </param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Pickup_ErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Pickup_ErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Pickup_ErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Pickup_ErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Ups.OpenApiClient.Models.PICKUPServCenterResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PICKUPServCenterRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,10 +57,10 @@ namespace Soenneker.Ups.OpenApiClient.Pickup.Item.Servicecenterlocations
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.Pickup_ErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.Pickup_ErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.Pickup_ErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Ups.OpenApiClient.Models.Pickup_ErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PICKUPServCenterResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PICKUPServCenterResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

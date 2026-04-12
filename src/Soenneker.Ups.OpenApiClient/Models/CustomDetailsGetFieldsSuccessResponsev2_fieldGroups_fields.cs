@@ -53,10 +53,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of regulationSection definitions for this Regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>? RegulationSections { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? RegulationSections { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item> RegulationSections { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> RegulationSections { get; set; }
 #endif
         /// <summary>Unbounded array of rules. Conditionally required when is &apos;isRequired&apos; flag is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,7 +115,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "level", n => { Level = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_level>(); } },
                 { "order", n => { Order = n.GetStringValue(); } },
-                { "regulationSections", n => { RegulationSections = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "regulationSections", n => { RegulationSections = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "requirementConditions", n => { RequirementConditions = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_requirementConditions>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_requirementConditions.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "sectionKey", n => { SectionKey = n.GetStringValue(); } },
                 { "tooltip", n => { Tooltip = n.GetStringValue(); } },
@@ -136,7 +136,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("label", Label);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_level>("level", Level);
             writer.WriteStringValue("order", Order);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>("regulationSections", RegulationSections);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>("regulationSections", RegulationSections);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields_requirementConditions>("requirementConditions", RequirementConditions);
             writer.WriteStringValue("sectionKey", SectionKey);
             writer.WriteStringValue("tooltip", Tooltip);

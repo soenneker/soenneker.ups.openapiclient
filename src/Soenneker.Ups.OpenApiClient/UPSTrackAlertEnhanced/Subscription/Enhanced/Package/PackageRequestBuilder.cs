@@ -36,39 +36,39 @@ namespace Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhanced.Subscription.Enhance
         /// <summary>
         /// This endpoint takes a list of tracking numbers and creates a subscription for each.Clients must provide the tracking numbers in the correct format.Upon success it should return:- List of valid tracking number for which subscription created.- List of invalid tracking number for which subscription not created.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Response">When receiving a 405 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.Response.CreateFromDiscriminatorValue },
                 { "405", global::Soenneker.Ups.OpenApiClient.Models.Response.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This endpoint takes a list of tracking numbers and creates a subscription for each.Clients must provide the tracking numbers in the correct format.Upon success it should return:- List of valid tracking number for which subscription created.- List of invalid tracking number for which subscription not created.
@@ -78,11 +78,11 @@ namespace Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhanced.Subscription.Enhance
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhanced_TrackSubsServiceRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertEnhancedTrackSubsServiceRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

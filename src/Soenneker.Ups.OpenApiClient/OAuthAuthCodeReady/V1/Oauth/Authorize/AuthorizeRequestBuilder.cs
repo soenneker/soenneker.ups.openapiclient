@@ -39,10 +39,10 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCodeReady.V1.Oauth.Authorize
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.OAuthAuthCodeReady.V1.Oauth.Authorize.AuthorizeRequestBuilder.AuthorizeRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,10 +55,10 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCodeReady.V1.Oauth.Authorize
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -18,18 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The PendingStatus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_PendingStatus>? PendingStatus { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus>? PendingStatus { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_PendingStatus> PendingStatus { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus> PendingStatus { get; set; }
 #endif
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "PendingStatus", n => { PendingStatus = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_PendingStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_PendingStatus.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_Response.CreateFromDiscriminatorValue); } },
+                { "PendingStatus", n => { PendingStatus = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_PendingStatus>("PendingStatus", PendingStatus);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponse_Response>("Response", Response);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus>("PendingStatus", PendingStatus);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

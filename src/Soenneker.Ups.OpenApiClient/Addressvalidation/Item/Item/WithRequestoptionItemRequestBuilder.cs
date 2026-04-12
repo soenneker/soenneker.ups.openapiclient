@@ -36,33 +36,33 @@ namespace Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item
         /// <summary>
         /// The Address Validation Street Level API can be used to check addressesagainst the United States Postal Service database of valid addresses in theU.S. and Puerto Rico.&lt;i&gt;NOTE:&lt;/i&gt; In the Customer Integration Environment, Street Level Address Validation will only produce results for addresses in New York (NY) and California (CA).
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVResponseWrapper"/></returns>
         /// <param name="body">N/A  </param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_ErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_ErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_ErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_ErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidationErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidationErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidationErrorResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.AddressValidationErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_ErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_ErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_ErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_ErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.AddressValidationErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.AddressValidationErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.AddressValidationErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Ups.OpenApiClient.Models.AddressValidationErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Address Validation Street Level API can be used to check addressesagainst the United States Postal Service database of valid addresses in theU.S. and Puerto Rico.&lt;i&gt;NOTE:&lt;/i&gt; In the Customer Integration Environment, Street Level Address Validation will only produce results for addresses in New York (NY) and California (CA).
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.AddressValidation_XAVRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXAVRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Addressvalidation.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

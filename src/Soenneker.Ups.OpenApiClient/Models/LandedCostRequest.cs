@@ -30,10 +30,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Every Landed Cost request must be based on a shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequest_Shipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequest_Shipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment Shipment { get; set; }
 #endif
         /// <summary>Unique transaction ID for the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "allowPartialLandedCostResult", n => { AllowPartialLandedCostResult = n.GetBoolValue(); } },
                 { "alversion", n => { Alversion = n.GetIntValue(); } },
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
-                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequest_Shipment>(global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequest_Shipment.CreateFromDiscriminatorValue); } },
+                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment>(global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment.CreateFromDiscriminatorValue); } },
                 { "transID", n => { TransID = n.GetStringValue(); } },
             };
         }
@@ -85,7 +85,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("allowPartialLandedCostResult", AllowPartialLandedCostResult);
             writer.WriteIntValue("alversion", Alversion);
             writer.WriteStringValue("currencyCode", CurrencyCode);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequest_Shipment>("shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
             writer.WriteAdditionalData(AdditionalData);
         }

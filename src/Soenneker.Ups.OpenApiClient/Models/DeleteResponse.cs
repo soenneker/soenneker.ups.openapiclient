@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeleteResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeleteResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeleteResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeleteResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeleteResponse"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeleteResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.DeleteResponse_Response.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeleteResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.DeleteResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeleteResponse_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeleteResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

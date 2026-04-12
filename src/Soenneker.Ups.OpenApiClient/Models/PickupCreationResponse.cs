@@ -26,34 +26,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The result of rating on-callpickup. It correlates to rate status code 01</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateResult? RateResult { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateResult? RateResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateResult RateResult { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateResult RateResult { get; set; }
 #endif
         /// <summary>The rating result of on-callpickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateStatus? RateStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateStatus? RateStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateStatus RateStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateStatus RateStatus { get; set; }
 #endif
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse Response { get; set; }
 #endif
         /// <summary>WeekendServiceTerritory Container.Returned if the  subversion greater or equal to 2007.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_WeekendServiceTerritory? WeekendServiceTerritory { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseWeekendServiceTerritory? WeekendServiceTerritory { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_WeekendServiceTerritory WeekendServiceTerritory { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseWeekendServiceTerritory WeekendServiceTerritory { get; set; }
 #endif
         /// <summary>Indicates if the pickup address qualifies for WST (Weekend Service Territory). Returned if the pickup date is Saturday and subversion greater or equal to 1607. Valid Values:- Y = WST- N = Non-WST</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,10 +89,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "PRN", n => { PRN = n.GetStringValue(); } },
-                { "RateResult", n => { RateResult = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateResult>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateResult.CreateFromDiscriminatorValue); } },
-                { "RateStatus", n => { RateStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateStatus.CreateFromDiscriminatorValue); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response.CreateFromDiscriminatorValue); } },
-                { "WeekendServiceTerritory", n => { WeekendServiceTerritory = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_WeekendServiceTerritory>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_WeekendServiceTerritory.CreateFromDiscriminatorValue); } },
+                { "RateResult", n => { RateResult = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateResult>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateResult.CreateFromDiscriminatorValue); } },
+                { "RateStatus", n => { RateStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateStatus.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse.CreateFromDiscriminatorValue); } },
+                { "WeekendServiceTerritory", n => { WeekendServiceTerritory = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseWeekendServiceTerritory>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseWeekendServiceTerritory.CreateFromDiscriminatorValue); } },
                 { "WeekendServiceTerritoryIndicator", n => { WeekendServiceTerritoryIndicator = n.GetStringValue(); } },
             };
         }
@@ -104,10 +104,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("PRN", PRN);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateResult>("RateResult", RateResult);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_RateStatus>("RateStatus", RateStatus);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response>("Response", Response);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_WeekendServiceTerritory>("WeekendServiceTerritory", WeekendServiceTerritory);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateResult>("RateResult", RateResult);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseRateStatus>("RateStatus", RateStatus);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseWeekendServiceTerritory>("WeekendServiceTerritory", WeekendServiceTerritory);
             writer.WriteStringValue("WeekendServiceTerritoryIndicator", WeekendServiceTerritoryIndicator);
             writer.WriteAdditionalData(AdditionalData);
         }

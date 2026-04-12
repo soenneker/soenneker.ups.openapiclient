@@ -36,33 +36,33 @@ namespace Soenneker.Ups.OpenApiClient.PreNotification.Dangerousgoods.Item.Prenot
         /// <summary>
         /// The Pre-Notification API allows customer applications to inform UPS operations of Dangerous Goods shipments as they are processed and will enter the UPS transportation network prior to an upload of manifest information at the end of the day.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONResponseWrapper"/></returns>
         /// <param name="body">N/A  </param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotification_ErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotification_ErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotification_ErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotification_ErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationErrorResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.PreNotification_ErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.PreNotification_ErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.PreNotification_ErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Ups.OpenApiClient.Models.PreNotification_ErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.PreNotificationErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.PreNotificationErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.PreNotificationErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Ups.OpenApiClient.Models.PreNotificationErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Pre-Notification API allows customer applications to inform UPS operations of Dangerous Goods shipments as they are processed and will enter the UPS transportation network prior to an upload of manifest information at the end of the day.
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.PreNotification.Dangerousgoods.Item.Prenot
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.PreNotification_PRENOTIFICATIONRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPRENOTIFICATIONRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -63,10 +63,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of regulationSection definitions for this Regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>? RegulationSections { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? RegulationSections { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item> RegulationSections { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> RegulationSections { get; set; }
 #endif
         /// <summary>Indicates what direction of movement the fields pertain to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "groupKey", n => { GroupKey = n.GetStringValue(); } },
                 { "regulation", n => { Regulation = n.GetStringValue(); } },
-                { "regulationSections", n => { RegulationSections = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "regulationSections", n => { RegulationSections = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shipmentType", n => { ShipmentType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
@@ -117,7 +117,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2_fieldGroups_fields>("fields", Fields);
             writer.WriteStringValue("groupKey", GroupKey);
             writer.WriteStringValue("regulation", Regulation);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>("regulationSections", RegulationSections);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>("regulationSections", RegulationSections);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("shipmentType", ShipmentType);
         }
     }

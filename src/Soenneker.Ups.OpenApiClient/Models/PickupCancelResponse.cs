@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The status of Smart Pickup that has been cancelled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_GWNStatus? GWNStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus? GWNStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_GWNStatus GWNStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus GWNStatus { get; set; }
 #endif
         /// <summary>The type of pickup that has been cancelled.- 01 = On-Call Pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "GWNStatus", n => { GWNStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_GWNStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_GWNStatus.CreateFromDiscriminatorValue); } },
+                { "GWNStatus", n => { GWNStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus.CreateFromDiscriminatorValue); } },
                 { "PickupType", n => { PickupType = n.GetStringValue(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_Response.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_GWNStatus>("GWNStatus", GWNStatus);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus>("GWNStatus", GWNStatus);
             writer.WriteStringValue("PickupType", PickupType);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponse_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

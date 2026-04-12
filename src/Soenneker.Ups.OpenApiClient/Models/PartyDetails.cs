@@ -81,10 +81,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array of additional key-value pair objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>? Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item> Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item> Details { get; set; }
 #endif
         /// <summary>PartyCode of the party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,10 +97,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array of additional key-value pair objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>? PartySectionDetails { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>? PartySectionDetails { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item> PartySectionDetails { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item> PartySectionDetails { get; set; }
 #endif
         /// <summary>Postal or ZIP code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -159,9 +159,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "contactName", n => { ContactName = n.GetStringValue(); } },
                 { "contactPhone", n => { ContactPhone = n.GetStringValue(); } },
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "partyCode", n => { PartyCode = n.GetStringValue(); } },
-                { "partySectionDetails", n => { PartySectionDetails = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "partySectionDetails", n => { PartySectionDetails = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
                 { "serviceCenterCode", n => { ServiceCenterCode = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
@@ -182,9 +182,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("contactName", ContactName);
             writer.WriteStringValue("contactPhone", ContactPhone);
             writer.WriteStringValue("countryCode", CountryCode);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>("details", Details);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteStringValue("partyCode", PartyCode);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>("partySectionDetails", PartySectionDetails);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("partySectionDetails", PartySectionDetails);
             writer.WriteStringValue("postalCode", PostalCode);
             writer.WriteStringValue("serviceCenterCode", ServiceCenterCode);
             writer.WriteStringValue("state", State);

@@ -49,10 +49,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array containing one or more warning objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item>? Warnings { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? Warnings { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item> Warnings { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> Warnings { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTypeResponseV1"/> and sets the default values.
@@ -83,7 +83,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1.CreateFromDiscriminatorValue); } },
                 { "thirdParty", n => { ThirdParty = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1.CreateFromDiscriminatorValue); } },
-                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -97,7 +97,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>("shipper", Shipper);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>("thirdParty", ThirdParty);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1_item>("warnings", Warnings);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

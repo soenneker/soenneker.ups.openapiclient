@@ -43,10 +43,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Payment details, nullable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_paymentInformation? PaymentInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation? PaymentInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_paymentInformation PaymentInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation PaymentInformation { get; set; }
 #endif
         /// <summary>List of products in the order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,10 +67,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The userInformation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_userInformation? UserInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation? UserInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_userInformation UserInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation UserInformation { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -95,10 +95,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "orderCreatedAt", n => { OrderCreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "orderId", n => { OrderId = n.GetStringValue(); } },
                 { "orderValue", n => { OrderValue = n.GetFloatValue(); } },
-                { "paymentInformation", n => { PaymentInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_paymentInformation>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_paymentInformation.CreateFromDiscriminatorValue); } },
+                { "paymentInformation", n => { PaymentInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation.CreateFromDiscriminatorValue); } },
                 { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_products>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_products.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shippingContact", n => { ShippingContact = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1.CreateFromDiscriminatorValue); } },
-                { "userInformation", n => { UserInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_userInformation>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_userInformation.CreateFromDiscriminatorValue); } },
+                { "userInformation", n => { UserInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -113,10 +113,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("orderCreatedAt", OrderCreatedAt);
             writer.WriteStringValue("orderId", OrderId);
             writer.WriteFloatValue("orderValue", OrderValue);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_paymentInformation>("paymentInformation", PaymentInformation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation>("paymentInformation", PaymentInformation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_products>("products", Products);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1>("shippingContact", ShippingContact);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1_userInformation>("userInformation", UserInformation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation>("userInformation", UserInformation);
         }
     }
 }

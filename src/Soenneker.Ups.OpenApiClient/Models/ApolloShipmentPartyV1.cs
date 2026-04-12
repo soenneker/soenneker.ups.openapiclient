@@ -48,10 +48,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array of additional key-value pair objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>? Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item> Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item> Details { get; set; }
 #endif
         /// <summary>The service center that is associated with the Party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "contactEmail", n => { ContactEmail = n.GetStringValue(); } },
                 { "contactName", n => { ContactName = n.GetStringValue(); } },
                 { "contactPhone", n => { ContactPhone = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "serviceCenterCode", n => { ServiceCenterCode = n.GetStringValue(); } },
             };
         }
@@ -99,7 +99,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("contactEmail", ContactEmail);
             writer.WriteStringValue("contactName", ContactName);
             writer.WriteStringValue("contactPhone", ContactPhone);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>("details", Details);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteStringValue("serviceCenterCode", ServiceCenterCode);
         }
     }

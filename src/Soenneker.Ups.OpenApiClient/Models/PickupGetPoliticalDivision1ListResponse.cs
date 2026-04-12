@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "PoliticalDivision1", n => { PoliticalDivision1 = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse_Response.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("PoliticalDivision1", PoliticalDivision1);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

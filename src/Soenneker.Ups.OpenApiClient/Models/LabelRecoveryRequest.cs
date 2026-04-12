@@ -18,18 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for the Label Delivery accessorial. One Label Delivery per shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelDelivery? LabelDelivery { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery? LabelDelivery { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelDelivery LabelDelivery { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery LabelDelivery { get; set; }
 #endif
         /// <summary>Container that is used to define the properties required by the user to print and/ or display the UPS shipping label.  Required for the shipment without return service, or shipment with PRL return service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelSpecification? LabelSpecification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification? LabelSpecification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelSpecification LabelSpecification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification LabelSpecification { get; set; }
 #endif
         /// <summary>Represents 5 character ISO Locale that allows the user to request Reference Number Code on Label, Label instructions, Receipt instructions (if available for given tracking number) and High Value Report (if available for given tracking number) in desired language. Locale is specified by the combination of language code and country or territory code - 2 character language code and 2 character country code seperated by an underscore (&apos;_&apos;) character. Example - de_DE. Please refer to Appendix for supported values for Locale.  Either Translate container or Locale element can be present in a given request. Both can&apos;t be requested together in same request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,18 +50,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container that holds reference number and shipper number  If tracking number is not present use reference Number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_ReferenceValues? ReferenceValues { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues? ReferenceValues { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_ReferenceValues ReferenceValues { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues ReferenceValues { get; set; }
 #endif
         /// <summary>Request Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest Request { get; set; }
 #endif
         /// <summary>Small Package Tracking Number. Required if Mail Innovations Tracking Number or ReferenceNumber/Value and ShipperNumber is not provided.  If only TrackingNumber is provided, the request will be treated as Small Package Shipment. Label Recovery will return label for Small Package Tracking Number.If both, TrackingNumber and MailInnovationsTrackingNumber are provided, the request will be treated as Dual Mail Innovations Return Shipment. Label Recovery will return two labels one each for - Small Package Tracking Number and Mail Innovations Return Tracking Number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,18 +74,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>&quot;Translate container allows the user to specify the language he/she would like a specific portion of response to return. The language is specified by the combination of language code and dialect code. Valid combinations are: LanguageCode + DialectCode.  Either Translate container or Locale element can be present in a given request. Both can&apos;t be requested together in same request.Combinations: eng GB = Queen&apos;s English Spa 97 = Castilian Spanish ita 97 = Italian fra 97 = France French fra CA = Canadian French deu 97 = German por 97 = Portugal Portuguese nld 97 = Dutch dan 97 = Danish fin 97 = Finnish swe 97 = Swedish eng CA = Canadian English Eng US = US English Default language is Queen&apos;s English If the Ship from country or territory is Canada, the Language defaults to Canadian English. If the ship from country or territory is US, the language defaults to US English.If shipping from some other country or territory, the language defaults to Queens English.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Translate? Translate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate? Translate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Translate Translate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate Translate { get; set; }
 #endif
         /// <summary>UPS Premium Care Form container.  Default is PDF when container is not provided.   Valid only for Canada to Canada movements. UPS Premium Care Form will be returned in  both US English and Canadian French language.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_UPSPremiumCareForm? UPSPremiumCareForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm? UPSPremiumCareForm { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_UPSPremiumCareForm UPSPremiumCareForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm UPSPremiumCareForm { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest"/> and sets the default values.
@@ -112,15 +112,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "LabelDelivery", n => { LabelDelivery = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelDelivery>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelDelivery.CreateFromDiscriminatorValue); } },
-                { "LabelSpecification", n => { LabelSpecification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelSpecification>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelSpecification.CreateFromDiscriminatorValue); } },
+                { "LabelDelivery", n => { LabelDelivery = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery.CreateFromDiscriminatorValue); } },
+                { "LabelSpecification", n => { LabelSpecification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification.CreateFromDiscriminatorValue); } },
                 { "Locale", n => { Locale = n.GetStringValue(); } },
                 { "MailInnovationsTrackingNumber", n => { MailInnovationsTrackingNumber = n.GetStringValue(); } },
-                { "ReferenceValues", n => { ReferenceValues = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_ReferenceValues>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_ReferenceValues.CreateFromDiscriminatorValue); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Request.CreateFromDiscriminatorValue); } },
+                { "ReferenceValues", n => { ReferenceValues = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest.CreateFromDiscriminatorValue); } },
                 { "TrackingNumber", n => { TrackingNumber = n.GetStringValue(); } },
-                { "Translate", n => { Translate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Translate>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Translate.CreateFromDiscriminatorValue); } },
-                { "UPSPremiumCareForm", n => { UPSPremiumCareForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_UPSPremiumCareForm>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_UPSPremiumCareForm.CreateFromDiscriminatorValue); } },
+                { "Translate", n => { Translate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate.CreateFromDiscriminatorValue); } },
+                { "UPSPremiumCareForm", n => { UPSPremiumCareForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -130,15 +130,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelDelivery>("LabelDelivery", LabelDelivery);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_LabelSpecification>("LabelSpecification", LabelSpecification);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery>("LabelDelivery", LabelDelivery);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification>("LabelSpecification", LabelSpecification);
             writer.WriteStringValue("Locale", Locale);
             writer.WriteStringValue("MailInnovationsTrackingNumber", MailInnovationsTrackingNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_ReferenceValues>("ReferenceValues", ReferenceValues);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Request>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues>("ReferenceValues", ReferenceValues);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest>("Request", Request);
             writer.WriteStringValue("TrackingNumber", TrackingNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_Translate>("Translate", Translate);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest_UPSPremiumCareForm>("UPSPremiumCareForm", UPSPremiumCareForm);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate>("Translate", Translate);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm>("UPSPremiumCareForm", UPSPremiumCareForm);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

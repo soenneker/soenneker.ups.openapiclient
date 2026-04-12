@@ -23,10 +23,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of regulationSection definitions for this Regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>? RegulationSections { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? RegulationSections { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item> RegulationSections { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> RegulationSections { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "regulation", n => { Regulation = n.GetStringValue(); } },
-                { "regulationSections", n => { RegulationSections = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "regulationSections", n => { RegulationSections = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("regulation", Regulation);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2_item>("regulationSections", RegulationSections);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>("regulationSections", RegulationSections);
         }
     }
 }

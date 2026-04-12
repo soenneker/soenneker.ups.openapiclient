@@ -18,18 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The container for DocumentID(s).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_FormsHistoryDocumentID? FormsHistoryDocumentID { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentID? FormsHistoryDocumentID { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_FormsHistoryDocumentID FormsHistoryDocumentID { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentID FormsHistoryDocumentID { get; set; }
 #endif
         /// <summary>Response container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UploadResponse"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "FormsHistoryDocumentID", n => { FormsHistoryDocumentID = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_FormsHistoryDocumentID>(global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_FormsHistoryDocumentID.CreateFromDiscriminatorValue); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_Response.CreateFromDiscriminatorValue); } },
+                { "FormsHistoryDocumentID", n => { FormsHistoryDocumentID = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentID>(global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentID.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_FormsHistoryDocumentID>("FormsHistoryDocumentID", FormsHistoryDocumentID);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponse_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentID>("FormsHistoryDocumentID", FormsHistoryDocumentID);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

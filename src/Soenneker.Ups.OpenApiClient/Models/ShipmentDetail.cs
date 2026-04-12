@@ -50,10 +50,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array of additional key-value pair objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>? Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item> Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item> Details { get; set; }
 #endif
         /// <summary>Time when the shipment will be dropped off (HH:MM:SS in 24-hour format).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -148,7 +148,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "consigneeReference", n => { ConsigneeReference = n.GetStringValue(); } },
                 { "countryOfManufacture", n => { CountryOfManufacture = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "dropoffTime", n => { DropoffTime = n.GetStringValue(); } },
                 { "freightType", n => { FreightType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_freightType>(); } },
                 { "isMetric", n => { IsMetric = n.GetBoolValue(); } },
@@ -176,7 +176,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("consigneeReference", ConsigneeReference);
             writer.WriteCollectionOfPrimitiveValues<string>("countryOfManufacture", CountryOfManufacture);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>("details", Details);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteStringValue("dropoffTime", DropoffTime);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_freightType>("freightType", FreightType);
             writer.WriteBoolValue("isMetric", IsMetric);

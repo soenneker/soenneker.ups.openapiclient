@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains Paperless Document API upload request criteria components.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadRequestRequest Request { get; set; }
 #endif
         /// <summary>The Shipper&apos;s UPS Account Number.  Your UPS Account Number must have &apos;Upload Forms Created Offline&apos; enabled to use this webservice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The UserCreatedForm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_UserCreatedForm>? UserCreatedForm { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UploadRequestUserCreatedForm>? UserCreatedForm { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_UserCreatedForm> UserCreatedForm { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UploadRequestUserCreatedForm> UserCreatedForm { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UploadRequest"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_Request.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.UploadRequestRequest.CreateFromDiscriminatorValue); } },
                 { "ShipperNumber", n => { ShipperNumber = n.GetStringValue(); } },
-                { "UserCreatedForm", n => { UserCreatedForm = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_UserCreatedForm>(global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_UserCreatedForm.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "UserCreatedForm", n => { UserCreatedForm = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.UploadRequestUserCreatedForm>(global::Soenneker.Ups.OpenApiClient.Models.UploadRequestUserCreatedForm.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_Request>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadRequestRequest>("Request", Request);
             writer.WriteStringValue("ShipperNumber", ShipperNumber);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.UploadRequest_UserCreatedForm>("UserCreatedForm", UserCreatedForm);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.UploadRequestUserCreatedForm>("UserCreatedForm", UserCreatedForm);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

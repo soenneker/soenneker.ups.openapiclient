@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains Chemical Reference Data request criteria components.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequestRequest Request { get; set; }
 #endif
         /// <summary>Shipper&apos;s six digit account number.  Your UPS Account Number must have correct Dangerous goods contract to successfully use this Webservice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "IDNumber", n => { IDNumber = n.GetStringValue(); } },
                 { "ProperShippingName", n => { ProperShippingName = n.GetStringValue(); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequest_Request.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequestRequest.CreateFromDiscriminatorValue); } },
                 { "ShipperNumber", n => { ShipperNumber = n.GetStringValue(); } },
             };
         }
@@ -87,7 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("IDNumber", IDNumber);
             writer.WriteStringValue("ProperShippingName", ProperShippingName);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequest_Request>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataRequestRequest>("Request", Request);
             writer.WriteStringValue("ShipperNumber", ShipperNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

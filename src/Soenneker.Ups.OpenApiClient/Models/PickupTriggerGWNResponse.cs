@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse Response { get; set; }
 #endif
         /// <summary>The scheduled pickup date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Status of the Smart Pickup trigger operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponse_TriggerStatus? TriggerStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponseTriggerStatus? TriggerStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponse_TriggerStatus TriggerStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponseTriggerStatus TriggerStatus { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponse"/> and sets the default values.
@@ -82,9 +82,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "NextBusinessDayIndicator", n => { NextBusinessDayIndicator = n.GetStringValue(); } },
                 { "PRN", n => { PRN = n.GetStringValue(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse.CreateFromDiscriminatorValue); } },
                 { "ServiceDate", n => { ServiceDate = n.GetStringValue(); } },
-                { "TriggerStatus", n => { TriggerStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponse_TriggerStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponse_TriggerStatus.CreateFromDiscriminatorValue); } },
+                { "TriggerStatus", n => { TriggerStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponseTriggerStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponseTriggerStatus.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -96,9 +96,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("NextBusinessDayIndicator", NextBusinessDayIndicator);
             writer.WriteStringValue("PRN", PRN);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponse_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseResponse>("Response", Response);
             writer.WriteStringValue("ServiceDate", ServiceDate);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponse_TriggerStatus>("TriggerStatus", TriggerStatus);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupTriggerGWNResponseTriggerStatus>("TriggerStatus", TriggerStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,18 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response container for Shipment response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseResponse Response { get; set; }
 #endif
         /// <summary>Shipment Results container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_ShipmentResults? ShipmentResults { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseShipmentResults? ShipmentResults { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_ShipmentResults ShipmentResults { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseShipmentResults ShipmentResults { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_Response.CreateFromDiscriminatorValue); } },
-                { "ShipmentResults", n => { ShipmentResults = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_ShipmentResults>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_ShipmentResults.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseResponse.CreateFromDiscriminatorValue); } },
+                { "ShipmentResults", n => { ShipmentResults = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseShipmentResults>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseShipmentResults.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_Response>("Response", Response);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponse_ShipmentResults>("ShipmentResults", ShipmentResults);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseResponse>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResponseShipmentResults>("ShipmentResults", ShipmentResults);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

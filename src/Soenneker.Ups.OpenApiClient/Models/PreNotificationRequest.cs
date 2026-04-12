@@ -18,18 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Request Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestRequest Request { get; set; }
 #endif
         /// <summary>Shipment Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Shipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestShipment? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Shipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestShipment Shipment { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Request.CreateFromDiscriminatorValue); } },
-                { "Shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Shipment>(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Shipment.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestRequest.CreateFromDiscriminatorValue); } },
+                { "Shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestShipment>(global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestShipment.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Request>("Request", Request);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequest_Shipment>("Shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestRequest>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationRequestShipment>("Shipment", Shipment);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -28,10 +28,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlert_Ready_ErrorResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertReadyErrorResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlert_Ready_ErrorResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertReadyErrorResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackSubsServiceErrorResponse"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "invalidTrackingNumbers", n => { InvalidTrackingNumbers = n.GetStringValue(); } },
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlert_Ready_ErrorResponse>(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlert_Ready_ErrorResponse.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertReadyErrorResponse>(global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertReadyErrorResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("invalidTrackingNumbers", InvalidTrackingNumbers);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlert_Ready_ErrorResponse>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSTrackAlertReadyErrorResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

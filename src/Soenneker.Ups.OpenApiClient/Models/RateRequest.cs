@@ -18,34 +18,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Customer classification container. Valid if ShipFrom country or territory  is &quot;US&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest_CustomerClassification? CustomerClassification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification? CustomerClassification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest_CustomerClassification CustomerClassification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification CustomerClassification { get; set; }
 #endif
         /// <summary>Pickup Type container tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest_PickupType? PickupType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType? PickupType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest_PickupType PickupType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType PickupType { get; set; }
 #endif
         /// <summary>Request container.  N/A</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest Request { get; set; }
 #endif
         /// <summary>Container for Shipment Information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Shipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Shipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment Shipment { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.RateRequest"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "CustomerClassification", n => { CustomerClassification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequest_CustomerClassification>(global::Soenneker.Ups.OpenApiClient.Models.RateRequest_CustomerClassification.CreateFromDiscriminatorValue); } },
-                { "PickupType", n => { PickupType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequest_PickupType>(global::Soenneker.Ups.OpenApiClient.Models.RateRequest_PickupType.CreateFromDiscriminatorValue); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Request.CreateFromDiscriminatorValue); } },
-                { "Shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Shipment>(global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Shipment.CreateFromDiscriminatorValue); } },
+                { "CustomerClassification", n => { CustomerClassification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification>(global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification.CreateFromDiscriminatorValue); } },
+                { "PickupType", n => { PickupType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType>(global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest.CreateFromDiscriminatorValue); } },
+                { "Shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment>(global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequest_CustomerClassification>("CustomerClassification", CustomerClassification);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequest_PickupType>("PickupType", PickupType);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Request>("Request", Request);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequest_Shipment>("Shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification>("CustomerClassification", CustomerClassification);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType>("PickupType", PickupType);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment>("Shipment", Shipment);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

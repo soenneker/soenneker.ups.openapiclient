@@ -20,10 +20,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2_response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2_response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2_response>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2_response.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2_response>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

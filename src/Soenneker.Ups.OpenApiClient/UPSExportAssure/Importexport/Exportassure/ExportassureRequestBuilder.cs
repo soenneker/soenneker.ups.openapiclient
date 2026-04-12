@@ -40,11 +40,11 @@ namespace Soenneker.Ups.OpenApiClient.UPSExportAssure.Importexport.Exportassure
         /// <param name="body">This object is the primary request structure for the Export Assure API.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse">When receiving a 405 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse">When receiving a 405 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,11 +58,11 @@ namespace Soenneker.Ups.OpenApiClient.UPSExportAssure.Importexport.Exportassure
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse.CreateFromDiscriminatorValue },
-                { "405", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse.CreateFromDiscriminatorValue },
+                { "405", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

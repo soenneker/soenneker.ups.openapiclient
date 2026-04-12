@@ -24,10 +24,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This object contains metadata about the shipment and includes the response objects for each of the three operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentResponse? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentResponse Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse Shipment { get; set; }
 #endif
         /// <summary>The unique, reference identifier that correlates an API request with its response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "perfStats", n => { PerfStats = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats>(global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats.CreateFromDiscriminatorValue); } },
-                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentResponse>(global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentResponse.CreateFromDiscriminatorValue); } },
+                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse>(global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse.CreateFromDiscriminatorValue); } },
                 { "transID", n => { TransID = n.GetStringValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats>("perfStats", PerfStats);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssure_ShipmentResponse>("shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
         }
     }

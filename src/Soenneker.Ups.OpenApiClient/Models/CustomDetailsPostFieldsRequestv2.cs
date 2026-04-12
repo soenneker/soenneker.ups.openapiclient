@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of containers for product metadata groups</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item>? ShipmentMetaData { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>? ShipmentMetaData { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item> ShipmentMetaData { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item> ShipmentMetaData { get; set; }
 #endif
         /// <summary>This represents the shipper account number. Required when actionType is save.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_actionType>(); } },
                 { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_products>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_products.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "shipmentMetaData", n => { ShipmentMetaData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "shipmentMetaData", n => { ShipmentMetaData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shipperNumber", n => { ShipperNumber = n.GetStringValue(); } },
                 { "trackingNumber", n => { TrackingNumber = n.GetStringValue(); } },
             };
@@ -81,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_actionType>("actionType", ActionType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_products>("products", Products);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2_item>("shipmentMetaData", ShipmentMetaData);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>("shipmentMetaData", ShipmentMetaData);
             writer.WriteStringValue("shipperNumber", ShipperNumber);
             writer.WriteStringValue("trackingNumber", TrackingNumber);
         }

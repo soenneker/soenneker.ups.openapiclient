@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Common element for all services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest Request { get; set; }
 #endif
         /// <summary>Specifies when the pickup should be scheduled.- 01 -- Same Day - Request pickup for today - 02 -- Future Day - Request pickup for next available business day  If same-day is requested but cutoff time has passed,the pickup will be automatically scheduled for the next business day. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AccountNumber", n => { AccountNumber = n.GetStringValue(); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest.CreateFromDiscriminatorValue); } },
                 { "ServiceDateOption", n => { ServiceDateOption = n.GetStringValue(); } },
             };
         }
@@ -77,7 +77,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AccountNumber", AccountNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest_Request>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest>("Request", Request);
             writer.WriteStringValue("ServiceDateOption", ServiceDateOption);
             writer.WriteAdditionalData(AdditionalData);
         }

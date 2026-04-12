@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponse"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "FormsGroupID", n => { FormsGroupID = n.GetStringValue(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponse_Response.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("FormsGroupID", FormsGroupID);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponse_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

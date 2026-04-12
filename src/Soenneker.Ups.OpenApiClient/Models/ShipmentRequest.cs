@@ -18,34 +18,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container used to define the properties required by the user to print and/or display the UPS shipping label.  Required for shipment without return service or shipments with PRL return service. Required for Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_LabelSpecification? LabelSpecification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification? LabelSpecification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_LabelSpecification LabelSpecification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification LabelSpecification { get; set; }
 #endif
         /// <summary>Container used to allow the user to choose to print a thermal receipt.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_ReceiptSpecification? ReceiptSpecification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestReceiptSpecification? ReceiptSpecification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_ReceiptSpecification ReceiptSpecification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestReceiptSpecification ReceiptSpecification { get; set; }
 #endif
         /// <summary>Request Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestRequest Request { get; set; }
 #endif
         /// <summary>Shipment Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Shipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipment? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Shipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipment Shipment { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "LabelSpecification", n => { LabelSpecification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_LabelSpecification>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_LabelSpecification.CreateFromDiscriminatorValue); } },
-                { "ReceiptSpecification", n => { ReceiptSpecification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_ReceiptSpecification>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_ReceiptSpecification.CreateFromDiscriminatorValue); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Request.CreateFromDiscriminatorValue); } },
-                { "Shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Shipment>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Shipment.CreateFromDiscriminatorValue); } },
+                { "LabelSpecification", n => { LabelSpecification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification.CreateFromDiscriminatorValue); } },
+                { "ReceiptSpecification", n => { ReceiptSpecification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestReceiptSpecification>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestReceiptSpecification.CreateFromDiscriminatorValue); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestRequest.CreateFromDiscriminatorValue); } },
+                { "Shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipment>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipment.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_LabelSpecification>("LabelSpecification", LabelSpecification);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_ReceiptSpecification>("ReceiptSpecification", ReceiptSpecification);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Request>("Request", Request);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest_Shipment>("Shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification>("LabelSpecification", LabelSpecification);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestReceiptSpecification>("ReceiptSpecification", ReceiptSpecification);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestRequest>("Request", Request);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipment>("Shipment", Shipment);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>AddressKeyFormat container.The Key format is based on addressing standards jointly developed by the Postal Service and mailing industry.  The information provided in the Address Key container will be returned in the same format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.XAVRequest_AddressKeyFormat? AddressKeyFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XAVRequestAddressKeyFormat? AddressKeyFormat { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.XAVRequest_AddressKeyFormat AddressKeyFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XAVRequestAddressKeyFormat AddressKeyFormat { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.XAVRequest"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AddressKeyFormat", n => { AddressKeyFormat = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVRequest_AddressKeyFormat>(global::Soenneker.Ups.OpenApiClient.Models.XAVRequest_AddressKeyFormat.CreateFromDiscriminatorValue); } },
+                { "AddressKeyFormat", n => { AddressKeyFormat = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVRequestAddressKeyFormat>(global::Soenneker.Ups.OpenApiClient.Models.XAVRequestAddressKeyFormat.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVRequest_AddressKeyFormat>("AddressKeyFormat", AddressKeyFormat);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVRequestAddressKeyFormat>("AddressKeyFormat", AddressKeyFormat);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

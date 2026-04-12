@@ -36,33 +36,33 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCodeReady.V1.Oauth.Token
         /// <summary>
         /// The Generate Token endpoint exchanges the authorization code received from the client application for an access token and a refresh token. The client uses the access token to make API requests on behalf of the user by including it in the authorization header. The access token will expire after a certain period and can be refreshed by using the /refresh endpoint.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse_1"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCode_Ready_GenerateToken body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse_1?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeReadyGenerateToken body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCode_Ready_GenerateToken body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse_1> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeReadyGenerateToken body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Ups.OpenApiClient.Models.TokenErrorResponse_1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse_1>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenSuccessResponse_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Generate Token endpoint exchanges the authorization code received from the client application for an access token and a refresh token. The client uses the access token to make API requests on behalf of the user by including it in the authorization header. The access token will expire after a certain period and can be refreshed by using the /refresh endpoint.
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCodeReady.V1.Oauth.Token
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCode_Ready_GenerateToken body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeReadyGenerateToken body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCode_Ready_GenerateToken body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeReadyGenerateToken body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -26,18 +26,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains QuantumView request criteria components.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_Request? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_Request Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestRequest Request { get; set; }
 #endif
         /// <summary>The SubscriptionRequest property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_SubscriptionRequest>? SubscriptionRequest { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestSubscriptionRequest>? SubscriptionRequest { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_SubscriptionRequest> SubscriptionRequest { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestSubscriptionRequest> SubscriptionRequest { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest"/> and sets the default values.
@@ -65,8 +65,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Bookmark", n => { Bookmark = n.GetStringValue(); } },
-                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_Request>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_Request.CreateFromDiscriminatorValue); } },
-                { "SubscriptionRequest", n => { SubscriptionRequest = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_SubscriptionRequest>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_SubscriptionRequest.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestRequest.CreateFromDiscriminatorValue); } },
+                { "SubscriptionRequest", n => { SubscriptionRequest = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestSubscriptionRequest>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestSubscriptionRequest.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -77,8 +77,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Bookmark", Bookmark);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_Request>("Request", Request);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequest_SubscriptionRequest>("SubscriptionRequest", SubscriptionRequest);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestRequest>("Request", Request);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestSubscriptionRequest>("SubscriptionRequest", SubscriptionRequest);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

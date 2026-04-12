@@ -16,26 +16,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Address details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_address? Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Address? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_address Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Address Address { get; set; }
 #endif
         /// <summary>Person&apos;s name details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_name? Name { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Name? Name { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_name Name { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Name Name { get; set; }
 #endif
         /// <summary>Contact phone number details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_phone? Phone { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Phone? Phone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_phone Phone { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Phone Phone { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -55,9 +55,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_address>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_address.CreateFromDiscriminatorValue); } },
-                { "name", n => { Name = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_name>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_name.CreateFromDiscriminatorValue); } },
-                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_phone>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_phone.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Address>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Address.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Name>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Name.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Phone>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Phone.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,9 +67,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_address>("address", Address);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_name>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1_phone>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Name>("name", Name);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackContactInformationV1Phone>("phone", Phone);
         }
     }
 }

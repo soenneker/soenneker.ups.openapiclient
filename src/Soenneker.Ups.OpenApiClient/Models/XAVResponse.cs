@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>AddressClassification Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_AddressClassification? AddressClassification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XAVResponseAddressClassification? AddressClassification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_AddressClassification AddressClassification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XAVResponseAddressClassification AddressClassification { get; set; }
 #endif
         /// <summary>Indicates query could not find exact match. Candidate list follows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Candidate Container.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Candidate>? Candidate { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.XAVResponseCandidate>? Candidate { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Candidate> Candidate { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.XAVResponseCandidate> Candidate { get; set; }
 #endif
         /// <summary>No Candidate found.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XAVResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XAVResponseResponse Response { get; set; }
 #endif
         /// <summary>Indicates query found a valid match.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,11 +88,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AddressClassification", n => { AddressClassification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_AddressClassification>(global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_AddressClassification.CreateFromDiscriminatorValue); } },
+                { "AddressClassification", n => { AddressClassification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVResponseAddressClassification>(global::Soenneker.Ups.OpenApiClient.Models.XAVResponseAddressClassification.CreateFromDiscriminatorValue); } },
                 { "AmbiguousAddressIndicator", n => { AmbiguousAddressIndicator = n.GetStringValue(); } },
-                { "Candidate", n => { Candidate = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Candidate>(global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Candidate.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Candidate", n => { Candidate = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.XAVResponseCandidate>(global::Soenneker.Ups.OpenApiClient.Models.XAVResponseCandidate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "NoCandidatesIndicator", n => { NoCandidatesIndicator = n.GetStringValue(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Response.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.XAVResponseResponse.CreateFromDiscriminatorValue); } },
                 { "ValidAddressIndicator", n => { ValidAddressIndicator = n.GetStringValue(); } },
             };
         }
@@ -103,11 +103,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_AddressClassification>("AddressClassification", AddressClassification);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVResponseAddressClassification>("AddressClassification", AddressClassification);
             writer.WriteStringValue("AmbiguousAddressIndicator", AmbiguousAddressIndicator);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Candidate>("Candidate", Candidate);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.XAVResponseCandidate>("Candidate", Candidate);
             writer.WriteStringValue("NoCandidatesIndicator", NoCandidatesIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVResponse_Response>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XAVResponseResponse>("Response", Response);
             writer.WriteStringValue("ValidAddressIndicator", ValidAddressIndicator);
             writer.WriteAdditionalData(AdditionalData);
         }

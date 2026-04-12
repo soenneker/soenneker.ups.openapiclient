@@ -50,10 +50,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Location? Location { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation? Location { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Location Location { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation Location { get; set; }
 #endif
         /// <summary>The container which has the current package status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "gmtDate", n => { GmtDate = n.GetStringValue(); } },
                 { "gmtOffset", n => { GmtOffset = n.GetStringValue(); } },
                 { "gmtTime", n => { GmtTime = n.GetStringValue(); } },
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Location>(global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Location.CreateFromDiscriminatorValue); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation>(global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Status>(global::Soenneker.Ups.OpenApiClient.Models.Status.CreateFromDiscriminatorValue); } },
                 { "time", n => { Time = n.GetStringValue(); } },
             };
@@ -116,7 +116,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("gmtDate", GmtDate);
             writer.WriteStringValue("gmtOffset", GmtOffset);
             writer.WriteStringValue("gmtTime", GmtTime);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Tracking_Ready_Location>("location", Location);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation>("location", Location);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Status>("status", Status);
             writer.WriteStringValue("time", Time);
             writer.WriteAdditionalData(AdditionalData);

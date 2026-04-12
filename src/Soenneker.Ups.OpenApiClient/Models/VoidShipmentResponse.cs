@@ -18,26 +18,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains the Package Level Results.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_PackageLevelResults>? PackageLevelResults { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults>? PackageLevelResults { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_PackageLevelResults> PackageLevelResults { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults> PackageLevelResults { get; set; }
 #endif
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse Response { get; set; }
 #endif
         /// <summary>Container for the Summary Result</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_SummaryResult? SummaryResult { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult? SummaryResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_SummaryResult SummaryResult { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult SummaryResult { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "PackageLevelResults", n => { PackageLevelResults = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_PackageLevelResults>(global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_PackageLevelResults.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_Response.CreateFromDiscriminatorValue); } },
-                { "SummaryResult", n => { SummaryResult = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_SummaryResult>(global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_SummaryResult.CreateFromDiscriminatorValue); } },
+                { "PackageLevelResults", n => { PackageLevelResults = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults>(global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse.CreateFromDiscriminatorValue); } },
+                { "SummaryResult", n => { SummaryResult = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult>(global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_PackageLevelResults>("PackageLevelResults", PackageLevelResults);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_Response>("Response", Response);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse_SummaryResult>("SummaryResult", SummaryResult);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults>("PackageLevelResults", PackageLevelResults);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult>("SummaryResult", SummaryResult);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

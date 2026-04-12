@@ -18,18 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to hold Chemical Data information.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_ChemicalData>? ChemicalData { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseChemicalData>? ChemicalData { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_ChemicalData> ChemicalData { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseChemicalData> ChemicalData { get; set; }
 #endif
         /// <summary>Contains Dangerous Goods Utility Chemical Reference Data response components.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ChemicalData", n => { ChemicalData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_ChemicalData>(global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_ChemicalData.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_Response.CreateFromDiscriminatorValue); } },
+                { "ChemicalData", n => { ChemicalData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseChemicalData>(global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseChemicalData.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_ChemicalData>("ChemicalData", ChemicalData);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponse_Response>("Response", Response);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseChemicalData>("ChemicalData", ChemicalData);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceDataResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

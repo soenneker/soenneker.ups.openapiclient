@@ -57,10 +57,10 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_ErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_ErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_ErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_ErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.UsiNumberItemRequestBuilder.UsiNumberItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -73,10 +73,10 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_ErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_ErrorResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_ErrorResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Ups.OpenApiClient.Models.TradeDirect_ErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

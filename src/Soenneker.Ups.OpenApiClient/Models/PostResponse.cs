@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This will contain master shipment label</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PostResponse_label? Label { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel? Label { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PostResponse_label Label { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel Label { get; set; }
 #endif
         /// <summary>Client generated id which is treated as the Transaction ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "label", n => { Label = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PostResponse_label>(global::Soenneker.Ups.OpenApiClient.Models.PostResponse_label.CreateFromDiscriminatorValue); } },
+                { "label", n => { Label = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel>(global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel.CreateFromDiscriminatorValue); } },
                 { "transId", n => { TransId = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PostResponse_label>("label", Label);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel>("label", Label);
             writer.WriteStringValue("transId", TransId);
             writer.WriteAdditionalData(AdditionalData);
         }

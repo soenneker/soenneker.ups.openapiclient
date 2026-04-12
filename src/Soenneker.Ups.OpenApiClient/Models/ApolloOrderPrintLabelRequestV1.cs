@@ -16,10 +16,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array of additional key-value pair objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>? Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item> Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item> Details { get; set; }
 #endif
         /// <summary>The output format of the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
                 { "orderNumber", n => { OrderNumber = n.GetStringValue(); } },
@@ -93,7 +93,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>("details", Details);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteStringValue("format", Format);
             writer.WriteStringValue("layout", Layout);
             writer.WriteStringValue("orderNumber", OrderNumber);

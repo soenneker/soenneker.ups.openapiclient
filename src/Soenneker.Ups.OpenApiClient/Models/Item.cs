@@ -27,10 +27,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array of additional key-value pair objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>? Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item> Details { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item> Details { get; set; }
 #endif
         /// <summary>Height of the shipment item in centimeters.</summary>
         public decimal? Height { get; set; }
@@ -67,7 +67,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "count", n => { Count = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "height", n => { Height = n.GetDecimalValue(); } },
                 { "length", n => { Length = n.GetDecimalValue(); } },
                 { "weight", n => { Weight = n.GetDecimalValue(); } },
@@ -83,7 +83,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1_item>("details", Details);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteDecimalValue("height", Height);
             writer.WriteDecimalValue("length", Length);
             writer.WriteDecimalValue("weight", Weight);

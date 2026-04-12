@@ -36,31 +36,31 @@ namespace Soenneker.Ups.OpenApiClient.GlobalCheckout.Content.Glc.RequestQuote
         /// <summary>
         /// This endpoint requests guaranteed quotes for landed cost duties and taxes.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_ErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_ErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_ErrorResponse">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.BSISV1ErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.BSISV1ErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.BSISV1ErrorResponse">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_ErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_ErrorResponse.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_ErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.BSISV1ErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.BSISV1ErrorResponse.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Ups.OpenApiClient.Models.BSISV1ErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This endpoint requests guaranteed quotes for landed cost duties and taxes.
@@ -70,11 +70,11 @@ namespace Soenneker.Ups.OpenApiClient.GlobalCheckout.Content.Glc.RequestQuote
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.BSIS_v1_QuoteRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.BSISV1QuoteRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

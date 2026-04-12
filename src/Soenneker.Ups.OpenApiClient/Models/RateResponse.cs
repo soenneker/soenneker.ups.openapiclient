@@ -18,18 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>RatedShipment Container.**NOTE:** For versions &gt;= v2409, this element will always be returned as an array. For requests using versions &lt; v2409, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResponse_RatedShipment>? RatedShipment { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResponseRatedShipment>? RatedShipment { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResponse_RatedShipment> RatedShipment { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResponseRatedShipment> RatedShipment { get; set; }
 #endif
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.RateResponse"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "RatedShipment", n => { RatedShipment = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateResponse_RatedShipment>(global::Soenneker.Ups.OpenApiClient.Models.RateResponse_RatedShipment.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.RateResponse_Response.CreateFromDiscriminatorValue); } },
+                { "RatedShipment", n => { RatedShipment = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateResponseRatedShipment>(global::Soenneker.Ups.OpenApiClient.Models.RateResponseRatedShipment.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateResponse_RatedShipment>("RatedShipment", RatedShipment);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateResponse_Response>("Response", Response);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateResponseRatedShipment>("RatedShipment", RatedShipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

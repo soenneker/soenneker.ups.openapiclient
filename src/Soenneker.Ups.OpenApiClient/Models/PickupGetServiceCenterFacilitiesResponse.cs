@@ -18,18 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_Response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_Response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse Response { get; set; }
 #endif
         /// <summary>Locations of the nearest Service Center for Dropoff and Pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_ServiceCenterLocation? ServiceCenterLocation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation? ServiceCenterLocation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_ServiceCenterLocation ServiceCenterLocation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation ServiceCenterLocation { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_Response>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_Response.CreateFromDiscriminatorValue); } },
-                { "ServiceCenterLocation", n => { ServiceCenterLocation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_ServiceCenterLocation>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_ServiceCenterLocation.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse.CreateFromDiscriminatorValue); } },
+                { "ServiceCenterLocation", n => { ServiceCenterLocation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_Response>("Response", Response);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponse_ServiceCenterLocation>("ServiceCenterLocation", ServiceCenterLocation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation>("ServiceCenterLocation", ServiceCenterLocation);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
