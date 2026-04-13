@@ -18,34 +18,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The destinationPickList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1>? DestinationPickList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>? DestinationPickList { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1> DestinationPickList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress> DestinationPickList { get; set; }
 #endif
         /// <summary>The emsResponse property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.EmsResponse_1? EmsResponse { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.EmsResponse? EmsResponse { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.EmsResponse_1 EmsResponse { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.EmsResponse EmsResponse { get; set; }
 #endif
         /// <summary>The originPickList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1>? OriginPickList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>? OriginPickList { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1> OriginPickList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress> OriginPickList { get; set; }
 #endif
         /// <summary>The validationList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ValidationList_1? ValidationList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ValidationList? ValidationList { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ValidationList_1 ValidationList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ValidationList ValidationList { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitResponse"/> and sets the default values.
@@ -72,10 +72,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "destinationPickList", n => { DestinationPickList = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1>(global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "emsResponse", n => { EmsResponse = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.EmsResponse_1>(global::Soenneker.Ups.OpenApiClient.Models.EmsResponse_1.CreateFromDiscriminatorValue); } },
-                { "originPickList", n => { OriginPickList = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1>(global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "validationList", n => { ValidationList = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ValidationList_1>(global::Soenneker.Ups.OpenApiClient.Models.ValidationList_1.CreateFromDiscriminatorValue); } },
+                { "destinationPickList", n => { DestinationPickList = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>(global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "emsResponse", n => { EmsResponse = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.EmsResponse>(global::Soenneker.Ups.OpenApiClient.Models.EmsResponse.CreateFromDiscriminatorValue); } },
+                { "originPickList", n => { OriginPickList = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>(global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "validationList", n => { ValidationList = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ValidationList>(global::Soenneker.Ups.OpenApiClient.Models.ValidationList.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,10 +85,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1>("destinationPickList", DestinationPickList);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.EmsResponse_1>("emsResponse", EmsResponse);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress_1>("originPickList", OriginPickList);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ValidationList_1>("validationList", ValidationList);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>("destinationPickList", DestinationPickList);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.EmsResponse>("emsResponse", EmsResponse);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>("originPickList", OriginPickList);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ValidationList>("validationList", ValidationList);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels
         /// <summary>
         /// Re-Print label for an existing Order
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ForwardingPrintLabel200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse"/></returns>
         /// <param name="body">The API request used to print a Label</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -46,11 +46,11 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ForwardingPrintLabel200?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ForwardingPrintLabel200> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -62,7 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ForwardingPrintLabel200>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ForwardingPrintLabel200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Re-Print label for an existing Order

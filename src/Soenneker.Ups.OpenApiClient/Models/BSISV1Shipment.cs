@@ -74,10 +74,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>ShipTo Address of request. Needed for internal rate call to calculate transportCost if that is needed and not provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentShipToAddress? ShipToAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress? ShipToAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentShipToAddress ShipToAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress ShipToAddress { get; set; }
 #endif
         /// <summary>&quot;The shipment mode of transportation. If not one of the listed values then it will default to the first one from the import country.| Mode      | Description                                   || :--:      | :--                                           || DOM_AIR   | Domestic Air transportation                   || DOM_OCEAN | Domestic Ocean transportation                 || DOM_RAIL  | Domestic Rail transportation                  || DOM_TRUCK | Domestic Truck transportation                 || INT_AIR   | International Air transportation              || INT_OCEAN | International Ocean transportation            || INT_RAIL  | International Rail transportation             || INT_TRUCK | International/Interstate Truck transportation |&quot;</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_transModes? TransModes { get; set; }
@@ -112,7 +112,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "importProvince", n => { ImportProvince = n.GetStringValue(); } },
                 { "insuranceCost", n => { InsuranceCost = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ChargeDetail>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ChargeDetail.CreateFromDiscriminatorValue); } },
                 { "shipDate", n => { ShipDate = n.GetDateValue(); } },
-                { "shipToAddress", n => { ShipToAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentShipToAddress>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentShipToAddress.CreateFromDiscriminatorValue); } },
+                { "shipToAddress", n => { ShipToAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress.CreateFromDiscriminatorValue); } },
                 { "shipmentItems", n => { ShipmentItems = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shipmentType", n => { ShipmentType = n.GetStringValue(); } },
                 { "shipperAddress", n => { ShipperAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1Address>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1Address.CreateFromDiscriminatorValue); } },
@@ -135,7 +135,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest>("shipmentItems", ShipmentItems);
             writer.WriteStringValue("shipmentType", ShipmentType);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1Address>("shipperAddress", ShipperAddress);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentShipToAddress>("shipToAddress", ShipToAddress);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress>("shipToAddress", ShipToAddress);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_transModes>("transModes", TransModes);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ChargeDetail>("transportCost", TransportCost);
         }

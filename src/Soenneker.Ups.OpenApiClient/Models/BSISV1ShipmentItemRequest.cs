@@ -32,10 +32,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Specifies the gross weight of the entire ShipmentItem, that is, the weight of all contained Products plus the Packaging weight, if any. Specifying this value overridesany weight value in Product and/or Packaging objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestGrossWeight? GrossWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_grossWeight? GrossWeight { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestGrossWeight GrossWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_grossWeight GrossWeight { get; set; }
 #endif
         /// <summary>The ISO 3166 code of the shipment item country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,10 +56,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to quantity information on items within the shipmentItem.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestQuantity? Quantity { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_quantity? Quantity { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestQuantity Quantity { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_quantity Quantity { get; set; }
 #endif
         /// <summary>The unitPrice property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,10 +89,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "dimension", n => { Dimension = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestDimension>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestDimension.CreateFromDiscriminatorValue); } },
-                { "grossWeight", n => { GrossWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestGrossWeight>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestGrossWeight.CreateFromDiscriminatorValue); } },
+                { "grossWeight", n => { GrossWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_grossWeight>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_grossWeight.CreateFromDiscriminatorValue); } },
                 { "originCountryCode", n => { OriginCountryCode = n.GetStringValue(); } },
                 { "partNumber", n => { PartNumber = n.GetStringValue(); } },
-                { "quantity", n => { Quantity = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestQuantity>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestQuantity.CreateFromDiscriminatorValue); } },
+                { "quantity", n => { Quantity = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_quantity>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_quantity.CreateFromDiscriminatorValue); } },
                 { "unitPrice", n => { UnitPrice = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ChargeDetail>(global::Soenneker.Ups.OpenApiClient.Models.BSISV1ChargeDetail.CreateFromDiscriminatorValue); } },
             };
         }
@@ -105,10 +105,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestDimension>("dimension", Dimension);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestGrossWeight>("grossWeight", GrossWeight);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_grossWeight>("grossWeight", GrossWeight);
             writer.WriteStringValue("originCountryCode", OriginCountryCode);
             writer.WriteStringValue("partNumber", PartNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequestQuantity>("quantity", Quantity);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ShipmentItemRequest_quantity>("quantity", Quantity);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1ChargeDetail>("unitPrice", UnitPrice);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Code associated with accessorials.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1Code? Code { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? Code { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1Code Code { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch Code { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1Code>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1Code.CreateFromDiscriminatorValue); } },
+                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1Code>("code", Code);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("code", Code);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

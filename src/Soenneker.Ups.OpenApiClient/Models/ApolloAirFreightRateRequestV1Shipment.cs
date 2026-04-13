@@ -73,10 +73,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Payment type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentType? PaymentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch? PaymentType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentType PaymentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UnionBranch PaymentType { get; set; }
 #endif
         /// <summary>The pickupDate property</summary>
         public Date? PickupDate { get; set; }
@@ -134,7 +134,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "isMetric", n => { IsMetric = n.GetBoolValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment_items>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment_items.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "orderDescription", n => { OrderDescription = n.GetStringValue(); } },
-                { "paymentType", n => { PaymentType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentType>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentType.CreateFromDiscriminatorValue); } },
+                { "paymentType", n => { PaymentType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>(global::Soenneker.Ups.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
                 { "pickupDate", n => { PickupDate = n.GetDateValue(); } },
                 { "readyTime", n => { ReadyTime = n.GetTimeValue(); } },
                 { "requestBoL", n => { RequestBoL = n.GetBoolValue(); } },
@@ -162,7 +162,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("isMetric", IsMetric);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment_items>("items", Items);
             writer.WriteStringValue("orderDescription", OrderDescription);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentType>("paymentType", PaymentType);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UnionBranch>("paymentType", PaymentType);
             writer.WriteDateValue("pickupDate", PickupDate);
             writer.WriteTimeValue("readyTime", ReadyTime);
             writer.WriteBoolValue("requestBoL", RequestBoL);

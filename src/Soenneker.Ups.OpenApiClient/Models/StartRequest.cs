@@ -83,10 +83,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The language the user uses to submit their initial product description. If the actual language used differs from this field, the application will throw an error as a &quot;7015&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale? Locale { get; set; }
+        public string? Locale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale Locale { get; set; }
+        public string Locale { get; set; }
 #endif
         /// <summary>The account number representing the company or individual responsible for shipping the commodity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -138,7 +138,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "commodityValue", n => { CommodityValue = n.GetStringValue(); } },
                 { "exportCountryCode", n => { ExportCountryCode = n.GetStringValue(); } },
                 { "importCountryCode", n => { ImportCountryCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.Countries>(); } },
-                { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale>(global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale.CreateFromDiscriminatorValue); } },
+                { "locale", n => { Locale = n.GetStringValue(); } },
                 { "shipperAccountNumber", n => { ShipperAccountNumber = n.GetStringValue(); } },
                 { "shipperName", n => { ShipperName = n.GetStringValue(); } },
             };
@@ -159,7 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("commodityValue", CommodityValue);
             writer.WriteStringValue("exportCountryCode", ExportCountryCode);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.Countries>("importCountryCode", ImportCountryCode);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale>("locale", Locale);
+            writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("shipperAccountNumber", ShipperAccountNumber);
             writer.WriteStringValue("shipperName", ShipperName);
             writer.WriteAdditionalData(AdditionalData);

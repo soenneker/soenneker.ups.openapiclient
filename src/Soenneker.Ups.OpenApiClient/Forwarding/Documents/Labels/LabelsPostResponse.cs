@@ -2,53 +2,44 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using Microsoft.Kiota.Abstractions;
+using Soenneker.Ups.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Ups.OpenApiClient.Models
+namespace Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels
 {
+    /// <summary>
+    /// Response from the Print Label API
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ErrorResponse : ApiException, IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class LabelsPostResponse : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The errors property</summary>
+        /// <summary>&quot;An object representing the shipping label.| **labelFormat** | **Returned Containers** || :--:            | :--                     || DATA            | labelFormat, labelData  || PDF, PNG        | labelFormat, labelImage |&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors>? Errors { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1? Response { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors> Errors { get; set; }
-#endif
-        /// <summary>The primary error message.</summary>
-        public override string Message { get => MessageEscaped ?? string.Empty; }
-        /// <summary>The primary error message.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MessageEscaped { get; set; }
-#nullable restore
-#else
-        public string MessageEscaped { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1 Response { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ErrorResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse"/> and sets the default values.
         /// </summary>
-        public ErrorResponse()
+        public LabelsPostResponse()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ErrorResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.ErrorResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ErrorResponse();
+            return new global::Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels.LabelsPostResponse();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,8 +49,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors>(global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "message", n => { MessageEscaped = n.GetStringValue(); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -69,8 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors>("errors", Errors);
-            writer.WriteStringValue("message", MessageEscaped);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

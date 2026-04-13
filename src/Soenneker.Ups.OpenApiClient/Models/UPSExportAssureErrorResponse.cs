@@ -26,7 +26,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats PerfStats { get; set; }
 #endif
-        /// <summary>This object contains an array of error codes.</summary>
+        /// <summary>The response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseWrapper? Response { get; set; }

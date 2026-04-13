@@ -20,10 +20,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>An array of Brokerage fees.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems_1>? BrokerageFeeItems { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems>? BrokerageFeeItems { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems_1> BrokerageFeeItems { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems> BrokerageFeeItems { get; set; }
 #endif
         /// <summary>Specifies the Currency Code set at the commodity level. This currency is applicable for all duty, tax, VAT, and fee at the shipment and commodity level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,7 +33,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CurrencyCode { get; set; }
 #endif
-        /// <summary>Error code and description</summary>
+        /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.Errors? Errors { get; set; }
@@ -121,7 +121,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "alVersion", n => { AlVersion = n.GetIntValue(); } },
-                { "brokerageFeeItems", n => { BrokerageFeeItems = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems_1>(global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "brokerageFeeItems", n => { BrokerageFeeItems = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems>(global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Errors>(global::Soenneker.Ups.OpenApiClient.Models.Errors.CreateFromDiscriminatorValue); } },
                 { "grandTotal", n => { GrandTotal = n.GetDoubleValue(); } },
@@ -146,7 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("alVersion", AlVersion);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems_1>("brokerageFeeItems", BrokerageFeeItems);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems>("brokerageFeeItems", BrokerageFeeItems);
             writer.WriteStringValue("currencyCode", CurrencyCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Errors>("errors", Errors);
             writer.WriteDoubleValue("grandTotal", GrandTotal);

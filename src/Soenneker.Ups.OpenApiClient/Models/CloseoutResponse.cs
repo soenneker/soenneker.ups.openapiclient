@@ -17,26 +17,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains the response details for the generated Bill of Lading (BOL) label, including the format and data of the generated document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse? BolLabelResponse { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_bolLabelResponse? BolLabelResponse { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse BolLabelResponse { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_bolLabelResponse BolLabelResponse { get; set; }
 #endif
         /// <summary>Contains the response details for the generated invoice label, including the format and data of the generated document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse? InvoiceLabelResponse { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_invoiceLabelResponse? InvoiceLabelResponse { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse InvoiceLabelResponse { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_invoiceLabelResponse InvoiceLabelResponse { get; set; }
 #endif
         /// <summary>A list of responses for the generated pallet labels, each containing details such as the label number and the base64 encoded data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses? PalletLabelResponses { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_palletLabelResponses? PalletLabelResponses { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses PalletLabelResponses { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_palletLabelResponses PalletLabelResponses { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bolLabelResponse", n => { BolLabelResponse = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse>(global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse.CreateFromDiscriminatorValue); } },
-                { "invoiceLabelResponse", n => { InvoiceLabelResponse = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse>(global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse.CreateFromDiscriminatorValue); } },
-                { "palletLabelResponses", n => { PalletLabelResponses = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses>(global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses.CreateFromDiscriminatorValue); } },
+                { "bolLabelResponse", n => { BolLabelResponse = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_bolLabelResponse>(global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_bolLabelResponse.CreateFromDiscriminatorValue); } },
+                { "invoiceLabelResponse", n => { InvoiceLabelResponse = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_invoiceLabelResponse>(global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_invoiceLabelResponse.CreateFromDiscriminatorValue); } },
+                { "palletLabelResponses", n => { PalletLabelResponses = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_palletLabelResponses>(global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_palletLabelResponses.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse>("bolLabelResponse", BolLabelResponse);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse>("invoiceLabelResponse", InvoiceLabelResponse);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses>("palletLabelResponses", PalletLabelResponses);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_bolLabelResponse>("bolLabelResponse", BolLabelResponse);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_invoiceLabelResponse>("invoiceLabelResponse", InvoiceLabelResponse);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponse_palletLabelResponses>("palletLabelResponses", PalletLabelResponses);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
