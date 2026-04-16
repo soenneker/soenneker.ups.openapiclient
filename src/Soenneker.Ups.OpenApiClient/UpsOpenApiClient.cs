@@ -28,6 +28,7 @@ using Soenneker.Ups.OpenApiClient.OAuthClientCredentialsReady;
 using Soenneker.Ups.OpenApiClient.Paperless;
 using Soenneker.Ups.OpenApiClient.PaperlessReady;
 using Soenneker.Ups.OpenApiClient.Pickup;
+using Soenneker.Ups.OpenApiClient.PickupNotificationPreferences;
 using Soenneker.Ups.OpenApiClient.PreNotification;
 using Soenneker.Ups.OpenApiClient.PreNotificationReady;
 using Soenneker.Ups.OpenApiClient.QuantumViewReady;
@@ -165,6 +166,11 @@ namespace Soenneker.Ups.OpenApiClient
         public global::Soenneker.Ups.OpenApiClient.Pickup.PickupRequestBuilder Pickup
         {
             get => new global::Soenneker.Ups.OpenApiClient.Pickup.PickupRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The PickupNotificationPreferences property</summary>
+        public global::Soenneker.Ups.OpenApiClient.PickupNotificationPreferences.PickupNotificationPreferencesRequestBuilder PickupNotificationPreferences
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.PickupNotificationPreferences.PickupNotificationPreferencesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The PreNotification property</summary>
         public global::Soenneker.Ups.OpenApiClient.PreNotification.PreNotificationRequestBuilder PreNotification

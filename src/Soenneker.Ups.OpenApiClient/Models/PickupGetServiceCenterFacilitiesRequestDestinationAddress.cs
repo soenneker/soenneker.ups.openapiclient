@@ -39,7 +39,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PostalCode { get; set; }
 #endif
-        /// <summary>Indicates the address of the consignee to allow for the nearest Pickup facility Search.1 = District code for Hong Kong (HK)2 = County for Ireland (IE)3 = State or province for all the postal countries  Required for non-postal countries including HK and IE.</summary>
+        /// <summary>Indicates the address of the consignee to allow for the nearest Pickup facility Search.1 = District code for Hong Kong (HK)2 = County for Ireland (IE)3 = State or province for all the postal countries  Required for non-postal countries including HK and IE.Required for US, Canada, and Vietnam (VN).- For US or Canada, the value must be a valid US state or Canadian province code.- For Vietnam (VN), the value must be a valid province code (for example, VN-44).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StateProvince { get; set; }

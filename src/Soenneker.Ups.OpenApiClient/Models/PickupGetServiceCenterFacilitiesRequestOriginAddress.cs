@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PostalCode { get; set; }
 #endif
-        /// <summary>Indicates the address of the shipper to allow for the nearest Drop off facility Search.  Conditionally required if proximitySearchIndicator is present and if country or territory is US/CA/IE/HK.</summary>
+        /// <summary>Indicates the address of the shipper to allow for the nearest Drop off facility Search. Conditionally required if proximitySearchIndicator is present and if country or territory is US/CA/IE/HK.Required for Vietnam (VN).For Vietnam (VN), the value must be a valid province code (for example, VN-44).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StateProvince { get; set; }

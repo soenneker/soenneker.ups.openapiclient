@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PostalCode { get; set; }
 #endif
-        /// <summary>SoldTo location&apos;s state or province code.  Required for certain countries or territories.</summary>
+        /// <summary>SoldTo location&apos;s state or province code. Required for US, Canada, and Vietnam (VN).- For US or Canada, the value must be a valid US state or Canadian province code.- For Vietnam (VN), the value must be a valid province code (for example, VN-44).- If the country or territory is Ireland, the StateProvinceCode must contain the county.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StateProvinceCode { get; set; }

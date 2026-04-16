@@ -144,6 +144,30 @@
       }
     },
     {
+      "url": "https://onlinetools.ups.com/api/digital-experience/preferences/{version}",
+      "description": "Production",
+      "variables": {
+        "version": {
+          "default": "v1",
+          "enum": [
+            "v1"
+          ]
+        }
+      }
+    },
+    {
+      "url": "https://wwwcie.ups.com/api/digital-experience/preferences/{version}",
+      "description": "Customer Integration Environment",
+      "variables": {
+        "version": {
+          "default": "v1",
+          "enum": [
+            "v1"
+          ]
+        }
+      }
+    },
+    {
       "url": "https://onlinetools.ups.com/api/ship/tradedirect/{version}",
       "variables": {
         "version": {
@@ -778,15 +802,6 @@
           },
           {
             "$ref": "#/components/parameters/Content-Type"
-          },
-          {
-            "name": "registrationId",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "description": "Used to confirm prsence of active account for Worldship clients",
-              "example": "3DA124234342"
-            }
           },
           {
             "name": "version",
@@ -12789,10 +12804,10 @@
                       "Request": {
                         "TransactionReference": {
                           "CustomerContext": "Smart Pickup Request"
-                        },
-                        "AccountNumber": "1004YY",
-                        "ServiceDateOption": "01"
-                      }
+                        }
+                      },
+                      "AccountNumber": "1004YY",
+                      "ServiceDateOption": "01"
                     }
                   }
                 }
@@ -13176,6 +13191,421 @@
         "security": [
           {
             "Pickup_OAuth2": [ ]
+          }
+        ]
+      }
+    },
+    "/PickupNotificationPreferences/account-pickup": {
+      "get": {
+        "tags": [
+          "Pickup Notification Preferences"
+        ],
+        "summary": "Get shipper account pickup preferences for user UUID.",
+        "description": "This endpoint retrieves the shipper account pickup preferences for specified user.",
+        "operationId": "PickupNotificationPreferences-getUserAccountPickup",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/uuid"
+          },
+          {
+            "$ref": "#/components/parameters/PickupNotificationPreferences_transId"
+          },
+          {
+            "$ref": "#/components/parameters/PickupNotificationPreferences_transactionSrc"
+          },
+          {
+            "$ref": "#/components/parameters/idToken"
+          },
+          {
+            "name": "account_number",
+            "in": "query",
+            "description": "The account_number is required to retrieve pickup preferences for a specific shipper account associated with the user.\n",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of account pickup preferences in the user profile",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountPickupGetResponse"
+                },
+                "examples": {
+                  "successfulResponseWithNoDataExample": {
+                    "value": {
+                      "statusMessage": "Number of items in payload: 0",
+                      "timeStamp": "2025-04-02T20:44:36Z",
+                      "payload": [ ]
+                    }
+                  },
+                  "successfulResponseSpecifiedAccountExample": {
+                    "value": {
+                      "statusMessage": "Number of items in payload: 1",
+                      "timeStamp": "2025-04-02T20:44:36Z",
+                      "payload": [
+                        {
+                          "accountNumber": "123456",
+                          "versionNumber": 1740530158285357000,
+                          "notificationIndicators": {
+                            "email": {
+                              "dayOfPickupInd": true,
+                              "dayBeforePickupInd": false,
+                              "preArrivalInd": false,
+                              "pickupUpdateInd": false,
+                              "pickupCompleteInd": true,
+                              "pickupCancellationInd": true,
+                              "enrollmentConfirmationInd": true,
+                              "smartPickupCutOffNotificationTimeInd": false,
+                              "smartPickupTriggerWarningInd": true,
+                              "smartPickupTriggerNotificationInd": true,
+                              "smartPickupTriggerCancellationInd": false,
+                              "pickupIncompleteNotificationInd": false,
+                              "pickupDelayedInd": true
+                            },
+                            "sms": {
+                              "dayOfPickupInd": true,
+                              "dayBeforePickupInd": false,
+                              "preArrivalInd": false,
+                              "pickupUpdateInd": false,
+                              "pickupCompleteInd": true,
+                              "pickupCancellationInd": true,
+                              "enrollmentConfirmationInd": true,
+                              "smartPickupCutOffNotificationTimeInd": false,
+                              "smartPickupTriggerWarningInd": true,
+                              "smartPickupTriggerNotificationInd": true,
+                              "smartPickupTriggerCancellationInd": false,
+                              "pickupIncompleteNotificationInd": false,
+                              "pickupDelayedInd": true
+                            }
+                          },
+                          "locale": "en_US",
+                          "emails": [
+                            "user@example.com",
+                            "user2@example.com"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupNotificationPreferencesErrorResponse"
+                },
+                "example": {
+                  "response": {
+                    "errors": [
+                      {
+                        "code": "UJ0001",
+                        "message": "Invalid token or token is not present"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/Request Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupNotificationPreferencesErrorResponse"
+                },
+                "example": {
+                  "response": {
+                    "errors": [
+                      {
+                        "code": "PRF_GEN_006",
+                        "message": "uuid - Required field is missing"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupNotificationPreferencesErrorResponse"
+                },
+                "example": {
+                  "response": {
+                    "errors": [
+                      {
+                        "code": "404",
+                        "message": "The requested resource was not found"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupNotificationPreferencesErrorResponse"
+                },
+                "example": {
+                  "response": {
+                    "errors": [
+                      {
+                        "code": "500",
+                        "message": "Internal Server Error"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "PickupNotificationPreferences_OAuth2": [ ]
+          },
+          {
+            "PickupNotificationPreferences_JWTAuth": [ ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Pickup Notification Preferences"
+        ],
+        "summary": "Add or update account level pickup preferences for user UUID.",
+        "description": "This operation allows the user to add or update account level pickup preference for a specified account number.",
+        "operationId": "PickupNotificationPreferences-addAccountPickupPref",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/uuid"
+          },
+          {
+            "$ref": "#/components/parameters/PickupNotificationPreferences_transId"
+          },
+          {
+            "$ref": "#/components/parameters/PickupNotificationPreferences_transactionSrc"
+          },
+          {
+            "$ref": "#/components/parameters/idToken"
+          },
+          {
+            "name": "account_number",
+            "in": "query",
+            "description": "The account_number parameter is required to specify the account for which the pickup preferences are being set.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccountPickupPreference"
+              },
+              "example": {
+                "notificationIndicators": {
+                  "email": {
+                    "dayOfPickupInd": true,
+                    "dayBeforePickupInd": false,
+                    "preArrivalInd": false,
+                    "pickupUpdateInd": false,
+                    "pickupCompleteInd": true,
+                    "pickupCancellationInd": true,
+                    "enrollmentConfirmationInd": true,
+                    "smartPickupCutOffNotificationTimeInd": false,
+                    "smartPickupTriggerWarningInd": true,
+                    "smartPickupTriggerNotificationInd": true,
+                    "smartPickupTriggerCancellationInd": false,
+                    "pickupIncompleteNotificationInd": false,
+                    "pickupDelayedInd": true
+                  },
+                  "sms": {
+                    "dayOfPickupInd": true,
+                    "dayBeforePickupInd": false,
+                    "preArrivalInd": false,
+                    "pickupUpdateInd": false,
+                    "pickupCompleteInd": true,
+                    "pickupCancellationInd": true,
+                    "enrollmentConfirmationInd": true,
+                    "smartPickupCutOffNotificationTimeInd": false,
+                    "smartPickupTriggerWarningInd": true,
+                    "smartPickupTriggerNotificationInd": true,
+                    "smartPickupTriggerCancellationInd": false,
+                    "pickupIncompleteNotificationInd": false,
+                    "pickupDelayedInd": true
+                  }
+                },
+                "locale": "en_US",
+                "emails": [
+                  "abc@example.com",
+                  "def@example.com"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful add or update of account pickup preferences",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountPickupModifyResponse"
+                },
+                "example": {
+                  "statusMessage": "Number of items in payload: 1",
+                  "timeStamp": "2025-04-02T20:44:36Z",
+                  "payload": {
+                    "accountNumber": "123456",
+                    "versionNumber": 1740530158285357000,
+                    "notificationIndicators": {
+                      "email": {
+                        "dayOfPickupInd": true,
+                        "dayBeforePickupInd": false,
+                        "preArrivalInd": false,
+                        "pickupUpdateInd": false,
+                        "pickupCompleteInd": true,
+                        "pickupCancellationInd": true,
+                        "enrollmentConfirmationInd": true,
+                        "smartPickupCutOffNotificationTimeInd": false,
+                        "smartPickupTriggerWarningInd": true,
+                        "smartPickupTriggerNotificationInd": true,
+                        "smartPickupTriggerCancellationInd": false,
+                        "pickupIncompleteNotificationInd": false,
+                        "pickupDelayedInd": true
+                      },
+                      "sms": {
+                        "dayOfPickupInd": true,
+                        "dayBeforePickupInd": false,
+                        "preArrivalInd": false,
+                        "pickupUpdateInd": false,
+                        "pickupCompleteInd": true,
+                        "pickupCancellationInd": true,
+                        "enrollmentConfirmationInd": true,
+                        "smartPickupCutOffNotificationTimeInd": false,
+                        "smartPickupTriggerWarningInd": true,
+                        "smartPickupTriggerNotificationInd": true,
+                        "smartPickupTriggerCancellationInd": false,
+                        "pickupIncompleteNotificationInd": false,
+                        "pickupDelayedInd": true
+                      }
+                    },
+                    "locale": "en_US",
+                    "emails": [
+                      "abc@example.com",
+                      "def@example.com"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/Request Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupNotificationPreferencesErrorResponse"
+                },
+                "example": {
+                  "response": {
+                    "errors": [
+                      {
+                        "code": "PRF_GEN_006",
+                        "message": "uuid - Required field is missing"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupNotificationPreferencesErrorResponse"
+                },
+                "example": {
+                  "response": {
+                    "errors": [
+                      {
+                        "code": "UJ0001",
+                        "message": "Invalid token or token is not present"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupNotificationPreferencesErrorResponse"
+                },
+                "example": {
+                  "response": {
+                    "errors": [
+                      {
+                        "code": "404",
+                        "message": "The requested resource was not found"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupNotificationPreferencesErrorResponse"
+                },
+                "example": {
+                  "response": {
+                    "errors": [
+                      {
+                        "code": "500",
+                        "message": "Internal Server Error"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "PickupNotificationPreferences_OAuth2": [ ]
+          },
+          {
+            "PickupNotificationPreferences_JWTAuth": [ ]
           }
         ]
       }
@@ -18149,7 +18579,7 @@
           {
             "name": "version",
             "in": "path",
-            "description": "When UPS introduces new elements in the \nresponse that are not associated with new \nrequest elements, Subversion is used. This \nensures backward compatibility. \nv1  original features of the application. No \nsupport for CODTurn-inPage, HighValueReport \nor InternationalForms features returned in the \nresponse\nv1701  includes support for CODTurn-inPage \nfeatures returned in the response.\nV1903\n Length 5",
+            "description": "When UPS introduces new elements in the \nresponse that are not associated with new \nrequest elements, Subversion is used. This \nensures backward compatibility. \nv1  original features of the application. No \nsupport for CODTurn-inPage, HighValueReport \nor InternationalForms features returned in the \nresponse\nv1701  includes support for CODTurn-inPage \nfeatures returned in the response.\nV1903\n Length 5.To support Roadie labels, the API version in the URL must be v2603.",
             "required": true,
             "schema": {
               "minimum": 1,
@@ -18166,8 +18596,8 @@
                 "$ref": "#/components/schemas/LABELRECOVERYRequestWrapper"
               },
               "examples": {
-                "json": {
-                  "summary": "A sample JSON request",
+                "1": {
+                  "summary": "Label Recovery Request (Standard Example)",
                   "value": {
                     "LabelRecoveryRequest": {
                       "LabelDelivery": {
@@ -18196,6 +18626,33 @@
                         "Code": "01",
                         "DialectCode": "US",
                         "LanguageCode": "eng"
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "summary": "Label Recovery Request (Roadie)",
+                  "value": {
+                    "LabelRecoveryRequest": {
+                      "LabelSpecification": {
+                        "LabelImageFormat": {
+                          "Code": "GIF"
+                        }
+                      },
+                      "Request": {
+                        "SubVersion": "2603",
+                        "TransactionReference": {
+                          "CustomerContext": "Success case"
+                        }
+                      },
+                      "TrackingNumbers": {
+                        "TrackingNumber": [
+                          "1R12345678912345",
+                          "1R12356732456789"
+                        ]
+                      },
+                      "ReferenceValues": {
+                        "ShipperNumber": "XXXXXX"
                       }
                     }
                   }
@@ -23378,6 +23835,176 @@
         "additionalProperties": false,
         "description": "Contains commodity code groupings and the detailed field metadata required per country, process, and Regulation."
       },
+      "MyUPSEmailVerification": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "maxLength": 1,
+            "enum": [
+              "X",
+              "U",
+              "C",
+              "N"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Status of the user email verification X - Unknown, U - Unconfirmed, C - Confirmed, N - Need to confirm"
+          },
+          "pendingEmail": {
+            "type": "string",
+            "description": "Pending email address for email change",
+            "format": "email"
+          },
+          "timestamp": {
+            "type": "string",
+            "description": "Email verification timestamp",
+            "format": "date-time"
+          }
+        },
+        "description": "Email verification information"
+      },
+      "ClaimPreferredChannel": {
+        "type": "object",
+        "properties": {
+          "indicators": {
+            "$ref": "#/components/schemas/ClaimPreferredChannelIndicators"
+          },
+          "emailAddress": {
+            "type": "string",
+            "description": "Preferred email address.",
+            "format": "email"
+          },
+          "faxCountryCode": {
+            "maxLength": 2,
+            "pattern": "^[0-9]{2}$",
+            "type": "string",
+            "description": "Country code for fax number. ISO 3166 alpha-2 is used."
+          },
+          "faxNumber": {
+            "maxLength": 15,
+            "pattern": "^[0-9-]*$",
+            "type": "string",
+            "description": "Fax number"
+          }
+        },
+        "description": "Preferred communication method(s)."
+      },
+      "CustomDetailsRequestMetaDatav2": {
+        "minItems": 1,
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CustomDetailsRequestMetaDatav2Item"
+        },
+        "description": "Unbounded list of containers for product metadata groups"
+      },
+      "LandedCostLandedCostResponseShipment": {
+        "required": [
+          "currencyCode",
+          "importCountryCode",
+          "id",
+          "brokerageFeeItems",
+          "totalBrokerageFees",
+          "totalDuties",
+          "totalCommodityLevelTaxesAndFees",
+          "totalShipmentLevelTaxesAndFees",
+          "totalVAT",
+          "totalDutyAndTax",
+          "grandTotal",
+          "shipmentItems"
+        ],
+        "type": "object",
+        "properties": {
+          "currencyCode": {
+            "maximum": 1,
+            "maxLength": 3,
+            "type": "string",
+            "description": "Specifies the Currency Code set at the commodity level. This currency is applicable for all duty, tax, VAT, and fee at the shipment and commodity level.",
+            "example": "USD, CAD, EUR"
+          },
+          "importCountryCode": {
+            "maximum": 1,
+            "maxLength": 2,
+            "type": "string",
+            "description": "Specifies the Import/Ship-To/Destination/Final country of the shipment. Please check country list in the Appendices section.",
+            "example": "US, CA, MX"
+          },
+          "id": {
+            "maximum": 1,
+            "maxLength": 100,
+            "type": "string",
+            "description": "Specifies the Shipment ID in the Landed Cost quote."
+          },
+          "brokerageFeeItems": {
+            "maximum": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LandedCostBrokerageFeeItems"
+            },
+            "description": "An array of Brokerage fees."
+          },
+          "totalBrokerageFees": {
+            "maximum": 1,
+            "type": "number",
+            "description": "Grand total of all applicable Brokerage fees."
+          },
+          "totalDuties": {
+            "maximum": 1,
+            "type": "number",
+            "description": "Total duty amount of this shipment."
+          },
+          "totalCommodityLevelTaxesAndFees": {
+            "maximum": 1,
+            "type": "number",
+            "description": "Total tax and other fees at commodity level."
+          },
+          "totalShipmentLevelTaxesAndFees": {
+            "maximum": 1,
+            "type": "number",
+            "description": "Total tax and other fees at shipment level."
+          },
+          "totalVAT": {
+            "maximum": 1,
+            "type": "number",
+            "description": "Total VAT of the shipment."
+          },
+          "totalDutyAndTax": {
+            "maximum": 1,
+            "type": "number",
+            "description": "Grand total of the combined duty, VAT, tax, and other fees of all commodities in this shipment including shipment level taxes and fees."
+          },
+          "grandTotal": {
+            "maximum": 1,
+            "type": "number",
+            "description": "Sum of totalDutyAndTax + totalBrokerageFees"
+          },
+          "shipmentItems": {
+            "maximum": 99,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LandedCostResponseShipmentItems"
+            },
+            "description": "An array of Landed Cost for all valid commodities."
+          },
+          "transID": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "An identifier unique to the request."
+          },
+          "perfStats": {
+            "$ref": "#/components/schemas/LandedCostLandedCostResponseShipmentPerfStats"
+          },
+          "alVersion": {
+            "maximum": 1,
+            "maxLength": 10,
+            "type": "integer",
+            "description": "Version number of the instance that processed this request. Default is 1."
+          },
+          "errors": {
+            "$ref": "#/components/schemas/LandedCostErrors"
+          }
+        },
+        "description": "Every Landed Cost response must be based on a shipment."
+      },
       "LandedCostResponseShipment": {
         "required": [
           "currencyCode",
@@ -23485,80 +24112,6 @@
           }
         },
         "description": "Every Landed Cost response must be based on a shipment."
-      },
-      "BSISV1ErrorResponseResponse": {
-        "required": [
-          "errors"
-        ],
-        "type": "object",
-        "properties": {
-          "errors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BSISV1Error"
-            },
-            "description": "error payload - array containing one or more Errors."
-          }
-        },
-        "description": "errors container."
-      },
-      "CustomDetailsRequestMetaDatav2": {
-        "minItems": 1,
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomDetailsRequestMetaDatav2Item"
-        },
-        "description": "Unbounded list of containers for product metadata groups"
-      },
-      "BSISV1ShipmentItemRequestDimension": {
-        "required": [
-          "length",
-          "width",
-          "height",
-          "unitOfMeasure"
-        ],
-        "type": "object",
-        "properties": {
-          "length": {
-            "type": "number",
-            "description": "package length (no limit).",
-            "format": "decimal",
-            "example": 1
-          },
-          "width": {
-            "type": "number",
-            "description": "package width (no limit).",
-            "format": "decimal",
-            "example": 2
-          },
-          "height": {
-            "type": "number",
-            "description": "package height (no limit).",
-            "format": "decimal",
-            "example": 3
-          },
-          "unitOfMeasure": {
-            "enum": [
-              "in",
-              "cm",
-              "IN",
-              "CM"
-            ],
-            "type": "string",
-            "additionalProperties": false,
-            "description": "Specifies the units of measure.",
-            "example": "IN"
-          }
-        }
-      },
-      "ApolloFullTrackingDetailsResponseV1Response": {
-        "type": "object",
-        "properties": {
-          "primaryInformation": {
-            "$ref": "#/components/schemas/PrimaryInformation"
-          }
-        },
-        "description": "Response container for tracking details"
       },
       "CustomDetailsRegulationSectionv2": {
         "minItems": 1,
@@ -24162,7 +24715,7 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
-            "description": "The Ship From locations state or province code."
+            "description": "The Ship From locations state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -24210,7 +24763,7 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
-            "description": "The Ship To locations state or province code."
+            "description": "The Ship To locations state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -25399,7 +25952,7 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
-            "description": "The Ship From locations state or province code."
+            "description": "The Ship From locations state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -25447,7 +26000,7 @@
             "maxLength": 30,
             "minLength": 1,
             "type": "string",
-            "description": "The Ship To locations state or province code."
+            "description": "The Ship To locations state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -26697,45 +27250,60 @@
           }
         }
       },
-      "ApolloAirUtilityValidAccessorialsResponseV1Response": {
+      "BSISV1ErrorResponseResponse": {
         "required": [
-          "accessorials",
-          "paymentTerms",
-          "nextAvailPUDate"
+          "errors"
         ],
         "type": "object",
         "properties": {
-          "accessorials": {
+          "errors": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApolloAccessorialsResponseDetailsV1"
+              "$ref": "#/components/schemas/BSISV1Error"
             },
-            "description": "List of valid accessorials."
-          },
-          "paymentTerms": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PaymentTerm"
-            },
-            "description": "The type of payment term (e.g., Shipper, Consignee, ThridParty)."
-          },
-          "nextAvailPUDate": {
-            "type": "string",
-            "description": "Next available pickup date",
-            "format": "date",
-            "example": "2026-01-09"
+            "description": "error payload - array containing one or more Errors."
           }
         },
-        "description": "Response wrapper object."
+        "description": "errors container."
       },
-      "ApolloShipmentDetailResponseV1Response": {
+      "BSISV1ShipmentItemRequestDimension": {
         "required": [
-          "shipmentSummary"
+          "length",
+          "width",
+          "height",
+          "unitOfMeasure"
         ],
         "type": "object",
         "properties": {
-          "shipmentSummary": {
-            "$ref": "#/components/schemas/ShipmentSummary"
+          "length": {
+            "type": "number",
+            "description": "package length (no limit).",
+            "format": "decimal",
+            "example": 1
+          },
+          "width": {
+            "type": "number",
+            "description": "package width (no limit).",
+            "format": "decimal",
+            "example": 2
+          },
+          "height": {
+            "type": "number",
+            "description": "package height (no limit).",
+            "format": "decimal",
+            "example": 3
+          },
+          "unitOfMeasure": {
+            "enum": [
+              "in",
+              "cm",
+              "IN",
+              "CM"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Specifies the units of measure.",
+            "example": "IN"
           }
         }
       },
@@ -26748,16 +27316,14 @@
         "type": "string",
         "additionalProperties": false
       },
-      "ApolloQuoteDataResponseV1Response": {
-        "required": [
-          "quoteSummary"
-        ],
+      "ApolloFullTrackingDetailsResponseV1Response": {
         "type": "object",
         "properties": {
-          "quoteSummary": {
-            "$ref": "#/components/schemas/QuoteSummaryV1"
+          "primaryInformation": {
+            "$ref": "#/components/schemas/PrimaryInformation"
           }
-        }
+        },
+        "description": "Response container for tracking details"
       },
       "DeliveryInterceptErrorResponseV2": {
         "required": [
@@ -27269,6 +27835,67 @@
         },
         "additionalProperties": false
       },
+      "ApolloAirUtilityValidAccessorialsResponseV1Response": {
+        "required": [
+          "accessorials",
+          "paymentTerms",
+          "nextAvailPUDate"
+        ],
+        "type": "object",
+        "properties": {
+          "accessorials": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApolloAccessorialsResponseDetailsV1"
+            },
+            "description": "List of valid accessorials."
+          },
+          "paymentTerms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentTerm"
+            },
+            "description": "The type of payment term (e.g., Shipper, Consignee, ThridParty)."
+          },
+          "nextAvailPUDate": {
+            "type": "string",
+            "description": "Next available pickup date",
+            "format": "date",
+            "example": "2026-01-09"
+          }
+        },
+        "description": "Response wrapper object."
+      },
+      "ApolloCustomArrayV1": {
+        "minItems": 1,
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApolloCustomArrayV1Item"
+        },
+        "description": "Unbounded array of additional key-value pair objects"
+      },
+      "ApolloShipmentDetailResponseV1Response": {
+        "required": [
+          "shipmentSummary"
+        ],
+        "type": "object",
+        "properties": {
+          "shipmentSummary": {
+            "$ref": "#/components/schemas/ShipmentSummary"
+          }
+        }
+      },
+      "ApolloQuoteDataResponseV1Response": {
+        "required": [
+          "quoteSummary"
+        ],
+        "type": "object",
+        "properties": {
+          "quoteSummary": {
+            "$ref": "#/components/schemas/QuoteSummaryV1"
+          }
+        }
+      },
       "ServiceTypeSearchResponseV1Response": {
         "required": [
           "serviceTypes"
@@ -27284,65 +27911,6 @@
           }
         },
         "description": "Response containing a list of serviceTypes."
-      },
-      "ApolloCustomArrayV1": {
-        "minItems": 1,
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApolloCustomArrayV1Item"
-        },
-        "description": "Unbounded array of additional key-value pair objects"
-      },
-      "ApolloUtilityAirportDetailResponseV1Response": {
-        "required": [
-          "airportDetails"
-        ],
-        "type": "object",
-        "properties": {
-          "airportDetails": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ApolloAirportResponseDetailsV1"
-            },
-            "description": "List of airport details."
-          }
-        },
-        "description": "Response wrapper object."
-      },
-      "LabelRequestDetails": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        },
-        "description": "A list of label detail fields and values.",
-        "example": {
-          "Model_Number": "X",
-          "Model_Year": "2023",
-          "Shipper_ReferenceNo": "SHP2401-A3MC220"
-        }
-      },
-      "ApolloLabelV1LabelData": {
-        "required": [
-          "shipper",
-          "consignee",
-          "shipment"
-        ],
-        "type": "object",
-        "properties": {
-          "shipper": {
-            "$ref": "#/components/schemas/ApolloShipmentPartyV1"
-          },
-          "consignee": {
-            "$ref": "#/components/schemas/ApolloShipmentPartyV1"
-          },
-          "thirdParty": {
-            "$ref": "#/components/schemas/ApolloShipmentPartyV1"
-          },
-          "shipment": {
-            "$ref": "#/components/schemas/ApolloLabelV1LabelDataShipment"
-          }
-        },
-        "additionalProperties": false
       },
       "ApolloWarningArrayV1": {
         "type": "array",
@@ -27473,36 +28041,21 @@
         "additionalProperties": false,
         "description": "\"An object representing the shipping label.\n\n| **labelFormat** | **Returned Containers** |\n| :--:            | :--                     |\n| DATA            | labelFormat, labelData  |\n| PDF, PNG        | labelFormat, labelImage |\n\""
       },
-      "ApolloLabelV1Charges": {
+      "ApolloUtilityAirportDetailResponseV1Response": {
+        "required": [
+          "airportDetails"
+        ],
         "type": "object",
         "properties": {
-          "shipperCharges": {
+          "airportDetails": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ApolloChargeV1"
+              "$ref": "#/components/schemas/ApolloAirportResponseDetailsV1"
             },
-            "description": "A collection of charges associated with this Order mapped to the shipper",
-            "nullable": true
-          },
-          "consigneeCharges": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ApolloChargeV1"
-            },
-            "description": "A collection of charges associated with this Order mapped to the consignee",
-            "nullable": true
-          },
-          "thirdPartyCharges": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ApolloChargeV1"
-            },
-            "description": "A collection of charges associated with this Order mapped to the third party",
-            "nullable": true
+            "description": "List of airport details."
           }
         },
-        "additionalProperties": false,
-        "description": "A collection of charges associated with this Order. Conditionally required based on payer of charges."
+        "description": "Response wrapper object."
       },
       "ApolloPartyV1": {
         "type": "object",
@@ -27830,112 +28383,37 @@
         "nullable": true,
         "example": "123456789"
       },
-      "ApolloErrorResponseV1Response": {
-        "required": [
-          "errors"
-        ],
+      "LabelRequestDetails": {
         "type": "object",
-        "properties": {
-          "errors": {
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "required": [
-                "code",
-                "message"
-              ],
-              "type": "object",
-              "properties": {
-                "code": {
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "error code",
-                  "example": "-250002"
-                },
-                "message": {
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "error message",
-                  "example": "Invalid Authentication Information."
-                }
-              },
-              "additionalProperties": false,
-              "description": "Error entity"
-            },
-            "description": "Unbounded array containing one or more error objects"
-          }
+        "additionalProperties": {
+          "type": "string"
         },
-        "additionalProperties": false,
-        "description": "Response container to store errors"
+        "description": "A list of label detail fields and values.",
+        "example": {
+          "Model_Number": "X",
+          "Model_Year": "2023",
+          "Shipper_ReferenceNo": "SHP2401-A3MC220"
+        }
       },
-      "ApolloGetCityResponseV1Response": {
+      "ApolloLabelV1LabelData": {
         "required": [
-          "cityDetails"
+          "shipper",
+          "consignee",
+          "shipment"
         ],
         "type": "object",
         "properties": {
-          "cityDetails": {
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "required": [
-                "stateProvinceCode"
-              ],
-              "type": "object",
-              "properties": {
-                "stateProvinceCode": {
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "The State/Province to which the city belongs to",
-                  "nullable": true,
-                  "example": "GA"
-                },
-                "cityName": {
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "The name of the city",
-                  "nullable": true,
-                  "example": "Alpharetta"
-                },
-                "majorAirportCity": {
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "The nearest city with a major airport",
-                  "nullable": true,
-                  "example": "Atlanta"
-                },
-                "tariffDestination": {
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "The destination used for billing purpose",
-                  "nullable": true,
-                  "example": "ATL"
-                },
-                "sortCode": {
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "A value which helps the Ops team to route the package",
-                  "nullable": true,
-                  "example": "V1"
-                },
-                "standardService": {
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "The standard service offered in this city",
-                  "nullable": true,
-                  "example": "GND"
-                }
-              },
-              "additionalProperties": false,
-              "nullable": true
-            },
-            "description": "The unbounded array representing the cities"
+          "shipper": {
+            "$ref": "#/components/schemas/ApolloShipmentPartyV1"
           },
-          "warnings": {
-            "$ref": "#/components/schemas/ApolloWarningArrayV1"
+          "consignee": {
+            "$ref": "#/components/schemas/ApolloShipmentPartyV1"
           },
-          "message": {
-            "type": "string"
+          "thirdParty": {
+            "$ref": "#/components/schemas/ApolloShipmentPartyV1"
+          },
+          "shipment": {
+            "$ref": "#/components/schemas/ApolloLabelV1LabelDataShipment"
           }
         },
         "additionalProperties": false
@@ -35404,17 +35882,6 @@
           }
         }
       },
-      "TrackingDeliveryInformationPod": {
-        "title": "POD",
-        "type": "object",
-        "properties": {
-          "content": {
-            "type": "string",
-            "description": "\"The base64 encoded string representation of the Delivery Proof. Note: This is considered sensitive data and may only be returned for a user that has rights to the package.\""
-          }
-        },
-        "description": "Container which contains Proof of Delivery."
-      },
       "DeliveryInformationPod": {
         "title": "POD",
         "type": "object",
@@ -35425,6 +35892,38 @@
           }
         },
         "description": "Container which contains Proof of Delivery."
+      },
+      "ShipmentWorldEasePortOfEntry": {
+        "required": [
+          "Name",
+          "ClearancePortCode",
+          "Consignee",
+          "Address"
+        ],
+        "type": "object",
+        "properties": {
+          "Name": {
+            "maxLength": 35,
+            "type": "string",
+            "description": "Port of entry name",
+            "example": "Seagirt Terminal, Port of Baltimore"
+          },
+          "ClearancePortCode": {
+            "type": "string",
+            "description": "Port code",
+            "example": 56982
+          },
+          "Consignee": {
+            "maxLength": 35,
+            "type": "string",
+            "description": "Port of entry consignee",
+            "example": "John Doe"
+          },
+          "Address": {
+            "$ref": "#/components/schemas/AddressPOE"
+          }
+        },
+        "description": "Container for port of entry details"
       },
       "OAuthAuthCodeGenerateTokenSuccessResponse": {
         "type": "object",
@@ -37202,7 +37701,7 @@
             "maxLength": 50,
             "minLength": 1,
             "type": "string",
-            "description": "State province code or equivalent"
+            "description": "State province code or equivalent. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -38051,7 +38550,7 @@
             "maxLength": 50,
             "minLength": 1,
             "type": "string",
-            "description": "Charge card billing State province code"
+            "description": "Charge card billing State province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -38169,7 +38668,7 @@
             "maxLength": 50,
             "minLength": 1,
             "type": "string",
-            "description": "State or province for postal countries; county for Ireland (IE) and district code for Hong Kong (HK)"
+            "description": "State or province for postal countries; county for Ireland (IE) and district code for Hong Kong (HK). Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n"
           },
           "Urbanization": {
             "maximum": 1,
@@ -39173,7 +39672,7 @@
             "maxLength": 50,
             "minLength": 1,
             "type": "string",
-            "description": "Indicates the address of the shipper to allow for the nearest Drop off facility Search.  Conditionally required if proximitySearchIndicator is present and if country or territory is US/CA/IE/HK."
+            "description": "Indicates the address of the shipper to allow for the nearest Drop off facility Search. Conditionally required if proximitySearchIndicator is present and if country or territory is US/CA/IE/HK.\n\nRequired for Vietnam (VN).\nFor Vietnam (VN), the value must be a valid province code (for example, VN-44).\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -39251,7 +39750,7 @@
             "maxLength": 50,
             "minLength": 1,
             "type": "string",
-            "description": "Indicates the address of the consignee to allow for the nearest Pickup facility Search.\n1 = District code for Hong Kong (HK)\n2 = County for Ireland (IE)\n3 = State or province for all the postal countries  Required for non-postal countries including HK and IE."
+            "description": "Indicates the address of the consignee to allow for the nearest Pickup facility Search.\n1 = District code for Hong Kong (HK)\n2 = County for Ireland (IE)\n3 = State or province for all the postal countries  Required for non-postal countries including HK and IE.\n\nRequired for US, Canada, and Vietnam (VN).\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44)."
           },
           "PostalCode": {
             "maximum": 1,
@@ -40072,6 +40571,2290 @@
         },
         "description": "The error response containing any errors that occurred."
       },
+      "ApolloLabelV1Charges": {
+        "type": "object",
+        "properties": {
+          "shipperCharges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApolloChargeV1"
+            },
+            "description": "A collection of charges associated with this Order mapped to the shipper",
+            "nullable": true
+          },
+          "consigneeCharges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApolloChargeV1"
+            },
+            "description": "A collection of charges associated with this Order mapped to the consignee",
+            "nullable": true
+          },
+          "thirdPartyCharges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApolloChargeV1"
+            },
+            "description": "A collection of charges associated with this Order mapped to the third party",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A collection of charges associated with this Order. Conditionally required based on payer of charges."
+      },
+      "ApolloErrorResponseV1Response": {
+        "required": [
+          "errors"
+        ],
+        "type": "object",
+        "properties": {
+          "errors": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "required": [
+                "code",
+                "message"
+              ],
+              "type": "object",
+              "properties": {
+                "code": {
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "error code",
+                  "example": "-250002"
+                },
+                "message": {
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "error message",
+                  "example": "Invalid Authentication Information."
+                }
+              },
+              "additionalProperties": false,
+              "description": "Error entity"
+            },
+            "description": "Unbounded array containing one or more error objects"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response container to store errors"
+      },
+      "ApolloGetCityResponseV1Response": {
+        "required": [
+          "cityDetails"
+        ],
+        "type": "object",
+        "properties": {
+          "cityDetails": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "required": [
+                "stateProvinceCode"
+              ],
+              "type": "object",
+              "properties": {
+                "stateProvinceCode": {
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "The State/Province to which the city belongs to",
+                  "nullable": true,
+                  "example": "GA"
+                },
+                "cityName": {
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "The name of the city",
+                  "nullable": true,
+                  "example": "Alpharetta"
+                },
+                "majorAirportCity": {
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "The nearest city with a major airport",
+                  "nullable": true,
+                  "example": "Atlanta"
+                },
+                "tariffDestination": {
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "The destination used for billing purpose",
+                  "nullable": true,
+                  "example": "ATL"
+                },
+                "sortCode": {
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "A value which helps the Ops team to route the package",
+                  "nullable": true,
+                  "example": "V1"
+                },
+                "standardService": {
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "The standard service offered in this city",
+                  "nullable": true,
+                  "example": "GND"
+                }
+              },
+              "additionalProperties": false,
+              "nullable": true
+            },
+            "description": "The unbounded array representing the cities"
+          },
+          "warnings": {
+            "$ref": "#/components/schemas/ApolloWarningArrayV1"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseResponse": {
+        "required": [
+          "statusMessage",
+          "timeStamp"
+        ],
+        "type": "object",
+        "properties": {
+          "statusMessage": {
+            "type": "string",
+            "description": "Status message, will contain a count of elements in payload in case of success when no warnings"
+          },
+          "timeStamp": {
+            "type": "string",
+            "description": "Response time stamp",
+            "format": "date-time"
+          }
+        },
+        "description": "Base Response object"
+      },
+      "BasePreference": {
+        "type": "object",
+        "properties": {
+          "docId": {
+            "minLength": 5,
+            "pattern": "^[a-zA-Z0-9\\-:]+$",
+            "type": "string",
+            "description": "System generated id for preference entity",
+            "readOnly": true
+          },
+          "customerRegistrationHashedNumber": {
+            "maxLength": 36,
+            "minLength": 36,
+            "pattern": "^[a-fA-F0-9\\-]+$",
+            "type": "string",
+            "description": "System generated id for the User",
+            "example": "4ce27ff5-8e17-4797-a8c1-089796dbed9c"
+          }
+        },
+        "description": "Base preference entity"
+      },
+      "VersionNumber": {
+        "type": "object",
+        "properties": {
+          "versionNumber": {
+            "type": "integer",
+            "description": "System generated id that represents the version of the document.",
+            "example": 1740530158285357000
+          }
+        },
+        "description": "Document version number"
+      },
+      "CustomPackageTypeResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "maxItems": 20,
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CustomPackageType"
+                },
+                "description": "Response payload - array containing zero or more CustomPackageTypes"
+              }
+            }
+          }
+        ],
+        "description": "Custom Package Type Response Object"
+      },
+      "CustomPackageTypeModifiedData": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "docId": {
+                "type": "string"
+              },
+              "payload": {
+                "$ref": "#/components/schemas/CustomPackageType"
+              }
+            }
+          }
+        ],
+        "description": "Custom Package Type value that was modified"
+      },
+      "CustomPackageType": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BasePreference"
+          },
+          {
+            "required": [
+              "customName",
+              "heightQuantity",
+              "lengthQuantity",
+              "widthQuantity",
+              "unitOfMeasure"
+            ],
+            "type": "object",
+            "properties": {
+              "customName": {
+                "minLength": 2,
+                "pattern": "^((?!<script>).)*$",
+                "type": "string",
+                "description": "Name for custom package type entity",
+                "example": "big box"
+              },
+              "heightQuantity": {
+                "minimum": 1,
+                "type": "integer",
+                "description": "Height of the custom package type",
+                "example": 1
+              },
+              "lengthQuantity": {
+                "minimum": 1,
+                "type": "integer",
+                "description": "Length of the custom package type",
+                "example": 1
+              },
+              "widthQuantity": {
+                "minimum": 1,
+                "type": "integer",
+                "description": "Width of the custom package type",
+                "example": 1
+              },
+              "unitOfMeasure": {
+                "maxLength": 2,
+                "pattern": "^(in|cm)$",
+                "type": "string",
+                "description": "Unit of measure of the custom package type dimensions",
+                "example": "cm"
+              },
+              "defaultCustomType": {
+                "pattern": "^(import|rating|returns|shipping|)$",
+                "type": "string",
+                "description": "Type of custom package entity, optional",
+                "example": "import"
+              }
+            }
+          }
+        ],
+        "description": "Custom Package Type Entity"
+      },
+      "DeclaredStatementResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "maxLength": 10,
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DeclaredStatement"
+                },
+                "description": "Response payload - array containing zero or more Declared Statement entity"
+              }
+            }
+          }
+        ],
+        "description": "Declared Statement Response Object"
+      },
+      "DeclaredStatementModifiedData": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "$ref": "#/components/schemas/DeclaredStatement"
+              }
+            }
+          }
+        ],
+        "description": "Declared Statement modified value"
+      },
+      "DeclaredStatement": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BasePreference"
+          },
+          {
+            "type": "object"
+          },
+          {
+            "required": [
+              "name"
+            ],
+            "type": "object",
+            "properties": {
+              "isDefault": {
+                "type": "boolean",
+                "description": "is this the default declared statement for this user"
+              },
+              "name": {
+                "pattern": "^((?!<script>).)*$",
+                "type": "string",
+                "description": "name of the declared statement"
+              },
+              "text": {
+                "pattern": "^((?!<script>).)*$",
+                "type": "string",
+                "description": "text value of the declared statement"
+              }
+            }
+          }
+        ],
+        "description": "Declared Statement entity"
+      },
+      "TransitSortDirectionResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "$ref": "#/components/schemas/TransitSortDirection"
+              }
+            }
+          }
+        ],
+        "description": "Time in Transit Sort Direction Response Entity"
+      },
+      "TransitSortDirection": {
+        "type": "object",
+        "properties": {
+          "lastUsedSortForTime": {
+            "maxLength": 9,
+            "pattern": "^(mostTime|leastTime)$",
+            "enum": [
+              "mostTime",
+              "leastTime"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "sort direction last used by user for Calculate Time and Cost (CTC) time in transit results table",
+            "example": "leastTime"
+          }
+        },
+        "description": "Time in Transit Sort Direction"
+      },
+      "PickupResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "$ref": "#/components/schemas/Pickup"
+              }
+            }
+          }
+        ],
+        "description": "Pickup Response Object"
+      },
+      "Pickup": {
+        "type": "object",
+        "properties": {
+          "default": {
+            "$ref": "#/components/schemas/PickupDefaults"
+          },
+          "email": {
+            "$ref": "#/components/schemas/PickupEmail"
+          },
+          "address": {
+            "$ref": "#/components/schemas/PickupAddress"
+          },
+          "daysInHistory": {
+            "maxLength": 3,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Number of days to keep in history",
+            "example": "1"
+          },
+          "startPage": {
+            "pattern": "^((?!<script>).)*$",
+            "type": "string",
+            "description": "Pickup webapp start page"
+          },
+          "useMyProfile": {
+            "type": "boolean",
+            "description": "Indicates if profile address should be used"
+          }
+        },
+        "description": "Pickup preference entity"
+      },
+      "PickupDefaults": {
+        "type": "object",
+        "properties": {
+          "locationCloseTime": {
+            "maxLength": 4,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Close time value for the location, format is 24hr HHMM",
+            "example": "1900"
+          },
+          "locationReadyTime": {
+            "maxLength": 4,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Time value for when location has packages ready for pickup, format is 24hr HHMM",
+            "example": "1400"
+          },
+          "accountNumber": {
+            "maxLength": 20,
+            "pattern": "^[a-zA-Z0-9]*$",
+            "type": "string",
+            "description": "Default account number to charge for pickups"
+          },
+          "floor": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Default floor to pickup from"
+          },
+          "pickupLocation": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Default pickup location"
+          },
+          "specialInstructions": {
+            "pattern": "^((?!<script>).)*$",
+            "type": "string",
+            "description": "Special instructions"
+          }
+        },
+        "description": "Container for defaults of pickup preferences"
+      },
+      "PickupAddress": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PickupNotificationPreferencesAddress"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "LID": {
+                "pattern": "^((?!<script>).)*$",
+                "type": "string",
+                "description": "pickup address LID (location id)"
+              },
+              "packageANSIQualifier1": {
+                "pattern": "^((?!<script>).)*$",
+                "type": "string",
+                "description": "package level ANSI qualifier 1"
+              },
+              "packageANSIQualifier2": {
+                "pattern": "^((?!<script>).)*$",
+                "type": "string",
+                "description": "package level ANSI qualifier 2"
+              },
+              "url": {
+                "type": "string",
+                "description": "URL for address",
+                "format": "uri"
+              },
+              "consigneeBillableIndicator": {
+                "type": "boolean",
+                "description": "indicates if billing consignee"
+              }
+            }
+          }
+        ],
+        "description": "Pickup Address entity"
+      },
+      "PickupNotificationPreferencesAddress": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Address key"
+          },
+          "line1Text": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Address Line 1"
+          },
+          "line2Text": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Address Line 2"
+          },
+          "line3Text": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Address Line 3"
+          },
+          "name": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Name"
+          },
+          "attentionName": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Attention Name"
+          },
+          "city": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "City"
+          },
+          "politicalDivision3": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Political Division 3, municipality"
+          },
+          "stateProv": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "State or Province"
+          },
+          "postalCode": {
+            "pattern": "^[a-zA-Z0-9\\-\\s]+$",
+            "type": "string",
+            "description": "Postal / Zip Code"
+          },
+          "countryCode": {
+            "pattern": "^[a-zA-Z0-9]{2,3}$",
+            "type": "string",
+            "description": "Code for Country (2-3 char)"
+          },
+          "residentialIndicator": {
+            "type": "boolean",
+            "description": "Indicator if the address is residential"
+          },
+          "nickName": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Nickname for address"
+          },
+          "faxNumber": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Fax"
+          },
+          "telephone": {
+            "$ref": "#/components/schemas/Telephone"
+          }
+        },
+        "description": "Address entity"
+      },
+      "PickupEmail": {
+        "type": "object",
+        "properties": {
+          "address1": {
+            "type": "string",
+            "description": "default email address",
+            "format": "email"
+          },
+          "address2": {
+            "type": "string",
+            "description": "secondary email address",
+            "format": "email"
+          },
+          "notificationAddress": {
+            "type": "string",
+            "description": "email address for notifications",
+            "format": "email"
+          },
+          "message": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "default email message"
+          }
+        },
+        "description": "Email container for Pickup Preference"
+      },
+      "Telephone": {
+        "type": "object",
+        "properties": {
+          "number": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Phone Number"
+          },
+          "extensionNumber": {
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Phone Extension"
+          }
+        },
+        "description": "Telephone entity"
+      },
+      "ClaimResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "required": [
+              "payload"
+            ],
+            "type": "object",
+            "properties": {
+              "payload": {
+                "$ref": "#/components/schemas/Claim"
+              }
+            }
+          }
+        ],
+        "description": "Claim Response Object"
+      },
+      "Claim": {
+        "type": "object",
+        "properties": {
+          "preferredChannel": {
+            "$ref": "#/components/schemas/ClaimPreferredChannel"
+          },
+          "batchUploadNotificationOptionInd": {
+            "type": "boolean",
+            "description": "Indicate if batch upload notification is preferred."
+          },
+          "batchUploadNotificationEmailAddress": {
+            "type": "string",
+            "description": "Preferred email address for batch upload notification.",
+            "format": "email"
+          },
+          "claimReportedEmailInd": {
+            "type": "boolean",
+            "description": "Indicate if claim is reported in email."
+          },
+          "claimUpdatedEmailInd": {
+            "type": "boolean",
+            "description": "Indicate if claim is updated in email."
+          }
+        },
+        "description": "Claim preference entity"
+      },
+      "RatingResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "$ref": "#/components/schemas/Rating"
+              }
+            }
+          }
+        ],
+        "description": "Rating Response Object"
+      },
+      "Rating": {
+        "type": "object",
+        "properties": {
+          "dailyPickup": {
+            "maxLength": 1,
+            "enum": [
+              "Y",
+              "N"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Flag to indicate if daily pickup is preferred."
+          },
+          "destinationType": {
+            "maxLength": 1,
+            "enum": [
+              "R",
+              "C"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Destination type, R - Residential, C - Commercial"
+          },
+          "dismissRatingPrefLink": {
+            "maxLength": 1,
+            "type": "string",
+            "description": "Indicate if rating preference link is dismissed."
+          },
+          "shipmentMethodPreference": {
+            "maxLength": 2,
+            "enum": [
+              "01",
+              "02",
+              "03",
+              "04"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Preferred option to get package to UPS. | 01 - I will pay shipping charges and ship my package at a retail location such as The UPS Store or UPS Customer Center 02 - I will drop off my prepaid package(s) at a UPS location or give my package(s) to my UPS driver 03 - I will schedule a pickup via - UPS.com 04 - I will schedule a pickup via - 1800-Pick-UPS"
+          },
+          "quoteType": {
+            "maxLength": 2,
+            "enum": [
+              "01",
+              "02",
+              "03",
+              "04"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Preferred quote type. | 01 - Quick Time and Cost (Letter) 02 - Quick Time and Cost (Package) 03 - Detailed Time and Cost 04 - Time -in-Transit Only"
+          },
+          "shipmentRequestType": {
+            "maxLength": 2,
+            "enum": [
+              "01",
+              "02"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Preferred shipment request type for rating. 01 - Package or Letter 02 - Freight"
+          },
+          "freightServiceRequestType": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "Preferred freight service request type."
+          },
+          "measurementUnits": {
+            "enum": [
+              "M",
+              "I"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Preferred units of the measurement. M - Centimeters/Kilograms; I - Inches/Pounds"
+          },
+          "itemHeight": {
+            "maxLength": 5,
+            "type": "integer",
+            "description": "Item height for rating."
+          },
+          "itemLength": {
+            "maxLength": 5,
+            "type": "integer",
+            "description": "Item length for rating."
+          },
+          "itemWidth": {
+            "maxLength": 5,
+            "type": "integer",
+            "description": "Item width for rating."
+          },
+          "shipmentItemType": {
+            "enum": [
+              "PLT",
+              "LOO"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Item type for shipment rating. LOO - loose items; PLT - Pallet"
+          }
+        },
+        "description": "Rating preference entity"
+      },
+      "MyUPSGetResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "required": [
+              "payload"
+            ],
+            "type": "object",
+            "properties": {
+              "payload": {
+                "type": "object",
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/MyUPS"
+                  },
+                  {
+                    "$ref": "#/components/schemas/TermsConditionsInfo"
+                  }
+                ],
+                "description": "Response payload - object containing zero or one MyUPS entity"
+              }
+            }
+          }
+        ],
+        "description": "MyUPS Response Object"
+      },
+      "MyUPSResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "required": [
+              "payload"
+            ],
+            "type": "object",
+            "properties": {
+              "payload": {
+                "$ref": "#/components/schemas/MyUPS"
+              }
+            }
+          }
+        ],
+        "description": "MyUPS Response Object"
+      },
+      "MyUPS": {
+        "type": "object",
+        "properties": {
+          "dapPartnerIndicator": {
+            "type": "boolean",
+            "description": "Indicates if the user is DAP partner."
+          },
+          "employeeCountCode": {
+            "maxLength": 5,
+            "type": "string",
+            "description": "\"Code for employee count\n| Code | Description |\n| :---: | :--- |\n| 00 | Unclassified |\n| 01 | 1     |\n| 02 | 2-5   |\n| 03 | 6-10  |\n| 04 | 11-19 |\n| 05 | 20-49 |\n| 06 | 50-99 |\n| 07 | 100+  |\n| 09 | Data Not Available |\n\""
+          },
+          "industrySegmentCode": {
+            "maxLength": 8,
+            "type": "string",
+            "description": "\"Code for industry segment (Part of the list as below)\n| Code | Description |\n| :---: | :--- |\n| 2000 | Diversified Vehicles & Parts |\n| 3000 | High Tech     |\n| 4000 | Industrial Manufacturing & Distribution   |\n| 5000 | Retail and Consumer Goods  |\n| 6000 | Professional Services |\n| 7000 | Consumer Services |\n| 8000 | Healthcare |\n| 9000 | Government  |\n| 9999 | Other |\n\""
+          },
+          "jobFunctionCode": {
+            "maxLength": 5,
+            "type": "string",
+            "description": "\"Code for job function (Part of the list as below)\n| Code | Description |\n| :---: | :--- |\n| 00  | Select One |\n| ADA | Administrative Assistant     |\n| CEO | Chief Executive Officer   |\n| CFO | Chief Financial Officer  |\n| 41  | Chief Operating Officer |\n| CSM | Customer Service Manager |\n| OFM | Office Manager |\n| OPM | Operations Manager  |\n| OTH | Other  |\n| OWN | Owner |\n| PTR | Partner   |\n| PSD | President  |\n| SHM | Shipping Manager |\n| VPT | Vice President |     \n| WHM | Warehouse Manager |         \n\""
+          },
+          "merchantHubEnrollmentStatusCode": {
+            "maxLength": 1,
+            "enum": [
+              "I",
+              "O",
+              "U"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "\"Status Code for merchant hub enrollment:\n| Code | Description |\n| :---: | :--- |\n| I  | Opt In  |\n| O  | Opt out |\n| U  | Unknown |            \n\""
+          },
+          "myChoiceStandardUserInd": {
+            "type": "boolean",
+            "description": "Indicate if user is my choice standard user."
+          },
+          "personaCode": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "Persona code"
+          },
+          "facebookID": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "User's facebook ID"
+          },
+          "twitterHandle": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "User's twitter handle"
+          },
+          "businessInd": {
+            "type": "boolean",
+            "description": "Indicates if it's business account"
+          },
+          "dropShipperPrivilege": {
+            "type": "boolean",
+            "description": "Indicates if if account has drop shipping privilege"
+          },
+          "adoCount": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Automatic discount offer (ADO) count"
+          },
+          "adoTimestamp": {
+            "type": "string",
+            "description": "Automatic discount offer (ADO) timestamp",
+            "format": "date-time"
+          },
+          "userPromotionIndicator": {
+            "type": "boolean",
+            "description": "Indicates if promotion applies to user"
+          },
+          "worldShipMigrationText1": {
+            "maxLength": 250,
+            "type": "string",
+            "description": "World Ship Migration Message 1"
+          },
+          "worldShipMigrationText2": {
+            "maxLength": 250,
+            "type": "string",
+            "description": "World Ship Migration Message 2"
+          },
+          "emailVerification": {
+            "$ref": "#/components/schemas/MyUPSEmailVerification"
+          },
+          "electronicMedia": {
+            "$ref": "#/components/schemas/MyUPSElectronicMedia"
+          },
+          "systemConfigurations": {
+            "$ref": "#/components/schemas/MyUPSSystemConfigurations"
+          },
+          "displayBillingCenterIndicator": {
+            "type": "boolean",
+            "description": "Indicates if the billing center should be displayed for the user.",
+            "default": false,
+            "example": false
+          }
+        },
+        "description": "MyUPS preference entity"
+      },
+      "TermsConditionsInfo": {
+        "required": [
+          "termsAndConditions"
+        ],
+        "type": "object",
+        "properties": {
+          "termsAndConditions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "type",
+                "version",
+                "acceptanceDate"
+              ],
+              "type": "object",
+              "properties": {
+                "type": {
+                  "maxLength": 50,
+                  "minLength": 1,
+                  "enum": [
+                    "mychoice"
+                  ],
+                  "type": "string",
+                  "additionalProperties": false,
+                  "description": "Resource the terms and conditions apply to"
+                },
+                "version": {
+                  "maxLength": 20,
+                  "minLength": 1,
+                  "type": "string",
+                  "description": "Version of the terms and conditions.",
+                  "example": "v1.0"
+                },
+                "acceptanceDate": {
+                  "maxLength": 24,
+                  "minLength": 20,
+                  "type": "string",
+                  "description": "The <a href=\"https://www.rfc-editor.org/rfc/rfc3339#section-5.6\" target=\"_blank\">RFC 3339</a> date and time when the terms and conditions were accepted.",
+                  "format": "date-time",
+                  "example": "2025-07-01T12:00:00Z"
+                }
+              },
+              "additionalProperties": false
+            },
+            "description": "array of user level terms"
+          }
+        },
+        "additionalProperties": false,
+        "description": "MyUPS terms and conditions related information.\nTermsConditionsInfo section contains read-only properties which will only be included in the response when the request has include_additional_info specified.\n"
+      },
+      "UIFSResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "$ref": "#/components/schemas/UIFS"
+              }
+            }
+          }
+        ],
+        "description": "UIFS Response Object"
+      },
+      "UIFS": {
+        "type": "object",
+        "properties": {
+          "serviceLevel": {
+            "maxLength": 3,
+            "pattern": "^[a-zA-Z0-9]{3}$",
+            "type": "string",
+            "description": "\"Service level\n| Code | Description |\n| :---: | :--- |\n| 308 | UPS Freight LTL |\n| 309 | UPS Freight LTL Guaranteed |\n| 334 | UPS Freight LTL Guaranteed AM |\n| 349 | Standard LTL |\n| 003 | UPS Ground with Freight Pricing |\n\"",
+            "example": "309"
+          },
+          "ltlDestinationCountry": {
+            "maxLength": 2,
+            "pattern": "^[A-Z]{2}$",
+            "type": "string",
+            "description": "ISO 3166 alpha-2 country code."
+          },
+          "freightClassList": {
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "enum": [
+                "50",
+                "55",
+                "60",
+                "65",
+                "70",
+                "77.5",
+                "85",
+                "92.5",
+                "100",
+                "110",
+                "125",
+                "150",
+                "175",
+                "200",
+                "250",
+                "300",
+                "400",
+                "500"
+              ],
+              "type": "string",
+              "additionalProperties": false
+            },
+            "description": "Freight Class List. UPS uses the National Motor Freight Classification."
+          },
+          "notifications": {
+            "$ref": "#/components/schemas/UIFSEmailNotifications"
+          },
+          "densityBasedRating": {
+            "$ref": "#/components/schemas/UIFSDensityBasedRating"
+          },
+          "accessorialServices": {
+            "$ref": "#/components/schemas/UIFSAccessorialServices"
+          },
+          "billOfLand": {
+            "$ref": "#/components/schemas/UIFSBillOfLand"
+          },
+          "labels": {
+            "$ref": "#/components/schemas/UIFSLabels"
+          },
+          "chargeDefaults": {
+            "$ref": "#/components/schemas/UIFSChargeDefaults"
+          },
+          "refValues1": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "\"Reference values\n| Code | Description |\n| :---: | :--- |\n| PO | Purchase Order Number |\n| BM | Bill of Landing Number |\n\"",
+            "example": "PO"
+          },
+          "refValues2": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "\"Reference values\n| Code | Description |\n| :---: | :--- |\n| PO | Purchase Order Number |\n| BM | Bill of Landing Number |\n\"",
+            "example": "BM"
+          }
+        },
+        "description": "UIFS preference entity"
+      },
+      "UIFSEmailNotifications": {
+        "type": "object",
+        "properties": {
+          "emails": {
+            "maxItems": 5,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UIFSEmailNotification"
+            }
+          },
+          "failureEmail": {
+            "type": "string",
+            "description": "Failure Email",
+            "format": "email",
+            "example": "johndoe@gmail.com"
+          }
+        },
+        "description": "List of notification options for UIFS."
+      },
+      "UIFSEmailNotification": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "Email",
+            "format": "email",
+            "example": "johndoe@gmail.com"
+          },
+          "shipNotificationInd": {
+            "type": "boolean",
+            "description": "Indicates if sends ship Notification."
+          },
+          "deliveryNotificationEmailInd": {
+            "type": "boolean",
+            "description": "Indicates if sends delivery notification."
+          },
+          "appointmentAttemptEmailInd": {
+            "type": "boolean",
+            "description": "Indicates if sends appointment notification."
+          }
+        },
+        "description": "Email notification preference for UIFS."
+      },
+      "UIFSDensityBasedRating": {
+        "type": "object",
+        "properties": {
+          "numUnits": {
+            "maxLength": 25,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Number of units",
+            "example": "3"
+          },
+          "unitType": {
+            "maxLength": 25,
+            "pattern": "^[a-zA-Z0-9]{3,25}$",
+            "type": "string",
+            "description": "\"Unit type\n| Code | Description |\n| :---: | :--- |\n| PLT | Pallet(s) |\n| TOT | Tote(s) |\n| SKD | Skid(s) |\n| CBY | Carboy(s) |\n| LOO | Loose items |\n\"",
+            "example": "PLT"
+          },
+          "length": {
+            "maxLength": 25,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Length",
+            "example": "10"
+          },
+          "width": {
+            "maxLength": 25,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Width",
+            "example": "5"
+          },
+          "height": {
+            "maxLength": 25,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Height",
+            "example": "10"
+          },
+          "palletSkidHeight": {
+            "maxLength": 25,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Pallet skid height",
+            "example": "20"
+          },
+          "measureUnits": {
+            "maxLength": 25,
+            "pattern": "^[a-zA-Z]*$",
+            "type": "string",
+            "description": "\"Measurement unit\n| Code | Description |\n| :---: | :--- |\n| IN | Inches |\n| CM | Centimeter |\n\"",
+            "example": "IN"
+          }
+        },
+        "description": "Container for density based rating of UIFS preference"
+      },
+      "UIFSAccessorialServices": {
+        "type": "object",
+        "properties": {
+          "pickup": {
+            "$ref": "#/components/schemas/PickupOpts"
+          },
+          "delivery": {
+            "$ref": "#/components/schemas/DeliveryOpts"
+          }
+        },
+        "description": "Additional services for UIFS"
+      },
+      "PickupOpts": {
+        "type": "object",
+        "properties": {
+          "pickupRequiredInd": {
+            "type": "object",
+            "description": "Indicates if pickup is required."
+          },
+          "insideInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's inside pickup."
+          },
+          "liftGateSrvOriginInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if liftgate is required."
+          },
+          "residentInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's residential pickup."
+          },
+          "tradeShowInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's trade show pickup."
+          },
+          "freezableProtectionInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if freezable protection is needed."
+          },
+          "limitedAccessLocationInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's limited access location."
+          },
+          "extremeLengthInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's oversized item."
+          }
+        },
+        "description": "Options related to pickup."
+      },
+      "DeliveryOpts": {
+        "type": "object",
+        "properties": {
+          "insideInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's inside delivery."
+          },
+          "liftGateSrvDestInd": {
+            "type": "boolean",
+            "description": "Indicates if liftgate is required."
+          },
+          "residentInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's residential delivery."
+          },
+          "tradeShowInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's trade show delivery."
+          },
+          "limitedAccessLocationInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it's limited access location."
+          },
+          "callBeforeDeliveryInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if it requires a call before delivery."
+          },
+          "sortSegregateInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if sorting and segregation applies."
+          },
+          "numberSortSegregate": {
+            "maxLength": 3,
+            "type": "string",
+            "description": "Sorting and segregation number.",
+            "example": "999"
+          },
+          "codInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Indicates if COD (Cash on delivery) applies."
+          },
+          "codAmount": {
+            "maxLength": 12,
+            "pattern": "^((?!<script>).)*$",
+            "type": "string",
+            "description": "The amount for code.",
+            "example": "$50"
+          }
+        },
+        "description": "Options related to delivery."
+      },
+      "UIFSBillOfLand": {
+        "type": "object",
+        "properties": {
+          "showShipmentWeightMessageInd": {
+            "type": "boolean",
+            "description": "Indicates if includes shipment weight message.",
+            "default": true
+          },
+          "format": {
+            "maxLength": 25,
+            "pattern": "^[a-zA-Z0-9-_. ]*$",
+            "type": "string",
+            "description": "Preferred format \"UPS Freight\" and \"VICS\"",
+            "example": "UPS Freight"
+          },
+          "template": {
+            "maxLength": 100,
+            "pattern": "^((?!<script>).)*$",
+            "type": "string",
+            "description": "BOL template"
+          },
+          "printLabelInd": {
+            "maxLength": 1,
+            "type": "boolean",
+            "description": "Print Label"
+          }
+        },
+        "description": "Bill of Land (BOL) container for UIFS preference"
+      },
+      "UIFSLabels": {
+        "type": "object",
+        "properties": {
+          "printerType": {
+            "maxLength": 3,
+            "pattern": "^[a-zA-Z0-9]*$",
+            "type": "string",
+            "description": "\"Printer type\n| Code  | Description         |\n| :---: | :---                |\n| LT    | Laser Printer       |\n| TP    | UPS Thermal Printer |\n\"",
+            "example": "LT"
+          },
+          "labelsPerPage": {
+            "maxLength": 3,
+            "pattern": "^[0-9]*$",
+            "type": "string",
+            "description": "Label per page",
+            "example": "2"
+          },
+          "labelSize": {
+            "maxLength": 3,
+            "pattern": "^[a-zA-Z0-9]*$",
+            "type": "string",
+            "description": "Label size",
+            "example": "003"
+          }
+        },
+        "description": "Label container for UIFS Preference"
+      },
+      "UIFSChargeDefaults": {
+        "type": "object",
+        "properties": {
+          "incentingValue": {
+            "maxLength": 10,
+            "pattern": "^((?!<script>).)*$",
+            "type": "string",
+            "description": "Incentive Value",
+            "example": "100"
+          },
+          "incentingType": {
+            "maxLength": 3,
+            "pattern": "^[a-zA-Z0-9]*$",
+            "type": "string",
+            "description": "\"Incentive type\n| Code | Description |\n| :---: | :--- |\n| PER | Percentage(%) |\n| FIX | Fixed Dollar Amount |\n\"",
+            "example": "FIX"
+          }
+        },
+        "description": "Container for charge related UIFS Preference"
+      },
+      "PromoGetResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "maxItems": 250,
+                "type": "array",
+                "items": {
+                  "required": [
+                    "versionNumber"
+                  ],
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/BasePreference"
+                    },
+                    {
+                      "$ref": "#/components/schemas/VersionNumber"
+                    },
+                    {
+                      "$ref": "#/components/schemas/PromoDetail"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "countryCode": {
+                          "maxLength": 2,
+                          "pattern": "^[A-Z]{2}$",
+                          "type": "string",
+                          "description": "ISO 3166 alpha-2 country code."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "description": "Response payload - object containing the list of promo details"
+              }
+            }
+          }
+        ],
+        "description": "Promo response entity"
+      },
+      "PromoUpdateOrDeleteResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "required": [
+                  "versionNumber"
+                ],
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BasePreference"
+                  },
+                  {
+                    "$ref": "#/components/schemas/VersionNumber"
+                  },
+                  {
+                    "$ref": "#/components/schemas/PromoDetail"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "countryCode": {
+                        "maxLength": 2,
+                        "pattern": "^[A-Z]{2}$",
+                        "type": "string",
+                        "description": "ISO 3166 alpha-2 country code."
+                      }
+                    }
+                  }
+                ],
+                "description": "Response payload - object containing the list of promo details"
+              }
+            }
+          }
+        ],
+        "description": "Promo response entity"
+      },
+      "PromoDetail": {
+        "required": [
+          "promoCode"
+        ],
+        "type": "object",
+        "properties": {
+          "bidNumber": {
+            "maxLength": 20,
+            "pattern": "^[a-zA-Z0-9-_]*$",
+            "type": "string",
+            "description": "Billing id number"
+          },
+          "promoId": {
+            "maxLength": 20,
+            "pattern": "^[a-zA-Z0-9-_]*$",
+            "type": "string",
+            "description": "Reference number for the promotion"
+          },
+          "promoCode": {
+            "maxLength": 20,
+            "pattern": "^[a-zA-Z0-9-_]*$",
+            "type": "string",
+            "description": "Promotion code to get discount"
+          },
+          "promoStartDate": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Promotion code start date (yyyy-mm-dd)",
+            "format": "date",
+            "example": "2025-03-14"
+          },
+          "promoEndDate": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Promotion code end date (yyyy-mm-dd)",
+            "format": "date",
+            "example": "2025-06-14"
+          },
+          "agreementAcceptanceCode": {
+            "maxLength": 100,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Agreement acceptance code",
+            "example": "K89_01_17_2031-12-31"
+          }
+        },
+        "description": "Promo detail entity"
+      },
+      "MarketplaceEnrollmentsGetResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "versionNumber",
+                    "marketplaceTypeCd",
+                    "nickName",
+                    "enrollmentIdentifier"
+                  ],
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/BasePreference"
+                    },
+                    {
+                      "$ref": "#/components/schemas/VersionNumber"
+                    },
+                    {
+                      "$ref": "#/components/schemas/MarketplaceEnrollmentBaseInfo"
+                    },
+                    {
+                      "$ref": "#/components/schemas/CredentialProviderInfo"
+                    }
+                  ]
+                },
+                "description": "Response payload - object containing the list of marketplace enrollments"
+              }
+            }
+          }
+        ],
+        "description": "Marketplace enrollments GET response entity"
+      },
+      "MarketplaceEnrollmentsModifiedResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "required": [
+                  "versionNumber",
+                  "marketplaceTypeCd",
+                  "nickName",
+                  "enrollmentIdentifier"
+                ],
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BasePreference"
+                  },
+                  {
+                    "$ref": "#/components/schemas/VersionNumber"
+                  },
+                  {
+                    "$ref": "#/components/schemas/MarketplaceEnrollmentBaseInfo"
+                  },
+                  {
+                    "$ref": "#/components/schemas/CredentialProviderInfo"
+                  }
+                ],
+                "description": "Response payload - object containing the added/updated/deleted marketplace enrollment object"
+              }
+            }
+          }
+        ],
+        "description": "Marketplace enrollments POST, PUT, DELETE response entity"
+      },
+      "MarketplaceEnrollmentPostRequest": {
+        "minProperties": 4,
+        "required": [
+          "marketplaceTypeCd",
+          "nickName",
+          "enrollmentIdentifier"
+        ],
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MarketplaceEnrollmentBaseInfo"
+          },
+          {
+            "$ref": "#/components/schemas/CredentialProviderInfo"
+          }
+        ],
+        "description": "Marketplace enrollment POST request entity."
+      },
+      "MarketplaceEnrollmentPatchRequest": {
+        "minProperties": 1,
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/CredentialProviderInfo"
+          }
+        ],
+        "description": "Marketplace enrollment PATCH request entity."
+      },
+      "MarketplaceEnrollmentBaseInfo": {
+        "type": "object",
+        "properties": {
+          "marketplaceTypeCd": {
+            "maxLength": 2,
+            "enum": [
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "10",
+              "11",
+              "12",
+              "13",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "31",
+              "32",
+              "33",
+              "34",
+              "35",
+              "36",
+              "37",
+              "38",
+              "39",
+              "40",
+              "41",
+              "42",
+              "43",
+              "44",
+              "45",
+              "46",
+              "47",
+              "48",
+              "49",
+              "50",
+              "51",
+              "52"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "\"Marketplace type / Service provider code\n| Code | Description            |\n| :---: | :---                  |\n| 02    | AMAZON                |      \n| 03    | EBAY                  |\n| 04    | ALIBABA               |   \n| 05    | ALIEXPRESS            |\n| 06    | TAOBAO                |      \n| 07    | TMALL                 |\n| 08    | BIGCOMMERCE           | \n| 09    | WOOCOMMERCE           |\n| 10    | MAGENTO               |   \n| 11    | RAKUTEN               |\n| 12    | SHOPIFY               |      \n| 13    | TMETSYALL             |\n| 15    | QUICKBOOKS ONLINE     | \n| 16    | 3D CART               | \n| 17    | ALLEGRO               | \n| 18    | ASPDOTNETSTOREFRONT   |\n| 19    | BIG CARTEL            |\n| 20    | BLUEFLY               |\n| 21    | CHANNEL ADVISOR       |\n| 22    | CS CART               |\n| 23    | COMMERCEHUB           |\n| 24    | DRUPAL COMMERCE       |\n| 25    | FARFETCH              | \n| 26    | GOOGLE SHOPPING       |\n| 27    | HOME DEPOT            |\n| 28    | JET                   |\n| 29    | JIGOSHOP              |\n| 30    | MERCADO LIBRE         |\n| 31    | NEWEGG                |\n| 32    | OPENCART              |\n| 33    | OSCOMMERCE            |\n| 34    | OVERSTOCK             |\n| 35    | PRESTA SHOP           |\n| 36    | SEARS                 |\n| 37    | SPREE COMMERCE        |\n| 38    | SQUARESPACE           |\n| 39    | VIRTUEMART            |\n| 40    | VOLUSION              |\n| 41    | WALMART               |\n| 42    | WEEBLY                |\n| 43    | X-CART                |\n| 44    | YAHOO SHOPPING        |\n| 45    | ZEN CART              |\n| 46    | PRICEFALLS            |\n| 47    | WAYFAIR               |\n| 48    | 11MAIN                |\n| 49    | HOUZZ                 |\n| 50    | XIU                   | \n| 51    | HALF.COM              |\n| 52    | SOLIDCOMMERCE\t\t      |\t                                                \n\""
+          },
+          "enrollmentIdentifier": {
+            "maxLength": 254,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Unique user identifier for the specific enrollment. The value is generated by service provider.",
+            "example": "6d6zs088-1296-4147-b2cf-fe73d5744hi3"
+          }
+        },
+        "description": "Marketplace enrollment entity"
+      },
+      "CredentialProviderInfo": {
+        "minProperties": 1,
+        "type": "object",
+        "properties": {
+          "nickName": {
+            "maxLength": 35,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "User defined nickname to identify an marketplace enrollment",
+            "example": "myEbayStore1"
+          },
+          "merchantId": {
+            "maxLength": 3000,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Merchant ID for the enrollment"
+          },
+          "encryptedMerchantId": {
+            "maxLength": 3000,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Encrypted merchant ID for the enrollment"
+          },
+          "marketplaceId": {
+            "maxLength": 3000,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Marketplace ID for the enrollment"
+          },
+          "encryptedMarketplaceId": {
+            "maxLength": 3000,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Encrypted marketplace ID for the enrollment"
+          },
+          "authToken": {
+            "maxLength": 3000,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Service Provider defined authorization token for the enrollment"
+          },
+          "encryptedAuthToken": {
+            "maxLength": 3000,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Encrypted Service Provider defined authorization token for the enrollment"
+          },
+          "integratorUUID": {
+            "maxLength": 3000,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Unique value provided by the Marketplace integrator"
+          }
+        },
+        "description": "Marketplace enrollment credential provider related information. For POST request at least one of the properties must be present in the request payload."
+      },
+      "AccountPickupGetResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "versionNumber",
+                    "accountNumber"
+                  ],
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "accountNumber": {
+                          "maxLength": 10,
+                          "pattern": "^[0-9]{6,10}$",
+                          "type": "string",
+                          "description": "UPS shipper account number"
+                        }
+                      }
+                    },
+                    {
+                      "$ref": "#/components/schemas/VersionNumber"
+                    },
+                    {
+                      "$ref": "#/components/schemas/AccountPickupPreference"
+                    }
+                  ]
+                },
+                "description": "Response payload - object containing the list of account pickup preferences"
+              }
+            }
+          }
+        ],
+        "description": "Account Pickup GET response entity"
+      },
+      "AccountPickupModifyResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "required": [
+                  "accountNumber",
+                  "versionNumber"
+                ],
+                "type": "object",
+                "allOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "accountNumber": {
+                        "maxLength": 10,
+                        "pattern": "^[0-9]{6,10}$",
+                        "type": "string",
+                        "description": "UPS shipper account number"
+                      }
+                    }
+                  },
+                  {
+                    "$ref": "#/components/schemas/VersionNumber"
+                  },
+                  {
+                    "$ref": "#/components/schemas/AccountPickupPreference"
+                  }
+                ],
+                "description": "Response payload - object containing the list of account pickup preferences"
+              }
+            }
+          }
+        ],
+        "description": "Account Pickup Modify response entity"
+      },
+      "AccountPickupPreference": {
+        "required": [
+          "locale",
+          "notificationIndicators"
+        ],
+        "type": "object",
+        "properties": {
+          "locale": {
+            "maxLength": 5,
+            "pattern": "^[a-z]{2}_[A-Z]{2}$",
+            "type": "string",
+            "description": "Preferred locale for account pickup. Format follows <a href=\"https://www.iso.org/iso-639-language-code.html\" target=\"_blank\">ISO 639M</a> language code and region code combination.",
+            "example": "en_US"
+          },
+          "emails": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "email"
+            },
+            "description": "Emails associated with the account pickup preferences."
+          },
+          "notificationIndicators": {
+            "$ref": "#/components/schemas/NotificationIndicators"
+          }
+        },
+        "description": "Account Pickup preference entity"
+      },
+      "NotificationIndicators": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "$ref": "#/components/schemas/CommonNotificationIndicators"
+          },
+          "sms": {
+            "$ref": "#/components/schemas/CommonNotificationIndicators"
+          }
+        },
+        "description": "Notification indicators container. Notifications can be sent in email or/and SMS."
+      },
+      "CommonNotificationIndicators": {
+        "required": [
+          "dayOfPickupInd",
+          "dayBeforePickupInd",
+          "preArrivalInd",
+          "pickupUpdateInd",
+          "pickupCompleteInd",
+          "pickupCancellationInd",
+          "enrollmentConfirmationInd",
+          "smartPickupCutOffNotificationTimeInd",
+          "smartPickupTriggerWarningInd",
+          "smartPickupTriggerNotificationInd",
+          "smartPickupTriggerCancellationInd",
+          "pickupIncompleteNotificationInd",
+          "pickupDelayedInd"
+        ],
+        "type": "object",
+        "properties": {
+          "dayOfPickupInd": {
+            "type": "boolean",
+            "description": "Indicates whether to send notifications on the day of pickup.",
+            "default": false
+          },
+          "dayBeforePickupInd": {
+            "type": "boolean",
+            "description": "Indicates whether to send notifications on the day before pickup.",
+            "default": false
+          },
+          "preArrivalInd": {
+            "type": "boolean",
+            "description": "Indicates whether to send notifications before arrival.",
+            "default": false
+          },
+          "pickupUpdateInd": {
+            "type": "boolean",
+            "description": "Indicates whether to send notifications on pickup schedule update.",
+            "default": false
+          },
+          "pickupCompleteInd": {
+            "type": "boolean",
+            "description": "Indicates whether to send notifications on pickup completion.",
+            "default": false
+          },
+          "pickupCancellationInd": {
+            "type": "boolean",
+            "description": "Indicates whether to send notifications on pickup cancellation.",
+            "default": false
+          },
+          "enrollmentConfirmationInd": {
+            "type": "boolean",
+            "description": "Indicates enrollment confirmation",
+            "default": false
+          },
+          "smartPickupCutOffNotificationTimeInd": {
+            "type": "boolean",
+            "description": "Indicates the Smart pickup cut off notification time",
+            "default": false
+          },
+          "smartPickupTriggerWarningInd": {
+            "type": "boolean",
+            "description": "Indicates the Smart pickup trigger warning",
+            "default": false
+          },
+          "smartPickupTriggerNotificationInd": {
+            "type": "boolean",
+            "description": "Indicates Smart pickup trigger notification",
+            "default": false
+          },
+          "smartPickupTriggerCancellationInd": {
+            "type": "boolean",
+            "description": "Indicates Smart pickup trigger cancellation",
+            "default": false
+          },
+          "pickupIncompleteNotificationInd": {
+            "type": "boolean",
+            "description": "Indicates incomplete pickup notification",
+            "default": false
+          },
+          "pickupDelayedInd": {
+            "type": "boolean",
+            "description": "Indicates delayed pickup",
+            "default": false
+          }
+        },
+        "description": "Common notification indicators container."
+      },
+      "DeliveryChangeGetResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "maxItems": 3,
+                "type": "array",
+                "items": {
+                  "required": [
+                    "docId"
+                  ],
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/BasePreference"
+                    },
+                    {
+                      "$ref": "#/components/schemas/DeliveryChange"
+                    }
+                  ]
+                },
+                "description": "Response contains zero or one Delivery Change Preference entity"
+              }
+            }
+          }
+        ],
+        "description": "Delivery Change Preference GET Response Object"
+      },
+      "DeliveryChangeModifiedResponse": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "payload": {
+                "required": [
+                  "docId"
+                ],
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BasePreference"
+                  },
+                  {
+                    "$ref": "#/components/schemas/DeliveryChange"
+                  }
+                ],
+                "description": "Response payload - object containing zero or one Delivery Change Preference entity"
+              }
+            }
+          }
+        ],
+        "description": "Delivery Change Preference Response Object"
+      },
+      "DeliveryChange": {
+        "required": [
+          "optionSelected"
+        ],
+        "type": "object",
+        "properties": {
+          "optionSelected": {
+            "type": "string",
+            "description": "Delivery change option selected",
+            "example": "RedirectToUAP"
+          },
+          "uapAddress": {
+            "$ref": "#/components/schemas/DeliveryChangeUAPAddress"
+          },
+          "otherAddress": {
+            "$ref": "#/components/schemas/DeliveryChangeOtherAddress"
+          },
+          "deliveryInstructions": {
+            "$ref": "#/components/schemas/DeliveryInstructions"
+          },
+          "surePostUpgradeInd": {
+            "type": "boolean",
+            "description": "Indicates whether the SurePost upgrade is enabled.",
+            "default": false,
+            "example": true
+          }
+        },
+        "description": "Delivery Change preference entity. uapAddress and otherAddress are mutually exclusive."
+      },
+      "DeliveryChangeUAPAddress": {
+        "type": "object",
+        "properties": {
+          "uapId": {
+            "pattern": "^[a-zA-Z0-9]{1,15}$",
+            "type": "string",
+            "description": "UAP internal id that is associated to the access point the customer selected from the map",
+            "example": "U87282"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "John Doe"
+          },
+          "phone": {
+            "pattern": "^\\+?\\d{1,15}$",
+            "type": "string",
+            "description": "Phone number",
+            "example": "+15555555555"
+          },
+          "phoneExt": {
+            "pattern": "^\\d{1,4}$",
+            "type": "string",
+            "description": "Phone extension",
+            "example": "12"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressDetails"
+          }
+        },
+        "description": "Access point address"
+      },
+      "DeliveryChangeOtherAddress": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name",
+            "example": "John Doe"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressDetails"
+          }
+        },
+        "description": "Name and address for Leave with neighbor, deliver to another address, redeliver to my address"
+      },
+      "AddressDetails": {
+        "type": "object",
+        "properties": {
+          "line1": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Street number line 1",
+            "example": "1234 Main St"
+          },
+          "line2": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Street number line 2",
+            "example": "Apt. 305"
+          },
+          "line3": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Street number line 3",
+            "example": "Suite 24"
+          },
+          "municipalityName": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Name of city/municipality.",
+            "example": "Atlanta"
+          },
+          "stateProvinceCode": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "State/province code.",
+            "example": "GA"
+          },
+          "postalCode": {
+            "maxLength": 10,
+            "type": "string",
+            "description": "Postal code.",
+            "example": "30303"
+          },
+          "countryCode": {
+            "maxLength": 2,
+            "pattern": "^[a-zA-Z0-9]{2}$",
+            "type": "string",
+            "description": "Country Code.",
+            "example": "US"
+          },
+          "addressTypeCode": {
+            "type": "string",
+            "description": "Code to indicate address type, eg. 01 - Residential, 02 - Commercial, 99 - Unspecified/Unclassified.",
+            "example": "01"
+          }
+        },
+        "description": "Address details"
+      },
+      "DeliveryInstructions": {
+        "type": "object",
+        "properties": {
+          "leaveAtCd": {
+            "maxLength": 2,
+            "type": "string",
+            "description": "\"Delivery Change (DCWA) event leave at instruction. Possible leave at instruction values\n| Code  | Description           |\n| :---: | :---                  | \n| ML    | Front Door            | \n| MM    | Rear Door             |\n| ZF    | Shed                  |\n| IV    | Vestibule             |\n| MP    | Garage                |\n| MQ    | Porch                 | \n| M6    | Management Office     |\n| ZG    | Concierge             |\n| MR    | Deck                  |\n| M4    | Reception             |\n| MN    | Side Door             | \n| ZH    | Superintendent        |\n| MS    | Patio                 |\n| IS    | Mail Room             |\n| M9    | Door Person           |\n\"",
+            "example": "ML"
+          },
+          "accessCode": {
+            "maxLength": 100,
+            "pattern": "^[a-zA-Z0-9\\-#]+$",
+            "type": "string",
+            "description": "Delivery change access code or gate code",
+            "example": "00110"
+          },
+          "specialInstruction": {
+            "maxLength": 100,
+            "pattern": "^(?!.*<script[^>]*>).*$",
+            "type": "string",
+            "description": "Delivery change special instruction",
+            "example": "Leave with neighbor on the left Side"
+          }
+        },
+        "description": "Delivery instructions such as where to leave the package"
+      },
+      "SuccessResponseHeaders": {
+        "required": [
+          "bkndtransid"
+        ],
+        "type": "object",
+        "properties": {
+          "bkndtransid": {
+            "type": "string",
+            "description": "The backend transaction id."
+          }
+        },
+        "description": "The headers that are returned for all error responses."
+      },
+      "BackendErrorResponseHeaders": {
+        "required": [
+          "bkndtransid",
+          "apierrorcode",
+          "apierrormsg"
+        ],
+        "type": "object",
+        "properties": {
+          "bkndtransid": {
+            "type": "string",
+            "description": "The backend transaction id."
+          },
+          "apierrorcode": {
+            "type": "string",
+            "description": "The API error code.",
+            "example": "UJ0001"
+          },
+          "apierrormsg": {
+            "type": "string",
+            "description": "The API error message.",
+            "example": "Invalid token or token is not present."
+          }
+        },
+        "description": "The headers that are returned from the backend and gateway"
+      },
+      "PickupNotificationPreferencesError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "minLength": 3,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "error code"
+          },
+          "message": {
+            "minLength": 3,
+            "pattern": "^[a-zA-Z0-9\\-_\\s:]+$",
+            "type": "string",
+            "description": "error message"
+          }
+        },
+        "description": "Error entity"
+      },
+      "ResponseErrorsArr": {
+        "required": [
+          "errors"
+        ],
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PickupNotificationPreferencesError"
+            },
+            "description": "error payload - array containing one or more Errors"
+          }
+        },
+        "description": "Error response entity"
+      },
+      "PickupNotificationPreferencesErrorResponse": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "$ref": "#/components/schemas/ResponseErrorsArr"
+          }
+        },
+        "description": "Response Object for error condition"
+      },
       "PRENOTIFICATIONRequestWrapper": {
         "maximum": 1,
         "required": [
@@ -40248,7 +43031,7 @@
             "maxLength": 5,
             "minLength": 2,
             "type": "string",
-            "description": "The Ship To location's state or province code."
+            "description": "The Ship To location's state or province code.  Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -40300,7 +43083,7 @@
             "maxLength": 5,
             "minLength": 2,
             "type": "string",
-            "description": "The Ship From location's state or province code."
+            "description": "The Ship From location's state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -40940,7 +43723,7 @@
             "maxLength": 5,
             "minLength": 2,
             "type": "string",
-            "description": "The Ship To location's state or province code."
+            "description": "The Ship To location's state or province code.  Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -40992,7 +43775,7 @@
             "maxLength": 5,
             "minLength": 2,
             "type": "string",
-            "description": "The Ship From location's state or province code."
+            "description": "The Ship From location's state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -53523,7 +56306,7 @@
             "maxLength": 5,
             "minLength": 2,
             "type": "string",
-            "description": "The code of the address's admininstrative division (state, province, distict, prefecture, etc...). \n",
+            "description": "The code of the address's admininstrative division (state, province, distict, prefecture, etc...). Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n",
             "example": "GA"
           },
           "PostalCode": {
@@ -54064,7 +56847,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "Shipper's state or province code.\n\nFor forward Shipment 5 characters are accepted, but only 2 characters will be printed on the label.  For US, PR and CA accounts, the account must be either a daily pickup account, an occasional account, or a customer B.I.N account.\n"
+            "description": "Shipper's state or province code.\n\nFor forward Shipment 5 characters are accepted, but only 2 characters will be printed on the label.  For US, PR and CA accounts, the account must be either a daily pickup account, an occasional account, or a customer B.I.N account.\n\nRequired for Vietnam (VN).\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -54214,7 +56997,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "Consignee's state or province code. Required for US or Canada.  If destination is US or CA, then the value must be a valid US State/ Canadian Province code.\n\nIf the country or territory is Ireland, the StateProvinceCode will contain the county.\n"
+            "description": "Consignee’s state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -54316,7 +57099,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "Retail Location state or province code. Required for US or Canada.  If destination is US or CA, then the value must be a valid US State/Canadian Province code.\n\nIf the country or territory is Ireland, the StateProvinceCode will contain the county.\n"
+            "description": "Retail Location state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -54525,7 +57308,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "Origin location's state or province code.  Required if ShipFrom is supplied, and ShipFrom country or territory is US.\n\nIf ShipFrom country or territory is US or CA, then the value must be a valid US State/ Canadian Province code. If the country or territory is Ireland, the StateProvinceCode will contain the county or territory.\n"
+            "description": "Origin location's state or province code.  Required if ShipFrom is supplied, and ShipFrom country or territory is US.\n\nRequired for Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -54746,7 +57529,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "State or province code of the credit card billing address."
+            "description": "State or province code of the credit card billing address. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "PostalCode": {
             "maximum": 1,
@@ -56537,7 +59320,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "State of the Forwarding agent.  Applicable for EEI form only."
+            "description": "State of the Forwarding agent.  Applicable for EEI form only. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "Town": {
             "maximum": 1,
@@ -56624,7 +59407,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "State of the Ultimate consignee.  Applicable for EEI form only. Required for certain countries or territories. The length of the postal code depends on the country or territory code"
+            "description": "State of the Ultimate consignee.  Applicable for EEI form only.  Required for US, Canada, and Vietnam (VN).\n\nThe length of the postal code depends on the country or territory code.\n                      \n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "Town": {
             "maximum": 1,
@@ -56735,7 +59518,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "State of the Intermediate Consignee.  Applicable for EEI form only. Required for certain countries or territories."
+            "description": "State of the Intermediate Consignee.  Applicable for EEI form only. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "Town": {
             "maximum": 1,
@@ -56846,7 +59629,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "State of the Producer.  Applies to USMCA. Required for certain countries or territories."
+            "description": "State of the Producer. Applies to USMCA. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "Town": {
             "maximum": 1,
@@ -57024,7 +59807,7 @@
             "maxLength": 5,
             "minLength": 1,
             "type": "string",
-            "description": "SoldTo location's state or province code.  Required for certain countries or territories."
+            "description": "SoldTo location's state or province code. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n"
           },
           "Town": {
             "maximum": 1,
@@ -58283,7 +61066,7 @@
           "StateProvinceCode": {
             "pattern": "^[a-zA-Z]{2,5}$",
             "type": "string",
-            "description": "The code for the state or province for the address.",
+            "description": "The code for the state or province for the address. Required for US, Canada, and Vietnam (VN).\n\n- For US or Canada, the value must be a valid US state or Canadian province code.\n- For Vietnam (VN), the value must be a valid province code (for example, VN-44).\n- If the country or territory is Ireland, the StateProvinceCode must contain the county.\n",
             "example": "GA"
           },
           "PostalCode": {
@@ -59805,7 +62588,7 @@
             "maxLength": 4,
             "minLength": 3,
             "type": "string",
-            "description": "\"Regulation set for dryIce Shipment. Valid values: CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada, IATA= Worldwide Air movement.  The following values are valid: IATA, CFR.\""
+            "description": "\"Regulation set for dryIce Shipment. Valid values: CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada, IATA = Worldwide Air movement, ADR = For EU‑domestic, Standard Service shipments containing non‑hazmat dry ice, the regulation set must be ADR. The following values are valid:IATA, CFR, ADR.\""
           },
           "DryIceWeight": {
             "$ref": "#/components/schemas/ShippingDryIceDryIceWeight"
@@ -62414,7 +65197,9 @@
       "LabelRecoveryRequest": {
         "maximum": 1,
         "required": [
-          "Request"
+          "Request",
+          "TrackingNumbers",
+          "ReferenceValues"
         ],
         "type": "object",
         "properties": {
@@ -62436,6 +65221,16 @@
             "minLength": 1,
             "type": "string",
             "description": "Small Package Tracking Number. Required if Mail Innovations Tracking Number or ReferenceNumber/Value and ShipperNumber is not provided.  If only TrackingNumber is provided, the request will be treated as Small Package Shipment. Label Recovery will return label for Small Package Tracking Number.\nIf both, TrackingNumber and MailInnovationsTrackingNumber are provided, the request will be treated as Dual Mail Innovations Return Shipment. Label Recovery will return two labels one each for - Small Package Tracking Number and Mail Innovations Return Tracking Number."
+          },
+          "TrackingNumbers": {
+            "maximum": 1,
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of Roadie (1R) tracking numbers associated with the label recovery request. Each tracking number must start with \"1R\" or \"1r\" and must be either 16 characters (offline) or 28 characters (online) in length."
           },
           "MailInnovationsTrackingNumber": {
             "maximum": 1,
@@ -62469,7 +65264,7 @@
         "properties": {
           "SubVersion": {
             "type": "string",
-            "description": "\"When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.\n\nTo get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description.\n\nFormat: YYMM = Year and month of the release.\nExample: 1701 = 2017 January  Supported values: 1701, 1707, 1903\""
+            "description": "\"When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.\n\nTo get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description. To support Roadie labels, the API version in the URL must be v2603.\n\nFormat: YYMM = Year and month of the release.\nExample: 1701 = 2017 January  Supported values: 1701, 1707, 1903, 2603\""
           },
           "RequestOption": {
             "type": "string",
@@ -62536,7 +65331,7 @@
             "maxLength": 4,
             "minLength": 4,
             "type": "string",
-            "description": "File type that the label is to be generated in. Valid values are:\n- GIF -- label is in HTML format.\n- PDF -- label is in PDF format.\n- ZPL -- Thermal label in ZPL format.\n- EPL -- Thermal label in EPL2 format.\n- SPL -- Thermal label in SPL format.\n\nDefault is GIF\n"
+            "description": "File type that the label is to be generated in. Valid values are:\n- GIF -- label is in HTML format.\n- PDF -- label is in PDF format.\n- ZPL -- Thermal label in ZPL format.\n- EPL -- Thermal label in EPL2 format.\n- SPL -- Thermal label in SPL format.\n\nDefault is GIF.\n\nRoadie shipments only support GIF, PNG, and ZPL formats.\n"
           },
           "Description": {
             "maximum": 1,
@@ -62654,7 +65449,7 @@
             "description": "Required if ReferenceNumber/Value is populated. Shipper's six digit account number. Must be six alphanumeric characters. Must be associated with the Internet account used to login."
           }
         },
-        "description": "Container that holds reference number and shipper number  If tracking number is not present use reference Number",
+        "description": "Container that holds reference number and shipper number  If tracking number is not present use reference Number. This is mandatory for only Roadie shipments.",
         "xml": {
           "name": "ReferenceValues"
         }
@@ -63762,37 +66557,16 @@
         },
         "description": "N/A"
       },
-      "ShipmentWorldEasePortOfEntry": {
-        "required": [
-          "Name",
-          "ClearancePortCode",
-          "Consignee",
-          "Address"
-        ],
+      "MyUPSSystemConfigurations": {
         "type": "object",
         "properties": {
-          "Name": {
-            "maxLength": 35,
-            "type": "string",
-            "description": "Port of entry name",
-            "example": "Seagirt Terminal, Port of Baltimore"
-          },
-          "ClearancePortCode": {
-            "type": "string",
-            "description": "Port code",
-            "example": 56982
-          },
-          "Consignee": {
-            "maxLength": 35,
-            "type": "string",
-            "description": "Port of entry consignee",
-            "example": "John Doe"
-          },
-          "Address": {
-            "$ref": "#/components/schemas/AddressPOE"
+          "auth0MigrationIndicator": {
+            "type": "boolean",
+            "description": "System-level configuration to Indicate if a user account has been migrated to Auth0. \nThis is a temporary field to support account Auth0 migration. Deprecation of the field will be planned after Auth0 migration is complete (estimated as 2025). \n",
+            "example": true
           }
         },
-        "description": "Container for port of entry details"
+        "description": "User account configurations set by system for operational purpose."
       },
       "ValidationList": {
         "type": "object",
@@ -66083,7 +68857,7 @@
         },
         "description": "The error entity that contains the code and description of an error."
       },
-      "AccountNumber": {
+      "UPSExportAssureAccountNumber": {
         "maxLength": 10,
         "pattern": "^[a-zA-Z0-9]*$",
         "type": "string",
@@ -67099,7 +69873,7 @@
         },
         "additionalProperties": false
       },
-      "SuccessResponseHeaders": {
+      "UPSExportAssureSuccessResponseHeaders": {
         "required": [
           "x-request-id",
           "BkndTransId"
@@ -67138,7 +69912,7 @@
         },
         "description": "The headers returned from the gateway"
       },
-      "BackendErrorResponseHeaders": {
+      "UPSExportAssureBackendErrorResponseHeaders": {
         "$ref": "#/components/schemas/GatewayErrorResponseHeaders"
       },
       "Destination": {
@@ -68325,113 +71099,35 @@
           }
         }
       },
-      "LandedCostLandedCostResponseShipment": {
-        "required": [
-          "currencyCode",
-          "importCountryCode",
-          "id",
-          "brokerageFeeItems",
-          "totalBrokerageFees",
-          "totalDuties",
-          "totalCommodityLevelTaxesAndFees",
-          "totalShipmentLevelTaxesAndFees",
-          "totalVAT",
-          "totalDutyAndTax",
-          "grandTotal",
-          "shipmentItems"
-        ],
+      "MyUPSElectronicMedia": {
         "type": "object",
         "properties": {
-          "currencyCode": {
-            "maximum": 1,
-            "maxLength": 3,
-            "type": "string",
-            "description": "Specifies the Currency Code set at the commodity level. This currency is applicable for all duty, tax, VAT, and fee at the shipment and commodity level.",
-            "example": "USD, CAD, EUR"
-          },
-          "importCountryCode": {
-            "maximum": 1,
-            "maxLength": 2,
-            "type": "string",
-            "description": "Specifies the Import/Ship-To/Destination/Final country of the shipment. Please check country list in the Appendices section.",
-            "example": "US, CA, MX"
-          },
-          "id": {
-            "maximum": 1,
-            "maxLength": 100,
-            "type": "string",
-            "description": "Specifies the Shipment ID in the Landed Cost quote."
-          },
-          "brokerageFeeItems": {
-            "maximum": 1,
+          "smsPhones": {
+            "maxItems": 3,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/LandedCostBrokerageFeeItems"
+              "type": "object",
+              "properties": {
+                "phoneNumber": {
+                  "maxLength": 50,
+                  "pattern": "^[0-9-]*$",
+                  "type": "string",
+                  "description": "Phone number",
+                  "example": "4047832345"
+                },
+                "countryCode": {
+                  "maxLength": 2,
+                  "pattern": "^[A-Z]{2}$",
+                  "type": "string",
+                  "description": "Country code for the phone number. ISO 3166 alpha-2 is used.",
+                  "example": "US"
+                }
+              }
             },
-            "description": "An array of Brokerage fees."
-          },
-          "totalBrokerageFees": {
-            "maximum": 1,
-            "type": "number",
-            "description": "Grand total of all applicable Brokerage fees."
-          },
-          "totalDuties": {
-            "maximum": 1,
-            "type": "number",
-            "description": "Total duty amount of this shipment."
-          },
-          "totalCommodityLevelTaxesAndFees": {
-            "maximum": 1,
-            "type": "number",
-            "description": "Total tax and other fees at commodity level."
-          },
-          "totalShipmentLevelTaxesAndFees": {
-            "maximum": 1,
-            "type": "number",
-            "description": "Total tax and other fees at shipment level."
-          },
-          "totalVAT": {
-            "maximum": 1,
-            "type": "number",
-            "description": "Total VAT of the shipment."
-          },
-          "totalDutyAndTax": {
-            "maximum": 1,
-            "type": "number",
-            "description": "Grand total of the combined duty, VAT, tax, and other fees of all commodities in this shipment including shipment level taxes and fees."
-          },
-          "grandTotal": {
-            "maximum": 1,
-            "type": "number",
-            "description": "Sum of totalDutyAndTax + totalBrokerageFees"
-          },
-          "shipmentItems": {
-            "maximum": 99,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LandedCostResponseShipmentItems"
-            },
-            "description": "An array of Landed Cost for all valid commodities."
-          },
-          "transID": {
-            "maxLength": 50,
-            "type": "string",
-            "description": "An identifier unique to the request."
-          },
-          "perfStats": {
-            "$ref": "#/components/schemas/LandedCostLandedCostResponseShipmentPerfStats"
-          },
-          "alVersion": {
-            "maximum": 1,
-            "maxLength": 10,
-            "type": "integer",
-            "description": "Version number of the instance that processed this request. Default is 1."
-          },
-          "errors": {
-            "$ref": "#/components/schemas/LandedCostErrors"
+            "description": "SMS phone information"
           }
         },
-        "description": "Every Landed Cost response must be based on a shipment."
+        "description": "Electronic media information"
       },
       "WorldEaseShipmentManagementErrorResponse": {
         "required": [
@@ -68528,6 +71224,17 @@
           }
         },
         "additionalProperties": false
+      },
+      "TrackingDeliveryInformationPod": {
+        "title": "POD",
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "description": "\"The base64 encoded string representation of the Delivery Proof. Note: This is considered sensitive data and may only be returned for a user that has rights to the package.\""
+          }
+        },
+        "description": "Container which contains Proof of Delivery."
       },
       "CloseoutRequestShipment": {
         "required": [
@@ -68694,6 +71401,54 @@
           }
         },
         "description": "This will contain master shipment label"
+      },
+      "ClaimPreferredChannelIndicators": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "boolean",
+            "description": "Indication if email is preferred."
+          },
+          "fax": {
+            "type": "boolean",
+            "description": "Indication if fax is preferred."
+          },
+          "written": {
+            "type": "boolean",
+            "description": "Indication if written communication is preferred."
+          }
+        },
+        "description": "Indicators to indicate preferred communication method(s)."
+      },
+      "LandedCostLandedCostResponseShipmentPerfStats": {
+        "maximum": 1,
+        "required": [
+          "absLayerTime",
+          "fulfillTime",
+          "receiptTime"
+        ],
+        "type": "object",
+        "properties": {
+          "absLayerTime": {
+            "maximum": 1,
+            "maxLength": 20,
+            "type": "string",
+            "description": "Time taken through the abstraction layer in milliseconds."
+          },
+          "fulfillTime": {
+            "maximum": 1,
+            "maxLength": 32,
+            "type": "string",
+            "description": "Time taken to complete the request."
+          },
+          "receiptTime": {
+            "maximum": 1,
+            "maxLength": 32,
+            "type": "string",
+            "description": "Time taken to receive the request."
+          }
+        },
+        "description": "See ALPerfStats"
       },
       "LandedCostResponseShipmentPerfStats": {
         "maximum": 1,
@@ -69058,36 +71813,6 @@
           }
         },
         "description": "Address object, include line1, line2, line 3 state, postal code and country code. Required when processing a request if imsAddressIdentifier is not present."
-      },
-      "LandedCostLandedCostResponseShipmentPerfStats": {
-        "maximum": 1,
-        "required": [
-          "absLayerTime",
-          "fulfillTime",
-          "receiptTime"
-        ],
-        "type": "object",
-        "properties": {
-          "absLayerTime": {
-            "maximum": 1,
-            "maxLength": 20,
-            "type": "string",
-            "description": "Time taken through the abstraction layer in milliseconds."
-          },
-          "fulfillTime": {
-            "maximum": 1,
-            "maxLength": 32,
-            "type": "string",
-            "description": "Time taken to complete the request."
-          },
-          "receiptTime": {
-            "maximum": 1,
-            "maxLength": 32,
-            "type": "string",
-            "description": "Time taken to receive the request."
-          }
-        },
-        "description": "See ALPerfStats"
       },
       "CloseoutRequestShipmentShipper": {
         "required": [
@@ -70043,12 +72768,53 @@
           "example": "643F7EAC-DC06-19E3-84C9-0274164A04E9"
         }
       },
+      "PickupNotificationPreferences_transId": {
+        "name": "transId",
+        "in": "header",
+        "description": "An identifier unique to the request.",
+        "required": true,
+        "schema": {
+          "maxLength": 50,
+          "pattern": "^(?!.*[<>`]).{3,100}$",
+          "type": "string",
+          "example": "XOLTGateway-1742420314-1"
+        }
+      },
+      "PickupNotificationPreferences_transactionSrc": {
+        "name": "transactionSrc",
+        "in": "header",
+        "description": "Identifies the client/source application that is calling.",
+        "required": true,
+        "schema": {
+          "maxLength": 36,
+          "pattern": "^[a-zA-Z0-9-_]{3,100}$",
+          "type": "string",
+          "example": "FCTC"
+        }
+      },
+      "idToken": {
+        "name": "id_token",
+        "in": "header",
+        "description": "id token which will be required for auth0",
+        "schema": {
+          "type": "string",
+          "format": "token"
+        }
+      },
+      "uuid": {
+        "name": "UUID",
+        "in": "header",
+        "description": "User's UUID for preferences to be updated, needed for JWT, not required for OAuth2",
+        "schema": {
+          "type": "string"
+        }
+      },
       "AccountNumber": {
         "name": "accountNumber",
         "in": "header",
         "description": "UPS account number for shipper or user",
         "schema": {
-          "$ref": "#/components/schemas/AccountNumber"
+          "$ref": "#/components/schemas/UPSExportAssureAccountNumber"
         }
       },
       "TransactionSrc": {
@@ -71467,6 +74233,30 @@
           }
         }
       },
+      "PickupNotificationPreferences_OAuth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://onlinetools.ups.com/security/v1/oauth/authorize",
+            "tokenUrl": "https://onlinetools.ups.com/security/v1/oauth/token",
+            "scopes": {
+              "read:package-type": "read access to package type",
+              "read:transit-sort-direction": "read access to transit sort direction",
+              "read:declared-statement": "read access to declared statements",
+              "read:pickup": "read access to pickup",
+              "write:package-type": "update access to package type",
+              "write:transit-sort-direction": "update access to transit sort direction",
+              "write:declared-statement": "update access to declared statements",
+              "write:pickup": "update access to pickup"
+            }
+          }
+        }
+      },
+      "PickupNotificationPreferences_JWTAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
       "PreNotification_Ready_OAuth2": {
         "type": "oauth2",
         "description": "Find your Client ID and Secret on your app info page.\n1. Select \\\"Try It\\\"\n2. In the Security section enter your Client ID and Secret.\n3. Select \\\"Request Token\\\"\n4. Enter any additional information in the Body and Parameters sections.\n5. Select \\\"Send\\\" to execute your API request\n",
@@ -71690,6 +74480,10 @@
     {
       "name": "Feedback",
       "description": "Operations for providing feedback using the 'id' of a question."
+    },
+    {
+      "name": "Pickup Notification Preferences",
+      "description": "Pickup preferences for shipper accounts associated with a user"
     },
     {
       "name": "World Ease Shipment Management - Shipment",

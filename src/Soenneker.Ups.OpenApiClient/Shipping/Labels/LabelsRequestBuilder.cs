@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Labels
     public partial class LabelsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.Shipping.labels.item collection</summary>
-        /// <param name="position">When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility. v1  original features of the application. No support for CODTurn-inPage, HighValueReport or InternationalForms features returned in the responsev1701  includes support for CODTurn-inPage features returned in the response.V1903 Length 5</param>
+        /// <param name="position">When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility. v1  original features of the application. No support for CODTurn-inPage, HighValueReport or InternationalForms features returned in the responsev1701  includes support for CODTurn-inPage features returned in the response.V1903 Length 5.To support Roadie labels, the API version in the URL must be v2603.</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Shipping.Labels.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.Shipping.Labels.Item.WithVersionItemRequestBuilder this[string position]
         {

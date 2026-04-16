@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// Container that holds reference number and shipper number  If tracking number is not present use reference Number
+    /// Container that holds reference number and shipper number  If tracking number is not present use reference Number. This is mandatory for only Roadie shipments.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelRecoveryRequestReferenceValues : IAdditionalDataHolder, IParsable

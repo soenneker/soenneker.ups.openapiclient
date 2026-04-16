@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PostalCode { get; set; }
 #endif
-        /// <summary>Shipper&apos;s state or province code.For forward Shipment 5 characters are accepted, but only 2 characters will be printed on the label.  For US, PR and CA accounts, the account must be either a daily pickup account, an occasional account, or a customer B.I.N account.</summary>
+        /// <summary>Shipper&apos;s state or province code.For forward Shipment 5 characters are accepted, but only 2 characters will be printed on the label.  For US, PR and CA accounts, the account must be either a daily pickup account, an occasional account, or a customer B.I.N account.Required for Vietnam (VN).- For Vietnam (VN), the value must be a valid province code (for example, VN-44).- If the country or territory is Ireland, the StateProvinceCode must contain the county.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StateProvinceCode { get; set; }

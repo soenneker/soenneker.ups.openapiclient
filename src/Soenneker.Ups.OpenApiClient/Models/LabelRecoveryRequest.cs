@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string MailInnovationsTrackingNumber { get; set; }
 #endif
-        /// <summary>Container that holds reference number and shipper number  If tracking number is not present use reference Number</summary>
+        /// <summary>Container that holds reference number and shipper number  If tracking number is not present use reference Number. This is mandatory for only Roadie shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues? ReferenceValues { get; set; }
@@ -70,6 +70,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #nullable restore
 #else
         public string TrackingNumber { get; set; }
+#endif
+        /// <summary>List of Roadie (1R) tracking numbers associated with the label recovery request. Each tracking number must start with &quot;1R&quot; or &quot;1r&quot; and must be either 16 characters (offline) or 28 characters (online) in length.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? TrackingNumbers { get; set; }
+#nullable restore
+#else
+        public List<string> TrackingNumbers { get; set; }
 #endif
         /// <summary>&quot;Translate container allows the user to specify the language he/she would like a specific portion of response to return. The language is specified by the combination of language code and dialect code. Valid combinations are: LanguageCode + DialectCode.  Either Translate container or Locale element can be present in a given request. Both can&apos;t be requested together in same request.Combinations: eng GB = Queen&apos;s English Spa 97 = Castilian Spanish ita 97 = Italian fra 97 = France French fra CA = Canadian French deu 97 = German por 97 = Portugal Portuguese nld 97 = Dutch dan 97 = Danish fin 97 = Finnish swe 97 = Swedish eng CA = Canadian English Eng US = US English Default language is Queen&apos;s English If the Ship from country or territory is Canada, the Language defaults to Canadian English. If the ship from country or territory is US, the language defaults to US English.If shipping from some other country or territory, the language defaults to Queens English.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,6 +127,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "ReferenceValues", n => { ReferenceValues = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues.CreateFromDiscriminatorValue); } },
                 { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest.CreateFromDiscriminatorValue); } },
                 { "TrackingNumber", n => { TrackingNumber = n.GetStringValue(); } },
+                { "TrackingNumbers", n => { TrackingNumbers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Translate", n => { Translate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate.CreateFromDiscriminatorValue); } },
                 { "UPSPremiumCareForm", n => { UPSPremiumCareForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm.CreateFromDiscriminatorValue); } },
             };
@@ -137,6 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues>("ReferenceValues", ReferenceValues);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest>("Request", Request);
             writer.WriteStringValue("TrackingNumber", TrackingNumber);
+            writer.WriteCollectionOfPrimitiveValues<string>("TrackingNumbers", TrackingNumbers);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate>("Translate", Translate);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm>("UPSPremiumCareForm", UPSPremiumCareForm);
             writer.WriteAdditionalData(AdditionalData);

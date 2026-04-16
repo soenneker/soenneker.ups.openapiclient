@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// The file format of the label and receipt. Defaults to HTML format if this node does not exist.
+    /// Error entity
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class LabelRecoveryLabelSpecificationLabelImageFormat : IAdditionalDataHolder, IParsable
+    public partial class PickupNotificationPreferencesError : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>File type that the label is to be generated in. Valid values are:- GIF -- label is in HTML format.- PDF -- label is in PDF format.- ZPL -- Thermal label in ZPL format.- EPL -- Thermal label in EPL2 format.- SPL -- Thermal label in SPL format.Default is GIF.Roadie shipments only support GIF, PNG, and ZPL formats.</summary>
+        /// <summary>error code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }
@@ -23,30 +23,30 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>Description of the label image format code.</summary>
+        /// <summary>error message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Message { get; set; }
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Message { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupNotificationPreferencesError"/> and sets the default values.
         /// </summary>
-        public LabelRecoveryLabelSpecificationLabelImageFormat()
+        public PickupNotificationPreferencesError()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupNotificationPreferencesError"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.PickupNotificationPreferencesError CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat();
+            return new global::Soenneker.Ups.OpenApiClient.Models.PickupNotificationPreferencesError();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,8 +56,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Code", n => { Code = n.GetStringValue(); } },
-                { "Description", n => { Description = n.GetStringValue(); } },
+                { "code", n => { Code = n.GetStringValue(); } },
+                { "message", n => { Message = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("Code", Code);
-            writer.WriteStringValue("Description", Description);
+            writer.WriteStringValue("code", Code);
+            writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

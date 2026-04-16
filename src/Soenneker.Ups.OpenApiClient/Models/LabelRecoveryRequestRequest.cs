@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string RequestOption { get; set; }
 #endif
-        /// <summary>&quot;When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description.Format: YYMM = Year and month of the release.Example: 1701 = 2017 January  Supported values: 1701, 1707, 1903&quot;</summary>
+        /// <summary>&quot;When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description. To support Roadie labels, the API version in the URL must be v2603.Format: YYMM = Year and month of the release.Example: 1701 = 2017 January  Supported values: 1701, 1707, 1903, 2603&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubVersion { get; set; }

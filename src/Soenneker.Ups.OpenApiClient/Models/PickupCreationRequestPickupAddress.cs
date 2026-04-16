@@ -103,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Room { get; set; }
 #endif
-        /// <summary>State or province for postal countries; county for Ireland (IE) and district code for Hong Kong (HK)</summary>
+        /// <summary>State or province for postal countries; county for Ireland (IE) and district code for Hong Kong (HK). Required for US, Canada, and Vietnam (VN).- For US or Canada, the value must be a valid US state or Canadian province code.- For Vietnam (VN), the value must be a valid province code (for example, VN-44).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StateProvince { get; set; }
