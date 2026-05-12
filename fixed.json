@@ -67100,6 +67100,10 @@
             "type": "string",
             "description": "\"The time of the activity. Format: HHMMSS (24 hr)\"",
             "example": "071356"
+          },
+          "logicalScan": {
+            "type": "boolean",
+            "description": "\"This indicates whether shipment event is physical or logical event. Valid values: 'true' for logical event. 'false' for physical event\""
           }
         },
         "description": "Container with all activities associated with the package. Activities are returned in chronological order, with the most recent activity first."
@@ -67759,6 +67763,10 @@
             "type": "string",
             "description": "\"The time of the activity. Format: HHMMSS (24 hr)\"",
             "example": "071356"
+          },
+          "logicalScan": {
+            "type": "boolean",
+            "description": "\"This indicates whether shipment event is physical or logical event. Valid values: 'true' for logical event. 'false' for physical event\""
           }
         },
         "description": "Container with all activities associated with the package. Activities are returned in chronological order, with the most recent activity first."

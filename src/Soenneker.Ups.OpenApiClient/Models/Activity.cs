@@ -55,6 +55,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation Location { get; set; }
 #endif
+        /// <summary>&quot;This indicates whether shipment event is physical or logical event. Valid values: &apos;true&apos; for logical event. &apos;false&apos; for physical event&quot;</summary>
+        public bool? LogicalScan { get; set; }
         /// <summary>The container which has the current package status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,6 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "gmtOffset", n => { GmtOffset = n.GetStringValue(); } },
                 { "gmtTime", n => { GmtTime = n.GetStringValue(); } },
                 { "location", n => { Location = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation>(global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation.CreateFromDiscriminatorValue); } },
+                { "logicalScan", n => { LogicalScan = n.GetBoolValue(); } },
                 { "status", n => { Status = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Status>(global::Soenneker.Ups.OpenApiClient.Models.Status.CreateFromDiscriminatorValue); } },
                 { "time", n => { Time = n.GetStringValue(); } },
             };
@@ -117,6 +120,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("gmtOffset", GmtOffset);
             writer.WriteStringValue("gmtTime", GmtTime);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyLocation>("location", Location);
+            writer.WriteBoolValue("logicalScan", LogicalScan);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Status>("status", Status);
             writer.WriteStringValue("time", Time);
             writer.WriteAdditionalData(AdditionalData);
