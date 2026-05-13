@@ -9,9 +9,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DeliveryInterceptChargesResponseV2Response : global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2, IParsable
+    public partial class DeliveryInterceptChargesResponseV2Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For each 1z there will exist a ChargeInfo object. These are the charges that were applied. This array is unbounded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,12 +22,69 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo> ChargeInfo { get; set; }
 #endif
+        /// <summary>Unbounded array of error objects</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2>? Errors { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2> Errors { get; set; }
+#endif
+        /// <summary>API response status code, Internal code regarding the success or failure of the operation</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StatusCode { get; set; }
+#nullable restore
+#else
+        public string StatusCode { get; set; }
+#endif
+        /// <summary>API response status message, Internal message regarding the success or failure of the operation</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StatusMsg { get; set; }
+#nullable restore
+#else
+        public string StatusMsg { get; set; }
+#endif
+        /// <summary>A new status code for adding granularity to the existing status code structure</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SubStatusCode { get; set; }
+#nullable restore
+#else
+        public string SubStatusCode { get; set; }
+#endif
+        /// <summary>Indicates if the transaction is considered successful.</summary>
+        public bool? Success { get; set; }
+        /// <summary>A unique value that will be used to identify the transaction for logging and troubleshooting purposes</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TransactionId { get; set; }
+#nullable restore
+#else
+        public string TransactionId { get; set; }
+#endif
+        /// <summary>A map containing warning codes and descriptions as key/value pairs</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings? Warnings { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings Warnings { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response"/> and sets the default values.
+        /// </summary>
+        public DeliveryInterceptChargesResponseV2Response()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response();
@@ -34,22 +93,36 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "chargeInfo", n => { ChargeInfo = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "statusCode", n => { StatusCode = n.GetStringValue(); } },
+                { "statusMsg", n => { StatusMsg = n.GetStringValue(); } },
+                { "subStatusCode", n => { SubStatusCode = n.GetStringValue(); } },
+                { "success", n => { Success = n.GetBoolValue(); } },
+                { "transactionId", n => { TransactionId = n.GetStringValue(); } },
+                { "warnings", n => { Warnings = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo>("chargeInfo", ChargeInfo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2>("errors", Errors);
+            writer.WriteStringValue("statusCode", StatusCode);
+            writer.WriteStringValue("statusMsg", StatusMsg);
+            writer.WriteStringValue("subStatusCode", SubStatusCode);
+            writer.WriteBoolValue("success", Success);
+            writer.WriteStringValue("transactionId", TransactionId);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings>("warnings", Warnings);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

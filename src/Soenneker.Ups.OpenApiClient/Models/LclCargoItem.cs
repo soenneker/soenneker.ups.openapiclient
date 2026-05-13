@@ -9,15 +9,66 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class LclCargoItem : global::Soenneker.Ups.OpenApiClient.Models.CargoItem, IParsable
+    public partial class LclCargoItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The dimensions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.Dimensions? Dimensions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.Dimensions Dimensions { get; set; }
+#endif
+        /// <summary>List of FCL cargo items (if applicable).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem>? FclCargoItems { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem> FclCargoItems { get; set; }
+#endif
+        /// <summary>Type of package (e.g., Box, Pallet), It is required for LCL.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackageType { get; set; }
+#nullable restore
+#else
+        public string PackageType { get; set; }
+#endif
+        /// <summary>Code for the package type, It is required for LCL.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PackageTypeCode { get; set; }
+#nullable restore
+#else
+        public string PackageTypeCode { get; set; }
+#endif
+        /// <summary>Number of items in the cargo.</summary>
+        public int? Quantity { get; set; }
+        /// <summary>The weight property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.WeightDetail? Weight { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.WeightDetail Weight { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LclCargoItem"/> and sets the default values.
+        /// </summary>
+        public LclCargoItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.LclCargoItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Ups.OpenApiClient.Models.LclCargoItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.LclCargoItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Ups.OpenApiClient.Models.LclCargoItem();
@@ -26,20 +77,32 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "dimensions", n => { Dimensions = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Dimensions>(global::Soenneker.Ups.OpenApiClient.Models.Dimensions.CreateFromDiscriminatorValue); } },
+                { "fclCargoItems", n => { FclCargoItems = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem>(global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "packageType", n => { PackageType = n.GetStringValue(); } },
+                { "packageTypeCode", n => { PackageTypeCode = n.GetStringValue(); } },
+                { "quantity", n => { Quantity = n.GetIntValue(); } },
+                { "weight", n => { Weight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.WeightDetail>(global::Soenneker.Ups.OpenApiClient.Models.WeightDetail.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Dimensions>("dimensions", Dimensions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem>("fclCargoItems", FclCargoItems);
+            writer.WriteStringValue("packageType", PackageType);
+            writer.WriteStringValue("packageTypeCode", PackageTypeCode);
+            writer.WriteIntValue("quantity", Quantity);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.WeightDetail>("weight", Weight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

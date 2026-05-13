@@ -11,16 +11,35 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// buyer or billing Global checkout details.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BSISV1TotalResponse : global::Soenneker.Ups.OpenApiClient.Models.BSISV1ChargeDetail, IParsable
+    public partial class BSISV1TotalResponse : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Currency Code of the unit total value adhering to ISO 4217 standard.Click &lt;a href=&quot;https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt; for more information.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CurrencyCode { get; set; }
+#nullable restore
+#else
+        public string CurrencyCode { get; set; }
+#endif
         /// <summary>Shipper is mandatory and the Buyer will be conditionally returned if Buyer currency is porvided.</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.BSISV1TotalResponse_type? Type { get; set; }
+        /// <summary>The value of a particular item in the shipment .</summary>
+        public double? Value { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.BSISV1TotalResponse"/> and sets the default values.
+        /// </summary>
+        public BSISV1TotalResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.BSISV1TotalResponse"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Ups.OpenApiClient.Models.BSISV1TotalResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.BSISV1TotalResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Ups.OpenApiClient.Models.BSISV1TotalResponse();
@@ -29,22 +48,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1TotalResponse_type>(); } },
+                { "value", n => { Value = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("currencyCode", CurrencyCode);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BSISV1TotalResponse_type>("type", Type);
+            writer.WriteDoubleValue("value", Value);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

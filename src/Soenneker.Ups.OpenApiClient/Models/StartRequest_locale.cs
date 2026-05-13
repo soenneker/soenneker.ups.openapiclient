@@ -8,29 +8,31 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// A map containing warning codes and descriptions as key/value pairs
+    /// The language the user uses to submit their initial product description. If the actual language used differs from this field, the application will throw an error as a &quot;7015&quot;.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class DeliveryInterceptCommonResponseV2_warnings : IAdditionalDataHolder, IParsable
+    public partial class StartRequest_locale : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The language code following the ISO 639-1 standard.</summary>
+        public global::Soenneker.Ups.OpenApiClient.Models.Languages? Value { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2_warnings"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.StartRequest_locale"/> and sets the default values.
         /// </summary>
-        public DeliveryInterceptCommonResponseV2_warnings()
+        public StartRequest_locale()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2_warnings"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.StartRequest_locale"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2_warnings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.StartRequest_locale CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2_warnings();
+            return new global::Soenneker.Ups.OpenApiClient.Models.StartRequest_locale();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +42,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.Languages>(); } },
             };
         }
         /// <summary>
@@ -49,6 +52,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.Languages>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

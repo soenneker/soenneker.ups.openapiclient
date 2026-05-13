@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>
-    /// Additional shipment party specific fields.  All are optional.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class ApolloShipmentPartyV1 : global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>The unique UPS Freight Account Number associated with the Party. It&apos;s required when the party is the Shipper or Payor</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

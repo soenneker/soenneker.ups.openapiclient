@@ -9,15 +9,79 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloOrderResponseV1Response : global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1, IAdditionalDataHolder, IParsable
+    public partial class ApolloOrderResponseV1Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>A collection of charges associated with this Order. Conditionally required based on payer of charges.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1Charges? Charges { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1Charges Charges { get; set; }
+#endif
+        /// <summary>The labelData property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelData? LabelData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelData LabelData { get; set; }
+#endif
+        /// <summary>The output format for the label</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LabelFormat { get; set; }
+#nullable restore
+#else
+        public string LabelFormat { get; set; }
+#endif
+        /// <summary>The byte array of the generated PDF represented as base64 string</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public byte[]? LabelImage { get; set; }
+#nullable restore
+#else
+        public byte[] LabelImage { get; set; }
+#endif
+        /// <summary>The message property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Message { get; set; }
+#nullable restore
+#else
+        public string Message { get; set; }
+#endif
+        /// <summary>The Unique number used to identify the order</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OrderNumber { get; set; }
+#nullable restore
+#else
+        public string OrderNumber { get; set; }
+#endif
+        /// <summary>Unique identifier for the shipment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShipmentNumber { get; set; }
+#nullable restore
+#else
+        public string ShipmentNumber { get; set; }
+#endif
+        /// <summary>Unbounded array containing one or more warning objects</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? Warnings { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> Warnings { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderResponseV1Response"/> and sets the default values.
         /// </summary>
-        public ApolloOrderResponseV1Response() : base()
+        public ApolloOrderResponseV1Response()
         {
             AdditionalData = new Dictionary<string, object>();
         }
@@ -26,7 +90,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderResponseV1Response"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderResponseV1Response CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderResponseV1Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderResponseV1Response();
@@ -35,20 +99,35 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "charges", n => { Charges = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1Charges>(global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1Charges.CreateFromDiscriminatorValue); } },
+                { "labelData", n => { LabelData = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelData>(global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelData.CreateFromDiscriminatorValue); } },
+                { "labelFormat", n => { LabelFormat = n.GetStringValue(); } },
+                { "labelImage", n => { LabelImage = n.GetByteArrayValue(); } },
+                { "message", n => { Message = n.GetStringValue(); } },
+                { "orderNumber", n => { OrderNumber = n.GetStringValue(); } },
+                { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
+                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1Charges>("charges", Charges);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelData>("labelData", LabelData);
+            writer.WriteStringValue("labelFormat", LabelFormat);
+            writer.WriteByteArrayValue("labelImage", LabelImage);
+            writer.WriteStringValue("message", Message);
+            writer.WriteStringValue("orderNumber", OrderNumber);
+            writer.WriteStringValue("shipmentNumber", ShipmentNumber);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

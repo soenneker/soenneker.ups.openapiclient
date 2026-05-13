@@ -11,16 +11,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// ShipTo Address of request. Needed for internal rate call to calculate transportCost if that is needed and not provided.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BSISV1Shipment_shipToAddress : global::Soenneker.Ups.OpenApiClient.Models.BSISV1Address, IParsable
+    public partial class BSISV1Shipment_shipToAddress : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Shipper or or Consignee&apos;s street addres line 1.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AddressLine1 { get; set; }
+#nullable restore
+#else
+        public string AddressLine1 { get; set; }
+#endif
+        /// <summary>Shipper or or Consignee&apos;s street addres line 2.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AddressLine2 { get; set; }
+#nullable restore
+#else
+        public string AddressLine2 { get; set; }
+#endif
+        /// <summary>Shipper or Consignee&apos;s city.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? City { get; set; }
+#nullable restore
+#else
+        public string City { get; set; }
+#endif
+        /// <summary>The ISO 3166 code of the Shipper or Consignee&apos;s country or territory.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CountryCode { get; set; }
+#nullable restore
+#else
+        public string CountryCode { get; set; }
+#endif
+        /// <summary>Shipper or or Consignee&apos;s name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>Shipper&apos;s or Consignee&apos;s postal code.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PostalCode { get; set; }
+#nullable restore
+#else
+        public string PostalCode { get; set; }
+#endif
         /// <summary>Indicate as true if the shipTo address is classified as residential (vs. commercial). Valid only for US50 addresses.Needed for internal rate call to calculate transportCost if that is needed and not provided.</summary>
         public bool? ResidentialAddressIndicator { get; set; }
+        /// <summary>Shipper or Consignee&apos;s state or province code.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StateProvinceCode { get; set; }
+#nullable restore
+#else
+        public string StateProvinceCode { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress"/> and sets the default values.
+        /// </summary>
+        public BSISV1Shipment_shipToAddress()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Ups.OpenApiClient.Models.BSISV1Shipment_shipToAddress();
@@ -29,22 +94,36 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "addressLine1", n => { AddressLine1 = n.GetStringValue(); } },
+                { "addressLine2", n => { AddressLine2 = n.GetStringValue(); } },
+                { "city", n => { City = n.GetStringValue(); } },
+                { "countryCode", n => { CountryCode = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "postalCode", n => { PostalCode = n.GetStringValue(); } },
                 { "residentialAddressIndicator", n => { ResidentialAddressIndicator = n.GetBoolValue(); } },
+                { "stateProvinceCode", n => { StateProvinceCode = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("addressLine1", AddressLine1);
+            writer.WriteStringValue("addressLine2", AddressLine2);
+            writer.WriteStringValue("city", City);
+            writer.WriteStringValue("countryCode", CountryCode);
+            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("postalCode", PostalCode);
             writer.WriteBoolValue("residentialAddressIndicator", ResidentialAddressIndicator);
+            writer.WriteStringValue("stateProvinceCode", StateProvinceCode);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
