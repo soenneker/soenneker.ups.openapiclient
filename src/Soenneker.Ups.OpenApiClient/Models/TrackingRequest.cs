@@ -8,20 +8,28 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// Response payload containing inbound tracking numbers grouped by inbound token.
+    /// Request payload for retrieving inbound tracking numbers for a pickup point location.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TrackingResponse : IAdditionalDataHolder, IParsable
+    public partial class TrackingRequest : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The inboundTrackingList property</summary>
+        /// <summary>End date in yyyyMMdd format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>? InboundTrackingList { get; set; }
+        public string? EndDate { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem> InboundTrackingList { get; set; }
+        public string EndDate { get; set; }
+#endif
+        /// <summary>The inboundToken property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? InboundToken { get; set; }
+#nullable restore
+#else
+        public List<string> InboundToken { get; set; }
 #endif
         /// <summary>The locationIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,30 +39,30 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string LocationIdentifier { get; set; }
 #endif
-        /// <summary>Standard response envelope containing transaction reference information.</summary>
+        /// <summary>Start date in yyyyMMdd format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope? Response { get; set; }
+        public string? StartDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope Response { get; set; }
+        public string StartDate { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingRequest"/> and sets the default values.
         /// </summary>
-        public TrackingResponse()
+        public TrackingRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.TrackingRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse();
+            return new global::Soenneker.Ups.OpenApiClient.Models.TrackingRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,9 +72,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inboundTrackingList", n => { InboundTrackingList = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>(global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "endDate", n => { EndDate = n.GetStringValue(); } },
+                { "inboundToken", n => { InboundToken = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "locationIdentifier", n => { LocationIdentifier = n.GetStringValue(); } },
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope>(global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope.CreateFromDiscriminatorValue); } },
+                { "startDate", n => { StartDate = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -76,9 +85,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>("inboundTrackingList", InboundTrackingList);
+            writer.WriteStringValue("endDate", EndDate);
+            writer.WriteCollectionOfPrimitiveValues<string>("inboundToken", InboundToken);
             writer.WriteStringValue("locationIdentifier", LocationIdentifier);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope>("response", Response);
+            writer.WriteStringValue("startDate", StartDate);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

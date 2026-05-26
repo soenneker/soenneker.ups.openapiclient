@@ -39,11 +39,11 @@ namespace Soenneker.Ups.OpenApiClient.Tracking.Track.V1.Details.Item
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingTrackApiResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse">When receiving a 503 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Ups.OpenApiClient.Models.TrackingTrackApiResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Tracking.Track.V1.Details.Item.WithInquiryNumberItemRequestBuilder.WithInquiryNumberItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,11 +56,11 @@ namespace Soenneker.Ups.OpenApiClient.Tracking.Track.V1.Details.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse.CreateFromDiscriminatorValue },
-                { "503", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse_1.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.TrackingTrackApiResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.TrackingTrackApiResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
