@@ -2,42 +2,28 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
+using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>
-    /// Response payload containing inbound tracking numbers grouped by inbound token.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TrackingResponse : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class TrackingResponse : ApiException, IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The inboundTrackingList property</summary>
+        /// <summary>The primary error message.</summary>
+        public override string Message { get => base.Message; }
+        /// <summary>The response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>? InboundTrackingList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingErrorResponse? Response { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem> InboundTrackingList { get; set; }
-#endif
-        /// <summary>The locationIdentifier property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LocationIdentifier { get; set; }
-#nullable restore
-#else
-        public string LocationIdentifier { get; set; }
-#endif
-        /// <summary>Standard response envelope containing transaction reference information.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope? Response { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingErrorResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse"/> and sets the default values.
@@ -64,9 +50,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inboundTrackingList", n => { InboundTrackingList = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>(global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "locationIdentifier", n => { LocationIdentifier = n.GetStringValue(); } },
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope>(global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingErrorResponse>(global::Soenneker.Ups.OpenApiClient.Models.TrackingErrorResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>("inboundTrackingList", InboundTrackingList);
-            writer.WriteStringValue("locationIdentifier", LocationIdentifier);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelope>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingErrorResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

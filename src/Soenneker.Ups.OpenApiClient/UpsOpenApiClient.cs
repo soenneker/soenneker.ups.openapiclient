@@ -40,7 +40,6 @@ using Soenneker.Ups.OpenApiClient.Tracking;
 using Soenneker.Ups.OpenApiClient.TrackingReady;
 using Soenneker.Ups.OpenApiClient.TradeDirect;
 using Soenneker.Ups.OpenApiClient.UPSExportAssure;
-using Soenneker.Ups.OpenApiClient.UPSPickupPoints;
 using Soenneker.Ups.OpenApiClient.UPSTrackAlert;
 using Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhanced;
 using Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhancedReady;
@@ -227,11 +226,6 @@ namespace Soenneker.Ups.OpenApiClient
         public global::Soenneker.Ups.OpenApiClient.UPSExportAssure.UPSExportAssureRequestBuilder UPSExportAssure
         {
             get => new global::Soenneker.Ups.OpenApiClient.UPSExportAssure.UPSExportAssureRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The UPSPickupPoints property</summary>
-        public global::Soenneker.Ups.OpenApiClient.UPSPickupPoints.UPSPickupPointsRequestBuilder UPSPickupPoints
-        {
-            get => new global::Soenneker.Ups.OpenApiClient.UPSPickupPoints.UPSPickupPointsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The UPSTrackAlert property</summary>
         public global::Soenneker.Ups.OpenApiClient.UPSTrackAlert.UPSTrackAlertRequestBuilder UPSTrackAlert
