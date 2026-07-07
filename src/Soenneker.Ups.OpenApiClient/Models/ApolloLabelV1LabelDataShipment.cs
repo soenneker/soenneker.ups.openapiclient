@@ -52,7 +52,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The dropoffTime property</summary>
         public Time? DropoffTime { get; set; }
         /// <summary>Freight type of the shipment.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipment_freightType? FreightType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipmentFreightType? FreightType { get; set; }
         /// <summary>The airport gateway for routing</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -180,7 +180,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "dropoffTime", n => { DropoffTime = n.GetTimeValue(); } },
-                { "freightType", n => { FreightType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipment_freightType>(); } },
+                { "freightType", n => { FreightType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipmentFreightType>(); } },
                 { "gateway", n => { Gateway = n.GetStringValue(); } },
                 { "isMetric", n => { IsMetric = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloItemV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloItemV1.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -212,7 +212,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteTimeValue("dropoffTime", DropoffTime);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipment_freightType>("freightType", FreightType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipmentFreightType>("freightType", FreightType);
             writer.WriteStringValue("gateway", Gateway);
             writer.WriteStringValue("isMetric", IsMetric);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloItemV1>("items", Items);

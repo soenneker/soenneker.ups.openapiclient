@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The status of Smart Pickup that has been cancelled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus? GWNStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGwnStatus? GWNStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus GWNStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGwnStatus GWNStatus { get; set; }
 #endif
         /// <summary>The type of pickup that has been cancelled.- 01 = On-Call Pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "GWNStatus", n => { GWNStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus.CreateFromDiscriminatorValue); } },
+                { "GWNStatus", n => { GWNStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGwnStatus>(global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGwnStatus.CreateFromDiscriminatorValue); } },
                 { "PickupType", n => { PickupType = n.GetStringValue(); } },
                 { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseResponse.CreateFromDiscriminatorValue); } },
             };
@@ -76,7 +76,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGWNStatus>("GWNStatus", GWNStatus);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseGwnStatus>("GWNStatus", GWNStatus);
             writer.WriteStringValue("PickupType", PickupType);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCancelResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);

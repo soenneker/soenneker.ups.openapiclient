@@ -31,10 +31,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The services used by the shipments and associated details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummary_services>? Services { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem>? Services { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummary_services> Services { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem> Services { get; set; }
 #endif
         /// <summary>The total for all services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "currentPickupTotals", n => { CurrentPickupTotals = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1.CreateFromDiscriminatorValue); } },
                 { "dailyPickupTotals", n => { DailyPickupTotals = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1.CreateFromDiscriminatorValue); } },
                 { "serviceTotal", n => { ServiceTotal = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal.CreateFromDiscriminatorValue); } },
-                { "services", n => { Services = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummary_services>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummary_services.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "services", n => { Services = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1>("currentPickupTotals", CurrentPickupTotals);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1>("dailyPickupTotals", DailyPickupTotals);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummary_services>("services", Services);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem>("services", Services);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal>("serviceTotal", ServiceTotal);
         }
     }

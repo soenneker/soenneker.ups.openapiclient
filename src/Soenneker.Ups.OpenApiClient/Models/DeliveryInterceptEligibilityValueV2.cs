@@ -10,15 +10,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         [EnumMember(Value = "ELIGIBLE")]
         #pragma warning disable CS1591
-        ELIGIBLE,
+        Eligible,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_ELIGIBLE")]
         #pragma warning disable CS1591
-        NOT_ELIGIBLE,
+        NotEligible,
         #pragma warning restore CS1591
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
     }
 }

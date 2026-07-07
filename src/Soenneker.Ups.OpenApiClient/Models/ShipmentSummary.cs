@@ -57,9 +57,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string IncoTermType { get; set; }
 #endif
         /// <summary>Movement type of the shipment.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_movementType? MovementType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryMovementType? MovementType { get; set; }
         /// <summary>Movement type code of the shipment.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_movementTypeCode? MovementTypeCode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryMovementTypeCode? MovementTypeCode { get; set; }
         /// <summary>The originPort property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,7 +117,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string QuoteIdentificationNumber { get; set; }
 #endif
         /// <summary>Rate type of the shipment.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_rateType? RateType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryRateType? RateType { get; set; }
         /// <summary>Service group associated with the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,7 +135,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string ServiceLine { get; set; }
 #endif
         /// <summary>Type of service being represented.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_serviceType? ServiceType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryServiceType? ServiceType { get; set; }
         /// <summary>Unique identifier for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -189,8 +189,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "createdDate", n => { CreatedDate = n.GetDateTimeOffsetValue(); } },
                 { "destinationPort", n => { DestinationPort = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PortInfo>(global::Soenneker.Ups.OpenApiClient.Models.PortInfo.CreateFromDiscriminatorValue); } },
                 { "incoTermType", n => { IncoTermType = n.GetStringValue(); } },
-                { "movementType", n => { MovementType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_movementType>(); } },
-                { "movementTypeCode", n => { MovementTypeCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_movementTypeCode>(); } },
+                { "movementType", n => { MovementType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryMovementType>(); } },
+                { "movementTypeCode", n => { MovementTypeCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryMovementTypeCode>(); } },
                 { "originPort", n => { OriginPort = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PortInfo>(global::Soenneker.Ups.OpenApiClient.Models.PortInfo.CreateFromDiscriminatorValue); } },
                 { "partyDetails", n => { PartyDetails = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PartyDetail>(global::Soenneker.Ups.OpenApiClient.Models.PartyDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "paymentTerm", n => { PaymentTerm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm.CreateFromDiscriminatorValue); } },
@@ -198,10 +198,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "portOfDischarge", n => { PortOfDischarge = n.GetStringValue(); } },
                 { "portOfLoad", n => { PortOfLoad = n.GetStringValue(); } },
                 { "quoteIdentificationNumber", n => { QuoteIdentificationNumber = n.GetStringValue(); } },
-                { "rateType", n => { RateType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_rateType>(); } },
+                { "rateType", n => { RateType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryRateType>(); } },
                 { "serviceGroup", n => { ServiceGroup = n.GetStringValue(); } },
                 { "serviceLine", n => { ServiceLine = n.GetStringValue(); } },
-                { "serviceType", n => { ServiceType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_serviceType>(); } },
+                { "serviceType", n => { ServiceType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryServiceType>(); } },
                 { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "transitTime", n => { TransitTime = n.GetIntValue(); } },
@@ -222,8 +222,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdDate", CreatedDate);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PortInfo>("destinationPort", DestinationPort);
             writer.WriteStringValue("incoTermType", IncoTermType);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_movementType>("movementType", MovementType);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_movementTypeCode>("movementTypeCode", MovementTypeCode);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryMovementType>("movementType", MovementType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryMovementTypeCode>("movementTypeCode", MovementTypeCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PortInfo>("originPort", OriginPort);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PartyDetail>("partyDetails", PartyDetails);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm>("paymentTerm", PaymentTerm);
@@ -231,10 +231,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("portOfDischarge", PortOfDischarge);
             writer.WriteStringValue("portOfLoad", PortOfLoad);
             writer.WriteStringValue("quoteIdentificationNumber", QuoteIdentificationNumber);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_rateType>("rateType", RateType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryRateType>("rateType", RateType);
             writer.WriteStringValue("serviceGroup", ServiceGroup);
             writer.WriteStringValue("serviceLine", ServiceLine);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary_serviceType>("serviceType", ServiceType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummaryServiceType>("serviceType", ServiceType);
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
             writer.WriteStringValue("status", Status);
             writer.WriteIntValue("transitTime", TransitTime);

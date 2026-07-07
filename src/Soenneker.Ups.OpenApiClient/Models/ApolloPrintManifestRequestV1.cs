@@ -30,7 +30,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string Language { get; set; }
 #endif
         /// <summary>The output format of the document.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1_manifestFormat? ManifestFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat? ManifestFormat { get; set; }
         /// <summary>The unique Id to identify the Manifest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,7 +45,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public ApolloPrintManifestRequestV1()
         {
             Language = "en-US";
-            ManifestFormat = global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1_manifestFormat.PDF;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -67,7 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "accountNumber", n => { AccountNumber = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
-                { "manifestFormat", n => { ManifestFormat = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1_manifestFormat>(); } },
+                { "manifestFormat", n => { ManifestFormat = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat>(); } },
                 { "manifestNumber", n => { ManifestNumber = n.GetStringValue(); } },
             };
         }
@@ -80,7 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("accountNumber", AccountNumber);
             writer.WriteStringValue("language", Language);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1_manifestFormat>("manifestFormat", ManifestFormat);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat>("manifestFormat", ManifestFormat);
             writer.WriteStringValue("manifestNumber", ManifestNumber);
         }
     }

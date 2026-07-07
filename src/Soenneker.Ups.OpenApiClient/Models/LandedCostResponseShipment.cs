@@ -33,7 +33,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CurrencyCode { get; set; }
 #endif
-        /// <summary>The errors property</summary>
+        /// <summary>Error code and description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.Errors? Errors { get; set; }

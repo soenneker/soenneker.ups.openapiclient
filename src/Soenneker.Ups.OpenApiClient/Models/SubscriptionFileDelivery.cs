@@ -41,10 +41,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for cash on delivery (COD) information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryCOD? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryCod? COD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryCOD COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryCod COD { get; set; }
 #endif
         /// <summary>Date that the package is delivered. Date format is YYYYMMDD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,7 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "AccessPointLocationID", n => { AccessPointLocationID = n.GetStringValue(); } },
                 { "ActivityLocation", n => { ActivityLocation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryActivityLocation>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryActivityLocation.CreateFromDiscriminatorValue); } },
                 { "BillToAccount", n => { BillToAccount = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryBillToAccount>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryBillToAccount.CreateFromDiscriminatorValue); } },
-                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryCOD>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryCOD.CreateFromDiscriminatorValue); } },
+                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryCod>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryCod.CreateFromDiscriminatorValue); } },
                 { "Date", n => { Date = n.GetStringValue(); } },
                 { "DeliveryLocation", n => { DeliveryLocation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryDeliveryLocation>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryDeliveryLocation.CreateFromDiscriminatorValue); } },
                 { "DriverRelease", n => { DriverRelease = n.GetStringValue(); } },
@@ -168,7 +168,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("AccessPointLocationID", AccessPointLocationID);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryActivityLocation>("ActivityLocation", ActivityLocation);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryBillToAccount>("BillToAccount", BillToAccount);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryCOD>("COD", COD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryCod>("COD", COD);
             writer.WriteStringValue("Date", Date);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryDeliveryLocation>("DeliveryLocation", DeliveryLocation);
             writer.WriteStringValue("DriverRelease", DriverRelease);

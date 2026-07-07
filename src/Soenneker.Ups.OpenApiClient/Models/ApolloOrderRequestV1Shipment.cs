@@ -50,7 +50,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The dropoffTime property</summary>
         public Time? DropoffTime { get; set; }
         /// <summary>Freight type of the shipment.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_freightType? FreightType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentFreightType? FreightType { get; set; }
         /// <summary>A flag to indicate if the measurements are metric</summary>
         public bool? IsMetric { get; set; }
         /// <summary>A collection of the details of each item that is associated with the Shipment</summary>
@@ -70,13 +70,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string OrderDescription { get; set; }
 #endif
         /// <summary>The paymentType property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_paymentType? PaymentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentPaymentType? PaymentType { get; set; }
         /// <summary>The pickupDate property</summary>
         public Date? PickupDate { get; set; }
         /// <summary>The readyTime property</summary>
         public Time? ReadyTime { get; set; }
         /// <summary>Type of service requested</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_serviceType? ServiceType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentServiceType? ServiceType { get; set; }
         /// <summary>Unique identifier for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,6 +101,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public ApolloOrderRequestV1Shipment()
         {
             Currency = "USD";
+            IsMetric = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -126,14 +127,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "dropoffTime", n => { DropoffTime = n.GetTimeValue(); } },
-                { "freightType", n => { FreightType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_freightType>(); } },
+                { "freightType", n => { FreightType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentFreightType>(); } },
                 { "isMetric", n => { IsMetric = n.GetBoolValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloItemV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloItemV1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "orderDescription", n => { OrderDescription = n.GetStringValue(); } },
-                { "paymentType", n => { PaymentType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_paymentType>(); } },
+                { "paymentType", n => { PaymentType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentPaymentType>(); } },
                 { "pickupDate", n => { PickupDate = n.GetDateValue(); } },
                 { "readyTime", n => { ReadyTime = n.GetTimeValue(); } },
-                { "serviceType", n => { ServiceType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_serviceType>(); } },
+                { "serviceType", n => { ServiceType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentServiceType>(); } },
                 { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
                 { "shipperReference", n => { ShipperReference = n.GetStringValue(); } },
                 { "weight", n => { Weight = n.GetFloatValue(); } },
@@ -152,14 +153,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteTimeValue("dropoffTime", DropoffTime);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_freightType>("freightType", FreightType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentFreightType>("freightType", FreightType);
             writer.WriteBoolValue("isMetric", IsMetric);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloItemV1>("items", Items);
             writer.WriteStringValue("orderDescription", OrderDescription);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_paymentType>("paymentType", PaymentType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentPaymentType>("paymentType", PaymentType);
             writer.WriteDateValue("pickupDate", PickupDate);
             writer.WriteTimeValue("readyTime", ReadyTime);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment_serviceType>("serviceType", ServiceType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1ShipmentServiceType>("serviceType", ServiceType);
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
             writer.WriteStringValue("shipperReference", ShipperReference);
             writer.WriteFloatValue("weight", Weight);

@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for cash on delivery (COD) information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCOD? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCod? COD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCOD COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCod COD { get; set; }
 #endif
         /// <summary>Earliest delivery time. Time format is HHMMSS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AddShippingChargesToCODIndicator", n => { AddShippingChargesToCODIndicator = n.GetStringValue(); } },
-                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCOD>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCOD.CreateFromDiscriminatorValue); } },
+                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCod>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCod.CreateFromDiscriminatorValue); } },
                 { "EarliestDeliveryTime", n => { EarliestDeliveryTime = n.GetStringValue(); } },
                 { "HazardousMaterialsCode", n => { HazardousMaterialsCode = n.GetStringValue(); } },
                 { "HoldForPickup", n => { HoldForPickup = n.GetStringValue(); } },
@@ -104,7 +104,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AddShippingChargesToCODIndicator", AddShippingChargesToCODIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCOD>("COD", COD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewPackageServiceOptionsCod>("COD", COD);
             writer.WriteStringValue("EarliestDeliveryTime", EarliestDeliveryTime);
             writer.WriteStringValue("HazardousMaterialsCode", HazardousMaterialsCode);
             writer.WriteStringValue("HoldForPickup", HoldForPickup);

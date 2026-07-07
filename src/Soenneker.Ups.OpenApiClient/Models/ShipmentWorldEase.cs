@@ -56,7 +56,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string MasterHasDocBox { get; set; }
 #endif
         /// <summary>&quot;Code that indicates how shipping charges will be paid.| Code  | Name                | Description:                                                              || :--:  | :--                 | :--                                                                       || CAF   | Cost And Freight    | Shipper pays to point of import, conignee pays balance.                   || COL   | Freight Collect     | Consignee (with valid UPS account) pays all shipping charges              || DDP   | Delivered Duty Paid | Shipper pays shipping and duty, consignee pays the Value Added Tax (VAT)  || FOB   | Free On Board       | Shipper pays to point to export, consignee pays balance                   || PRE   | Prepaid             | Shipper pays all shipping charges                                         || SDT   | Free Domicile       | Child Shipper pays for shipping, duities and taxes                        |&quot;</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEase_MasterShipmentChgType? MasterShipmentChgType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEaseMasterShipmentChgType? MasterShipmentChgType { get; set; }
         /// <summary>Container for port of entry details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "GCCN", n => { GCCN = n.GetStringValue(); } },
                 { "MasterEUConsolidationIndicator", n => { MasterEUConsolidationIndicator = n.GetStringValue(); } },
                 { "MasterHasDocBox", n => { MasterHasDocBox = n.GetStringValue(); } },
-                { "MasterShipmentChgType", n => { MasterShipmentChgType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEase_MasterShipmentChgType>(); } },
+                { "MasterShipmentChgType", n => { MasterShipmentChgType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEaseMasterShipmentChgType>(); } },
                 { "PortOfEntry", n => { PortOfEntry = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry.CreateFromDiscriminatorValue); } },
                 { "VendorCollectIDNumberExemptIndicator", n => { VendorCollectIDNumberExemptIndicator = n.GetStringValue(); } },
             };
@@ -120,7 +120,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("GCCN", GCCN);
             writer.WriteStringValue("MasterEUConsolidationIndicator", MasterEUConsolidationIndicator);
             writer.WriteStringValue("MasterHasDocBox", MasterHasDocBox);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEase_MasterShipmentChgType>("MasterShipmentChgType", MasterShipmentChgType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEaseMasterShipmentChgType>("MasterShipmentChgType", MasterShipmentChgType);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry>("PortOfEntry", PortOfEntry);
             writer.WriteStringValue("VendorCollectIDNumberExemptIndicator", VendorCollectIDNumberExemptIndicator);
             writer.WriteAdditionalData(AdditionalData);

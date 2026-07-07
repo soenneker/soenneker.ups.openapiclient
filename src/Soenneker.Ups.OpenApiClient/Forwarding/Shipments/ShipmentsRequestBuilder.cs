@@ -34,7 +34,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ShipmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/Forwarding/shipments?request_type={request_type}&shipment_id={shipment_id}&shipper_account_number={shipper_account_number}{&manifest_format*,pickup_date*,request_manifest*}", pathParameters)
+        public ShipmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/Forwarding/shipments{?manifest_format*,pickup_date*,request_manifest*}", pathParameters)
         {
         }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ShipmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/Forwarding/shipments?request_type={request_type}&shipment_id={shipment_id}&shipper_account_number={shipper_account_number}{&manifest_format*,pickup_date*,request_manifest*}", rawUrl)
+        public ShipmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/Forwarding/shipments{?manifest_format*,pickup_date*,request_manifest*}", rawUrl)
         {
         }
         /// <summary>
@@ -177,7 +177,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/Forwarding/shipments", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -240,7 +240,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/Forwarding/shipments", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -263,7 +263,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         {
             /// <summary>The type of shipment (&quot;Air&quot; or &quot;Ocean&quot;).</summary>
             [QueryParameter("request_type")]
-            public global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.GetRequest_typeQueryParameterType? RequestType { get; set; }
+            public global::Soenneker.Ups.OpenApiClient.Models.ForwardingGetShipmentDetailsRequestTypeParameter? RequestType { get; set; }
             /// <summary>The unique identifier for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -283,7 +283,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         {
             /// <summary>The format of the manifest to be generated.</summary>
             [QueryParameter("manifest_format")]
-            public global::Soenneker.Ups.OpenApiClient.Forwarding.Shipments.PatchManifest_formatQueryParameterType? ManifestFormat { get; set; }
+            public global::Soenneker.Ups.OpenApiClient.Models.ForwardingSubmitAirShipmentManifestFormatParameter? ManifestFormat { get; set; }
             /// <summary>The &lt;a href=&quot;https://www.rfc-editor.org/rfc/rfc3339#section-5.6&quot; target=&quot;_blank&quot;&gt;RFC 3339&lt;/a&gt; scheduled pickup date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -32,10 +32,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>An array of shipment details included in the manifest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest_shipments>? Shipments { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestShipmentsItem>? Shipments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest_shipments> Shipments { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestShipmentsItem> Shipments { get; set; }
 #endif
         /// <summary>The shipper property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "manifestFormat", n => { ManifestFormat = n.GetStringValue(); } },
                 { "manifestNumber", n => { ManifestNumber = n.GetStringValue(); } },
-                { "shipments", n => { Shipments = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest_shipments>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest_shipments.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "shipments", n => { Shipments = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestShipmentsItem>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestShipmentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummary>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummary.CreateFromDiscriminatorValue); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("manifestFormat", ManifestFormat);
             writer.WriteStringValue("manifestNumber", ManifestNumber);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest_shipments>("shipments", Shipments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestShipmentsItem>("shipments", Shipments);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1>("shipper", Shipper);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummary>("summary", Summary);
         }

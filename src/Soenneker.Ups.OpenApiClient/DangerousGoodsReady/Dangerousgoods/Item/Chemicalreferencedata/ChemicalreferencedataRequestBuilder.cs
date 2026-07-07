@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.DangerousGoodsReady.Dangerousgoods.Item.Ch
         /// <summary>
         /// The Chemical Reference Data endpoint of the Dangerous Goods API allows shippers look up hazardous material reference information by ID number and shipping name of the specified regulated good.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityResponseWrapper"/></returns>
         /// <param name="body">N/A  </param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -46,11 +46,11 @@ namespace Soenneker.Ups.OpenApiClient.DangerousGoodsReady.Dangerousgoods.Item.Ch
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsReadyErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -62,7 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.DangerousGoodsReady.Dangerousgoods.Item.Ch
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsReadyErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsReadyErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Chemical Reference Data endpoint of the Dangerous Goods API allows shippers look up hazardous material reference information by ID number and shipping name of the specified regulated good.
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.DangerousGoodsReady.Dangerousgoods.Item.Ch
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.DANGEROUSGOODSUTILITYRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.DangerousgoodsutilityRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

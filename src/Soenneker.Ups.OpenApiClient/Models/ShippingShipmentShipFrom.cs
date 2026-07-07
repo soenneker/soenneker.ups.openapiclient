@@ -75,10 +75,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Tax Identification Container.  Applies to EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIDType? TaxIDType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIdType? TaxIDType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIDType TaxIDType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIdType TaxIDType { get; set; }
 #endif
         /// <summary>Vendor Information Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,7 +119,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "FaxNumber", n => { FaxNumber = n.GetStringValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
                 { "Phone", n => { Phone = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipFromPhone>(global::Soenneker.Ups.OpenApiClient.Models.ShipFromPhone.CreateFromDiscriminatorValue); } },
-                { "TaxIDType", n => { TaxIDType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIDType>(global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIDType.CreateFromDiscriminatorValue); } },
+                { "TaxIDType", n => { TaxIDType = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIdType>(global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIdType.CreateFromDiscriminatorValue); } },
                 { "TaxIdentificationNumber", n => { TaxIdentificationNumber = n.GetStringValue(); } },
                 { "VendorInfo", n => { VendorInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipFromVendorInfo>(global::Soenneker.Ups.OpenApiClient.Models.ShipFromVendorInfo.CreateFromDiscriminatorValue); } },
             };
@@ -138,7 +138,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("Name", Name);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipFromPhone>("Phone", Phone);
             writer.WriteStringValue("TaxIdentificationNumber", TaxIdentificationNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIDType>("TaxIDType", TaxIDType);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipFromTaxIdType>("TaxIDType", TaxIDType);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipFromVendorInfo>("VendorInfo", VendorInfo);
             writer.WriteAdditionalData(AdditionalData);
         }

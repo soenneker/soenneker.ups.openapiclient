@@ -64,16 +64,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string DropoffTime { get; set; }
 #endif
         /// <summary>FreightType - This is freight type of the shipment piece. Possible values PALLET, LOOSE.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_freightType? FreightType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailFreightType? FreightType { get; set; }
         /// <summary>Boolean value which indicates whether the shipment uses metric.</summary>
         public bool? IsMetric { get; set; }
         /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Item>? Items { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ItemValue>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Item> Items { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ItemValue> Items { get; set; }
 #endif
         /// <summary>Description of the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string OrderDescription { get; set; }
 #endif
         /// <summary>Payment method used for the shipment (e.g., PPD, COL, THD).</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_paymentType? PaymentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPaymentType? PaymentType { get; set; }
         /// <summary>Scheduled pickup date in YYYY-MM-DD format.</summary>
         public Date? PickupDate { get; set; }
         /// <summary>Time when the shipment will be ready for pickup (HH:MM:SS in 24-hour format).</summary>
@@ -100,7 +100,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Boolean value which indicates whether a pickup request is included.</summary>
         public bool? RequestPickup { get; set; }
         /// <summary>Type of the service requested (e.g., AM, AMG, D2, D2G, DF, DFG, CA, EC, CX).</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_serviceType? ServiceType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailServiceType? ServiceType { get; set; }
         /// <summary>Shipment number associated with the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,16 +150,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "dropoffTime", n => { DropoffTime = n.GetStringValue(); } },
-                { "freightType", n => { FreightType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_freightType>(); } },
+                { "freightType", n => { FreightType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailFreightType>(); } },
                 { "isMetric", n => { IsMetric = n.GetBoolValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Item>(global::Soenneker.Ups.OpenApiClient.Models.Item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ItemValue>(global::Soenneker.Ups.OpenApiClient.Models.ItemValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "orderDescription", n => { OrderDescription = n.GetStringValue(); } },
-                { "paymentType", n => { PaymentType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_paymentType>(); } },
+                { "paymentType", n => { PaymentType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPaymentType>(); } },
                 { "pickupDate", n => { PickupDate = n.GetDateValue(); } },
                 { "readyTime", n => { ReadyTime = n.GetStringValue(); } },
                 { "requestBoL", n => { RequestBoL = n.GetBoolValue(); } },
                 { "requestPickup", n => { RequestPickup = n.GetBoolValue(); } },
-                { "serviceType", n => { ServiceType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_serviceType>(); } },
+                { "serviceType", n => { ServiceType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailServiceType>(); } },
                 { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
                 { "shipperReference", n => { ShipperReference = n.GetStringValue(); } },
                 { "weight", n => { Weight = n.GetDecimalValue(); } },
@@ -178,16 +178,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteStringValue("dropoffTime", DropoffTime);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_freightType>("freightType", FreightType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailFreightType>("freightType", FreightType);
             writer.WriteBoolValue("isMetric", IsMetric);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Item>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ItemValue>("items", Items);
             writer.WriteStringValue("orderDescription", OrderDescription);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_paymentType>("paymentType", PaymentType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPaymentType>("paymentType", PaymentType);
             writer.WriteDateValue("pickupDate", PickupDate);
             writer.WriteStringValue("readyTime", ReadyTime);
             writer.WriteBoolValue("requestBoL", RequestBoL);
             writer.WriteBoolValue("requestPickup", RequestPickup);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail_serviceType>("serviceType", ServiceType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailServiceType>("serviceType", ServiceType);
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
             writer.WriteStringValue("shipperReference", ShipperReference);
             writer.WriteDecimalValue("weight", Weight);

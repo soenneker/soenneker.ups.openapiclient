@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster Master { get; set; }
 #endif
         /// <summary>Consolidated shipment types.Valid values:- TRADEDIRECTAIR =  TradeDirect Air - consolidation, custom clearance, deconsolidation and delivery to multiple addresses                     within destination country, with Airport-to-door or door-to-door.                    - TRADEDIRECTOCEAN = TradeDirect Ocean - consolidation, ocean transportation, customs clearance, deconsolidation and delivery                      to multiple addresses within a destination country, with port-to-door and door-to-door service from shipper to consignee. Available from more than 70 ports.                     - TRADEDIRECTCROSSBORDER = TradeDirect CrossBoarder - consolidation, customs clearance, deconsolidation and delivery to multiple addresses                           within the destination country, with door-to-door service across North American borders.                </summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect_ShipmentType? ShipmentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirectShipmentType? ShipmentType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect"/> and sets the default values.
         /// </summary>
@@ -78,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "CurrencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "GeneralDescriptionOfGoods", n => { GeneralDescriptionOfGoods = n.GetStringValue(); } },
                 { "Master", n => { Master = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster>(global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster.CreateFromDiscriminatorValue); } },
-                { "ShipmentType", n => { ShipmentType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect_ShipmentType>(); } },
+                { "ShipmentType", n => { ShipmentType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirectShipmentType>(); } },
             };
         }
         /// <summary>
@@ -92,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("CurrencyCode", CurrencyCode);
             writer.WriteStringValue("GeneralDescriptionOfGoods", GeneralDescriptionOfGoods);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster>("Master", Master);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect_ShipmentType>("ShipmentType", ShipmentType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirectShipmentType>("ShipmentType", ShipmentType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

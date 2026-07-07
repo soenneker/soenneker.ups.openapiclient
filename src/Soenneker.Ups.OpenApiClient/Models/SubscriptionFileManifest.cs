@@ -361,10 +361,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Information about Hold for Pickup UPS Access Point Address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ManifestUAPAddress? UAPAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ManifestUapAddress? UAPAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ManifestUAPAddress UAPAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ManifestUapAddress UAPAddress { get; set; }
 #endif
         /// <summary>&quot;Y&quot; Indicates Shipment is Cash on Delivery in Direct to Retail</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -482,7 +482,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "Shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ManifestShipper>(global::Soenneker.Ups.OpenApiClient.Models.ManifestShipper.CreateFromDiscriminatorValue); } },
                 { "SpecialInstructions", n => { SpecialInstructions = n.GetStringValue(); } },
                 { "SundayNonPremiumCommercialDeliveryIndicator", n => { SundayNonPremiumCommercialDeliveryIndicator = n.GetStringValue(); } },
-                { "UAPAddress", n => { UAPAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ManifestUAPAddress>(global::Soenneker.Ups.OpenApiClient.Models.ManifestUAPAddress.CreateFromDiscriminatorValue); } },
+                { "UAPAddress", n => { UAPAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ManifestUapAddress>(global::Soenneker.Ups.OpenApiClient.Models.ManifestUapAddress.CreateFromDiscriminatorValue); } },
                 { "UPSAccessPointCODIndicator", n => { UPSAccessPointCODIndicator = n.GetStringValue(); } },
                 { "UPSPremierAccessorialIndicator", n => { UPSPremierAccessorialIndicator = n.GetStringValue(); } },
                 { "UPSPremierCategoryCode", n => { UPSPremierCategoryCode = n.GetStringValue(); } },
@@ -541,7 +541,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ManifestShipTo>("ShipTo", ShipTo);
             writer.WriteStringValue("SpecialInstructions", SpecialInstructions);
             writer.WriteStringValue("SundayNonPremiumCommercialDeliveryIndicator", SundayNonPremiumCommercialDeliveryIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ManifestUAPAddress>("UAPAddress", UAPAddress);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ManifestUapAddress>("UAPAddress", UAPAddress);
             writer.WriteStringValue("UPSAccessPointCODIndicator", UPSAccessPointCODIndicator);
             writer.WriteStringValue("UPScarbonneutral", UPScarbonneutral);
             writer.WriteStringValue("UPSPremierAccessorialIndicator", UPSPremierAccessorialIndicator);

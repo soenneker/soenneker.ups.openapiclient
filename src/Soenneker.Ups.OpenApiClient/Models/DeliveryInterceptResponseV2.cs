@@ -57,11 +57,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A map containing warning codes and descriptions as key/value pairs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2_warnings? Warnings { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty? Warnings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2_warnings Warnings { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty Warnings { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2"/> and sets the default values.
+        /// </summary>
+        public DeliveryInterceptResponseV2()
+        {
+            Success = false;
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -86,7 +93,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "subStatusCode", n => { SubStatusCode = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
                 { "transactionId", n => { TransactionId = n.GetStringValue(); } },
-                { "warnings", n => { Warnings = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2_warnings>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2_warnings.CreateFromDiscriminatorValue); } },
+                { "warnings", n => { Warnings = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -102,7 +109,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("subStatusCode", SubStatusCode);
             writer.WriteBoolValue("success", Success);
             writer.WriteStringValue("transactionId", TransactionId);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2_warnings>("warnings", Warnings);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty>("warnings", Warnings);
         }
     }
 }

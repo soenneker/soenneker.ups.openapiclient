@@ -55,14 +55,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<string> Plt { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DocumentResponseDocuments"/> and sets the default values.
         /// </summary>
@@ -93,7 +85,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "cci", n => { Cci = n.GetStringValue(); } },
                 { "pkgplt", n => { Pkgplt = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "plt", n => { Plt = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -108,7 +99,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("cci", Cci);
             writer.WriteCollectionOfPrimitiveValues<string>("pkgplt", Pkgplt);
             writer.WriteCollectionOfPrimitiveValues<string>("plt", Plt);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

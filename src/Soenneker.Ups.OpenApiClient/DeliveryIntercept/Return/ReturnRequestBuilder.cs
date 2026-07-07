@@ -16,15 +16,15 @@ namespace Soenneker.Ups.OpenApiClient.DeliveryIntercept.Return
     public partial class ReturnRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.DeliveryIntercept.return.item collection</summary>
-        /// <param name="position">The number being tracked.  Each method defines if required.</param>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Return.Item.WithTracking_numberItemRequestBuilder"/></returns>
-        public global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Return.Item.WithTracking_numberItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Return.Item.WithTrackingNumberItemRequestBuilder"/></returns>
+        public global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Return.Item.WithTrackingNumberItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("tracking_number", position);
-                return new global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Return.Item.WithTracking_numberItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("trackingNumber", position);
+                return new global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Return.Item.WithTrackingNumberItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

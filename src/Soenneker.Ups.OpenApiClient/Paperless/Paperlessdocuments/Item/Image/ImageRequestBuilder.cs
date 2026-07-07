@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.Image
         /// <summary>
         /// The Paperless Document API web service allows the users to upload their own customized trade documents for customs clearance to Forms History. 
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentResponseWrapper"/></returns>
         /// <param name="body">N/A  </param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -46,11 +46,11 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.Image
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PaperlessErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -62,7 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.Image
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.PaperlessErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.PaperlessErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Paperless Document API web service allows the users to upload their own customized trade documents for customs clearance to Forms History. 
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.Image
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentRequestWrapper body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

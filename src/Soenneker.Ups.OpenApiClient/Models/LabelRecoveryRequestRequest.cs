@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container that identifies transactions between client and server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LRRequestTransactionReference? TransactionReference { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrRequestTransactionReference? TransactionReference { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LRRequestTransactionReference TransactionReference { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrRequestTransactionReference TransactionReference { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest"/> and sets the default values.
@@ -66,7 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "RequestOption", n => { RequestOption = n.GetStringValue(); } },
                 { "SubVersion", n => { SubVersion = n.GetStringValue(); } },
-                { "TransactionReference", n => { TransactionReference = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LRRequestTransactionReference>(global::Soenneker.Ups.OpenApiClient.Models.LRRequestTransactionReference.CreateFromDiscriminatorValue); } },
+                { "TransactionReference", n => { TransactionReference = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LrRequestTransactionReference>(global::Soenneker.Ups.OpenApiClient.Models.LrRequestTransactionReference.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -78,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("RequestOption", RequestOption);
             writer.WriteStringValue("SubVersion", SubVersion);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LRRequestTransactionReference>("TransactionReference", TransactionReference);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LrRequestTransactionReference>("TransactionReference", TransactionReference);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

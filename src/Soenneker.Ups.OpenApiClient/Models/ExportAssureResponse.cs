@@ -16,18 +16,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The perfStats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats? PerfStats { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? PerfStats { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats PerfStats { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats PerfStats { get; set; }
 #endif
         /// <summary>This object contains metadata about the shipment and includes the response objects for each of the three operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse Shipment { get; set; }
 #endif
         /// <summary>The unique, reference identifier that correlates an API request with its response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,8 +55,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "perfStats", n => { PerfStats = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats>(global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats.CreateFromDiscriminatorValue); } },
-                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse>(global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse.CreateFromDiscriminatorValue); } },
+                { "perfStats", n => { PerfStats = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats>(global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats.CreateFromDiscriminatorValue); } },
+                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse>(global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse.CreateFromDiscriminatorValue); } },
                 { "transID", n => { TransID = n.GetStringValue(); } },
             };
         }
@@ -67,8 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ALPerfStats>("perfStats", PerfStats);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UPSExportAssureShipmentResponse>("shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats>("perfStats", PerfStats);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
         }
     }

@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CostCenterBarcodeIndicator { get; set; }
 #endif
-        /// <summary>&quot;The Description of Goods for the shipment. Applies to international and domestic shipments. Provide a detailed description of items being shipped for documents and non-documents. Examples: \&quot;annual reports\&quot; and \&quot;9 mm steel screws\&quot;.  Required if all of the listed conditions are true: ShipFrom and ShipTo countries or territories are not the same; The packaging type is not UPS Letter; The ShipFrom and or ShipTo countries or territories are not in the European Union or the ShipFrom and ShipTo countries or territories are both in the European Union and the shipments service type is not UPS Standard.&quot;</summary>
+        /// <summary>&quot;The Description of Goods for the shipment. Applies to international and domestic shipments. Provide a detailed description of items being shipped for documents and non-documents. Examples: \&quot;annual reports\&quot; and \&quot;9 mm steel screws\&quot;.  Required if all of the listed conditions are true: ShipFrom and ShipTo countries or territories are not the same; The packaging type is not UPS Letter; The ShipFrom and or ShipTo countries or territories are not in the European Union or the ShipFrom and ShipTo countries or territories are both in the European Union and the shipments service type is not UPS Standard. The Description of Goods field is required for all UAE shipments, including Import, Export, and Domestic shipments. This requirement applies to both Document and Non‑Document shipments.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -58,10 +58,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>DGSignatoryInfo Container  DGPaperImage will be returned if DGSignatoryInfo container present</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDGSignatoryInfo? DGSignatoryInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDgSignatoryInfo? DGSignatoryInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDGSignatoryInfo DGSignatoryInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDgSignatoryInfo DGSignatoryInfo { get; set; }
 #endif
         /// <summary>Indicates a shipment contains written, typed, or printed communication of no commercial value. If DocumentsOnly is not specified then it implies that the shipment contains non documents or documents of commercial value. Default is a shipment contains non- documents or documents of commercial value.  This is an empty tag, any value inside is ignored. Valid only for shipments with different origin and destination countries or territories. The origin country or territory is not US, and the destination country or territory is not CA, PR or MX.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,10 +82,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to hold the Payment information for the Ground Freight Pricing Shipments.  Required for Ground Freight Pricing Shipments only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFRSPaymentInformation? FRSPaymentInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFrsPaymentInformation? FRSPaymentInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFRSPaymentInformation FRSPaymentInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFrsPaymentInformation FRSPaymentInformation { get; set; }
 #endif
         /// <summary>Container used to define the properties required for GlobalTaxID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,6 +102,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #nullable restore
 #else
         public string GoodsNotInFreeCirculationIndicator { get; set; }
+#endif
+        /// <summary>It is required to Identify the shipment as a Home Healthcare shipment. When present, triggers healthcare eligibility check and enables package-level healthcare processing. Valid value is 001.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? HealthcareIdentifier { get; set; }
+#nullable restore
+#else
+        public string HealthcareIdentifier { get; set; }
 #endif
         /// <summary>Container to hold InvoiceLineTotal Information.  Required for forward shipments whose origin is the US and destination is Puerto Rico or Canada. Not available for any other shipments. FOR OTHER DESTINATIONS the InvoiceLineTotal in the International Forms Container must be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -412,13 +420,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "ConsigneeType", n => { ConsigneeType = n.GetStringValue(); } },
                 { "CostCenter", n => { CostCenter = n.GetStringValue(); } },
                 { "CostCenterBarcodeIndicator", n => { CostCenterBarcodeIndicator = n.GetStringValue(); } },
-                { "DGSignatoryInfo", n => { DGSignatoryInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDGSignatoryInfo>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentDGSignatoryInfo.CreateFromDiscriminatorValue); } },
+                { "DGSignatoryInfo", n => { DGSignatoryInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDgSignatoryInfo>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentDgSignatoryInfo.CreateFromDiscriminatorValue); } },
                 { "Description", n => { Description = n.GetStringValue(); } },
                 { "DocumentsOnlyIndicator", n => { DocumentsOnlyIndicator = n.GetStringValue(); } },
-                { "FRSPaymentInformation", n => { FRSPaymentInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFRSPaymentInformation>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFRSPaymentInformation.CreateFromDiscriminatorValue); } },
+                { "FRSPaymentInformation", n => { FRSPaymentInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFrsPaymentInformation>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFrsPaymentInformation.CreateFromDiscriminatorValue); } },
                 { "FreightShipmentInformation", n => { FreightShipmentInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFreightShipmentInformation>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFreightShipmentInformation.CreateFromDiscriminatorValue); } },
                 { "GlobalTaxInformation", n => { GlobalTaxInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentGlobalTaxInformation>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentGlobalTaxInformation.CreateFromDiscriminatorValue); } },
                 { "GoodsNotInFreeCirculationIndicator", n => { GoodsNotInFreeCirculationIndicator = n.GetStringValue(); } },
+                { "HealthcareIdentifier", n => { HealthcareIdentifier = n.GetStringValue(); } },
                 { "InvoiceLineTotal", n => { InvoiceLineTotal = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentInvoiceLineTotal>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentInvoiceLineTotal.CreateFromDiscriminatorValue); } },
                 { "IrregularIndicator", n => { IrregularIndicator = n.GetStringValue(); } },
                 { "Locale", n => { Locale = n.GetStringValue(); } },
@@ -468,12 +477,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("CostCenter", CostCenter);
             writer.WriteStringValue("CostCenterBarcodeIndicator", CostCenterBarcodeIndicator);
             writer.WriteStringValue("Description", Description);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDGSignatoryInfo>("DGSignatoryInfo", DGSignatoryInfo);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDgSignatoryInfo>("DGSignatoryInfo", DGSignatoryInfo);
             writer.WriteStringValue("DocumentsOnlyIndicator", DocumentsOnlyIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFreightShipmentInformation>("FreightShipmentInformation", FreightShipmentInformation);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFRSPaymentInformation>("FRSPaymentInformation", FRSPaymentInformation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFrsPaymentInformation>("FRSPaymentInformation", FRSPaymentInformation);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentGlobalTaxInformation>("GlobalTaxInformation", GlobalTaxInformation);
             writer.WriteStringValue("GoodsNotInFreeCirculationIndicator", GoodsNotInFreeCirculationIndicator);
+            writer.WriteStringValue("HealthcareIdentifier", HealthcareIdentifier);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentInvoiceLineTotal>("InvoiceLineTotal", InvoiceLineTotal);
             writer.WriteStringValue("IrregularIndicator", IrregularIndicator);
             writer.WriteStringValue("Locale", Locale);

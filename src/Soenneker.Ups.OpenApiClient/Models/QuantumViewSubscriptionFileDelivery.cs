@@ -41,10 +41,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for cash on delivery (COD) information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCOD? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod? COD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCOD COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod COD { get; set; }
 #endif
         /// <summary>Date that the package is delivered. Date format is YYYYMMDD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,7 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "AccessPointLocationID", n => { AccessPointLocationID = n.GetStringValue(); } },
                 { "ActivityLocation", n => { ActivityLocation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation.CreateFromDiscriminatorValue); } },
                 { "BillToAccount", n => { BillToAccount = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount.CreateFromDiscriminatorValue); } },
-                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCOD>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCOD.CreateFromDiscriminatorValue); } },
+                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod.CreateFromDiscriminatorValue); } },
                 { "Date", n => { Date = n.GetStringValue(); } },
                 { "DeliveryLocation", n => { DeliveryLocation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation.CreateFromDiscriminatorValue); } },
                 { "DriverRelease", n => { DriverRelease = n.GetStringValue(); } },
@@ -168,7 +168,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("AccessPointLocationID", AccessPointLocationID);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation>("ActivityLocation", ActivityLocation);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount>("BillToAccount", BillToAccount);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCOD>("COD", COD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod>("COD", COD);
             writer.WriteStringValue("Date", Date);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation>("DeliveryLocation", DeliveryLocation);
             writer.WriteStringValue("DriverRelease", DriverRelease);

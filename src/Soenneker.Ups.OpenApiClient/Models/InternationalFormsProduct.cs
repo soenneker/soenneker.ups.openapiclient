@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The DDSReferenceNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductDDSReferenceNumber? DDSReferenceNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductDdsReferenceNumber? DDSReferenceNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductDDSReferenceNumber DDSReferenceNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductDdsReferenceNumber DDSReferenceNumber { get; set; }
 #endif
         /// <summary>Description of the product.  Applies to all International Forms. Optional for Partial Invoice. Must be present at least once and can occur for a maximum of 3 times.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,10 +42,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Required for EEI form.  Applies to EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation? EEIInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation? EEIInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation EEIInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation EEIInformation { get; set; }
 #endif
         /// <summary>Container tag for determining whether or not to exclude product information from a particular form.  If this container is not present we assume that the DEFAULT is selected which is &quot;none&quot; and all products will appear on all forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -217,9 +217,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "CommodityCode", n => { CommodityCode = n.GetStringValue(); } },
-                { "DDSReferenceNumber", n => { DDSReferenceNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductDDSReferenceNumber>(global::Soenneker.Ups.OpenApiClient.Models.ProductDDSReferenceNumber.CreateFromDiscriminatorValue); } },
+                { "DDSReferenceNumber", n => { DDSReferenceNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductDdsReferenceNumber>(global::Soenneker.Ups.OpenApiClient.Models.ProductDdsReferenceNumber.CreateFromDiscriminatorValue); } },
                 { "Description", n => { Description = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "EEIInformation", n => { EEIInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation>(global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation.CreateFromDiscriminatorValue); } },
+                { "EEIInformation", n => { EEIInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation>(global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation.CreateFromDiscriminatorValue); } },
                 { "ExcludeFromForm", n => { ExcludeFromForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm>(global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm.CreateFromDiscriminatorValue); } },
                 { "ExportType", n => { ExportType = n.GetStringValue(); } },
                 { "JointProductionIndicator", n => { JointProductionIndicator = n.GetStringValue(); } },
@@ -248,9 +248,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("CommodityCode", CommodityCode);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductDDSReferenceNumber>("DDSReferenceNumber", DDSReferenceNumber);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductDdsReferenceNumber>("DDSReferenceNumber", DDSReferenceNumber);
             writer.WriteCollectionOfPrimitiveValues<string>("Description", Description);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation>("EEIInformation", EEIInformation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation>("EEIInformation", EEIInformation);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm>("ExcludeFromForm", ExcludeFromForm);
             writer.WriteStringValue("ExportType", ExportType);
             writer.WriteStringValue("JointProductionIndicator", JointProductionIndicator);

@@ -50,10 +50,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The container of the COD Turn In Page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCODTurnInPage? CODTurnInPage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage? CODTurnInPage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCODTurnInPage CODTurnInPage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage CODTurnInPage { get; set; }
 #endif
         /// <summary>Container for the High Value reports when forward shipments have declared value between $999 and $50,000 USD. \nTwo copies of high value report needs to be pointed out.**NOTE:** For versions &gt;= v2409, this element will always be returned as an array. For requests using versions &lt; v2409, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,10 +90,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Ground Freight Pricing Shipment data container. Ground Freight Pricing shipment data is only guaranteed to be returned for Ground Freight Pricing shipments only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFRSShipmentData? FRSShipmentData { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData? FRSShipmentData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFRSShipmentData FRSShipmentData { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData FRSShipmentData { get; set; }
 #endif
         /// <summary>Global Consolidation Carton Number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -268,11 +268,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "BillOfLading", n => { BillOfLading = n.GetStringValue(); } },
                 { "BillableWeightCalculationMethod", n => { BillableWeightCalculationMethod = n.GetStringValue(); } },
                 { "BillingWeight", n => { BillingWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight.CreateFromDiscriminatorValue); } },
-                { "CODTurnInPage", n => { CODTurnInPage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCODTurnInPage>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCODTurnInPage.CreateFromDiscriminatorValue); } },
+                { "CODTurnInPage", n => { CODTurnInPage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage.CreateFromDiscriminatorValue); } },
                 { "ControlLogReceipt", n => { ControlLogReceipt = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "DGPaperImage", n => { DGPaperImage = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Disclaimer", n => { Disclaimer = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "FRSShipmentData", n => { FRSShipmentData = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFRSShipmentData>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFRSShipmentData.CreateFromDiscriminatorValue); } },
+                { "FRSShipmentData", n => { FRSShipmentData = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData.CreateFromDiscriminatorValue); } },
                 { "Form", n => { Form = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm.CreateFromDiscriminatorValue); } },
                 { "GCCN", n => { GCCN = n.GetStringValue(); } },
                 { "HighValueReport", n => { HighValueReport = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport.CreateFromDiscriminatorValue); } },
@@ -305,12 +305,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("BillableWeightCalculationMethod", BillableWeightCalculationMethod);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight>("BillingWeight", BillingWeight);
             writer.WriteStringValue("BillOfLading", BillOfLading);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCODTurnInPage>("CODTurnInPage", CODTurnInPage);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage>("CODTurnInPage", CODTurnInPage);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt>("ControlLogReceipt", ControlLogReceipt);
             writer.WriteCollectionOfPrimitiveValues<string>("DGPaperImage", DGPaperImage);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer>("Disclaimer", Disclaimer);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm>("Form", Form);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFRSShipmentData>("FRSShipmentData", FRSShipmentData);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData>("FRSShipmentData", FRSShipmentData);
             writer.WriteStringValue("GCCN", GCCN);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport>("HighValueReport", HighValueReport);
             writer.WriteStringValue("LabelURL", LabelURL);

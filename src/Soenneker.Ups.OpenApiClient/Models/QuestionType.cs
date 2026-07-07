@@ -10,7 +10,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         [EnumMember(Value = "multiple_choice")]
         #pragma warning disable CS1591
-        Multiple_choice,
+        MultipleChoice,
         #pragma warning restore CS1591
     }
 }

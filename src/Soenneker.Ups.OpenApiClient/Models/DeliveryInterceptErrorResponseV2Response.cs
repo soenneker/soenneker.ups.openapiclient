@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Will only be returned if the HTTP statusCode isn&apos;t &apos;200&apos;(success). A list of one or more validation errors. On the API versionv3 the first element of the errors array contains the statusCode and scoring statusMessage field. This array is unbounded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response_errors>? Errors { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2ResponseErrorsItem>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response_errors> Errors { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2ResponseErrorsItem> Errors { get; set; }
 #endif
         /// <summary>API response status code, Internal code regarding the success or failure of the operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,6 +54,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public DeliveryInterceptErrorResponseV2Response()
         {
             AdditionalData = new Dictionary<string, object>();
+            Success = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -73,7 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response_errors>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response_errors.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2ResponseErrorsItem>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "statusCode", n => { StatusCode = n.GetStringValue(); } },
                 { "subStatusCode", n => { SubStatusCode = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
@@ -87,7 +88,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2Response_errors>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptErrorResponseV2ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("statusCode", StatusCode);
             writer.WriteStringValue("subStatusCode", SubStatusCode);
             writer.WriteBoolValue("success", Success);

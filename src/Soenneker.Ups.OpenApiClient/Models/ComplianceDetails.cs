@@ -14,7 +14,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class ComplianceDetails : IParsable
     {
         /// <summary>Whether the compliance assessment regards imports or exports</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails_categoryType? CategoryType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType? CategoryType { get; set; }
         /// <summary>The controlTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,7 +41,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "categoryType", n => { CategoryType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails_categoryType>(); } },
+                { "categoryType", n => { CategoryType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType>(); } },
                 { "controlTypes", n => { ControlTypes = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes>(global::Soenneker.Ups.OpenApiClient.Models.ControlTypes.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -52,7 +52,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails_categoryType>("categoryType", CategoryType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType>("categoryType", CategoryType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes>("controlTypes", ControlTypes);
         }
     }

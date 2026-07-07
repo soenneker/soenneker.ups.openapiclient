@@ -74,6 +74,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public DeliveryInterceptChargeDetailV2()
         {
             AdditionalData = new Dictionary<string, object>();
+            DisplayShipperPaidInterceptCharges = false;
+            ShipperPaidInterceptCharges = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

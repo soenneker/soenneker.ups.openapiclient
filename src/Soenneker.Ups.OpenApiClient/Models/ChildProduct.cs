@@ -42,10 +42,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Required for EEI form.  Applies to EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation? EEIInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation? EEIInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation EEIInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation EEIInformation { get; set; }
 #endif
         /// <summary>Container tag for determining whether or not to exclude product information from a particular form.  If this container is not present we assume that the DEFAULT is selected which is &quot;none&quot; and all products will appear on all forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,7 +176,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string TaxesPaid { get; set; }
 #endif
         /// <summary>Unit of Measure for the product being shipped.Valid values are : - BA = Barrel - BE = Bundle - BG = Bag - BH =Bunch - BOX = Box - BT = Bolt - LB =Pound - LBS = Pounds - L = Liter - M = Meter - NMB = Number - PA = Packet - BU = Butt - CI =Canister - CM =Centimeter - CON = Container - CR = Crate - CS =Case - CT =Carton - CY =Cylinder - DOZ = Dozen - EA = Each - EN =Envelope - FT =Feet - KG =Kilogram - KGS = Kilograms - PAL = Pallet - PC = Piece - PCS = Pieces - PF = Proof Liters - OTH = Other - PKG = Package - PR = Pair - PRS = Pairs - RL = Roll - SET = Set - SME = Square Meters - SYD = Square Yards - TU =Tube - YD =Yard</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildProduct_UnitOfMeasure? UnitOfMeasure { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildProductUnitOfMeasure? UnitOfMeasure { get; set; }
         /// <summary>Price per unit of the product being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -221,7 +221,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "CommodityCode", n => { CommodityCode = n.GetStringValue(); } },
                 { "CountryOriginCode", n => { CountryOriginCode = n.GetStringValue(); } },
                 { "Description", n => { Description = n.GetStringValue(); } },
-                { "EEIInformation", n => { EEIInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation>(global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation.CreateFromDiscriminatorValue); } },
+                { "EEIInformation", n => { EEIInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation>(global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation.CreateFromDiscriminatorValue); } },
                 { "ExcludeFromForm", n => { ExcludeFromForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm>(global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm.CreateFromDiscriminatorValue); } },
                 { "ExportType", n => { ExportType = n.GetStringValue(); } },
                 { "JointProductionIndicator", n => { JointProductionIndicator = n.GetStringValue(); } },
@@ -238,7 +238,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "SEDTotalValue", n => { SEDTotalValue = n.GetStringValue(); } },
                 { "ScheduleB", n => { ScheduleB = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB>(global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB.CreateFromDiscriminatorValue); } },
                 { "TaxesPaid", n => { TaxesPaid = n.GetStringValue(); } },
-                { "UnitOfMeasure", n => { UnitOfMeasure = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChildProduct_UnitOfMeasure>(); } },
+                { "UnitOfMeasure", n => { UnitOfMeasure = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChildProductUnitOfMeasure>(); } },
                 { "UnitPrice", n => { UnitPrice = n.GetStringValue(); } },
                 { "VehicleID", n => { VehicleID = n.GetStringValue(); } },
             };
@@ -253,7 +253,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("CommodityCode", CommodityCode);
             writer.WriteStringValue("CountryOriginCode", CountryOriginCode);
             writer.WriteStringValue("Description", Description);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEEIInformation>("EEIInformation", EEIInformation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation>("EEIInformation", EEIInformation);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm>("ExcludeFromForm", ExcludeFromForm);
             writer.WriteStringValue("ExportType", ExportType);
             writer.WriteStringValue("JointProductionIndicator", JointProductionIndicator);
@@ -270,7 +270,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB>("ScheduleB", ScheduleB);
             writer.WriteStringValue("SEDTotalValue", SEDTotalValue);
             writer.WriteStringValue("TaxesPaid", TaxesPaid);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChildProduct_UnitOfMeasure>("UnitOfMeasure", UnitOfMeasure);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChildProductUnitOfMeasure>("UnitOfMeasure", UnitOfMeasure);
             writer.WriteStringValue("UnitPrice", UnitPrice);
             writer.WriteStringValue("VehicleID", VehicleID);
             writer.WriteAdditionalData(AdditionalData);

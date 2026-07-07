@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Holds status of DCR/DCO availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDCRAvailability? DCRAvailability { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability? DCRAvailability { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDCRAvailability DCRAvailability { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability DCRAvailability { get; set; }
 #endif
         /// <summary>Holds status of shipping availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "DCRAvailability", n => { DCRAvailability = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDCRAvailability>(global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDCRAvailability.CreateFromDiscriminatorValue); } },
+                { "DCRAvailability", n => { DCRAvailability = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability>(global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability.CreateFromDiscriminatorValue); } },
                 { "ShippingAvailability", n => { ShippingAvailability = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability>(global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDCRAvailability>("DCRAvailability", DCRAvailability);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability>("DCRAvailability", DCRAvailability);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability>("ShippingAvailability", ShippingAvailability);
             writer.WriteAdditionalData(AdditionalData);
         }

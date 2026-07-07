@@ -17,7 +17,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "FTA")]
         #pragma warning disable CS1591
-        FTA,
+        Fta,
         #pragma warning restore CS1591
         [EnumMember(Value = "Value")]
         #pragma warning disable CS1591
@@ -25,7 +25,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "HTS")]
         #pragma warning disable CS1591
-        HTS,
+        Hts,
         #pragma warning restore CS1591
         [EnumMember(Value = "Quantity")]
         #pragma warning disable CS1591
@@ -37,7 +37,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "HTS PGA")]
         #pragma warning disable CS1591
-        HTSPGA,
+        HtsPga,
         #pragma warning restore CS1591
     }
 }

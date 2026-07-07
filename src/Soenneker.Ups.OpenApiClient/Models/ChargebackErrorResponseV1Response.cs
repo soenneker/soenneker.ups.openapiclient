@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>List of error objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1Response_errors>? Errors { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1ResponseErrorsItem>? Errors { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1Response_errors> Errors { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1ResponseErrorsItem> Errors { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1Response"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1Response_errors>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1Response_errors.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1ResponseErrorsItem>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1Response_errors>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1ResponseErrorsItem>("errors", Errors);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

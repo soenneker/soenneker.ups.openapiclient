@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The container for DocumentID(s).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentID? FormsHistoryDocumentID { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentId? FormsHistoryDocumentID { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentID FormsHistoryDocumentID { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentId FormsHistoryDocumentID { get; set; }
 #endif
         /// <summary>PRQ Confirmation being specified by client. Required for freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,7 +113,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "FormsGroupID", n => { FormsGroupID = n.GetStringValue(); } },
-                { "FormsHistoryDocumentID", n => { FormsHistoryDocumentID = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentID>(global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentID.CreateFromDiscriminatorValue); } },
+                { "FormsHistoryDocumentID", n => { FormsHistoryDocumentID = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentId>(global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentId.CreateFromDiscriminatorValue); } },
                 { "PRQConfirmationNumber", n => { PRQConfirmationNumber = n.GetStringValue(); } },
                 { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestRequest.CreateFromDiscriminatorValue); } },
                 { "ShipmentDateAndTime", n => { ShipmentDateAndTime = n.GetStringValue(); } },
@@ -131,7 +131,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("FormsGroupID", FormsGroupID);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentID>("FormsHistoryDocumentID", FormsHistoryDocumentID);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestFormsHistoryDocumentId>("FormsHistoryDocumentID", FormsHistoryDocumentID);
             writer.WriteStringValue("PRQConfirmationNumber", PRQConfirmationNumber);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequestRequest>("Request", Request);
             writer.WriteStringValue("ShipmentDateAndTime", ShipmentDateAndTime);

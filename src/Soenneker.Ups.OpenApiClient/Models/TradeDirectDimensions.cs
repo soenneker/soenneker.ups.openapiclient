@@ -20,7 +20,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Length of the package/ltl.</summary>
         public double? Length { get; set; }
         /// <summary>&quot;The code associated with unit of measurement. The requested code must be valid for the shipper country or territory.| Code  | Description || :--:  | :--         || IN    | Inches      || CM    | Centimeters |&quot;</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensions_unitOfMeasurement? UnitOfMeasurement { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensionsUnitOfMeasurement? UnitOfMeasurement { get; set; }
         /// <summary>Width of the package/ltl.</summary>
         public double? Width { get; set; }
         /// <summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "height", n => { Height = n.GetDoubleValue(); } },
                 { "length", n => { Length = n.GetDoubleValue(); } },
-                { "unitOfMeasurement", n => { UnitOfMeasurement = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensions_unitOfMeasurement>(); } },
+                { "unitOfMeasurement", n => { UnitOfMeasurement = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensionsUnitOfMeasurement>(); } },
                 { "width", n => { Width = n.GetDoubleValue(); } },
             };
         }
@@ -63,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("height", Height);
             writer.WriteDoubleValue("length", Length);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensions_unitOfMeasurement>("unitOfMeasurement", UnitOfMeasurement);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensionsUnitOfMeasurement>("unitOfMeasurement", UnitOfMeasurement);
             writer.WriteDoubleValue("width", Width);
             writer.WriteAdditionalData(AdditionalData);
         }

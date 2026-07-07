@@ -23,14 +23,14 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments
         }
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.TradeDirect.masterShipments.item collection</summary>
         /// <param name="position">The unique shipment identifier (USI) is used to create Master, LTL and Child shipments. Used for Freight shipments.</param>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.UsiNumberItemRequestBuilder"/></returns>
-        public global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.UsiNumberItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.WithUsiNumberItemRequestBuilder"/></returns>
+        public global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.WithUsiNumberItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("usi%2Dnumber", position);
-                return new global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.UsiNumberItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("usiNumber", position);
+                return new global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.WithUsiNumberItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

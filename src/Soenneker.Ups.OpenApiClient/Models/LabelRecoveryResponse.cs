@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for COD Turnin Page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCODTurnInPage? CODTurnInPage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage? CODTurnInPage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCODTurnInPage CODTurnInPage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage CODTurnInPage { get; set; }
 #endif
         /// <summary>Container tag for the International Forms. Currently, represents Commercial Invoice for Electronic Returns Label and Electronic Import Control Label.  Applicable for Electronic Return Label and Electronic Import Control Label shipments only. Returned for request with SubVersion greater than or equal to 1707.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,7 +96,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "CODTurnInPage", n => { CODTurnInPage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCODTurnInPage>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCODTurnInPage.CreateFromDiscriminatorValue); } },
+                { "CODTurnInPage", n => { CODTurnInPage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage.CreateFromDiscriminatorValue); } },
                 { "Form", n => { Form = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm.CreateFromDiscriminatorValue); } },
                 { "HighValueReport", n => { HighValueReport = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport.CreateFromDiscriminatorValue); } },
                 { "LabelResults", n => { LabelResults = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCODTurnInPage>("CODTurnInPage", CODTurnInPage);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage>("CODTurnInPage", CODTurnInPage);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm>("Form", Form);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport>("HighValueReport", HighValueReport);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults>("LabelResults", LabelResults);

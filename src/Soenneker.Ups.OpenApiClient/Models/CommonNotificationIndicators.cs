@@ -47,6 +47,19 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public CommonNotificationIndicators()
         {
             AdditionalData = new Dictionary<string, object>();
+            DayBeforePickupInd = false;
+            DayOfPickupInd = false;
+            EnrollmentConfirmationInd = false;
+            PickupCancellationInd = false;
+            PickupCompleteInd = false;
+            PickupDelayedInd = false;
+            PickupIncompleteNotificationInd = false;
+            PickupUpdateInd = false;
+            PreArrivalInd = false;
+            SmartPickupCutOffNotificationTimeInd = false;
+            SmartPickupTriggerCancellationInd = false;
+            SmartPickupTriggerNotificationInd = false;
+            SmartPickupTriggerWarningInd = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -41,10 +41,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The warnings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Warning>? Warnings { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyWarning>? Warnings { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Warning> Warnings { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyWarning> Warnings { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.Shipment"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "inquiryNumber", n => { InquiryNumber = n.GetStringValue(); } },
                 { "package", n => { Package = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Package>(global::Soenneker.Ups.OpenApiClient.Models.Package.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "userRelation", n => { UserRelation = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Warning>(global::Soenneker.Ups.OpenApiClient.Models.Warning.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyWarning>(global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyWarning.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("inquiryNumber", InquiryNumber);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Package>("package", Package);
             writer.WriteCollectionOfPrimitiveValues<string>("userRelation", UserRelation);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Warning>("warnings", Warnings);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyWarning>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

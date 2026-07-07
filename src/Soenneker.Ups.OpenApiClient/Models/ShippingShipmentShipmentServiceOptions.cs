@@ -16,20 +16,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Access Point COD indicates COD is requested for a shipment.  Valid only for &quot;01 - Hold For Pickup At UPS Access Point&quot; Shipment Indication type. Shipment Access Point COD is valid only for countries or territories within E.U. Not valid with (Shipment) COD. Not available to shipment with return service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCOD? AccessPointCOD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCod? AccessPointCOD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCOD AccessPointCOD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCod AccessPointCOD { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>COD container  Indicates COD is requested. Shipment COD is only available for EU origin countries or territories and for shippers account type Daily Pickup and Drop Shipping. Not available to shipment with return service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCOD? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCod? COD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCOD COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCod COD { get; set; }
 #endif
         /// <summary>CommercialInvoiceRemovalIndicator allows a shipper to dictate UPS to remove the Commercial Invoice from the user&apos;s shipment before the shipment is delivered to the ultimate consignee.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -248,8 +248,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AccessPointCOD", n => { AccessPointCOD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCOD>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCOD.CreateFromDiscriminatorValue); } },
-                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCOD>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCOD.CreateFromDiscriminatorValue); } },
+                { "AccessPointCOD", n => { AccessPointCOD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCod>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCod.CreateFromDiscriminatorValue); } },
+                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCod>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCod.CreateFromDiscriminatorValue); } },
                 { "CommercialInvoiceRemovalIndicator", n => { CommercialInvoiceRemovalIndicator = n.GetStringValue(); } },
                 { "DeliverToAddresseeOnlyIndicator", n => { DeliverToAddresseeOnlyIndicator = n.GetStringValue(); } },
                 { "DeliveryConfirmation", n => { DeliveryConfirmation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsDeliveryConfirmation>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsDeliveryConfirmation.CreateFromDiscriminatorValue); } },
@@ -283,8 +283,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCOD>("AccessPointCOD", AccessPointCOD);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCOD>("COD", COD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCod>("AccessPointCOD", AccessPointCOD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCod>("COD", COD);
             writer.WriteStringValue("CommercialInvoiceRemovalIndicator", CommercialInvoiceRemovalIndicator);
             writer.WriteStringValue("DeliverToAddresseeOnlyIndicator", DeliverToAddresseeOnlyIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsDeliveryConfirmation>("DeliveryConfirmation", DeliveryConfirmation);

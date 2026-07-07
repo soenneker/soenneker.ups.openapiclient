@@ -16,10 +16,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Access Point COD indicates Package COD is requested for a shipment.  Valid only for &quot;01 - Hold For Pickup At UPS Access Point&quot; Shipment Indication type. Package Access Point COD is valid only for shipment without return service from US/PR to US/PR and CA to CA. Not valid with COD at package level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCOD? AccessPointCOD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCod? AccessPointCOD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCOD AccessPointCOD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCod AccessPointCOD { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for COD.  Indicates COD is requested. Package level COD is available for shipment without return service from US/PR to US/PR, CA to CA, and CA to US. CA to US COD is not allowed for package Letter/ Envelope. COD is not valid for return service movements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCOD? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCod? COD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCOD COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCod COD { get; set; }
 #endif
         /// <summary>Container for Declared Value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -78,6 +78,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #nullable restore
 #else
         public string HazMatTypeCode { get; set; }
+#endif
+        /// <summary>This container is required when HealthcareIdentifier is present, grouping all healthcare fields for a package. Maximum 25 allowed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHealthcare? Healthcare { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHealthcare Healthcare { get; set; }
 #endif
         /// <summary>Receiver Return Notification.  Applicable for Shipment with returned service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,14 +160,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AccessPointCOD", n => { AccessPointCOD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCOD>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCOD.CreateFromDiscriminatorValue); } },
-                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCOD>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCOD.CreateFromDiscriminatorValue); } },
+                { "AccessPointCOD", n => { AccessPointCOD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCod>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCod.CreateFromDiscriminatorValue); } },
+                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCod>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCod.CreateFromDiscriminatorValue); } },
                 { "ClinicalTrialsID", n => { ClinicalTrialsID = n.GetStringValue(); } },
                 { "DeclaredValue", n => { DeclaredValue = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDeclaredValue>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDeclaredValue.CreateFromDiscriminatorValue); } },
                 { "DeliveryConfirmation", n => { DeliveryConfirmation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDeliveryConfirmation>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDeliveryConfirmation.CreateFromDiscriminatorValue); } },
                 { "DryIce", n => { DryIce = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDryIce>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDryIce.CreateFromDiscriminatorValue); } },
                 { "HazMat", n => { HazMat = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsHazMat>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsHazMat.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "HazMatTypeCode", n => { HazMatTypeCode = n.GetStringValue(); } },
+                { "Healthcare", n => { Healthcare = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHealthcare>(global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHealthcare.CreateFromDiscriminatorValue); } },
                 { "Notification", n => { Notification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotification>(global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotification.CreateFromDiscriminatorValue); } },
                 { "PackageIdentifier", n => { PackageIdentifier = n.GetStringValue(); } },
                 { "ProactiveIndicator", n => { ProactiveIndicator = n.GetStringValue(); } },
@@ -175,14 +184,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCOD>("AccessPointCOD", AccessPointCOD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsAccessPointCod>("AccessPointCOD", AccessPointCOD);
             writer.WriteStringValue("ClinicalTrialsID", ClinicalTrialsID);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCOD>("COD", COD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsCod>("COD", COD);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDeclaredValue>("DeclaredValue", DeclaredValue);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDeliveryConfirmation>("DeliveryConfirmation", DeliveryConfirmation);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsDryIce>("DryIce", DryIce);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageServiceOptionsHazMat>("HazMat", HazMat);
             writer.WriteStringValue("HazMatTypeCode", HazMatTypeCode);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHealthcare>("Healthcare", Healthcare);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotification>("Notification", Notification);
             writer.WriteStringValue("PackageIdentifier", PackageIdentifier);
             writer.WriteStringValue("ProactiveIndicator", ProactiveIndicator);

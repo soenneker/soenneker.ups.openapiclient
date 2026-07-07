@@ -9,35 +9,35 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         [EnumMember(Value = "EN")]
         #pragma warning disable CS1591
-        EN,
+        En,
         #pragma warning restore CS1591
         [EnumMember(Value = "DE")]
         #pragma warning disable CS1591
-        DE,
+        De,
         #pragma warning restore CS1591
         [EnumMember(Value = "PL")]
         #pragma warning disable CS1591
-        PL,
+        Pl,
         #pragma warning restore CS1591
         [EnumMember(Value = "FR")]
         #pragma warning disable CS1591
-        FR,
+        Fr,
         #pragma warning restore CS1591
         [EnumMember(Value = "IT")]
         #pragma warning disable CS1591
-        IT,
+        It,
         #pragma warning restore CS1591
         [EnumMember(Value = "NL")]
         #pragma warning disable CS1591
-        NL,
+        Nl,
         #pragma warning restore CS1591
         [EnumMember(Value = "ES")]
         #pragma warning disable CS1591
-        ES,
+        Es,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZH")]
         #pragma warning disable CS1591
-        ZH,
+        Zh,
         #pragma warning restore CS1591
     }
 }

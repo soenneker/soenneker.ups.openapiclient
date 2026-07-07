@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of calculated rates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1Response_rates>? Rates { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem>? Rates { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1Response_rates> Rates { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem> Rates { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1Response"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "rates", n => { Rates = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1Response_rates>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1Response_rates.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "rates", n => { Rates = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1Response_rates>("rates", Rates);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem>("rates", Rates);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

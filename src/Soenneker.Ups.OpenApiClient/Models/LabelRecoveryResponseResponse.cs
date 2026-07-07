@@ -26,18 +26,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response Status container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LRResponseResponseStatus? ResponseStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus? ResponseStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LRResponseResponseStatus ResponseStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus ResponseStatus { get; set; }
 #endif
         /// <summary>Transaction Reference Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LRResponseTransactionReference? TransactionReference { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference? TransactionReference { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LRResponseTransactionReference TransactionReference { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference TransactionReference { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseResponse"/> and sets the default values.
@@ -65,8 +65,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Alert", n => { Alert = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert>(global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "ResponseStatus", n => { ResponseStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LRResponseResponseStatus>(global::Soenneker.Ups.OpenApiClient.Models.LRResponseResponseStatus.CreateFromDiscriminatorValue); } },
-                { "TransactionReference", n => { TransactionReference = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LRResponseTransactionReference>(global::Soenneker.Ups.OpenApiClient.Models.LRResponseTransactionReference.CreateFromDiscriminatorValue); } },
+                { "ResponseStatus", n => { ResponseStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus>(global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus.CreateFromDiscriminatorValue); } },
+                { "TransactionReference", n => { TransactionReference = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference>(global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,8 +77,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert>("Alert", Alert);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LRResponseResponseStatus>("ResponseStatus", ResponseStatus);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LRResponseTransactionReference>("TransactionReference", TransactionReference);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus>("ResponseStatus", ResponseStatus);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference>("TransactionReference", TransactionReference);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

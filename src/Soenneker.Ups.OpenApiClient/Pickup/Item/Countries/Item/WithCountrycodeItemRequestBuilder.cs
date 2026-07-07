@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.Pickup.Item.Countries.Item
         /// <summary>
         /// The countrycode endpoint of the Pickup API helps retrieve a list of political divisions (states) in a specified country or territory.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PICKUPPolDivResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupPolDivResponseWrapper"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse">When receiving a 400 status code</exception>
@@ -45,11 +45,11 @@ namespace Soenneker.Ups.OpenApiClient.Pickup.Item.Countries.Item
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PICKUPPolDivResponseWrapper?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PickupPolDivResponseWrapper?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PICKUPPolDivResponseWrapper> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PickupPolDivResponseWrapper> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Pickup.Item.Countries.Item
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.PickupErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PICKUPPolDivResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PICKUPPolDivResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PickupPolDivResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PickupPolDivResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The countrycode endpoint of the Pickup API helps retrieve a list of political divisions (states) in a specified country or territory.

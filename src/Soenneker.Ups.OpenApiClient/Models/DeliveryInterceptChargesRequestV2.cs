@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>List of rating request data. If you want to find out the accessory and transportation charges of a &quot;redirect&quot; requestfor a specified Tracking number then this array list must contain one rating request. This array is unbounded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2_ratingRequest>? RatingRequest { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem>? RatingRequest { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2_ratingRequest> RatingRequest { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem> RatingRequest { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "clientIP", n => { ClientIP = n.GetStringValue(); } },
-                { "ratingRequest", n => { RatingRequest = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2_ratingRequest>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2_ratingRequest.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ratingRequest", n => { RatingRequest = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("clientIP", ClientIP);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2_ratingRequest>("ratingRequest", RatingRequest);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem>("ratingRequest", RatingRequest);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

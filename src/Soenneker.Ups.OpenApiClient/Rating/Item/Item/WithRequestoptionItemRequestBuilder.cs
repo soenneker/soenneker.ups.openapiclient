@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.Rating.Item.Item
         /// <summary>
         /// The Rating API is used when rating or shopping a shipment. For more information on the Rating API, please visit the &lt;a href=&quot;https://developer.ups.com/api/reference/rating/product-info&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Product Overview&lt;/a&gt; page.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.RATEResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.RateResponseWrapper"/></returns>
         /// <param name="body">N/A  </param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -46,11 +46,11 @@ namespace Soenneker.Ups.OpenApiClient.Rating.Item.Item
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.RatingErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.RATEResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.RATERequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Rating.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.RateResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.RateRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Rating.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.RATEResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.RATERequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Rating.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.RateResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.RateRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Rating.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -62,7 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Rating.Item.Item
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.RatingErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.RatingErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.RATEResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.RATEResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.RateResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.RateResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Rating API is used when rating or shopping a shipment. For more information on the Rating API, please visit the &lt;a href=&quot;https://developer.ups.com/api/reference/rating/product-info&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Product Overview&lt;/a&gt; page.
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.Rating.Item.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.RATERequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Rating.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.RateRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Rating.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.RATERequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Rating.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.RateRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Rating.Item.Item.WithRequestoptionItemRequestBuilder.WithRequestoptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

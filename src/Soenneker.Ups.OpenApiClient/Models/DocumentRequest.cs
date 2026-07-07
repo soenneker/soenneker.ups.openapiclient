@@ -16,9 +16,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;Image format type for the label requested by customer.| Code   | Description   || :----: | :-----------: || ZPL    | ZPL format    || EPL    | EPL format    || STARPL | STARPL format || SPL    | SPL format    || PNG    | PNG format    || PDF    | PDF format    || GIF    | GIF format    |&quot;</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest_docFormat? DocFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestDocFormat? DocFormat { get; set; }
         /// <summary>&quot;The type of document requested for generation.| Code   | Description                     || :----: | :-----------------------------: || CCI    | Consolidated Commercial Invoice || CBOL   | Consolidated Bill of Lading     || BOL    | Bill of Lading                  || PLT    | Pallet Label                    || PKGPLT | Package Pallet Label            |&quot;</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest_requestedDoc? RequestedDoc { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestRequestedDoc? RequestedDoc { get; set; }
         /// <summary>The UPS account number of the shipper that was used in clouseout shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,8 +68,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "docFormat", n => { DocFormat = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest_docFormat>(); } },
-                { "requestedDoc", n => { RequestedDoc = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest_requestedDoc>(); } },
+                { "docFormat", n => { DocFormat = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestDocFormat>(); } },
+                { "requestedDoc", n => { RequestedDoc = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestRequestedDoc>(); } },
                 { "shipperAccountNumber", n => { ShipperAccountNumber = n.GetStringValue(); } },
                 { "subproNumber", n => { SubproNumber = n.GetStringValue(); } },
                 { "usiNumber", n => { UsiNumber = n.GetStringValue(); } },
@@ -82,8 +82,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest_docFormat>("docFormat", DocFormat);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest_requestedDoc>("requestedDoc", RequestedDoc);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestDocFormat>("docFormat", DocFormat);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestRequestedDoc>("requestedDoc", RequestedDoc);
             writer.WriteStringValue("shipperAccountNumber", ShipperAccountNumber);
             writer.WriteStringValue("subproNumber", SubproNumber);
             writer.WriteStringValue("usiNumber", UsiNumber);

@@ -15,23 +15,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The errors property</summary>
+        /// <summary>The primary error message.</summary>
+        public override string Message { get => base.Message; }
+        /// <summary>The error response containing any errors that occurred.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors>? Errors { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CommonErrorResponse? Response { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors> Errors { get; set; }
-#endif
-        /// <summary>The primary error message.</summary>
-        public override string Message { get => MessageEscaped ?? string.Empty; }
-        /// <summary>The primary error message.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MessageEscaped { get; set; }
-#nullable restore
-#else
-        public string MessageEscaped { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CommonErrorResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ErrorResponse"/> and sets the default values.
@@ -58,8 +50,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors>(global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "message", n => { MessageEscaped = n.GetStringValue(); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CommonErrorResponse>(global::Soenneker.Ups.OpenApiClient.Models.CommonErrorResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -69,8 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrors>("errors", Errors);
-            writer.WriteStringValue("message", MessageEscaped);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CommonErrorResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

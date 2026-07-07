@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildShipments
 {
     /// <summary>
-    /// Builds and executes requests for operations under \TradeDirect\master-shipments\{usi-number}\ltl-child-shipments
+    /// Builds and executes requests for operations under \TradeDirect\master-shipments\{usiNumber}\ltl-child-shipments
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LtlChildShipmentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.TradeDirect.masterShipments.item.ltlChildShipments.item collection</summary>
         /// <param name="position">A unique tracking number used for individual, smaller shipments within a larger Less-Than-Truckload (LTL) or Truckload (TL) freight shipment</param>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildShipments.Item.SubProNumberItemRequestBuilder"/></returns>
-        public global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildShipments.Item.SubProNumberItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildShipments.Item.WithSubProNumberItemRequestBuilder"/></returns>
+        public global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildShipments.Item.WithSubProNumberItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("sub%2Dpro%2Dnumber", position);
-                return new global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildShipments.Item.SubProNumberItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("subProNumber", position);
+                return new global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildShipments.Item.WithSubProNumberItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildS
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LtlChildShipmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/TradeDirect/master-shipments/{usi%2Dnumber}/ltl-child-shipments", pathParameters)
+        public LtlChildShipmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/TradeDirect/master-shipments/{usiNumber}/ltl-child-shipments", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.LtlChildS
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LtlChildShipmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/TradeDirect/master-shipments/{usi%2Dnumber}/ltl-child-shipments", rawUrl)
+        public LtlChildShipmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/TradeDirect/master-shipments/{usiNumber}/ltl-child-shipments", rawUrl)
         {
         }
     }

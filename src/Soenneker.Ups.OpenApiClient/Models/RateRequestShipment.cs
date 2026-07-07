@@ -50,10 +50,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>UPS Ground Freight Pricing (GFP) Payment Information container.  Required only for GFP and when the FRSIndicator is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentFRSPaymentInformation? FRSPaymentInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentFrsPaymentInformation? FRSPaymentInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentFRSPaymentInformation FRSPaymentInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentFrsPaymentInformation FRSPaymentInformation { get; set; }
 #endif
         /// <summary>Goods Not In Free Circulation indicator.  This is an empty tag, any value inside is ignored. This indicator is invalid for a package type of UPS Letter and DocumentsOnly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -235,7 +235,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "AlternateDeliveryAddress", n => { AlternateDeliveryAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentAlternateDeliveryAddress>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentAlternateDeliveryAddress.CreateFromDiscriminatorValue); } },
                 { "DeliveryTimeInformation", n => { DeliveryTimeInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDeliveryTimeInformation>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentDeliveryTimeInformation.CreateFromDiscriminatorValue); } },
                 { "DocumentsOnlyIndicator", n => { DocumentsOnlyIndicator = n.GetStringValue(); } },
-                { "FRSPaymentInformation", n => { FRSPaymentInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentFRSPaymentInformation>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentFRSPaymentInformation.CreateFromDiscriminatorValue); } },
+                { "FRSPaymentInformation", n => { FRSPaymentInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentFrsPaymentInformation>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentFrsPaymentInformation.CreateFromDiscriminatorValue); } },
                 { "FreightShipmentInformation", n => { FreightShipmentInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentFreightShipmentInformation>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentFreightShipmentInformation.CreateFromDiscriminatorValue); } },
                 { "GoodsNotInFreeCirculationIndicator", n => { GoodsNotInFreeCirculationIndicator = n.GetStringValue(); } },
                 { "InvoiceLineTotal", n => { InvoiceLineTotal = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentInvoiceLineTotal>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentInvoiceLineTotal.CreateFromDiscriminatorValue); } },
@@ -269,7 +269,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDeliveryTimeInformation>("DeliveryTimeInformation", DeliveryTimeInformation);
             writer.WriteStringValue("DocumentsOnlyIndicator", DocumentsOnlyIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentFreightShipmentInformation>("FreightShipmentInformation", FreightShipmentInformation);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentFRSPaymentInformation>("FRSPaymentInformation", FRSPaymentInformation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentFrsPaymentInformation>("FRSPaymentInformation", FRSPaymentInformation);
             writer.WriteStringValue("GoodsNotInFreeCirculationIndicator", GoodsNotInFreeCirculationIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentInvoiceLineTotal>("InvoiceLineTotal", InvoiceLineTotal);
             writer.WriteStringValue("MasterCartonIndicator", MasterCartonIndicator);

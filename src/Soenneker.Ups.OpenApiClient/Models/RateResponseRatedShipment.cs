@@ -49,10 +49,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>FRSShipmentData container.  Only returned when the FRSShipmentIIndicator is used. UPS Ground Freight Pricing Only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFRSShipmentData? FRSShipmentData { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFrsShipmentData? FRSShipmentData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFRSShipmentData FRSShipmentData { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFrsShipmentData FRSShipmentData { get; set; }
 #endif
         /// <summary>Guaranteed Delivery Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -211,7 +211,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "BillableWeightCalculationMethod", n => { BillableWeightCalculationMethod = n.GetStringValue(); } },
                 { "BillingWeight", n => { BillingWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentBillingWeight>(global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentBillingWeight.CreateFromDiscriminatorValue); } },
                 { "Disclaimer", n => { Disclaimer = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentDisclaimer>(global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentDisclaimer.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "FRSShipmentData", n => { FRSShipmentData = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFRSShipmentData>(global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFRSShipmentData.CreateFromDiscriminatorValue); } },
+                { "FRSShipmentData", n => { FRSShipmentData = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFrsShipmentData>(global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFrsShipmentData.CreateFromDiscriminatorValue); } },
                 { "GuaranteedDelivery", n => { GuaranteedDelivery = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentGuaranteedDelivery>(global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentGuaranteedDelivery.CreateFromDiscriminatorValue); } },
                 { "ItemizedCharges", n => { ItemizedCharges = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentItemizedCharges>(global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentItemizedCharges.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "NegotiatedRateCharges", n => { NegotiatedRateCharges = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentNegotiatedRateCharges>(global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentNegotiatedRateCharges.CreateFromDiscriminatorValue); } },
@@ -241,7 +241,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("BillableWeightCalculationMethod", BillableWeightCalculationMethod);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentBillingWeight>("BillingWeight", BillingWeight);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentDisclaimer>("Disclaimer", Disclaimer);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFRSShipmentData>("FRSShipmentData", FRSShipmentData);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentFrsShipmentData>("FRSShipmentData", FRSShipmentData);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentGuaranteedDelivery>("GuaranteedDelivery", GuaranteedDelivery);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentItemizedCharges>("ItemizedCharges", ItemizedCharges);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentNegotiatedRateCharges>("NegotiatedRateCharges", NegotiatedRateCharges);

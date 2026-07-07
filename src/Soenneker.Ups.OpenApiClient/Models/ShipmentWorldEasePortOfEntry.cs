@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The Address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AddressPOE? Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AddressPoe? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AddressPOE Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AddressPoe Address { get; set; }
 #endif
         /// <summary>Port code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AddressPOE>(global::Soenneker.Ups.OpenApiClient.Models.AddressPOE.CreateFromDiscriminatorValue); } },
+                { "Address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AddressPoe>(global::Soenneker.Ups.OpenApiClient.Models.AddressPoe.CreateFromDiscriminatorValue); } },
                 { "ClearancePortCode", n => { ClearancePortCode = n.GetStringValue(); } },
                 { "Consignee", n => { Consignee = n.GetStringValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AddressPOE>("Address", Address);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AddressPoe>("Address", Address);
             writer.WriteStringValue("ClearancePortCode", ClearancePortCode);
             writer.WriteStringValue("Consignee", Consignee);
             writer.WriteStringValue("Name", Name);

@@ -42,10 +42,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for the CN22 form.  Required if the customer wants to use the UPS generated CN22.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCN22Form? CN22Form { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form? CN22Form { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCN22Form CN22Form { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form CN22Form { get; set; }
 #endif
         /// <summary>Any extra information about the current shipment.  Applies to Invoice and Partial Invoice forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,10 +98,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>EEI Filing option.  Applicable for EEI form and is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEEIFilingOption? EEIFilingOption { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption? EEIFilingOption { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEEIFilingOption EEIFilingOption { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption EEIFilingOption { get; set; }
 #endif
         /// <summary>&quot;The Import Entry Number when the export transaction is used as proof of export for import transactions (examples: In Bond, Temporary Import Bond or Drawbacks).  Applies to EEI forms only. Conditionally Required for EEI forms when In bond code value is other than 70 (Not In Bond)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -314,10 +314,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>UPS Premium Care Form is required if UPS Premium Care Indicator is present on a package.  Valid only for Canada to Canada movements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUPSPremiumCareForm? UPSPremiumCareForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm? UPSPremiumCareForm { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUPSPremiumCareForm UPSPremiumCareForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm UPSPremiumCareForm { get; set; }
 #endif
         /// <summary>Data container for DocumentID(s).  Required if Form Type is 07.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -354,7 +354,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "AdditionalDocumentIndicator", n => { AdditionalDocumentIndicator = n.GetStringValue(); } },
                 { "BlanketPeriod", n => { BlanketPeriod = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod.CreateFromDiscriminatorValue); } },
-                { "CN22Form", n => { CN22Form = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCN22Form>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCN22Form.CreateFromDiscriminatorValue); } },
+                { "CN22Form", n => { CN22Form = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form.CreateFromDiscriminatorValue); } },
                 { "CarrierID", n => { CarrierID = n.GetStringValue(); } },
                 { "Comments", n => { Comments = n.GetStringValue(); } },
                 { "Contacts", n => { Contacts = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts.CreateFromDiscriminatorValue); } },
@@ -362,7 +362,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "CurrencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "DeclarationStatement", n => { DeclarationStatement = n.GetStringValue(); } },
                 { "Discount", n => { Discount = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount.CreateFromDiscriminatorValue); } },
-                { "EEIFilingOption", n => { EEIFilingOption = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEEIFilingOption>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEEIFilingOption.CreateFromDiscriminatorValue); } },
+                { "EEIFilingOption", n => { EEIFilingOption = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption.CreateFromDiscriminatorValue); } },
                 { "EntryNumber", n => { EntryNumber = n.GetStringValue(); } },
                 { "ExportDate", n => { ExportDate = n.GetStringValue(); } },
                 { "ExportingCarrier", n => { ExportingCarrier = n.GetStringValue(); } },
@@ -389,7 +389,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "RoutedExportTransactionIndicator", n => { RoutedExportTransactionIndicator = n.GetStringValue(); } },
                 { "ShipperMemo", n => { ShipperMemo = n.GetStringValue(); } },
                 { "TermsOfShipment", n => { TermsOfShipment = n.GetStringValue(); } },
-                { "UPSPremiumCareForm", n => { UPSPremiumCareForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUPSPremiumCareForm>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUPSPremiumCareForm.CreateFromDiscriminatorValue); } },
+                { "UPSPremiumCareForm", n => { UPSPremiumCareForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm.CreateFromDiscriminatorValue); } },
                 { "UserCreatedForm", n => { UserCreatedForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm.CreateFromDiscriminatorValue); } },
             };
         }
@@ -403,14 +403,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("AdditionalDocumentIndicator", AdditionalDocumentIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod>("BlanketPeriod", BlanketPeriod);
             writer.WriteStringValue("CarrierID", CarrierID);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCN22Form>("CN22Form", CN22Form);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form>("CN22Form", CN22Form);
             writer.WriteStringValue("Comments", Comments);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts>("Contacts", Contacts);
             writer.WriteStringValue("ContainerizedIndicator", ContainerizedIndicator);
             writer.WriteStringValue("CurrencyCode", CurrencyCode);
             writer.WriteStringValue("DeclarationStatement", DeclarationStatement);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount>("Discount", Discount);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEEIFilingOption>("EEIFilingOption", EEIFilingOption);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption>("EEIFilingOption", EEIFilingOption);
             writer.WriteStringValue("EntryNumber", EntryNumber);
             writer.WriteStringValue("ExportDate", ExportDate);
             writer.WriteStringValue("ExportingCarrier", ExportingCarrier);
@@ -437,7 +437,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("RoutedExportTransactionIndicator", RoutedExportTransactionIndicator);
             writer.WriteStringValue("ShipperMemo", ShipperMemo);
             writer.WriteStringValue("TermsOfShipment", TermsOfShipment);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUPSPremiumCareForm>("UPSPremiumCareForm", UPSPremiumCareForm);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm>("UPSPremiumCareForm", UPSPremiumCareForm);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm>("UserCreatedForm", UserCreatedForm);
             writer.WriteAdditionalData(AdditionalData);
         }

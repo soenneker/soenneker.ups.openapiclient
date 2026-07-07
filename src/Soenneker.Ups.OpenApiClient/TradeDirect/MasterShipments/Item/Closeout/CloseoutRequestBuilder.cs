@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.Closeout
 {
     /// <summary>
-    /// Builds and executes requests for operations under \TradeDirect\master-shipments\{usi-number}\closeout
+    /// Builds and executes requests for operations under \TradeDirect\master-shipments\{usiNumber}\closeout
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CloseoutRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.Closeout
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CloseoutRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/TradeDirect/master-shipments/{usi%2Dnumber}/closeout", pathParameters)
+        public CloseoutRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/TradeDirect/master-shipments/{usiNumber}/closeout", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.Closeout
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CloseoutRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/TradeDirect/master-shipments/{usi%2Dnumber}/closeout", rawUrl)
+        public CloseoutRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/TradeDirect/master-shipments/{usiNumber}/closeout", rawUrl)
         {
         }
         /// <summary>

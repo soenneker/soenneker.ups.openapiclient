@@ -56,7 +56,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string Language { get; set; }
 #endif
         /// <summary>The media type code for the notification.Valid values are:- 03 = Email- 04 = Fax</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDelivery_MediaTypeCode? MediaTypeCode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDeliveryMediaTypeCode? MediaTypeCode { get; set; }
         /// <summary>Memo for the notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone Phone { get; set; }
 #endif
         /// <summary>The type of notification request.Valid values are:- 001 = QV Ship Notification- 002 = QV Delivery Notification- 003 = QV Exception Notification</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDelivery_RequestType? RequestType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDeliveryRequestType? RequestType { get; set; }
         /// <summary>The name of the company for the ship from address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -129,11 +129,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "Dialect", n => { Dialect = n.GetStringValue(); } },
                 { "EMailAddress", n => { EMailAddress = n.GetStringValue(); } },
                 { "Language", n => { Language = n.GetStringValue(); } },
-                { "MediaTypeCode", n => { MediaTypeCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDelivery_MediaTypeCode>(); } },
+                { "MediaTypeCode", n => { MediaTypeCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDeliveryMediaTypeCode>(); } },
                 { "Memo", n => { Memo = n.GetStringValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
                 { "Phone", n => { Phone = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone>(global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone.CreateFromDiscriminatorValue); } },
-                { "RequestType", n => { RequestType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDelivery_RequestType>(); } },
+                { "RequestType", n => { RequestType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDeliveryRequestType>(); } },
                 { "ShipFromCompanyName", n => { ShipFromCompanyName = n.GetStringValue(); } },
                 { "SubjectLine", n => { SubjectLine = n.GetStringValue(); } },
             };
@@ -150,11 +150,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("Dialect", Dialect);
             writer.WriteStringValue("EMailAddress", EMailAddress);
             writer.WriteStringValue("Language", Language);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDelivery_MediaTypeCode>("MediaTypeCode", MediaTypeCode);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDeliveryMediaTypeCode>("MediaTypeCode", MediaTypeCode);
             writer.WriteStringValue("Memo", Memo);
             writer.WriteStringValue("Name", Name);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone>("Phone", Phone);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDelivery_RequestType>("RequestType", RequestType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDeliveryRequestType>("RequestType", RequestType);
             writer.WriteStringValue("ShipFromCompanyName", ShipFromCompanyName);
             writer.WriteStringValue("SubjectLine", SubjectLine);
             writer.WriteAdditionalData(AdditionalData);

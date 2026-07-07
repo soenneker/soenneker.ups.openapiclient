@@ -15,10 +15,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The unbounded array representing the cities</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1Response_cityDetails>? CityDetails { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1ResponseCityDetailsItem>? CityDetails { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1Response_cityDetails> CityDetails { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1ResponseCityDetailsItem> CityDetails { get; set; }
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,7 +54,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cityDetails", n => { CityDetails = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1Response_cityDetails>(global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1Response_cityDetails.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "cityDetails", n => { CityDetails = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1ResponseCityDetailsItem>(global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1ResponseCityDetailsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -66,7 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1Response_cityDetails>("cityDetails", CityDetails);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1ResponseCityDetailsItem>("cityDetails", CityDetails);
             writer.WriteStringValue("message", Message);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>("warnings", Warnings);
         }

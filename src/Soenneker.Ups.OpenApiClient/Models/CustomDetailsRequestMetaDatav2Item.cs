@@ -15,10 +15,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of key-value pairs describing product fields</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item_fields>? Fields { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2ItemFieldsItem>? Fields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item_fields> Fields { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2ItemFieldsItem> Fields { get; set; }
 #endif
         /// <summary>Field group key returned by the GET endpoint used to scope the shipment metadata payload; value should match the selected `groupKey` from that response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,7 +46,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item_fields>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item_fields.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2ItemFieldsItem>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2ItemFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "groupKey", n => { GroupKey = n.GetStringValue(); } },
             };
         }
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item_fields>("fields", Fields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2ItemFieldsItem>("fields", Fields);
             writer.WriteStringValue("groupKey", GroupKey);
         }
     }

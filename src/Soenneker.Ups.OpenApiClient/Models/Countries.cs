@@ -10,51 +10,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         [EnumMember(Value = "US")]
         #pragma warning disable CS1591
-        US,
+        Us,
         #pragma warning restore CS1591
         [EnumMember(Value = "CA")]
         #pragma warning disable CS1591
-        CA,
+        Ca,
         #pragma warning restore CS1591
         [EnumMember(Value = "CN")]
         #pragma warning disable CS1591
-        CN,
+        Cn,
         #pragma warning restore CS1591
         [EnumMember(Value = "UK")]
         #pragma warning disable CS1591
-        UK,
+        Uk,
         #pragma warning restore CS1591
         [EnumMember(Value = "DE")]
         #pragma warning disable CS1591
-        DE,
+        De,
         #pragma warning restore CS1591
         [EnumMember(Value = "HK")]
         #pragma warning disable CS1591
-        HK,
+        Hk,
         #pragma warning restore CS1591
         [EnumMember(Value = "NL")]
         #pragma warning disable CS1591
-        NL,
+        Nl,
         #pragma warning restore CS1591
         [EnumMember(Value = "IT")]
         #pragma warning disable CS1591
-        IT,
+        It,
         #pragma warning restore CS1591
         [EnumMember(Value = "ES")]
         #pragma warning disable CS1591
-        ES,
+        Es,
         #pragma warning restore CS1591
         [EnumMember(Value = "FR")]
         #pragma warning disable CS1591
-        FR,
+        Fr,
         #pragma warning restore CS1591
         [EnumMember(Value = "GB")]
         #pragma warning disable CS1591
-        GB,
+        Gb,
         #pragma warning restore CS1591
         [EnumMember(Value = "IE")]
         #pragma warning disable CS1591
-        IE,
+        Ie,
         #pragma warning restore CS1591
     }
 }

@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response payload - object containing the list of account pickup preferences</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponse_payload? Payload { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponseAllOf2Payload? Payload { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponse_payload Payload { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponseAllOf2Payload Payload { get; set; }
 #endif
         /// <summary>Status message, will contain a count of elements in payload in case of success when no warnings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payload", n => { Payload = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponse_payload>(global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponse_payload.CreateFromDiscriminatorValue); } },
+                { "payload", n => { Payload = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponseAllOf2Payload>(global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponseAllOf2Payload.CreateFromDiscriminatorValue); } },
                 { "statusMessage", n => { StatusMessage = n.GetStringValue(); } },
                 { "timeStamp", n => { TimeStamp = n.GetDateTimeOffsetValue(); } },
             };
@@ -70,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponse_payload>("payload", Payload);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupModifyResponseAllOf2Payload>("payload", Payload);
             writer.WriteStringValue("statusMessage", StatusMessage);
             writer.WriteDateTimeOffsetValue("timeStamp", TimeStamp);
             writer.WriteAdditionalData(AdditionalData);

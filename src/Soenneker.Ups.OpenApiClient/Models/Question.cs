@@ -58,6 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public Question()
         {
             AdditionalData = new Dictionary<string, object>();
+            Assumed = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

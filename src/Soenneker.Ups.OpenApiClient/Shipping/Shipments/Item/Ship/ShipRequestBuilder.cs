@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship
         /// <summary>
         /// The Shipping API makes UPS shipping services available to client applications that communicate with UPS using the Internet
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.SHIPResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipResponseWrapper"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -46,11 +46,11 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.SHIPResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.SHIPRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship.ShipRequestBuilder.ShipRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ShipResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ShipRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship.ShipRequestBuilder.ShipRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.SHIPResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.SHIPRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship.ShipRequestBuilder.ShipRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ShipResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ShipRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship.ShipRequestBuilder.ShipRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -62,7 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.ShippingErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.ShippingErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.SHIPResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.SHIPResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ShipResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ShipResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Shipping API makes UPS shipping services available to client applications that communicate with UPS using the Internet
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.SHIPRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship.ShipRequestBuilder.ShipRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.ShipRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship.ShipRequestBuilder.ShipRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.SHIPRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship.ShipRequestBuilder.ShipRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.ShipRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship.ShipRequestBuilder.ShipRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;Unit of measurement of the weight.| Code  | Description || :--:  | :--         || KGS   | Kilograms   || LBS   | Pounds      |&quot;</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_unitOfMeasurement? UnitOfMeasurement { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageWeightUnitOfMeasurementEnum? UnitOfMeasurement { get; set; }
         /// <summary>Weight of the package/ltl.</summary>
         public double? Weight { get; set; }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "unitOfMeasurement", n => { UnitOfMeasurement = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_unitOfMeasurement>(); } },
+                { "unitOfMeasurement", n => { UnitOfMeasurement = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeightUnitOfMeasurementEnum>(); } },
                 { "weight", n => { Weight = n.GetDoubleValue(); } },
             };
         }
@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeight_unitOfMeasurement>("unitOfMeasurement", UnitOfMeasurement);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PackageWeightUnitOfMeasurementEnum>("unitOfMeasurement", UnitOfMeasurement);
             writer.WriteDoubleValue("weight", Weight);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -21,7 +21,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item> Details { get; set; }
 #endif
         /// <summary>The output format of the document.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label_format? Format { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1LabelFormat? Format { get; set; }
         /// <summary>A key that determines the template that is used for the label.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,7 +56,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "format", n => { Format = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label_format>(); } },
+                { "format", n => { Format = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1LabelFormat>(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label_format>("format", Format);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1LabelFormat>("format", Format);
             writer.WriteStringValue("layout", Layout);
         }
     }

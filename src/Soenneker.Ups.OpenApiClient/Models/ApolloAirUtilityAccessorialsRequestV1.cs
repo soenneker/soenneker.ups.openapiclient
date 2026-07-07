@@ -28,7 +28,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Accepted format - yyyy-MM-dd, yyyy/MM/dd, MM-dd-yyyy, MM/dd/yyyy format.</summary>
         public Date? PickupDateTime { get; set; }
         /// <summary>The serviceCode property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1_serviceCode? ServiceCode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode? ServiceCode { get; set; }
         /// <summary>The shipper property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails.CreateFromDiscriminatorValue); } },
                 { "dropOffTime", n => { DropOffTime = n.GetTimeValue(); } },
                 { "pickupDateTime", n => { PickupDateTime = n.GetDateValue(); } },
-                { "serviceCode", n => { ServiceCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1_serviceCode>(); } },
+                { "serviceCode", n => { ServiceCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode>(); } },
                 { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails.CreateFromDiscriminatorValue); } },
             };
         }
@@ -79,7 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>("consignee", Consignee);
             writer.WriteTimeValue("dropOffTime", DropOffTime);
             writer.WriteDateValue("pickupDateTime", PickupDateTime);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1_serviceCode>("serviceCode", ServiceCode);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode>("serviceCode", ServiceCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>("shipper", Shipper);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.Standard;
+using Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.Item;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,10 +15,17 @@ namespace Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubscriptionRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The standard property</summary>
-        public global::Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.Standard.StandardRequestBuilder Standard
+        /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.subscription.item collection</summary>
+        /// <param name="position">Represents a subscription type that provides near real time updates on tracking status.</param>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.Item.WithTypeItemRequestBuilder"/></returns>
+        public global::Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.Item.WithTypeItemRequestBuilder this[string position]
         {
-            get => new global::Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.Standard.StandardRequestBuilder(PathParameters, RequestAdapter);
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("type", position);
+                return new global::Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.Item.WithTypeItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.SubscriptionRequestBuilder"/> and sets the default values.

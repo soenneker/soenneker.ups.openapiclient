@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The container for DocumentID(s).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentID? FormsHistoryDocumentID { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentId? FormsHistoryDocumentID { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentID FormsHistoryDocumentID { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentId FormsHistoryDocumentID { get; set; }
 #endif
         /// <summary>Response container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "FormsHistoryDocumentID", n => { FormsHistoryDocumentID = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentID>(global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentID.CreateFromDiscriminatorValue); } },
+                { "FormsHistoryDocumentID", n => { FormsHistoryDocumentID = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentId>(global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentId.CreateFromDiscriminatorValue); } },
                 { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentID>("FormsHistoryDocumentID", FormsHistoryDocumentID);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseFormsHistoryDocumentId>("FormsHistoryDocumentID", FormsHistoryDocumentID);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadResponseResponse>("Response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }

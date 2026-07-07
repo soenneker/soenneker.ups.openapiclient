@@ -21,7 +21,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores CategoryScores { get; set; }
 #endif
         /// <summary>Risk decision—whether to reject, review, or undecided</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_decision? Decision { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision? Decision { get; set; }
         /// <summary>Overall risk score from 0 (lowest) to 999 (highest risk)</summary>
         public double? SuperScore { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "categoryScores", n => { CategoryScores = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores.CreateFromDiscriminatorValue); } },
-                { "decision", n => { Decision = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_decision>(); } },
+                { "decision", n => { Decision = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision>(); } },
                 { "superScore", n => { SuperScore = n.GetDoubleValue(); } },
             };
         }
@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores>("categoryScores", CategoryScores);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1_decision>("decision", Decision);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision>("decision", Decision);
             writer.WriteDoubleValue("superScore", SuperScore);
         }
     }

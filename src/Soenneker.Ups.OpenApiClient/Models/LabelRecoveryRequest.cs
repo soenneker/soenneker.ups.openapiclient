@@ -90,10 +90,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>UPS Premium Care Form container.  Default is PDF when container is not provided.   Valid only for Canada to Canada movements. UPS Premium Care Form will be returned in  both US English and Canadian French language.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm? UPSPremiumCareForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm? UPSPremiumCareForm { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm UPSPremiumCareForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm UPSPremiumCareForm { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest"/> and sets the default values.
@@ -129,7 +129,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "TrackingNumber", n => { TrackingNumber = n.GetStringValue(); } },
                 { "TrackingNumbers", n => { TrackingNumbers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Translate", n => { Translate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate.CreateFromDiscriminatorValue); } },
-                { "UPSPremiumCareForm", n => { UPSPremiumCareForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm.CreateFromDiscriminatorValue); } },
+                { "UPSPremiumCareForm", n => { UPSPremiumCareForm = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm>(global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -148,7 +148,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("TrackingNumber", TrackingNumber);
             writer.WriteCollectionOfPrimitiveValues<string>("TrackingNumbers", TrackingNumbers);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate>("Translate", Translate);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUPSPremiumCareForm>("UPSPremiumCareForm", UPSPremiumCareForm);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm>("UPSPremiumCareForm", UPSPremiumCareForm);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

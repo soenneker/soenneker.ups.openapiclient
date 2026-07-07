@@ -81,10 +81,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1_response? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1_response Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty Response { get; set; }
 #endif
         /// <summary>The shipment number associated with the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,7 +127,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "prqNumber", n => { PrqNumber = n.GetStringValue(); } },
                 { "prqStatus", n => { PrqStatus = n.GetStringValue(); } },
                 { "rates", n => { Rates = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateDetail>(global::Soenneker.Ups.OpenApiClient.Models.RateDetail.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1_response>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1_response.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty.CreateFromDiscriminatorValue); } },
                 { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
             };
         }
@@ -146,7 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("prqNumber", PrqNumber);
             writer.WriteStringValue("prqStatus", PrqStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateDetail>("rates", Rates);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1_response>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty>("response", Response);
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

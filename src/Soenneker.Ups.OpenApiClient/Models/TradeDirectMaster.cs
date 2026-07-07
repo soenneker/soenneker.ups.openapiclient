@@ -56,7 +56,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetails TradeComplianceDetails { get; set; }
 #endif
         /// <summary>The type of measurement used for the shipment. Imperial(lbs, in) &amp; Metric(kgs, cm)Valid values are:- Imperial= This system of measurement uses units such as pounds (lbs) for weight and inches (in) for length.- Metric = This system of measurement uses units such as kilograms (kgs) for weight and centimeters (cm) for length.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster_UomType? UomType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMasterUomType? UomType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster"/> and sets the default values.
         /// </summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "SoldTo", n => { SoldTo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.MasterSoldTo>(global::Soenneker.Ups.OpenApiClient.Models.MasterSoldTo.CreateFromDiscriminatorValue); } },
                 { "SoldToSameAsShipTo", n => { SoldToSameAsShipTo = n.GetStringValue(); } },
                 { "TradeComplianceDetails", n => { TradeComplianceDetails = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetails>(global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetails.CreateFromDiscriminatorValue); } },
-                { "UomType", n => { UomType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster_UomType>(); } },
+                { "UomType", n => { UomType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMasterUomType>(); } },
             };
         }
         /// <summary>
@@ -102,7 +102,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.MasterSoldTo>("SoldTo", SoldTo);
             writer.WriteStringValue("SoldToSameAsShipTo", SoldToSameAsShipTo);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetails>("TradeComplianceDetails", TradeComplianceDetails);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster_UomType>("UomType", UomType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMasterUomType>("UomType", UomType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>For each 1z there will exist a ChargeInfo object. These are the charges that were applied. This array is unbounded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo>? ChargeInfo { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem>? ChargeInfo { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo> ChargeInfo { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem> ChargeInfo { get; set; }
 #endif
         /// <summary>Unbounded array of error objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,10 +67,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A map containing warning codes and descriptions as key/value pairs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings? Warnings { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2Warnings? Warnings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings Warnings { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2Warnings Warnings { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response"/> and sets the default values.
@@ -78,6 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public DeliveryInterceptChargesResponseV2Response()
         {
             AdditionalData = new Dictionary<string, object>();
+            Success = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -97,14 +98,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "chargeInfo", n => { ChargeInfo = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "chargeInfo", n => { ChargeInfo = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "statusCode", n => { StatusCode = n.GetStringValue(); } },
                 { "statusMsg", n => { StatusMsg = n.GetStringValue(); } },
                 { "subStatusCode", n => { SubStatusCode = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
                 { "transactionId", n => { TransactionId = n.GetStringValue(); } },
-                { "warnings", n => { Warnings = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings.CreateFromDiscriminatorValue); } },
+                { "warnings", n => { Warnings = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2Warnings>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2Warnings.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -114,14 +115,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_chargeInfo>("chargeInfo", ChargeInfo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem>("chargeInfo", ChargeInfo);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2>("errors", Errors);
             writer.WriteStringValue("statusCode", StatusCode);
             writer.WriteStringValue("statusMsg", StatusMsg);
             writer.WriteStringValue("subStatusCode", SubStatusCode);
             writer.WriteBoolValue("success", Success);
             writer.WriteStringValue("transactionId", TransactionId);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response_warnings>("warnings", Warnings);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptCommonResponseV2Warnings>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

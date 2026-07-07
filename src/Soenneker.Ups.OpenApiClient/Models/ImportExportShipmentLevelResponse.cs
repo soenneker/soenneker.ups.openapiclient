@@ -52,13 +52,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Translation locale. | Supported enum values      || :------------------------- || `EN`&lt;br&gt;English            || `DE`&lt;br&gt;Germany            || `PL`&lt;br&gt;Polish             || `FR`&lt;br&gt;French             || `IT`&lt;br&gt;Italian            || `NL`&lt;br&gt;Dutch              || `ES`&lt;br&gt;Spanish            || `ZH`&lt;br&gt;Simplified Chinese |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.TranslationLocale? TranslationLocale { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponse"/> and sets the default values.
-        /// </summary>
-        public ImportExportShipmentLevelResponse()
-        {
-            TranslationLocale = global::Soenneker.Ups.OpenApiClient.Models.TranslationLocale.EN;
-        }
-        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponse"/></returns>

@@ -46,7 +46,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string ControlTypeMessage { get; set; }
 #endif
         /// <summary>Whether shipment compliance with a specific control type is required</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ControlTypes_isRequired? IsRequired { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired? IsRequired { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "controlType", n => { ControlType = n.GetStringValue(); } },
                 { "controlTypeCode", n => { ControlTypeCode = n.GetStringValue(); } },
                 { "controlTypeMessage", n => { ControlTypeMessage = n.GetStringValue(); } },
-                { "isRequired", n => { IsRequired = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes_isRequired>(); } },
+                { "isRequired", n => { IsRequired = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired>(); } },
             };
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("controlType", ControlType);
             writer.WriteStringValue("controlTypeCode", ControlTypeCode);
             writer.WriteStringValue("controlTypeMessage", ControlTypeMessage);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes_isRequired>("isRequired", IsRequired);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired>("isRequired", IsRequired);
         }
     }
 }

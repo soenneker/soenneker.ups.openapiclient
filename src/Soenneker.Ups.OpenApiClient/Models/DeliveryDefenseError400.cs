@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>* The Street field is required.* The City field is required.* The State field is required.* The ZipCode field is required.* Invalid Address.* Please enter address in appropriate format.* Invalid ZipCode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400_errors? Errors { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400ErrorsProperty? Errors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400_errors Errors { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400ErrorsProperty Errors { get; set; }
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
@@ -76,7 +76,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400_errors>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400_errors.CreateFromDiscriminatorValue); } },
+                { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400ErrorsProperty>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400ErrorsProperty.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetIntValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
@@ -90,7 +90,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400_errors>("errors", Errors);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryDefenseError400ErrorsProperty>("errors", Errors);
             writer.WriteIntValue("status", Status);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("traceId", TraceId);

@@ -14,14 +14,24 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class CustomDetailsPostFieldsRequestv2 : IParsable
     {
         /// <summary>Specify the intent of the request. &apos;Save&apos; will inherently perform validation.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_actionType? ActionType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ActionType? ActionType { get; set; }
+        /// <summary>The commerce model used for this shipment.</summary>
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2CommerceModel? CommerceModel { get; set; }
+        /// <summary>The form group ID for the current generated invoice available in IFC.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? InvoiceFormGroupId { get; set; }
+#nullable restore
+#else
+        public string InvoiceFormGroupId { get; set; }
+#endif
         /// <summary>Unbounded list of containers for products included on the shipment being updated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_products>? Products { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ProductsItem>? Products { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_products> Products { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ProductsItem> Products { get; set; }
 #endif
         /// <summary>Unbounded list of containers for product metadata groups</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,6 +41,22 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item> ShipmentMetaData { get; set; }
 #endif
+        /// <summary>The type of shipment.</summary>
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ShipmentType? ShipmentType { get; set; }
+        /// <summary>The total declared value of the shipment.</summary>
+        public int? ShipmentValue { get; set; }
+        /// <summary>The &lt;a href=&quot;https://www.iso.org/iso-4217-currency-codes.html&quot; target=&quot;_blank&quot;&gt;ISO 4217&lt;/a&gt; currency code.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShipmentValueCurrency { get; set; }
+#nullable restore
+#else
+        public string ShipmentValueCurrency { get; set; }
+#endif
+        /// <summary>The total weight of the shipment.</summary>
+        public int? ShipmentWeight { get; set; }
+        /// <summary>The unit of measure for shipmentWeight.</summary>
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ShipmentWeightUnit? ShipmentWeightUnit { get; set; }
         /// <summary>This represents the shipper account number. Required when actionType is save.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +65,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipperNumber { get; set; }
 #endif
-        /// <summary>The lead 1Z number for the shipment. Required when actionType is save.</summary>
+        /// <summary>Tthe lead 1Z number fore the shipment. Required when actionType is save.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TrackingNumber { get; set; }
 #nullable restore
 #else
         public string TrackingNumber { get; set; }
+#endif
+        /// <summary>List of user roles.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? UserRoles { get; set; }
+#nullable restore
+#else
+        public List<string> UserRoles { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -65,11 +99,19 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_actionType>(); } },
-                { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_products>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_products.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ActionType>(); } },
+                { "commerceModel", n => { CommerceModel = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2CommerceModel>(); } },
+                { "invoiceFormGroupId", n => { InvoiceFormGroupId = n.GetStringValue(); } },
+                { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ProductsItem>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ProductsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shipmentMetaData", n => { ShipmentMetaData = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "shipmentType", n => { ShipmentType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ShipmentType>(); } },
+                { "shipmentValue", n => { ShipmentValue = n.GetIntValue(); } },
+                { "shipmentValueCurrency", n => { ShipmentValueCurrency = n.GetStringValue(); } },
+                { "shipmentWeight", n => { ShipmentWeight = n.GetIntValue(); } },
+                { "shipmentWeightUnit", n => { ShipmentWeightUnit = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ShipmentWeightUnit>(); } },
                 { "shipperNumber", n => { ShipperNumber = n.GetStringValue(); } },
                 { "trackingNumber", n => { TrackingNumber = n.GetStringValue(); } },
+                { "userRoles", n => { UserRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -79,11 +121,19 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_actionType>("actionType", ActionType);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2_products>("products", Products);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ActionType>("actionType", ActionType);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2CommerceModel>("commerceModel", CommerceModel);
+            writer.WriteStringValue("invoiceFormGroupId", InvoiceFormGroupId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ProductsItem>("products", Products);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>("shipmentMetaData", ShipmentMetaData);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ShipmentType>("shipmentType", ShipmentType);
+            writer.WriteIntValue("shipmentValue", ShipmentValue);
+            writer.WriteStringValue("shipmentValueCurrency", ShipmentValueCurrency);
+            writer.WriteIntValue("shipmentWeight", ShipmentWeight);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ShipmentWeightUnit>("shipmentWeightUnit", ShipmentWeightUnit);
             writer.WriteStringValue("shipperNumber", ShipperNumber);
             writer.WriteStringValue("trackingNumber", TrackingNumber);
+            writer.WriteCollectionOfPrimitiveValues<string>("userRoles", UserRoles);
         }
     }
 }

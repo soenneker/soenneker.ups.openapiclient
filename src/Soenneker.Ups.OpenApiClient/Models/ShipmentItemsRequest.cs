@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The total number of items shipped.</summary>
         public double? Quantity { get; set; }
         /// <summary>The unit of measurement for the quantity of shipment items</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest_UOM? UOM { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom? UOM { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "hsCode", n => { HsCode = n.GetStringValue(); } },
                 { "originCountryCode", n => { OriginCountryCode = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetDoubleValue(); } },
-                { "UOM", n => { UOM = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest_UOM>(); } },
+                { "UOM", n => { UOM = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom>(); } },
             };
         }
         /// <summary>
@@ -105,7 +105,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("hsCode", HsCode);
             writer.WriteStringValue("originCountryCode", OriginCountryCode);
             writer.WriteDoubleValue("quantity", Quantity);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest_UOM>("UOM", UOM);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom>("UOM", UOM);
         }
     }
 }

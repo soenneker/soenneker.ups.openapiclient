@@ -32,7 +32,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string LblNmbr { get; set; }
 #endif
         /// <summary>The is the output type in which label is generated </summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel_opTyp? OpTyp { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabelOpTyp? OpTyp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel"/> and sets the default values.
         /// </summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "lblData", n => { LblData = n.GetStringValue(); } },
                 { "lblNmbr", n => { LblNmbr = n.GetStringValue(); } },
-                { "opTyp", n => { OpTyp = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel_opTyp>(); } },
+                { "opTyp", n => { OpTyp = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabelOpTyp>(); } },
             };
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("lblData", LblData);
             writer.WriteStringValue("lblNmbr", LblNmbr);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabel_opTyp>("opTyp", OpTyp);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PostResponseLabelOpTyp>("opTyp", OpTyp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

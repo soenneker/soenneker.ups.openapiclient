@@ -23,14 +23,14 @@ namespace Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.MasterShipment
         }
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.masterShipment.item collection</summary>
         /// <param name="position">The unique identifier of the shipment to delete the master shipment. It is also known as GCCN.</param>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.MasterShipment.Item.ShipmentGccnItemRequestBuilder"/></returns>
-        public global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.MasterShipment.Item.ShipmentGccnItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.MasterShipment.Item.WithShipmentGccnItemRequestBuilder"/></returns>
+        public global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.MasterShipment.Item.WithShipmentGccnItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("shipment%2Dgccn", position);
-                return new global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.MasterShipment.Item.ShipmentGccnItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("shipmentGccn", position);
+                return new global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.MasterShipment.Item.WithShipmentGccnItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

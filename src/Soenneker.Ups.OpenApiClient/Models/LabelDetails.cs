@@ -32,7 +32,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string LblNmbr { get; set; }
 #endif
         /// <summary>&quot;Image format type for the label requested by customer.| Code   | Description   || :----: | :-----------: || ZPL    | ZPL format    || EPL    | EPL format    || STARPL | STARPL format || SPL    | SPL format    || PNG    | PNG format    || PDF    | PDF format    || GIF    | GIF format    |&quot;</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelDetails_opTyp? OpTyp { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelDetailsOpTyp? OpTyp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelDetails"/> and sets the default values.
         /// </summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "lblData", n => { LblData = n.GetStringValue(); } },
                 { "lblNmbr", n => { LblNmbr = n.GetStringValue(); } },
-                { "opTyp", n => { OpTyp = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LabelDetails_opTyp>(); } },
+                { "opTyp", n => { OpTyp = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LabelDetailsOpTyp>(); } },
             };
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("lblData", LblData);
             writer.WriteStringValue("lblNmbr", LblNmbr);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LabelDetails_opTyp>("opTyp", OpTyp);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LabelDetailsOpTyp>("opTyp", OpTyp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -31,6 +31,7 @@ using Soenneker.Ups.OpenApiClient.Pickup;
 using Soenneker.Ups.OpenApiClient.PickupNotificationPreferences;
 using Soenneker.Ups.OpenApiClient.PreNotification;
 using Soenneker.Ups.OpenApiClient.PreNotificationReady;
+using Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken;
 using Soenneker.Ups.OpenApiClient.QuantumViewReady;
 using Soenneker.Ups.OpenApiClient.Quantumview;
 using Soenneker.Ups.OpenApiClient.Rating;
@@ -181,6 +182,11 @@ namespace Soenneker.Ups.OpenApiClient
         public global::Soenneker.Ups.OpenApiClient.PreNotificationReady.PreNotificationReadyRequestBuilder PreNotificationReady
         {
             get => new global::Soenneker.Ups.OpenApiClient.PreNotificationReady.PreNotificationReadyRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ProtectedDeliveryToken property</summary>
+        public global::Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken.ProtectedDeliveryTokenRequestBuilder ProtectedDeliveryToken
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken.ProtectedDeliveryTokenRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The quantumview property</summary>
         public global::Soenneker.Ups.OpenApiClient.Quantumview.QuantumviewRequestBuilder Quantumview

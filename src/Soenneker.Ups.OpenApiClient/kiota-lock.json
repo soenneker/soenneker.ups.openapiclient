@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "ACD743A41AD3EECDF0B7E1A3571513C81EEF13222A4E9423B8C933124E5A391043C06876AC0D40DC14577B7190ADE425E0B01D9F6D5116F24ED5E9353E6DB0A1",
+  "descriptionHash": "B11E124E2134B0343964FB7EE1200B6CBEB01B05037F7A99A59CEED60643BCCA9F4C96111E2B8FDC9FE987FA0519B02064EDC3F80F886359E59EE62F71997F7E",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.31.1",
+  "kiotaVersion": "1.33.0",
   "clientClassName": "UpsOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Ups.OpenApiClient",
@@ -30,5 +30,6 @@
   ],
   "includePatterns": [],
   "excludePatterns": [],
-  "disabledValidationRules": []
+  "disabledValidationRules": [],
+  "allowedExternalOrigins": []
 }

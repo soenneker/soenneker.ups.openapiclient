@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>NMFC Commodity container.  For GFP Only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CommodityNMFC? NMFC { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc? NMFC { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CommodityNMFC NMFC { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc NMFC { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PackageCommodity"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "FreightClass", n => { FreightClass = n.GetStringValue(); } },
-                { "NMFC", n => { NMFC = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CommodityNMFC>(global::Soenneker.Ups.OpenApiClient.Models.CommodityNMFC.CreateFromDiscriminatorValue); } },
+                { "NMFC", n => { NMFC = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc>(global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("FreightClass", FreightClass);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CommodityNMFC>("NMFC", NMFC);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc>("NMFC", NMFC);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

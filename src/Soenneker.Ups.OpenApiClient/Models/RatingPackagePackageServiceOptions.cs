@@ -16,20 +16,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>&quot;Access Point COD indicates Package COD is requested for a shipment.  Valid only for : 01 - Hold For Pickup At UPS Access Point, Shipment Indication type. Package Access Point COD is valid only for shipment without return service from US/PR to US/PR and CA to CA. Not valid with (Package) COD.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCOD? AccessPointCOD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod? AccessPointCOD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCOD AccessPointCOD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod AccessPointCOD { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;COD Container. Indicates COD is requested.   Valid for the following country or territory combinations: US/PR to US/PRCA to CACA to USNot allowed for CA to US for packages that are designated as Letters or Envelopes.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCOD? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod? COD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCOD COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod COD { get; set; }
 #endif
         /// <summary>Declared Value Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -136,8 +136,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AccessPointCOD", n => { AccessPointCOD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCOD>(global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCOD.CreateFromDiscriminatorValue); } },
-                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCOD>(global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCOD.CreateFromDiscriminatorValue); } },
+                { "AccessPointCOD", n => { AccessPointCOD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod>(global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod.CreateFromDiscriminatorValue); } },
+                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod>(global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod.CreateFromDiscriminatorValue); } },
                 { "DeclaredValue", n => { DeclaredValue = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue>(global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue.CreateFromDiscriminatorValue); } },
                 { "DeliveryConfirmation", n => { DeliveryConfirmation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation>(global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation.CreateFromDiscriminatorValue); } },
                 { "DryIce", n => { DryIce = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce>(global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce.CreateFromDiscriminatorValue); } },
@@ -157,8 +157,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCOD>("AccessPointCOD", AccessPointCOD);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCOD>("COD", COD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod>("AccessPointCOD", AccessPointCOD);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod>("COD", COD);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue>("DeclaredValue", DeclaredValue);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation>("DeliveryConfirmation", DeliveryConfirmation);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce>("DryIce", DryIce);

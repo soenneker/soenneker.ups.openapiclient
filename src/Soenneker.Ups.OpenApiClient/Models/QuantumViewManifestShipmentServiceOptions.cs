@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for Call Tag service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagARS? CallTagARS { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagArs? CallTagARS { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagARS CallTagARS { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagArs CallTagARS { get; set; }
 #endif
         /// <summary>A flag indicating if the shipment requires a Saturday Delivery. True if tag exists, false otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "CallTagARS", n => { CallTagARS = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagARS>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagARS.CreateFromDiscriminatorValue); } },
+                { "CallTagARS", n => { CallTagARS = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagArs>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagArs.CreateFromDiscriminatorValue); } },
                 { "SaturdayDelivery", n => { SaturdayDelivery = n.GetStringValue(); } },
                 { "SaturdayPickup", n => { SaturdayPickup = n.GetStringValue(); } },
             };
@@ -76,7 +76,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagARS>("CallTagARS", CallTagARS);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipmentServiceOptionsCallTagArs>("CallTagARS", CallTagARS);
             writer.WriteStringValue("SaturdayDelivery", SaturdayDelivery);
             writer.WriteStringValue("SaturdayPickup", SaturdayPickup);
             writer.WriteAdditionalData(AdditionalData);

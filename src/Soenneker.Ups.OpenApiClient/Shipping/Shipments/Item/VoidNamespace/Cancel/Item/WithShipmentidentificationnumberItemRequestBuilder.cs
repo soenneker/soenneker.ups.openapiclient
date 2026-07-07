@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.VoidNamespace.Canc
         /// <summary>
         /// The Void Shipping API is used to cancel the previously scheduled shipment
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.VOIDSHIPMENTResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.VoidshipmentResponseWrapper"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingErrorResponse">When receiving a 400 status code</exception>
@@ -45,11 +45,11 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.VoidNamespace.Canc
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.VOIDSHIPMENTResponseWrapper?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.VoidNamespace.Cancel.Item.WithShipmentidentificationnumberItemRequestBuilder.WithShipmentidentificationnumberItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.VoidshipmentResponseWrapper?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.VoidNamespace.Cancel.Item.WithShipmentidentificationnumberItemRequestBuilder.WithShipmentidentificationnumberItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.VOIDSHIPMENTResponseWrapper> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.VoidNamespace.Cancel.Item.WithShipmentidentificationnumberItemRequestBuilder.WithShipmentidentificationnumberItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.VoidshipmentResponseWrapper> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.VoidNamespace.Cancel.Item.WithShipmentidentificationnumberItemRequestBuilder.WithShipmentidentificationnumberItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.VoidNamespace.Canc
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.ShippingErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.ShippingErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.VOIDSHIPMENTResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.VOIDSHIPMENTResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.VoidshipmentResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.VoidshipmentResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Void Shipping API is used to cancel the previously scheduled shipment

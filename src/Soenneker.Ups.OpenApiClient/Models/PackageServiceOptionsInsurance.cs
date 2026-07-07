@@ -31,6 +31,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator ExtendedFlexibleParcelIndicator { get; set; }
 #endif
+        /// <summary>The PackageProtection property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection? PackageProtection { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection PackageProtection { get; set; }
+#endif
         /// <summary>Container to hold Time In Transit Flexible Parcel Indicator information.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,6 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "BasicFlexibleParcelIndicator", n => { BasicFlexibleParcelIndicator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator>(global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator.CreateFromDiscriminatorValue); } },
                 { "ExtendedFlexibleParcelIndicator", n => { ExtendedFlexibleParcelIndicator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator>(global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator.CreateFromDiscriminatorValue); } },
+                { "PackageProtection", n => { PackageProtection = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection>(global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection.CreateFromDiscriminatorValue); } },
                 { "TimeInTransitFlexibleParcelIndicator", n => { TimeInTransitFlexibleParcelIndicator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator>(global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator.CreateFromDiscriminatorValue); } },
             };
         }
@@ -78,6 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator>("BasicFlexibleParcelIndicator", BasicFlexibleParcelIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator>("ExtendedFlexibleParcelIndicator", ExtendedFlexibleParcelIndicator);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection>("PackageProtection", PackageProtection);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator>("TimeInTransitFlexibleParcelIndicator", TimeInTransitFlexibleParcelIndicator);
             writer.WriteAdditionalData(AdditionalData);
         }

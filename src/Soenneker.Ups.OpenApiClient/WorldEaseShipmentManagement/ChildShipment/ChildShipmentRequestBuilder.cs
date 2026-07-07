@@ -17,14 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.childShipment.item collection</summary>
         /// <param name="position">The unique identifier of the shipment to identify the master shipment. It is also known as GCCN.</param>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.Item.ShipmentGccnItemRequestBuilder"/></returns>
-        public global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.Item.ShipmentGccnItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.Item.WithShipmentGccnItemRequestBuilder"/></returns>
+        public global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.Item.WithShipmentGccnItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("shipment%2Dgccn", position);
-                return new global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.Item.ShipmentGccnItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("shipmentGccn", position);
+                return new global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.Item.WithShipmentGccnItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

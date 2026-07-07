@@ -22,7 +22,7 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CustomsDetailRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/CustomsDetailV2/content/fields/customs-detail{?commodity_codes*,export_country_code*,import_country_code*,locale*}", pathParameters)
+        public CustomsDetailRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/CustomsDetailV2/content/fields/customs-detail{?commerce_model*,commodity_codes*,export_country_code*,import_country_code*,locale*,shipment_type*,shipment_value*,shipment_value_currency*,shipment_weight*,shipment_weight_unit*,user_roles*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CustomsDetailRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/CustomsDetailV2/content/fields/customs-detail{?commodity_codes*,export_country_code*,import_country_code*,locale*}", rawUrl)
+        public CustomsDetailRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/CustomsDetailV2/content/fields/customs-detail{?commerce_model*,commodity_codes*,export_country_code*,import_country_code*,locale*,shipment_type*,shipment_value*,shipment_value_currency*,shipment_weight*,shipment_weight_unit*,user_roles*}", rawUrl)
         {
         }
         /// <summary>
@@ -147,6 +147,8 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CustomsDetailRequestBuilderGetQueryParameters 
         {
+            [QueryParameter("commerce_model")]
+            public global::Soenneker.Ups.OpenApiClient.Models.CustomsDetailV2GetCustomDetailDataCommerceModelParameter? CommerceModel { get; set; }
             /// <summary>comma-separated list of tariff code for the product for the selected import country and process type  to filter results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -183,6 +185,32 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
 #else
             [QueryParameter("locale")]
             public string Locale { get; set; }
+#endif
+            [QueryParameter("shipment_type")]
+            public global::Soenneker.Ups.OpenApiClient.Models.CustomsDetailV2GetCustomDetailDataShipmentTypeParameter? ShipmentType { get; set; }
+            [QueryParameter("shipment_value")]
+            public int? ShipmentValue { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("shipment_value_currency")]
+            public string? ShipmentValueCurrency { get; set; }
+#nullable restore
+#else
+            [QueryParameter("shipment_value_currency")]
+            public string ShipmentValueCurrency { get; set; }
+#endif
+            [QueryParameter("shipment_weight")]
+            public int? ShipmentWeight { get; set; }
+            [QueryParameter("shipment_weight_unit")]
+            public global::Soenneker.Ups.OpenApiClient.Models.CustomsDetailV2GetCustomDetailDataShipmentWeightUnitParameter? ShipmentWeightUnit { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("user_roles")]
+            public string[]? UserRoles { get; set; }
+#nullable restore
+#else
+            [QueryParameter("user_roles")]
+            public string[] UserRoles { get; set; }
 #endif
         }
     }

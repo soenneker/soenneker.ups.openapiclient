@@ -64,6 +64,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public InteractiveResponse()
         {
             AdditionalData = new Dictionary<string, object>();
+            NoMoreQuestions = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -26,18 +26,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Represents transportation charges for child shipments categorized as &quot;Less than Truck Load&quot; (LTL), including freight, fuel surcharges, and accessorial fees. These charges are calculated based on shipment weight, volume, or distance. Applicable only for LTL child.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildLTLCharges? LtlCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges? LtlCharges { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildLTLCharges LtlCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges LtlCharges { get; set; }
 #endif
         /// <summary>LTL package information. Applicable only for LTL child.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildLTLPackage? LtlPackage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage? LtlPackage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildLTLPackage LtlPackage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage LtlPackage { get; set; }
 #endif
         /// <summary>This variable represents the product details. It is used to provide information about the product being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.ChildProduct Product { get; set; }
 #endif
         /// <summary>The type of shipment. Valid values: - LTL - SMALLPACKAGE - MI</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild_Type? Type { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChildType? Type { get; set; }
         /// <summary>The unique shipment identifier (USI) is used to create Master, LTL and Child shipments. Used for Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,10 +83,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "HazMatIndicator", n => { HazMatIndicator = n.GetStringValue(); } },
-                { "LtlCharges", n => { LtlCharges = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildLTLCharges>(global::Soenneker.Ups.OpenApiClient.Models.ChildLTLCharges.CreateFromDiscriminatorValue); } },
-                { "LtlPackage", n => { LtlPackage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildLTLPackage>(global::Soenneker.Ups.OpenApiClient.Models.ChildLTLPackage.CreateFromDiscriminatorValue); } },
+                { "LtlCharges", n => { LtlCharges = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges>(global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges.CreateFromDiscriminatorValue); } },
+                { "LtlPackage", n => { LtlPackage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage>(global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage.CreateFromDiscriminatorValue); } },
                 { "Product", n => { Product = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildProduct>(global::Soenneker.Ups.OpenApiClient.Models.ChildProduct.CreateFromDiscriminatorValue); } },
-                { "Type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild_Type>(); } },
+                { "Type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChildType>(); } },
                 { "USI", n => { USI = n.GetStringValue(); } },
             };
         }
@@ -98,10 +98,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("HazMatIndicator", HazMatIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildLTLCharges>("LtlCharges", LtlCharges);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildLTLPackage>("LtlPackage", LtlPackage);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges>("LtlCharges", LtlCharges);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage>("LtlPackage", LtlPackage);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildProduct>("Product", Product);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild_Type>("Type", Type);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChildType>("Type", Type);
             writer.WriteStringValue("USI", USI);
             writer.WriteAdditionalData(AdditionalData);
         }

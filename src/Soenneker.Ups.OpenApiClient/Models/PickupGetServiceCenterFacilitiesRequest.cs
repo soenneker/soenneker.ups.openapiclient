@@ -42,10 +42,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The PickupPiece property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequest_PickupPiece? PickupPiece { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty? PickupPiece { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequest_PickupPiece PickupPiece { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty PickupPiece { get; set; }
 #endif
         /// <summary>Proximity Indicator. Indicates the user requested the proximity search for UPS Worldwide Express Freight and UPS Worldwide Express Freight Midday locations for the origin address and/or the airport code, and the sort code for destination address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "DestinationAddress", n => { DestinationAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestDestinationAddress>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestDestinationAddress.CreateFromDiscriminatorValue); } },
                 { "Locale", n => { Locale = n.GetStringValue(); } },
                 { "OriginAddress", n => { OriginAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestOriginAddress>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestOriginAddress.CreateFromDiscriminatorValue); } },
-                { "PickupPiece", n => { PickupPiece = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequest_PickupPiece>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequest_PickupPiece.CreateFromDiscriminatorValue); } },
+                { "PickupPiece", n => { PickupPiece = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty.CreateFromDiscriminatorValue); } },
                 { "ProximitySearchIndicator", n => { ProximitySearchIndicator = n.GetStringValue(); } },
                 { "Request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestRequest>(global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestRequest.CreateFromDiscriminatorValue); } },
             };
@@ -106,7 +106,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestDestinationAddress>("DestinationAddress", DestinationAddress);
             writer.WriteStringValue("Locale", Locale);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestOriginAddress>("OriginAddress", OriginAddress);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequest_PickupPiece>("PickupPiece", PickupPiece);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty>("PickupPiece", PickupPiece);
             writer.WriteStringValue("ProximitySearchIndicator", ProximitySearchIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestRequest>("Request", Request);
             writer.WriteAdditionalData(AdditionalData);

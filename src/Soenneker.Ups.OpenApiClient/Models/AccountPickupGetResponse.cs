@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response payload - object containing the list of account pickup preferences</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponse_payload>? Payload { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItem>? Payload { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponse_payload> Payload { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItem> Payload { get; set; }
 #endif
         /// <summary>Status message, will contain a count of elements in payload in case of success when no warnings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payload", n => { Payload = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponse_payload>(global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponse_payload.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "payload", n => { Payload = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItem>(global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "statusMessage", n => { StatusMessage = n.GetStringValue(); } },
                 { "timeStamp", n => { TimeStamp = n.GetDateTimeOffsetValue(); } },
             };
@@ -70,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponse_payload>("payload", Payload);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItem>("payload", Payload);
             writer.WriteStringValue("statusMessage", StatusMessage);
             writer.WriteDateTimeOffsetValue("timeStamp", TimeStamp);
             writer.WriteAdditionalData(AdditionalData);

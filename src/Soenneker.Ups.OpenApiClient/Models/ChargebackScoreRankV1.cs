@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Risk rank for the category</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1_rank? Rank { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1Rank? Rank { get; set; }
         /// <summary>Score value for this risk category, range 0 to 999</summary>
         public double? Score { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "rank", n => { Rank = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1_rank>(); } },
+                { "rank", n => { Rank = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1Rank>(); } },
                 { "score", n => { Score = n.GetDoubleValue(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1_rank>("rank", Rank);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1Rank>("rank", Rank);
             writer.WriteDoubleValue("score", Score);
             writer.WriteAdditionalData(AdditionalData);
         }

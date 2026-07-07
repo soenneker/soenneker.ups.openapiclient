@@ -39,7 +39,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string MedicalUseIndicator { get; set; }
 #endif
-        /// <summary>&quot;Regulation set for DryIce Shipment. Valid values: CFR = For HazMat regulated by US Dept of Transportation within the U.S. or ground shipments to Canada,IATA = For Worldwide Air movement.   The following values are valid: CFR and IATA.&quot;</summary>
+        /// <summary>&quot;Regulation set for DryIce Shipment. Valid values: CFR = For HazMat regulated by US Dept of Transportation within the U.S. or ground shipments to Canada, IATA = For Worldwide Air movement, ADR = For EMEA Ground movement on Standard service.   The following values are valid: CFR, IATA and ADR.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RegulationSet { get; set; }

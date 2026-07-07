@@ -154,10 +154,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>UPS Premier Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUPSPremier? UPSPremier { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier? UPSPremier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUPSPremier UPSPremier { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier UPSPremier { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentPackage"/> and sets the default values.
@@ -200,7 +200,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "PalletDescription", n => { PalletDescription = n.GetStringValue(); } },
                 { "ReferenceNumber", n => { ReferenceNumber = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "SimpleRate", n => { SimpleRate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate.CreateFromDiscriminatorValue); } },
-                { "UPSPremier", n => { UPSPremier = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUPSPremier>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUPSPremier.CreateFromDiscriminatorValue); } },
+                { "UPSPremier", n => { UPSPremier = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier>(global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier.CreateFromDiscriminatorValue); } },
                 { "UnitPrice", n => { UnitPrice = n.GetStringValue(); } },
             };
         }
@@ -228,7 +228,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber>("ReferenceNumber", ReferenceNumber);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate>("SimpleRate", SimpleRate);
             writer.WriteStringValue("UnitPrice", UnitPrice);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUPSPremier>("UPSPremier", UPSPremier);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier>("UPSPremier", UPSPremier);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

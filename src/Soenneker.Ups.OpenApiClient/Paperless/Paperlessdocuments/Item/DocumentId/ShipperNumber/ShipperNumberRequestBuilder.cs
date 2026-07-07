@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.Document
         /// <summary>
         /// The Paperless Document API web service allows the users to upload their own customized trade documents for customs clearance to Forms History.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTDeleteResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentDeleteResponseWrapper"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PaperlessErrorResponse">When receiving a 400 status code</exception>
@@ -45,11 +45,11 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.Document
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.PaperlessErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTDeleteResponseWrapper?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentDeleteResponseWrapper?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTDeleteResponseWrapper> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentDeleteResponseWrapper> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.Document
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.PaperlessErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.PaperlessErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTDeleteResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PaperlessPAPERLESSDOCUMENTDeleteResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentDeleteResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PaperlessPaperlessdocumentDeleteResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Paperless Document API web service allows the users to upload their own customized trade documents for customs clearance to Forms History.

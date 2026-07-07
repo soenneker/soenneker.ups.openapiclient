@@ -63,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string CountryCode { get; set; }
 #endif
         /// <summary>A string value to track this operation</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1_operationId? OperationId { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1OperationId? OperationId { get; set; }
         /// <summary>The hashcode generated using the a Party&apos;s details, primarily used to avoid duplicates</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,7 +119,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "city", n => { City = n.GetStringValue(); } },
                 { "company", n => { Company = n.GetStringValue(); } },
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
-                { "operationId", n => { OperationId = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1_operationId>(); } },
+                { "operationId", n => { OperationId = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1OperationId>(); } },
                 { "partyCode", n => { PartyCode = n.GetStringValue(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
@@ -138,7 +138,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("company", Company);
             writer.WriteStringValue("countryCode", CountryCode);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1_operationId>("operationId", OperationId);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1OperationId>("operationId", OperationId);
             writer.WriteStringValue("partyCode", PartyCode);
             writer.WriteStringValue("postalCode", PostalCode);
             writer.WriteStringValue("state", State);

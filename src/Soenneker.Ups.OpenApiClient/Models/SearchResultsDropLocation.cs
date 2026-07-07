@@ -129,10 +129,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Integrated Voice Response information. ONLY FOR IVR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DropLocationIVR? IVR { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr? IVR { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DropLocationIVR IVR { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr IVR { get; set; }
 #endif
         /// <summary>The latest airtime the users can Drop-off the package at the location to be picked up. The time information is based on the time at the UPS location.When a user specifies a Drop-off Time and Air as the Service Type, the locations that have latest Drop-off times equal to or later than the specified Drop-off time and service type are returned.**NOTE:** For versions &gt;= v3, this element will always be returned as an array. For requests using version = v1 and v2, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -349,7 +349,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "FeaturedRank", n => { FeaturedRank = n.GetStringValue(); } },
                 { "Geocode", n => { Geocode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DropLocationGeocode>(global::Soenneker.Ups.OpenApiClient.Models.DropLocationGeocode.CreateFromDiscriminatorValue); } },
                 { "HomePageURL", n => { HomePageURL = n.GetStringValue(); } },
-                { "IVR", n => { IVR = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DropLocationIVR>(global::Soenneker.Ups.OpenApiClient.Models.DropLocationIVR.CreateFromDiscriminatorValue); } },
+                { "IVR", n => { IVR = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr>(global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr.CreateFromDiscriminatorValue); } },
                 { "LatestAirDropOffTime", n => { LatestAirDropOffTime = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "LatestGroundDropOffTime", n => { LatestGroundDropOffTime = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "LocalizedInstruction", n => { LocalizedInstruction = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocalizedInstruction>(global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocalizedInstruction.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -395,7 +395,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("FeaturedRank", FeaturedRank);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DropLocationGeocode>("Geocode", Geocode);
             writer.WriteStringValue("HomePageURL", HomePageURL);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DropLocationIVR>("IVR", IVR);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr>("IVR", IVR);
             writer.WriteCollectionOfPrimitiveValues<string>("LatestAirDropOffTime", LatestAirDropOffTime);
             writer.WriteCollectionOfPrimitiveValues<string>("LatestGroundDropOffTime", LatestGroundDropOffTime);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocalizedInstruction>("LocalizedInstruction", LocalizedInstruction);
