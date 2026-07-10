@@ -15,47 +15,11 @@
     },
     {
       "url": "https://onlinetools.ups.com/api/trade/compliance/{version}",
-      "description": "Production",
-      "variables": {
-        "version": {
-          "default": "v2",
-          "enum": [
-            "v2"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v2",
-                "name": "V2"
-              }
-            ]
-          }
-        }
-      }
+      "description": "Production"
     },
     {
       "url": "https://wwwcie.ups.com/api/trade/compliance/{version}",
-      "description": "CIE",
-      "variables": {
-        "version": {
-          "default": "v2",
-          "enum": [
-            "v2"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v2",
-                "name": "V2"
-              }
-            ]
-          }
-        }
-      }
+      "description": "CIE"
     },
     {
       "url": "https://wwwcie.ups.com/api/deliverydefense/external/v1.0",
@@ -968,6 +932,15 @@
               "description": "this field is required for ews/fws/worldship",
               "example": "3DA124234342"
             }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version\n\nValid values:\n- v2\n",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/CustomsDetailV2PostCustomDetailDataVersionParameter"
+            }
           }
         ],
         "requestBody": {
@@ -1241,15 +1214,7 @@
           }
         },
         "security": [
-          {
-            "oauth2": []
-          },
-          {
-            "oauthCie": []
-          },
-          {
-            "JWTAuth": []
-          }
+          {}
         ]
       },
       "get": {
@@ -1268,6 +1233,15 @@
           },
           {
             "$ref": "#/components/parameters/Content-Type"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version\n\nValid values:\n- v2\n",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/CustomsDetailV2GetCustomDetailDataVersionParameter"
+            }
           },
           {
             "name": "import_country_code",
@@ -1827,15 +1801,7 @@
           }
         },
         "security": [
-          {
-            "oauth2": []
-          },
-          {
-            "oauthCie": []
-          },
-          {
-            "JWTAuth": []
-          }
+          {}
         ]
       }
     },
@@ -82276,6 +82242,40 @@
             {
               "value": "enhanced",
               "name": "Enhanced"
+            }
+          ]
+        }
+      },
+      "CustomsDetailV2PostCustomDetailDataVersionParameter": {
+        "enum": [
+          "v2"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "CustomsDetailV2PostCustomDetailDataVersionParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "v2",
+              "name": "V2"
+            }
+          ]
+        }
+      },
+      "CustomsDetailV2GetCustomDetailDataVersionParameter": {
+        "enum": [
+          "v2"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "CustomsDetailV2GetCustomDetailDataVersionParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "v2",
+              "name": "V2"
             }
           ]
         }
