@@ -279,7 +279,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PurchaseOrderNumber { get; set; }
 #endif
-        /// <summary>&quot;A reason to export the current international shipment.Valid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice. No validation.&quot;</summary>
+        /// <summary>&quot;A reason to export the current international shipment.Valid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice.Required for EU Inbound Shipments.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReasonForExport { get; set; }

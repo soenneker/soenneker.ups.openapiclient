@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentAlternateDeliveryAddress AlternateDeliveryAddress { get; set; }
 #endif
-        /// <summary>Shipment Value for ConsigneeType. 01 = Business 02 = Consumer/Individual  NA = Not ApplicableRequired for EU Inbound Shipments</summary>
+        /// <summary>Shipment Value for ConsigneeType. 01 = Business 02 = Consumer/Individual  NA = Not Applicable.Required for EU Inbound Shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConsigneeType { get; set; }
@@ -335,7 +335,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentShipper Shipper { get; set; }
 #endif
-        /// <summary>Shipment Value for ShipperType. 01 = Business 02 = Consumer/Individual  NA = Not ApplicableRequired for EU Inbound Shipments</summary>
+        /// <summary>Shipment Value for ShipperType. 01 = Business 02 = Consumer/Individual  NA = Not Applicable.Required for EU Inbound Shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipperType { get; set; }

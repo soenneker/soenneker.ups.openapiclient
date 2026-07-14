@@ -27352,6 +27352,14 @@
             }
           },
           {
+            "name": "shipperNumber",
+            "in": "header",
+            "description": "Shipper Number<br/>Required only for Roadie Shipments",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "trackingnumber",
             "in": "query",
             "description": "The package's tracking number. You may have \nup to 20 different tracking numbers listed.\nIf more than one tracking number, pass this \nvalue as: trackingnumber= \n[\"1ZISUS010330563105\",\"1ZISUS01033056310\n8\"] with a coma separating each number.\nAlpha-numeric. Must pass 1Z rules. Must be \nupper case. Length 18",
@@ -27363,7 +27371,7 @@
           {
             "name": "version",
             "in": "path",
-            "description": "API Version\n\nValid values:\n- v2409\n",
+            "description": "API Version\n\nValid values:\n- v3 (Valid only for Roadie Shipments)\n- v2409\n",
             "required": true,
             "schema": {
               "type": "string",
@@ -71435,14 +71443,14 @@
             "maxLength": 2,
             "minLength": 2,
             "type": "string",
-            "description": "Shipment Value for ShipperType. 01 = Business 02 = Consumer/Individual  NA = Not Applicable\nRequired for EU Inbound Shipments"
+            "description": "Shipment Value for ShipperType. 01 = Business 02 = Consumer/Individual  NA = Not Applicable.\nRequired for EU Inbound Shipments."
           },
           "ConsigneeType": {
             "maximum": 1,
             "maxLength": 2,
             "minLength": 2,
             "type": "string",
-            "description": "Shipment Value for ConsigneeType. 01 = Business 02 = Consumer/Individual  NA = Not Applicable\nRequired for EU Inbound Shipments"
+            "description": "Shipment Value for ConsigneeType. 01 = Business 02 = Consumer/Individual  NA = Not Applicable.\nRequired for EU Inbound Shipments."
           },
           "MasterCartonID": {
             "maximum": 1,
@@ -72128,11 +72136,79 @@
             "minLength": 2,
             "type": "string",
             "description": "Consignee Type. 01 = Business  02 = Consumer NA = Not Applicable"
+          },
+          "IOSSContact": {
+            "$ref": "#/components/schemas/VendorInfo_IOSSContact"
           }
         },
         "description": "Vendor Information Container",
         "xml": {
           "name": "VendorInfo"
+        }
+      },
+      "VendorInfo_IOSSContact": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "maximum": 1,
+            "type": "string",
+            "description": "IOSS registered name."
+          },
+          "Address": {
+            "$ref": "#/components/schemas/IOSSContact_Address"
+          }
+        },
+        "description": "Optional IOSS information. Applicable only when Vendor Collect ID type Code 0356 is provided in vendorInformation.",
+        "xml": {
+          "name": "IOSSContact"
+        }
+      },
+      "IOSSContact_Address": {
+        "maximum": 1,
+        "type": "object",
+        "properties": {
+          "AddressLine": {
+            "maximum": 3,
+            "maxLength": 35,
+            "minLength": 1,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The  street address including name and number (when applicable). Up to three occurrences are allowed;\n\n35 characters are accepted, but for the first occurrence, only 30 characters will be printed on the label for return shipments.\n"
+          },
+          "City": {
+            "maximum": 1,
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string",
+            "description": "City."
+          },
+          "StateProvinceCode": {
+            "maximum": 1,
+            "maxLength": 5,
+            "minLength": 1,
+            "type": "string",
+            "description": "State or province code.\n"
+          },
+          "PostalCode": {
+            "maximum": 1,
+            "maxLength": 9,
+            "minLength": 1,
+            "type": "string",
+            "description": "postal code."
+          },
+          "CountryCode": {
+            "maximum": 1,
+            "maxLength": 2,
+            "minLength": 2,
+            "type": "string",
+            "description": "IOSS's country or territory code.\n\nRefer to country or territory Codes in the Appendix for valid values.\n"
+          }
+        },
+        "description": "IOSS Registered Address tag Container.  \n",
+        "xml": {
+          "name": "Address"
         }
       },
       "Shipment_PaymentInformation": {
@@ -73071,6 +73147,11 @@
             "maximum": 1,
             "type": "string",
             "description": "Presence/Absence indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the customer would like items disposed.  Shippers account needs to have a valid contract for Heavy Goods Service."
+          },
+          "EUDeMinimisIndicator": {
+            "maximum": 1,
+            "type": "string",
+            "description": "Required for EU Inbound Shipments.Valid values are Y and N.Y= If shipment with total value less than or equal to 150 Euro."
           }
         },
         "description": "Container for Shipment Service Options.",
@@ -73433,7 +73514,7 @@
             "maxLength": 20,
             "minLength": 1,
             "type": "string",
-            "description": "A reason to export the current international shipment.\nValid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice. No validation."
+            "description": "A reason to export the current international shipment.\nValid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice.Required for EU Inbound Shipments."
           },
           "Comments": {
             "maximum": 1,
@@ -74732,6 +74813,14 @@
           },
           "DDSReferenceNumber": {
             "$ref": "#/components/schemas/Product_DDSReferenceNumber"
+          },
+          "ProductIdentifier": {
+            "$ref": "#/components/schemas/Product_ProductIdentifier"
+          },
+          "CommodityFieldSpecialConditionCode": {
+            "maximum": 1,
+            "type": "string",
+            "description": "Conditionally required for EU inbound shipments. Must be set to \"01\" when a Standardized Product ID is not provided."
           }
         },
         "description": "Contains the commodity/product information.  Applies to EEI, Invoice, Partial Invoice, CO and USMCA. When any International form is requested, at least one Product must be present. \n\nMaximum number of products allowed for different forms are:\n\n50: Package Packing List\n\n100: Commercial Invoice, USMCA, CO, EEI\n\n1000: Air Freight packing list\n\nNote: For Partial Invoice this container is optional.",
@@ -75021,6 +75110,26 @@
             "type": "string",
             "description": "holds a list of DDS Reference Numbers"
           }
+        }
+      },
+      "Product_ProductIdentifier": {
+        "maximum": 6,
+        "type": "array",
+        "properties": {
+          "ProductID": {
+            "maximum": 1,
+            "type": "string",
+            "description": "The Field can contain any type of product identifier used to specify a commodity/product."
+          },
+          "ProductIDTypeCode": {
+            "maximum": 1,
+            "type": "string",
+            "description": "A code that specifies the type of product identifier in the ProductID field. valid values:'0100' = Merchant, '0200' = Manufacturer, '0300' = Standardized."
+          }
+        },
+        "description": "The Product Identifier list contains the following pair of fields:1)Product ID 2)Product ID Type Code. Required for EU Inbound Shipments.",
+        "xml": {
+          "name": "ProductIdentifier"
         }
       },
       "Product_EEIInformation": {

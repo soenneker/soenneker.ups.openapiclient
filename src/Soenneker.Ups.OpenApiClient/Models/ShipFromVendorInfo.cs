@@ -23,6 +23,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ConsigneeType { get; set; }
 #endif
+        /// <summary>Optional IOSS information. Applicable only when Vendor Collect ID type Code 0356 is provided in vendorInformation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.VendorInfoIossContact? IOSSContact { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.VendorInfoIossContact IOSSContact { get; set; }
+#endif
         /// <summary>&quot;Shipper&apos;s VAT Tax collection registration number to be entered by Shipper at time of shipment creation. Presence of this number as part of the shipment information implies the shipper has collected/paid the required VAT tax (outside of UPS/UPS systems). Vendor Colect ID Number will be printed on commercial invoice if present.Sample Values:   &apos;IMDEU1234567&apos; (IOSS #),  &apos;VOEC1234567&apos; (VOEC #),  &apos;GB1234567&apos; (HMRC #)Required if the shipment is subject to Vendor Collect ID collection&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,6 +73,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "ConsigneeType", n => { ConsigneeType = n.GetStringValue(); } },
+                { "IOSSContact", n => { IOSSContact = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VendorInfoIossContact>(global::Soenneker.Ups.OpenApiClient.Models.VendorInfoIossContact.CreateFromDiscriminatorValue); } },
                 { "VendorCollectIDNumber", n => { VendorCollectIDNumber = n.GetStringValue(); } },
                 { "VendorCollectIDTypeCode", n => { VendorCollectIDTypeCode = n.GetStringValue(); } },
             };
@@ -77,6 +86,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ConsigneeType", ConsigneeType);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VendorInfoIossContact>("IOSSContact", IOSSContact);
             writer.WriteStringValue("VendorCollectIDNumber", VendorCollectIDNumber);
             writer.WriteStringValue("VendorCollectIDTypeCode", VendorCollectIDTypeCode);
             writer.WriteAdditionalData(AdditionalData);

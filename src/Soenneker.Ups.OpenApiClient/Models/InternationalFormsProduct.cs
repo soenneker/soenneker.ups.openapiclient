@@ -23,6 +23,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CommodityCode { get; set; }
 #endif
+        /// <summary>Conditionally required for EU inbound shipments. Must be set to &quot;01&quot; when a Standardized Product ID is not provided.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CommodityFieldSpecialConditionCode { get; set; }
+#nullable restore
+#else
+        public string CommodityFieldSpecialConditionCode { get; set; }
+#endif
         /// <summary>The DDSReferenceNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -143,6 +151,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ProducerInfo { get; set; }
 #endif
+        /// <summary>The Product Identifier list contains the following pair of fields:1)Product ID 2)Product ID Type Code. Required for EU Inbound Shipments.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductProductIdentifier? ProductIdentifier { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductProductIdentifier ProductIdentifier { get; set; }
+#endif
         /// <summary>The shipping weight, including containers, for each commodity with a separate Harmonized Tariff Code / Schedule B Number. This weight does not include carrier equipment.  Applies to CO and EEI forms only. Required for CO and EEI forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -217,6 +233,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "CommodityCode", n => { CommodityCode = n.GetStringValue(); } },
+                { "CommodityFieldSpecialConditionCode", n => { CommodityFieldSpecialConditionCode = n.GetStringValue(); } },
                 { "DDSReferenceNumber", n => { DDSReferenceNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductDdsReferenceNumber>(global::Soenneker.Ups.OpenApiClient.Models.ProductDdsReferenceNumber.CreateFromDiscriminatorValue); } },
                 { "Description", n => { Description = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "EEIInformation", n => { EEIInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation>(global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation.CreateFromDiscriminatorValue); } },
@@ -232,6 +249,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "PartNumber", n => { PartNumber = n.GetStringValue(); } },
                 { "PreferenceCriteria", n => { PreferenceCriteria = n.GetStringValue(); } },
                 { "ProducerInfo", n => { ProducerInfo = n.GetStringValue(); } },
+                { "ProductIdentifier", n => { ProductIdentifier = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductProductIdentifier>(global::Soenneker.Ups.OpenApiClient.Models.ProductProductIdentifier.CreateFromDiscriminatorValue); } },
                 { "ProductWeight", n => { ProductWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight>(global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight.CreateFromDiscriminatorValue); } },
                 { "SEDTotalValue", n => { SEDTotalValue = n.GetStringValue(); } },
                 { "ScheduleB", n => { ScheduleB = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB>(global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB.CreateFromDiscriminatorValue); } },
@@ -248,6 +266,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("CommodityCode", CommodityCode);
+            writer.WriteStringValue("CommodityFieldSpecialConditionCode", CommodityFieldSpecialConditionCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductDdsReferenceNumber>("DDSReferenceNumber", DDSReferenceNumber);
             writer.WriteCollectionOfPrimitiveValues<string>("Description", Description);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation>("EEIInformation", EEIInformation);
@@ -263,6 +282,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("PartNumber", PartNumber);
             writer.WriteStringValue("PreferenceCriteria", PreferenceCriteria);
             writer.WriteStringValue("ProducerInfo", ProducerInfo);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductProductIdentifier>("ProductIdentifier", ProductIdentifier);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight>("ProductWeight", ProductWeight);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB>("ScheduleB", ScheduleB);
             writer.WriteStringValue("SEDTotalValue", SEDTotalValue);
