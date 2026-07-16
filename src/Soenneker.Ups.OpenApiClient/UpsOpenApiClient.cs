@@ -9,14 +9,12 @@ using Microsoft.Kiota.Serialization.Text;
 using Soenneker.Ups.OpenApiClient.AddressValidationReady;
 using Soenneker.Ups.OpenApiClient.Addressvalidation;
 using Soenneker.Ups.OpenApiClient.CommerceGuard;
-using Soenneker.Ups.OpenApiClient.CustomsDetailV2;
 using Soenneker.Ups.OpenApiClient.DangerousGoodsReady;
 using Soenneker.Ups.OpenApiClient.Dangerousgoods;
 using Soenneker.Ups.OpenApiClient.DeliveryDefense;
 using Soenneker.Ups.OpenApiClient.DeliveryDefenseReady;
 using Soenneker.Ups.OpenApiClient.DeliveryIntercept;
 using Soenneker.Ups.OpenApiClient.Forwarding;
-using Soenneker.Ups.OpenApiClient.GlobalCheckout;
 using Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance;
 using Soenneker.Ups.OpenApiClient.LandedCostReady;
 using Soenneker.Ups.OpenApiClient.Landedcost;
@@ -73,11 +71,6 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.CommerceGuard.CommerceGuardRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The CustomsDetailV2 property</summary>
-        public global::Soenneker.Ups.OpenApiClient.CustomsDetailV2.CustomsDetailV2RequestBuilder CustomsDetailV2
-        {
-            get => new global::Soenneker.Ups.OpenApiClient.CustomsDetailV2.CustomsDetailV2RequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The dangerousgoods property</summary>
         public global::Soenneker.Ups.OpenApiClient.Dangerousgoods.DangerousgoodsRequestBuilder Dangerousgoods
         {
@@ -107,11 +100,6 @@ namespace Soenneker.Ups.OpenApiClient
         public global::Soenneker.Ups.OpenApiClient.Forwarding.ForwardingRequestBuilder Forwarding
         {
             get => new global::Soenneker.Ups.OpenApiClient.Forwarding.ForwardingRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The GlobalCheckout property</summary>
-        public global::Soenneker.Ups.OpenApiClient.GlobalCheckout.GlobalCheckoutRequestBuilder GlobalCheckout
-        {
-            get => new global::Soenneker.Ups.OpenApiClient.GlobalCheckout.GlobalCheckoutRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The InteractiveDescriptionGuidance property</summary>
         public global::Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance.InteractiveDescriptionGuidanceRequestBuilder InteractiveDescriptionGuidance

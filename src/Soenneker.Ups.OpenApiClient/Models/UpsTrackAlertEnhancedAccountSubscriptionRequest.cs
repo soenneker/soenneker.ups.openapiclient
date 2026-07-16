@@ -57,10 +57,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded array of the packages account types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionRequestSubAccountTypeItem?>? SubAccountType { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionRequestAllOf2SubAccountTypeItem?>? SubAccountType { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionRequestSubAccountTypeItem?> SubAccountType { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionRequestAllOf2SubAccountTypeItem?> SubAccountType { get; set; }
 #endif
         /// <summary>Required for non-XOLT clients.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "eventPreferences", n => { EventPreferences = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "shipperAccountNumber", n => { ShipperAccountNumber = n.GetStringValue(); } },
-                { "subAccountType", n => { SubAccountType = n.GetCollectionOfEnumValues<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionRequestSubAccountTypeItem>()?.AsList(); } },
+                { "subAccountType", n => { SubAccountType = n.GetCollectionOfEnumValues<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionRequestAllOf2SubAccountTypeItem>()?.AsList(); } },
                 { "subscriptionId", n => { SubscriptionId = n.GetStringValue(); } },
             };
         }
@@ -116,7 +116,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("eventPreferences", EventPreferences);
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("shipperAccountNumber", ShipperAccountNumber);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionRequestSubAccountTypeItem>("subAccountType", SubAccountType);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionRequestAllOf2SubAccountTypeItem>("subAccountType", SubAccountType);
             writer.WriteStringValue("subscriptionId", SubscriptionId);
             writer.WriteAdditionalData(AdditionalData);
         }

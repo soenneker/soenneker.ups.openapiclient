@@ -14,14 +14,6 @@
       "description": "Production"
     },
     {
-      "url": "https://onlinetools.ups.com/api/trade/compliance/{version}",
-      "description": "Production"
-    },
-    {
-      "url": "https://wwwcie.ups.com/api/trade/compliance/{version}",
-      "description": "CIE"
-    },
-    {
       "url": "https://wwwcie.ups.com/api/deliverydefense/external/v1.0",
       "description": "DeliveryDefense Customer Integration Environment"
     },
@@ -73,30 +65,6 @@
         "version": {
           "default": "v1",
           "description": "Denotes which version of the API to be called as new features are released.",
-          "enum": [
-            "v1"
-          ]
-        }
-      }
-    },
-    {
-      "url": "https://wwwcie.ups.com/api/brokerage/{version}",
-      "description": "UPS Customer Integration Environment",
-      "variables": {
-        "version": {
-          "default": "v1",
-          "enum": [
-            "v1"
-          ]
-        }
-      }
-    },
-    {
-      "url": "https://onlinetools.ups.com/api/brokerage/{version}",
-      "description": "UPS Production",
-      "variables": {
-        "version": {
-          "default": "v1",
           "enum": [
             "v1"
           ]
@@ -170,6 +138,30 @@
         "version": {
           "default": "v1",
           "description": "Initial version for TradeDirect Shipment",
+          "enum": [
+            "v1"
+          ]
+        }
+      }
+    },
+    {
+      "url": "https://wwwcie.ups.com/api/brokerage/{version}",
+      "description": "Production CIE - External Interface",
+      "variables": {
+        "version": {
+          "default": "v1",
+          "enum": [
+            "v1"
+          ]
+        }
+      }
+    },
+    {
+      "url": "https://onlinetools.ups.com/api/brokerage/{version}",
+      "description": "Production - External Interface",
+      "variables": {
+        "version": {
+          "default": "v1",
           "enum": [
             "v1"
           ]
@@ -1170,969 +1162,6 @@
           {
             "CommerceGuard_OAuth2": [ ]
           }
-        ]
-      }
-    },
-    "/CustomsDetailV2/content/fields/customs-detail": {
-      "post": {
-        "tags": [
-          "Customs Detail"
-        ],
-        "summary": "Validate and/or submit the fields",
-        "description": "This endpoint will provide the ability to validate and/or submit the additional field information for a shipment",
-        "operationId": "CustomsDetailV2_postCustomDetailData",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/transId"
-          },
-          {
-            "$ref": "#/components/parameters/transactionSrc"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          },
-          {
-            "name": "registrationId",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "description": "this field is required for ews/fws/worldship",
-              "example": "3DA124234342"
-            }
-          },
-          {
-            "name": "version",
-            "in": "path",
-            "description": "Version\n\nValid values:\n- v2\n",
-            "required": true,
-            "schema": {
-              "enum": [
-                "v2"
-              ],
-              "type": "string",
-              "default": "v2"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CustomDetailsPostFieldsRequestv2"
-              },
-              "example": {
-                "actionType": "save",
-                "shipperNumber": "1443YY",
-                "trackingNumber": "1Z1443YY0161231327",
-                "invoiceFormGroupId": "1F1443YY0161231327",
-                "shipmentType": "Gift",
-                "shipmentWeight": 32456,
-                "shipmentWeightUnit": "KGS",
-                "shipmentValue": 10000,
-                "shipmentValueCurrency": "USD",
-                "userRoles": [
-                  "Importer",
-                  "Exporter"
-                ],
-                "commerceModel": "B2B",
-                "shipmentMetaData": [
-                  {
-                    "groupKey": "DE-EXP-MRN",
-                    "fields": [
-                      {
-                        "fieldKey": "DEEORI",
-                        "fieldValue": "MN123456789"
-                      }
-                    ]
-                  },
-                  {
-                    "groupKey": "IN-EXP-CSB",
-                    "fields": [
-                      {
-                        "fieldKey": "CSBType",
-                        "fieldValue": "3"
-                      },
-                      {
-                        "fieldKey": "IECCode",
-                        "fieldValue": "1234567890"
-                      }
-                    ]
-                  }
-                ],
-                "products": [
-                  {
-                    "productId": "PART-001",
-                    "productDescription": "Medical device",
-                    "lineNumber": 1,
-                    "commodityCode": "3821000010",
-                    "productMetaData": [
-                      {
-                        "groupKey": "US-IMP-FDA",
-                        "fields": [
-                          {
-                            "fieldKey": "MnuNa",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Cos"
-                              },
-                              {
-                                "sectionKey": "Bio"
-                              },
-                              {
-                                "sectionKey": "Dev"
-                              },
-                              {
-                                "sectionKey": "Foo"
-                              }
-                            ],
-                            "fieldValue": "UPS Labs"
-                          },
-                          {
-                            "fieldKey": "MnuAdLn1Te",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Cos"
-                              },
-                              {
-                                "sectionKey": "Bio"
-                              },
-                              {
-                                "sectionKey": "Dev"
-                              },
-                              {
-                                "sectionKey": "Foo"
-                              }
-                            ],
-                            "fieldValue": "55 Glenlake Pkwy NE"
-                          },
-                          {
-                            "fieldKey": "MnuAdLn2Te",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Cos"
-                              },
-                              {
-                                "sectionKey": "Bio"
-                              },
-                              {
-                                "sectionKey": "Dev"
-                              },
-                              {
-                                "sectionKey": "Foo"
-                              }
-                            ],
-                            "fieldValue": "Suite 400"
-                          },
-                          {
-                            "fieldKey": "MnuAdLn3Te",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Cos"
-                              },
-                              {
-                                "sectionKey": "Bio"
-                              },
-                              {
-                                "sectionKey": "Dev"
-                              },
-                              {
-                                "sectionKey": "Foo"
-                              }
-                            ],
-                            "fieldValue": "Building C"
-                          },
-                          {
-                            "fieldKey": "MnuCtyNa",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Cos"
-                              },
-                              {
-                                "sectionKey": "Bio"
-                              },
-                              {
-                                "sectionKey": "Dev"
-                              },
-                              {
-                                "sectionKey": "Foo"
-                              }
-                            ],
-                            "fieldValue": "Atlanta"
-                          },
-                          {
-                            "fieldKey": "MnuStPrvCd",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Cos"
-                              },
-                              {
-                                "sectionKey": "Bio"
-                              },
-                              {
-                                "sectionKey": "Dev"
-                              },
-                              {
-                                "sectionKey": "Foo"
-                              }
-                            ],
-                            "fieldValue": "GA"
-                          },
-                          {
-                            "fieldKey": "MnuCtyCd",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Cos"
-                              },
-                              {
-                                "sectionKey": "Bio"
-                              },
-                              {
-                                "sectionKey": "Dev"
-                              },
-                              {
-                                "sectionKey": "Foo"
-                              }
-                            ],
-                            "fieldValue": "US"
-                          },
-                          {
-                            "fieldKey": "MnuPslCd",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Cos"
-                              },
-                              {
-                                "sectionKey": "Bio"
-                              },
-                              {
-                                "sectionKey": "Dev"
-                              },
-                              {
-                                "sectionKey": "Foo"
-                              }
-                            ],
-                            "fieldValue": "30301"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "productId": "PART-002",
-                    "productDescription": "Sample pharma goods",
-                    "commodityCode": "300490",
-                    "productMetaData": [
-                      {
-                        "groupKey": "US-IMP-232",
-                        "fields": [
-                          {
-                            "fieldKey": "NddUseAutIr",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Alum"
-                              }
-                            ],
-                            "fieldValue": "Yes"
-                          },
-                          {
-                            "fieldKey": "AlumCnxPr",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Alum"
-                              }
-                            ],
-                            "fieldValue": "Test"
-                          },
-                          {
-                            "fieldKey": "AlumPrc1CnyCd",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Alum"
-                              }
-                            ],
-                            "fieldValue": "Testing"
-                          },
-                          {
-                            "fieldKey": "Prc2CnyCd",
-                            "regulationSections": [
-                              {
-                                "sectionKey": "Alum"
-                              }
-                            ],
-                            "fieldValue": "Go"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "204": {
-            "description": "Success",
-            "headers": {
-              "BkndTransId": {
-                "$ref": "#/components/headers/CustomsDetailV2_BkndTransId"
-              },
-              "TransId": {
-                "$ref": "#/components/headers/CustomsDetailV2_transId"
-              },
-              "transactionSrc": {
-                "$ref": "#/components/headers/CustomsDetailV2_transactionSrc"
-              },
-              "Content-Type": {
-                "$ref": "#/components/headers/CustomsDetailV2_Content-Type"
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/components/responses/BadRequest"
-          },
-          "401": {
-            "$ref": "#/components/responses/Unauthorized"
-          },
-          "422": {
-            "$ref": "#/components/responses/UnprocessableEntity"
-          },
-          "500": {
-            "$ref": "#/components/responses/ServerError"
-          }
-        },
-        "security": [
-          { }
-        ]
-      },
-      "get": {
-        "tags": [
-          "Customs Detail"
-        ],
-        "summary": "Returns required Custom Details",
-        "description": "This returns an array of fields that are required for the provided import and/or export country",
-        "operationId": "CustomsDetailV2_getCustomDetailData",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/transId"
-          },
-          {
-            "$ref": "#/components/parameters/transactionSrc"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          },
-          {
-            "name": "version",
-            "in": "path",
-            "description": "Version\n\nValid values:\n- v2\n",
-            "required": true,
-            "schema": {
-              "enum": [
-                "v2"
-              ],
-              "type": "string",
-              "default": "v2"
-            }
-          },
-          {
-            "name": "import_country_code",
-            "in": "query",
-            "schema": {
-              "maxLength": 2,
-              "minLength": 2,
-              "pattern": "^[A-Z]{2}$",
-              "type": "string",
-              "description": "The <a href=\"https://www.iso.org/iso-3166-country-codes.html\" target=\"_blank\">ISO 3166</a> country or territory code\nfrom where the shipment is being imported to. If this is omitted then all import fields for all countries will be returned\n",
-              "nullable": true,
-              "example": "US"
-            }
-          },
-          {
-            "name": "export_country_code",
-            "in": "query",
-            "schema": {
-              "maxLength": 2,
-              "minLength": 2,
-              "pattern": "^[A-Z]{2}$",
-              "type": "string",
-              "description": "The <a href=\"https://www.iso.org/iso-3166-country-codes.html\" target=\"_blank\">ISO 3166</a> country or territory code\nfrom where the shipment is being exported from. If this is omitted then all export fields for all countries will be returned\n",
-              "nullable": true,
-              "example": "IT"
-            }
-          },
-          {
-            "name": "locale",
-            "in": "query",
-            "schema": {
-              "maxLength": 5,
-              "minLength": 5,
-              "pattern": "^[a-z]{2}-[A-Z]{2}$",
-              "type": "string",
-              "description": "",
-              "default": "en-US",
-              "example": "en-US"
-            }
-          },
-          {
-            "name": "commodity_codes",
-            "in": "query",
-            "description": "comma-separated list of tariff code for the product for the selected import country and process type  to filter results.",
-            "schema": {
-              "maxLength": 2000,
-              "minLength": 1,
-              "type": "string",
-              "nullable": true,
-              "example": "2926400000,3003395000"
-            }
-          },
-          {
-            "name": "shipment_type",
-            "in": "query",
-            "schema": {
-              "enum": [
-                "Gift",
-                "Commercial",
-                "Sale",
-                "Sample",
-                "Repair",
-                "Return",
-                "Other"
-              ],
-              "type": "string",
-              "description": "The type of shipment.",
-              "example": "Gift"
-            }
-          },
-          {
-            "name": "shipment_weight",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "description": "The total weight of the shipment.",
-              "example": 32456
-            }
-          },
-          {
-            "name": "shipment_weight_unit",
-            "in": "query",
-            "schema": {
-              "enum": [
-                "LBS",
-                "KGS"
-              ],
-              "type": "string",
-              "description": "The unit of measure for shipment_weight.",
-              "example": "KGS"
-            }
-          },
-          {
-            "name": "shipment_value",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "description": "The total declared value of the shipment.",
-              "example": 10000
-            }
-          },
-          {
-            "name": "shipment_value_currency",
-            "in": "query",
-            "schema": {
-              "maxLength": 3,
-              "minLength": 3,
-              "pattern": "^[A-Z]{3}",
-              "type": "string",
-              "description": "The <a href=\"https://www.iso.org/iso-4217-currency-codes.html\" target=\"_blank\">ISO 4217</a> currency code.",
-              "example": "USD"
-            }
-          },
-          {
-            "name": "user_roles",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "description": "Comma-separated list of user roles.",
-              "example": [
-                "Importer",
-                "Exporter"
-              ]
-            }
-          },
-          {
-            "name": "commerce_model",
-            "in": "query",
-            "schema": {
-              "enum": [
-                "B2B",
-                "B2C",
-                "C2B",
-                "C2C"
-              ],
-              "type": "string",
-              "description": "The commerce model used for this shipment.",
-              "example": "B2B"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "headers": {
-              "BkndTransId": {
-                "$ref": "#/components/headers/CustomsDetailV2_BkndTransId"
-              },
-              "TransId": {
-                "$ref": "#/components/headers/CustomsDetailV2_transId"
-              },
-              "transactionSrc": {
-                "$ref": "#/components/headers/CustomsDetailV2_transactionSrc"
-              },
-              "Content-Type": {
-                "$ref": "#/components/headers/CustomsDetailV2_Content-Type"
-              }
-            },
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2"
-                },
-                "example": {
-                  "commodityCodes": [
-                    {
-                      "commodityCode": "2926400000",
-                      "regulations": [
-                        {
-                          "regulation": "FDA",
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Bio"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "commodityCode": "3003395000",
-                      "regulations": [
-                        {
-                          "regulation": "FDA",
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Bio"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "commodityCode": "All",
-                      "regulations": [
-                        {
-                          "regulation": "FDA",
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "fieldGroups": [
-                    {
-                      "countryCode": "US",
-                      "countryName": "UNITED STATES OF AMERICA",
-                      "shipmentType": "Import",
-                      "groupKey": "US-IMP-FDA",
-                      "details": "This is for US import FDA fields",
-                      "regulation": "FDA",
-                      "regulationSections": [
-                        {
-                          "sectionKey": "Cos",
-                          "sectionName": "Cosmetics"
-                        },
-                        {
-                          "sectionKey": "Bio",
-                          "sectionName": "Biologics"
-                        },
-                        {
-                          "sectionKey": "Dev",
-                          "sectionName": "Device"
-                        },
-                        {
-                          "sectionKey": "Foo",
-                          "sectionName": "Food"
-                        }
-                      ],
-                      "validationRules": [
-                        {
-                          "rule": "SteelContentPercentage + AluminumContentPercentage + CopperContentPercentage <= 100"
-                        },
-                        {
-                          "errorMessage": "Steel, aluminum, and copper percentages cannot total more than 100."
-                        }
-                      ],
-                      "fields": [
-                        {
-                          "sectionKey": "MnuNa",
-                          "label": "Manufacturer Name",
-                          "order": "1",
-                          "tooltip": "Type of shipping bill to be processed for the shipment",
-                          "isRequired": "C",
-                          "requirementConditions": [
-                            {
-                              "fieldKey": "MnuPslCd",
-                              "operator": "!=",
-                              "value": ""
-                            }
-                          ],
-                          "displayConditions": [
-                            {
-                              "ruleType": "request",
-                              "fieldKey": "shipmentWeight",
-                              "operator": ">",
-                              "value": "5000",
-                              "unit": "KGS"
-                            },
-                            {
-                              "ruleType": "fieldInput",
-                              "fieldKey": "SteelContentPercentage",
-                              "operator": ">",
-                              "value": "0",
-                              "unit": null
-                            }
-                          ],
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerName",
-                          "level": "Product",
-                          "includeOnInvoice": false
-                        },
-                        {
-                          "sectionKey": "MnuPslCd",
-                          "label": "Manufacturer Postal Code",
-                          "order": "8",
-                          "tooltip": "The postal code address of the manufacturer for the product",
-                          "isRequired": "Y",
-                          "requirementConditions": null,
-                          "displayConditions": null,
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerPostalCode",
-                          "level": "Product"
-                        },
-                        {
-                          "sectionKey": "MnuAdLn1Te",
-                          "label": "Manufacturer Address Line 1",
-                          "order": "1",
-                          "tooltip": "Line 1 of the address of the manufacturer for the product",
-                          "isRequired": "N",
-                          "requirementConditions": null,
-                          "displayConditions": null,
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerAddressLine1",
-                          "level": "Product"
-                        },
-                        {
-                          "sectionKey": "MnuAdLn2Te",
-                          "label": "Manufacturer Address Line 2",
-                          "order": "1",
-                          "tooltip": "Line 2 of the address of the manufacturer for the product",
-                          "isRequired": "N",
-                          "requirementConditions": null,
-                          "displayConditions": null,
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerAddressLine2",
-                          "level": "Product"
-                        },
-                        {
-                          "sectionKey": "MnuAdLn3Te",
-                          "label": "Manufacturer Address Line 3",
-                          "order": "1",
-                          "tooltip": "Line 3 of the address of the manufacturer for the product",
-                          "isRequired": "N",
-                          "requirementConditions": null,
-                          "displayConditions": null,
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerAddressLine3",
-                          "level": "Product"
-                        },
-                        {
-                          "sectionKey": "MnuCtyNa",
-                          "label": "Manufacturer City Name",
-                          "order": "1",
-                          "tooltip": "Line 3 of the address of the manufacturer for the product",
-                          "isRequired": "N",
-                          "requirementConditions": null,
-                          "displayConditions": null,
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerAddressLine3",
-                          "level": "Product"
-                        },
-                        {
-                          "sectionKey": "MnuStPrvCd",
-                          "label": "Manufacturer State/Province Code",
-                          "order": "1",
-                          "tooltip": "The state/province for the address of the manufacturer for the product",
-                          "isRequired": "N",
-                          "requirementConditions": null,
-                          "displayConditions": null,
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerStateProvinceCode",
-                          "level": "Product"
-                        },
-                        {
-                          "sectionKey": "MnuCtyCd",
-                          "label": "Manufacturer Country Code",
-                          "order": "1",
-                          "tooltip": "The country code for the address of the manufacturer for the product",
-                          "isRequired": "N",
-                          "requirementConditions": null,
-                          "displayConditions": null,
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerCountryCode",
-                          "level": "Product"
-                        },
-                        {
-                          "sectionKey": "MnuPslCd",
-                          "label": "Manufacturer Postal Code",
-                          "order": "1",
-                          "tooltip": "The postal code address of the manufacturer for the product",
-                          "isRequired": "Y",
-                          "requirementConditions": null,
-                          "displayConditions": null,
-                          "fieldType": "textbox",
-                          "allowedValueCount": 1,
-                          "validation": {
-                            "minLength": null,
-                            "maxLength": null,
-                            "errorMessage": "Enter a valid value",
-                            "dataType": "Text",
-                            "regexPattern": null,
-                            "listValues": [ ]
-                          },
-                          "regulationSections": [
-                            {
-                              "sectionKey": "Cos"
-                            },
-                            {
-                              "sectionKey": "Bio"
-                            },
-                            {
-                              "sectionKey": "Dev"
-                            },
-                            {
-                              "sectionKey": "Foo"
-                            }
-                          ],
-                          "keyAlias": "ManufacturerPostalCode",
-                          "level": "Product"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/Unauthorized"
-          },
-          "422": {
-            "$ref": "#/components/responses/UnprocessableEntity"
-          },
-          "500": {
-            "$ref": "#/components/responses/ServerError"
-          }
-        },
-        "security": [
-          { }
         ]
       }
     },
@@ -3804,13 +2833,13 @@
         "operationId": "DeliveryIntercept_getCharges",
         "parameters": [
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_transId"
+            "$ref": "#/components/parameters/transId"
           },
           {
             "$ref": "#/components/parameters/PlatformType"
           },
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_Content-Type"
+            "$ref": "#/components/parameters/Content-Type"
           },
           {
             "$ref": "#/components/parameters/InquiryType"
@@ -4183,13 +3212,13 @@
         "operationId": "DeliveryIntercept_getEligibilityOptions",
         "parameters": [
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_transId"
+            "$ref": "#/components/parameters/transId"
           },
           {
             "$ref": "#/components/parameters/PlatformType"
           },
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_Content-Type"
+            "$ref": "#/components/parameters/Content-Type"
           },
           {
             "$ref": "#/components/parameters/InquiryType"
@@ -4437,13 +3466,13 @@
         "operationId": "DeliveryIntercept_getRedirectInterceptOptions",
         "parameters": [
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_transId"
+            "$ref": "#/components/parameters/transId"
           },
           {
             "$ref": "#/components/parameters/PlatformType"
           },
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_Content-Type"
+            "$ref": "#/components/parameters/Content-Type"
           },
           {
             "$ref": "#/components/parameters/InquiryType"
@@ -4669,13 +3698,13 @@
         "operationId": "DeliveryIntercept_willcallInterceptOption",
         "parameters": [
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_transId"
+            "$ref": "#/components/parameters/transId"
           },
           {
             "$ref": "#/components/parameters/PlatformType"
           },
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_Content-Type"
+            "$ref": "#/components/parameters/Content-Type"
           },
           {
             "$ref": "#/components/parameters/InquiryType"
@@ -4878,13 +3907,13 @@
         "operationId": "DeliveryIntercept_returnInterceptOption",
         "parameters": [
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_transId"
+            "$ref": "#/components/parameters/transId"
           },
           {
             "$ref": "#/components/parameters/PlatformType"
           },
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_Content-Type"
+            "$ref": "#/components/parameters/Content-Type"
           },
           {
             "$ref": "#/components/parameters/InquiryType"
@@ -5088,13 +4117,13 @@
         "operationId": "DeliveryIntercept_rescheduleInterceptOption",
         "parameters": [
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_transId"
+            "$ref": "#/components/parameters/transId"
           },
           {
             "$ref": "#/components/parameters/PlatformType"
           },
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_Content-Type"
+            "$ref": "#/components/parameters/Content-Type"
           },
           {
             "$ref": "#/components/parameters/InquiryType"
@@ -5298,13 +4327,13 @@
         "operationId": "DeliveryIntercept_cancelInterceptOption",
         "parameters": [
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_transId"
+            "$ref": "#/components/parameters/transId"
           },
           {
             "$ref": "#/components/parameters/PlatformType"
           },
           {
-            "$ref": "#/components/parameters/DeliveryIntercept_Content-Type"
+            "$ref": "#/components/parameters/Content-Type"
           },
           {
             "$ref": "#/components/parameters/InquiryType"
@@ -5510,7 +4539,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -5917,7 +4946,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -6512,7 +5541,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -6776,7 +5805,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -7081,7 +6110,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -7386,7 +6415,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -7827,7 +6856,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -8180,7 +7209,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -8443,7 +7472,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -8913,7 +7942,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -9323,7 +8352,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -9682,7 +8711,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -9988,7 +9017,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -10255,7 +9284,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -10586,7 +9615,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -10853,7 +9882,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -11098,7 +10127,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -11309,7 +10338,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -11587,7 +10616,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -12024,7 +11053,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -12483,7 +11512,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -12697,7 +11726,7 @@
             "$ref": "#/components/parameters/Forwarding_transId"
           },
           {
-            "$ref": "#/components/parameters/Forwarding_transactionSrc"
+            "$ref": "#/components/parameters/transactionSrc"
           },
           {
             "$ref": "#/components/parameters/Forwarding_Content-Type"
@@ -13138,258 +12167,6 @@
             }
           }
         }
-      }
-    },
-    "/GlobalCheckout/content/glc/request-quote": {
-      "post": {
-        "tags": [
-          "Global Checkout"
-        ],
-        "summary": "returns a guaranteed landed cost quote",
-        "description": "This endpoint requests guaranteed quotes for landed cost duties and taxes.",
-        "operationId": "GlobalCheckout_createGuaranteedQuote",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/GlobalCheckout_transId"
-          },
-          {
-            "$ref": "#/components/parameters/GlobalCheckout_transactionSrc"
-          },
-          {
-            "$ref": "#/components/parameters/Accept"
-          },
-          {
-            "$ref": "#/components/parameters/GlobalCheckout_Content-Type"
-          },
-          {
-            "$ref": "#/components/parameters/registration-id"
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/BSIS_v1_QuoteRequest"
-              },
-              "example": {
-                "buyerCurrencyCode": "USD",
-                "shipperCurrencyCode": "CAD",
-                "serviceLevelCode": "01",
-                "referenceNumber": "mar20240502",
-                "shipperAccountNumber": " ",
-                "shipment": {
-                  "importCountryCode": "US",
-                  "importProvince": "AB",
-                  "shipDate": "2024-04-01",
-                  "exportCountryCode": "CA",
-                  "transModes": "INT_AIR",
-                  "transportCost": {
-                    "value": 999,
-                    "currencyCode": "USD"
-                  },
-                  "insuranceCost": {
-                    "value": 3000,
-                    "currencyCode": "USD"
-                  },
-                  "shipmentType": "Sale",
-                  "shipperAddress": {
-                    "name": "IKEA Edmonton",
-                    "addressLine1": "311 102 St",
-                    "addressLine2": "NW",
-                    "postalCode": "AB T6N 1M",
-                    "city": "Edmonton",
-                    "countryCode": "AB",
-                    "stateProvinceCode": "ON"
-                  },
-                  "shipToAddress": {
-                    "name": "UPS",
-                    "addressLine1": "55 Glenlake Pkwy",
-                    "addressLine2": "NE",
-                    "postalCode": "30328",
-                    "city": "Sandy Springs",
-                    "countryCode": "US",
-                    "stateProvinceCode": "GA",
-                    "residentialAddressIndicator": false
-                  },
-                  "shipmentItems": [
-                    {
-                      "partNumber": "40093ADA2",
-                      "quantity": {
-                        "value": 12,
-                        "unitOfMeasure": "pallets"
-                      },
-                      "grossWeight": {
-                        "value": 1250,
-                        "unitOfMeasure": "kg"
-                      },
-                      "unitPrice": {
-                        "value": 1999,
-                        "currencyCode": "USD"
-                      },
-                      "originCountryCode": "GB",
-                      "description": "Surcoil Hose - Flush End - Long",
-                      "dimension": {
-                        "length": 48,
-                        "width": 48,
-                        "height": 60,
-                        "unitOfMeasure": "IN"
-                      }
-                    },
-                    {
-                      "partNumber": "AF4535635",
-                      "originCountryCode": "GB",
-                      "quantity": {
-                        "value": 10,
-                        "unitOfMeasure": "barrels"
-                      },
-                      "grossWeight": {
-                        "value": 1500,
-                        "unitOfMeasure": "lb"
-                      },
-                      "unitPrice": {
-                        "value": 1000,
-                        "currencyCode": "USD"
-                      },
-                      "description": "Cord 5mm PK50 Yellow/Red",
-                      "dimension": {
-                        "length": 24,
-                        "width": 24,
-                        "height": 36,
-                        "unitOfMeasure": "IN"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Request successful",
-            "headers": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BSIS_v1_SuccessResponseHeaders"
-                }
-              }
-            },
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BSIS_v1_QuoteResponse"
-                },
-                "example": {
-                  "quoteId": "QUOTE1233445",
-                  "quoteCreationTimestamp": "2024-05-08T17:02:43+0000",
-                  "referenceNumber": "aaaaaaaaaaaaaaa33",
-                  "quoteExpirationDate": "2024-05-08",
-                  "gcTotal": [
-                    {
-                      "type": "Shipper",
-                      "value": 89.2,
-                      "currencyCode": "USD"
-                    },
-                    {
-                      "type": "Buyer",
-                      "value": 100.2,
-                      "currencyCode": "CAD"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "headers": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BSIS_v1_ErrorResponseHeaders"
-                }
-              }
-            },
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BSIS_v1_ErrorResponse"
-                },
-                "example": {
-                  "response": {
-                    "errors": [
-                      {
-                        "code": "0061",
-                        "message": "Required parameter registration-id is invalid."
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "headers": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BSIS_v1_ErrorResponseHeaders"
-                }
-              }
-            },
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BSIS_v1_ErrorResponse"
-                },
-                "example": {
-                  "response": {
-                    "errors": [
-                      {
-                        "code": "UJ0001",
-                        "message": "The token was invalid/expired or could not be verified"
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity",
-            "headers": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BSIS_v1_ErrorResponseHeaders"
-                }
-              }
-            },
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BSIS_v1_ErrorResponse"
-                },
-                "example": {
-                  "response": {
-                    "errors": [
-                      {
-                        "code": "105.350",
-                        "description": "INVALID_PART_NUMBER",
-                        "field": "partNumber",
-                        "message": "PART_NUMBER is not valid",
-                        "value": ""
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "GlobalCheckout_OAuth2": [ ]
-          }
-        ]
       }
     },
     "/InteractiveDescriptionGuidance/interactive": {
@@ -19228,7 +18005,7 @@
             "PickupNotificationPreferences_OAuth2": [ ]
           },
           {
-            "PickupNotificationPreferences_JWTAuth": [ ]
+            "JWTAuth": [ ]
           }
         ]
       },
@@ -19487,7 +18264,7 @@
             "PickupNotificationPreferences_OAuth2": [ ]
           },
           {
-            "PickupNotificationPreferences_JWTAuth": [ ]
+            "JWTAuth": [ ]
           }
         ]
       }
@@ -32706,7 +31483,7 @@
             "$ref": "#/components/parameters/UPSExportAssure_Content-Type"
           },
           {
-            "$ref": "#/components/parameters/UPSExportAssure_Accept"
+            "$ref": "#/components/parameters/Accept"
           },
           {
             "name": "version",
@@ -36561,840 +35338,6 @@
           }
         },
         "description": "Standard error response structure for invalid or failed requests"
-      },
-      "CustomDetailsPostFieldsRequestv2": {
-        "required": [
-          "actionType"
-        ],
-        "type": "object",
-        "properties": {
-          "shipperNumber": {
-            "maxLength": 6,
-            "minLength": 6,
-            "type": "string",
-            "description": "This represents the shipper account number. Required when actionType is save.",
-            "example": "X5R660"
-          },
-          "actionType": {
-            "enum": [
-              "validate",
-              "save"
-            ],
-            "type": "string",
-            "description": "Specify the intent of the request. 'Save' will inherently perform validation."
-          },
-          "trackingNumber": {
-            "maxLength": 18,
-            "minLength": 18,
-            "pattern": "^1Z[0-9A-Z]{16}$",
-            "type": "string",
-            "description": "Tthe lead 1Z number fore the shipment. Required when actionType is save.",
-            "example": "1Z1234567891234560"
-          },
-          "invoiceFormGroupId": {
-            "type": "string",
-            "description": "The form group ID for the current generated invoice available in IFC.",
-            "example": "1F1234567891234560"
-          },
-          "shipmentType": {
-            "enum": [
-              "Gift",
-              "Commercial",
-              "Sale",
-              "Sample",
-              "Repair",
-              "Return",
-              "Other"
-            ],
-            "type": "string",
-            "description": "The type of shipment.",
-            "example": "Gift"
-          },
-          "shipmentWeight": {
-            "minimum": 0,
-            "type": "integer",
-            "description": "The total weight of the shipment.",
-            "example": 32456
-          },
-          "shipmentWeightUnit": {
-            "enum": [
-              "LBS",
-              "KGS"
-            ],
-            "type": "string",
-            "description": "The unit of measure for shipmentWeight.",
-            "example": "KGS"
-          },
-          "shipmentValue": {
-            "minimum": 0,
-            "type": "integer",
-            "description": "The total declared value of the shipment.",
-            "example": 10000
-          },
-          "shipmentValueCurrency": {
-            "maxLength": 3,
-            "minLength": 3,
-            "pattern": "^[A-Z]{3}$",
-            "type": "string",
-            "description": "The <a href=\"https://www.iso.org/iso-4217-currency-codes.html\" target=\"_blank\">ISO 4217</a> currency code.",
-            "example": "USD"
-          },
-          "userRoles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of user roles.",
-            "example": [
-              "Importer",
-              "Exporter"
-            ]
-          },
-          "commerceModel": {
-            "enum": [
-              "B2B",
-              "B2C",
-              "C2B",
-              "C2C"
-            ],
-            "type": "string",
-            "description": "The commerce model used for this shipment.",
-            "example": "B2B"
-          },
-          "shipmentMetaData": {
-            "$ref": "#/components/schemas/CustomDetailsRequestMetaDatav2"
-          },
-          "products": {
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "required": [
-                "productId",
-                "productDescription",
-                "productMetaData"
-              ],
-              "type": "object",
-              "properties": {
-                "productId": {
-                  "maxLength": 50,
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "An identifier for the product",
-                  "example": "PROD-001"
-                },
-                "productDescription": {
-                  "maxLength": 105,
-                  "minLength": 1,
-                  "type": "string",
-                  "description": "The description of the product",
-                  "example": "Sample pharma goods"
-                },
-                "lineNumber": {
-                  "type": "integer",
-                  "description": "This is the invoice line number that the fields should be associated to",
-                  "example": 1
-                },
-                "commodityCode": {
-                  "$ref": "#/components/schemas/CustomDetailsCommodityCodev2"
-                },
-                "productMetaData": {
-                  "$ref": "#/components/schemas/CustomDetailsRequestMetaDatav2"
-                }
-              },
-              "additionalProperties": false
-            },
-            "description": "Unbounded list of containers for products included on the shipment being updated"
-          }
-        },
-        "additionalProperties": false,
-        "description": "Container for the posting of field data"
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2": {
-        "required": [
-          "commodityCodes"
-        ],
-        "type": "object",
-        "properties": {
-          "commodityCodes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "commodityCode",
-                "regulations"
-              ],
-              "type": "object",
-              "properties": {
-                "commodityCode": {
-                  "$ref": "#/components/schemas/CustomDetailsCommodityCodev2"
-                },
-                "regulations": {
-                  "minItems": 1,
-                  "type": "array",
-                  "items": {
-                    "required": [
-                      "regulation"
-                    ],
-                    "type": "object",
-                    "properties": {
-                      "regulation": {
-                        "$ref": "#/components/schemas/CustomDetailsRegulationv2"
-                      },
-                      "regulationSections": {
-                        "$ref": "#/components/schemas/CustomDetailsRegulationSectionv2"
-                      }
-                    },
-                    "additionalProperties": false
-                  },
-                  "description": "Regulations that require additional data for this commodity code."
-                }
-              },
-              "additionalProperties": false
-            },
-            "description": "Unbounded list of commodity codes and their associated compliance Regulations."
-          },
-          "fieldGroups": {
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "required": [
-                "countryCode",
-                "shipmentType",
-                "groupKey",
-                "details",
-                "fields"
-              ],
-              "type": "object",
-              "properties": {
-                "countryCode": {
-                  "maxLength": 2,
-                  "minLength": 2,
-                  "pattern": "^[A-Z]{2}$",
-                  "type": "string",
-                  "description": "The <a href=\"https://www.iso.org/iso-3166-country-codes.html\" target=\"_blank\">ISO 3166</a> country or territory code the fields pertain to.",
-                  "example": "US"
-                },
-                "countryName": {
-                  "type": "string",
-                  "description": "Country name the fields apply to.",
-                  "example": "UNITED STATES OF AMERICA"
-                },
-                "shipmentType": {
-                  "type": "string",
-                  "oneOf": [
-                    {
-                      "title": "Fields for import movment",
-                      "enum": [
-                        "Import"
-                      ]
-                    },
-                    {
-                      "title": "Fields for export movement",
-                      "enum": [
-                        "Export"
-                      ]
-                    },
-                    {
-                      "title": "Fields for both movements",
-                      "enum": [
-                        "Both"
-                      ]
-                    }
-                  ],
-                  "description": "Indicates what direction of movement the fields pertain to."
-                },
-                "groupKey": {
-                  "$ref": "#/components/schemas/CustomDetailsGroupKeyv2"
-                },
-                "details": {
-                  "type": "string",
-                  "description": "Provides details on why and when the information is needed.",
-                  "example": "This is for US import FDA fields"
-                },
-                "regulation": {
-                  "$ref": "#/components/schemas/CustomDetailsRegulationv2"
-                },
-                "regulationSections": {
-                  "$ref": "#/components/schemas/CustomDetailsRegulationSectionv2"
-                },
-                "validationRules": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "rule": {
-                        "type": "string",
-                        "description": "A text expression that supports field key references, request parameter references.",
-                        "example": "SteelContentPercentage + AluminumContentPercentage + CopperContentPercentage <= 100"
-                      },
-                      "errorMessage": {
-                        "type": "string",
-                        "description": "The message shown to the user and returned by the API when the rule evaluates to false.",
-                        "example": "Steel, aluminum, and copper percentages cannot total more than 100."
-                      }
-                    }
-                  },
-                  "description": "Expression-based validation rules evaluated against values entered for fields in the same groupKey and parameters in the request context."
-                },
-                "fields": {
-                  "minItems": 1,
-                  "type": "array",
-                  "items": {
-                    "required": [
-                      "order",
-                      "sectionKey",
-                      "label",
-                      "tooltip",
-                      "isRequired",
-                      "fieldType",
-                      "allowedValueCount",
-                      "validation"
-                    ],
-                    "type": "object",
-                    "properties": {
-                      "sectionKey": {
-                        "$ref": "#/components/schemas/CustomDetailsSectionKeyv2"
-                      },
-                      "label": {
-                        "type": "string",
-                        "description": "Human-readable name of the field.",
-                        "example": "Manufacturer Name"
-                      },
-                      "order": {
-                        "maxLength": 3,
-                        "minLength": 1,
-                        "type": "string",
-                        "description": "Display order for the field.",
-                        "example": "1"
-                      },
-                      "tooltip": {
-                        "type": "string",
-                        "description": "Tooltip text explaining the field.",
-                        "nullable": true,
-                        "example": "The name of the manufacturer for the product"
-                      },
-                      "isRequired": {
-                        "type": "string",
-                        "oneOf": [
-                          {
-                            "title": "Yes",
-                            "enum": [
-                              "Y"
-                            ]
-                          },
-                          {
-                            "title": "No",
-                            "enum": [
-                              "N"
-                            ]
-                          },
-                          {
-                            "title": "Conditional",
-                            "enum": [
-                              "C"
-                            ],
-                            "description": "If returned there will be at least one requirement condition"
-                          }
-                        ],
-                        "description": "Returns the conditionality of the field"
-                      },
-                      "requirementConditions": {
-                        "type": "array",
-                        "items": {
-                          "required": [
-                            "fieldKey",
-                            "operator",
-                            "value"
-                          ],
-                          "type": "object",
-                          "properties": {
-                            "logicalOperator": {
-                              "enum": [
-                                "AND",
-                                "OR"
-                              ],
-                              "type": "string",
-                              "description": "Determines how the rules are joined when evaluating the condition if there are multiple rules.\nRequired for all rules except the first.\n"
-                            },
-                            "fieldKey": {
-                              "type": "string",
-                              "description": "The key for the field that this rule is evaluating",
-                              "nullable": true,
-                              "example": "IN001"
-                            },
-                            "operator": {
-                              "type": "string",
-                              "oneOf": [
-                                {
-                                  "title": "Equals",
-                                  "enum": [
-                                    "="
-                                  ]
-                                },
-                                {
-                                  "title": "Greater Than",
-                                  "enum": [
-                                    ">"
-                                  ]
-                                },
-                                {
-                                  "title": "Less Than",
-                                  "enum": [
-                                    "<"
-                                  ]
-                                },
-                                {
-                                  "title": "Not Equal To",
-                                  "enum": [
-                                    "!="
-                                  ]
-                                }
-                              ],
-                              "description": "The operator used when evaluating the rule",
-                              "nullable": true
-                            },
-                            "value": {
-                              "type": "string",
-                              "description": "The value used when evaluating the rule",
-                              "nullable": true,
-                              "example": "CSB V"
-                            }
-                          },
-                          "additionalProperties": false,
-                          "description": "An object containing the specifics of each rule. Order is to be applied\ntop-down (OR conditions align with the prior rule).\n"
-                        },
-                        "description": "Unbounded array of rules. Conditionally required when is 'isRequired' flag is set.",
-                        "nullable": true
-                      },
-                      "displayConditions": {
-                        "type": "array",
-                        "items": {
-                          "required": [
-                            "fieldKey",
-                            "operator",
-                            "value"
-                          ],
-                          "type": "object",
-                          "properties": {
-                            "ruleType": {
-                              "enum": [
-                                "request",
-                                "fieldInput"
-                              ],
-                              "type": "string",
-                              "description": "Determines where and how this rule is evaluated. Rules with ruleType: request are evaluated by the Customs Detail API.\nRules with ruleType: fieldInput are returned to API consumers and are evaluated in the client UI.\n"
-                            },
-                            "logicalOperator": {
-                              "enum": [
-                                "AND",
-                                "OR"
-                              ],
-                              "type": "string",
-                              "description": "Determines how the rules are joined when evaluating the condition if there are multiple rules.\nRequired for all rules except the first.\n"
-                            },
-                            "fieldKey": {
-                              "type": "string",
-                              "description": "The key for the field that this rule is evaluating",
-                              "nullable": true,
-                              "example": "shipmentWeight"
-                            },
-                            "operator": {
-                              "type": "string",
-                              "oneOf": [
-                                {
-                                  "title": "Equals",
-                                  "enum": [
-                                    "="
-                                  ]
-                                },
-                                {
-                                  "title": "Greater Than",
-                                  "enum": [
-                                    ">"
-                                  ]
-                                },
-                                {
-                                  "title": "Less Than",
-                                  "enum": [
-                                    "<"
-                                  ]
-                                },
-                                {
-                                  "title": "Not Equal To",
-                                  "enum": [
-                                    "!="
-                                  ]
-                                },
-                                {
-                                  "title": "Contains",
-                                  "enum": [
-                                    "Contains"
-                                  ]
-                                }
-                              ],
-                              "description": "The operator used when evaluating the rule. For List type fields in a rule, only the \"Equals (=)\" and \"Contains\" operators are supported. For all other field types, all operators are supported except \"Contains\".",
-                              "nullable": true
-                            },
-                            "value": {
-                              "type": "string",
-                              "description": "The value used when evaluating the rule",
-                              "nullable": true,
-                              "example": "34621"
-                            },
-                            "unit": {
-                              "type": "string",
-                              "description": "The unit is used when shipmentWeight/shipmentValue is configured and evaluating the rule",
-                              "nullable": true,
-                              "example": "INR"
-                            }
-                          },
-                          "additionalProperties": false,
-                          "description": "An object containing the specifics of each rule. Order is to be applied\ntop-down (OR conditions align with the prior rule).\n"
-                        },
-                        "description": "Unbounded array of rules.",
-                        "nullable": true
-                      },
-                      "fieldType": {
-                        "enum": [
-                          "textbox",
-                          "list",
-                          "date",
-                          "radio",
-                          "checkbox",
-                          "textarea"
-                        ],
-                        "type": "string",
-                        "description": "The type of the field, based on available html form inputs",
-                        "example": "textbox"
-                      },
-                      "allowedValueCount": {
-                        "maxLength": 2,
-                        "minLength": 1,
-                        "type": "integer",
-                        "description": "Number of occurnces allowed for this field",
-                        "default": 1,
-                        "example": 1
-                      },
-                      "validation": {
-                        "required": [
-                          "minLength",
-                          "maxLength",
-                          "errorMessage",
-                          "dataType"
-                        ],
-                        "type": "object",
-                        "properties": {
-                          "minLength": {
-                            "maximum": 99,
-                            "minimum": 1,
-                            "maxLength": 2,
-                            "minLength": 1,
-                            "type": "integer",
-                            "description": "The min length allowed for text fields",
-                            "nullable": true,
-                            "example": 1
-                          },
-                          "maxLength": {
-                            "maximum": 100,
-                            "minimum": 1,
-                            "maxLength": 3,
-                            "minLength": 1,
-                            "type": "integer",
-                            "description": "The max length allowed for text fields",
-                            "nullable": true,
-                            "example": 10
-                          },
-                          "errorMessage": {
-                            "type": "string",
-                            "description": "Error Message",
-                            "nullable": true,
-                            "example": "Enter a valid alpha numeric value."
-                          },
-                          "dataType": {
-                            "type": "string",
-                            "oneOf": [
-                              {
-                                "title": "Custom",
-                                "enum": [
-                                  "Custom"
-                                ],
-                                "description": "user will be required to enter a custom regex pattern"
-                              },
-                              {
-                                "title": "List",
-                                "enum": [
-                                  "List"
-                                ],
-                                "description": "listValues will need to be populated with a list of possible values for the field"
-                              },
-                              {
-                                "title": "Email",
-                                "enum": [
-                                  "Email"
-                                ]
-                              },
-                              {
-                                "title": "Text",
-                                "enum": [
-                                  "Text"
-                                ]
-                              },
-                              {
-                                "title": "Alphanumeric",
-                                "enum": [
-                                  "Alphanumeric"
-                                ]
-                              },
-                              {
-                                "title": "Number",
-                                "enum": [
-                                  "Number"
-                                ]
-                              },
-                              {
-                                "title": "Date",
-                                "enum": [
-                                  "Date"
-                                ]
-                              }
-                            ],
-                            "description": "defines which type of values to look for"
-                          },
-                          "regexPattern": {
-                            "type": "string",
-                            "description": "A regex-based validation pattern for the field which should be applied when validating,\nRequired when the type is 'custom'.\n",
-                            "nullable": true,
-                            "example": "^[a-zA-Z0-9]+$"
-                          },
-                          "listValues": {
-                            "type": "array",
-                            "items": {
-                              "required": [
-                                "displayText",
-                                "internalValue"
-                              ],
-                              "type": "object",
-                              "properties": {
-                                "displayText": {
-                                  "type": "string",
-                                  "description": "Value to display in the dropdown for consumers"
-                                },
-                                "internalValue": {
-                                  "type": "string",
-                                  "description": "Internal value for each dropdown item that is hidden to consumers"
-                                }
-                              },
-                              "additionalProperties": false,
-                              "description": "value to validate against"
-                            },
-                            "description": "Unbounded list of string values to validate against. Required for type 'List'"
-                          }
-                        },
-                        "additionalProperties": false,
-                        "description": "rule validation object"
-                      },
-                      "regulationSections": {
-                        "$ref": "#/components/schemas/CustomDetailsRegulationSectionv2"
-                      },
-                      "keyAlias": {
-                        "type": "string",
-                        "description": "Alias used to identify the field when mapping to downstream systems.",
-                        "nullable": true,
-                        "example": "ManufacturerName"
-                      },
-                      "level": {
-                        "enum": [
-                          "Shipment",
-                          "Product"
-                        ],
-                        "type": "string",
-                        "description": "Indicates whether the field applies at the shipment or product level.",
-                        "nullable": true,
-                        "example": "Product"
-                      },
-                      "includeOnInvoice": {
-                        "type": "boolean",
-                        "description": "Whether a field should appear on the commercial invoice.",
-                        "default": false,
-                        "example": false
-                      }
-                    },
-                    "additionalProperties": false
-                  },
-                  "description": "Unbounded list of individual field definitions."
-                },
-                "additionalProperties": null
-              },
-              "additionalProperties": false
-            },
-            "description": "Unbounded list of field group definitions grouped by country, shipment type, and Regulation."
-          }
-        },
-        "additionalProperties": false,
-        "description": "Contains commodity code groupings and the detailed field metadata required per country, process, and Regulation."
-      },
-      "CustomDetailsCommodityCodev2": {
-        "maxLength": 15,
-        "minLength": 1,
-        "type": "string",
-        "description": "The tariff code for the product for the selected import country and process type",
-        "example": "300490"
-      },
-      "CustomDetailsGroupKeyv2": {
-        "maxLength": 50,
-        "minLength": 1,
-        "type": "string",
-        "description": "Field group key returned by the GET endpoint used to scope the shipment metadata payload; value should match the selected `groupKey` from that response.",
-        "example": "US-IMP-CDC"
-      },
-      "CustomDetailsRequestMetaDatav2": {
-        "minItems": 1,
-        "type": "array",
-        "items": {
-          "required": [
-            "fields"
-          ],
-          "type": "object",
-          "properties": {
-            "groupKey": {
-              "$ref": "#/components/schemas/CustomDetailsGroupKeyv2"
-            },
-            "fields": {
-              "minItems": 1,
-              "type": "array",
-              "items": {
-                "required": [
-                  "fieldKey",
-                  "fieldValue"
-                ],
-                "type": "object",
-                "properties": {
-                  "fieldKey": {
-                    "maxLength": 50,
-                    "minLength": 1,
-                    "type": "string",
-                    "description": "Unique field identifier (1-50 chars) that must match a `SectionKey/keyAlias` under fields returned by the GET response for the selected group (e.g., ImportLicenseNumber, CSBType, MnuNa)."
-                  },
-                  "regulationSections": {
-                    "$ref": "#/components/schemas/CustomDetailsRegulationSectionv2"
-                  },
-                  "fieldValue": {
-                    "maxLength": 500,
-                    "minLength": 0,
-                    "type": "string",
-                    "description": "User-entered value for the matched `fieldKey` (up to 500 chars); populate with the value provided for the field returned by the GET endpoint.",
-                    "example": "UPS Labs"
-                  }
-                },
-                "additionalProperties": false
-              },
-              "description": "Unbounded list of key-value pairs describing product fields"
-            }
-          },
-          "additionalProperties": false
-        },
-        "description": "Unbounded list of containers for product metadata groups"
-      },
-      "CustomDetailsSectionKeyv2": {
-        "maxLength": 50,
-        "minLength": 1,
-        "type": "string",
-        "description": "Identifier for the field."
-      },
-      "CustomDetailsRegulationv2": {
-        "maxLength": 50,
-        "minLength": 1,
-        "type": "string",
-        "description": "Identifier for the compliance Regulation.",
-        "example": "FDA"
-      },
-      "CustomDetailsRegulationSectionv2": {
-        "minItems": 1,
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "sectionKey": {
-              "$ref": "#/components/schemas/CustomDetailsSectionKeyv2"
-            },
-            "sectionName": {
-              "maxLength": 100,
-              "minLength": 1,
-              "type": "string",
-              "description": "Human-readable regulationSection label. Conditionally required when sectionKey is not present.",
-              "example": "Cosmetics"
-            }
-          },
-          "additionalProperties": false
-        },
-        "description": "Unbounded list of regulationSection definitions for this Regulation."
-      },
-      "CustomDetailsErrorResponsev2": {
-        "required": [
-          "response"
-        ],
-        "type": "object",
-        "properties": {
-          "response": {
-            "required": [
-              "errors"
-            ],
-            "type": "object",
-            "properties": {
-              "errors": {
-                "type": "array",
-                "items": {
-                  "required": [
-                    "code",
-                    "message"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "minLength": 1,
-                      "type": "string",
-                      "description": "code for the given message",
-                      "example": "105.002"
-                    },
-                    "message": {
-                      "minLength": 1,
-                      "type": "string",
-                      "description": "the warning or error message to be conveyed",
-                      "example": "Supplied Key was not in the correct range."
-                    },
-                    "description": {
-                      "minLength": 1,
-                      "type": "string",
-                      "description": "Internal description of the error",
-                      "nullable": true,
-                      "example": "INVALID_FIELD_KEY"
-                    },
-                    "field": {
-                      "minLength": 1,
-                      "type": "string",
-                      "description": "The path to the field causing the error as returned from the backend services.",
-                      "nullable": true,
-                      "example": "shipperNumber"
-                    },
-                    "value": {
-                      "minLength": 1,
-                      "type": "string",
-                      "description": "The value that caused the error",
-                      "nullable": true,
-                      "example": "789999"
-                    }
-                  },
-                  "additionalProperties": false,
-                  "description": "Error entity"
-                },
-                "description": "Unbounded array containing one or more errors"
-              }
-            },
-            "additionalProperties": false,
-            "description": "Response container to store errors"
-          }
-        },
-        "additionalProperties": false,
-        "description": "Response object for errors"
       },
       "DANGEROUSGOODSUTILITYRequestWrapper": {
         "maximum": 1,
@@ -43936,7 +41879,8 @@
             "oneOf": [
               {
                 "$ref": "#/components/schemas/PartyDetailsV1"
-              }
+              },
+              { }
             ],
             "description": "ThirdParty details for the shipment.",
             "nullable": true
@@ -43949,7 +41893,8 @@
             "oneOf": [
               {
                 "$ref": "#/components/schemas/LabelRequest"
-              }
+              },
+              { }
             ],
             "description": "Label formatting options including layout and format (e.g., PDF, ZPL, SVG).",
             "nullable": true
@@ -47274,585 +45219,6 @@
           }
         },
         "description": "Address information for a contact."
-      },
-      "BSIS_v1_QuoteRequest": {
-        "required": [
-          "shipperAccountNumber",
-          "shipperCurrencyCode",
-          "shipment"
-        ],
-        "type": "object",
-        "properties": {
-          "buyerCurrencyCode": {
-            "maxLength": 3,
-            "minLength": 3,
-            "pattern": "^[A-Z]{3}$",
-            "type": "string",
-            "description": "Buyer's currency code adhering to ISO 4217 standard.\nClick <a href=\"https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> for more information.\n",
-            "example": "USD"
-          },
-          "shipperCurrencyCode": {
-            "maxLength": 3,
-            "minLength": 3,
-            "pattern": "^[A-Z]{3}$",
-            "type": "string",
-            "description": "Shipper's currency code adhering to ISO 4217 standard.\nClick <a href=\"https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> for more information.\n",
-            "example": "USD"
-          },
-          "serviceLevelCode": {
-            "enum": [
-              "01",
-              "02",
-              "03",
-              "07",
-              "08",
-              "11",
-              "12",
-              "13",
-              "17",
-              "54",
-              "65",
-              "M2",
-              "M3",
-              "M4",
-              "M5",
-              "M6",
-              "M7",
-              "71",
-              "72",
-              "74",
-              "75",
-              "82",
-              "83",
-              "84",
-              "85",
-              "86",
-              "96"
-            ],
-            "type": "string",
-            "description": "The code for the UPS Service associated with the shipment.\nClick <a href=\"https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> for more information.\n",
-            "example": "01"
-          },
-          "referenceNumber": {
-            "maxLength": 512,
-            "type": "string",
-            "description": "A unique identifier used by clients for internal tracking.",
-            "example": "Refc123"
-          },
-          "shipperAccountNumber": {
-            "maxLength": 6,
-            "minLength": 6,
-            "type": "string",
-            "description": "The Shipper's UPS Account Number.",
-            "example": "Acc123"
-          },
-          "shipment": {
-            "$ref": "#/components/schemas/BSIS_v1_Shipment"
-          }
-        },
-        "additionalProperties": false
-      },
-      "BSIS_v1_Shipment": {
-        "maxItems": 1,
-        "minItems": 1,
-        "required": [
-          "importCountryCode",
-          "exportCountryCode",
-          "shipperAddress",
-          "shipToAddress",
-          "shipmentItems"
-        ],
-        "type": "object",
-        "properties": {
-          "importCountryCode": {
-            "maxLength": 2,
-            "minLength": 2,
-            "pattern": "^[A-Z]{2}$",
-            "type": "string",
-            "description": "The ISO 3166 code of the country imported from.\nClick <a href=\"https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> for more information.\n",
-            "example": "US"
-          },
-          "importProvince": {
-            "maxLength": 2,
-            "minLength": 2,
-            "pattern": "^[A-Z0-9]{2}$",
-            "type": "string",
-            "description": "Specifies the Province taken from.\nClick <a href=\"https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> for more information.\n",
-            "example": "A0"
-          },
-          "shipDate": {
-            "maxLength": 10,
-            "minLength": 10,
-            "pattern": "^\\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$",
-            "type": "string",
-            "description": "ShipDate of the Request (YYYY-MM-DD).",
-            "format": "date",
-            "example": "2024-05-08"
-          },
-          "exportCountryCode": {
-            "maxLength": 2,
-            "minLength": 2,
-            "pattern": "^[A-Z]{2}$",
-            "type": "string",
-            "description": "The ISO 3166 code of the country exported to.",
-            "example": "AU"
-          },
-          "transModes": {
-            "enum": [
-              "DOM_AIR",
-              "DOM_OCEAN",
-              "DOM_RAIL",
-              "DOM_TRUCK",
-              "INT_AIR",
-              "INT_OCEAN",
-              "INT_RAIL",
-              "INT_TRUCK"
-            ],
-            "type": "string",
-            "description": "The shipment mode of transportation. If not one of the listed values then it will default to the first one from the import country.\n\n| Mode      | Description                                   |\n| :--:      | :--                                           |\n| DOM_AIR   | Domestic Air transportation                   |\n| DOM_OCEAN | Domestic Ocean transportation                 |\n| DOM_RAIL  | Domestic Rail transportation                  |\n| DOM_TRUCK | Domestic Truck transportation                 |\n| INT_AIR   | International Air transportation              |\n| INT_OCEAN | International Ocean transportation            |\n| INT_RAIL  | International Rail transportation             |\n| INT_TRUCK | International/Interstate Truck transportation |\n",
-            "example": "INT_AIR"
-          },
-          "transportCost": {
-            "$ref": "#/components/schemas/BSIS_v1_ChargeDetail"
-          },
-          "insuranceCost": {
-            "$ref": "#/components/schemas/BSIS_v1_ChargeDetail"
-          },
-          "shipmentType": {
-            "type": "string",
-            "description": "Specifies the shipment type.\n\n| Type  | Description                                                       |\n| :--:  | :--                                                               |\n| GIFT  | GIFT                                                              | \n| COMM  | Sale, Sample, Repair                                              |\n| OTHR  | Return, Other, and Intercompany Data, Anything else not supported |\n| PERS  | Personal                                                          |\n",
-            "example": "COMM"
-          },
-          "shipperAddress": {
-            "$ref": "#/components/schemas/BSIS_v1_Address"
-          },
-          "shipToAddress": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/BSIS_v1_Address"
-              },
-              {
-                "properties": {
-                  "residentialAddressIndicator": {
-                    "enum": [
-                      true,
-                      false
-                    ],
-                    "type": "boolean",
-                    "description": "Indicate as true if the shipTo address is classified as residential (vs. commercial). Valid only for US50 addresses.\nNeeded for internal rate call to calculate transportCost if that is needed and not provided.\n",
-                    "example": true
-                  }
-                }
-              }
-            ],
-            "description": "ShipTo Address of request. Needed for internal rate call to calculate transportCost if that is needed and not provided."
-          },
-          "shipmentItems": {
-            "maxItems": 99,
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BSIS_v1_ShipmentItemRequest"
-            },
-            "description": "array of request ShipmentItems."
-          }
-        },
-        "additionalProperties": false
-      },
-      "BSIS_v1_ShipmentItemRequest": {
-        "required": [
-          "unitPrice",
-          "quantity",
-          "partNumber",
-          "originCountryCode"
-        ],
-        "type": "object",
-        "properties": {
-          "grossWeight": {
-            "properties": {
-              "value": {
-                "type": "integer",
-                "description": "The weight value. If this field is specified, the unitOfMeasure field must also be specified.  If this field is not specified,\nunitOfMeasure must be not be set to anything but null.\n",
-                "example": 4
-              },
-              "unitOfMeasure": {
-                "enum": [
-                  "kg",
-                  "lb",
-                  "oz",
-                  "KG",
-                  "LB",
-                  "OZ"
-                ],
-                "type": "string",
-                "description": "Unit Of Measure for the package weight.",
-                "example": "lb"
-              }
-            },
-            "description": "Specifies the gross weight of the entire ShipmentItem, that is, the weight of all contained Products plus the Packaging weight, if any. Specifying this value overrides\nany weight value in Product and/or Packaging objects.\n"
-          },
-          "unitPrice": {
-            "$ref": "#/components/schemas/BSIS_v1_ChargeDetail"
-          },
-          "quantity": {
-            "required": [
-              "value",
-              "unitOfMeasure"
-            ],
-            "properties": {
-              "value": {
-                "type": "integer",
-                "description": "Item count.",
-                "example": 4
-              },
-              "unitOfMeasure": {
-                "type": "string",
-                "description": "Item count Unit Of Measure\nClick <a href=\"https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> for more information.\n"
-              }
-            },
-            "description": "Container to quantity information on items within the shipmentItem."
-          },
-          "partNumber": {
-            "maxLength": 35,
-            "type": "string",
-            "description": "Part number or SKU, pre-approved for Garanteed Landed Cost service to identifier the item being shipped.",
-            "example": "ABDAD23455"
-          },
-          "description": {
-            "maxLength": 150,
-            "type": "string",
-            "description": "This field is populated with the hscode description.",
-            "example": "FABRIC FOR UPHOLSTERY"
-          },
-          "originCountryCode": {
-            "maxLength": 2,
-            "minLength": 2,
-            "pattern": "^[a-zA-Z0-9]{2}$",
-            "type": "string",
-            "description": "The ISO 3166 code of the shipment item country."
-          },
-          "dimension": {
-            "required": [
-              "length",
-              "width",
-              "height",
-              "unitOfMeasure"
-            ],
-            "type": "object",
-            "properties": {
-              "length": {
-                "type": "number",
-                "description": "package length (no limit).",
-                "format": "decimal",
-                "example": 1
-              },
-              "width": {
-                "type": "number",
-                "description": "package width (no limit).",
-                "format": "decimal",
-                "example": 2
-              },
-              "height": {
-                "type": "number",
-                "description": "package height (no limit).",
-                "format": "decimal",
-                "example": 3
-              },
-              "unitOfMeasure": {
-                "enum": [
-                  "in",
-                  "cm",
-                  "IN",
-                  "CM"
-                ],
-                "type": "string",
-                "description": "Specifies the units of measure.",
-                "example": "IN"
-              }
-            }
-          }
-        },
-        "additionalProperties": false,
-        "description": "Object containing the details of each item in the shipment."
-      },
-      "BSIS_v1_QuoteResponse": {
-        "required": [
-          "quoteId",
-          "quoteCreationTimestamp",
-          "quoteExpirationDate",
-          "gcTotal"
-        ],
-        "type": "object",
-        "properties": {
-          "quoteId": {
-            "maxLength": 32,
-            "type": "string",
-            "description": "unique quote id.",
-            "example": "1d2523754bde48bc95b738224de49d7b"
-          },
-          "quoteCreationTimestamp": {
-            "maxLength": 24,
-            "minLength": 24,
-            "pattern": "^\\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01]\\d|2[0-3]):([0-5]\\d):([0-5]\\d)\\+\\d{4}$",
-            "type": "string",
-            "description": "Timestamp for quote generation(UTC).",
-            "format": "datetime",
-            "example": "2024-05-08T17:02:43+0000"
-          },
-          "referenceNumber": {
-            "maxLength": 512,
-            "type": "string",
-            "description": "A reference for customer internal tracking from the request .",
-            "example": "1234567890"
-          },
-          "quoteExpirationDate": {
-            "maxLength": 10,
-            "minLength": 10,
-            "pattern": "^\\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$",
-            "type": "string",
-            "description": "Date after which the quote is no longer valid. yyyy-mm-dd format.",
-            "format": "date",
-            "example": "2024-05-08"
-          },
-          "gcTotal": {
-            "maxItems": 2,
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BSIS_v1_TotalResponse"
-            },
-            "description": "array for buyer and billing Global checkout total items."
-          },
-          "additionalProperties": null
-        }
-      },
-      "BSIS_v1_TotalResponse": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BSIS_v1_ChargeDetail"
-          },
-          {
-            "required": [
-              "type"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "enum": [
-                  "Shipper",
-                  "Buyer"
-                ],
-                "type": "string",
-                "description": "Shipper is mandatory and the Buyer will be conditionally returned if Buyer currency is porvided.",
-                "example": "Shipper"
-              }
-            }
-          }
-        ],
-        "description": "buyer or billing Global checkout details."
-      },
-      "BSIS_v1_ChargeDetail": {
-        "required": [
-          "value",
-          "currencyCode"
-        ],
-        "type": "object",
-        "properties": {
-          "value": {
-            "maxLength": 15,
-            "pattern": "^-?\\d+(,\\d{3})*(\\.\\d{1,2})?$",
-            "type": "number",
-            "description": "The value of a particular item in the shipment .",
-            "format": "double"
-          },
-          "currencyCode": {
-            "maxLength": 3,
-            "minLength": 3,
-            "pattern": "^[A-Z]{3}$",
-            "type": "string",
-            "description": "Currency Code of the unit total value adhering to ISO 4217 standard.\nClick <a href=\"https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> for more information.\n"
-          }
-        }
-      },
-      "BSIS_v1_Address": {
-        "required": [
-          "addressLine1",
-          "countryCode"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "maxLength": 35,
-            "type": "string",
-            "description": "Shipper or or Consignee's name.",
-            "example": "John Lee"
-          },
-          "addressLine1": {
-            "maxLength": 35,
-            "type": "string",
-            "description": "Shipper or or Consignee's street addres line 1.",
-            "example": "100 main street"
-          },
-          "addressLine2": {
-            "maxLength": 35,
-            "type": "string",
-            "description": "Shipper or or Consignee's street addres line 2.",
-            "example": "Suite 101"
-          },
-          "postalCode": {
-            "maxLength": 9,
-            "minLength": 5,
-            "pattern": "^[a-zA-Z0-9\\-\\s]{5,9}$",
-            "type": "string",
-            "description": "Shipper's or Consignee's postal code."
-          },
-          "city": {
-            "maxLength": 30,
-            "type": "string",
-            "description": "Shipper or Consignee's city.",
-            "example": "Columbia"
-          },
-          "countryCode": {
-            "maxLength": 2,
-            "type": "string",
-            "description": "The ISO 3166 code of the Shipper or Consignee's country or territory.",
-            "example": "US"
-          },
-          "stateProvinceCode": {
-            "maxLength": 2,
-            "type": "string",
-            "description": "Shipper or Consignee's state or province code.",
-            "example": "SC"
-          }
-        },
-        "description": "Common address fields"
-      },
-      "BSIS_v1_SuccessResponseHeaders": {
-        "required": [
-          "BkndTransId",
-          "transId",
-          "transactionSrc",
-          "Accept",
-          "Content-Type"
-        ],
-        "type": "object",
-        "properties": {
-          "BkndTransId": {
-            "type": "string",
-            "description": "The backend transaction id.",
-            "example": "UJ0001"
-          },
-          "transId": {
-            "type": "string",
-            "description": "An identifier unique to the request.",
-            "example": "0a1b9c2d8e3f7g4h6i5"
-          },
-          "transactionSrc": {
-            "type": "string",
-            "description": "Identifies the client/source application that is calling.",
-            "example": "CPC"
-          },
-          "Accept": {
-            "type": "string",
-            "description": "The Accept request HTTP header indicates which content types, expressed as MIME types, the client is able to understand.",
-            "example": "application/json"
-          },
-          "Content-Type": {
-            "type": "string",
-            "description": "The Content-Type header provides the client with the actual content/media type of the returned content.",
-            "example": "application/json"
-          }
-        },
-        "description": "The headers that are returned for all error responses."
-      },
-      "BSIS_v1_ErrorResponseHeaders": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/BSIS_v1_SuccessResponseHeaders"
-          },
-          {
-            "required": [
-              "APIErrorCode",
-              "APIErrorMsg"
-            ],
-            "type": "object",
-            "properties": {
-              "APIErrorCode": {
-                "type": "string",
-                "description": "The API error code.",
-                "example": "UJ0001"
-              },
-              "APIErrorMsg": {
-                "type": "string",
-                "description": "The API error message.",
-                "example": "Invalid token or token is not present."
-              }
-            }
-          }
-        ],
-        "description": "The headers that are returned in error conditions"
-      },
-      "BSIS_v1_ErrorResponse": {
-        "required": [
-          "response"
-        ],
-        "type": "object",
-        "properties": {
-          "response": {
-            "required": [
-              "errors"
-            ],
-            "type": "object",
-            "properties": {
-              "errors": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/BSIS_v1_Error"
-                },
-                "description": "error payload - array containing one or more Errors."
-              }
-            },
-            "description": "errors container."
-          }
-        },
-        "additionalProperties": false,
-        "description": "response container."
-      },
-      "BSIS_v1_Error": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "string",
-            "description": "code for the given message",
-            "example": "105.300"
-          },
-          "description": {
-            "type": "string",
-            "description": "Internal description of the error",
-            "example": "VALUE_REQUIRED"
-          },
-          "message": {
-            "maxLength": 200,
-            "type": "string",
-            "description": "the warning or error message to be conveyed",
-            "example": "Required field 'ImportCountryCode' is null."
-          },
-          "value": {
-            "type": "string",
-            "description": "The value that caused the error",
-            "example": ""
-          },
-          "field": {
-            "type": "string",
-            "description": "The path to the field causing the error as returned from the backend services.",
-            "example": "shipment.importCountryCode"
-          }
-        },
-        "description": "container for error and warning messages"
       },
       "Answer": {
         "required": [
@@ -55244,7 +52610,6 @@
             "$ref": "#/components/schemas/PickupTriggerGWNRequest"
           }
         },
-        "description": "openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464",
         "xml": {
           "name": "PickupTriggerGWNRequest"
         }
@@ -55260,7 +52625,6 @@
             "$ref": "#/components/schemas/PickupTriggerGWNResponse"
           }
         },
-        "description": "openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464",
         "xml": {
           "name": "PickupTriggerGWNResponse"
         }
@@ -84170,14 +81534,13 @@
           },
           "upsProhibitedMessage": {
             "pattern": "^[\\s\\S]*$",
-            "type": "string",
             "oneOf": [
+              { },
               {
                 "type": "string"
               }
             ],
-            "description": "A message explaining the reason for any prohibited shipment",
-            "nullable": true
+            "description": "A message explaining the reason for any prohibited shipment"
           },
           "isTranslatedIndicator": {
             "type": "boolean",
@@ -86441,213 +83804,8 @@
         "example": "SAM"
       }
     },
-    "responses": {
-      "BadRequest": {
-        "description": "Bad Request",
-        "headers": {
-          "BkndTransId": {
-            "$ref": "#/components/headers/CustomsDetailV2_BkndTransId"
-          },
-          "transId": {
-            "$ref": "#/components/headers/CustomsDetailV2_transId"
-          },
-          "transactionSrc": {
-            "$ref": "#/components/headers/CustomsDetailV2_transactionSrc"
-          },
-          "Content-Type": {
-            "$ref": "#/components/headers/CustomsDetailV2_Content-Type"
-          },
-          "APIErrorCode": {
-            "$ref": "#/components/headers/CustomsDetailV2_APIErrorCode"
-          },
-          "APIErrorMessage": {
-            "$ref": "#/components/headers/CustomsDetailV2_APIErrorMsg"
-          }
-        },
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/CustomDetailsErrorResponsev2"
-            },
-            "example": {
-              "response": {
-                "errors": [
-                  {
-                    "code": "105.000",
-                    "message": "Malformed JSON request"
-                  },
-                  {
-                    "code": "105.004",
-                    "message": "Field value is required",
-                    "description": "VALUE_REQUIRED",
-                    "field": "shipperNumber",
-                    "value": null
-                  }
-                ]
-              }
-            }
-          }
-        }
-      },
-      "Unauthorized": {
-        "description": "Unauthorized",
-        "headers": {
-          "BkndTransId": {
-            "$ref": "#/components/headers/CustomsDetailV2_BkndTransId"
-          },
-          "transId": {
-            "$ref": "#/components/headers/CustomsDetailV2_transId"
-          },
-          "transactionSrc": {
-            "$ref": "#/components/headers/CustomsDetailV2_transactionSrc"
-          },
-          "Content-Type": {
-            "$ref": "#/components/headers/CustomsDetailV2_Content-Type"
-          },
-          "APIErrorCode": {
-            "$ref": "#/components/headers/CustomsDetailV2_APIErrorCode"
-          },
-          "APIErrorMessage": {
-            "$ref": "#/components/headers/CustomsDetailV2_APIErrorMsg"
-          }
-        },
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/CustomDetailsErrorResponsev2"
-            },
-            "example": {
-              "response": {
-                "errors": [
-                  {
-                    "code": "105.401",
-                    "message": "Invalid token or token is not present",
-                    "description": null,
-                    "field": null,
-                    "value": null
-                  }
-                ]
-              }
-            }
-          }
-        }
-      },
-      "UnprocessableEntity": {
-        "description": "Unprocessable Entity",
-        "headers": {
-          "BkndTransId": {
-            "$ref": "#/components/headers/CustomsDetailV2_BkndTransId"
-          },
-          "transId": {
-            "$ref": "#/components/headers/CustomsDetailV2_transId"
-          },
-          "transactionSrc": {
-            "$ref": "#/components/headers/CustomsDetailV2_transactionSrc"
-          },
-          "Content-Type": {
-            "$ref": "#/components/headers/CustomsDetailV2_Content-Type"
-          },
-          "APIErrorCode": {
-            "$ref": "#/components/headers/CustomsDetailV2_APIErrorCode"
-          },
-          "APIErrorMessage": {
-            "$ref": "#/components/headers/CustomsDetailV2_APIErrorMsg"
-          }
-        },
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/CustomDetailsErrorResponsev2"
-            },
-            "example": {
-              "response": {
-                "errors": [
-                  {
-                    "code": "105.001",
-                    "description": "INVALID_FIELD_VALUE",
-                    "field": "importCountryCode",
-                    "message": "Supplied value was not in the correct range of valid values.",
-                    "value": "USA"
-                  }
-                ]
-              }
-            }
-          }
-        }
-      },
-      "ServerError": {
-        "description": "Server Error",
-        "headers": {
-          "BkndTransId": {
-            "$ref": "#/components/headers/CustomsDetailV2_BkndTransId"
-          },
-          "transId": {
-            "$ref": "#/components/headers/CustomsDetailV2_transId"
-          },
-          "transactionSrc": {
-            "$ref": "#/components/headers/CustomsDetailV2_transactionSrc"
-          },
-          "Content-Type": {
-            "$ref": "#/components/headers/CustomsDetailV2_Content-Type"
-          },
-          "APIErrorCode": {
-            "$ref": "#/components/headers/CustomsDetailV2_APIErrorCode"
-          },
-          "APIErrorMessage": {
-            "$ref": "#/components/headers/CustomsDetailV2_APIErrorMsg"
-          }
-        },
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/CustomDetailsErrorResponsev2"
-            },
-            "example": {
-              "response": {
-                "errors": [
-                  {
-                    "code": "105.500",
-                    "message": "Internal Server Error",
-                    "description": "INTERNAL_ERROR",
-                    "field": null,
-                    "value": null
-                  }
-                ]
-              }
-            }
-          }
-        }
-      }
-    },
     "parameters": {
       "transId": {
-        "name": "transId",
-        "in": "header",
-        "required": true,
-        "schema": {
-          "type": "string",
-          "description": "Transaction Id"
-        }
-      },
-      "transactionSrc": {
-        "name": "transactionSrc",
-        "in": "header",
-        "required": true,
-        "schema": {
-          "type": "string",
-          "description": "Identifies the clients/source application that is calling"
-        }
-      },
-      "Content-Type": {
-        "name": "Content-Type",
-        "in": "header",
-        "required": true,
-        "schema": {
-          "type": "string",
-          "description": "accepted value application/json"
-        }
-      },
-      "DeliveryIntercept_transId": {
         "name": "transId",
         "in": "header",
         "description": "A unique value that will be used to identify the transaction for logging and troubleshooting purposes",
@@ -86672,7 +83830,7 @@
           "type": "string"
         }
       },
-      "DeliveryIntercept_Content-Type": {
+      "Content-Type": {
         "name": "Content-Type",
         "in": "header",
         "description": "describes the content type to expect",
@@ -86728,7 +83886,7 @@
           "example": "N29245123456789"
         }
       },
-      "Forwarding_transactionSrc": {
+      "transactionSrc": {
         "name": "transactionSrc",
         "in": "header",
         "description": "Identifies the client/source application that is calling.",
@@ -86891,56 +84049,6 @@
           "example": "US"
         }
       },
-      "GlobalCheckout_transId": {
-        "name": "transId",
-        "in": "header",
-        "description": "An identifier unique to the request.",
-        "required": true,
-        "schema": {
-          "type": "string",
-          "example": "0a1b9c2d8e3f7g4h6i5"
-        }
-      },
-      "GlobalCheckout_transactionSrc": {
-        "name": "transactionSrc",
-        "in": "header",
-        "description": "Identifies the client/source application that is calling.",
-        "required": true,
-        "schema": {
-          "type": "string",
-          "example": "EWS"
-        }
-      },
-      "Accept": {
-        "name": "Accept",
-        "in": "header",
-        "description": "The Accept request HTTP header indicates which content types, expressed as MIME types, the client is able to understand.",
-        "required": true,
-        "schema": {
-          "type": "string",
-          "example": "application/json"
-        }
-      },
-      "GlobalCheckout_Content-Type": {
-        "name": "Content-Type",
-        "in": "header",
-        "description": "The Content-Type header provides the client with the actual content/media type of the returned content.",
-        "required": true,
-        "schema": {
-          "type": "string",
-          "example": "application/json"
-        }
-      },
-      "registration-id": {
-        "name": "registration-id",
-        "in": "header",
-        "description": "The Customer Registration Identifier used to validate the shipper account.  If not passed then it will be obtained with the OAuth token's UUID.",
-        "schema": {
-          "pattern": "^[0-9a-fA-F]{8}[-]?([0-9a-fA-F]{4}[-]?){3}[0-9a-fA-F]{12}$",
-          "type": "string",
-          "example": "643F7EAC-DC06-19E3-84C9-0274164A04E9"
-        }
-      },
       "PickupNotificationPreferences_transId": {
         "name": "transId",
         "in": "header",
@@ -87017,7 +84125,7 @@
           "type": "string"
         }
       },
-      "UPSExportAssure_Accept": {
+      "Accept": {
         "name": "Accept",
         "in": "header",
         "description": "The Accept request HTTP header indicates which content types, expressed as MIME types, the client is able to understand.",
@@ -88166,52 +85274,6 @@
           "example": "Invalid token or token is not present."
         }
       },
-      "CustomsDetailV2_BkndTransId": {
-        "description": "The backend transaction id.",
-        "schema": {
-          "type": "string",
-          "example": "383f7d397a48"
-        }
-      },
-      "CustomsDetailV2_transId": {
-        "description": "An identifier unique to the request.",
-        "schema": {
-          "maxLength": 512,
-          "pattern": "^[a-zA-Z0-9-.]+$",
-          "type": "string",
-          "example": "0a1b9c2d8e3f7g4h6i5"
-        }
-      },
-      "CustomsDetailV2_transactionSrc": {
-        "description": "Identifies the client/source application that is calling.",
-        "schema": {
-          "maxLength": 512,
-          "pattern": "^[a-zA-Z0-9-.]+$",
-          "type": "string",
-          "example": "UPS.com"
-        }
-      },
-      "CustomsDetailV2_Content-Type": {
-        "description": "The Content-Type header provides the client with the actual content/media type of the returned content.",
-        "schema": {
-          "type": "string",
-          "example": "application/json"
-        }
-      },
-      "CustomsDetailV2_APIErrorCode": {
-        "description": "The API error code.",
-        "schema": {
-          "type": "string",
-          "example": "UJ0001"
-        }
-      },
-      "CustomsDetailV2_APIErrorMsg": {
-        "description": "The API error message.",
-        "schema": {
-          "type": "string",
-          "example": "Invalid token or token is not present."
-        }
-      },
       "DeliveryIntercept_BkndTransId": {
         "description": "The backend transaction id.",
         "schema": {
@@ -88440,33 +85502,6 @@
           }
         }
       },
-      "oauth2": {
-        "type": "oauth2",
-        "description": "Find your Client ID and Secret on your app info page. \n  1. Select \"Try It\" \n  2. In the Security section enter your Client ID and Secret \n  3. Select \"Request Token\"\n  4. Enter any additional information in the Body and Parameters sections\n  5. Select \"Send\" to execute your API request\"\n",
-        "flows": {
-          "clientCredentials": {
-            "tokenUrl": "https://onlinetools.ups.com/security/v2/oauth/token",
-            "scopes": { },
-            "x-tokenEndpointAuthMethod": "client_secret_basic"
-          }
-        }
-      },
-      "oauthCie": {
-        "type": "oauth2",
-        "description": "Find your Client ID and Secret on your app info page. \n  1. Select \"Try It\" \n  2. In the Security section enter your Client ID and Secret \n  3. Select \"Request Token\"\n  4. Enter any additional information in the Body and Parameters sections\n  5. Select \"Send\" to execute your API request\"\n",
-        "flows": {
-          "clientCredentials": {
-            "tokenUrl": "https://wwwcie.ups.com/security/v2/oauth/token",
-            "scopes": { },
-            "x-tokenEndpointAuthMethod": "client_secret_basic"
-          }
-        }
-      },
-      "JWTAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
-      },
       "DangerousGoods_Ready_OAuth2": {
         "type": "oauth2",
         "description": "Find your Client ID and Secret on your app info page.\n1. Select \\\"Try It\\\"\n2. In the Security section enter your Client ID and Secret.\n3. Select \\\"Request Token\\\"\n4. Enter any additional information in the Body and Parameters sections.\n5. Select \\\"Send\\\" to execute your API request\n",
@@ -88522,7 +85557,7 @@
           }
         }
       },
-      "Forwarding_oauth2": {
+      "oauth2": {
         "type": "oauth2",
         "description": "Find your Client ID and Secret on your app info page. \n  1. Select \"Try It\" \n  2. In the Security section enter your Client ID and Secret \n  3. Select \"Request Token\"\n  4. Enter any additional information in the Body and Parameters sections\n  5. Select \"Send\" to execute your API request\"\n",
         "flows": {
@@ -88532,22 +85567,6 @@
             "x-tokenEndpointAuthMethod": "client_secret_basic"
           }
         }
-      },
-      "GlobalCheckout_OAuth2": {
-        "type": "oauth2",
-        "description": "\"Find your Client ID and Secret on your app info page. <br/> \n 1. Select \\\\\\\"Try It\\\\\\\" <br/>  \n 2. In the Security section enter your Client ID and Secret.<br/> \n 3. Select \\\\\\\"Request Token\\\\\\\"<br/> \n 4. Enter any additional information in the Body and Parameters sections.<br> \n 5. Select \\\\\\\"Send\\\\\\\" to execute your API request\"\n",
-        "flows": {
-          "clientCredentials": {
-            "tokenUrl": "https://wwwcie.ups.com/security/v1/oauth/token (Opens in new window or tab)",
-            "scopes": { },
-            "x-tokenEndpointAuthMethod": "client_secret_basic"
-          }
-        }
-      },
-      "GlobalCheckout_JWTAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
       },
       "InteractiveDescriptionGuidance_OAuth2": {
         "type": "oauth2",
@@ -88675,7 +85694,7 @@
           }
         }
       },
-      "PickupNotificationPreferences_JWTAuth": {
+      "JWTAuth": {
         "type": "http",
         "scheme": "bearer",
         "bearerFormat": "JWT"
@@ -88914,10 +85933,6 @@
   },
   "tags": [
     {
-      "name": "Customs Detail",
-      "description": "Endpoints related to the required fields"
-    },
-    {
       "name": "Delivery Defense"
     },
     {
@@ -88939,10 +85954,6 @@
     {
       "name": "Quotes",
       "description": "Generate and retrieve freight rate quotes."
-    },
-    {
-      "name": "Global Checkout",
-      "description": "Operations related to guaranteed rate quotes"
     },
     {
       "name": "Interactive Description",
