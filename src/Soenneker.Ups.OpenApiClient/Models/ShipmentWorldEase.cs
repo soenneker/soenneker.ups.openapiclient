@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string MasterEUConsolidationIndicator { get; set; }
 #endif
-        /// <summary>This field is a flag to indicate if the request is a master shipment. This is required for Master shipment only. If MasterHasDocBox is &quot;0&quot; then request is considered a master shipment.</summary>
+        /// <summary>This field indicates whether the shipment is a master shipment and specifies the document box type. This is required for Master shipment only.&lt;br/&gt;Valid values &lt;br/&gt;0 - Virtual DocBox &lt;br/&gt;1 - Physical DocBox.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MasterHasDocBox { get; set; }

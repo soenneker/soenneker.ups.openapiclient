@@ -54574,7 +54574,7 @@
           },
           "MasterHasDocBox": {
             "type": "string",
-            "description": "This field is a flag to indicate if the request is a master shipment. This is required for Master shipment only. If MasterHasDocBox is \u00220\u0022 then request is considered a master shipment."
+            "description": "This field indicates whether the shipment is a master shipment and specifies the document box type. This is required for Master shipment only.\u003Cbr/\u003EValid values \u003Cbr/\u003E0 - Virtual DocBox \u003Cbr/\u003E1 - Physical DocBox."
           },
           "MasterShipmentChgType": {
             "$ref": "#/components/schemas/ShipmentWorldEaseMasterShipmentChgType"
