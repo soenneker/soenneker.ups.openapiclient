@@ -79,14 +79,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string EPRAReleaseCode { get; set; }
 #endif
-        /// <summary>Required for EU Inbound Shipments.Valid values are Y and N.Y= If shipment with total value less than or equal to 150 Euro.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EUDeMinimisIndicator { get; set; }
-#nullable restore
-#else
-        public string EUDeMinimisIndicator { get; set; }
-#endif
         /// <summary>Exchange forward indicator presence at shipment level is required to create exchange forward Shipments.  In the label routing Instruction text will be defaulted to &quot;EXCHANGE-LIKE ITEM ONLY&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -223,7 +215,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string SDLShipmentIndicator { get; set; }
 #endif
-        /// <summary>UPS carbon neutral indicator presence at shipment level is required to create carbon neutral Shipments.</summary>
+        /// <summary>UPS carbon offset indicator presence at shipment level is required to create carbon offset Shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UPScarbonneutralIndicator { get; set; }
@@ -264,7 +256,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "DirectDeliveryOnlyIndicator", n => { DirectDeliveryOnlyIndicator = n.GetStringValue(); } },
                 { "DropoffAtUPSFacilityIndicator", n => { DropoffAtUPSFacilityIndicator = n.GetStringValue(); } },
                 { "EPRAReleaseCode", n => { EPRAReleaseCode = n.GetStringValue(); } },
-                { "EUDeMinimisIndicator", n => { EUDeMinimisIndicator = n.GetStringValue(); } },
                 { "ExchangeForwardIndicator", n => { ExchangeForwardIndicator = n.GetStringValue(); } },
                 { "HoldForPickupIndicator", n => { HoldForPickupIndicator = n.GetStringValue(); } },
                 { "ImportControlIndicator", n => { ImportControlIndicator = n.GetStringValue(); } },
@@ -300,7 +291,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("DirectDeliveryOnlyIndicator", DirectDeliveryOnlyIndicator);
             writer.WriteStringValue("DropoffAtUPSFacilityIndicator", DropoffAtUPSFacilityIndicator);
             writer.WriteStringValue("EPRAReleaseCode", EPRAReleaseCode);
-            writer.WriteStringValue("EUDeMinimisIndicator", EUDeMinimisIndicator);
             writer.WriteStringValue("ExchangeForwardIndicator", ExchangeForwardIndicator);
             writer.WriteStringValue("HoldForPickupIndicator", HoldForPickupIndicator);
             writer.WriteStringValue("ImportControlIndicator", ImportControlIndicator);
