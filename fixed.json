@@ -356,7 +356,7 @@
           {
             "name": "regionalrequestindicator",
             "in": "query",
-            "description": "\u0022Valid values: true or False.  If True, either the region element or any  combination of Political Division 1,  Political Division 2, PostcodePrimaryLow and the PostcodeExtendedLow fields will  be recognized for validation in addition to  the urbanization element. If False or no  indicator, street level address validation  is provided\u0022",
+            "description": "\u0022Valid values: True or False.  If True, either the region element or any  combination of Political Division 1,  Political Division 2, PostcodePrimaryLow and the PostcodeExtendedLow fields will  be recognized for validation in addition to  the urbanization element. If False or no  indicator, street level address validation  is provided\u0022",
             "schema": {
               "minimum": 1,
               "type": "string"
@@ -499,7 +499,7 @@
           {
             "name": "regionalrequestindicator",
             "in": "query",
-            "description": "\u0022Valid values: true or False.  If True, either the region element or any  combination of Political Division 1,  Political Division 2, PostcodePrimaryLow and the PostcodeExtendedLow fields will  be recognized for validation in addition to  the urbanization element. If False or no  indicator, street level address validation  is provided\u0022",
+            "description": "\u0022Valid values: True or False.  If True, either the region element or any  combination of Political Division 1,  Political Division 2, PostcodePrimaryLow and the PostcodeExtendedLow fields will  be recognized for validation in addition to  the urbanization element. If False or no  indicator, street level address validation  is provided\u0022",
             "schema": {
               "minimum": 1,
               "type": "string"
@@ -33491,7 +33491,7 @@
             "maxLength": 5,
             "minLength": 4,
             "type": "string",
-            "description": "\u0022Confidence level.\nValid values: true or False\u0022"
+            "description": "\u0022Confidence level.\nValid values: True or False\u0022"
           }
         },
         "description": "Container for LocatorResponse.",
