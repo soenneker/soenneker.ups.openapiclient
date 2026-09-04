@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Alternate Payment Method.Valid value: 01= PayPalOnly valid for forward shipments. It is not valid for Return or Import Control shipments. This element or one of the sibling elements CreditCard or AccountNumber must be provided, but all of them may not be provided.   PayPal 01: Is only valid for forward shipments. It is not valid for Return or Import Control shipments. This element or one of the sibling elements CreditCard or AccountNumber must be provided, but all of them may not be provided.&quot;</summary>
+        /// <summary>Alternate Payment Method.Valid value: 01= PayPalOnly valid for forward shipments. It is not valid for Return or Import Control shipments. This element or one of the sibling elements CreditCard or AccountNumber must be provided, but all of them may not be provided.   PayPal 01: Is only valid for forward shipments. It is not valid for Return or Import Control shipments. This element or one of the sibling elements CreditCard or AccountNumber must be provided, but all of them may not be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AlternatePaymentMethod { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string AlternatePaymentMethod { get; set; }
 #endif
-        /// <summary>&quot;Credit card information container.  Required if neither of the following is present: /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AccountNumber or /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AlternatePaymentMethod. Credit card payment is valid for shipments without return service only.&quot;</summary>
+        /// <summary>Credit card information container.  Required if neither of the following is present: /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AccountNumber or /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AlternatePaymentMethod. Credit card payment is valid for shipments without return service only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.BillShipperCreditCard? CreditCard { get; set; }

@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>&quot;Description that indicates the type of form.  Possible Values: All Requested International Forms.&quot;</summary>
+        /// <summary>Description that indicates the type of form.  Possible Values: All Requested International Forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Address information of the Producer.  Applies to USMCA. Only applicable if producer option is empty or not present. Conditionally required for: USMCA, when Producer option is not specified.&quot;
+    /// Address information of the Producer.  Applies to USMCA. Only applicable if producer option is empty or not present. Conditionally required for: USMCA, when Producer option is not specified.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProducerAddress : IAdditionalDataHolder, IParsable
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<string> AddressLine { get; set; }
 #endif
-        /// <summary>&quot;City of the Producer.  Applies to USMCA. Conditionally required for: USMCA, when Producer option is not specified.&quot;</summary>
+        /// <summary>City of the Producer.  Applies to USMCA. Conditionally required for: USMCA, when Producer option is not specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? City { get; set; }

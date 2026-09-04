@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CN22OtherDescription { get; set; }
 #endif
-        /// <summary>&quot;Valid values: 1 = GIFT2 = DOCUMENTS3 = COMMERCIAL SAMPLE4 = OTHER  Required if the CN22 form container is present.&quot;</summary>
+        /// <summary>Valid values: 1 = GIFT2 = DOCUMENTS3 = COMMERCIAL SAMPLE4 = OTHER  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CN22Type { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string LabelPrintType { get; set; }
 #endif
-        /// <summary>&quot;Provide the valid values: 6 = 4X61 = 8.5X11  Required if the CN22 form container is present.&quot;</summary>
+        /// <summary>Provide the valid values: 6 = 4X61 = 8.5X11  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LabelSize { get; set; }

@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;For Exchange Forward Shipment, by default Label will have Exchange Routing instruction Text as EXCHANGE-LIKE ITEM ONLY. If code value is: 01- EXCHANGE-LIKE ITEM ONLY, 02- EXCHANGE-DRIVER INSTRUCTIONS INSIDE.&quot;</summary>
+        /// <summary>For Exchange Forward Shipment, by default Label will have Exchange Routing instruction Text as EXCHANGE-LIKE ITEM ONLY. If code value is: 01- EXCHANGE-LIKE ITEM ONLY, 02- EXCHANGE-DRIVER INSTRUCTIONS INSIDE.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

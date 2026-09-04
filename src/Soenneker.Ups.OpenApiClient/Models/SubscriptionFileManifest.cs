@@ -22,7 +22,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ManifestBillToAccount BillToAccount { get; set; }
 #endif
-        /// <summary>&quot;An accessorial Indicator flag: Y = Category A Hazardous materials accessorial provided in Manifest. Spaces = Category A Hazardous materials accessorial not provided in Manifest.&quot;</summary>
+        /// <summary>An accessorial Indicator flag: Y = Category A Hazardous materials accessorial provided in Manifest. Spaces = Category A Hazardous materials accessorial not provided in Manifest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CategoryAHazardousIndicator { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ClinicalTrialIndicationNumber { get; set; }
 #endif
-        /// <summary>&quot;An accessorial Indicator flag: Y = Clinical Trial accessorial provided in Manifest. Spaces = Clinical Trial accessorial not provided in Manifest.&quot;</summary>
+        /// <summary>An accessorial Indicator flag: Y = Clinical Trial accessorial provided in Manifest. Spaces = Clinical Trial accessorial not provided in Manifest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClinicalTrialIndicator { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DeliveryPreference { get; set; }
 #endif
-        /// <summary>&quot;An accessorial Indicator flag: Y = Direct Delivery accessorisal provided in Manifest. Spaces = Direct Delivery accessorial not provided in Manifest.&quot;</summary>
+        /// <summary>An accessorial Indicator flag: Y = Direct Delivery accessorisal provided in Manifest. Spaces = Direct Delivery accessorial not provided in Manifest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DirectDeliveryIndicator { get; set; }
@@ -150,7 +150,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ItemDisposalIndicator { get; set; }
 #endif
-        /// <summary>&quot;Indicates Label Delivery Method, Values are: LDE Electronic Label. LDO One Attempt. LDP Print Label. LDT Three Attempt. LPM Print and Mail Label.&quot;</summary>
+        /// <summary>Indicates Label Delivery Method, Values are: LDE Electronic Label. LDO One Attempt. LDP Print Label. LDT Three Attempt. LPM Print and Mail Label.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LabelDeliveryMethod { get; set; }
@@ -182,7 +182,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string LiftGateOnPickUp { get; set; }
 #endif
-        /// <summary>&quot;Indicates Location Assured Values: Y - Location Assured accessorial requested&quot;</summary>
+        /// <summary>Indicates Location Assured Values: Y - Location Assured accessorial requested</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LocationAssured { get; set; }

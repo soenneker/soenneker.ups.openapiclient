@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators NotificationIndicators { get; set; }
 #endif
         /// <summary>System generated id that represents the version of the document.</summary>
-        public int? VersionNumber { get; set; }
+        public long? VersionNumber { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItem"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "emails", n => { Emails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "notificationIndicators", n => { NotificationIndicators = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators>(global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators.CreateFromDiscriminatorValue); } },
-                { "versionNumber", n => { VersionNumber = n.GetIntValue(); } },
+                { "versionNumber", n => { VersionNumber = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("emails", Emails);
             writer.WriteStringValue("locale", Locale);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators>("notificationIndicators", NotificationIndicators);
-            writer.WriteIntValue("versionNumber", VersionNumber);
+            writer.WriteLongValue("versionNumber", VersionNumber);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

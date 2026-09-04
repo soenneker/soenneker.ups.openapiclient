@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>&quot;The type of document requested for generation.| Code   | Description                     || :----: | :-----------------------------: || CCI    | Consolidated Commercial Invoice || CBOL   | Consolidated Bill of Lading     || BOL    | Bill of Lading                  || PLT    | Pallet Label                    || PKGPLT | Package Pallet Label            |&quot;</summary>
+    /// <summary>The type of document requested for generation.| Code   | Description                     || :----: | :-----------------------------: || CCI    | Consolidated Commercial Invoice || CBOL   | Consolidated Bill of Lading     || BOL    | Bill of Lading                  || PLT    | Pallet Label                    || PKGPLT | Package Pallet Label            |</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DocumentRequestRequestedDoc
     {

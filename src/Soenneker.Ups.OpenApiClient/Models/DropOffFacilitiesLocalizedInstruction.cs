@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Last50ftInstruction { get; set; }
 #endif
-        /// <summary>&quot;Locale. Example: en_US&quot;</summary>
+        /// <summary>Locale. Example: en_US</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Locale { get; set; }

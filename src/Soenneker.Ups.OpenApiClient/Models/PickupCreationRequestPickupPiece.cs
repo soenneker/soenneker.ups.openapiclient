@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Container type. Valid values:- 01 = PACKAGE- 02 = UPS LETTER- 03 = PALLETNote: 03 is used for only WWEF services&quot;</summary>
+        /// <summary>Container type. Valid values:- 01 = PACKAGE- 02 = UPS LETTER- 03 = PALLETNote: 03 is used for only WWEF services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContainerCode { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DestinationCountryCode { get; set; }
 #endif
-        /// <summary>&quot;Number of pieces to be picked up. Max per service: 999&quot;</summary>
+        /// <summary>Number of pieces to be picked up. Max per service: 999</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Quantity { get; set; }

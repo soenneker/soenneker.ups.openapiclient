@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CountryCode { get; set; }
 #endif
-        /// <summary>&quot;State/Province.  Returned if the location is within a State/Province/Territory. For International: returned if user enters valid Country or Territory Code, and City/postal code and it has a match.  For Domestic addresses, the value must be a valid 2-character value (per US Mail standards).  For International the full State or Province name will be returned.&quot;</summary>
+        /// <summary>State/Province.  Returned if the location is within a State/Province/Territory. For International: returned if user enters valid Country or Territory Code, and City/postal code and it has a match.  For Domestic addresses, the value must be a valid 2-character value (per US Mail standards).  For International the full State or Province name will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PoliticalDivision1 { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PoliticalDivision2 { get; set; }
 #endif
-        /// <summary>&quot;Low-end extended postal code in a range. Example in quotes: Postal Code 30076-&apos;1234&apos;.  Only returned in candidate list. May be alphanumeric&quot;</summary>
+        /// <summary>Low-end extended postal code in a range. Example in quotes: Postal Code 30076-&apos;1234&apos;.  Only returned in candidate list. May be alphanumeric</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PostcodeExtendedLow { get; set; }

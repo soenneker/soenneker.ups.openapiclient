@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CostCenterBarcodeIndicator { get; set; }
 #endif
-        /// <summary>&quot;The Description of Goods for the shipment. Applies to international and domestic shipments. Provide a detailed description of items being shipped for documents and non-documents. Examples: \&quot;annual reports\&quot; and \&quot;9 mm steel screws\&quot;.  Required if all of the listed conditions are true: ShipFrom and ShipTo countries or territories are not the same; The packaging type is not UPS Letter; The ShipFrom and or ShipTo countries or territories are not in the European Union or the ShipFrom and ShipTo countries or territories are both in the European Union and the shipments service type is not UPS Standard. The Description of Goods field is required for all UAE shipments, including Import, Export, and Domestic shipments. This requirement applies to both Document and Non‑Document shipments.&quot;</summary>
+        /// <summary>The Description of Goods for the shipment. Applies to international and domestic shipments. Provide a detailed description of items being shipped for documents and non-documents. Examples: &quot;annual reports&quot; and &quot;9 mm steel screws&quot;.  Required if all of the listed conditions are true: ShipFrom and ShipTo countries or territories are not the same; The packaging type is not UPS Letter; The ShipFrom and or ShipTo countries or territories are not in the European Union or the ShipFrom and ShipTo countries or territories are both in the European Union and the shipments service type is not UPS Standard. The Description of Goods field is required for all UAE shipments, including Import, Export, and Domestic shipments. This requirement applies to both Document and Non‑Document shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -119,7 +119,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentInvoiceLineTotal InvoiceLineTotal { get; set; }
 #endif
-        /// <summary>&quot;Mail classification defined by the USPS.   Valid values: 1 = Balloon2 = Oversize3 = Not Applicable&quot;</summary>
+        /// <summary>Mail classification defined by the USPS.   Valid values: 1 = Balloon2 = Oversize3 = Not Applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IrregularIndicator { get; set; }
@@ -135,7 +135,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Locale { get; set; }
 #endif
-        /// <summary>&quot;Master Carton ID. If Economy Service (17 or 72) : Economy Shipment will be associated with given Master Carton ID. If Non-Economy Service: Master Carton Shipment will be created for given Master Carton ID.&quot;</summary>
+        /// <summary>Master Carton ID. If Economy Service (17 or 72) : Economy Shipment will be associated with given Master Carton ID. If Non-Economy Service: Master Carton Shipment will be created for given Master Carton ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MasterCartonID { get; set; }
@@ -159,7 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string MIDualReturnShipmentIndicator { get; set; }
 #endif
-        /// <summary>&quot;MIDualReturnShipmentKey is unique key required to process Mail Innovations Dual Return Shipment. The unique identifier (key) would be returned in response of first phase of Mail Innovations Dual Return Shipments. This unique identifier (key) would be part of request for second phase of Mail Innovations Dual Return Shipments.Format: For Package return shipments, the package tracking number is concatenated with the system time (YYYY-MM-DDHH.MM.SS.NNN), followed by service code. For MI Return shipments, the Mail Manifest ID (MMI) is concatenated with the system time.  The unique identifier (key) is required to link the package and the Mail Innovations portion of Dual Return shipment. If unique identifier (key) is empty in the request for UPS Mail Innovations Return Service, the request will be treated as the first phase of the Mail Innovations Dual Returns Request. If the MIDualReturnShipmentIndicator is present with empty or null MIDualReturnShipmentKey in UPS Package Return Shipment, the request will be treated as the first phase of Dual MI Return Label Shipment. This field would be ignored if MIDualReturnShipmentIndicator is not present in UPS Package Return Shipment request.&quot;</summary>
+        /// <summary>MIDualReturnShipmentKey is unique key required to process Mail Innovations Dual Return Shipment. The unique identifier (key) would be returned in response of first phase of Mail Innovations Dual Return Shipments. This unique identifier (key) would be part of request for second phase of Mail Innovations Dual Return Shipments.Format: For Package return shipments, the package tracking number is concatenated with the system time (YYYY-MM-DDHH.MM.SS.NNN), followed by service code. For MI Return shipments, the Mail Manifest ID (MMI) is concatenated with the system time.  The unique identifier (key) is required to link the package and the Mail Innovations portion of Dual Return shipment. If unique identifier (key) is empty in the request for UPS Mail Innovations Return Service, the request will be treated as the first phase of the Mail Innovations Dual Returns Request. If the MIDualReturnShipmentIndicator is present with empty or null MIDualReturnShipmentKey in UPS Package Return Shipment, the request will be treated as the first phase of Dual MI Return Label Shipment. This field would be ignored if MIDualReturnShipmentIndicator is not present in UPS Package Return Shipment request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MIDualReturnShipmentKey { get; set; }
@@ -279,7 +279,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentShipFrom ShipFrom { get; set; }
 #endif
-        /// <summary>&quot;User can send up to 7 days in the future with current date as day zero. Format: YYYYMMDD&quot;</summary>
+        /// <summary>User can send up to 7 days in the future with current date as day zero. Format: YYYYMMDD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentDate { get; set; }
@@ -303,7 +303,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentShipmentRatingOptions ShipmentRatingOptions { get; set; }
 #endif
-        /// <summary>&quot;Code that identifies the risk of the Shipment entering the European Union (EU).  Values: 01 = AT RISK of Entering the EU  02 = NOT AT RISK of Entering the EU  03 = RISK UNKNOWN of Entering the EU&quot;</summary>
+        /// <summary>Code that identifies the risk of the Shipment entering the European Union (EU).  Values: 01 = AT RISK of Entering the EU  02 = NOT AT RISK of Entering the EU  03 = RISK UNKNOWN of Entering the EU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentRiskEnteringEU { get; set; }
@@ -351,7 +351,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentShipTo ShipTo { get; set; }
 #endif
-        /// <summary>&quot;A component encoded on the barcode of the Mail Innovations label.   Valid values: IR = IrregularMA = MachineableSubClass is only required if the customer&apos;s contract have them subclass the package not UPS.&quot;</summary>
+        /// <summary>A component encoded on the barcode of the Mail Innovations label.   Valid values: IR = IrregularMA = MachineableSubClass is only required if the customer&apos;s contract have them subclass the package not UPS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubClassification { get; set; }
@@ -375,7 +375,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect TradeDirect { get; set; }
 #endif
-        /// <summary>&quot;USPS Endorsement.Valid values: 1 = Return Service Requested 2 = Forwarding Service Requested 3 = Address Service Requested 4 = Change Service Requested and 5 = No Service Selected. Note: For International Mail Innovations shipments use No Service Selected. International Mail Innovations shipments are applicable for Priority Mail Innovations and Mail Innovations Economy Mail Innovations services only.  Required for Mail Innovations forward shipments.&quot;</summary>
+        /// <summary>USPS Endorsement.Valid values: 1 = Return Service Requested 2 = Forwarding Service Requested 3 = Address Service Requested 4 = Change Service Requested and 5 = No Service Selected. Note: For International Mail Innovations shipments use No Service Selected. International Mail Innovations shipments are applicable for Priority Mail Innovations and Mail Innovations Economy Mail Innovations services only.  Required for Mail Innovations forward shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? USPSEndorsement { get; set; }

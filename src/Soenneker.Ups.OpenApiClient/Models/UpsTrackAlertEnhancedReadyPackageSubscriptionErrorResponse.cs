@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The invalidTrackingNumbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvalidTrackingNumbers { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionErrorResponseInvalidTrackingNumbers? InvalidTrackingNumbers { get; set; }
 #nullable restore
 #else
-        public string InvalidTrackingNumbers { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionErrorResponseInvalidTrackingNumbers InvalidTrackingNumbers { get; set; }
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "invalidTrackingNumbers", n => { InvalidTrackingNumbers = n.GetStringValue(); } },
+                { "invalidTrackingNumbers", n => { InvalidTrackingNumbers = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionErrorResponseInvalidTrackingNumbers>(global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionErrorResponseInvalidTrackingNumbers.CreateFromDiscriminatorValue); } },
                 { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyErrorMessageResponse>(global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyErrorMessageResponse.CreateFromDiscriminatorValue); } },
             };
         }
@@ -69,7 +69,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("invalidTrackingNumbers", InvalidTrackingNumbers);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionErrorResponseInvalidTrackingNumbers>("invalidTrackingNumbers", InvalidTrackingNumbers);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyErrorMessageResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }

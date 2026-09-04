@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShippingCodCodAmount CODAmount { get; set; }
 #endif
-        /// <summary>&quot;For valid values refer to: Rating and Shipping COD Supported Countries or Territories in the Appendix.&quot;</summary>
+        /// <summary>For valid values refer to: Rating and Shipping COD Supported Countries or Territories in the Appendix.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CODFundsCode { get; set; }

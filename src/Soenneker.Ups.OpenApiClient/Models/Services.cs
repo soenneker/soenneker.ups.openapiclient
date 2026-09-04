@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Returns the number of UPS business days from origin location to destination location.</summary>
         public int? BusinessTransitDays { get; set; }
-        /// <summary>&quot;Scheduled commit time.   For international shipments the value always come back from SE (OPSYS data) but for domestic, value may be used from NRF commit time.    Valid format: HH:MM:SS&quot;</summary>
+        /// <summary>Scheduled commit time.   For international shipments the value always come back from SE (OPSYS data) but for domestic, value may be used from NRF commit time.    Valid format: HH:MM:SS</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitTime { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>Returns the number of delay needed for customs encounter at the origin or destination location.  This data is available only for international transactions.    Defaults to 0.</summary>
         public int? DelayCount { get; set; }
-        /// <summary>&quot;Scheduled delivery date.   Valid format: YYYY-MM-DD&quot;</summary>
+        /// <summary>Scheduled delivery date.   Valid format: YYYY-MM-DD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeliveryDate { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DeliveryDate { get; set; }
 #endif
-        /// <summary>&quot;Three character scheduled delivery day of week.   Valid values: \&quot;MON\&quot;,\&quot;TUE\&quot;,\&quot;WED\&quot;,\&quot;THU\&quot;,\&quot;FRI\&quot;, \&quot;SAT\&quot;&quot;</summary>
+        /// <summary>Three character scheduled delivery day of week.   Valid values: &quot;MON&quot;,&quot;TUE&quot;,&quot;WED&quot;,&quot;THU&quot;,&quot;FRI&quot;, &quot;SAT&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeliveryDayOfWeek { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DeliveryDayOfWeek { get; set; }
 #endif
-        /// <summary>&quot;Scheduled Delivery Time, value may be later then commit time.   Valid format: HH:MM:SS&quot;</summary>
+        /// <summary>Scheduled Delivery Time, value may be later then commit time.   Valid format: HH:MM:SS</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeliveryTime { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DeliveryTime { get; set; }
 #endif
-        /// <summary>&quot;Return \&quot;1\&quot; Guaranteed, or \&quot;0\&quot; Not Guaranteed based on below conditions:   If the ship date, delivery date, and system date are not within a defined peak date range, and a value for service guarantee is available in SE (OPSYS data) that will be returned.   If the ship date or delivery date or system date are within a defined peak date range and the service is within the list of services to remove guarantees for, \&quot;0\&quot; wil be returned.&quot;</summary>
+        /// <summary>Return &quot;1&quot; Guaranteed, or &quot;0&quot; Not Guaranteed based on below conditions:   If the ship date, delivery date, and system date are not within a defined peak date range, and a value for service guarantee is available in SE (OPSYS data) that will be returned.   If the ship date or delivery date or system date are within a defined peak date range and the service is within the list of services to remove guarantees for, &quot;0&quot; wil be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GuaranteeIndicator { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string NextDayPickupIndicator { get; set; }
 #endif
-        /// <summary>&quot;Planned pickup date.   Note: This value may not equal the shipped on value requested.  This could happen when the requested shipped on date is a holiday or for locations needing 24 hour notice before a pickup could be made.&quot;</summary>
+        /// <summary>Planned pickup date.   Note: This value may not equal the shipped on value requested.  This could happen when the requested shipped on date is a holiday or for locations needing 24 hour notice before a pickup could be made.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PickupDate { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public int? Poddays { get; set; }
         /// <summary>Returns the number of rest days encountered at the origin location.  this data is available only for international transactions.   Defaults to 0.</summary>
         public int? RestDaysCount { get; set; }
-        /// <summary>&quot;Delivery date of Saturday Delivery   Valid Format: YYYY-MM-DD&quot;</summary>
+        /// <summary>Delivery date of Saturday Delivery   Valid Format: YYYY-MM-DD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SaturdayDeliveryDate { get; set; }
@@ -112,7 +112,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string SaturdayDeliveryDate { get; set; }
 #endif
-        /// <summary>&quot;Delivery time of Saturday deliver   Valid format: HH:MM:SS&quot;</summary>
+        /// <summary>Delivery time of Saturday deliver   Valid format: HH:MM:SS</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SaturdayDeliveryTime { get; set; }
@@ -128,7 +128,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string SaturdayPickupIndicator { get; set; }
 #endif
-        /// <summary>&quot;Service level code   Valid domestic service codes: \&quot;1DMS\&quot;,\&quot;1DAS\&quot;,\&quot;1DM\&quot;,\&quot;1DA\&quot;,\&quot;1DP\&quot;,\&quot;2DM\&quot;,\&quot;2DA\&quot;,\&quot;3DS\&quot;,\&quot;GND\&quot;.    Valid International service codes (not a complete list) ,\&quot;01\&quot;,\&quot;02\&quot;,\&quot;03\&quot;,\&quot;05\&quot;,\&quot;08\&quot;,\&quot;09\&quot;,\&quot;10\&quot;,\&quot;11\&quot;,\&quot;18\&quot;,\&quot;19\&quot;,\&quot;20\&quot;,\&quot;21\&quot;,\&quot;22\&quot;,\&quot;23\&quot;,\&quot;24\&quot;,\&quot;25\&quot;,\&quot;26\&quot;,\&quot;28\&quot;,\&quot;29\&quot;,\&quot;33\&quot;,\&quot;68\&quot;. &quot;</summary>
+        /// <summary>Service level code   Valid domestic service codes: &quot;1DMS&quot;,&quot;1DAS&quot;,&quot;1DM&quot;,&quot;1DA&quot;,&quot;1DP&quot;,&quot;2DM&quot;,&quot;2DA&quot;,&quot;3DS&quot;,&quot;GND&quot;.    Valid International service codes (not a complete list) ,&quot;01&quot;,&quot;02&quot;,&quot;03&quot;,&quot;05&quot;,&quot;08&quot;,&quot;09&quot;,&quot;10&quot;,&quot;11&quot;,&quot;18&quot;,&quot;19&quot;,&quot;20&quot;,&quot;21&quot;,&quot;22&quot;,&quot;23&quot;,&quot;24&quot;,&quot;25&quot;,&quot;26&quot;,&quot;28&quot;,&quot;29&quot;,&quot;33&quot;,&quot;68&quot;. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServiceLevel { get; set; }
@@ -136,7 +136,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ServiceLevel { get; set; }
 #endif
-        /// <summary>&quot;Service name. Examples are: UPS Next Day Air, UPS Ground, UPS Expedited, UPS Worldwide Express Freight&quot;</summary>
+        /// <summary>Service name. Examples are: UPS Next Day Air, UPS Ground, UPS Expedited, UPS Worldwide Express Freight</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServiceLevelDescription { get; set; }
@@ -152,7 +152,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ServiceRemarksText { get; set; }
 #endif
-        /// <summary>&quot;The date the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).  This date may or may not be the UPS business date.   Valid Format: YYYY-MM-DD&quot;</summary>
+        /// <summary>The date the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).  This date may or may not be the UPS business date.   Valid Format: YYYY-MM-DD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipDate { get; set; }

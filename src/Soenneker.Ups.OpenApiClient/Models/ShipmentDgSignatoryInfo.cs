@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Date { get; set; }
 #endif
-        /// <summary>&quot;Name of the person signing the declaration. Note: The name of person or department he/she is employed with, are both acceptable.&quot;</summary>
+        /// <summary>Name of the person signing the declaration. Note: The name of person or department he/she is employed with, are both acceptable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipperDeclaration { get; set; }
 #endif
-        /// <summary>&quot;Title of the person signing the declaration.Note: The title of the person or department he/she is employed with, are both acceptable.&quot;</summary>
+        /// <summary>Title of the person signing the declaration.Note: The title of the person or department he/she is employed with, are both acceptable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }

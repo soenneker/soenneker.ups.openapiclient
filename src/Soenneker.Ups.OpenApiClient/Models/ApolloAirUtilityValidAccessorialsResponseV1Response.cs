@@ -26,13 +26,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Next available pickup date</summary>
         public Date? NextAvailPUDate { get; set; }
-        /// <summary>The type of payment term (e.g., Shipper, Consignee, ThridParty).</summary>
+        /// <summary>The paymentTerms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm>? PaymentTerms { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1>? PaymentTerms { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm> PaymentTerms { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1> PaymentTerms { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityValidAccessorialsResponseV1Response"/> and sets the default values.
@@ -61,7 +61,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "accessorials", n => { Accessorials = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "nextAvailPUDate", n => { NextAvailPUDate = n.GetDateValue(); } },
-                { "paymentTerms", n => { PaymentTerms = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "paymentTerms", n => { PaymentTerms = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -73,7 +73,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1>("accessorials", Accessorials);
             writer.WriteDateValue("nextAvailPUDate", NextAvailPUDate);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm>("paymentTerms", PaymentTerms);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1>("paymentTerms", PaymentTerms);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;An object representing the shipping label.| **labelFormat** | **Returned Containers** || :--:            | :--                     || DATA            | labelFormat, labelData  || PDF, PNG        | labelFormat, labelImage |&quot;
+    /// An object representing the shipping label.| **labelFormat** | **Returned Containers** || :--:            | :--                     || DATA            | labelFormat, labelData  || PDF, PNG        | labelFormat, labelImage |
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApolloLabelV1 : IParsable

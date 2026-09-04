@@ -45,7 +45,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1 Shipper { get; set; }
 #endif
-        /// <summary>Party information (shipper, consignee, or third party).</summary>
+        /// <summary>The thirdParty property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1? ThirdParty { get; set; }

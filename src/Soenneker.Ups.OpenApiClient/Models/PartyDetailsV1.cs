@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>
-    /// ThirdParty details for the shipment.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloAirShipRequestV1ThirdParty : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class PartyDetailsV1 : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>UPS Freight Account Number associated with the party is required when the address is not provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,30 +126,22 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string State { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1"/> and sets the default values.
         /// </summary>
-        public ApolloAirShipRequestV1ThirdParty()
+        public PartyDetailsV1()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty();
+            return new global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -174,7 +165,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
                 { "serviceCenterCode", n => { ServiceCenterCode = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -198,7 +188,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("postalCode", PostalCode);
             writer.WriteStringValue("serviceCenterCode", ServiceCenterCode);
             writer.WriteStringValue("state", State);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

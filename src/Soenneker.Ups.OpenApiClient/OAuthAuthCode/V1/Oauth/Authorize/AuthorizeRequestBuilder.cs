@@ -36,7 +36,6 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Authorize
         /// <summary>
         /// The Authorize Client endpoint initiates the OAuth Authorization Code flow by redirecting the user to UPS for logging-in and authorize the client application. To begin the authorization flow, the application constructs a URL using the application&apos;s client Id, the redirect URI, the scope of permissions requested, and a random string used for subsequent verification. A successful response redirects back to the client with an authorization code that can be exchanged for an access token.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeTokenErrorResponse">When receiving a 400 status code</exception>
@@ -45,11 +44,11 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Authorize
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeTokenErrorResponse">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Authorize.AuthorizeRequestBuilder.AuthorizeRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task GetAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Authorize.AuthorizeRequestBuilder.AuthorizeRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Authorize.AuthorizeRequestBuilder.AuthorizeRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task GetAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Authorize.AuthorizeRequestBuilder.AuthorizeRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -60,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Authorize
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeTokenErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Authorize Client endpoint initiates the OAuth Authorization Code flow by redirecting the user to UPS for logging-in and authorize the client application. To begin the authorization flow, the application constructs a URL using the application&apos;s client Id, the redirect URI, the scope of permissions requested, and a random string used for subsequent verification. A successful response redirects back to the client with an authorization code that can be exchanged for an access token.
@@ -126,7 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Authorize
             [QueryParameter("redirect_uri")]
             public string RedirectUri { get; set; }
 #endif
-            /// <summary>&quot;Valid Values: code&quot;</summary>
+            /// <summary>Valid Values: code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("response_type")]

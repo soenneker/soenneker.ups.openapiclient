@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Container for the Quantum View Notification (QVN) is valid for all shipments including Return service, Import Control and Returns Flexible Access.  Valid return service types are: ERL, PRL, PNM, RS1, or RS3.   The shipment level notification is valid for forward and return international shipments as well as for domestic shipments (for US and PR).&quot;
+    /// Container for the Quantum View Notification (QVN) is valid for all shipments including Return service, Import Control and Returns Flexible Access.  Valid return service types are: ERL, PRL, PNM, RS1, or RS3.   The shipment level notification is valid for forward and return international shipments as well as for domestic shipments (for US and PR).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentServiceOptionsNotification : IAdditionalDataHolder, IParsable

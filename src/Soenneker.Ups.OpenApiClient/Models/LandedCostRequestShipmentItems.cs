@@ -40,7 +40,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>Specifies the gross weight of the commodity as any non-negative value.</summary>
         public double? GrossWeight { get; set; }
-        /// <summary>&quot;Specifies the units of the gross weight. Required if GrossWeight is used. If GrossWeight is not specified, this value must not be set to anything but null. Supported values: LB, KG&quot;</summary>
+        /// <summary>Specifies the units of the gross weight. Required if GrossWeight is used. If GrossWeight is not specified, this value must not be set to anything but null. Supported values: LB, KG</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GrossWeightUnit { get; set; }

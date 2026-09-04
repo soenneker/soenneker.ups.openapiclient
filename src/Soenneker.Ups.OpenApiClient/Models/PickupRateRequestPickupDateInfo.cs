@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Required if the ServiceDateOption is: 03 A Specific-Day Pickup&quot;
+    /// Required if the ServiceDateOption is: 03 A Specific-Day Pickup
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PickupRateRequestPickupDateInfo : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The latest local close time. Format: HHmm- Hour: 0-23- Minute: 0-59&quot;</summary>
+        /// <summary>The latest local close time. Format: HHmm- Hour: 0-23- Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CloseTime { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CloseTime { get; set; }
 #endif
-        /// <summary>&quot;The specific local pickup date. Format: yyyyMMdd- yyyy = Year Applicable- MM = 01-12- dd = 01-31&quot;</summary>
+        /// <summary>The specific local pickup date. Format: yyyyMMdd- yyyy = Year Applicable- MM = 01-12- dd = 01-31</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PickupDate { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PickupDate { get; set; }
 #endif
-        /// <summary>&quot;The earliest local ready Time. Format: HHmm- Hour: 0-23- Minute: 0-59&quot;</summary>
+        /// <summary>The earliest local ready Time. Format: HHmm- Hour: 0-23- Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReadyTime { get; set; }

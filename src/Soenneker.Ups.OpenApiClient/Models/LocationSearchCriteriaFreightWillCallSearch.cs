@@ -39,7 +39,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string FormatPostalCode { get; set; }
 #endif
-        /// <summary>&quot;Valid values are: 1 - Postal Code2 - Delivery SLIC3 - Delivery City/State.1: Freight Will Call Search based on Postal Code, this search is valid for Postal code countries. 2: Freight Will Call Search based on SLIC. 3: Freight Will Call Search based on City and/or State. This Search is valid for non-postal code Countries&quot;</summary>
+        /// <summary>Valid values are: 1 - Postal Code2 - Delivery SLIC3 - Delivery City/State.1: Freight Will Call Search based on Postal Code, this search is valid for Postal code countries. 2: Freight Will Call Search based on SLIC. 3: Freight Will Call Search based on City and/or State. This Search is valid for non-postal code Countries</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FreightWillCallRequestType { get; set; }

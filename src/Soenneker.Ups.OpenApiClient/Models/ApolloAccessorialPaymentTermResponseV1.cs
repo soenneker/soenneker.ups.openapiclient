@@ -9,27 +9,43 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PickupGetServiceCenterFacilitiesRequestPickupPieceProperty : IAdditionalDataHolder, IParsable
+    public partial class ApolloAccessorialPaymentTermResponseV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Payment term code.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code? Code { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code Code { get; set; }
+#endif
+        /// <summary>Payment term description.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Desc { get; set; }
+#nullable restore
+#else
+        public string Desc { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1"/> and sets the default values.
         /// </summary>
-        public PickupGetServiceCenterFacilitiesRequestPickupPieceProperty()
+        public ApolloAccessorialPaymentTermResponseV1()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesRequestPickupPieceProperty();
+            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -39,6 +55,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code.CreateFromDiscriminatorValue); } },
+                { "desc", n => { Desc = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -48,6 +66,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code>("code", Code);
+            writer.WriteStringValue("desc", Desc);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

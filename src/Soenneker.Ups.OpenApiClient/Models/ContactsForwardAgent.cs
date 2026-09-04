@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CompanyName { get; set; }
 #endif
-        /// <summary>&quot;Tax ID of the Forwarding agent.Valid Values: (Below values are applicable for EEIFilingOption Code =3)94-308351500 13-168669100    Applicable for EEI form only.&quot;</summary>
+        /// <summary>Tax ID of the Forwarding agent.Valid Values: (Below values are applicable for EEIFilingOption Code =3)94-308351500 13-168669100    Applicable for EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TaxIdentificationNumber { get; set; }

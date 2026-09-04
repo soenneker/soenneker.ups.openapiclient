@@ -54,7 +54,6 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item
         /// <summary>
         /// This API allows users to delete a master shipment identified by a unique shipment identifier (USI) and the shipper&apos;s account number. The master shipment and its associated child shipments will be permanently removed.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse">When receiving a 400 status code</exception>
@@ -63,11 +62,11 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.WithUsiNumberItemRequestBuilder.WithUsiNumberItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.WithUsiNumberItemRequestBuilder.WithUsiNumberItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.WithUsiNumberItemRequestBuilder.WithUsiNumberItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.WithUsiNumberItemRequestBuilder.WithUsiNumberItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -78,7 +77,7 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This API allows users to delete a master shipment identified by a unique shipment identifier (USI) and the shipper&apos;s account number. The master shipment and its associated child shipments will be permanently removed.

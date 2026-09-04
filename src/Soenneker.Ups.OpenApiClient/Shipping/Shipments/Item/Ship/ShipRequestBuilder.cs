@@ -101,7 +101,7 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.Ship
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ShipRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;Valid Values: city = validation will include city.Length 15&quot;</summary>
+            /// <summary>Valid Values: city = validation will include city.Length 15</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("additionaladdressvalidation")]

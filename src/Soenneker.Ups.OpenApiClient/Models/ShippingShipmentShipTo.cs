@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipToAddress Address { get; set; }
 #endif
-        /// <summary>&quot;Contact name at the consignee&apos;s location.  Required for: UPS Next Day Air® Early service, and when ShipTo country or territory is different than ShipFrom country or territory.Required if Invoice International form is requested.&quot;</summary>
+        /// <summary>Contact name at the consignee&apos;s location.  Required for: UPS Next Day Air® Early service, and when ShipTo country or territory is different than ShipFrom country or territory.Required if Invoice International form is requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AttentionName { get; set; }

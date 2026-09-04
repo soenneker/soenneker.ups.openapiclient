@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Credit card information container.  Required if neither of the following is present: /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AccountNumber or /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AlternatePaymentMethod. Credit card payment is valid for shipments without return service only.&quot;
+    /// Credit card information container.  Required if neither of the following is present: /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AccountNumber or /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AlternatePaymentMethod. Credit card payment is valid for shipments without return service only.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillShipperCreditCard : IAdditionalDataHolder, IParsable

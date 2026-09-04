@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Contains all of the basic information about the origin such as: Address Lines, City, State/Province, Postal Code and Country or Territory Code. The element CountryCode is required.&quot;</summary>
+        /// <summary>Contains all of the basic information about the origin such as: Address Lines, City, State/Province, Postal Code and Country or Territory Code. The element CountryCode is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressAddressKeyFormat? AddressKeyFormat { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressGeocode Geocode { get; set; }
 #endif
-        /// <summary>&quot;If present, indicates the maximum number of locations the client wishes to receive in an address candidate response where the provided origin information is insufficient to accurately establish location. Valid values: 1-50, default 10&quot;</summary>
+        /// <summary>If present, indicates the maximum number of locations the client wishes to receive in an address candidate response where the provided origin information is insufficient to accurately establish location. Valid values: 1-50, default 10</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaximumListSize { get; set; }

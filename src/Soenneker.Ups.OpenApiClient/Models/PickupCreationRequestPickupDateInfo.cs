@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Pickup location&apos;s local close time.- User provided Close Time must be later than the Earliest Allowed Customer Close Time.- Earliest Allowed Customer Close Time is defined by UPS pickup operation system.- CloseTime minus ReadyTime must be greater than the LeadTime.- LeadTime is determined by UPS pickup operation system. LeadTime is the minimum amount of time UPS requires between customer&apos;s request for a pickup and driver arriving at the location for the pickup.Format: HHmm- Hour: 0-23- Minute: 0-59&quot;</summary>
+        /// <summary>Pickup location&apos;s local close time.- User provided Close Time must be later than the Earliest Allowed Customer Close Time.- Earliest Allowed Customer Close Time is defined by UPS pickup operation system.- CloseTime minus ReadyTime must be greater than the LeadTime.- LeadTime is determined by UPS pickup operation system. LeadTime is the minimum amount of time UPS requires between customer&apos;s request for a pickup and driver arriving at the location for the pickup.Format: HHmm- Hour: 0-23- Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CloseTime { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CloseTime { get; set; }
 #endif
-        /// <summary>&quot;Local pickup date of the location. Format: yyyyMMdd- yyyy = Year Appliable- MM = 01–12- dd = 01–31&quot;</summary>
+        /// <summary>Local pickup date of the location. Format: yyyyMMdd- yyyy = Year Appliable- MM = 01–12- dd = 01–31</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PickupDate { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PickupDate { get; set; }
 #endif
-        /// <summary>&quot;Pickup location&apos;s local ready time. ReadyTime means the time when your shipment(s) can be ready for UPS to pick up. - User provided ReadyTime must be earlier than CallByTime. - CallByTime is determined by UPS pickup operation system. CallByTime is the Latest time a Customer can call UPS or self-serve on UPS.com and complete a Pickup Request and UPS can still make the Pickup service request. - If ReadyTime is earlier than current local time, UPS uses the current local time as the ReadyTime.  Format: HHmmHour: 0-23Minute: 0-59&quot;</summary>
+        /// <summary>Pickup location&apos;s local ready time. ReadyTime means the time when your shipment(s) can be ready for UPS to pick up. - User provided ReadyTime must be earlier than CallByTime. - CallByTime is determined by UPS pickup operation system. CallByTime is the Latest time a Customer can call UPS or self-serve on UPS.com and complete a Pickup Request and UPS can still make the Pickup service request. - If ReadyTime is earlier than current local time, UPS uses the current local time as the ReadyTime.  Format: HHmmHour: 0-23Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReadyTime { get; set; }

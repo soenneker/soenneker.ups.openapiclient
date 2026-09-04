@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Code for type of Import Control shipment. Valid values are: ImportControl One-Attempt &apos;03&apos; = ImportControl Three-Attempt&apos;04&apos; = ImportControl Electronic Label &apos;05&apos; = ImportControl Print Label.&quot;</summary>
+        /// <summary>Code for type of Import Control shipment. Valid values are: ImportControl One-Attempt &apos;03&apos; = ImportControl Three-Attempt&apos;04&apos; = ImportControl Electronic Label &apos;05&apos; = ImportControl Print Label.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

@@ -15,9 +15,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Used to bypass address validation when the address has already been validated by the calling application.    Valid values: true, false   Defaults to true  Note: not to be exposed to external customers.&quot;</summary>
+        /// <summary>Used to bypass address validation when the address has already been validated by the calling application.    Valid values: true, false   Defaults to true  Note: not to be exposed to external customers.</summary>
         public bool? AvvFlag { get; set; }
-        /// <summary>&quot;Required for International Requests.  Valid values: \&quot;02\&quot;,\&quot;03\&quot;,\&quot;04\&quot;  02 - Document  03 - Non Document  04 - WWEF (Pallet)&quot;</summary>
+        /// <summary>Required for International Requests.  Valid values: &quot;02&quot;,&quot;03&quot;,&quot;04&quot;  02 - Document  03 - Non Document  04 - WWEF (Pallet)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BillType { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DestinationCityName { get; set; }
 #endif
-        /// <summary>&quot;The country code of the destination.   Valid values:  Must conform to ISO-defined country codes.&quot;</summary>
+        /// <summary>The country code of the destination.   Valid values:  Must conform to ISO-defined country codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DestinationCountryCode { get; set; }
@@ -65,9 +65,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DestinationTownName { get; set; }
 #endif
-        /// <summary>&quot;Sets the indicator for an international Freight Pallet shipment that is going to be dropped off by shipper to a UPS facility.  The indicator is used when the Bill Type is \&quot;04\&quot;.    Valid values: \&quot;0\&quot;, \&quot;1\&quot;.   0 = WWDTProcessIF.PICKUP_BY_UPS  1 = WWDTProcessIf.DROPOFF_BY_SHIPPER   The default value is \&quot;0\&quot; &quot;</summary>
+        /// <summary>Sets the indicator for an international Freight Pallet shipment that is going to be dropped off by shipper to a UPS facility.  The indicator is used when the Bill Type is &quot;04&quot;.    Valid values: &quot;0&quot;, &quot;1&quot;.   0 = WWDTProcessIF.PICKUP_BY_UPS  1 = WWDTProcessIf.DROPOFF_BY_SHIPPER   The default value is &quot;0&quot; </summary>
         public int? DropOffAtFacilityIndicator { get; set; }
-        /// <summary>&quot;Sets the indicator for an international Freight Pallet shipment that is going to be pick-up by consignee in a destination facility.  The indicator is used when the Bill Type is \&quot;04\&quot;.    Valid values: \&quot;0\&quot;, \&quot;1\&quot;.   0 = WWDTProcessIF.DELIVERY_BY_UPS  1 = WWDTProcessIf.PICKUP_BY_CONSIGNEE   The default value is \&quot;0\&quot; &quot;</summary>
+        /// <summary>Sets the indicator for an international Freight Pallet shipment that is going to be pick-up by consignee in a destination facility.  The indicator is used when the Bill Type is &quot;04&quot;.    Valid values: &quot;0&quot;, &quot;1&quot;.   0 = WWDTProcessIF.DELIVERY_BY_UPS  1 = WWDTProcessIf.PICKUP_BY_CONSIGNEE   The default value is &quot;0&quot; </summary>
         public int? HoldForPickupIndicator { get; set; }
         /// <summary>Sets the limit for the number of candidates returned in candidate list.    Default value is 200.</summary>
         public int? MaxList { get; set; }
@@ -81,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string OriginCityName { get; set; }
 #endif
-        /// <summary>&quot;The country code of the origin shipment. Valid Values: Must conform to the ISO-defined, two-letter country or territory codes.  Refer to Country or Territory Codes in the Appendix above for valid values.&quot;</summary>
+        /// <summary>The country code of the origin shipment. Valid Values: Must conform to the ISO-defined, two-letter country or territory codes.  Refer to Country or Territory Codes in the Appendix above for valid values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OriginCountryCode { get; set; }
@@ -113,7 +113,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string OriginTownName { get; set; }
 #endif
-        /// <summary>&quot;Sets the indicator for premier time in transit when the shipment contains a premier package.   Valid values: “00”, “01”.    00 = Non-premier time in transit.   01 = Premier time in transit.    The default value is “00”.&quot;</summary>
+        /// <summary>Sets the indicator for premier time in transit when the shipment contains a premier package.   Valid values: “00”, “01”.    00 = Non-premier time in transit.   01 = Premier time in transit.    The default value is “00”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PremierIndicator { get; set; }
@@ -121,7 +121,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PremierIndicator { get; set; }
 #endif
-        /// <summary>&quot;Indicates if address is residential or commercial. Required for Domestic requests.   Valid values: \&quot;01\&quot;, \&quot;02\&quot;   01 = Residential  02 = Commercial   Defaults to commercial for International Requests.&quot;</summary>
+        /// <summary>Indicates if address is residential or commercial. Required for Domestic requests.   Valid values: &quot;01&quot;, &quot;02&quot;   01 = Residential  02 = Commercial   Defaults to commercial for International Requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ResidentialIndicator { get; set; }
@@ -139,7 +139,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipDate { get; set; }
 #endif
-        /// <summary>&quot;The unit of currency used for values. Required if ShipmentContentsValue is populated.  Valid value: must conform to ISO standards.&quot;</summary>
+        /// <summary>The unit of currency used for values. Required if ShipmentContentsValue is populated.  Valid value: must conform to ISO standards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentContentsCurrencyCode { get; set; }
@@ -147,7 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipmentContentsCurrencyCode { get; set; }
 #endif
-        /// <summary>&quot;The monetary value of shipment contents.   Required when origin country does not equal destination country and BillType is 03 (non-documented) or 04 (WWEF)   Required when origin country does not equal destination country, and destination country = CA, and BillType = 02 (document).   Note: If decimal values are used, valid values will be rounded to the tenths.&quot;</summary>
+        /// <summary>The monetary value of shipment contents.   Required when origin country does not equal destination country and BillType is 03 (non-documented) or 04 (WWEF)   Required when origin country does not equal destination country, and destination country = CA, and BillType = 02 (document).   Note: If decimal values are used, valid values will be rounded to the tenths.</summary>
         public double? ShipmentContentsValue { get; set; }
         /// <summary>The time the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).   Format is HH:MM:SS  Defaults to current time if not provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -157,9 +157,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipTime { get; set; }
 #endif
-        /// <summary>&quot;The weight of the shipment. Required for International requests.   Note: If decimal values are used, valid values will be rounded to the tenths.    Note: Maximum value is 70 kilograms or 150 pounds.&quot;</summary>
+        /// <summary>The weight of the shipment. Required for International requests.   Note: If decimal values are used, valid values will be rounded to the tenths.    Note: Maximum value is 70 kilograms or 150 pounds.</summary>
         public double? Weight { get; set; }
-        /// <summary>&quot;Required for International requests and when weight value is provided.   Valid Values: \&quot;LBS\&quot;, \&quot;KGS\&quot;&quot;</summary>
+        /// <summary>Required for International requests and when weight value is provided.   Valid Values: &quot;LBS&quot;, &quot;KGS&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WeightUnitOfMeasure { get; set; }

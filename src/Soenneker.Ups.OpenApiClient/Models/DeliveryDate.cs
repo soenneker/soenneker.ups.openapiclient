@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Date { get; set; }
 #endif
-        /// <summary>&quot;The list of delivery dates associated with the package. Valid values: SDD - Scheduled Delivery Date RDD - Rescheduled Delivery Date DEL - Delivered Date&quot;</summary>
+        /// <summary>The list of delivery dates associated with the package. Valid values: SDD - Scheduled Delivery Date RDD - Rescheduled Delivery Date DEL - Delivered Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

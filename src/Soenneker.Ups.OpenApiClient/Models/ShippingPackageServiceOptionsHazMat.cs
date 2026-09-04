@@ -127,7 +127,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PackagingInstructionCode { get; set; }
 #endif
-        /// <summary>&quot;The type of package used to contain the regulated good. (Ex: Fiberboard Box). Required if CommodityRegulatedLevelCode = LQ or FR.   Ex. FIBERBOARD BOX, WOOD(EN) BOX, PLASTIC JERRICAN, METAL BOX, STEEL DRUM, OTHER, PLASTIC BOX, PLASTIC DRUM, STYROFOAM BOX, CYLINDERS, ENVIROTAINER, PLYWOOD BOX, ALUMINUM DRUM, ALUMINUM CYLINDERS, PLASTIC PAIL, PLYWOOD DRUM, FIBER DRUM, STEEL JERRICAN, ALUMINUM JERRICAN, STEEL BOX, CARTON, ALUMINUM BOX&quot;</summary>
+        /// <summary>The type of package used to contain the regulated good. (Ex: Fiberboard Box). Required if CommodityRegulatedLevelCode = LQ or FR.   Ex. FIBERBOARD BOX, WOOD(EN) BOX, PLASTIC JERRICAN, METAL BOX, STEEL DRUM, OTHER, PLASTIC BOX, PLASTIC DRUM, STYROFOAM BOX, CYLINDERS, ENVIROTAINER, PLYWOOD BOX, ALUMINUM DRUM, ALUMINUM CYLINDERS, PLASTIC PAIL, PLYWOOD DRUM, FIBER DRUM, STEEL JERRICAN, ALUMINUM JERRICAN, STEEL BOX, CARTON, ALUMINUM BOX</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PackagingType { get; set; }
@@ -191,7 +191,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ReferenceNumber { get; set; }
 #endif
-        /// <summary>&quot;The Regulatory set associated with every regulated shipment. It must be same across the shipment. Valid values: ADR = Europe to Europe Ground Movement CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada IATA= Worldwide Air movement TDG= Canada to Canada ground movement or Canada to U.S. standard movement.  Valid values are ADR, CFR, IATA and TDG.For multiple Chemical Records per package or multiple packages containing different RegulationSet, RegulationSet of first Chemical Record would be considered for validating and rating the entire shipment.&quot;</summary>
+        /// <summary>The Regulatory set associated with every regulated shipment. It must be same across the shipment. Valid values: ADR = Europe to Europe Ground Movement CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada IATA= Worldwide Air movement TDG= Canada to Canada ground movement or Canada to U.S. standard movement.  Valid values are ADR, CFR, IATA and TDG.For multiple Chemical Records per package or multiple packages containing different RegulationSet, RegulationSet of first Chemical Record would be considered for validating and rating the entire shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RegulationSet { get; set; }
@@ -223,7 +223,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string TechnicalName { get; set; }
 #endif
-        /// <summary>&quot;Not applicable for ADR regulation set. Required for any other regulation set. Declares that a package was prepared according to ground passenger aircraft or cargo aircraft only. Valid values: Highway=Highway Ground=Ground PAX=Passenger Aircraft Passenger Aircraft=Passenger Aircraft CAO=Cargo Aircraft Only Cargo Aircraft Only=Cargo Aircraft Only  Valid entries include: Highway, Ground, PAX, Passenger Aircraft, CAO and Cargo Aircraft Only.&quot;</summary>
+        /// <summary>Not applicable for ADR regulation set. Required for any other regulation set. Declares that a package was prepared according to ground passenger aircraft or cargo aircraft only. Valid values: Highway=Highway Ground=Ground PAX=Passenger Aircraft Passenger Aircraft=Passenger Aircraft CAO=Cargo Aircraft Only Cargo Aircraft Only=Cargo Aircraft Only  Valid entries include: Highway, Ground, PAX, Passenger Aircraft, CAO and Cargo Aircraft Only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransportationMode { get; set; }
@@ -247,7 +247,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string TunnelRestrictionCode { get; set; }
 #endif
-        /// <summary>&quot;Required if CommodityRegulatedLevelCode = LQ, EQ or FR. The unit of measure used for the mass capacity of the regulated good. For Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.&quot;</summary>
+        /// <summary>Required if CommodityRegulatedLevelCode = LQ, EQ or FR. The unit of measure used for the mass capacity of the regulated good. For Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UOM { get; set; }

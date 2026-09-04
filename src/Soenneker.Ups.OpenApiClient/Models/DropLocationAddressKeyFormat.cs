@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ConsigneeName { get; set; }
 #endif
-        /// <summary>&quot;A country or territory code. Valid values to be returned are: US-United States (meaning US 50).&quot;</summary>
+        /// <summary>A country or territory code. Valid values to be returned are: US-United States (meaning US 50).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CountryCode { get; set; }

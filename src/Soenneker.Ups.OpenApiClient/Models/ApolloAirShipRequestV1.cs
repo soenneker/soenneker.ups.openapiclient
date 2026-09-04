@@ -25,10 +25,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Label formatting options including layout and format (e.g., PDF, ZPL, SVG).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label? Label { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequest? Label { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label Label { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequest Label { get; set; }
 #endif
         /// <summary>Language preference for the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,10 +57,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>ThirdParty details for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty? ThirdParty { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1? ThirdParty { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty ThirdParty { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1 ThirdParty { get; set; }
 #endif
         /// <summary>Unique transaction ID for debugging and tracking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,11 +96,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PartyDetails>(global::Soenneker.Ups.OpenApiClient.Models.PartyDetails.CreateFromDiscriminatorValue); } },
-                { "label", n => { Label = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label.CreateFromDiscriminatorValue); } },
+                { "label", n => { Label = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequest>(global::Soenneker.Ups.OpenApiClient.Models.LabelRequest.CreateFromDiscriminatorValue); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail.CreateFromDiscriminatorValue); } },
                 { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PartyDetails>(global::Soenneker.Ups.OpenApiClient.Models.PartyDetails.CreateFromDiscriminatorValue); } },
-                { "thirdParty", n => { ThirdParty = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty.CreateFromDiscriminatorValue); } },
+                { "thirdParty", n => { ThirdParty = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1>(global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1.CreateFromDiscriminatorValue); } },
                 { "transactionId", n => { TransactionId = n.GetStringValue(); } },
             };
         }
@@ -112,11 +112,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PartyDetails>("consignee", Consignee);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label>("label", Label);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequest>("label", Label);
             writer.WriteStringValue("language", Language);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetail>("shipment", Shipment);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PartyDetails>("shipper", Shipper);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1ThirdParty>("thirdParty", ThirdParty);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PartyDetailsV1>("thirdParty", ThirdParty);
             writer.WriteStringValue("transactionId", TransactionId);
             writer.WriteAdditionalData(AdditionalData);
         }

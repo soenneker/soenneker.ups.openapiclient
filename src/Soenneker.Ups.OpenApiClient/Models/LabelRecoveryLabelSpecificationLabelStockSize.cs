@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Height of the Label.  Only valid values are 6 or 8.Note: Label Image will only scale up to 4 X 6, even when requesting 4 X 8.&quot;</summary>
+        /// <summary>Height of the Label.  Only valid values are 6 or 8.Note: Label Image will only scale up to 4 X 6, even when requesting 4 X 8.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Height { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Height { get; set; }
 #endif
-        /// <summary>&quot;Width of the Label.  Valid value is 4.Note: Label Image will only scale up to 4 X 6, even when requesting 4 X 8.&quot;</summary>
+        /// <summary>Width of the Label.  Valid value is 4.Note: Label Image will only scale up to 4 X 6, even when requesting 4 X 8.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Width { get; set; }

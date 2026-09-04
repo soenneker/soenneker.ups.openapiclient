@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ConsigneeName { get; set; }
 #endif
-        /// <summary>&quot;Consignee&apos;s country or territory  code.Valid values: CA,MX, PR, US, AT, BE, DE, DK, ES, FI, FR, GB, IE, IT, NL, PT, SE, MC and VA&quot;</summary>
+        /// <summary>Consignee&apos;s country or territory  code.Valid values: CA,MX, PR, US, AT, BE, DE, DK, ES, FI, FR, GB, IE, IT, NL, PT, SE, MC and VA</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CountryCode { get; set; }

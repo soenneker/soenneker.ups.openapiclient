@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ConsigneeType { get; set; }
 #endif
-        /// <summary>&quot;Shipper&apos;s VAT Tax collection registration number to be entered by Shipper at time of shipment creation. Presence of this number as part of the shipment information implies the shipper has collected/paid the required VAT tax (outside of UPS/UPS systems). Vendor Colect ID Number will be printed on commercial invoice if present.Sample Values:   &apos;IMDEU1234567&apos; (IOSS #),  &apos;VOEC1234567&apos; (VOEC #),  &apos;GB1234567&apos; (HMRC #)Required if the shipment is subject to Vendor Collect ID collection&quot;</summary>
+        /// <summary>Shipper&apos;s VAT Tax collection registration number to be entered by Shipper at time of shipment creation. Presence of this number as part of the shipment information implies the shipper has collected/paid the required VAT tax (outside of UPS/UPS systems). Vendor Colect ID Number will be printed on commercial invoice if present.Sample Values:   &apos;IMDEU1234567&apos; (IOSS #),  &apos;VOEC1234567&apos; (VOEC #),  &apos;GB1234567&apos; (HMRC #)Required if the shipment is subject to Vendor Collect ID collection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VendorCollectIDNumber { get; set; }

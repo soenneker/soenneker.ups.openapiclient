@@ -101,10 +101,10 @@ namespace Soenneker.Ups.OpenApiClient.AddressValidationReady.Addressvalidation.I
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithRequestoptionItemRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;Valid values: 0 – 50 The maximum number of Candidates to  return for this request. If not provided,  the default size of 15 is returned.&quot;</summary>
+            /// <summary>Valid values: 0 – 50 The maximum number of Candidates to  return for this request. If not provided,  the default size of 15 is returned.</summary>
             [QueryParameter("maximumcandidatelistsize")]
             public int? Maximumcandidatelistsize { get; set; }
-            /// <summary>&quot;Valid values: True or False.  If True, either the region element or any  combination of Political Division 1,  Political Division 2, PostcodePrimaryLow and the PostcodeExtendedLow fields will  be recognized for validation in addition to  the urbanization element. If False or no  indicator, street level address validation  is provided&quot;</summary>
+            /// <summary>Valid values: True or False.  If True, either the region element or any  combination of Political Division 1,  Political Division 2, PostcodePrimaryLow and the PostcodeExtendedLow fields will  be recognized for validation in addition to  the urbanization element. If False or no  indicator, street level address validation  is provided</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("regionalrequestindicator")]

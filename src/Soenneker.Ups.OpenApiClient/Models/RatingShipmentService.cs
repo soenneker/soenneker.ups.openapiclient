@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The code for the UPS Service associated with the shipment.NOTE: For a complete listing of values, refer to Service Codes in the AppendixValid domestic values:- 01 = Next Day Air- 02 = 2nd Day Air- 03 = Ground- 12 = 3 Day Select- 13 = Next Day Air Saver- 14 = UPS Next Day Air Early- 59 = 2nd Day Air A.M.- 75 = UPS Heavy GoodsValid international values:- 07 = Worldwide Express- 08 = Worldwide Expedited- 11= Standard- 54 = Worldwide Express Plus- 65 = Saver- 96 = UPS Worldwide Express Freight- 71 = UPS Worldwide Express Freight MiddayRequired for Rating and ignored for Shopping.&quot;</summary>
+        /// <summary>The code for the UPS Service associated with the shipment.NOTE: For a complete listing of values, refer to Service Codes in the AppendixValid domestic values:- 01 = Next Day Air- 02 = 2nd Day Air- 03 = Ground- 12 = 3 Day Select- 13 = Next Day Air Saver- 14 = UPS Next Day Air Early- 59 = 2nd Day Air A.M.- 75 = UPS Heavy GoodsValid international values:- 07 = Worldwide Express- 08 = Worldwide Expedited- 11= Standard- 54 = Worldwide Express Plus- 65 = Saver- 96 = UPS Worldwide Express Freight- 71 = UPS Worldwide Express Freight MiddayRequired for Rating and ignored for Shopping.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

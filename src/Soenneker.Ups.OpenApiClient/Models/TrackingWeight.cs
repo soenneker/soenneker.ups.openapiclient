@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The weight units of measurement. Valid values: &apos;LBS&apos; - pounds. &apos;KGS&apos; - kilograms.&quot;</summary>
+        /// <summary>The weight units of measurement. Valid values: &apos;LBS&apos; - pounds. &apos;KGS&apos; - kilograms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UnitOfMeasurement { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string UnitOfMeasurement { get; set; }
 #endif
-        /// <summary>&quot;The weight units of measurement. Valid values: &apos;LBS&apos; - pounds. &apos;KGS&apos; - kilograms.&quot;</summary>
+        /// <summary>The weight units of measurement. Valid values: &apos;LBS&apos; - pounds. &apos;KGS&apos; - kilograms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Weight { get; set; }

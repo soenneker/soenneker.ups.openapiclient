@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Indicates whether or not additional text is required for the shipping papers for the related entity.   It will be returned if applies for a given chemical record.Valid values: N = No, additional information for the shipping papers are not required.Y = Yes, additional information for the shipping papers are required.&quot;</summary>
+        /// <summary>Indicates whether or not additional text is required for the shipping papers for the related entity.   It will be returned if applies for a given chemical record.Valid values: N = No, additional information for the shipping papers are not required.Y = Yes, additional information for the shipping papers are required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AdditionalShippingInformationRequiredIndicator { get; set; }
@@ -87,7 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string RegulationSet { get; set; }
 #endif
-        /// <summary>&quot;Indicates whether or not related entity requires special permit in order to transport the chemical.   It will be returned if applies for a given chemical record.Valid values: AIRGNDBOTH&quot;</summary>
+        /// <summary>Indicates whether or not related entity requires special permit in order to transport the chemical.   It will be returned if applies for a given chemical record.Valid values: AIRGNDBOTH</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SpecialPermit { get; set; }

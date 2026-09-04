@@ -36,7 +36,6 @@ namespace Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance.Interactive
         /// <summary>
         /// Allows the user to provide feedback on a specific question of the overall session.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -47,11 +46,11 @@ namespace Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance.Interactive
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.Feedback body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Soenneker.Ups.OpenApiClient.Models.Feedback body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.Feedback body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Soenneker.Ups.OpenApiClient.Models.Feedback body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -64,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance.Interactive
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.CustomErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.CustomErrorResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Allows the user to provide feedback on a specific question of the overall session.

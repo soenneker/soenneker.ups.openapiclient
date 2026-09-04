@@ -79,7 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ReferenceNumber { get; set; }
 #endif
-        /// <summary>&quot;Local service date. Format: yyyyMMdd- yyyy = Year applicable- MM = 01-12- dd = 01-31&quot;</summary>
+        /// <summary>Local service date. Format: yyyyMMdd- yyyy = Year applicable- MM = 01-12- dd = 01-31</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServiceDate { get; set; }

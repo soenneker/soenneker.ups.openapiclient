@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress PickupAddress { get; set; }
 #endif
-        /// <summary>&quot;Required if the ServiceDateOption is: 03 A Specific-Day Pickup&quot;</summary>
+        /// <summary>Required if the ServiceDateOption is: 03 A Specific-Day Pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo? PickupDateInfo { get; set; }

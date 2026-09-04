@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CustomerContext { get; set; }
 #endif
-        /// <summary>&quot;Current tool version. Valid value: 1.0&quot;</summary>
+        /// <summary>Current tool version. Valid value: 1.0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToolVersion { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ToolVersion { get; set; }
 #endif
-        /// <summary>&quot;XPCI version. Current version: 1.0007&quot;</summary>
+        /// <summary>XPCI version. Current version: 1.0007</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? XpciVersion { get; set; }

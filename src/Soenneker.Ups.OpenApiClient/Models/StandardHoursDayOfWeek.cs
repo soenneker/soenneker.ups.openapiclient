@@ -30,7 +30,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CloseHours { get; set; }
 #endif
-        /// <summary>&quot;Day of week. Valid values: 1-Sunday2-Monday3-Tuesday4-Wednesday5-Thursday6-Friday7-Saturday.&quot;</summary>
+        /// <summary>Day of week. Valid values: 1-Sunday2-Monday3-Tuesday4-Wednesday5-Thursday6-Friday7-Saturday.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Day { get; set; }

@@ -34,7 +34,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
         {
         }
         /// <summary>
-        /// Cancel a pending order
+        /// Cancel a pending orderNOTE:Orders can be cancelled only in the following statusCancellable Status:- 1 – Open- 5 – Labeled
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloCancelOrderResponseV1"/></returns>
         /// <param name="body">The request used to cancel an Order</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ApolloCancelOrderResponseV1>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ApolloCancelOrderResponseV1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Search for orders based on criteria
+        /// Search for orders based on criteria.CriteriaOperator: EQ,NTEQ,GT,LT,GTEQ,LTEQ,LIKECriteriaField: ORDER_STATUS,SHIP_DATE,SHIPPER_REF,CONSIGNEE_REF
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -154,7 +154,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderResponseV1>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderResponseV1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Cancel a pending order
+        /// Cancel a pending orderNOTE:Orders can be cancelled only in the following statusCancellable Status:- 1 – Open- 5 – Labeled
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request used to cancel an Order</param>
@@ -176,7 +176,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
             return requestInfo;
         }
         /// <summary>
-        /// Search for orders based on criteria
+        /// Search for orders based on criteria.CriteriaOperator: EQ,NTEQ,GT,LT,GTEQ,LTEQ,LIKECriteriaField: ORDER_STATUS,SHIP_DATE,SHIPPER_REF,CONSIGNEE_REF
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -248,7 +248,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
             return new global::Soenneker.Ups.OpenApiClient.Forwarding.Orders.OrdersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Search for orders based on criteria
+        /// Search for orders based on criteria.CriteriaOperator: EQ,NTEQ,GT,LT,GTEQ,LTEQ,LIKECriteriaField: ORDER_STATUS,SHIP_DATE,SHIPPER_REF,CONSIGNEE_REF
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class OrdersRequestBuilderGetQueryParameters 
@@ -290,7 +290,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
             [QueryParameter("old_date")]
             public string OldDate { get; set; }
 #endif
-            /// <summary>Unique order number. Required for individual order updates.</summary>
+            /// <summary>Unique order number. Required for individual order updates. All orders for the shipper will be updated if this value is not provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("order_number")]

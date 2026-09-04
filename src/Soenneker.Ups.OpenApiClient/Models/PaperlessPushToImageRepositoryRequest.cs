@@ -63,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipmentIdentifier { get; set; }
 #endif
-        /// <summary>&quot;Valid values are: 1 = small package, 2 = freight. &quot;</summary>
+        /// <summary>Valid values are: 1 = small package, 2 = freight. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentType { get; set; }

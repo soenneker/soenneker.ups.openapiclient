@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Unit of Measure  Required if ProximitySearchIndicator is present. Example: MI or KM&quot;</summary>
+        /// <summary>Unit of Measure  Required if ProximitySearchIndicator is present. Example: MI or KM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DistanceUnitOfMeasure { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DistanceUnitOfMeasure { get; set; }
 #endif
-        /// <summary>&quot;Maximum Number of locations. Valied values:- 1 to 100Default: 100&quot;</summary>
+        /// <summary>Maximum Number of locations. Valied values:- 1 to 100Default: 100</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MaximumLocation { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string MaximumLocation { get; set; }
 #endif
-        /// <summary>&quot;Search Request range. Valied values:- 1 to 200Default: 200&quot;</summary>
+        /// <summary>Search Request range. Valied values:- 1 to 200Default: 200</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SearchRadius { get; set; }

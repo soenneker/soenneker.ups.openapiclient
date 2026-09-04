@@ -30,7 +30,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.SubscriptionFileException> Exception { get; set; }
 #endif
-        /// <summary>&quot;File name belonging to specific subscription requested by user.Format: YYMMDD_HHmmssnnn&quot;</summary>
+        /// <summary>File name belonging to specific subscription requested by user.Format: YYMMDD_HHmmssnnn</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FileName { get; set; }

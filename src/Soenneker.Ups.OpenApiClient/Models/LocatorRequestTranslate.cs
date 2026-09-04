@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Locale is the 5 digit combination of 2 character language code and 2 character country or territory code separated by an underscore (&apos;_&apos;) character. Will be used to determine what language the response will be sent in. Default value is: en_US. Examples are: fr_CA, es_MX.&quot;</summary>
+        /// <summary>Locale is the 5 digit combination of 2 character language code and 2 character country or territory code separated by an underscore (&apos;_&apos;) character. Will be used to determine what language the response will be sent in. Default value is: en_US. Examples are: fr_CA, es_MX.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Locale { get; set; }

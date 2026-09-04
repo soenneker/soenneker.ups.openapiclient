@@ -3,13 +3,13 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>The account type used for package event identification.</summary>
+    /// <summary>The units used to calculate weight</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum AccountSubscriptionRequestAllOf2SubAccountTypeItem
+    public enum LbWeightUnit
     {
-        [EnumMember(Value = "Outbound")]
+        [EnumMember(Value = "LB")]
         #pragma warning disable CS1591
-        Outbound,
+        Lb,
         #pragma warning restore CS1591
     }
 }

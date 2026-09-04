@@ -5,12 +5,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2Value
+    public enum ReplaceOp
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "KGS")]
+        [EnumMember(Value = "replace")]
         #pragma warning disable CS1591
-        Kgs,
+        Replace,
         #pragma warning restore CS1591
     }
 }

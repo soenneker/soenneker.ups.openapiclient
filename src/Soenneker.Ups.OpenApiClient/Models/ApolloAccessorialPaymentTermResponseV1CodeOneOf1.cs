@@ -3,13 +3,14 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>The units used to calculate weight</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum ApolloOrderSearchResponseV1ResponseOrdersItemItemsWeightUnit
+    #pragma warning disable CS1591
+    public enum ApolloAccessorialPaymentTermResponseV1CodeOneOf1
+    #pragma warning restore CS1591
     {
-        [EnumMember(Value = "LB")]
+        [EnumMember(Value = "PPD")]
         #pragma warning disable CS1591
-        Lb,
+        Ppd,
         #pragma warning restore CS1591
     }
 }

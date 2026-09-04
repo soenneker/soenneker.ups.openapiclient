@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Comments { get; set; }
 #endif
-        /// <summary>The type of declaration statement. Can be invoice or USMCA. Valid values: - Invoice =Invoice declaration- USMCA = USMCA declaration</summary>
+        /// <summary>The type of declaration statement. Can be invoice or USMCA. Valid values:- Invoice =Invoice declaration- USMCA = USMCA declaration</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsDeclarationStatement? DeclarationStatement { get; set; }
         /// <summary>The reason for export to go on the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,7 +33,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ReasonForExport { get; set; }
 #endif
-        /// <summary>The terms of sale for the invoice. Valid values: - CFR =Cost and Freight- CIF =Cost Insurance and Freight- CIP =Carriage and Insurance Paid- CPT =Carriage Paid To- DAF =Delivered at Frontier- DAP =Delivered at Place- DAT =Delivered at Terminal- DDP =Delivery Duty Paid- DDU =Delivery Duty Unpaid- DEQ =Delivered Ex Quay- DES =Delivered Ex Ship- EXW =Ex Works- FAS =Free Alongside Ship- FCA =Free Carrier- FOB =Free On Board  </summary>
+        /// <summary>The terms of sale for the invoice. Valid values:- CFR =Cost and Freight- CIF =Cost Insurance and Freight- CIP =Carriage and Insurance Paid- CPT =Carriage Paid To- DAF =Delivered at Frontier- DAP =Delivered at Place- DAT =Delivered at Terminal- DDP =Delivery Duty Paid- DDU =Delivery Duty Unpaid- DEQ =Delivered Ex Quay- DES =Delivered Ex Ship- EXW =Ex Works- FAS =Free Alongside Ship- FCA =Free Carrier- FOB =Free On Board  </summary>
         public global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsTermsOfShipment? TermsOfShipment { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetails"/> and sets the default values.

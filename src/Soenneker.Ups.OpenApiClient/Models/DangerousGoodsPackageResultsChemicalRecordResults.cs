@@ -22,7 +22,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ADRPoints { get; set; }
 #endif
-        /// <summary>&quot;Number of ADR Units (Liters/Kg)Format: 9999.99&quot;</summary>
+        /// <summary>Number of ADR Units (Liters/Kg)Format: 9999.99</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ADRUnits { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ChemicalRecordIdentifier { get; set; }
 #endif
-        /// <summary>&quot;Transport Category.  Valid values: 0 to 4&quot;</summary>
+        /// <summary>Transport Category.  Valid values: 0 to 4</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransportCategory { get; set; }

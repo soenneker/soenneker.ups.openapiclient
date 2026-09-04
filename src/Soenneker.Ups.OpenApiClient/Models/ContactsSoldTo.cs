@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;The text associated with the code will be printed in the sold to section of the USMCA form.  The values indicate the following: 01 – Unknown.  Applies to USMCA form. Possible Values are 01 and 02.&quot;</summary>
+        /// <summary>The text associated with the code will be printed in the sold to section of the USMCA form.  The values indicate the following: 01 – Unknown.  Applies to USMCA form. Possible Values are 01 and 02.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Option { get; set; }

@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string City { get; set; }
 #endif
-        /// <summary>&quot;Origin locations country or territory code.  Required if ShipFrom tag is supplied. For Return Shipment the country or territory code must meet the following conditions:- At least two of the following country or territory codes are the same: ShipTo, ShipFrom, and Shipper.- None of the following country or territory codes are the same and are a member of the EU: ShipTo, ShipFrom, and Shipper.- If any of the two following country or territory codes: ShipTo/ShipFrom/ Shipper are members in EU otherwise check if the shipper has Third country or territory Contract.&quot;</summary>
+        /// <summary>Origin locations country or territory code.  Required if ShipFrom tag is supplied. For Return Shipment the country or territory code must meet the following conditions:- At least two of the following country or territory codes are the same: ShipTo, ShipFrom, and Shipper.- None of the following country or territory codes are the same and are a member of the EU: ShipTo, ShipFrom, and Shipper.- If any of the two following country or territory codes: ShipTo/ShipFrom/ Shipper are members in EU otherwise check if the shipper has Third country or territory Contract.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CountryCode { get; set; }

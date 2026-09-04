@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>The type of declaration statement. Can be invoice or USMCA. Valid values: - Invoice =Invoice declaration- USMCA = USMCA declaration</summary>
+    /// <summary>The type of declaration statement. Can be invoice or USMCA. Valid values:- Invoice =Invoice declaration- USMCA = USMCA declaration</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MasterTradeComplianceDetailsDeclarationStatement
     {

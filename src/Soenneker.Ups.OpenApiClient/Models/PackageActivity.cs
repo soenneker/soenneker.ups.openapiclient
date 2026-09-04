@@ -14,7 +14,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Date of package delivery activity. Date format: YYYYMMDD.&quot;</summary>
+        /// <summary>Date of package delivery activity. Date format: YYYYMMDD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Date { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Date { get; set; }
 #endif
-        /// <summary>&quot;Time of package delivery activity. Time format: HHMMSS&quot;</summary>
+        /// <summary>Time of package delivery activity. Time format: HHMMSS</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Time { get; set; }

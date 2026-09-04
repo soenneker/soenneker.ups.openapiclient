@@ -3,13 +3,14 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>The account type used for package event identification.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum UpsTrackAlertAccountSubscriptionRequestAllOf2SubAccountTypeItem
+    #pragma warning disable CS1591
+    public enum ApolloAccessorialPaymentTermResponseV1CodeOneOf2
+    #pragma warning restore CS1591
     {
-        [EnumMember(Value = "Outbound")]
+        [EnumMember(Value = "COL")]
         #pragma warning disable CS1591
-        Outbound,
+        Col,
         #pragma warning restore CS1591
     }
 }

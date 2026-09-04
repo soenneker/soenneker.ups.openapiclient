@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The time that the request was made from the originating system. UTC time down to milliseconds. Example: 2016-07-14T12:01:33.999&quot;</summary>
+        /// <summary>The time that the request was made from the originating system. UTC time down to milliseconds. Example: 2016-07-14T12:01:33.999</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OriginRecordTransactionTimestamp { get; set; }

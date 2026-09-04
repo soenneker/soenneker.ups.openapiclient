@@ -63,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest Request { get; set; }
 #endif
-        /// <summary>&quot;Valid values: 01-Proximity Search Details02-Address Search Details03-Proximity Search Summary04-Address Search Summary05-Freight Will Call Search. Either OptionType 03 or 04 is required.&quot;</summary>
+        /// <summary>Valid values: 01-Proximity Search Details02-Address Search Details03-Proximity Search Summary04-Address Search Summary05-Freight Will Call Search. Either OptionType 03 or 04 is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SearchOptionCode { get; set; }

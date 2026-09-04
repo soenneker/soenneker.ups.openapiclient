@@ -62,7 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<string> Disclaimer { get; set; }
 #endif
-        /// <summary>&quot;Valid Values: 0-Do not display phone number1-Display phone number. This indicator will be returned only for the contact type Telephone number. This indicator is used by the clients to determine whether to display the telephone number to the end user.&quot;</summary>
+        /// <summary>Valid Values: 0-Do not display phone number1-Display phone number. This indicator will be returned only for the contact type Telephone number. This indicator is used by the clients to determine whether to display the telephone number to the end user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DisplayPhoneNumberIndicator { get; set; }
@@ -158,7 +158,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocalizedInstruction> LocalizedInstruction { get; set; }
 #endif
-        /// <summary>&quot;OptionType is a container that indicates the type of the location attribute.There are 4 types of attributes.They are: Location, Retail Location, Additional Services and Program Type.**NOTE:** For versions &gt;= v3, this element will always be returned as an array. For requests using version = v1 and v2, this element will be returned as an array if there is more than one object and a single object if there is only 1.&quot;</summary>
+        /// <summary>OptionType is a container that indicates the type of the location attribute.There are 4 types of attributes.They are: Location, Retail Location, Additional Services and Program Type.**NOTE:** For versions &gt;= v3, this element will always be returned as an array. For requests using version = v1 and v2, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocationAttribute>? LocationAttribute { get; set; }

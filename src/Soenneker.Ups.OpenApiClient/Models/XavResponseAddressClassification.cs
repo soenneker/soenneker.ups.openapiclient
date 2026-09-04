@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>&quot;Contains the text description of the address classification code: UnClassified, Commercial, Residential&quot;</summary>
+        /// <summary>Contains the text description of the address classification code: UnClassified, Commercial, Residential</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }

@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The date of the activity. Format: YYYYMMDD&quot;</summary>
+        /// <summary>The date of the activity. Format: YYYYMMDD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Date { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.TrackingLocation Location { get; set; }
 #endif
-        /// <summary>&quot;This indicates whether shipment event is physical or logical event. Valid values: &apos;true&apos; for logical event. &apos;false&apos; for physical event&quot;</summary>
+        /// <summary>This indicates whether shipment event is physical or logical event. Valid values: &apos;true&apos; for logical event. &apos;false&apos; for physical event</summary>
         public bool? LogicalScan { get; set; }
         /// <summary>The container which has the current package status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.TrackingStatus Status { get; set; }
 #endif
-        /// <summary>&quot;The time of the activity. Format: HHMMSS (24 hr)&quot;</summary>
+        /// <summary>The time of the activity. Format: HHMMSS (24 hr)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Time { get; set; }

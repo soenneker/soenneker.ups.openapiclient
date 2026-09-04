@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>Payment method used for the shipment (e.g., PPD, COL, THD).</summary>
+    /// <summary>Payment method used for the shipment (e.g., PPD, COL, OTH/THD).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ShipmentDetailPaymentType
     {
@@ -15,9 +15,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         #pragma warning disable CS1591
         Col,
         #pragma warning restore CS1591
-        [EnumMember(Value = "THD")]
+        [EnumMember(Value = "OTH/THD")]
         #pragma warning disable CS1591
-        Thd,
+        OthThd,
         #pragma warning restore CS1591
     }
 }

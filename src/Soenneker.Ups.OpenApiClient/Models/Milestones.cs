@@ -31,9 +31,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>&quot;The indication if the milestone represents the current state of the package. Valid values: &apos;true&apos; this milestone is the current state of the package.  &apos;false&apos; this milestone is not current.&quot;</summary>
+        /// <summary>The indication if the milestone represents the current state of the package. Valid values: &apos;true&apos; this milestone is the current state of the package.  &apos;false&apos; this milestone is not current.</summary>
         public bool? Current { get; set; }
-        /// <summary>&quot;The milestone description. Note: this is not translated at this time and is returned in US English.&quot;</summary>
+        /// <summary>The milestone description. Note: this is not translated at this time and is returned in US English.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string LinkedActivity { get; set; }
 #endif
-        /// <summary>&quot;The milestone state. Valid values: &apos;This milestone has already occurred&apos;/&apos;This milestone has not yet been completed&apos;.&quot;</summary>
+        /// <summary>The milestone state. Valid values: &apos;This milestone has already occurred&apos;/&apos;This milestone has not yet been completed&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }

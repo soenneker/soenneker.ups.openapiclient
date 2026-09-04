@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Company&apos;s tax Identification type.  Valid values: EIN, DNS, and FGN. Applies to EEI form only.&quot;</summary>
+        /// <summary>Company&apos;s tax Identification type.  Valid values: EIN, DNS, and FGN. Applies to EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

@@ -21,7 +21,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ControlDetailDescription { get; set; }
 #endif
-        /// <summary>&quot;The formal name or title of the control measure. This property serves as the header for `ControlDetails`.  Where no specific control name is applicable, this field may be left empty (and consequently, no header will be displayed in the response). This property is translated to the user&apos;s language as required. **Note**: When the `controlTypeCode` is set to `DOC`, the `controlDetailName` is also the identifier for the corresponding DocuSign template.&quot;</summary>
+        /// <summary>The formal name or title of the control measure. This property serves as the header for `ControlDetails`.  Where no specific control name is applicable, this field may be left empty (and consequently, no header will be displayed in the response). This property is translated to the user&apos;s language as required. **Note**: When the `controlTypeCode` is set to `DOC`, the `controlDetailName` is also the identifier for the corresponding DocuSign template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ControlDetailName { get; set; }

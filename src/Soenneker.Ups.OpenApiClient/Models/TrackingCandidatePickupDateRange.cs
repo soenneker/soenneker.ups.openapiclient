@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The beginning of the date range for the candidate. Format: YYYYMMDD  Service is only supported for 30 days&quot;</summary>
+        /// <summary>The beginning of the date range for the candidate. Format: YYYYMMDD  Service is only supported for 30 days</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BeginDate { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string BeginDate { get; set; }
 #endif
-        /// <summary>&quot;The end of the date range for the candidate. Format: YYYYMMDD&quot;</summary>
+        /// <summary>The end of the date range for the candidate. Format: YYYYMMDD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EndDate { get; set; }

@@ -29,22 +29,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Address1 { get; set; }
 #endif
-        /// <summary>Secondary address line.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Address2 { get; set; }
-#nullable restore
-#else
-        public string Address2 { get; set; }
-#endif
-        /// <summary>Last address line.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Address3 { get; set; }
-#nullable restore
-#else
-        public string Address3 { get; set; }
-#endif
         /// <summary>City of the party.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -153,8 +137,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "address1", n => { Address1 = n.GetStringValue(); } },
-                { "address2", n => { Address2 = n.GetStringValue(); } },
-                { "address3", n => { Address3 = n.GetStringValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
                 { "company", n => { Company = n.GetStringValue(); } },
                 { "contactEmail", n => { ContactEmail = n.GetStringValue(); } },
@@ -177,8 +159,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account", Account);
             writer.WriteStringValue("address1", Address1);
-            writer.WriteStringValue("address2", Address2);
-            writer.WriteStringValue("address3", Address3);
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("company", Company);
             writer.WriteStringValue("contactEmail", ContactEmail);

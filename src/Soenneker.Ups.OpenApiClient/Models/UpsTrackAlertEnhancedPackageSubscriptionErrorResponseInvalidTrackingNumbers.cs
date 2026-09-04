@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -10,20 +9,27 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class UpsTrackAlertEnhancedAccountSubscriptionResponse : IParsable
+    public partial class UpsTrackAlertEnhancedPackageSubscriptionErrorResponseInvalidTrackingNumbers : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Represents date of expiry for the subscription.</summary>
-        public Date? ExpiryDate { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedPackageSubscriptionErrorResponseInvalidTrackingNumbers"/> and sets the default values.
+        /// </summary>
+        public UpsTrackAlertEnhancedPackageSubscriptionErrorResponseInvalidTrackingNumbers()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedPackageSubscriptionErrorResponseInvalidTrackingNumbers"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedPackageSubscriptionErrorResponseInvalidTrackingNumbers CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedAccountSubscriptionResponse();
+            return new global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedPackageSubscriptionErrorResponseInvalidTrackingNumbers();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -33,7 +39,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expiryDate", n => { ExpiryDate = n.GetDateValue(); } },
             };
         }
         /// <summary>
@@ -43,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteDateValue("expiryDate", ExpiryDate);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

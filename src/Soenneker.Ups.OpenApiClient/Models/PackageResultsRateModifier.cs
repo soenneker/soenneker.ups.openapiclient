@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Amount. Example: \&quot;-1.00\&quot;,\&quot;0.25\&quot;. It contains positive or negative values. Applies only if SubVersion is 2205 or greater.&quot;</summary>
+        /// <summary>Amount. Example: &quot;-1.00&quot;,&quot;0.25&quot;. It contains positive or negative values. Applies only if SubVersion is 2205 or greater.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Amount { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Amount { get; set; }
 #endif
-        /// <summary>&quot;Rate Modifier Description. Example: \&quot;Origin Modifier\&quot;. Applies only if SubVersion is 2205 or greater.&quot;</summary>
+        /// <summary>Rate Modifier Description. Example: &quot;Origin Modifier&quot;. Applies only if SubVersion is 2205 or greater.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ModifierDesc { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ModifierDesc { get; set; }
 #endif
-        /// <summary>&quot;Rate Modifier Type. Example: \&quot;ORM\&quot;. Applies only if SubVersion is 2205 or greater.&quot;</summary>
+        /// <summary>Rate Modifier Type. Example: &quot;ORM&quot;. Applies only if SubVersion is 2205 or greater.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ModifierType { get; set; }

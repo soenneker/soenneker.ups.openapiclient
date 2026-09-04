@@ -7,15 +7,14 @@ using System.IO;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>
-    /// Response from the Print Label API
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class ForwardingPrintLabel200Response : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;An object representing the shipping label.| **labelFormat** | **Returned Containers** || :--:            | :--                     || DATA            | labelFormat, labelData  || PDF, PNG        | labelFormat, labelImage |&quot;</summary>
+        /// <summary>An object representing the shipping label.| **labelFormat** | **Returned Containers** || :--:            | :--                     || DATA            | labelFormat, labelData  || PDF, PNG        | labelFormat, labelImage |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1? Response { get; set; }

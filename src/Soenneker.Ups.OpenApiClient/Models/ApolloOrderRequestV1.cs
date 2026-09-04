@@ -53,7 +53,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1 Shipper { get; set; }
 #endif
-        /// <summary>The thirdParty property</summary>
+        /// <summary>Any other Party involved in the Shipment, usually a payor. Details Required when third party is payor, must be different from consignee and shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1? ThirdParty { get; set; }

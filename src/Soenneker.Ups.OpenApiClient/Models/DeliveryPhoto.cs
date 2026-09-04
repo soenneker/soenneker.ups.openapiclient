@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The indication if the country does not use postal code. Valid values: &apos;true&apos; this country does not use postal code. &apos;false&apos; this country uses postal code&quot;</summary>
+        /// <summary>The indication if the country does not use postal code. Valid values: &apos;true&apos; this country does not use postal code. &apos;false&apos; this country uses postal code</summary>
         public bool? IsNonPostalCodeCountry { get; set; }
         /// <summary>The photo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -25,7 +25,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Photo { get; set; }
 #endif
-        /// <summary>&quot;The photo capture indicator. Valid values: &apos;Y&apos; the photo is an photo capture. &apos;N&apos; the photo is not a capture&quot;</summary>
+        /// <summary>The photo capture indicator. Valid values: &apos;Y&apos; the photo is an photo capture. &apos;N&apos; the photo is not a capture</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PhotoCaptureInd { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PhotoCaptureInd { get; set; }
 #endif
-        /// <summary>&quot;The photo disposition code. Valid values: &apos;V&apos; the photo is viewable. &apos;N&apos; the photo is not viewable. &apos;U&apos; the photo is not stored&quot;</summary>
+        /// <summary>The photo disposition code. Valid values: &apos;V&apos; the photo is viewable. &apos;N&apos; the photo is not viewable. &apos;U&apos; the photo is not stored</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PhotoDispositionCode { get; set; }

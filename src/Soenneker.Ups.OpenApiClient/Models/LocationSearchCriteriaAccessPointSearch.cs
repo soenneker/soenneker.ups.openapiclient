@@ -13,7 +13,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LocationSearchCriteriaAccessPointSearch : IAdditionalDataHolder, IParsable
     {
-        /// <summary>&quot;Status of UPS Access Point. Valid values are: 01-Active-available07-Active-unavailable.&quot;</summary>
+        /// <summary>Status of UPS Access Point. Valid values are: 01-Active-available07-Active-unavailable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccessPointStatus { get; set; }

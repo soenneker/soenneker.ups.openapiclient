@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto DeliveryPhoto { get; set; }
 #endif
-        /// <summary>&quot;The location where the package was dropped off. For example: &apos;Front Door&apos;&quot;</summary>
+        /// <summary>The location where the package was dropped off. For example: &apos;Front Door&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Location { get; set; }

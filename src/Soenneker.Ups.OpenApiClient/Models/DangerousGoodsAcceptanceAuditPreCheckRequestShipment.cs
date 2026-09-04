@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsShipmentPackage> Package { get; set; }
 #endif
-        /// <summary>&quot;The Regulatory set associated with every regulated shipment. It must be same across the shipment. Not required when the CommodityRegulatedLevelCode is EQ.  Valid values: ADR, 49CFR, IATA.ADR = Europe to Europe Ground Movement49CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada   IATA= Worldwide Air movement.&quot;</summary>
+        /// <summary>The Regulatory set associated with every regulated shipment. It must be same across the shipment. Not required when the CommodityRegulatedLevelCode is EQ.  Valid values: ADR, 49CFR, IATA.ADR = Europe to Europe Ground Movement49CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada   IATA= Worldwide Air movement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RegulationSet { get; set; }

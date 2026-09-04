@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Extension { get; set; }
 #endif
-        /// <summary>&quot;Consignee&apos;s phone Number.  Required for: UPS Next Day Air® Early service, and when Ship To country or territory is different than the ShipFrom country or territory.If ShipTo country or territory is US, PR, CA, and VI, the layout is:area code, 7 digit PhoneNumber orarea code, 7 digit PhoneNumber, 4 digit extension number; number.For other countries or territories, the layout is: country or territory code, area code, 7 digit number.&quot;</summary>
+        /// <summary>Consignee&apos;s phone Number.  Required for: UPS Next Day Air® Early service, and when Ship To country or territory is different than the ShipFrom country or territory.If ShipTo country or territory is US, PR, CA, and VI, the layout is:area code, 7 digit PhoneNumber orarea code, 7 digit PhoneNumber, 4 digit extension number; number.For other countries or territories, the layout is: country or territory code, area code, 7 digit number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Number { get; set; }

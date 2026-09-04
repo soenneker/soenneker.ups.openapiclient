@@ -8,28 +8,30 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// The API request used to print a Label
+    /// At least one of shipmentNumber, or orderNumber is required.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApolloOrderPrintLabelRequestV1 : IParsable
     {
-        /// <summary>Unbounded array of additional key-value pair objects</summary>
+        /// <summary>Optional. Use key piece with a 1-based number to print a specific piece within the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>? Details { get; set; }
+        public string? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item> Details { get; set; }
+        public string Details { get; set; }
 #endif
-        /// <summary>The output format of the document.</summary>
+        /// <summary>Label output format. Defaults to PDF. DATA returns label fields as structured data with no image.</summary>
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1Format? Format { get; set; }
+        /// <summary>Language for label text. Defaults to en-US.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Format { get; set; }
+        public string? Language { get; set; }
 #nullable restore
 #else
-        public string Format { get; set; }
+        public string Language { get; set; }
 #endif
-        /// <summary>A key that determines the template that is used for the label.</summary>
+        /// <summary>Label template. AF-GEMINI (default), AF-UFH (default for shipment-only; required for Quote API shipments). NOTE : AF-GEMINI layout supports only PDF format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Layout { get; set; }
@@ -37,28 +39,28 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Layout { get; set; }
 #endif
-        /// <summary>The Unique number used to identify the order</summary>
+        /// <summary>The orderNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber? OrderNumber { get; set; }
 #nullable restore
 #else
-        public string OrderNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber OrderNumber { get; set; }
 #endif
-        /// <summary>The UPS Freight Account Number that identifies the Shipper</summary>
+        /// <summary>Shipment number from the Ship or Quote API. When provided alone, layout defaults to AF-UFH.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperAccountNumber { get; set; }
+        public string? ShipmentNumber { get; set; }
 #nullable restore
 #else
-        public string ShipperAccountNumber { get; set; }
+        public string ShipmentNumber { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1"/> and sets the default values.
         /// </summary>
         public ApolloOrderPrintLabelRequestV1()
         {
-            Format = "PDF";
+            Language = "en-US";
             Layout = "AF-GEMINI";
         }
         /// <summary>
@@ -79,11 +81,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "format", n => { Format = n.GetStringValue(); } },
+                { "details", n => { Details = n.GetStringValue(); } },
+                { "format", n => { Format = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1Format>(); } },
+                { "language", n => { Language = n.GetStringValue(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
-                { "orderNumber", n => { OrderNumber = n.GetStringValue(); } },
-                { "shipperAccountNumber", n => { ShipperAccountNumber = n.GetStringValue(); } },
+                { "orderNumber", n => { OrderNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber.CreateFromDiscriminatorValue); } },
+                { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -93,11 +96,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
-            writer.WriteStringValue("format", Format);
+            writer.WriteStringValue("details", Details);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1Format>("format", Format);
+            writer.WriteStringValue("language", Language);
             writer.WriteStringValue("layout", Layout);
-            writer.WriteStringValue("orderNumber", OrderNumber);
-            writer.WriteStringValue("shipperAccountNumber", ShipperAccountNumber);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber>("orderNumber", OrderNumber);
+            writer.WriteStringValue("shipmentNumber", ShipmentNumber);
         }
     }
 }

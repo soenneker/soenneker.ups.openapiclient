@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Incoterms { get; set; }
 #endif
-        /// <summary>&quot;Defaults to current date if not provided. Date format: YYYY-MM-DD.&quot;</summary>
+        /// <summary>Defaults to current date if not provided. Date format: YYYY-MM-DD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipDate { get; set; }
@@ -71,7 +71,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipmentItems> ShipmentItems { get; set; }
 #endif
-        /// <summary>&quot;Specifies the shipment type such as Gift, Document, Commercial (Sale), etc.Supported Shipment Types: 1. GIFT 2. COMMERCIAL 3. SALE 4. SAMPLE 5. REPAIR 6. RETURN 7. OTHER Default value will vary and based on import country.&quot;</summary>
+        /// <summary>Specifies the shipment type such as Gift, Document, Commercial (Sale), etc.Supported Shipment Types: 1. GIFT 2. COMMERCIAL 3. SALE 4. SAMPLE 5. REPAIR 6. RETURN 7. OTHER Default value will vary and based on import country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentType { get; set; }
@@ -79,7 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipmentType { get; set; }
 #endif
-        /// <summary>&quot;The modes of transportation (in upper case).Supported Values: 1. INT_AIR 2. INT_OCEAN 3. INT_RAIL 4. INT_TRUCK 5. DOM_AIR 6. DOM_OCEAN 7. DOM_RAIL 8. DOM_TRUCK Default value will vary based on the import country.&quot;</summary>
+        /// <summary>The modes of transportation (in upper case).Supported Values: 1. INT_AIR 2. INT_OCEAN 3. INT_RAIL 4. INT_TRUCK 5. DOM_AIR 6. DOM_OCEAN 7. DOM_RAIL 8. DOM_TRUCK Default value will vary based on the import country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransModes { get; set; }

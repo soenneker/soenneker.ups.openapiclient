@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Code associated with Unit of Measurement for the Adjusted height.Valid value: IN  Unit of measurement code for Adjusted height is validated only when Handling unit type is SKD = Skid or PLT = Pallet.&quot;</summary>
+        /// <summary>Code associated with Unit of Measurement for the Adjusted height.Valid value: IN  Unit of measurement code for Adjusted height is validated only when Handling unit type is SKD = Skid or PLT = Pallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

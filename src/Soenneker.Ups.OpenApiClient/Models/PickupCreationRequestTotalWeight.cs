@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string UnitOfMeasurement { get; set; }
 #endif
-        /// <summary>&quot;The weight of the package. One decimal digit is allowed. Example: 10.9&quot;</summary>
+        /// <summary>The weight of the package. One decimal digit is allowed. Example: 10.9</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Weight { get; set; }

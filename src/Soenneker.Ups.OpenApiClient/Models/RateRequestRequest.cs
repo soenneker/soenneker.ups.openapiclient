@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Indicates Rate API to display the new release features in Rate API response based on Rate release. See the What&apos;s New section for the latest Rate release. Supported values: 1601, 1607, 1701, 1707, 2108, 2205,2407,2409&quot;</summary>
+        /// <summary>Indicates Rate API to display the new release features in Rate API response based on Rate release. See the What&apos;s New section for the latest Rate release. Supported values: 1601, 1607, 1701, 1707, 2108, 2205,2407,2409</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubVersion { get; set; }

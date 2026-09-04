@@ -14,7 +14,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Represents the shipment type.   Valid values: \&quot;02\&quot;,\&quot;03\&quot;,\&quot;04\&quot;,\&quot;07\&quot;  02 - Document  03 - Non-Document  04 - WWEF  07 - Pallet&quot;</summary>
+        /// <summary>Represents the shipment type.   Valid values: &quot;02&quot;,&quot;03&quot;,&quot;04&quot;,&quot;07&quot;  02 - Document  03 - Non-Document  04 - WWEF  07 - Pallet</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BillType { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DestinationStateProvince { get; set; }
 #endif
-        /// <summary>&quot;Populated with valid duty types for international transactions only.    Valid Duty Types: \&quot;01\&quot;,\&quot;02\&quot;,\&quot;03\&quot;,\&quot;04\&quot;,\&quot;05\&quot;,\&quot;06\&quot;,\&quot;07\&quot;,\&quot;08\&quot;,\&quot;09\&quot;  01 - Dutiable  02 - Non Dutiable  03 - Low Value  04 - Courier Remission  05 - Gift  06 - Military  07 - Exception  08 - Line Release  09 - Low Value&quot;</summary>
+        /// <summary>Populated with valid duty types for international transactions only.    Valid Duty Types: &quot;01&quot;,&quot;02&quot;,&quot;03&quot;,&quot;04&quot;,&quot;05&quot;,&quot;06&quot;,&quot;07&quot;,&quot;08&quot;,&quot;09&quot;  01 - Dutiable  02 - Non Dutiable  03 - Low Value  04 - Courier Remission  05 - Gift  06 - Military  07 - Exception  08 - Line Release  09 - Low Value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DutyType { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DutyType { get; set; }
 #endif
-        /// <summary>&quot;Returns TRUE if the shipment dates fall within a defined peak date range. When the guarantee is suspended, it is suspended for all services in the response.    The logic for determining if guarantees are suspended applies per origin country.   The following will be used to determine if a shipment falls within a defined peak date range: shipDate (from the response), deliveryDate (from the response), server Date.   Defined peak date range (range for when guarantees are suspended) is inclusive of start and end dates.&quot;</summary>
+        /// <summary>Returns TRUE if the shipment dates fall within a defined peak date range. When the guarantee is suspended, it is suspended for all services in the response.    The logic for determining if guarantees are suspended applies per origin country.   The following will be used to determine if a shipment falls within a defined peak date range: shipDate (from the response), deliveryDate (from the response), server Date.   Defined peak date range (range for when guarantees are suspended) is inclusive of start and end dates.</summary>
         public bool? GuaranteeSuspended { get; set; }
         /// <summary>Number of services being returned in the services array.</summary>
         public int? NumberOfServices { get; set; }
@@ -146,7 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string OriginStateProvince { get; set; }
 #endif
-        /// <summary>&quot;residential Indicator that was sent in on the request.   Valid values: \&quot;01\&quot;,\&quot;02\&quot;   01 - Residential  02 - Commercial&quot;</summary>
+        /// <summary>residential Indicator that was sent in on the request.   Valid values: &quot;01&quot;,&quot;02&quot;   01 - Residential  02 - Commercial</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ResidentialIndicator { get; set; }
@@ -170,7 +170,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.Services> Services { get; set; }
 #endif
-        /// <summary>&quot;The date the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).  This date may or may not be the UPS business date.   Valid Format: YYYY-MM-DD&quot;</summary>
+        /// <summary>The date the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).  This date may or may not be the UPS business date.   Valid Format: YYYY-MM-DD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipDate { get; set; }
@@ -194,7 +194,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipmentContentsValue { get; set; }
 #endif
-        /// <summary>&quot;The time the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).    Valid Format: HH:MM:SS&quot;</summary>
+        /// <summary>The time the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).    Valid Format: HH:MM:SS</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipTime { get; set; }

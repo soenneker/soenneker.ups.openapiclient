@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Package dimensions measurement code. Valid codes: IN = Inches CM = Centimeters 00 = Metric Units Of Measurement 01 = English Units of MeasurementThe unit of measurement must be valid for the Shipper country or territory. &quot;</summary>
+        /// <summary>Package dimensions measurement code. Valid codes: IN = Inches CM = Centimeters 00 = Metric Units Of Measurement 01 = English Units of MeasurementThe unit of measurement must be valid for the Shipper country or territory. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

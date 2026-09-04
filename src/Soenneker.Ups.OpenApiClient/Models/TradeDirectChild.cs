@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ChildProduct Product { get; set; }
 #endif
-        /// <summary>The type of shipment. Valid values: - LTL - SMALLPACKAGE - MI</summary>
+        /// <summary>The type of shipment. Valid values:- LTL - SMALLPACKAGE - MI</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChildType? Type { get; set; }
         /// <summary>The unique shipment identifier (USI) is used to create Master, LTL and Child shipments. Used for Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

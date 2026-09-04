@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The base64 encoded string representation of the signature image. Note: This is considered sensitive data and may only be returned for a user that has rights to the package.&quot;</summary>
+        /// <summary>The base64 encoded string representation of the signature image. Note: This is considered sensitive data and may only be returned for a user that has rights to the package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Image { get; set; }

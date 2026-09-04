@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>The type of shipment. Valid values: - LTL - SMALLPACKAGE - MI</summary>
+    /// <summary>The type of shipment. Valid values:- LTL - SMALLPACKAGE - MI</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TradeDirectChildType
     {

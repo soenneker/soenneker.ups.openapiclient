@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string UserCreatedFormDocumentType { get; set; }
 #endif
-        /// <summary>&quot;The user created form file.  The maximum allowable size of each file is restricted to 10 MB. Should be a base64 encoded string.Note: The maximum allowable size of each file is restriced to 1MB in CIE (Customer Integration Environment).&quot;</summary>
+        /// <summary>The user created form file.  The maximum allowable size of each file is restricted to 10 MB. Should be a base64 encoded string.Note: The maximum allowable size of each file is restriced to 1MB in CIE (Customer Integration Environment).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserCreatedFormFile { get; set; }

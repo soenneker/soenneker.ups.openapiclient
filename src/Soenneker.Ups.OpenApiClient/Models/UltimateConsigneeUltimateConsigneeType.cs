@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Ultimate Consignee Type Code.   Applicable for EEI form only.Valid values:  D =  Direct Consumer G = Government EntityR = ResellerO = Other/Unknown&quot;</summary>
+        /// <summary>Ultimate Consignee Type Code.   Applicable for EEI form only.Valid values:  D =  Direct Consumer G = Government EntityR = ResellerO = Other/Unknown</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

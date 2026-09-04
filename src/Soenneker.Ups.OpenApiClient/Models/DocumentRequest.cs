@@ -15,9 +15,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Image format type for the label requested by customer.| Code   | Description   || :----: | :-----------: || ZPL    | ZPL format    || EPL    | EPL format    || STARPL | STARPL format || SPL    | SPL format    || PNG    | PNG format    || PDF    | PDF format    || GIF    | GIF format    |&quot;</summary>
+        /// <summary>Image format type for the label requested by customer.| Code   | Description   || :----: | :-----------: || ZPL    | ZPL format    || EPL    | EPL format    || STARPL | STARPL format || SPL    | SPL format    || PNG    | PNG format    || PDF    | PDF format    || GIF    | GIF format    |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestDocFormat? DocFormat { get; set; }
-        /// <summary>&quot;The type of document requested for generation.| Code   | Description                     || :----: | :-----------------------------: || CCI    | Consolidated Commercial Invoice || CBOL   | Consolidated Bill of Lading     || BOL    | Bill of Lading                  || PLT    | Pallet Label                    || PKGPLT | Package Pallet Label            |&quot;</summary>
+        /// <summary>The type of document requested for generation.| Code   | Description                     || :----: | :-----------------------------: || CCI    | Consolidated Commercial Invoice || CBOL   | Consolidated Bill of Lading     || BOL    | Bill of Lading                  || PLT    | Pallet Label                    || PKGPLT | Package Pallet Label            |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestRequestedDoc? RequestedDoc { get; set; }
         /// <summary>The UPS account number of the shipper that was used in clouseout shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

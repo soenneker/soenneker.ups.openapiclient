@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Number { get; set; }
 #endif
-        /// <summary>&quot;Indicates how shipping charges for the package were billed. Valid Values: 01, 02, 03, 04, 99 Value Definitions: 01 Shipper02 Consignee Billing 03 Third Party04 Freight Collect99 International Bill Option&quot;</summary>
+        /// <summary>Indicates how shipping charges for the package were billed. Valid Values: 01, 02, 03, 04, 99 Value Definitions: 01 Shipper02 Consignee Billing 03 Third Party04 Freight Collect99 International Bill Option</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Option { get; set; }

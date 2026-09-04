@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Size of UPS Premium Care Form.  Valid values: 01 = A4 Size02 = Letter Size&quot;</summary>
+        /// <summary>Size of UPS Premium Care Form.  Valid values: 01 = A4 Size02 = Letter Size</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PageSize { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PageSize { get; set; }
 #endif
-        /// <summary>&quot;Format of UPS Premium Care Form.  Valid values: 01 = PNG02 = PDF&quot;</summary>
+        /// <summary>Format of UPS Premium Care Form.  Valid values: 01 = PNG02 = PDF</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PrintType { get; set; }

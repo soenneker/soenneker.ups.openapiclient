@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;6-to-15-alphanumeric commodity code. Customs uses this code to determine what duties should be assessed on the commodity.  Applies to Invoice, Partial Invoice and USMCA. Required for USMCA and optional for Partial Invoice. Should be at least 6 alphanumeric. For USMCA: For each good described in Description of Goods field, identify the H.S. tariff classification to six digits. If the good is subject to a specific rule of origin in Annex 401 that requires eight digits, identify to eight digits, using the H.S. tariff classification of the country or territory into whose territory the good is imported.&quot;</summary>
+        /// <summary>6-to-15-alphanumeric commodity code. Customs uses this code to determine what duties should be assessed on the commodity.  Applies to Invoice, Partial Invoice and USMCA. Required for USMCA and optional for Partial Invoice. Should be at least 6 alphanumeric. For USMCA: For each good described in Description of Goods field, identify the H.S. tariff classification to six digits. If the good is subject to a specific rule of origin in Annex 401 that requires eight digits, identify to eight digits, using the H.S. tariff classification of the country or territory into whose territory the good is imported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommodityCode { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm ExcludeFromForm { get; set; }
 #endif
-        /// <summary>&quot;Code indicating Domestic: Exports that have been produced, manufactured, or grown in the United States or Puerto Rico. This includes imported merchandise which has been enhanced in value or changed from the form in which imported by further manufacture or processing in the United States or Puerto Rico. Foreign: Merchandise that has entered the United States and is being exported again in the same condition as when imported.   Applies to EEI forms only. Required for EEI form.  Valid values:  D: Domestic; F: Foreign.&quot;</summary>
+        /// <summary>Code indicating Domestic: Exports that have been produced, manufactured, or grown in the United States or Puerto Rico. This includes imported merchandise which has been enhanced in value or changed from the form in which imported by further manufacture or processing in the United States or Puerto Rico. Foreign: Merchandise that has entered the United States and is being exported again in the same condition as when imported.   Applies to EEI forms only. Required for EEI form.  Valid values:  D: Domestic; F: Foreign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExportType { get; set; }
@@ -127,7 +127,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PreferenceCriteria { get; set; }
 #endif
-        /// <summary>&quot;Indicate the following:  Yes - If shipper is the producer of the good. If not, state 02, 03, and 04 depending on whether this certificate was based upon:  No [1] - Knowledge of whether the good qualifies as an originating good. No [2] - Reliance on the producers written representation (other than a Certificate of Origin) that the good qualifies as an originating good. No [3] - A completed and signed Certificate for the good voluntarily provided to the exporter by the producer.  Applicable for USMCA and is required. Valid values: Yes, No [1], No [2], and No [3].&quot;</summary>
+        /// <summary>Indicate the following:  Yes - If shipper is the producer of the good. If not, state 02, 03, and 04 depending on whether this certificate was based upon:  No [1] - Knowledge of whether the good qualifies as an originating good. No [2] - Reliance on the producers written representation (other than a Certificate of Origin) that the good qualifies as an originating good. No [3] - A completed and signed Certificate for the good voluntarily provided to the exporter by the producer.  Applicable for USMCA and is required. Valid values: Yes, No [1], No [2], and No [3].</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProducerInfo { get; set; }
@@ -159,7 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB ScheduleB { get; set; }
 #endif
-        /// <summary>&quot;This amount will always be USD.  Applies to EEI forms only. Required for EEI form. Valid characters are 0-9 and \&apos;.\&apos; (Decimal point). Limit to 2 digit after the decimal. The maximum length of the field is 15 including \&apos;.\&apos; and can hold up to 2 decimal places.Note: This value is calculated based on the Product/Unit/Value and /Product/Unit/Number (Number of Units * Price per Unit). If the total value is incorrect it will be replaced by the actual calculated total value.&quot;</summary>
+        /// <summary>This amount will always be USD.  Applies to EEI forms only. Required for EEI form. Valid characters are 0-9 and \&apos;.\&apos; (Decimal point). Limit to 2 digit after the decimal. The maximum length of the field is 15 including \&apos;.\&apos; and can hold up to 2 decimal places.Note: This value is calculated based on the Product/Unit/Value and /Product/Unit/Number (Number of Units * Price per Unit). If the total value is incorrect it will be replaced by the actual calculated total value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SEDTotalValue { get; set; }
@@ -185,7 +185,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string UnitPrice { get; set; }
 #endif
-        /// <summary>&quot;Includes the following information for used self-propelled vehicles as defined in Customs regulations 19 CFR 192.1: The unique Vehicle Identification Number (VIN) in the proper format. Or The Product Identification Number (PIN) for those used self-propelled vehicles for which there are no VINs.  Or the Vehicle Title Number.  Applies to EEI forms only.&quot;</summary>
+        /// <summary>Includes the following information for used self-propelled vehicles as defined in Customs regulations 19 CFR 192.1: The unique Vehicle Identification Number (VIN) in the proper format. Or The Product Identification Number (PIN) for those used self-propelled vehicles for which there are no VINs.  Or the Vehicle Title Number.  Applies to EEI forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VehicleID { get; set; }

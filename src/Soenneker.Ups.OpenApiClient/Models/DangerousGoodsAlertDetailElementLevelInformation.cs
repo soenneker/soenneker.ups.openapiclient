@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsElementLevelInformationElementIdentifier> ElementIdentifier { get; set; }
 #endif
-        /// <summary>&quot;Define type of element in request.   Possible values: H for the header details levelS for the shipment levelP for the package levelC for the commodity level&quot;</summary>
+        /// <summary>Define type of element in request.   Possible values: H for the header details levelS for the shipment levelP for the package levelC for the commodity level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Level { get; set; }

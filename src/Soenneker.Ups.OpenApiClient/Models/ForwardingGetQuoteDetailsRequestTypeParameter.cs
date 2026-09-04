@@ -5,12 +5,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapperValue
+    public enum ForwardingGetQuoteDetailsRequestTypeParameter
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "LBS")]
+        [EnumMember(Value = "Air")]
         #pragma warning disable CS1591
-        Lbs,
+        Air,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "Ocean")]
+        #pragma warning disable CS1591
+        Ocean,
         #pragma warning restore CS1591
     }
 }

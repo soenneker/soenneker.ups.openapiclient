@@ -22,7 +22,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.StandardHoursDayOfWeek> DayOfWeek { get; set; }
 #endif
-        /// <summary>&quot;Hours Type. Valid values: 10-Regular Operating Hours 11-Will Call Hours12-Same Day Will Call Hours14-Customer PickUp50-Drop Off Hours 51-Prep Hours&quot;</summary>
+        /// <summary>Hours Type. Valid values: 10-Regular Operating Hours 11-Will Call Hours12-Same Day Will Call Hours14-Customer PickUp50-Drop Off Hours 51-Prep Hours</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HoursType { get; set; }

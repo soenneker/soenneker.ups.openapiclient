@@ -38,7 +38,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Quantity { get; set; }
 #endif
-        /// <summary>&quot;The unit of measure used for the mass capacity of the regulated good.  It will be returned if applies for a given chemical record. Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.&quot;</summary>
+        /// <summary>The unit of measure used for the mass capacity of the regulated good.  It will be returned if applies for a given chemical record. Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UOM { get; set; }

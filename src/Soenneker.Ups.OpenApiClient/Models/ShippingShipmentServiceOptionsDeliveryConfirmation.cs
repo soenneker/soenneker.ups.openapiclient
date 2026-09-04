@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string DCISNumber { get; set; }
 #endif
-        /// <summary>&quot;Type of delivery confirmation.  Valid values: 1 - Delivery Confirmation Signature Required2 - Delivery Confirmation Adult Signature Required. Valid for forward shipments only.&quot;</summary>
+        /// <summary>Type of delivery confirmation.  Valid values: 1 - Delivery Confirmation Signature Required2 - Delivery Confirmation Adult Signature Required. Valid for forward shipments only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DCISType { get; set; }

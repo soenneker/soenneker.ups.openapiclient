@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>&quot;The code associated with unit of measurement. The requested code must be valid for the shipper country or territory.| Code  | Description || :--:  | :--         || IN    | Inches      || CM    | Centimeters |&quot;</summary>
+    /// <summary>The code associated with unit of measurement. The requested code must be valid for the shipper country or territory.| Code  | Description || :--:  | :--         || IN    | Inches      || CM    | Centimeters |</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TradeDirectDimensionsUnitOfMeasurement
     {

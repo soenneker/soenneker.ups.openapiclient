@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.
     public partial class WithShipmentGccnItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.childShipment.item.item collection</summary>
-        /// <param name="position">The identifier of the shipment to identify the child shipment. It is also known as 1Z Tracking Number.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.Item.Item.WithTrackingNumberItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.ChildShipment.Item.Item.WithTrackingNumberItemRequestBuilder this[string position]
         {

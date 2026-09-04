@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>The terms of sale for the invoice. Valid values: - CFR =Cost and Freight- CIF =Cost Insurance and Freight- CIP =Carriage and Insurance Paid- CPT =Carriage Paid To- DAF =Delivered at Frontier- DAP =Delivered at Place- DAT =Delivered at Terminal- DDP =Delivery Duty Paid- DDU =Delivery Duty Unpaid- DEQ =Delivered Ex Quay- DES =Delivered Ex Ship- EXW =Ex Works- FAS =Free Alongside Ship- FCA =Free Carrier- FOB =Free On Board  </summary>
+    /// <summary>The terms of sale for the invoice. Valid values:- CFR =Cost and Freight- CIF =Cost Insurance and Freight- CIP =Carriage and Insurance Paid- CPT =Carriage Paid To- DAF =Delivered at Frontier- DAP =Delivered at Place- DAT =Delivered at Terminal- DDP =Delivery Duty Paid- DDU =Delivery Duty Unpaid- DEQ =Delivered Ex Quay- DES =Delivered Ex Ship- EXW =Ex Works- FAS =Free Alongside Ship- FCA =Free Carrier- FOB =Free On Board  </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MasterTradeComplianceDetailsTermsOfShipment
     {

@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The consignee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1? Consignee { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>? Consignee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1 Consignee { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1> Consignee { get; set; }
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,18 +33,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The shipper property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1? Shipper { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>? Shipper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1 Shipper { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1> Shipper { get; set; }
 #endif
         /// <summary>The thirdParty property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1? ThirdParty { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>? ThirdParty { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1 ThirdParty { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1> ThirdParty { get; set; }
 #endif
         /// <summary>Unbounded array containing one or more warning objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1.CreateFromDiscriminatorValue); } },
+                { "consignee", n => { Consignee = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1.CreateFromDiscriminatorValue); } },
-                { "thirdParty", n => { ThirdParty = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1.CreateFromDiscriminatorValue); } },
+                { "shipper", n => { Shipper = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "thirdParty", n => { ThirdParty = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>(global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -93,10 +93,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>("consignee", Consignee);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>("consignee", Consignee);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>("shipper", Shipper);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>("thirdParty", ThirdParty);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>("shipper", Shipper);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermInfoV1>("thirdParty", ThirdParty);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>("warnings", Warnings);
             writer.WriteAdditionalData(AdditionalData);
         }

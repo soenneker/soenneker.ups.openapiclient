@@ -101,7 +101,7 @@ namespace Soenneker.Ups.OpenApiClient.Rating.Item.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithRequestoptionItemRequestBuilderPostQueryParameters 
         {
-            /// <summary>&quot;Valid Values: timeintransit = The server rates with transit time information combined with requestoption in URL.Rate is the only valid request option for Ground Freight Pricing requests. Length 15&quot;</summary>
+            /// <summary>Valid Values: timeintransit = The server rates with transit time information combined with requestoption in URL.Rate is the only valid request option for Ground Freight Pricing requests. Length 15</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("additionalinfo")]

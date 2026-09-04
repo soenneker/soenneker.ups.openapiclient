@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Unit of measurement of the weight.| Code  | Description || :--:  | :--         || KGS   | Kilograms   || LBS   | Pounds      |&quot;</summary>
+        /// <summary>Unit of measurement of the weight.| Code  | Description || :--:  | :--         || KGS   | Kilograms   || LBS   | Pounds      |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.PackageWeightUnitOfMeasurementEnum? UnitOfMeasurement { get; set; }
         /// <summary>Weight of the package/ltl.</summary>
         public double? Weight { get; set; }

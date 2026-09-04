@@ -39,7 +39,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CustomerCenterCutoff { get; set; }
 #endif
-        /// <summary>&quot;Day of week for arrival. Valid values are: MONTUEWEDTHUFRISAT&quot;</summary>
+        /// <summary>Day of week for arrival. Valid values are: MONTUEWEDTHUFRISAT</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DayOfWeek { get; set; }

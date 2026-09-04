@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>&quot;Description of a subscription. Valid values: - Unknown (Unknown subscription status)- Activate (Ready for the user to activate the subscription)- Pending (In the process of waiting for privilege requests authorization)- Active (The subscription is in good standing and is active.)- Inactive (The subscriber puts the subscription on hold.)- Suspended (UPS disables the subscription.)&quot;</summary>
+        /// <summary>Description of a subscription. Valid values: - Unknown (Unknown subscription status)- Activate (Ready for the user to activate the subscription)- Pending (In the process of waiting for privilege requests authorization)- Active (The subscription is in good standing and is active.)- Inactive (The subscriber puts the subscription on hold.)- Suspended (UPS disables the subscription.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }

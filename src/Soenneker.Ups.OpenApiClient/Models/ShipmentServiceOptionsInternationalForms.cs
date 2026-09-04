@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Presence of the indicator means user will supply additional document, such as EEI, USMCA or CO.  This indicator should be set when the shipper intends to utilize UPS paperless invoice functionality AND the shipper has SELF-PREPARED other International Forms (EEI, CO, USMCA) to accompany the shipment. It is evaluated only when: 1. Account is paperless enabled. 2. Movement requires an invoice.3. Destination country or territory accepts paperless invoice. 4. Invoice data is supplied by the client and the data passes validation.&quot;</summary>
+        /// <summary>Presence of the indicator means user will supply additional document, such as EEI, USMCA or CO.  This indicator should be set when the shipper intends to utilize UPS paperless invoice functionality AND the shipper has SELF-PREPARED other International Forms (EEI, CO, USMCA) to accompany the shipment. It is evaluated only when: 1. Account is paperless enabled. 2. Movement requires an invoice.3. Destination country or territory accepts paperless invoice. 4. Invoice data is supplied by the client and the data passes validation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AdditionalDocumentIndicator { get; set; }
@@ -79,7 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CurrencyCode { get; set; }
 #endif
-        /// <summary>&quot;This is the legal explanation, used by Customs, for the delivering of this shipment. It must be identical to the set of declarations actually used by Customs. Examples of declarations that might be entered in this field are: I hereby certify that the goods covered by this shipment qualify as originating goods for purposes of preferential tariff treatment under the USMCA. I hereby certify that the information on this invoice is true and correct and the contents and value of this shipment is as stated above.  EEA statement:  The exporter of the products covered by this document declares that except where otherwise clearly indicated these products are of EEA preferential origin.  Applies to Invoice and Partial Invoice forms only. On the invoice for return shipment, the verbiage is as follows (user input is ignored): The exporter of the products covered by this document declares that except where otherwise clearly indicated these products are of EEA preferential origin&quot;</summary>
+        /// <summary>This is the legal explanation, used by Customs, for the delivering of this shipment. It must be identical to the set of declarations actually used by Customs. Examples of declarations that might be entered in this field are: I hereby certify that the goods covered by this shipment qualify as originating goods for purposes of preferential tariff treatment under the USMCA. I hereby certify that the information on this invoice is true and correct and the contents and value of this shipment is as stated above.  EEA statement:  The exporter of the products covered by this document declares that except where otherwise clearly indicated these products are of EEA preferential origin.  Applies to Invoice and Partial Invoice forms only. On the invoice for return shipment, the verbiage is as follows (user input is ignored): The exporter of the products covered by this document declares that except where otherwise clearly indicated these products are of EEA preferential origin</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeclarationStatement { get; set; }
@@ -103,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption EEIFilingOption { get; set; }
 #endif
-        /// <summary>&quot;The Import Entry Number when the export transaction is used as proof of export for import transactions (examples: In Bond, Temporary Import Bond or Drawbacks).  Applies to EEI forms only. Conditionally Required for EEI forms when In bond code value is other than 70 (Not In Bond)&quot;</summary>
+        /// <summary>The Import Entry Number when the export transaction is used as proof of export for import transactions (examples: In Bond, Temporary Import Bond or Drawbacks).  Applies to EEI forms only. Conditionally Required for EEI forms when In bond code value is other than 70 (Not In Bond)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntryNumber { get; set; }
@@ -135,7 +135,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string FormGroupIdName { get; set; }
 #endif
-        /// <summary>&quot;Indicates the name of the International Form requested.Valid values:- 01 - Invoice- 03 - CO- 04 - USMCA- 05 - Partial Invoice- 06 - Packinglist- 07 - Customer Generated Forms- 08 – Air Freight Packing List- 09 - CN22 Form- 10 – UPS Premium Care Form- 11 - EEIFor shipment with return service, 05 or 10 are the only valid values.Note: 01 and 05 are mutually exclusive and 05 are only valid for return shipments only.&quot;</summary>
+        /// <summary>Indicates the name of the International Form requested.Valid values:- 01 - Invoice- 03 - CO- 04 - USMCA- 05 - Partial Invoice- 06 - Packinglist- 07 - Customer Generated Forms- 08 – Air Freight Packing List- 09 - CN22 Form- 10 – UPS Premium Care Form- 11 - EEIFor shipment with return service, 05 or 10 are the only valid values.Note: 01 and 05 are mutually exclusive and 05 are only valid for return shipments only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? FormType { get; set; }
@@ -159,7 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string HazardousMaterialsIndicator { get; set; }
 #endif
-        /// <summary>&quot;The two-character In Bond Code.  Applies to EEI forms only. Required for EEI forms. Valid values for EEI are: 70: Not in bond; 67: IE from a FTZ; 68: T&amp;E from a FTZ.&quot;</summary>
+        /// <summary>The two-character In Bond Code.  Applies to EEI forms only. Required for EEI forms. Valid values for EEI are: 70: Not in bond; 67: IE from a FTZ; 68: T&amp;E from a FTZ.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InBondCode { get; set; }
@@ -199,7 +199,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string LoadingPier { get; set; }
 #endif
-        /// <summary>&quot;Mode of transport by which the goods are exported. Valid values: Air, AirContainerized, Auto, FixedTransportInstallations, Mail, PassengerHandcarried, Pedestrian, Rail, Rail, Containerized, RoadOther, SeaBarge, SeaContainerized, SeaNoncontainerized, Truck, TruckContainerized.  Applies to EEI forms only.  Required for EEI.  Only allowed values can be entered. Only 10 Characters can appear on the form. Anything greater than 10 characters will be truncated on the form.&quot;</summary>
+        /// <summary>Mode of transport by which the goods are exported. Valid values: Air, AirContainerized, Auto, FixedTransportInstallations, Mail, PassengerHandcarried, Pedestrian, Rail, Rail, Containerized, RoadOther, SeaBarge, SeaContainerized, SeaNoncontainerized, Truck, TruckContainerized.  Applies to EEI forms only.  Required for EEI.  Only allowed values can be entered. Only 10 Characters can appear on the form. Anything greater than 10 characters will be truncated on the form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ModeOfTransport { get; set; }
@@ -231,7 +231,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PartiesToTransaction { get; set; }
 #endif
-        /// <summary>&quot;Contains one of the following:  The two-digit U.S. Postal Service abbreviation for the state from which the goods were shipped to the port of export. The state that is the source for the good with the highest value. The state of consolidation. The Foreign Trade Zone number of the zone from where the exports are leaving.  If the goods were shipped from Puerto Rico, enter PR.  Applies to EEI forms only. Required for EEI.&quot;</summary>
+        /// <summary>Contains one of the following:  The two-digit U.S. Postal Service abbreviation for the state from which the goods were shipped to the port of export. The state that is the source for the good with the highest value. The state of consolidation. The Foreign Trade Zone number of the zone from where the exports are leaving.  If the goods were shipped from Puerto Rico, enter PR.  Applies to EEI forms only. Required for EEI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PointOfOrigin { get; set; }
@@ -239,7 +239,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PointOfOrigin { get; set; }
 #endif
-        /// <summary>&quot;Valid values are : S (for state postal code abbreviation) , F : FTZ Identifier  Applies EEI forms only. Required for EEI form.&quot;</summary>
+        /// <summary>Valid values are : S (for state postal code abbreviation) , F : FTZ Identifier  Applies EEI forms only. Required for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PointOfOriginType { get; set; }
@@ -247,7 +247,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PointOfOriginType { get; set; }
 #endif
-        /// <summary>&quot;Should be one of the following-Overland: The U.S. Customs port where the carrier crosses the U.S. border, Vessel and Air: The U.S. Customs port where the goods are loaded on the carrier to be exported from the U.S., Postal: The U.S. Postal Office from where the goods are mailed.  Applies to EEI forms only. No validation is performed.&quot;</summary>
+        /// <summary>Should be one of the following-Overland: The U.S. Customs port where the carrier crosses the U.S. border, Vessel and Air: The U.S. Customs port where the goods are loaded on the carrier to be exported from the U.S., Postal: The U.S. Postal Office from where the goods are mailed.  Applies to EEI forms only. No validation is performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PortOfExport { get; set; }
@@ -279,7 +279,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PurchaseOrderNumber { get; set; }
 #endif
-        /// <summary>&quot;A reason to export the current international shipment.Valid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice. No validation.&quot;</summary>
+        /// <summary>A reason to export the current international shipment.Valid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice. No validation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReasonForExport { get; set; }
@@ -303,7 +303,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipperMemo { get; set; }
 #endif
-        /// <summary>&quot;Indicates the rights to the seller from the buyer. Also, it refers to Terms of Sale.  Applies to Invoice and Partial Invoice forms only. Valid values: CFR: Cost and Freight CIF: Cost Insurance and Freight CIP: Carriage and Insurance Paid CPT: Carriage Paid To DAF: Delivered at Frontier DDP: Delivery Duty Paid DAP: Delivery at Place DEQ: Delivered Ex Quay DES: Delivered Ex Ship EXW: Ex Works FAS: Free Alongside Ship FCA: Free Carrier FOB: Free On Board&quot;</summary>
+        /// <summary>Indicates the rights to the seller from the buyer. Also, it refers to Terms of Sale.  Applies to Invoice and Partial Invoice forms only. Valid values: CFR: Cost and Freight CIF: Cost Insurance and Freight CIP: Carriage and Insurance Paid CPT: Carriage Paid To DAF: Delivered at Frontier DDP: Delivery Duty Paid DAP: Delivery at Place DEQ: Delivered Ex Quay DES: Delivered Ex Ship EXW: Ex Works FAS: Free Alongside Ship FCA: Free Carrier FOB: Free On Board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TermsOfShipment { get; set; }

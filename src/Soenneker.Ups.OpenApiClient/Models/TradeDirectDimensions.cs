@@ -19,7 +19,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public double? Height { get; set; }
         /// <summary>Length of the package/ltl.</summary>
         public double? Length { get; set; }
-        /// <summary>&quot;The code associated with unit of measurement. The requested code must be valid for the shipper country or territory.| Code  | Description || :--:  | :--         || IN    | Inches      || CM    | Centimeters |&quot;</summary>
+        /// <summary>The code associated with unit of measurement. The requested code must be valid for the shipper country or territory.| Code  | Description || :--:  | :--         || IN    | Inches      || CM    | Centimeters |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectDimensionsUnitOfMeasurement? UnitOfMeasurement { get; set; }
         /// <summary>Width of the package/ltl.</summary>
         public double? Width { get; set; }

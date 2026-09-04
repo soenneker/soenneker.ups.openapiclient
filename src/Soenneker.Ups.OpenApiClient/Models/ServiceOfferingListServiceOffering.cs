@@ -14,7 +14,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The valid values are: 001-Direct To Retail002-Not In One ADL003-Click and Collect004-Retail to Retail005-Pickup006-Drop Off007-PUDO008-Early Pickup Delivery Time009-Accept prepaid drop offs010-DCO DCR intercept accepted 011-Accepts Payments 012-Pay At Store013-Accepts Restricted Articles&quot;</summary>
+        /// <summary>The valid values are: 001-Direct To Retail002-Not In One ADL003-Click and Collect004-Retail to Retail005-Pickup006-Drop Off007-PUDO008-Early Pickup Delivery Time009-Accept prepaid drop offs010-DCO DCR intercept accepted 011-Accepts Payments 012-Pay At Store013-Accepts Restricted Articles</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

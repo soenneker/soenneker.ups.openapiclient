@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CardType { get; set; }
 #endif
-        /// <summary>&quot;Credit card expiration date.Format: yyyyMMyyyy = 4 digit year, valid value current year - 10 years.MM = 2 digit month, valid values 01-12&quot;</summary>
+        /// <summary>Credit card expiration date.Format: yyyyMMyyyy = 4 digit year, valid value current year - 10 years.MM = 2 digit month, valid values 01-12</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExpirationDate { get; set; }

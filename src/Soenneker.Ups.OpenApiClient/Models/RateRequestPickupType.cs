@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Pickup Type Code.  Valid values: 01 - Daily Pickup (Default - used when an invalid pickup type code is provided)03 - Customer Counter06 - One Time Pickup19 - Letter Center20 - Air Service CenterLength is not validated. When negotiated rates are requested, 07 (onCallAir) will be ignored.Refer to the Rate Types Table in the Appendix for rate type based on Pickup Type and Customer Classification Code.&quot;</summary>
+        /// <summary>Pickup Type Code.  Valid values: 01 - Daily Pickup (Default - used when an invalid pickup type code is provided)03 - Customer Counter06 - One Time Pickup19 - Letter Center20 - Air Service CenterLength is not validated. When negotiated rates are requested, 07 (onCallAir) will be ignored.Refer to the Rate Types Table in the Appendix for rate type based on Pickup Type and Customer Classification Code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

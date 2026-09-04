@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Container for CN22 content.  Required if the CN22 form container is present. Note: The maximum number of goods printed on the CN22 form when a combined MI package and CN22 form label is requested is 30.&quot;
+    /// Container for CN22 content.  Required if the CN22 form container is present. Note: The maximum number of goods printed on the CN22 form when a combined MI package and CN22 form label is requested is 30.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Cn22FormCn22Content : IAdditionalDataHolder, IParsable

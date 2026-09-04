@@ -146,7 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string StatusCode { get; set; }
 #endif
-        /// <summary>&quot;The activity status description. Note: this field will be translated based on the locale provided in the request.&quot;</summary>
+        /// <summary>The activity status description. Note: this field will be translated based on the locale provided in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StatusDescription { get; set; }
@@ -154,7 +154,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string StatusDescription { get; set; }
 #endif
-        /// <summary>&quot;Contains values which signify that certain data should be suppressed or hidden. Valid values: Tracking activity details should be hidden. Note: this is mainly intended for use by UPS.com applications.&quot;</summary>
+        /// <summary>Contains values which signify that certain data should be suppressed or hidden. Valid values: Tracking activity details should be hidden. Note: this is mainly intended for use by UPS.com applications.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SuppressionIndicators { get; set; }
@@ -170,7 +170,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string TrackingNumber { get; set; }
 #endif
-        /// <summary>&quot;This indicator provides UCIX (UPS Customer Information Exchange) status Valid values: &apos;O&apos; means open. &apos;C&apos; means closed.&quot;</summary>
+        /// <summary>This indicator provides UCIX (UPS Customer Information Exchange) status Valid values: &apos;O&apos; means open. &apos;C&apos; means closed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UcixStatus { get; set; }

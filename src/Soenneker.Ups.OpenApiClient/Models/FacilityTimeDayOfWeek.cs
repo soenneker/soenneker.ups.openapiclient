@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Facility Close Hours. The latest local close time. Format: HHmm- Hour: 0-23- Minute: 0-59&quot;</summary>
+        /// <summary>Facility Close Hours. The latest local close time. Format: HHmm- Hour: 0-23- Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CloseHours { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string LatestDropOfforPickup { get; set; }
 #endif
-        /// <summary>&quot;Facility Open Hours. The latest local open time. Format: HHmm- Hour: 0-23- Minute: 0-59&quot;</summary>
+        /// <summary>Facility Open Hours. The latest local open time. Format: HHmm- Hour: 0-23- Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OpenHours { get; set; }

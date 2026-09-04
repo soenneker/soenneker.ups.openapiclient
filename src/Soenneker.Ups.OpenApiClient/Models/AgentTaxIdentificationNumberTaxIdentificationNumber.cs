@@ -39,7 +39,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string IDNumberEncryptionIndicator { get; set; }
 #endif
-        /// <summary>&quot;The ISO-defined country code of the country where the Identification Number was issued, when applicable (as per business requirements). Needed for certain types of Identification Numbers (e.g., Passport Number).Sample Values: &apos;ID&apos; = Indonesia,&apos;VN&apos; = Vietnam,&apos;DE&apos; = Germany&quot;</summary>
+        /// <summary>The ISO-defined country code of the country where the Identification Number was issued, when applicable (as per business requirements). Needed for certain types of Identification Numbers (e.g., Passport Number).Sample Values: &apos;ID&apos; = Indonesia,&apos;VN&apos; = Vietnam,&apos;DE&apos; = Germany</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IDNumberIssuingCntryCd { get; set; }

@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<string> RequestOption { get; set; }
 #endif
-        /// <summary>&quot;When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description.Format: YYMM = Year and month of the release.Example: 1801 = 2018 January  Supported values: 1801&quot;</summary>
+        /// <summary>When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description.Format: YYMM = Year and month of the release.Example: 1801 = 2018 January  Supported values: 1801</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubVersion { get; set; }

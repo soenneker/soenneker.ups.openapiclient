@@ -46,6 +46,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string City { get; set; }
 #endif
+        /// <summary>Combined city, state, country, and postal code string for display purposes.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CityStateCountryZip { get; set; }
+#nullable restore
+#else
+        public string CityStateCountryZip { get; set; }
+#endif
         /// <summary>The name of the company associated with the Shipment/Party</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,6 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "address2", n => { Address2 = n.GetStringValue(); } },
                 { "address3", n => { Address3 = n.GetStringValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
+                { "cityStateCountryZip", n => { CityStateCountryZip = n.GetStringValue(); } },
                 { "company", n => { Company = n.GetStringValue(); } },
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
                 { "operationId", n => { OperationId = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1OperationId>(); } },
@@ -136,6 +145,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("address2", Address2);
             writer.WriteStringValue("address3", Address3);
             writer.WriteStringValue("city", City);
+            writer.WriteStringValue("cityStateCountryZip", CityStateCountryZip);
             writer.WriteStringValue("company", Company);
             writer.WriteStringValue("countryCode", CountryCode);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1OperationId>("operationId", OperationId);

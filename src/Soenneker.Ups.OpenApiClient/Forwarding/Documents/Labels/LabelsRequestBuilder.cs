@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels
         {
         }
         /// <summary>
-        /// Re-Print label for an existing Order
+        /// Prints or re-prints a shipping label for an existing order or shipment.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ForwardingPrintLabel200Response"/></returns>
-        /// <param name="body">The API request used to print a Label</param>
+        /// <param name="body">At least one of shipmentNumber, or orderNumber is required.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1">When receiving a 400 status code</exception>
@@ -65,10 +65,10 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Documents.Labels
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ForwardingPrintLabel200Response>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ForwardingPrintLabel200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Re-Print label for an existing Order
+        /// Prints or re-prints a shipping label for an existing order or shipment.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The API request used to print a Label</param>
+        /// <param name="body">At least one of shipmentNumber, or orderNumber is required.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

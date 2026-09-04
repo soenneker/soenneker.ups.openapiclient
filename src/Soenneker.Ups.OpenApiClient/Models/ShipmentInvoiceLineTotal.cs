@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Invoice Line Total Currency type. The Currency code should match the origin country&apos;s or territory&apos;s currency code, otherwise the currency code entered will be ignored.  Note: UPS doesn&apos;t support all international currency codes. Please check the developer guides for Supported Currency codes.&quot;</summary>
+        /// <summary>Invoice Line Total Currency type. The Currency code should match the origin country&apos;s or territory&apos;s currency code, otherwise the currency code entered will be ignored.  Note: UPS doesn&apos;t support all international currency codes. Please check the developer guides for Supported Currency codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CurrencyCode { get; set; }

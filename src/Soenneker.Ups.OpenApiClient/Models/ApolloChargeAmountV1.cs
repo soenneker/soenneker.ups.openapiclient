@@ -28,14 +28,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CurrencyCode { get; set; }
 #endif
-        /// <summary>Indicates if charge is included in base rate (Y/N)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? IncludedInd { get; set; }
-#nullable restore
-#else
-        public string IncludedInd { get; set; }
-#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -56,7 +48,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetStringValue(); } },
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
-                { "includedInd", n => { IncludedInd = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -68,7 +59,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("amount", Amount);
             writer.WriteStringValue("currencyCode", CurrencyCode);
-            writer.WriteStringValue("includedInd", IncludedInd);
         }
     }
 }

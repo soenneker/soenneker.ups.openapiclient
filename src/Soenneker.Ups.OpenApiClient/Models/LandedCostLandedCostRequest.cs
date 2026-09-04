@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;An optional flag to indicate that partial landed cost calculations are acceptable to be used by upstream systems.When set to *false*, the system will return an error when at least one commodity in the shipment is invalid (all or none), and no results  will be sent back for that request. When set to *true*, the system will return partial calculations when applicable.Valid values: true = Partial Landed Cost result will return. false = All or No result will return (default).&quot;</summary>
+        /// <summary>An optional flag to indicate that partial landed cost calculations are acceptable to be used by upstream systems.When set to *false*, the system will return an error when at least one commodity in the shipment is invalid (all or none), and no results  will be sent back for that request. When set to *true*, the system will return partial calculations when applicable.Valid values: true = Partial Landed Cost result will return. false = All or No result will return (default).</summary>
         public bool? AllowPartialLandedCostResult { get; set; }
         /// <summary>Version number of the instance that processed this request. This must match the major number of the corresponding ICD version.</summary>
         public int? Alversion { get; set; }

@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The payment amount. This value will contain the amount in dollars and cents, separated by a period (.) Example: &apos;1025.50&apos;.9&quot;</summary>
+        /// <summary>The payment amount. This value will contain the amount in dollars and cents, separated by a period (.) Example: &apos;1025.50&apos;.9</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Amount { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>&quot;The indication for whether the payment is paid or not. Valid values: &apos;true&apos; the payment is paid. &apos;false&apos; the payment is not paid.&quot;</summary>
+        /// <summary>The indication for whether the payment is paid or not. Valid values: &apos;true&apos; the payment is paid. &apos;false&apos; the payment is not paid.</summary>
         public bool? Paid { get; set; }
         /// <summary>The applicable payment methods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

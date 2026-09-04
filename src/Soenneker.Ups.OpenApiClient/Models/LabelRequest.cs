@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
-    /// <summary>
-    /// Label formatting options including layout and format (e.g., PDF, ZPL, SVG).
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloAirShipRequestV1Label : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class LabelRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -39,30 +38,22 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Layout { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRequest"/> and sets the default values.
         /// </summary>
-        public ApolloAirShipRequestV1Label()
+        public LabelRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.LabelRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipRequestV1Label();
+            return new global::Soenneker.Ups.OpenApiClient.Models.LabelRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -75,7 +66,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "details", n => { Details = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty>(global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty.CreateFromDiscriminatorValue); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +78,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty>("details", Details);
             writer.WriteStringValue("format", Format);
             writer.WriteStringValue("layout", Layout);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

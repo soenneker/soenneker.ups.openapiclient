@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Height { get; set; }
 #endif
-        /// <summary>&quot;Package length. Valid values: 0 to 108 IN and 0 to 270 CM&quot;</summary>
+        /// <summary>Package length. Valid values: 0 to 108 IN and 0 to 270 CM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Length { get; set; }

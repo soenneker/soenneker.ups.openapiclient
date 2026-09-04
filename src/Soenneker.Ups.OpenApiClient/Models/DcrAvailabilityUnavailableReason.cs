@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Code for DCR/DCO unavailability. Valid values: 01-Temporarily Unavailable 02-Location Full03-Unavailable04-Weather&quot;</summary>
+        /// <summary>Code for DCR/DCO unavailability. Valid values: 01-Temporarily Unavailable 02-Location Full03-Unavailable04-Weather</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

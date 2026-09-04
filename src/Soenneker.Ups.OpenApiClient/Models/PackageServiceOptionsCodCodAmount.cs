@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CurrencyCode { get; set; }
 #endif
-        /// <summary>&quot;COD Amount. Valid values: 0.01 USD to 50000.00 USD&quot;</summary>
+        /// <summary>COD Amount. Valid values: 0.01 USD to 50000.00 USD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MonetaryValue { get; set; }

@@ -103,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PackagingInstructionCode { get; set; }
 #endif
-        /// <summary>&quot;The type of package used to contain the regulated good. (Ex: Fiberboard Box).&quot;</summary>
+        /// <summary>The type of package used to contain the regulated good. (Ex: Fiberboard Box).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PackagingType { get; set; }
@@ -135,7 +135,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Quantity { get; set; }
 #endif
-        /// <summary>&quot;When a HazMat shipment specifies AllPackedInOneIndicator and the regulation set for that shipment is IATA,  Q-Value specifies exactly one of the following values: 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0  Valid values are : 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0&quot;</summary>
+        /// <summary>When a HazMat shipment specifies AllPackedInOneIndicator and the regulation set for that shipment is IATA,  Q-Value specifies exactly one of the following values: 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0  Valid values are : 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? QValue { get; set; }

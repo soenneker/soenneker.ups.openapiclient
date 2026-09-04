@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ClassDivisionNumber { get; set; }
 #endif
-        /// <summary>&quot;Indicates the type of commodity.  Valid values: LR, FR, LQ, EQFR = Fully RegulatedLQ = Limited QuantityEQ = Excepted QuantityLR = Lightly Regulated&quot;</summary>
+        /// <summary>Indicates the type of commodity.  Valid values: LR, FR, LQ, EQFR = Fully RegulatedLQ = Limited QuantityEQ = Excepted QuantityLR = Lightly Regulated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommodityRegulatedLevelCode { get; set; }
@@ -71,7 +71,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string IDNumber { get; set; }
 #endif
-        /// <summary>&quot;This is the packing group category associated to the specified commodity. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. Must be shown in Roman Numerals.  Valid values are: IIIIII blank&quot;</summary>
+        /// <summary>This is the packing group category associated to the specified commodity. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. Must be shown in Roman Numerals.  Valid values are: IIIIII blank</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PackagingGroupType { get; set; }
@@ -87,7 +87,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PackagingInstructionCode { get; set; }
 #endif
-        /// <summary>&quot;The package type code identifying the type of packaging used for the commodity. (Ex: Fiberboard Box). Required if CommodityRegulatedLevelCode = LQ or FR.&quot;</summary>
+        /// <summary>The package type code identifying the type of packaging used for the commodity. (Ex: Fiberboard Box). Required if CommodityRegulatedLevelCode = LQ or FR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PackagingType { get; set; }
@@ -95,7 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PackagingType { get; set; }
 #endif
-        /// <summary>&quot;The number of pieces of the specific commodity. Required if CommodityRegulatedLevelCode = LQ or FR.  Valid values: 1 to 999&quot;</summary>
+        /// <summary>The number of pieces of the specific commodity. Required if CommodityRegulatedLevelCode = LQ or FR.  Valid values: 1 to 999</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PackagingTypeQuantity { get; set; }
@@ -143,7 +143,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string TechnicalName { get; set; }
 #endif
-        /// <summary>&quot;Transport Category.  Valid values: 0 to 4&quot;</summary>
+        /// <summary>Transport Category.  Valid values: 0 to 4</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransportCategory { get; set; }
@@ -159,7 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string TunnelRestrictionCode { get; set; }
 #endif
-        /// <summary>&quot;Required if CommodityRegulatedLevelCode = LQ or FR. The unit of measure used for the mass capacity of the regulated good.   Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.&quot;</summary>
+        /// <summary>Required if CommodityRegulatedLevelCode = LQ or FR. The unit of measure used for the mass capacity of the regulated good.   Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UOM { get; set; }

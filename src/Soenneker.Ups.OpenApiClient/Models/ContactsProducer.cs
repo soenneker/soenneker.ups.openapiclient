@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Address information of the Producer.  Applies to USMCA. Only applicable if producer option is empty or not present. Conditionally required for: USMCA, when Producer option is not specified.&quot;</summary>
+        /// <summary>Address information of the Producer.  Applies to USMCA. Only applicable if producer option is empty or not present. Conditionally required for: USMCA, when Producer option is not specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ProducerAddress? Address { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string AttentionName { get; set; }
 #endif
-        /// <summary>&quot;Company Name or the Individual name of the Producer.  Applies to USMCA.  Only applicable when producer option is empty or not present. Conditionally required for: USMCA, when Producer option is not specified.&quot;</summary>
+        /// <summary>Company Name or the Individual name of the Producer.  Applies to USMCA.  Only applicable when producer option is empty or not present. Conditionally required for: USMCA, when Producer option is not specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompanyName { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string EMailAddress { get; set; }
 #endif
-        /// <summary>&quot;The text associated with the code will be printed in the producer section instead of producer contact information. Use attached List if more than one producer&apos;s good is included on the Certificate, attach a list of additional producers, including the legal name, address (including country or territory), and legal tax identification number, cross-referenced to the goods described in the Description of Goods field.  Applies to USMCA.  Valid values: 01 - AVAILABLE TO CUSTOMS UPON REQUEST02 - SAME AS EXPORTER03 - ATTACHED LIST04 - UNKNOWN&quot;</summary>
+        /// <summary>The text associated with the code will be printed in the producer section instead of producer contact information. Use attached List if more than one producer&apos;s good is included on the Certificate, attach a list of additional producers, including the legal name, address (including country or territory), and legal tax identification number, cross-referenced to the goods described in the Description of Goods field.  Applies to USMCA.  Valid values: 01 - AVAILABLE TO CUSTOMS UPON REQUEST02 - SAME AS EXPORTER03 - ATTACHED LIST04 - UNKNOWN</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Option { get; set; }

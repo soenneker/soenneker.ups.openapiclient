@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string AlternateAddressIndicator { get; set; }
 #endif
-        /// <summary>&quot;Describes the type of cash funds that the driver will collect.Applicable to the following countries:BE,FR,DE,IT,MX,NL,PL,ES,GBValid values: 01 - Pickup only (default)02 - Transportation only03 - Pickup and Transportation&quot;</summary>
+        /// <summary>Describes the type of cash funds that the driver will collect.Applicable to the following countries:BE,FR,DE,IT,MX,NL,PL,ES,GBValid values: 01 - Pickup only (default)02 - Transportation only03 - Pickup and Transportation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CashType { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification Notification { get; set; }
 #endif
-        /// <summary>&quot;Indicates if at least any package is over 70 lbs or 32 kgs. Valid values: Y = Over weight N = Not over weight (default)  Not required for WWEF service.&quot;</summary>
+        /// <summary>Indicates if at least any package is over 70 lbs or 32 kgs. Valid values: Y = Over weight N = Not over weight (default)  Not required for WWEF service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OverweightIndicator { get; set; }
@@ -119,7 +119,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestRequest Request { get; set; }
 #endif
-        /// <summary>&quot;Service Category.Applicable to the following countries:BE, FR, DE, IT, MX, NL, PL, ES, GB Valid values: 01 - domestic (default)02 - international03 - transborder&quot;</summary>
+        /// <summary>Service Category.Applicable to the following countries:BE, FR, DE, IT, MX, NL, PL, ES, GB Valid values: 01 - domestic (default)02 - international03 - transborder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServiceCategory { get; set; }

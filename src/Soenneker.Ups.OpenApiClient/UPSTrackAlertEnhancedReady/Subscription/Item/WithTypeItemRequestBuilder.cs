@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhancedReady.Subscription.Item.Account;
 using Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhancedReady.Subscription.Item.Package;
 using System.Collections.Generic;
 using System.IO;
@@ -16,11 +15,6 @@ namespace Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhancedReady.Subscription.It
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithTypeItemRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The account property</summary>
-        public global::Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhancedReady.Subscription.Item.Account.AccountRequestBuilder Account
-        {
-            get => new global::Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhancedReady.Subscription.Item.Account.AccountRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The package property</summary>
         public global::Soenneker.Ups.OpenApiClient.UPSTrackAlertEnhancedReady.Subscription.Item.Package.PackageRequestBuilder Package
         {

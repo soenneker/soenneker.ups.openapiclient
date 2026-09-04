@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string FRSShipmentIndicator { get; set; }
 #endif
-        /// <summary>&quot;NegotiatedRatesIndicator -  Required to display two types of discounts: 1) Bids or Account Based Rates2) Web/Promotional Discounts BidsAccount Based Rates: If the indicator is present, the Shipper is authorized, and the Rating API XML Request is configured to return Negotiated Rates, then Negotiated Rates should be returned in the response. Web/Promotional Discounts: If the indicator is present, the Shipper is authorized for Web/Promotional Discounts then Negotiated Rates should be returned in the response.&quot;</summary>
+        /// <summary>NegotiatedRatesIndicator -  Required to display two types of discounts: 1) Bids or Account Based Rates2) Web/Promotional Discounts BidsAccount Based Rates: If the indicator is present, the Shipper is authorized, and the Rating API XML Request is configured to return Negotiated Rates, then Negotiated Rates should be returned in the response. Web/Promotional Discounts: If the indicator is present, the Shipper is authorized for Web/Promotional Discounts then Negotiated Rates should be returned in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NegotiatedRatesIndicator { get; set; }

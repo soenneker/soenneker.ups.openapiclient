@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Optional Processing.  Note: Full address validation is not performed. Therefore, it is the responsibility of the Shipping Tool User to ensure the address entered is correct to avoid an address correction fee.  Valid values:nonvalidate = No street level address validation would be performed, but Postal Code/State combination validation would still be performed.validate = No street level address validation would be performed, but City/State/Postal Code/ combination validation would still be performed.&quot;</summary>
+        /// <summary>Optional Processing.  Note: Full address validation is not performed. Therefore, it is the responsibility of the Shipping Tool User to ensure the address entered is correct to avoid an address correction fee.  Valid values:nonvalidate = No street level address validation would be performed, but Postal Code/State combination validation would still be performed.validate = No street level address validation would be performed, but City/State/Postal Code/ combination validation would still be performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RequestOption { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string RequestOption { get; set; }
 #endif
-        /// <summary>&quot;When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description.Example: Itemized Charges are returned only when the Subversion element is present and greater than or equal to 1601. Format: YYMM = Year and month of the release.Example: 1607 = 2016 July  Supported values: 1601, 1607, 1701, 1707, 1801, 1807, 2108, 2205&quot;</summary>
+        /// <summary>When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description.Example: Itemized Charges are returned only when the Subversion element is present and greater than or equal to 1601. Format: YYMM = Year and month of the release.Example: 1607 = 2016 July  Supported values: 1601, 1607, 1701, 1707, 1801, 1807, 2108, 2205</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubVersion { get; set; }

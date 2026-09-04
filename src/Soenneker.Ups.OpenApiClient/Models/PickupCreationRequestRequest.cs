@@ -15,7 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description. Supported values: 1607, 1707,2007Example: Itemized Charges are returned only when the Subversion element is present and greater than or equal to &apos;1601&apos;. Format: YYMM = Year and month of the release.Example: 1601 = 2016 January&quot;</summary>
+        /// <summary>When UPS introduces new elements in the response that are not associated with new request elements, Subversion is used. This ensures backward compatibility.To get such elements you need to have the right Subversion. The value of the subversion is explained in the Response element Description. Supported values: 1607, 1707,2007Example: Itemized Charges are returned only when the Subversion element is present and greater than or equal to &apos;1601&apos;. Format: YYMM = Year and month of the release.Example: 1601 = 2016 January</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubVersion { get; set; }

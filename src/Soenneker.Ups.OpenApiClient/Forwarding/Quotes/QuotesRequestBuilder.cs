@@ -196,6 +196,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Quotes
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class QuotesRequestBuilderGetQueryParameters 
         {
+            /// <summary>The unique identifier for the quote.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("quote_id")]
@@ -205,15 +206,9 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Quotes
             [QueryParameter("quote_id")]
             public string QuoteId { get; set; }
 #endif
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+            /// <summary>The type of quote (&quot;Air&quot; or &quot;Ocean&quot;).</summary>
             [QueryParameter("request_type")]
-            public string? RequestType { get; set; }
-#nullable restore
-#else
-            [QueryParameter("request_type")]
-            public string RequestType { get; set; }
-#endif
+            public global::Soenneker.Ups.OpenApiClient.Models.ForwardingGetQuoteDetailsRequestTypeParameter? RequestType { get; set; }
         }
     }
 }

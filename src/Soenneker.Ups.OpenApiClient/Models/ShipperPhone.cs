@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Extension { get; set; }
 #endif
-        /// <summary>&quot;Shipper&apos;s phone Number.  Valid values are 0 - 9.If Shipper country or territory is US, PR, CA, and VI, the layout is:area code, 7 digit PhoneNumber orarea code, 7 digit PhoneNumber, 4 digit extension number.For other countries or territories, the layout is: country or territory code, area code, 7 digit number.A phone number is required if destination is international.&quot;</summary>
+        /// <summary>Shipper&apos;s phone Number.  Valid values are 0 - 9.If Shipper country or territory is US, PR, CA, and VI, the layout is:area code, 7 digit PhoneNumber orarea code, 7 digit PhoneNumber, 4 digit extension number.For other countries or territories, the layout is: country or territory code, area code, 7 digit number.A phone number is required if destination is international.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Number { get; set; }

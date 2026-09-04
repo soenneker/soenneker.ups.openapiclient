@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Contains all of the basic information about the origin such as: Address Lines, City, State/Province, Postal Code and Country or Territory Code. The element CountryCode is required.&quot;
+    /// Contains all of the basic information about the origin such as: Address Lines, City, State/Province, Postal Code and Country or Territory Code. The element CountryCode is required.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OriginAddressAddressKeyFormat : IAdditionalDataHolder, IParsable

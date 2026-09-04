@@ -96,7 +96,7 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.VoidNamespace.Canc
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithShipmentidentificationnumberItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>&quot;The package&apos;s tracking number. You may have up to 20 different tracking numbers listed.If more than one tracking number, pass this value as: trackingnumber= [\&quot;1ZISUS010330563105\&quot;,\&quot;1ZISUS010330563108\&quot;] with a coma separating each number.Alpha-numeric. Must pass 1Z rules. Must be upper case. Length 18&quot;</summary>
+            /// <summary>The package&apos;s tracking number. You may have up to 20 different tracking numbers listed.If more than one tracking number, pass this value as: trackingnumber= [&quot;1ZISUS010330563105&quot;,&quot;1ZISUS010330563108&quot;] with a coma separating each number.Alpha-numeric. Must pass 1Z rules. Must be upper case. Length 18</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("trackingnumber")]

@@ -31,7 +31,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode> ServiceOptionCode { get; set; }
 #endif
-        /// <summary>&quot;Scheduled Local Drop-off Time. Format: HHMM&quot;</summary>
+        /// <summary>Scheduled Local Drop-off Time. Format: HHMM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Time { get; set; }

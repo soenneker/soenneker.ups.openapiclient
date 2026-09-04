@@ -48,14 +48,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string IncludedInd { get; set; }
 #endif
-        /// <summary>The role of charge</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Role { get; set; }
-#nullable restore
-#else
-        public string Role { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemChargesItem"/> and sets the default values.
         /// </summary>
@@ -86,7 +78,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "currencyCode", n => { CurrencyCode = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "includedInd", n => { IncludedInd = n.GetStringValue(); } },
-                { "role", n => { Role = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -101,7 +92,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("currencyCode", CurrencyCode);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("includedInd", IncludedInd);
-            writer.WriteStringValue("role", Role);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -95,7 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string PackagingInstructionCode { get; set; }
 #endif
-        /// <summary>&quot;The package type code identifying the type of packaging used for the commodity. (Ex: Fiberboard Box). Required if CommodityRegulatedLevelCode = LQ or FR.   Applies only if SubVersion is greater than or equal to 1701.&quot;</summary>
+        /// <summary>The package type code identifying the type of packaging used for the commodity. (Ex: Fiberboard Box). Required if CommodityRegulatedLevelCode = LQ or FR.   Applies only if SubVersion is greater than or equal to 1701.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PackagingType { get; set; }
@@ -127,7 +127,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Quantity { get; set; }
 #endif
-        /// <summary>&quot;The Regulatory set associated with every regulated shipment. It must be the same across the shipment. Valid values:   ADR -  For Europe to Europe Ground Movement CFR -  For HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada, IATA -  For Worldwide Air movement TDG -  For Canada to Canada ground movement or Canada to U.S. standard movement  Applies only if SubVersion is greater than or equal to 1701. For multiple ChemicalRecords per package or multiple packages containing different RegulationSet, RegulationSet of first ChemicalRecord would be considered for validating and rating the entire shipment.&quot;</summary>
+        /// <summary>The Regulatory set associated with every regulated shipment. It must be the same across the shipment. Valid values:   ADR -  For Europe to Europe Ground Movement CFR -  For HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada, IATA -  For Worldwide Air movement TDG -  For Canada to Canada ground movement or Canada to U.S. standard movement  Applies only if SubVersion is greater than or equal to 1701. For multiple ChemicalRecords per package or multiple packages containing different RegulationSet, RegulationSet of first ChemicalRecord would be considered for validating and rating the entire shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RegulationSet { get; set; }
@@ -159,7 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string TechnicalName { get; set; }
 #endif
-        /// <summary>&quot;The method of transport by which a shipment is approved to move and the regulations associated with that method.  Only required when the CommodityRegulatedLevelCode is FR or LQ.Valid values: 01 - Highway02 - Ground03 - Passenger Aircraft04 - Cargo Aircraft Only  Applies only if SubVersion is greater than or equal to 1701. For multiple ChemicalRecords per package having different TransportationMode, TransportationMode of first ChemicalRecord would be considered for validating and rating the package. All TransportationMode except for &apos;04&apos; are general service offering. If any chemical record contains &apos;04&apos; as TransportationMode, ShipperNumber needs to be authorized to use &apos;04&apos; as TransportationMode.&quot;</summary>
+        /// <summary>The method of transport by which a shipment is approved to move and the regulations associated with that method.  Only required when the CommodityRegulatedLevelCode is FR or LQ.Valid values: 01 - Highway02 - Ground03 - Passenger Aircraft04 - Cargo Aircraft Only  Applies only if SubVersion is greater than or equal to 1701. For multiple ChemicalRecords per package having different TransportationMode, TransportationMode of first ChemicalRecord would be considered for validating and rating the package. All TransportationMode except for &apos;04&apos; are general service offering. If any chemical record contains &apos;04&apos; as TransportationMode, ShipperNumber needs to be authorized to use &apos;04&apos; as TransportationMode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransportationMode { get; set; }
@@ -183,7 +183,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string TunnelRestrictionCode { get; set; }
 #endif
-        /// <summary>&quot;Required if CommodityRegulatedLevelCode = LQ or FR. The unit of measure used for the mass capacity of the regulated good. For Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.  Applies only if SubVersion is greater than or equal to 1701.&quot;</summary>
+        /// <summary>Required if CommodityRegulatedLevelCode = LQ or FR. The unit of measure used for the mass capacity of the regulated good. For Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.  Applies only if SubVersion is greater than or equal to 1701.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UOM { get; set; }

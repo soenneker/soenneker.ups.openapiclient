@@ -38,7 +38,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CodeVerifier { get; set; }
 #endif
-        /// <summary>&quot;Valid values: authorization_code&quot;</summary>
+        /// <summary>Valid values: authorization_code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GrantType { get; set; }

@@ -30,7 +30,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ChargeCurrency { get; set; }
 #endif
-        /// <summary>&quot;Indicates if the charges were paid by a third-party shipper and must be supplied by trusted end clients only.| CODE  | DESCRIPTION                                     || :--:  | :--                                             || TRUE  | the charges were paid by a third-party shipper. || FALSE | the charges were paid by the original shipper.  |&quot;</summary>
+        /// <summary>Indicates if the charges were paid by a third-party shipper and must be supplied by trusted end clients only.| CODE  | DESCRIPTION                                     || :--:  | :--                                             || TRUE  | the charges were paid by a third-party shipper. || FALSE | the charges were paid by the original shipper.  |</summary>
         public bool? ChargesPaidByThirdPartyShipper { get; set; }
         /// <summary>Indicates if a message should be displayed that the shipper has paid for the charges related to the intercept</summary>
         public bool? DisplayShipperPaidInterceptCharges { get; set; }

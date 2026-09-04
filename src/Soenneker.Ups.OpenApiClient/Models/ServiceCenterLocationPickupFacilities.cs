@@ -23,7 +23,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.PickupFacilitiesAddress Address { get; set; }
 #endif
-        /// <summary>&quot;AirPort Code for destination/pickup facility. Example: ATL (Atlanta)If Airport code is not present \&quot;---\&quot; will be returned.&quot;</summary>
+        /// <summary>AirPort Code for destination/pickup facility. Example: ATL (Atlanta)If Airport code is not present &quot;---&quot; will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AirportCode { get; set; }
@@ -71,7 +71,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string SLIC { get; set; }
 #endif
-        /// <summary>&quot;Sort Code for destination/pickup facility. Example: V1&quot;</summary>
+        /// <summary>Sort Code for destination/pickup facility. Example: V1</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SortCode { get; set; }

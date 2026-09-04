@@ -63,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
-        /// <summary>The role code of the contact (e.g., SHPR for Shipper, CONS for Consignee).</summary>
+        /// <summary>The role code of the contact (e.g., S for Shipper, C for Consignee).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Role { get; set; }

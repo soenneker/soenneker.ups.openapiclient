@@ -25,7 +25,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The total weight of the Items in the Order</summary>
         public int? TotalWeight { get; set; }
         /// <summary>The units used to calculate weight</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsWeightUnit? WeightUnit { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LbWeightUnit? WeightUnit { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "item", n => { Item = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "totalPieceCount", n => { TotalPieceCount = n.GetIntValue(); } },
                 { "totalWeight", n => { TotalWeight = n.GetIntValue(); } },
-                { "weightUnit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsWeightUnit>(); } },
+                { "weightUnit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LbWeightUnit>(); } },
             };
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem>("item", Item);
             writer.WriteIntValue("totalPieceCount", TotalPieceCount);
             writer.WriteIntValue("totalWeight", TotalWeight);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsWeightUnit>("weightUnit", WeightUnit);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LbWeightUnit>("weightUnit", WeightUnit);
         }
     }
 }
