@@ -95803,7 +95803,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf1",
+          "name": "Value2FDAA5CE7C17D680",
           "modelAsString": false,
           "values": [
             {
@@ -95821,7 +95821,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf2",
+          "name": "Value033D9204B51BB3A0",
           "modelAsString": false,
           "values": [
             {
@@ -95839,7 +95839,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf3",
+          "name": "Value561B23B2DF47B583",
           "modelAsString": false,
           "values": [
             {
@@ -95857,7 +95857,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf4",
+          "name": "Value72614DE83D1DD2F3",
           "modelAsString": false,
           "values": [
             {
@@ -95875,7 +95875,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf5",
+          "name": "ValueD7DE6A597A9AA73C",
           "modelAsString": false,
           "values": [
             {
@@ -95893,7 +95893,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf6",
+          "name": "Value3DCF9F7DD76828FB",
           "modelAsString": false,
           "values": [
             {
@@ -95911,7 +95911,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf7",
+          "name": "Value74B587DA4FD05D87",
           "modelAsString": false,
           "values": [
             {
