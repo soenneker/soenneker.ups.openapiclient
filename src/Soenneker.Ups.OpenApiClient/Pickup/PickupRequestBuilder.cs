@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Pickup
 {
     /// <summary>
-    /// Builds and executes requests for operations under \Pickup
+    /// Builds and executes requests for operations under \pickup
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PickupRequestBuilder : BaseRequestBuilder
@@ -44,7 +44,7 @@ namespace Soenneker.Ups.OpenApiClient.Pickup
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PickupRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/Pickup", pathParameters)
+        public PickupRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/pickup", pathParameters)
         {
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Ups.OpenApiClient.Pickup
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PickupRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/Pickup", rawUrl)
+        public PickupRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/pickup", rawUrl)
         {
         }
     }
