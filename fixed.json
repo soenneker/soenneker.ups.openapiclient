@@ -34874,7 +34874,7 @@
                   }
                 },
                 "13": {
-                  "summary": "Shipping with Carbon Offset",
+                  "summary": "Shipping with Carbon Offsets",
                   "value": {
                     "ShipmentRequest": {
                       "Shipment": {
@@ -73370,7 +73370,7 @@
           "UPScarbonneutralIndicator": {
             "maximum": 1,
             "type": "string",
-            "description": "UPS carbon offset indicator presence at shipment level is required to create carbon offset Shipments."
+            "description": "UPS carbon offsets indicator presence at shipment level is required to create carbon offsets Shipments."
           },
           "PreAlertNotification": {
             "type": "array",
@@ -73429,6 +73429,9 @@
             "maximum": 1,
             "type": "string",
             "description": "Presence/Absence indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the customer would like items disposed.  Shippers account needs to have a valid contract for Heavy Goods Service."
+          },
+          "VerifiedDelivery": {
+            "$ref": "#/components/schemas/ShipmentServiceOptionsVerifiedDelivery"
           }
         },
         "description": "Container for Shipment Service Options.",
@@ -75858,6 +75861,49 @@
         "description": "Restricted Articles container.",
         "xml": {
           "name": "RestrictedArticles"
+        }
+      },
+      "ShipmentServiceOptionsVerifiedDelivery": {
+        "maximum": 1,
+        "required": [
+          "SecurePINType",
+          "TokenValue",
+          "RecipientEmail"
+        ],
+        "type": "object",
+        "properties": {
+          "SecurePINType": {
+            "maximum": 1,
+            "maxLength": 1,
+            "minLength": 1,
+            "type": "string",
+            "description": "Specifies the type of Secure PIN. Valid value is 2, which represents VDS (Shipper Generated PIN). This field is required."
+          },
+          "TokenValue": {
+            "maximum": 1,
+            "maxLength": 32,
+            "minLength": 32,
+            "type": "string",
+            "description": "This field is required and must contain a 32-character hexadecimal string, using only the characters 0-9 and A-F (case-insensitive)."
+          },
+          "RecipientEmail": {
+            "maximum": 1,
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string",
+            "description": "Specifies the recipient\u0027s email address for delivery notifications. This field is required."
+          },
+          "RecipientPhone": {
+            "maximum": 1,
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string",
+            "description": "Recipient phone number for notifications. Valid characters are digits (0-9) only. This field is optional."
+          }
+        },
+        "description": "Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.",
+        "xml": {
+          "name": "VerifiedDelivery"
         }
       },
       "ShippingShipmentPackage": {
