@@ -226,10 +226,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery? VerifiedDelivery { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery? VerifiedDelivery { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery VerifiedDelivery { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery VerifiedDelivery { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentShipmentServiceOptions"/> and sets the default values.
@@ -282,7 +282,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "SaturdayDeliveryIndicator", n => { SaturdayDeliveryIndicator = n.GetStringValue(); } },
                 { "SaturdayPickupIndicator", n => { SaturdayPickupIndicator = n.GetStringValue(); } },
                 { "UPScarbonneutralIndicator", n => { UPScarbonneutralIndicator = n.GetStringValue(); } },
-                { "VerifiedDelivery", n => { VerifiedDelivery = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery.CreateFromDiscriminatorValue); } },
+                { "VerifiedDelivery", n => { VerifiedDelivery = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -318,7 +318,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("SaturdayPickupIndicator", SaturdayPickupIndicator);
             writer.WriteStringValue("SDLShipmentIndicator", SDLShipmentIndicator);
             writer.WriteStringValue("UPScarbonneutralIndicator", UPScarbonneutralIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery>("VerifiedDelivery", VerifiedDelivery);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery>("VerifiedDelivery", VerifiedDelivery);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

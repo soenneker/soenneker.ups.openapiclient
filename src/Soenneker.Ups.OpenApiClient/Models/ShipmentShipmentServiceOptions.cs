@@ -207,6 +207,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string UPScarbonneutralIndicator { get; set; }
 #endif
+        /// <summary>Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery? VerifiedDelivery { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery VerifiedDelivery { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentShipmentServiceOptions"/> and sets the default values.
         /// </summary>
@@ -256,6 +264,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "ShipperExportDeclarationIndicator", n => { ShipperExportDeclarationIndicator = n.GetStringValue(); } },
                 { "SundayDeliveryIndicator", n => { SundayDeliveryIndicator = n.GetStringValue(); } },
                 { "UPScarbonneutralIndicator", n => { UPScarbonneutralIndicator = n.GetStringValue(); } },
+                { "VerifiedDelivery", n => { VerifiedDelivery = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -289,6 +298,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("ShipperExportDeclarationIndicator", ShipperExportDeclarationIndicator);
             writer.WriteStringValue("SundayDeliveryIndicator", SundayDeliveryIndicator);
             writer.WriteStringValue("UPScarbonneutralIndicator", UPScarbonneutralIndicator);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery>("VerifiedDelivery", VerifiedDelivery);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

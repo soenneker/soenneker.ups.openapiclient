@@ -11,10 +11,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ShipmentServiceOptionsVerifiedDelivery : IAdditionalDataHolder, IParsable
+    public partial class ShippingShipmentServiceOptionsVerifiedDelivery : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Specifies the recipient&apos;s email address for delivery notifications. This field is required.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RecipientEmail { get; set; }
+#nullable restore
+#else
+        public string RecipientEmail { get; set; }
+#endif
+        /// <summary>Recipient phone number for notifications. Valid characters are digits (0-9) only. This field is optional.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RecipientPhone { get; set; }
+#nullable restore
+#else
+        public string RecipientPhone { get; set; }
+#endif
         /// <summary>Specifies the type of Secure PIN. Valid value is 2, which represents VDS (Shipper Generated PIN). This field is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -23,22 +39,30 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string SecurePINType { get; set; }
 #endif
+        /// <summary>This field is required and must contain a 32-character hexadecimal string, using only the characters 0-9 and A-F (case-insensitive).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TokenValue { get; set; }
+#nullable restore
+#else
+        public string TokenValue { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery"/> and sets the default values.
         /// </summary>
-        public ShipmentServiceOptionsVerifiedDelivery()
+        public ShippingShipmentServiceOptionsVerifiedDelivery()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsVerifiedDelivery();
+            return new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,7 +72,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "RecipientEmail", n => { RecipientEmail = n.GetStringValue(); } },
+                { "RecipientPhone", n => { RecipientPhone = n.GetStringValue(); } },
                 { "SecurePINType", n => { SecurePINType = n.GetStringValue(); } },
+                { "TokenValue", n => { TokenValue = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -58,7 +85,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("RecipientEmail", RecipientEmail);
+            writer.WriteStringValue("RecipientPhone", RecipientPhone);
             writer.WriteStringValue("SecurePINType", SecurePINType);
+            writer.WriteStringValue("TokenValue", TokenValue);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

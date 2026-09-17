@@ -34560,7 +34560,7 @@
                 "$ref": "#/components/schemas/RATERequestWrapper"
               },
               "examples": {
-                "1": {
+                "Simple Rate": {
                   "summary": "Simple Rate Example (Standard Example)",
                   "value": {
                     "RateRequest": {
@@ -34658,7 +34658,7 @@
                     }
                   }
                 },
-                "2": {
+                "Negotiated Rate": {
                   "summary": "Negotiated Rate",
                   "value": {
                     "RateRequest": {
@@ -34768,7 +34768,7 @@
                     }
                   }
                 },
-                "3": {
+                "International Rate": {
                   "summary": "International Rate Example",
                   "value": {
                     "RateRequest": {
@@ -34867,7 +34867,7 @@
                     }
                   }
                 },
-                "4": {
+                "Multi-Piece Rate": {
                   "summary": "Multi-Piece Rate Example",
                   "value": {
                     "RateRequest": {
@@ -34992,7 +34992,7 @@
                     }
                   }
                 },
-                "5": {
+                "TPFC Negotiated": {
                   "summary": "TPFC Negotiated Rate Example",
                   "value": {
                     "RateRequest": {
@@ -35113,7 +35113,7 @@
                     }
                   }
                 },
-                "6": {
+                "Time In Transit": {
                   "summary": "Time In Transit Example",
                   "value": {
                     "RateRequest": {
@@ -35216,7 +35216,7 @@
                     }
                   }
                 },
-                "7": {
+                "Standard Account": {
                   "summary": "Standard Account Rate Example",
                   "value": {
                     "RateRequest": {
@@ -35310,7 +35310,7 @@
                     }
                   }
                 },
-                "8": {
+                "Published Rate": {
                   "summary": "Published Rate Example",
                   "value": {
                     "RateRequest": {
@@ -35393,7 +35393,7 @@
                     }
                   }
                 },
-                "9": {
+                "Rate with Dry Ice": {
                   "summary": "Rate with Dry Ice",
                   "value": {
                     "RateRequest": {
@@ -35498,7 +35498,7 @@
                     }
                   }
                 },
-                "10": {
+                "shop TimeInTransit(CIE)": {
                   "summary": "shopTime In Transit (CIE) Example",
                   "value": {
                     "RateRequest": {
@@ -35729,7 +35729,7 @@
                 "$ref": "#/components/schemas/RATERequestWrapper"
               },
               "examples": {
-                "1": {
+                "Simple Rate": {
                   "summary": "Simple Rate Example (Standard Example)",
                   "value": {
                     "RateRequest": {
@@ -35827,7 +35827,7 @@
                     }
                   }
                 },
-                "2": {
+                "Negotiated Rate": {
                   "summary": "Negotiated Rate",
                   "value": {
                     "RateRequest": {
@@ -35937,7 +35937,7 @@
                     }
                   }
                 },
-                "3": {
+                "International Rate": {
                   "summary": "International Rate Example",
                   "value": {
                     "RateRequest": {
@@ -36036,7 +36036,7 @@
                     }
                   }
                 },
-                "4": {
+                "Multi-Piece Rate": {
                   "summary": "Multi-Piece Rate Example",
                   "value": {
                     "RateRequest": {
@@ -36161,7 +36161,7 @@
                     }
                   }
                 },
-                "5": {
+                "TPFC Negotiated": {
                   "summary": "TPFC Negotiated Rate Example",
                   "value": {
                     "RateRequest": {
@@ -36282,7 +36282,7 @@
                     }
                   }
                 },
-                "6": {
+                "Time In Transit": {
                   "summary": "Time In Transit Example",
                   "value": {
                     "RateRequest": {
@@ -36385,7 +36385,7 @@
                     }
                   }
                 },
-                "7": {
+                "Standard Account Rate ": {
                   "summary": "Standard Account Rate Example",
                   "value": {
                     "RateRequest": {
@@ -36479,7 +36479,7 @@
                     }
                   }
                 },
-                "8": {
+                "Published Rate ": {
                   "summary": "Published Rate Example",
                   "value": {
                     "RateRequest": {
@@ -36562,7 +36562,7 @@
                     }
                   }
                 },
-                "9": {
+                "Rate with Dry Ice": {
                   "summary": "Rate with Dry Ice",
                   "value": {
                     "RateRequest": {
@@ -36667,7 +36667,7 @@
                     }
                   }
                 },
-                "10": {
+                "shop TimeInTransit(CIE) ": {
                   "summary": "shopTime In Transit (CIE) Example",
                   "value": {
                     "RateRequest": {
@@ -79038,6 +79038,9 @@
           "ReturnService": {
             "$ref": "#/components/schemas/ShipmentServiceOptions_ReturnService"
           },
+          "VerifiedDelivery": {
+            "$ref": "#/components/schemas/ShipmentServiceOptions_VerifiedDelivery"
+          },
           "SDLShipmentIndicator": {
             "maximum": 1,
             "type": "string",
@@ -79310,6 +79313,26 @@
         "description": "Container for type of Return Services.",
         "xml": {
           "name": "ReturnService"
+        }
+      },
+      "ShipmentServiceOptions_VerifiedDelivery": {
+        "maximum": 1,
+        "required": [
+          "SecurePINType"
+        ],
+        "type": "object",
+        "properties": {
+          "SecurePINType": {
+            "maximum": 1,
+            "maxLength": 1,
+            "minLength": 1,
+            "type": "string",
+            "description": "Specifies the type of Secure PIN. Valid value is 2, which represents VDS (Shipper Generated PIN). This field is required."
+          }
+        },
+        "description": "Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.",
+        "xml": {
+          "name": "VerifiedDelivery"
         }
       },
       "Shipment_ShipmentRatingOptions": {
@@ -83416,7 +83439,7 @@
             "description": "Presence/Absence indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the customer would like items disposed.  Shippers account needs to have a valid contract for Heavy Goods Service."
           },
           "VerifiedDelivery": {
-            "$ref": "#/components/schemas/ShipmentServiceOptions_VerifiedDelivery"
+            "$ref": "#/components/schemas/Shipping_ShipmentServiceOptions_VerifiedDelivery"
           }
         },
         "description": "Container for Shipment Service Options.",
@@ -85848,7 +85871,7 @@
           "name": "RestrictedArticles"
         }
       },
-      "ShipmentServiceOptions_VerifiedDelivery": {
+      "Shipping_ShipmentServiceOptions_VerifiedDelivery": {
         "maximum": 1,
         "required": [
           "SecurePINType",

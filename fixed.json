@@ -29,17 +29,7 @@
           "default": "v2",
           "enum": [
             "v2"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v2",
-                "name": "V2"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -51,17 +41,7 @@
           "default": "v2",
           "enum": [
             "v2"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v2",
-                "name": "V2"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -74,17 +54,7 @@
           "description": "Denotes which version of the API to be called as new features are released.",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -97,17 +67,7 @@
           "description": "Denotes which version of the API to be called as new features are released.",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -119,17 +79,7 @@
           "default": "v1",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -141,17 +91,7 @@
           "default": "v1",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -163,17 +103,7 @@
           "default": "v1",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -185,17 +115,7 @@
           "default": "v1",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -208,17 +128,7 @@
           "description": "API version",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -230,17 +140,7 @@
           "description": "Initial version for TradeDirect Shipment",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -252,17 +152,7 @@
           "default": "v1",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -274,17 +164,7 @@
           "default": "v1",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -305,17 +185,7 @@
           "description": "Indicates WorldEase Shipment Management API to display the new release features",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     },
@@ -328,17 +198,7 @@
           "description": "Indicates WorldEase Shipment Management API to display the new release features",
           "enum": [
             "v1"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "v1",
-                "name": "V1"
-              }
-            ]
-          }
+          ]
         }
       }
     }
@@ -2086,10 +1946,15 @@
             "$ref": "#/components/parameters/InquiryType"
           },
           {
-            "$ref": "#/components/parameters/tracking_number"
+            "$ref": "#/components/parameters/Loc"
           },
           {
-            "$ref": "#/components/parameters/Loc"
+            "name": "trackingNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -2452,10 +2317,15 @@
             "$ref": "#/components/parameters/InquiryType"
           },
           {
-            "$ref": "#/components/parameters/tracking_number"
+            "$ref": "#/components/parameters/Loc"
           },
           {
-            "$ref": "#/components/parameters/Loc"
+            "name": "trackingNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -2693,10 +2563,15 @@
             "$ref": "#/components/parameters/InquiryType"
           },
           {
-            "$ref": "#/components/parameters/tracking_number"
+            "$ref": "#/components/parameters/Loc"
           },
           {
-            "$ref": "#/components/parameters/Loc"
+            "name": "trackingNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -2912,10 +2787,15 @@
             "$ref": "#/components/parameters/InquiryType"
           },
           {
-            "$ref": "#/components/parameters/tracking_number"
+            "$ref": "#/components/parameters/Loc"
           },
           {
-            "$ref": "#/components/parameters/Loc"
+            "name": "trackingNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -3108,10 +2988,15 @@
             "$ref": "#/components/parameters/InquiryType"
           },
           {
-            "$ref": "#/components/parameters/tracking_number"
+            "$ref": "#/components/parameters/Loc"
           },
           {
-            "$ref": "#/components/parameters/Loc"
+            "name": "trackingNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -3305,10 +3190,15 @@
             "$ref": "#/components/parameters/InquiryType"
           },
           {
-            "$ref": "#/components/parameters/tracking_number"
+            "$ref": "#/components/parameters/Loc"
           },
           {
-            "$ref": "#/components/parameters/Loc"
+            "name": "trackingNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -3502,10 +3392,15 @@
             "$ref": "#/components/parameters/InquiryType"
           },
           {
-            "$ref": "#/components/parameters/tracking_number"
+            "$ref": "#/components/parameters/Loc"
           },
           {
-            "$ref": "#/components/parameters/Loc"
+            "name": "trackingNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -31545,7 +31440,7 @@
                 "$ref": "#/components/schemas/RateRequestWrapper"
               },
               "examples": {
-                "1": {
+                "Simple Rate": {
                   "summary": "Simple Rate Example (Standard Example)",
                   "value": {
                     "RateRequest": {
@@ -31643,7 +31538,7 @@
                     }
                   }
                 },
-                "2": {
+                "Negotiated Rate": {
                   "summary": "Negotiated Rate",
                   "value": {
                     "RateRequest": {
@@ -31753,7 +31648,7 @@
                     }
                   }
                 },
-                "3": {
+                "International Rate": {
                   "summary": "International Rate Example",
                   "value": {
                     "RateRequest": {
@@ -31852,7 +31747,7 @@
                     }
                   }
                 },
-                "4": {
+                "Multi-Piece Rate": {
                   "summary": "Multi-Piece Rate Example",
                   "value": {
                     "RateRequest": {
@@ -31977,7 +31872,7 @@
                     }
                   }
                 },
-                "5": {
+                "TPFC Negotiated": {
                   "summary": "TPFC Negotiated Rate Example",
                   "value": {
                     "RateRequest": {
@@ -32098,7 +31993,7 @@
                     }
                   }
                 },
-                "6": {
+                "Time In Transit": {
                   "summary": "Time In Transit Example",
                   "value": {
                     "RateRequest": {
@@ -32201,7 +32096,7 @@
                     }
                   }
                 },
-                "7": {
+                "Standard Account": {
                   "summary": "Standard Account Rate Example",
                   "value": {
                     "RateRequest": {
@@ -32295,7 +32190,7 @@
                     }
                   }
                 },
-                "8": {
+                "Published Rate": {
                   "summary": "Published Rate Example",
                   "value": {
                     "RateRequest": {
@@ -32378,7 +32273,7 @@
                     }
                   }
                 },
-                "9": {
+                "Rate with Dry Ice": {
                   "summary": "Rate with Dry Ice",
                   "value": {
                     "RateRequest": {
@@ -32483,7 +32378,7 @@
                     }
                   }
                 },
-                "10": {
+                "shop TimeInTransit(CIE)": {
                   "summary": "shopTime In Transit (CIE) Example",
                   "value": {
                     "RateRequest": {
@@ -39818,6 +39713,14 @@
           {
             "name": "transactionSrc",
             "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "trackingNumber",
+            "in": "path",
             "required": true,
             "schema": {
               "type": "string"
@@ -69068,6 +68971,9 @@
           "ReturnService": {
             "$ref": "#/components/schemas/ShipmentServiceOptionsReturnService"
           },
+          "VerifiedDelivery": {
+            "$ref": "#/components/schemas/ShipmentServiceOptionsVerifiedDelivery"
+          },
           "SDLShipmentIndicator": {
             "maximum": 1,
             "type": "string",
@@ -69340,6 +69246,26 @@
         "description": "Container for type of Return Services.",
         "xml": {
           "name": "ReturnService"
+        }
+      },
+      "ShipmentServiceOptionsVerifiedDelivery": {
+        "maximum": 1,
+        "required": [
+          "SecurePINType"
+        ],
+        "type": "object",
+        "properties": {
+          "SecurePINType": {
+            "maximum": 1,
+            "maxLength": 1,
+            "minLength": 1,
+            "type": "string",
+            "description": "Specifies the type of Secure PIN. Valid value is 2, which represents VDS (Shipper Generated PIN). This field is required."
+          }
+        },
+        "description": "Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.",
+        "xml": {
+          "name": "VerifiedDelivery"
         }
       },
       "ShipmentShipmentRatingOptions": {
@@ -73431,7 +73357,7 @@
             "description": "Presence/Absence indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the customer would like items disposed.  Shippers account needs to have a valid contract for Heavy Goods Service."
           },
           "VerifiedDelivery": {
-            "$ref": "#/components/schemas/ShipmentServiceOptionsVerifiedDelivery"
+            "$ref": "#/components/schemas/ShippingShipmentServiceOptionsVerifiedDelivery"
           }
         },
         "description": "Container for Shipment Service Options.",
@@ -75863,7 +75789,7 @@
           "name": "RestrictedArticles"
         }
       },
-      "ShipmentServiceOptionsVerifiedDelivery": {
+      "ShippingShipmentServiceOptionsVerifiedDelivery": {
         "maximum": 1,
         "required": [
           "SecurePINType",
