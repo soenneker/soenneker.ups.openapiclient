@@ -10,9 +10,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloOrderRequestV1Shipment : IParsable
+    public partial class ApolloOrderRequestV1Shipment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The closeTime property</summary>
         public Time? CloseTime { get; set; }
         /// <summary>A reference to the shipment provided by the Consignee</summary>
@@ -100,6 +102,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public ApolloOrderRequestV1Shipment()
         {
+            AdditionalData = new Dictionary<string, object>();
             Currency = "USD";
             IsMetric = false;
         }
@@ -164,6 +167,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
             writer.WriteStringValue("shipperReference", ShipperReference);
             writer.WriteFloatValue("weight", Weight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

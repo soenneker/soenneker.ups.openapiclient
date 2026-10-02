@@ -12,8 +12,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// Shipment information for rate calculation.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloAirFreightRateRequestV1Shipment : IParsable
+    public partial class ApolloAirFreightRateRequestV1Shipment : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The closeTime property</summary>
         public Time? CloseTime { get; set; }
         /// <summary>Reference number provided by the consignee.</summary>
@@ -111,6 +113,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public ApolloAirFreightRateRequestV1Shipment()
         {
+            AdditionalData = new Dictionary<string, object>();
             IsMetric = false;
             RequestBoL = false;
             RequestPickup = false;
@@ -180,6 +183,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
             writer.WriteStringValue("shipperReference", ShipperReference);
             writer.WriteFloatValue("weight", Weight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

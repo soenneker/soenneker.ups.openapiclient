@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// This object is the primary request container for the Export Assure API.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ExportAssureResponse : IParsable
+    public partial class ExportAssureResponse : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The perfStats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This object contains metadata about the shipment and includes the response objects for each of the three operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment Shipment { get; set; }
 #endif
         /// <summary>The unique, reference identifier that correlates an API request with its response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -37,6 +39,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string TransID { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse"/> and sets the default values.
+        /// </summary>
+        public ExportAssureResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -56,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "perfStats", n => { PerfStats = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats>(global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats.CreateFromDiscriminatorValue); } },
-                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse>(global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse.CreateFromDiscriminatorValue); } },
+                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment>(global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment.CreateFromDiscriminatorValue); } },
                 { "transID", n => { TransID = n.GetStringValue(); } },
             };
         }
@@ -68,8 +77,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats>("perfStats", PerfStats);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponse>("shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

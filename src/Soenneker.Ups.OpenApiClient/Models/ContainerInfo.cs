@@ -39,21 +39,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ContainerType { get; set; }
 #endif
-        /// <summary>Volume measurement including the value and unit of measurement.</summary>
+        /// <summary>The volume of the container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.VolumeMeasurement? ContainerVolume { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume? ContainerVolume { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.VolumeMeasurement ContainerVolume { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume ContainerVolume { get; set; }
 #endif
-        /// <summary>Weight measurement including the value and unit of measurement.</summary>
+        /// <summary>The weight of the container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.WeightMeasurement? ContainerWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight? ContainerWeight { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.WeightMeasurement ContainerWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight ContainerWeight { get; set; }
 #endif
         /// <summary>The quantity of items in the container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,8 +99,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "containerDescription", n => { ContainerDescription = n.GetStringValue(); } },
                 { "containerNumber", n => { ContainerNumber = n.GetStringValue(); } },
                 { "containerType", n => { ContainerType = n.GetStringValue(); } },
-                { "containerVolume", n => { ContainerVolume = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VolumeMeasurement>(global::Soenneker.Ups.OpenApiClient.Models.VolumeMeasurement.CreateFromDiscriminatorValue); } },
-                { "containerWeight", n => { ContainerWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.WeightMeasurement>(global::Soenneker.Ups.OpenApiClient.Models.WeightMeasurement.CreateFromDiscriminatorValue); } },
+                { "containerVolume", n => { ContainerVolume = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume>(global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume.CreateFromDiscriminatorValue); } },
+                { "containerWeight", n => { ContainerWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight>(global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetStringValue(); } },
                 { "seal", n => { Seal = n.GetStringValue(); } },
             };
@@ -115,8 +115,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("containerDescription", ContainerDescription);
             writer.WriteStringValue("containerNumber", ContainerNumber);
             writer.WriteStringValue("containerType", ContainerType);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.VolumeMeasurement>("containerVolume", ContainerVolume);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.WeightMeasurement>("containerWeight", ContainerWeight);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume>("containerVolume", ContainerVolume);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight>("containerWeight", ContainerWeight);
             writer.WriteStringValue("quantity", Quantity);
             writer.WriteStringValue("seal", Seal);
             writer.WriteAdditionalData(AdditionalData);

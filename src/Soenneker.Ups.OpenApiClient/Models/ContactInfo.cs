@@ -23,13 +23,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Address information for a contact.</summary>
+        /// <summary>The address information for the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactAddress? Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactInfoAddress? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactAddress Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactInfoAddress Address { get; set; }
 #endif
         /// <summary>The attention line or department name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,7 +105,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account", n => { Account = n.GetStringValue(); } },
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactAddress>(global::Soenneker.Ups.OpenApiClient.Models.ContactAddress.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactInfoAddress>(global::Soenneker.Ups.OpenApiClient.Models.ContactInfoAddress.CreateFromDiscriminatorValue); } },
                 { "attention", n => { Attention = n.GetStringValue(); } },
                 { "businessId", n => { BusinessId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -122,7 +122,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account", Account);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactAddress>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactInfoAddress>("address", Address);
             writer.WriteStringValue("attention", Attention);
             writer.WriteStringValue("businessId", BusinessId);
             writer.WriteStringValue("name", Name);

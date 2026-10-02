@@ -10,9 +10,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloLabelV1LabelDataShipment : IParsable
+    public partial class ApolloLabelV1LabelDataShipment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The closeTime property</summary>
         public Time? CloseTime { get; set; }
         /// <summary>A reference to the Order for the Consignee</summary>
@@ -156,6 +158,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Total weight of the shipment.</summary>
         public float? Weight { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipment"/> and sets the default values.
+        /// </summary>
+        public ApolloLabelV1LabelDataShipment()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipment"/></returns>
@@ -228,6 +237,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipperReference", ShipperReference);
             writer.WriteStringValue("sortCode", SortCode);
             writer.WriteFloatValue("weight", Weight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

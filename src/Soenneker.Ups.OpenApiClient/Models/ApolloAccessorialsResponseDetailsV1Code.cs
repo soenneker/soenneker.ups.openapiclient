@@ -8,25 +8,67 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApolloAccessorialsResponseDetailsV1Code : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1? ApolloAccessorialsResponseDetailsV1CodeOneOf1 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2? ApolloAccessorialsResponseDetailsV1CodeOneOf2 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3? ApolloAccessorialsResponseDetailsV1CodeOneOf3 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4? ApolloAccessorialsResponseDetailsV1CodeOneOf4 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5? ApolloAccessorialsResponseDetailsV1CodeOneOf5 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6? ApolloAccessorialsResponseDetailsV1CodeOneOf6 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7? ApolloAccessorialsResponseDetailsV1CodeOneOf7 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper? ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper? ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper? ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper? ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper? ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper? ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper? ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,33 +79,33 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1Code();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1 apolloAccessorialsResponseDetailsV1CodeOneOf1Value)
+            if("ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialsResponseDetailsV1CodeOneOf1 = apolloAccessorialsResponseDetailsV1CodeOneOf1Value;
+                result.ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2 apolloAccessorialsResponseDetailsV1CodeOneOf2Value)
+            else if("ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialsResponseDetailsV1CodeOneOf2 = apolloAccessorialsResponseDetailsV1CodeOneOf2Value;
+                result.ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3 apolloAccessorialsResponseDetailsV1CodeOneOf3Value)
+            else if("ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialsResponseDetailsV1CodeOneOf3 = apolloAccessorialsResponseDetailsV1CodeOneOf3Value;
+                result.ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4 apolloAccessorialsResponseDetailsV1CodeOneOf4Value)
+            else if("ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialsResponseDetailsV1CodeOneOf4 = apolloAccessorialsResponseDetailsV1CodeOneOf4Value;
+                result.ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5 apolloAccessorialsResponseDetailsV1CodeOneOf5Value)
+            else if("ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialsResponseDetailsV1CodeOneOf5 = apolloAccessorialsResponseDetailsV1CodeOneOf5Value;
+                result.ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6 apolloAccessorialsResponseDetailsV1CodeOneOf6Value)
+            else if("ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialsResponseDetailsV1CodeOneOf6 = apolloAccessorialsResponseDetailsV1CodeOneOf6Value;
+                result.ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7 apolloAccessorialsResponseDetailsV1CodeOneOf7Value)
+            else if("ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialsResponseDetailsV1CodeOneOf7 = apolloAccessorialsResponseDetailsV1CodeOneOf7Value;
+                result.ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper();
             }
             return result;
         }
@@ -73,6 +115,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper != null)
+            {
+                return ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper.GetFieldDeserializers();
+            }
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper != null)
+            {
+                return ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper.GetFieldDeserializers();
+            }
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper != null)
+            {
+                return ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper.GetFieldDeserializers();
+            }
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper != null)
+            {
+                return ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper.GetFieldDeserializers();
+            }
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper != null)
+            {
+                return ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper.GetFieldDeserializers();
+            }
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper != null)
+            {
+                return ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper.GetFieldDeserializers();
+            }
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper != null)
+            {
+                return ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -82,33 +152,33 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(ApolloAccessorialsResponseDetailsV1CodeOneOf1 != null)
+            if(ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf1Wrapper);
             }
-            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf2 != null)
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf2Wrapper);
             }
-            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf3 != null)
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf3Wrapper);
             }
-            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf4 != null)
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf4Wrapper);
             }
-            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf5 != null)
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf5);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf5Wrapper);
             }
-            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf6 != null)
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf6);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf6Wrapper);
             }
-            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf7 != null)
+            else if(ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf7);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper>(null, ApolloAccessorialsResponseDetailsV1CodeOneOf7Wrapper);
             }
         }
     }

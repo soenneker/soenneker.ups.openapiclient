@@ -21,10 +21,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>errors container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse"/> and sets the default values.
@@ -51,7 +51,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponseResponse.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponseResponse>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

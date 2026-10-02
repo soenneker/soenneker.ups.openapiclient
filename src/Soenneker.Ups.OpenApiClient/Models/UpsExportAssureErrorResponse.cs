@@ -29,10 +29,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This object contains an array of error codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseWrapper2? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseWrapper2 Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse"/> and sets the default values.
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "perfStats", n => { PerfStats = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats>(global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats.CreateFromDiscriminatorValue); } },
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseWrapper2>(global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseWrapper2.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats>("perfStats", PerfStats);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorResponseWrapper2>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

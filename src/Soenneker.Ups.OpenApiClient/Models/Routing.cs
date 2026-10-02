@@ -17,18 +17,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Code of the port</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PortDetail? Destination { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RoutingDestination? Destination { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PortDetail Destination { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RoutingDestination Destination { get; set; }
 #endif
         /// <summary>Code of the port</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PortDetail? Origin { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RoutingOrigin? Origin { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PortDetail Origin { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RoutingOrigin Origin { get; set; }
 #endif
         /// <summary>The specialHandlings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,8 +63,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "destination", n => { Destination = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PortDetail>(global::Soenneker.Ups.OpenApiClient.Models.PortDetail.CreateFromDiscriminatorValue); } },
-                { "origin", n => { Origin = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PortDetail>(global::Soenneker.Ups.OpenApiClient.Models.PortDetail.CreateFromDiscriminatorValue); } },
+                { "destination", n => { Destination = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RoutingDestination>(global::Soenneker.Ups.OpenApiClient.Models.RoutingDestination.CreateFromDiscriminatorValue); } },
+                { "origin", n => { Origin = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RoutingOrigin>(global::Soenneker.Ups.OpenApiClient.Models.RoutingOrigin.CreateFromDiscriminatorValue); } },
                 { "specialHandlings", n => { SpecialHandlings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.SpecialHandling>(global::Soenneker.Ups.OpenApiClient.Models.SpecialHandling.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -75,8 +75,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PortDetail>("destination", Destination);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PortDetail>("origin", Origin);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RoutingDestination>("destination", Destination);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RoutingOrigin>("origin", Origin);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.SpecialHandling>("specialHandlings", SpecialHandlings);
             writer.WriteAdditionalData(AdditionalData);
         }

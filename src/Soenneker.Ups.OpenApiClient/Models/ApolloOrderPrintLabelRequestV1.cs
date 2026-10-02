@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// At least one of shipmentNumber, or orderNumber is required.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloOrderPrintLabelRequestV1 : IParsable
+    public partial class ApolloOrderPrintLabelRequestV1 : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Optional. Use key piece with a 1-based number to print a specific piece within the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -42,10 +44,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The orderNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber? OrderNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty? OrderNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber OrderNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty OrderNumber { get; set; }
 #endif
         /// <summary>Shipment number from the Ship or Quote API. When provided alone, layout defaults to AF-UFH.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,6 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public ApolloOrderPrintLabelRequestV1()
         {
+            AdditionalData = new Dictionary<string, object>();
             Language = "en-US";
             Layout = "AF-GEMINI";
         }
@@ -85,7 +88,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "format", n => { Format = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1Format>(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
-                { "orderNumber", n => { OrderNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber.CreateFromDiscriminatorValue); } },
+                { "orderNumber", n => { OrderNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty.CreateFromDiscriminatorValue); } },
                 { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
             };
         }
@@ -100,8 +103,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1Format>("format", Format);
             writer.WriteStringValue("language", Language);
             writer.WriteStringValue("layout", Layout);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumber>("orderNumber", OrderNumber);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty>("orderNumber", OrderNumber);
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

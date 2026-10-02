@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// A collection of charges associated with this Order. Conditionally required based on payer of charges.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloLabelV1Charges : IParsable
+    public partial class ApolloLabelV1Charges : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A collection of charges associated with this Order mapped to the consignee</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +39,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> ThirdPartyCharges { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1Charges"/> and sets the default values.
+        /// </summary>
+        public ApolloLabelV1Charges()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -70,6 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>("consigneeCharges", ConsigneeCharges);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>("shipperCharges", ShipperCharges);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>("thirdPartyCharges", ThirdPartyCharges);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

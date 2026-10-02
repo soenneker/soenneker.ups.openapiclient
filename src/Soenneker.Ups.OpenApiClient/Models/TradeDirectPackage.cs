@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Used to provide information about the handling units in the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits? HandlingUnits { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits? HandlingUnits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits HandlingUnits { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits HandlingUnits { get; set; }
 #endif
         /// <summary>Number of identical units in the package/ltl.</summary>
         public int? NumberOfIdenticalUnits { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "handlingUnits", n => { HandlingUnits = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits.CreateFromDiscriminatorValue); } },
+                { "handlingUnits", n => { HandlingUnits = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits>(global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits.CreateFromDiscriminatorValue); } },
                 { "numberOfIdenticalUnits", n => { NumberOfIdenticalUnits = n.GetIntValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnits>("handlingUnits", HandlingUnits);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits>("handlingUnits", HandlingUnits);
             writer.WriteIntValue("numberOfIdenticalUnits", NumberOfIdenticalUnits);
             writer.WriteAdditionalData(AdditionalData);
         }

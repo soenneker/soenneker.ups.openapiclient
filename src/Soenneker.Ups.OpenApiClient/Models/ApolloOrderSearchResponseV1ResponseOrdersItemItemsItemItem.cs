@@ -9,9 +9,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem : IParsable
+    public partial class ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of components in the item</summary>
         public int? Count { get; set; }
         /// <summary>The height of each component in the item</summary>
@@ -22,6 +24,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public float? Weight { get; set; }
         /// <summary>The width of each component in the item</summary>
         public float? Width { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem"/> and sets the default values.
+        /// </summary>
+        public ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -59,6 +68,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteFloatValue("length", Length);
             writer.WriteFloatValue("weight", Weight);
             writer.WriteFloatValue("width", Width);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

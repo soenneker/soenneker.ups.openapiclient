@@ -64,13 +64,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ServiceType { get; set; }
 #endif
-        /// <summary>The totalCharge property</summary>
+        /// <summary>Total charge for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1? TotalCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge? TotalCharge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1 TotalCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge TotalCharge { get; set; }
 #endif
         /// <summary>The Weight unit used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,7 +115,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "holdAtAirportTime", n => { HoldAtAirportTime = n.GetStringValue(); } },
                 { "minimumBillableWeightApplied", n => { MinimumBillableWeightApplied = n.GetBoolValue(); } },
                 { "serviceType", n => { ServiceType = n.GetStringValue(); } },
-                { "totalCharge", n => { TotalCharge = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1.CreateFromDiscriminatorValue); } },
+                { "totalCharge", n => { TotalCharge = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge>(global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge.CreateFromDiscriminatorValue); } },
                 { "weightUnit", n => { WeightUnit = n.GetStringValue(); } },
             };
         }
@@ -136,7 +136,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("holdAtAirportTime", HoldAtAirportTime);
             writer.WriteBoolValue("minimumBillableWeightApplied", MinimumBillableWeightApplied);
             writer.WriteStringValue("serviceType", ServiceType);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1>("totalCharge", TotalCharge);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge>("totalCharge", TotalCharge);
             writer.WriteStringValue("weightUnit", WeightUnit);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// This object includes specific type of customs controls applicable to a shipment.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ControlTypes : IParsable
+    public partial class ControlTypes : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array that contains a list of control types and codes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +49,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>Whether shipment compliance with a specific control type is required</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired? IsRequired { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ControlTypes"/> and sets the default values.
+        /// </summary>
+        public ControlTypes()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -84,6 +93,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("controlTypeCode", ControlTypeCode);
             writer.WriteStringValue("controlTypeMessage", ControlTypeMessage);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired>("isRequired", IsRequired);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

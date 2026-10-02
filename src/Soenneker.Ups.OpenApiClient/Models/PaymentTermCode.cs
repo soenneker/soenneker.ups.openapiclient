@@ -8,17 +8,35 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3Wrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentTermCode : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1? PaymentTermCodeOneOf1 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2? PaymentTermCodeOneOf2 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3? PaymentTermCodeOneOf3 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1Wrapper? PaymentTermCodeOneOf1Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1Wrapper PaymentTermCodeOneOf1Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2Wrapper? PaymentTermCodeOneOf2Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2Wrapper PaymentTermCodeOneOf2Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3Wrapper? PaymentTermCodeOneOf3Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3Wrapper PaymentTermCodeOneOf3Wrapper { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,17 +47,17 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCode();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1 paymentTermCodeOneOf1Value)
+            if("PaymentTermCodeOneOf1Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PaymentTermCodeOneOf1 = paymentTermCodeOneOf1Value;
+                result.PaymentTermCodeOneOf1Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2 paymentTermCodeOneOf2Value)
+            else if("PaymentTermCodeOneOf2Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PaymentTermCodeOneOf2 = paymentTermCodeOneOf2Value;
+                result.PaymentTermCodeOneOf2Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3 paymentTermCodeOneOf3Value)
+            else if("PaymentTermCodeOneOf3Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.PaymentTermCodeOneOf3 = paymentTermCodeOneOf3Value;
+                result.PaymentTermCodeOneOf3Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3Wrapper();
             }
             return result;
         }
@@ -49,6 +67,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(PaymentTermCodeOneOf1Wrapper != null)
+            {
+                return PaymentTermCodeOneOf1Wrapper.GetFieldDeserializers();
+            }
+            else if(PaymentTermCodeOneOf2Wrapper != null)
+            {
+                return PaymentTermCodeOneOf2Wrapper.GetFieldDeserializers();
+            }
+            else if(PaymentTermCodeOneOf3Wrapper != null)
+            {
+                return PaymentTermCodeOneOf3Wrapper.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -58,17 +88,17 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(PaymentTermCodeOneOf1 != null)
+            if(PaymentTermCodeOneOf1Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1>(null, PaymentTermCodeOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf1Wrapper>(null, PaymentTermCodeOneOf1Wrapper);
             }
-            else if(PaymentTermCodeOneOf2 != null)
+            else if(PaymentTermCodeOneOf2Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2>(null, PaymentTermCodeOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf2Wrapper>(null, PaymentTermCodeOneOf2Wrapper);
             }
-            else if(PaymentTermCodeOneOf3 != null)
+            else if(PaymentTermCodeOneOf3Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3>(null, PaymentTermCodeOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCodeOneOf3Wrapper>(null, PaymentTermCodeOneOf3Wrapper);
             }
         }
     }

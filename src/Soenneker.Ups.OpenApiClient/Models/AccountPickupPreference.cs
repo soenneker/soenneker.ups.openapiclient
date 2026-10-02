@@ -34,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Notification indicators container. Notifications can be sent in email or/and SMS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators? NotificationIndicators { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccountPickupPreferenceNotificationIndicators? NotificationIndicators { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators NotificationIndicators { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccountPickupPreferenceNotificationIndicators NotificationIndicators { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.AccountPickupPreference"/> and sets the default values.
@@ -66,7 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "emails", n => { Emails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
-                { "notificationIndicators", n => { NotificationIndicators = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators>(global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators.CreateFromDiscriminatorValue); } },
+                { "notificationIndicators", n => { NotificationIndicators = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupPreferenceNotificationIndicators>(global::Soenneker.Ups.OpenApiClient.Models.AccountPickupPreferenceNotificationIndicators.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -78,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("emails", Emails);
             writer.WriteStringValue("locale", Locale);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators>("notificationIndicators", NotificationIndicators);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupPreferenceNotificationIndicators>("notificationIndicators", NotificationIndicators);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

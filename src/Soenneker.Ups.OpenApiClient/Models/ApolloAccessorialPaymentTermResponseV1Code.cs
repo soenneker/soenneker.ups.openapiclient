@@ -8,17 +8,35 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApolloAccessorialPaymentTermResponseV1Code : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1? ApolloAccessorialPaymentTermResponseV1CodeOneOf1 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2? ApolloAccessorialPaymentTermResponseV1CodeOneOf2 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3"/></summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3? ApolloAccessorialPaymentTermResponseV1CodeOneOf3 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper? ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper? ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper? ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,17 +47,17 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1 apolloAccessorialPaymentTermResponseV1CodeOneOf1Value)
+            if("ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialPaymentTermResponseV1CodeOneOf1 = apolloAccessorialPaymentTermResponseV1CodeOneOf1Value;
+                result.ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2 apolloAccessorialPaymentTermResponseV1CodeOneOf2Value)
+            else if("ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialPaymentTermResponseV1CodeOneOf2 = apolloAccessorialPaymentTermResponseV1CodeOneOf2Value;
+                result.ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3 apolloAccessorialPaymentTermResponseV1CodeOneOf3Value)
+            else if("ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ApolloAccessorialPaymentTermResponseV1CodeOneOf3 = apolloAccessorialPaymentTermResponseV1CodeOneOf3Value;
+                result.ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper();
             }
             return result;
         }
@@ -49,6 +67,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper != null)
+            {
+                return ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper.GetFieldDeserializers();
+            }
+            else if(ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper != null)
+            {
+                return ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper.GetFieldDeserializers();
+            }
+            else if(ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper != null)
+            {
+                return ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -58,17 +88,17 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(ApolloAccessorialPaymentTermResponseV1CodeOneOf1 != null)
+            if(ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1>(null, ApolloAccessorialPaymentTermResponseV1CodeOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper>(null, ApolloAccessorialPaymentTermResponseV1CodeOneOf1Wrapper);
             }
-            else if(ApolloAccessorialPaymentTermResponseV1CodeOneOf2 != null)
+            else if(ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2>(null, ApolloAccessorialPaymentTermResponseV1CodeOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper>(null, ApolloAccessorialPaymentTermResponseV1CodeOneOf2Wrapper);
             }
-            else if(ApolloAccessorialPaymentTermResponseV1CodeOneOf3 != null)
+            else if(ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3>(null, ApolloAccessorialPaymentTermResponseV1CodeOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper>(null, ApolloAccessorialPaymentTermResponseV1CodeOneOf3Wrapper);
             }
         }
     }

@@ -45,10 +45,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>An object representing the user&apos;s session, a series of questions and selected answers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Session? Session { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession? Session { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Session Session { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession Session { get; set; }
 #endif
         /// <summary>The API&apos;s prediction for what the final Harmonized Tariff Schedule (HTS) code might be based on the current point of the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "newProductDescription", n => { NewProductDescription = n.GetStringValue(); } },
                 { "noMoreQuestions", n => { NoMoreQuestions = n.GetBoolValue(); } },
                 { "questions", n => { Questions = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Question>(global::Soenneker.Ups.OpenApiClient.Models.Question.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "session", n => { Session = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Session>(global::Soenneker.Ups.OpenApiClient.Models.Session.CreateFromDiscriminatorValue); } },
+                { "session", n => { Session = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession>(global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession.CreateFromDiscriminatorValue); } },
                 { "suggestedHts", n => { SuggestedHts = n.GetStringValue(); } },
             };
         }
@@ -105,7 +105,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("newProductDescription", NewProductDescription);
             writer.WriteBoolValue("noMoreQuestions", NoMoreQuestions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Question>("questions", Questions);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Session>("session", Session);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession>("session", Session);
             writer.WriteStringValue("suggestedHts", SuggestedHts);
             writer.WriteAdditionalData(AdditionalData);
         }

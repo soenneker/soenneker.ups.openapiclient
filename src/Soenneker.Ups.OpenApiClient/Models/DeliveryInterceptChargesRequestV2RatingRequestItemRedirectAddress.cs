@@ -9,16 +9,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress : IParsable
+    public partial class DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The addressInfo property</summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Address object, include line1, line2, line 3 state, postal code and country code. Required when processing a request if imsAddressIdentifier is not present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptAddressV2? AddressInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddressAddressInfo? AddressInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptAddressV2 AddressInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddressAddressInfo AddressInfo { get; set; }
 #endif
         /// <summary>The nickname string assigned to the address entry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,6 +71,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string PhoneNumber { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress"/> and sets the default values.
+        /// </summary>
+        public DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress"/></returns>
@@ -86,7 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "addressInfo", n => { AddressInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptAddressV2>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptAddressV2.CreateFromDiscriminatorValue); } },
+                { "addressInfo", n => { AddressInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddressAddressInfo>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddressAddressInfo.CreateFromDiscriminatorValue); } },
                 { "addressNickName", n => { AddressNickName = n.GetStringValue(); } },
                 { "contactName", n => { ContactName = n.GetStringValue(); } },
                 { "emailAddress", n => { EmailAddress = n.GetStringValue(); } },
@@ -102,13 +111,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptAddressV2>("addressInfo", AddressInfo);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddressAddressInfo>("addressInfo", AddressInfo);
             writer.WriteStringValue("addressNickName", AddressNickName);
             writer.WriteStringValue("contactName", ContactName);
             writer.WriteStringValue("emailAddress", EmailAddress);
             writer.WriteStringValue("nameOrCompanyName", NameOrCompanyName);
             writer.WriteStringValue("phoneExt", PhoneExt);
             writer.WriteStringValue("phoneNumber", PhoneNumber);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

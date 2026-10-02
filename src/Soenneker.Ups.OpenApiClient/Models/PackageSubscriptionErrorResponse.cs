@@ -18,20 +18,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The invalidTrackingNumbers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageSubscriptionErrorResponseInvalidTrackingNumbers? InvalidTrackingNumbers { get; set; }
+        public string? InvalidTrackingNumbers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageSubscriptionErrorResponseInvalidTrackingNumbers InvalidTrackingNumbers { get; set; }
+        public string InvalidTrackingNumbers { get; set; }
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>Response container to store errors</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PackageSubscriptionErrorResponse"/> and sets the default values.
@@ -58,8 +58,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "invalidTrackingNumbers", n => { InvalidTrackingNumbers = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageSubscriptionErrorResponseInvalidTrackingNumbers>(global::Soenneker.Ups.OpenApiClient.Models.PackageSubscriptionErrorResponseInvalidTrackingNumbers.CreateFromDiscriminatorValue); } },
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse>(global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse.CreateFromDiscriminatorValue); } },
+                { "invalidTrackingNumbers", n => { InvalidTrackingNumbers = n.GetStringValue(); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse>(global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -69,8 +69,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageSubscriptionErrorResponseInvalidTrackingNumbers>("invalidTrackingNumbers", InvalidTrackingNumbers);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse>("response", Response);
+            writer.WriteStringValue("invalidTrackingNumbers", InvalidTrackingNumbers);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

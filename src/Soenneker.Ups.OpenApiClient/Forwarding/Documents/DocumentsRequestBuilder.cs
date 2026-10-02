@@ -193,7 +193,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Documents
 #endif
             /// <summary>Shipment Mode</summary>
             [QueryParameter("shipment_type")]
-            public global::Soenneker.Ups.OpenApiClient.Models.ForwardingGetDocumentsShipmentTypeParameter? ShipmentType { get; set; }
+            public global::Soenneker.Ups.OpenApiClient.Models.GetDocumentsShipmentTypeParameter? ShipmentType { get; set; }
         }
     }
 }

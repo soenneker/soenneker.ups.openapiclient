@@ -111,7 +111,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1();
+            var mappingValue = parseNode.GetChildNode("operationId")?.GetStringValue();
+            return mappingValue switch
+            {
+                "ApolloShipmentPartyV1" => new global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1(),
+                _ => new global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1(),
+            };
         }
         /// <summary>
         /// The deserialization information for the current model

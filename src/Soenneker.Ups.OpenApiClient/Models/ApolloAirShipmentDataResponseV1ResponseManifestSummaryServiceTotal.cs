@@ -11,10 +11,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// The total for all services
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal : IParsable
+    public partial class ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal : IAdditionalDataHolder, IParsable
     {
         /// <summary>total added charges associated with the shipments in the manifest</summary>
         public double? AddedChargesAmount { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>total billed charges associated with the shipments in the manifest</summary>
         public double? BilledAmount { get; set; }
         /// <summary>total freight charges associated with the shipments in the manifest</summary>
@@ -29,6 +31,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public double? SurchargesAmount { get; set; }
         /// <summary>The total weight of shipments</summary>
         public double? TotalWeight { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal"/> and sets the default values.
+        /// </summary>
+        public ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -72,6 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteIntValue("shipmentCount", ShipmentCount);
             writer.WriteDoubleValue("surchargesAmount", SurchargesAmount);
             writer.WriteDoubleValue("totalWeight", TotalWeight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

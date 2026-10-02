@@ -78,8 +78,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ExportCountryCode { get; set; }
 #endif
-        /// <summary>The importCountryCode property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.Countries? ImportCountryCode { get; set; }
+        /// <summary>The two-letter ISO 3166-1 alpha-2 country code representing the import country.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.StartRequestImportCountryCode? ImportCountryCode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.StartRequestImportCountryCode ImportCountryCode { get; set; }
+#endif
         /// <summary>The language code following the ISO 639-1 standard.</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale? Locale { get; set; }
         /// <summary>The account number representing the company or individual responsible for shipping the commodity.</summary>
@@ -131,7 +137,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "commodityUnitOfMeasure", n => { CommodityUnitOfMeasure = n.GetStringValue(); } },
                 { "commodityValue", n => { CommodityValue = n.GetStringValue(); } },
                 { "exportCountryCode", n => { ExportCountryCode = n.GetStringValue(); } },
-                { "importCountryCode", n => { ImportCountryCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.Countries>(); } },
+                { "importCountryCode", n => { ImportCountryCode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.StartRequestImportCountryCode>(global::Soenneker.Ups.OpenApiClient.Models.StartRequestImportCountryCode.CreateFromDiscriminatorValue); } },
                 { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale>(); } },
                 { "shipperAccountNumber", n => { ShipperAccountNumber = n.GetStringValue(); } },
                 { "shipperName", n => { ShipperName = n.GetStringValue(); } },
@@ -152,7 +158,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("commodityUnitOfMeasure", CommodityUnitOfMeasure);
             writer.WriteStringValue("commodityValue", CommodityValue);
             writer.WriteStringValue("exportCountryCode", ExportCountryCode);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.Countries>("importCountryCode", ImportCountryCode);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.StartRequestImportCountryCode>("importCountryCode", ImportCountryCode);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale>("locale", Locale);
             writer.WriteStringValue("shipperAccountNumber", ShipperAccountNumber);
             writer.WriteStringValue("shipperName", ShipperName);

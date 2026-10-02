@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Ups.OpenApiClient.Pickup.Item;
 using Soenneker.Ups.OpenApiClient.Pickup.Pickupcreation;
 using Soenneker.Ups.OpenApiClient.Pickup.Shipments;
 using System.Collections.Generic;
@@ -17,6 +16,11 @@ namespace Soenneker.Ups.OpenApiClient.Pickup
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PickupRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The pickup property</summary>
+        public global::Soenneker.Ups.OpenApiClient.Pickup.Pickup.PickupRequestBuilder Pickup
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.Pickup.Pickup.PickupRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The pickupcreation property</summary>
         public global::Soenneker.Ups.OpenApiClient.Pickup.Pickupcreation.PickupcreationRequestBuilder Pickupcreation
         {
@@ -26,18 +30,6 @@ namespace Soenneker.Ups.OpenApiClient.Pickup
         public global::Soenneker.Ups.OpenApiClient.Pickup.Shipments.ShipmentsRequestBuilder Shipments
         {
             get => new global::Soenneker.Ups.OpenApiClient.Pickup.Shipments.ShipmentsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.pickup.item collection</summary>
-        /// <param name="position">Version of API.Valid values:- v2409</param>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Pickup.Item.WithVersionItemRequestBuilder"/></returns>
-        public global::Soenneker.Ups.OpenApiClient.Pickup.Item.WithVersionItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("version", position);
-                return new global::Soenneker.Ups.OpenApiClient.Pickup.Item.WithVersionItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Pickup.PickupRequestBuilder"/> and sets the default values.

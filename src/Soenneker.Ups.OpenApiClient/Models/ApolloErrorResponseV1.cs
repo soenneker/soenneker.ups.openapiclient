@@ -12,8 +12,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// Response object for errors
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloErrorResponseV1 : ApiException, IParsable
+    public partial class ApolloErrorResponseV1 : ApiException, IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>Response container to store errors</summary>
@@ -24,6 +26,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1Response Response { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1"/> and sets the default values.
+        /// </summary>
+        public ApolloErrorResponseV1()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,6 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1Response>("response", Response);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

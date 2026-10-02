@@ -9,9 +9,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloPickupTotalV1 : IParsable
+    public partial class ApolloPickupTotalV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The itemCount property</summary>
         public int? ItemCount { get; set; }
         /// <summary>The pieceCount property</summary>
@@ -20,6 +22,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public int? ShipmentCount { get; set; }
         /// <summary>The totalWeight property</summary>
         public double? TotalWeight { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1"/> and sets the default values.
+        /// </summary>
+        public ApolloPickupTotalV1()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -55,6 +64,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteIntValue("pieceCount", PieceCount);
             writer.WriteIntValue("shipmentCount", ShipmentCount);
             writer.WriteDoubleValue("totalWeight", TotalWeight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

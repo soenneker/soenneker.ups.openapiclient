@@ -11,7 +11,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// The request used to cancel an Order
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloCancelOrderRequestV1 : IParsable
+    public partial class ApolloCancelOrderRequestV1 : IAdditionalDataHolder, IParsable
     {
         /// <summary>The unique number that identifies the Shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -21,6 +21,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Account { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The language/culture that is being used for the API</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +39,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string OrderNumber { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloCancelOrderRequestV1"/> and sets the default values.
+        /// </summary>
+        public ApolloCancelOrderRequestV1()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -70,6 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("account", Account);
             writer.WriteStringValue("language", Language);
             writer.WriteStringValue("orderNumber", OrderNumber);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

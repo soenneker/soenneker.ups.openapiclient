@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// This object is the primary request structure for the Export Assure API.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ExportAssureRequest : IParsable
+    public partial class ExportAssureRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the user has requested an Advanced Import/Export Compliance review</summary>
         public bool? EvaluateAdvancedImportExportRequirements { get; set; }
         /// <summary>Whether the user has requested description guidance</summary>
@@ -24,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This object contains all necessary details about a shipment for compliance evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequest? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment? Shipment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequest Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment Shipment { get; set; }
 #endif
         /// <summary>The unique, reference identifier that correlates an API request with its response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,6 +44,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public ExportAssureRequest()
         {
+            AdditionalData = new Dictionary<string, object>();
             EvaluateAdvancedImportExportRequirements = false;
             EvaluateDescriptions = true;
             EvaluateImportExportRequirements = true;
@@ -69,7 +72,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "evaluateDescriptions", n => { EvaluateDescriptions = n.GetBoolValue(); } },
                 { "evaluateImportExportRequirements", n => { EvaluateImportExportRequirements = n.GetBoolValue(); } },
                 { "evaluatePoaRequirements", n => { EvaluatePoaRequirements = n.GetBoolValue(); } },
-                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequest>(global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequest.CreateFromDiscriminatorValue); } },
+                { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment>(global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment.CreateFromDiscriminatorValue); } },
                 { "transID", n => { TransID = n.GetStringValue(); } },
             };
         }
@@ -84,8 +87,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("evaluateDescriptions", EvaluateDescriptions);
             writer.WriteBoolValue("evaluateImportExportRequirements", EvaluateImportExportRequirements);
             writer.WriteBoolValue("evaluatePoaRequirements", EvaluatePoaRequirements);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequest>("shipment", Shipment);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

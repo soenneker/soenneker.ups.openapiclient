@@ -11,15 +11,17 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// Request to generate Air Freight rates for a shipment.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloAirFreightRateRequestV1 : IParsable
+    public partial class ApolloAirFreightRateRequestV1 : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Party information (shipper, consignee, or third party).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1? Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Consignee? Consignee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1 Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Consignee Consignee { get; set; }
 #endif
         /// <summary>Language preference for the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,10 +42,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Party information (shipper, consignee, or third party).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1? Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper? Shipper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1 Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper Shipper { get; set; }
 #endif
         /// <summary>The thirdParty property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,6 +64,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string TransactionId { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1"/> and sets the default values.
+        /// </summary>
+        public ApolloAirFreightRateRequestV1()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1"/></returns>
@@ -79,10 +88,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1.CreateFromDiscriminatorValue); } },
+                { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Consignee>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Consignee.CreateFromDiscriminatorValue); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment.CreateFromDiscriminatorValue); } },
-                { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1.CreateFromDiscriminatorValue); } },
+                { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper.CreateFromDiscriminatorValue); } },
                 { "thirdParty", n => { ThirdParty = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1.CreateFromDiscriminatorValue); } },
                 { "transactionId", n => { TransactionId = n.GetStringValue(); } },
             };
@@ -94,12 +103,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1>("consignee", Consignee);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Consignee>("consignee", Consignee);
             writer.WriteStringValue("language", Language);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment>("shipment", Shipment);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1>("shipper", Shipper);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper>("shipper", Shipper);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1>("thirdParty", ThirdParty);
             writer.WriteStringValue("transactionId", TransactionId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

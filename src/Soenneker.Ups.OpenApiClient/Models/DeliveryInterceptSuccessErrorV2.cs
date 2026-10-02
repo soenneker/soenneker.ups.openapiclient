@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// Container to hold details related to an individual error. Will only be returned if the HTTP statusCode isn&apos;t &apos;200&apos;(success).On the API version v3 the first element of the errors array contains the statusCode and scoring statusMessage field. 
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class DeliveryInterceptSuccessErrorV2 : IParsable
+    public partial class DeliveryInterceptSuccessErrorV2 : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code of the error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +39,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ErrorSource { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2"/> and sets the default values.
+        /// </summary>
+        public DeliveryInterceptSuccessErrorV2()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -70,6 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("errorCode", ErrorCode);
             writer.WriteStringValue("errorMessage", ErrorMessage);
             writer.WriteStringValue("errorSource", ErrorSource);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

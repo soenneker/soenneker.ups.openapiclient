@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// Item information within a shipment.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloAirFreightRateRequestV1ShipmentItemsItem : IParsable
+    public partial class ApolloAirFreightRateRequestV1ShipmentItemsItem : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Quantity of the item.</summary>
         public int? Count { get; set; }
         /// <summary>Description of the item.</summary>
@@ -39,6 +41,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public float? Weight { get; set; }
         /// <summary>The width property</summary>
         public float? Width { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentItemsItem"/> and sets the default values.
+        /// </summary>
+        public ApolloAirFreightRateRequestV1ShipmentItemsItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -80,6 +89,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteFloatValue("length", Length);
             writer.WriteFloatValue("weight", Weight);
             writer.WriteFloatValue("width", Width);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

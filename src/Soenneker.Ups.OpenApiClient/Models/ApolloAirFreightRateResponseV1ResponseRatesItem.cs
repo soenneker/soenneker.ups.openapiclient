@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// Details of a calculated rate.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloAirFreightRateResponseV1ResponseRatesItem : IParsable
+    public partial class ApolloAirFreightRateResponseV1ResponseRatesItem : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billableWeight property</summary>
         public decimal? BillableWeight { get; set; }
         /// <summary>Unbounded list of charges applied</summary>
@@ -43,13 +45,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ServiceType { get; set; }
 #endif
-        /// <summary>The totalCharge property</summary>
+        /// <summary>Total charge for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1? TotalCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge? TotalCharge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1 TotalCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge TotalCharge { get; set; }
 #endif
         /// <summary>The Weight unit used.</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemWeightUnit? WeightUnit { get; set; }
@@ -58,6 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public ApolloAirFreightRateResponseV1ResponseRatesItem()
         {
+            AdditionalData = new Dictionary<string, object>();
             ContractRate = false;
             GuaranteedDelivery = false;
             MinimumBillableWeightApplied = false;
@@ -89,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "holdAtAirportTime", n => { HoldAtAirportTime = n.GetDateTimeOffsetValue(); } },
                 { "minimumBillableWeightApplied", n => { MinimumBillableWeightApplied = n.GetBoolValue(); } },
                 { "serviceType", n => { ServiceType = n.GetStringValue(); } },
-                { "totalCharge", n => { TotalCharge = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1.CreateFromDiscriminatorValue); } },
+                { "totalCharge", n => { TotalCharge = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge.CreateFromDiscriminatorValue); } },
                 { "weightUnit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemWeightUnit>(); } },
             };
         }
@@ -109,8 +112,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("holdAtAirportTime", HoldAtAirportTime);
             writer.WriteBoolValue("minimumBillableWeightApplied", MinimumBillableWeightApplied);
             writer.WriteStringValue("serviceType", ServiceType);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeAmountV1>("totalCharge", TotalCharge);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge>("totalCharge", TotalCharge);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemWeightUnit>("weightUnit", WeightUnit);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

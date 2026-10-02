@@ -263,7 +263,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         {
             /// <summary>The type of shipment (&quot;Air&quot; or &quot;Ocean&quot;).</summary>
             [QueryParameter("request_type")]
-            public global::Soenneker.Ups.OpenApiClient.Models.ForwardingGetShipmentDetailsRequestTypeParameter? RequestType { get; set; }
+            public global::Soenneker.Ups.OpenApiClient.Models.GetShipmentDetailsRequestTypeParameter? RequestType { get; set; }
             /// <summary>The unique identifier for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -283,17 +283,10 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Shipments
         {
             /// <summary>The format of the manifest to be generated.</summary>
             [QueryParameter("manifest_format")]
-            public global::Soenneker.Ups.OpenApiClient.Models.ForwardingSubmitAirShipmentManifestFormatParameter? ManifestFormat { get; set; }
+            public global::Soenneker.Ups.OpenApiClient.Models.SubmitAirShipmentManifestFormatParameter? ManifestFormat { get; set; }
             /// <summary>The &lt;a href=&quot;https://www.rfc-editor.org/rfc/rfc3339#section-5.6&quot; target=&quot;_blank&quot;&gt;RFC 3339&lt;/a&gt; scheduled pickup date.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("pickup_date")]
-            public string? PickupDate { get; set; }
-#nullable restore
-#else
-            [QueryParameter("pickup_date")]
-            public string PickupDate { get; set; }
-#endif
+            public Date? PickupDate { get; set; }
             /// <summary>The flag indicating whether a manifest should be generated.</summary>
             [QueryParameter("request_manifest")]
             public bool? RequestManifest { get; set; }

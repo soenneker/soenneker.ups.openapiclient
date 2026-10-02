@@ -50,8 +50,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>The &quot;selected&quot; field represents the index of the chosen option from the multiple-choice answers provided for a specific question. This is a 0-based index, meaning the first option is represented by 0, the second by 1, and so on.This field ensures that the system accurately records the user&apos;s choice and continues the interactive session based on the selected answer.</summary>
         public int? Selected { get; set; }
-        /// <summary>The type property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.QuestionType? Type { get; set; }
+        /// <summary>The formatting of the question and how it should be presented to the user.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.QuestionTypeComposed? Type { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.QuestionTypeComposed Type { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.Question"/> and sets the default values.
         /// </summary>
@@ -84,7 +90,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "other", n => { Other = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "question", n => { QuestionProp = n.GetStringValue(); } },
                 { "selected", n => { Selected = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.QuestionType>(); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuestionTypeComposed>(global::Soenneker.Ups.OpenApiClient.Models.QuestionTypeComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -100,7 +106,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("other", Other);
             writer.WriteStringValue("question", QuestionProp);
             writer.WriteIntValue("selected", Selected);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.QuestionType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuestionTypeComposed>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

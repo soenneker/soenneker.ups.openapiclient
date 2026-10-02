@@ -11,15 +11,17 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// The object that holds the data to create an Order. Following fields will be examined for the Shipment Consolidation(when enabled)- consolidationId, shipper, pickupDate, consignee, serviceType, paymentType, IsHAPU, IsSaturdayPickup, IsLiftgatePickup, IsLiftgateDelivery, Pickup, DLV, IsFreeDomicileDDU, IsFreeDomicileDDP, IsCustomsClearance, CustomValueCurrencyCode, CustomValue, RESPU, RESDLV, freightType, IsHazMat, orderDescription, DeclaredValueCurrencyCode, DeclaredValue, IsMetric, ThirdParty
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloOrderRequestV1 : IParsable
+    public partial class ApolloOrderRequestV1 : IAdditionalDataHolder, IParsable
     {
-        /// <summary>The consignee property</summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Consignee associated with the Shipment.  UPS Freight Account Number is required if the consignee is the payor.  must be different Shipper. Consolidation Key - Consolidation keys should be Identical with previous orders to get consolidated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1? Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee? Consignee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1 Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee Consignee { get; set; }
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,13 +47,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment Shipment { get; set; }
 #endif
-        /// <summary>The shipper property</summary>
+        /// <summary>Shipper associated with the Shipment. UPS Freight Account Number is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1? Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper? Shipper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1 Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper Shipper { get; set; }
 #endif
         /// <summary>Any other Party involved in the Shipment, usually a payor. Details Required when third party is payor, must be different from consignee and shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,6 +72,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string TransId { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1"/> and sets the default values.
+        /// </summary>
+        public ApolloOrderRequestV1()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1"/></returns>
@@ -87,11 +96,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1.CreateFromDiscriminatorValue); } },
+                { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label.CreateFromDiscriminatorValue); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment.CreateFromDiscriminatorValue); } },
-                { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1.CreateFromDiscriminatorValue); } },
+                { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper.CreateFromDiscriminatorValue); } },
                 { "thirdParty", n => { ThirdParty = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1.CreateFromDiscriminatorValue); } },
                 { "transId", n => { TransId = n.GetStringValue(); } },
             };
@@ -103,13 +112,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>("consignee", Consignee);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee>("consignee", Consignee);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label>("label", Label);
             writer.WriteStringValue("language", Language);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment>("shipment", Shipment);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>("shipper", Shipper);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper>("shipper", Shipper);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>("thirdParty", ThirdParty);
             writer.WriteStringValue("transId", TransId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

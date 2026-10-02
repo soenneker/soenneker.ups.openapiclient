@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// This object contains an array of warning messages related to this control type.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ControlDetails : IParsable
+    public partial class ControlDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A detailed description of the control measure, translated for the user as required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +31,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ControlDetailName { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ControlDetails"/> and sets the default values.
+        /// </summary>
+        public ControlDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -60,6 +69,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("controlDetailDescription", ControlDetailDescription);
             writer.WriteStringValue("controlDetailName", ControlDetailName);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

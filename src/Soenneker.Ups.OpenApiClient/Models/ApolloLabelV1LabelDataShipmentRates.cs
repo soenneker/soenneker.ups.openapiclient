@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// The cost associated with the Order to be printed in the label
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloLabelV1LabelDataShipmentRates : IParsable
+    public partial class ApolloLabelV1LabelDataShipmentRates : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount property</summary>
         public double? Amount { get; set; }
         /// <summary>The &lt;a href=&quot;https://www.iso.org/iso-4217-currency-codes.html&quot; target=&quot;_blank&quot;&gt;ISO 4217&lt;/a&gt; currency code</summary>
@@ -23,6 +25,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CurrencyCode { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloLabelV1LabelDataShipmentRates"/> and sets the default values.
+        /// </summary>
+        public ApolloLabelV1LabelDataShipmentRates()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteStringValue("currencyCode", CurrencyCode);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -9,9 +9,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloGetCityResponseV1ResponseCityDetailsItem : IParsable
+    public partial class ApolloGetCityResponseV1ResponseCityDetailsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the city</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,6 +63,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string TariffDestination { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1ResponseCityDetailsItem"/> and sets the default values.
+        /// </summary>
+        public ApolloGetCityResponseV1ResponseCityDetailsItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1ResponseCityDetailsItem"/></returns>
@@ -99,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("standardService", StandardService);
             writer.WriteStringValue("stateProvinceCode", StateProvinceCode);
             writer.WriteStringValue("tariffDestination", TariffDestination);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

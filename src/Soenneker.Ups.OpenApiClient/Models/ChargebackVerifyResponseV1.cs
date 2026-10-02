@@ -9,9 +9,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ChargebackVerifyResponseV1 : IParsable
+    public partial class ChargebackVerifyResponseV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Detailed category risk scores</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,6 +26,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision? Decision { get; set; }
         /// <summary>Overall risk score from 0 (lowest) to 999 (highest risk)</summary>
         public double? SuperScore { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1"/> and sets the default values.
+        /// </summary>
+        public ChargebackVerifyResponseV1()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -57,6 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores>("categoryScores", CategoryScores);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision>("decision", Decision);
             writer.WriteDoubleValue("superScore", SuperScore);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

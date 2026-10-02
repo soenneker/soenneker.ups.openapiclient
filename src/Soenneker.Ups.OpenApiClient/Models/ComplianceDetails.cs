@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// This object contains details of specific compliance requirements and controls that are applicable to the shipment, based on whether it is for import or export purposes.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ComplianceDetails : IParsable
+    public partial class ComplianceDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the compliance assessment regards imports or exports</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType? CategoryType { get; set; }
         /// <summary>The controlTypes property</summary>
@@ -23,6 +25,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes> ControlTypes { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails"/> and sets the default values.
+        /// </summary>
+        public ComplianceDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType>("categoryType", CategoryType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes>("controlTypes", ControlTypes);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

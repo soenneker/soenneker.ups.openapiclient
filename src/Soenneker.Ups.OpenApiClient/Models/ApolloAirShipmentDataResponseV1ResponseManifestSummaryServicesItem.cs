@@ -9,14 +9,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem : IParsable
+    public partial class ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The addedChargesAmount property</summary>
+        /// <summary>The total added charges for this service associated with this manifest</summary>
         public double? AddedChargesAmount { get; set; }
-        /// <summary>The billedAmount property</summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Total Billed amount for this service</summary>
         public double? BilledAmount { get; set; }
-        /// <summary>The freightChargesAmount property</summary>
+        /// <summary>The total charges for this service</summary>
         public double? FreightChargesAmount { get; set; }
         /// <summary>The total number items in those shipments</summary>
         public int? ItemCount { get; set; }
@@ -34,10 +36,17 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>number of shipments using this service associated with this manifest</summary>
         public int? ShipmentCount { get; set; }
-        /// <summary>The surchargesAmount property</summary>
+        /// <summary>The total surcharges for this service associated with this manifest</summary>
         public double? SurchargesAmount { get; set; }
         /// <summary>The total weight of the items</summary>
         public double? TotalWeight { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem"/> and sets the default values.
+        /// </summary>
+        public ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -85,6 +94,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteIntValue("shipmentCount", ShipmentCount);
             writer.WriteDoubleValue("surchargesAmount", SurchargesAmount);
             writer.WriteDoubleValue("totalWeight", TotalWeight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

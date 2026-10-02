@@ -10,16 +10,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloOrderSearchResponseV1ResponseOrdersItem : IParsable
+    public partial class ApolloOrderSearchResponseV1ResponseOrdersItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The consignee property</summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The consignee associated with the Shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1? Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee? Consignee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1 Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee Consignee { get; set; }
 #endif
         /// <summary>The reference provided by Consignee</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,6 +98,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public ApolloOrderSearchResponseV1ResponseOrdersItem()
         {
+            AdditionalData = new Dictionary<string, object>();
             IsMetric = false;
         }
         /// <summary>
@@ -116,7 +119,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1.CreateFromDiscriminatorValue); } },
+                { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee.CreateFromDiscriminatorValue); } },
                 { "consigneeReference", n => { ConsigneeReference = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "isMetric", n => { IsMetric = n.GetBoolValue(); } },
@@ -137,7 +140,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>("consignee", Consignee);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee>("consignee", Consignee);
             writer.WriteStringValue("consigneeReference", ConsigneeReference);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("isMetric", IsMetric);
@@ -149,6 +152,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipperReference", ShipperReference);
             writer.WriteStringValue("status", Status);
             writer.WriteIntValue("statusCode", StatusCode);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

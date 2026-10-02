@@ -6,18 +6,20 @@ using Microsoft.Kiota.Serialization.Form;
 using Microsoft.Kiota.Serialization.Json;
 using Microsoft.Kiota.Serialization.Multipart;
 using Microsoft.Kiota.Serialization.Text;
+using Soenneker.Ups.OpenApiClient.AddressValidation;
 using Soenneker.Ups.OpenApiClient.AddressValidationReady;
-using Soenneker.Ups.OpenApiClient.Addressvalidation;
 using Soenneker.Ups.OpenApiClient.CommerceGuard;
+using Soenneker.Ups.OpenApiClient.CustomsDetailV2;
+using Soenneker.Ups.OpenApiClient.DangerousGoods;
 using Soenneker.Ups.OpenApiClient.DangerousGoodsReady;
-using Soenneker.Ups.OpenApiClient.Dangerousgoods;
 using Soenneker.Ups.OpenApiClient.DeliveryDefense;
 using Soenneker.Ups.OpenApiClient.DeliveryDefenseReady;
 using Soenneker.Ups.OpenApiClient.DeliveryIntercept;
 using Soenneker.Ups.OpenApiClient.Forwarding;
+using Soenneker.Ups.OpenApiClient.GlobalCheckout;
 using Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance;
+using Soenneker.Ups.OpenApiClient.LandedCost;
 using Soenneker.Ups.OpenApiClient.LandedCostReady;
-using Soenneker.Ups.OpenApiClient.Landedcost;
 using Soenneker.Ups.OpenApiClient.Locator;
 using Soenneker.Ups.OpenApiClient.OAuthAuthCode;
 using Soenneker.Ups.OpenApiClient.OAuthAuthCodeReady;
@@ -30,8 +32,8 @@ using Soenneker.Ups.OpenApiClient.PickupNotificationPreferences;
 using Soenneker.Ups.OpenApiClient.PreNotification;
 using Soenneker.Ups.OpenApiClient.PreNotificationReady;
 using Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken;
+using Soenneker.Ups.OpenApiClient.QuantumView;
 using Soenneker.Ups.OpenApiClient.QuantumViewReady;
-using Soenneker.Ups.OpenApiClient.Quantumview;
 using Soenneker.Ups.OpenApiClient.Rating;
 using Soenneker.Ups.OpenApiClient.Shipping;
 using Soenneker.Ups.OpenApiClient.TimeInTransit;
@@ -56,10 +58,10 @@ namespace Soenneker.Ups.OpenApiClient
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsOpenApiClient : BaseRequestBuilder
     {
-        /// <summary>The addressvalidation property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Addressvalidation.AddressvalidationRequestBuilder Addressvalidation
+        /// <summary>The AddressValidation property</summary>
+        public global::Soenneker.Ups.OpenApiClient.AddressValidation.AddressValidationRequestBuilder AddressValidation
         {
-            get => new global::Soenneker.Ups.OpenApiClient.Addressvalidation.AddressvalidationRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Ups.OpenApiClient.AddressValidation.AddressValidationRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The AddressValidationReady property</summary>
         public global::Soenneker.Ups.OpenApiClient.AddressValidationReady.AddressValidationReadyRequestBuilder AddressValidationReady
@@ -71,10 +73,15 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.CommerceGuard.CommerceGuardRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The dangerousgoods property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Dangerousgoods.DangerousgoodsRequestBuilder Dangerousgoods
+        /// <summary>The CustomsDetailV2 property</summary>
+        public global::Soenneker.Ups.OpenApiClient.CustomsDetailV2.CustomsDetailV2RequestBuilder CustomsDetailV2
         {
-            get => new global::Soenneker.Ups.OpenApiClient.Dangerousgoods.DangerousgoodsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Ups.OpenApiClient.CustomsDetailV2.CustomsDetailV2RequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The DangerousGoods property</summary>
+        public global::Soenneker.Ups.OpenApiClient.DangerousGoods.DangerousGoodsRequestBuilder DangerousGoods
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.DangerousGoods.DangerousGoodsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The DangerousGoodsReady property</summary>
         public global::Soenneker.Ups.OpenApiClient.DangerousGoodsReady.DangerousGoodsReadyRequestBuilder DangerousGoodsReady
@@ -101,15 +108,20 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.Forwarding.ForwardingRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The GlobalCheckout property</summary>
+        public global::Soenneker.Ups.OpenApiClient.GlobalCheckout.GlobalCheckoutRequestBuilder GlobalCheckout
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.GlobalCheckout.GlobalCheckoutRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The InteractiveDescriptionGuidance property</summary>
         public global::Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance.InteractiveDescriptionGuidanceRequestBuilder InteractiveDescriptionGuidance
         {
             get => new global::Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance.InteractiveDescriptionGuidanceRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The landedcost property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Landedcost.LandedcostRequestBuilder Landedcost
+        /// <summary>The LandedCost property</summary>
+        public global::Soenneker.Ups.OpenApiClient.LandedCost.LandedCostRequestBuilder LandedCost
         {
-            get => new global::Soenneker.Ups.OpenApiClient.Landedcost.LandedcostRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Ups.OpenApiClient.LandedCost.LandedCostRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The LandedCostReady property</summary>
         public global::Soenneker.Ups.OpenApiClient.LandedCostReady.LandedCostReadyRequestBuilder LandedCostReady
@@ -176,17 +188,17 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken.ProtectedDeliveryTokenRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The quantumview property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Quantumview.QuantumviewRequestBuilder Quantumview
+        /// <summary>The QuantumView property</summary>
+        public global::Soenneker.Ups.OpenApiClient.QuantumView.QuantumViewRequestBuilder QuantumView
         {
-            get => new global::Soenneker.Ups.OpenApiClient.Quantumview.QuantumviewRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Ups.OpenApiClient.QuantumView.QuantumViewRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The QuantumViewReady property</summary>
         public global::Soenneker.Ups.OpenApiClient.QuantumViewReady.QuantumViewReadyRequestBuilder QuantumViewReady
         {
             get => new global::Soenneker.Ups.OpenApiClient.QuantumViewReady.QuantumViewReadyRequestBuilder(PathParameters, RequestAdapter);
         }
-        /// <summary>The rating property</summary>
+        /// <summary>The Rating property</summary>
         public global::Soenneker.Ups.OpenApiClient.Rating.RatingRequestBuilder Rating
         {
             get => new global::Soenneker.Ups.OpenApiClient.Rating.RatingRequestBuilder(PathParameters, RequestAdapter);
@@ -259,11 +271,6 @@ namespace Soenneker.Ups.OpenApiClient
             ApiClientBuilder.RegisterDefaultDeserializer<JsonParseNodeFactory>();
             ApiClientBuilder.RegisterDefaultDeserializer<TextParseNodeFactory>();
             ApiClientBuilder.RegisterDefaultDeserializer<FormParseNodeFactory>();
-            if (string.IsNullOrEmpty(RequestAdapter.BaseUrl))
-            {
-                RequestAdapter.BaseUrl = "https://wwwcie.ups.com/api";
-            }
-            PathParameters.TryAdd("baseurl", RequestAdapter.BaseUrl);
         }
     }
 }

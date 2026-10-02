@@ -281,15 +281,8 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
             public string Language { get; set; }
 #endif
             /// <summary>The current date of the shipment(s).  Defaults to today if not provided. Required for moving all open shipments to a new date.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("old_date")]
-            public string? OldDate { get; set; }
-#nullable restore
-#else
-            [QueryParameter("old_date")]
-            public string OldDate { get; set; }
-#endif
+            public Date? OldDate { get; set; }
             /// <summary>Unique order number. Required for individual order updates. All orders for the shipper will be updated if this value is not provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

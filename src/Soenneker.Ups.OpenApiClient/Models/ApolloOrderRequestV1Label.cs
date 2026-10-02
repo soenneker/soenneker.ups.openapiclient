@@ -9,9 +9,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloOrderRequestV1Label : IParsable
+    public partial class ApolloOrderRequestV1Label : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Unbounded array of additional key-value pair objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -35,6 +37,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public ApolloOrderRequestV1Label()
         {
+            AdditionalData = new Dictionary<string, object>();
             Layout = "AF-GEMINI";
         }
         /// <summary>
@@ -70,6 +73,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1LabelFormat>("format", Format);
             writer.WriteStringValue("layout", Layout);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

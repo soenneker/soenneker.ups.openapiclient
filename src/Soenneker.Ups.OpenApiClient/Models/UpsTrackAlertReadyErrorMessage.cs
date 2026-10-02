@@ -21,10 +21,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Response container to store errors</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse Response { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessage"/> and sets the default values.
@@ -51,7 +51,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse>(global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse>(global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessageResponse>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorMessageResponse>("response", Response);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

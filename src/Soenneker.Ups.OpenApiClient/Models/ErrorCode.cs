@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// This object contains error codes, error descriptions and other error properties.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ErrorCode : IParsable
+    public partial class ErrorCode : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The error code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Description of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescription? Description { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescription Description { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty Description { get; set; }
 #endif
         /// <summary>The path to the field causing the error as returned from the API backend services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,6 +58,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string Value { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ErrorCode"/> and sets the default values.
+        /// </summary>
+        public ErrorCode()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ErrorCode"/></returns>
@@ -74,7 +83,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescription>(global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescription.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty>(global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty.CreateFromDiscriminatorValue); } },
                 { "field", n => { Field = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeType>(); } },
@@ -89,11 +98,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescription>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty>("description", Description);
             writer.WriteStringValue("field", Field);
             writer.WriteStringValue("message", Message);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeType>("type", Type);
             writer.WriteStringValue("value", Value);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// The API request used to print a Manifest
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloPrintManifestRequestV1 : IParsable
+    public partial class ApolloPrintManifestRequestV1 : IAdditionalDataHolder, IParsable
     {
         /// <summary>The UPS Freight Account Number that identifies the Shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -21,6 +21,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string AccountNumber { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The language/culture that is being used for the API</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -44,6 +46,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public ApolloPrintManifestRequestV1()
         {
+            AdditionalData = new Dictionary<string, object>();
             Language = "en-US";
         }
         /// <summary>
@@ -81,6 +84,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("language", Language);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat>("manifestFormat", ManifestFormat);
             writer.WriteStringValue("manifestNumber", ManifestNumber);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

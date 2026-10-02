@@ -9,9 +9,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApolloItemV1 : IParsable
+    public partial class ApolloItemV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A total number of this item</summary>
         public int? Count { get; set; }
         /// <summary>Unbounded array of additional key-value pair objects</summary>
@@ -38,6 +40,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public float? Weight { get; set; }
         /// <summary>Width of this item</summary>
         public float? Width { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloItemV1"/> and sets the default values.
+        /// </summary>
+        public ApolloItemV1()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -79,6 +88,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteFloatValue("length", Length);
             writer.WriteFloatValue("weight", Weight);
             writer.WriteFloatValue("width", Width);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

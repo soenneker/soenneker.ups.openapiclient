@@ -15,13 +15,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Comprehensive primary information about the shipment including all tracking details.</summary>
+        /// <summary>Primary information and detailed tracking data for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformation? PrimaryInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation? PrimaryInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformation PrimaryInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation PrimaryInformation { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1Response"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "primaryInformation", n => { PrimaryInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformation>(global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformation.CreateFromDiscriminatorValue); } },
+                { "primaryInformation", n => { PrimaryInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation>(global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformation>("primaryInformation", PrimaryInformation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation>("primaryInformation", PrimaryInformation);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -8,11 +8,27 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2"/>, <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2? DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2 DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2? DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2 DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,22 +36,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1 DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper? DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2? DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2 DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,9 +46,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom();
+            result.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2 = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2();
+            result.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2 = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2();
             result.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1 = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1();
-            result.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper();
-            result.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2 = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2();
             return result;
         }
         /// <summary>
@@ -57,9 +57,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1 != null || DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper != null || DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2 != null)
+            if(DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2 != null || DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2 != null || DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1>(null, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomWrapper2);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2>(null, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1Wrapper2, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2Wrapper2, DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomMember1);
         }
     }
 }

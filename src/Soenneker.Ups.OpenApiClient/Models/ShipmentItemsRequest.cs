@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// This object provides a detailed response for each individual commodity within a shipment
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ShipmentItemsRequest : IParsable
+    public partial class ShipmentItemsRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total value of the items in the shipment.</summary>
         public double? AmountValue { get; set; }
         /// <summary>The commodity ID returned in the Import Export Compliance report.</summary>
@@ -24,7 +26,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string CommodityId { get; set; }
 #endif
         /// <summary>The three-letter code that represents the currency used to value the items in the shipment.| Supported enum values        || :--------------------------- || `ARS`&lt;br&gt;Argentine Peso      || `AUD`&lt;br&gt;Australian Dollar   || `BRL`&lt;br&gt;Brazilian Real      || `CAD`&lt;br&gt;Canadian Dollar     || `CHF`&lt;br&gt;Swiss Franc         || `CLP`&lt;br&gt;Chilean Peso        || `CNY`&lt;br&gt;Chinese Yuan        || `CRC`&lt;br&gt;Costa Rican Colon   || `DKK`&lt;br&gt;Danish Krone        || `DOP`&lt;br&gt;Dominican Peso      || `EUR`&lt;br&gt;Euro                || `GBP`&lt;br&gt;Great Britain Pound || `HKD`&lt;br&gt;Hong Kong Dollar    || `INR`&lt;br&gt;India Rupee         || `JPY`&lt;br&gt;Japanese Yen        || `KRW`&lt;br&gt;Korean Won          || `MXN`&lt;br&gt;Mexican Peso        || `MYR`&lt;br&gt;Malaysian Ringgit   || `NOK`&lt;br&gt;Norwegian Kroner    || `NZD`&lt;br&gt;New Zealand Dollar  || `PEN`&lt;br&gt;Peruvian Nuevo Sol  || `PHP`&lt;br&gt;Philippine Peso     || `PLN`&lt;br&gt;Polish Zloty        || `SEK`&lt;br&gt;Swedish Krona       || `SGD`&lt;br&gt;Singapore Dollar    || `THB`&lt;br&gt;Thai Baht           || `TWD`&lt;br&gt;Taiwan Dollar       || `USD`&lt;br&gt;US Dollar           || `VEB`&lt;br&gt;Venezuelan Bolivar  |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.CurrencyCodes? CurrencyCode { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestCurrencyCode? CurrencyCode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestCurrencyCode CurrencyCode { get; set; }
+#endif
         /// <summary>A description of the shipment item listed in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,6 +70,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The unit of measurement for the quantity of shipment items</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom? UOM { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest"/> and sets the default values.
+        /// </summary>
+        public ShipmentItemsRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest"/></returns>
@@ -81,7 +96,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "amountValue", n => { AmountValue = n.GetDoubleValue(); } },
                 { "commodityId", n => { CommodityId = n.GetStringValue(); } },
-                { "currencyCode", n => { CurrencyCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CurrencyCodes>(); } },
+                { "currencyCode", n => { CurrencyCode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestCurrencyCode>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestCurrencyCode.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "eccn", n => { Eccn = n.GetStringValue(); } },
                 { "hsCode", n => { HsCode = n.GetStringValue(); } },
@@ -99,13 +114,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("amountValue", AmountValue);
             writer.WriteStringValue("commodityId", CommodityId);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CurrencyCodes>("currencyCode", CurrencyCode);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestCurrencyCode>("currencyCode", CurrencyCode);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("eccn", Eccn);
             writer.WriteStringValue("hsCode", HsCode);
             writer.WriteStringValue("originCountryCode", OriginCountryCode);
             writer.WriteDoubleValue("quantity", Quantity);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom>("UOM", UOM);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

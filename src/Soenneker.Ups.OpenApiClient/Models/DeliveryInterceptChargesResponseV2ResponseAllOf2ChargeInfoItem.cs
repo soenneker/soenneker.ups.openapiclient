@@ -9,7 +9,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem : IParsable
+    public partial class DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The accessorialCharge property</summary>
@@ -20,6 +20,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string AccessorialCharge { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Additional handling indicator. May be set by NRF during rating.</summary>
         public bool? AdditionalHandlingIndicator { get; set; }
         /// <summary>The &lt;a href=&quot;https://www.iso.org/iso-4217-currency-codes.html&quot; target=&quot;_blank&quot;&gt;ISO 4217&lt;/a&gt; currency code</summary>
@@ -191,6 +193,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// </summary>
         public DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem()
         {
+            AdditionalData = new Dictionary<string, object>();
             AdditionalHandlingIndicator = false;
             ChargesPaidByThirdPartyShipper = false;
             DisplayShipperPaidInterceptCharges = false;
@@ -280,6 +283,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("totalTax", TotalTax);
             writer.WriteStringValue("trackingNumber", TrackingNumber);
             writer.WriteStringValue("transportationCharge", TransportationCharge);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

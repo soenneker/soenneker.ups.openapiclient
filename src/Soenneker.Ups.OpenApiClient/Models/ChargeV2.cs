@@ -9,9 +9,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ChargeV2 : IParsable
+    public partial class ChargeV2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Amount to be charged for a transaction.</summary>
         public double? ChargeAmount { get; set; }
         /// <summary>Type of charge associated with the transaction.</summary>
@@ -38,6 +40,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChargeV2"/> and sets the default values.
+        /// </summary>
+        public ChargeV2()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -73,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("chargeType", ChargeType);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

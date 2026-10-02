@@ -11,8 +11,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// This object provides a detailed response for each individual commodity within a shipment
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ShipmentItemsResponse : IParsable
+    public partial class ShipmentItemsResponse : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commodity ID returned in the Import Export Compliance report.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,10 +34,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This object contains the system&apos;s results to a request for Description Guidance</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DescriptionGuidanceResponse? DescriptionGuidance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance? DescriptionGuidance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DescriptionGuidanceResponse DescriptionGuidance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance DescriptionGuidance { get; set; }
 #endif
         /// <summary>The [Harmonized System (HS) code](https://www.trade.gov/harmonized-system-hs-codes). Used commonly throughout the export process for goods, the Harmonized System is a standardized numerical method of classifying traded products. It is used by customs authorities to identify products when assessing duties and taxes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,11 +50,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This object includes details of the Import Export Compliance assessment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponse? ImportExportCompliance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance? ImportExportCompliance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponse ImportExportCompliance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance ImportExportCompliance { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponse"/> and sets the default values.
+        /// </summary>
+        public ShipmentItemsResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -73,9 +82,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "commodityId", n => { CommodityId = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "descriptionGuidance", n => { DescriptionGuidance = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DescriptionGuidanceResponse>(global::Soenneker.Ups.OpenApiClient.Models.DescriptionGuidanceResponse.CreateFromDiscriminatorValue); } },
+                { "descriptionGuidance", n => { DescriptionGuidance = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance.CreateFromDiscriminatorValue); } },
                 { "hsCode", n => { HsCode = n.GetStringValue(); } },
-                { "importExportCompliance", n => { ImportExportCompliance = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponse>(global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponse.CreateFromDiscriminatorValue); } },
+                { "importExportCompliance", n => { ImportExportCompliance = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,9 +96,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("commodityId", CommodityId);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DescriptionGuidanceResponse>("descriptionGuidance", DescriptionGuidance);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance>("descriptionGuidance", DescriptionGuidance);
             writer.WriteStringValue("hsCode", HsCode);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponse>("importExportCompliance", ImportExportCompliance);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance>("importExportCompliance", ImportExportCompliance);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

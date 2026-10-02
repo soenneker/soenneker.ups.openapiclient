@@ -208,7 +208,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Quotes
 #endif
             /// <summary>The type of quote (&quot;Air&quot; or &quot;Ocean&quot;).</summary>
             [QueryParameter("request_type")]
-            public global::Soenneker.Ups.OpenApiClient.Models.ForwardingGetQuoteDetailsRequestTypeParameter? RequestType { get; set; }
+            public global::Soenneker.Ups.OpenApiClient.Models.GetQuoteDetailsRequestTypeParameter? RequestType { get; set; }
         }
     }
 }

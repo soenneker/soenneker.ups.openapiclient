@@ -41,10 +41,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Notification indicators container. Notifications can be sent in email or/and SMS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators? NotificationIndicators { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItemNotificationIndicators? NotificationIndicators { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators NotificationIndicators { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItemNotificationIndicators NotificationIndicators { get; set; }
 #endif
         /// <summary>System generated id that represents the version of the document.</summary>
         public long? VersionNumber { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "accountNumber", n => { AccountNumber = n.GetStringValue(); } },
                 { "emails", n => { Emails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
-                { "notificationIndicators", n => { NotificationIndicators = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators>(global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators.CreateFromDiscriminatorValue); } },
+                { "notificationIndicators", n => { NotificationIndicators = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItemNotificationIndicators>(global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItemNotificationIndicators.CreateFromDiscriminatorValue); } },
                 { "versionNumber", n => { VersionNumber = n.GetLongValue(); } },
             };
         }
@@ -90,7 +90,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("accountNumber", AccountNumber);
             writer.WriteCollectionOfPrimitiveValues<string>("emails", Emails);
             writer.WriteStringValue("locale", Locale);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicators>("notificationIndicators", NotificationIndicators);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccountPickupGetResponseAllOf2PayloadItemNotificationIndicators>("notificationIndicators", NotificationIndicators);
             writer.WriteLongValue("versionNumber", VersionNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

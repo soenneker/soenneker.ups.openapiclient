@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A list of label detail fields and values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty? Details { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty Details { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2 Details { get; set; }
 #endif
         /// <summary>The output format for the label (e.g., PDF, ZPL, SVG).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty>(global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2>(global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2.CreateFromDiscriminatorValue); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2>("details", Details);
             writer.WriteStringValue("format", Format);
             writer.WriteStringValue("layout", Layout);
             writer.WriteAdditionalData(AdditionalData);
