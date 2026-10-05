@@ -88671,7 +88671,7 @@
             "maxLength": 20,
             "minLength": 1,
             "type": "string",
-            "description": "A reason to export the current international shipment.\nValid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice. No validation."
+            "description": "A reason to export the current international shipment.\nValid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice. Required for EU Inbound shipments."
           },
           "Comments": {
             "maximum": 1,
@@ -89987,6 +89987,19 @@
             "type": "string",
             "description": "Invoice Commodity Level Tax Collected Code for each shipment commodity line.Taxes paid Indicator is only applicable for shipments to Singapore. [TaxesPaid = 0 - No on Report], [TaxesPaid = 1 -Yes on Report], [TaxesPaid = empty - null on Report], [If TaxesPaid is not passed in input request = null on Report]"
           },
+          "ProductIdentifierExemptIndicator": {
+            "type": "boolean",
+            "description": "If the exemption indicator is set to true, the Product Identifiers are optional and not required. Valid values are true/false. Conditionally Required for EU Inbound shipments.",
+            "default": false
+          },
+          "ProductIdentifier": {
+            "maximum": 6,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InternationalFormsProductIdentifier"
+            },
+            "description": "The Product Identifier array contains the following pair of fields<br/>1) Product ID<br/>2) Product ID Type Code. <br/>Required if ProductIdentifierExemptIndicator is false. Conditionally Required for EU Inbound shipments."
+          },
           "ExcludeFromForm": {
             "description": "Container tag for determining whether or not to exclude product information from a particular form.  If this container is not present we assume that the DEFAULT is selected which is \"none\" and all products will appear on all forms.",
             "$ref": "#/components/schemas/ProductExcludeFromForm"
@@ -90067,6 +90080,23 @@
         "xml": {
           "name": "UnitOfMeasurement"
         }
+      },
+      "InternationalFormsProductIdentifier": {
+        "type": "object",
+        "properties": {
+          "ProductID": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "A generic field that can contain any type of product identifier used to specify a commodity/product. Every Product ID field must have a corresponding Product ID Type Code field to specify the type of product identifier it contains. This field can hold any one of the defined Product Identifiers - Merchant Product Identifier, Manufacturer Product Identifier and Standardized Product Identifier. Conditionally Required for EU Inbound shipments."
+          },
+          "ProductIDTypeCode": {
+            "maxLength": 4,
+            "minLength": 4,
+            "type": "string",
+            "description": "A code that specifies the type of product identifier in the Product ID field. Conditionally Required for EU Inbound shipments.<br/>Valid values<br/>0100 = Merchant Product Identifier<br/>0200 = Manufacturer Product Identifier<br/>0300 = Standardized Product Identifier."
+          }
+        },
+        "description": "Container for Product Identifier information."
       },
       "ProductNetCostDateRange": {
         "maximum": 1,
