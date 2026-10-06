@@ -34,12 +34,14 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
         {
         }
         /// <summary>
-        /// This returns an array of fields that are required for the provided import and/or export country
+        /// Retrieve the customs data requirements for a shipment based on the specified import and/or export countries. The response identifies the customs fields that may be required to support customs clearance, regulatory compliance, and government agency reporting. Use this endpoint to determine the latest required and conditional data elements before submitting customs information.**Note:** Regulatory requirements change frequently. Always use the GET response as the source of truth for the most current customs field requirements.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,20 +56,23 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This endpoint will provide the ability to validate and/or submit the additional field information for a shipment
+        /// Validate and submit customs information for a shipment. This endpoint allows you to verify that the provided customs data meets current regulatory and business requirements before submission. When validation is successful, the customs details can be submitted for use in customs clearance and compliance processing.**Note:** The customs data requirements may vary by country and change over time. Use the **Get Customs Requirements** endpoint to retrieve the latest required and conditional fields before submitting customs information.
         /// </summary>
         /// <param name="body">Container for the posting of field data</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,13 +90,14 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
             {
                 { "400", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This returns an array of fields that are required for the provided import and/or export country
+        /// Retrieve the customs data requirements for a shipment based on the specified import and/or export countries. The response identifies the customs fields that may be required to support customs clearance, regulatory compliance, and government agency reporting. Use this endpoint to determine the latest required and conditional data elements before submitting customs information.**Note:** Regulatory requirements change frequently. Always use the GET response as the source of truth for the most current customs field requirements.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -110,7 +116,7 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
             return requestInfo;
         }
         /// <summary>
-        /// This endpoint will provide the ability to validate and/or submit the additional field information for a shipment
+        /// Validate and submit customs information for a shipment. This endpoint allows you to verify that the provided customs data meets current regulatory and business requirements before submission. When validation is successful, the customs details can be submitted for use in customs clearance and compliance processing.**Note:** The customs data requirements may vary by country and change over time. Use the **Get Customs Requirements** endpoint to retrieve the latest required and conditional fields before submitting customs information.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Container for the posting of field data</param>
@@ -141,7 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
             return new global::Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDetail.CustomsDetailRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This returns an array of fields that are required for the provided import and/or export country
+        /// Retrieve the customs data requirements for a shipment based on the specified import and/or export countries. The response identifies the customs fields that may be required to support customs clearance, regulatory compliance, and government agency reporting. Use this endpoint to determine the latest required and conditional data elements before submitting customs information.**Note:** Regulatory requirements change frequently. Always use the GET response as the source of truth for the most current customs field requirements.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CustomsDetailRequestBuilderGetQueryParameters 

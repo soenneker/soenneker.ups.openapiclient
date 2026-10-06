@@ -24,7 +24,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>The sequence number of the product line item on the commercial invoice. Use this field to identify which invoice line item the customs detail data applies to. For example, enter 1 for the first invoice line item, 2 for the second invoice line item, and so on. This helps correlate customs detail data with the correct product, shipment data, and customs declaration.</summary>
         public int? LineNumber { get; set; }
-        /// <summary>The description of the product</summary>
+        /// <summary>Provide a clear and accurate description of the product exactly as it appears on the Commercial Invoice and any other applicable international shipping documents. The description should clearly identify the item and, when relevant, its intended use. Avoid generic terms such as parts, samples, goods, accessories, or merchandise, as these descriptions may not provide sufficient detail for customs authorities and could result in clearance delays or requests for additional information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProductDescription { get; set; }

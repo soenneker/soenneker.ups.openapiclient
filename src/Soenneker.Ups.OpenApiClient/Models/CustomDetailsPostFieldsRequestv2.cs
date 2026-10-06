@@ -35,7 +35,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ImportCountryCode { get; set; }
 #endif
-        /// <summary>The form group ID for the current generated invoice available in IFC.</summary>
+        /// <summary>Unique identifier returned by UPS Ship API for an invoice and international forms package.Pass the FormGroupId value from the Ship API response to Customs Detail API to update the generated Commercial Invoice with details passed in Customs Detail API.**Note:** This value is only available when the shipment includes international forms and the Ship API response contains a Form object with Code = &quot;01&quot;. Pass the Ship API Form.FormGroupId value here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InvoiceFormGroupId { get; set; }
@@ -83,7 +83,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ShipperNumber { get; set; }
 #endif
-        /// <summary>The lead 1Z number fore the shipment. Required when actionType is save.</summary>
+        /// <summary>The lead 1Z number for the shipment. Required when actionType is save.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TrackingNumber { get; set; }

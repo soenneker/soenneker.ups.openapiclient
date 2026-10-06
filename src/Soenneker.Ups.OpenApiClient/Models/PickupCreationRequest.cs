@@ -87,6 +87,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public List<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece> PickupPiece { get; set; }
 #endif
+        /// <summary>Indicates that the pickup includes one or more Premier service package.Accepted values:- Y = Includes Premier-eligible packages- N = Does not include Premier-eligible packages (default)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PremierIndicator { get; set; }
+#nullable restore
+#else
+        public string PremierIndicator { get; set; }
+#endif
         /// <summary>Rate Type with which pickup is rated. Possible RateChart values for different regions will be:US 48 origin:- 1 – Daily Rates- 3 – Standard List Rates- 4 – Retail Rates. Alaska/Hawaii origin:- 1 – Daily Rates- 3 – Standard List Rates- 4 – Retail Rates.All Other origins:- 1 – Rates- 5 - Regional Rates- 6 - General List Rates.3 and 4 do not apply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -225,6 +233,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "PickupAddress", n => { PickupAddress = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupAddress>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupAddress.CreateFromDiscriminatorValue); } },
                 { "PickupDateInfo", n => { PickupDateInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupDateInfo>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupDateInfo.CreateFromDiscriminatorValue); } },
                 { "PickupPiece", n => { PickupPiece = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece>(global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "PremierIndicator", n => { PremierIndicator = n.GetStringValue(); } },
                 { "RateChartType", n => { RateChartType = n.GetStringValue(); } },
                 { "RatePickupIndicator", n => { RatePickupIndicator = n.GetStringValue(); } },
                 { "ReferenceNumber", n => { ReferenceNumber = n.GetStringValue(); } },
@@ -256,6 +265,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupAddress>("PickupAddress", PickupAddress);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupDateInfo>("PickupDateInfo", PickupDateInfo);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestPickupPiece>("PickupPiece", PickupPiece);
+            writer.WriteStringValue("PremierIndicator", PremierIndicator);
             writer.WriteStringValue("RateChartType", RateChartType);
             writer.WriteStringValue("RatePickupIndicator", RatePickupIndicator);
             writer.WriteStringValue("ReferenceNumber", ReferenceNumber);

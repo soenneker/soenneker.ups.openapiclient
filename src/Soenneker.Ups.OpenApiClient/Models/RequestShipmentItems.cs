@@ -30,7 +30,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string CommodityId { get; set; }
 #endif
-        /// <summary>This field is populated with description of the commodity. This field is required if hsCode is not provided.</summary>
+        /// <summary>This field is populated with description of the commodity. The field is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string GrossWeightUnit { get; set; }
 #endif
-        /// <summary>Specifies a valid HS or HTS code for the shipment&apos;s destination or import country. This field is required if description is not provided.</summary>
+        /// <summary>Specifies a valid HS or HTS code for the shipment&apos;s destination or import country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsCode { get; set; }
