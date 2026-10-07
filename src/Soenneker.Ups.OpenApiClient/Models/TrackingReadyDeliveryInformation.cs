@@ -11,7 +11,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// Container with all information related to the delivery of the package. Populated only when the package is delivered.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class DeliveryInformation : IAdditionalDataHolder, IParsable
+    public partial class TrackingReadyDeliveryInformation : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -56,21 +56,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.Signature Signature { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation"/> and sets the default values.
         /// </summary>
-        public DeliveryInformation()
+        public TrackingReadyDeliveryInformation()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation();
+            return new global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation();
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -73,10 +73,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container with all information related to the delivery of the package. Populated only when the package is delivered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation? DeliveryInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation? DeliveryInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation DeliveryInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation DeliveryInformation { get; set; }
 #endif
         /// <summary>The container which has all delivery times associated with the package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,10 +133,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The container which has the package service information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Service? Service { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyService? Service { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Service Service { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyService Service { get; set; }
 #endif
         /// <summary>The statusCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -218,7 +218,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "alternateTrackingNumber", n => { AlternateTrackingNumber = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AlternateTrackingNumber>(global::Soenneker.Ups.OpenApiClient.Models.AlternateTrackingNumber.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "currentStatus", n => { CurrentStatus = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Status>(global::Soenneker.Ups.OpenApiClient.Models.Status.CreateFromDiscriminatorValue); } },
                 { "deliveryDate", n => { DeliveryDate = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryDate>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryDate.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "deliveryInformation", n => { DeliveryInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation.CreateFromDiscriminatorValue); } },
+                { "deliveryInformation", n => { DeliveryInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation>(global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation.CreateFromDiscriminatorValue); } },
                 { "deliveryTime", n => { DeliveryTime = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTime>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryTime.CreateFromDiscriminatorValue); } },
                 { "dimension", n => { Dimension = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Dimension>(global::Soenneker.Ups.OpenApiClient.Models.Dimension.CreateFromDiscriminatorValue); } },
                 { "isSmartPackage", n => { IsSmartPackage = n.GetBoolValue(); } },
@@ -227,7 +227,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "packageCount", n => { PackageCount = n.GetIntValue(); } },
                 { "paymentInformation", n => { PaymentInformation = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentInformation>(global::Soenneker.Ups.OpenApiClient.Models.PaymentInformation.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "referenceNumber", n => { ReferenceNumber = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ReferenceNumber>(global::Soenneker.Ups.OpenApiClient.Models.ReferenceNumber.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "service", n => { Service = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Service>(global::Soenneker.Ups.OpenApiClient.Models.Service.CreateFromDiscriminatorValue); } },
+                { "service", n => { Service = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyService>(global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyService.CreateFromDiscriminatorValue); } },
                 { "statusCode", n => { StatusCode = n.GetStringValue(); } },
                 { "statusDescription", n => { StatusDescription = n.GetStringValue(); } },
                 { "suppressionIndicators", n => { SuppressionIndicators = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -250,7 +250,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AlternateTrackingNumber>("alternateTrackingNumber", AlternateTrackingNumber);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Status>("currentStatus", CurrentStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryDate>("deliveryDate", DeliveryDate);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformation>("deliveryInformation", DeliveryInformation);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyDeliveryInformation>("deliveryInformation", DeliveryInformation);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTime>("deliveryTime", DeliveryTime);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Dimension>("dimension", Dimension);
             writer.WriteBoolValue("isSmartPackage", IsSmartPackage);
@@ -259,7 +259,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteIntValue("packageCount", PackageCount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentInformation>("paymentInformation", PaymentInformation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ReferenceNumber>("referenceNumber", ReferenceNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Service>("service", Service);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyService>("service", Service);
             writer.WriteStringValue("statusCode", StatusCode);
             writer.WriteStringValue("statusDescription", StatusDescription);
             writer.WriteCollectionOfPrimitiveValues<string>("suppressionIndicators", SuppressionIndicators);

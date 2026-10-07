@@ -143,6 +143,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ProducerInfo { get; set; }
 #endif
+        /// <summary>The Product Identifier array contains the following pair of fields&lt;br/&gt;1) Product ID&lt;br/&gt;2) Product ID Type Code. &lt;br/&gt;Required if ProductIdentifierExemptIndicator is false. Conditionally Required for EU Inbound shipments.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier>? ProductIdentifier { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier> ProductIdentifier { get; set; }
+#endif
+        /// <summary>If the exemption indicator is set to true, the Product Identifiers are optional and not required. Valid values are true/false. Conditionally Required for EU Inbound shipments.</summary>
+        public bool? ProductIdentifierExemptIndicator { get; set; }
         /// <summary>The shipping weight, including containers, for each commodity with a separate Harmonized Tariff Code / Schedule B Number. This weight does not include carrier equipment.  Applies to CO and EEI forms only. Required for CO and EEI forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -197,6 +207,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public InternationalFormsProduct()
         {
             AdditionalData = new Dictionary<string, object>();
+            ProductIdentifierExemptIndicator = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -232,6 +243,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "PartNumber", n => { PartNumber = n.GetStringValue(); } },
                 { "PreferenceCriteria", n => { PreferenceCriteria = n.GetStringValue(); } },
                 { "ProducerInfo", n => { ProducerInfo = n.GetStringValue(); } },
+                { "ProductIdentifier", n => { ProductIdentifier = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier>(global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ProductIdentifierExemptIndicator", n => { ProductIdentifierExemptIndicator = n.GetBoolValue(); } },
                 { "ProductWeight", n => { ProductWeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight>(global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight.CreateFromDiscriminatorValue); } },
                 { "SEDTotalValue", n => { SEDTotalValue = n.GetStringValue(); } },
                 { "ScheduleB", n => { ScheduleB = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB>(global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB.CreateFromDiscriminatorValue); } },
@@ -263,6 +276,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("PartNumber", PartNumber);
             writer.WriteStringValue("PreferenceCriteria", PreferenceCriteria);
             writer.WriteStringValue("ProducerInfo", ProducerInfo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier>("ProductIdentifier", ProductIdentifier);
+            writer.WriteBoolValue("ProductIdentifierExemptIndicator", ProductIdentifierExemptIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight>("ProductWeight", ProductWeight);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB>("ScheduleB", ScheduleB);
             writer.WriteStringValue("SEDTotalValue", SEDTotalValue);
