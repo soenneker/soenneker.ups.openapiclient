@@ -2,7 +2,7 @@
   "descriptionHash": "6981CEA7F31D6A4AA011EA70D159B3E4780AE9AAE97139F2570254C56674DDBB6ECD9402FB949CECD9E5AF69717C4B4E9CFB2A21B93B5084FA672F08612D23D8",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.35.0",
+  "kiotaVersion": "1.36.0",
   "clientClassName": "UpsOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Ups.OpenApiClient",
