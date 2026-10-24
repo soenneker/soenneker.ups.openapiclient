@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Locator.Locations
     public partial class LocationsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.Locator.locations.item collection</summary>
-        /// <param name="position">Version of APIValid values:- v3</param>
+        /// <param name="position">Version of APIValid values:- v3Version of APIValid values:- v1</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.WithVersionItemRequestBuilder this[string position]
         {

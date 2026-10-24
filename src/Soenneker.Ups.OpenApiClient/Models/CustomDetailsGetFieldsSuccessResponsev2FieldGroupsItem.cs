@@ -17,10 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The additionalProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemAdditionalPropertiesProperty2? AdditionalProperties { get; set; }
+        public UntypedNode? AdditionalProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemAdditionalPropertiesProperty2 AdditionalProperties { get; set; }
+        public UntypedNode AdditionalProperties { get; set; }
 #endif
         /// <summary>The &lt;a href=&quot;https://www.iso.org/iso-3166-country-codes.html&quot; target=&quot;_blank&quot;&gt;ISO 3166&lt;/a&gt; country or territory code the fields pertain to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,7 +119,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additionalProperties", n => { AdditionalProperties = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemAdditionalPropertiesProperty2>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemAdditionalPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "additionalProperties", n => { AdditionalProperties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
                 { "countryName", n => { CountryName = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetStringValue(); } },
@@ -138,7 +138,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemAdditionalPropertiesProperty2>("additionalProperties", AdditionalProperties);
+            writer.WriteObjectValue<UntypedNode>("additionalProperties", AdditionalProperties);
             writer.WriteStringValue("countryCode", CountryCode);
             writer.WriteStringValue("countryName", CountryName);
             writer.WriteStringValue("details", Details);

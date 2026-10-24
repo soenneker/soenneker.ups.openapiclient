@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Rating.Rating
     public partial class RatingRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.Rating.rating.item collection</summary>
-        /// <param name="position">Indicates Rate API to display the new release features in Rate API response based on Rate release. See the New section for the latest Rate release.Valid values:- v2409</param>
+        /// <param name="position">Indicates Rate API to display the new release features in Rate API response based on Rate release. See the New section for the latest Rate release.Valid values:- v2409Indicates Rate API to display the new release features in Rate API response based on Rate release. See the New section for the latest Rate release.Valid values:- v1- v1601- v1607- 1701- 1707- v2108- v2205</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Rating.Rating.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.Rating.Rating.Item.WithVersionItemRequestBuilder this[string position]
         {

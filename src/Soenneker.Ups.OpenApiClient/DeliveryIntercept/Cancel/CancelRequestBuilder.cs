@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.DeliveryIntercept.Cancel
     public partial class CancelRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.DeliveryIntercept.cancel.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The number being tracked.  Each method defines if required.</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Cancel.Item.WithTrackingNumberItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Cancel.Item.WithTrackingNumberItemRequestBuilder this[string position]
         {

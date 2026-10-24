@@ -36,33 +36,33 @@ namespace Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabiliti
         /// <summary>
         /// The Locator API allows you to find UPS locations - such as drop-off points, retail locations, and UPS access points (third-party retail locations that offer UPS package drop-off, or delivery services). The API provides capabilities to search by location, services offered, program types, and related criteria. You can also retrieve hours of operation, location details, and additional UPS services offered at specific locations.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.Locator200Response"/></returns>
         /// <param name="body">N/A  </param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Locator400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Locator401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Locator403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.Locator429Response">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseWrapper?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabilities.Item.WithReqOptionItemRequestBuilder.WithReqOptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.Locator200Response?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabilities.Item.WithReqOptionItemRequestBuilder.WithReqOptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseWrapper> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabilities.Item.WithReqOptionItemRequestBuilder.WithReqOptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.Locator200Response> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabilities.Item.WithReqOptionItemRequestBuilder.WithReqOptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Ups.OpenApiClient.Models.LocatorErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Ups.OpenApiClient.Models.LocatorErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Ups.OpenApiClient.Models.LocatorErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Ups.OpenApiClient.Models.LocatorErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Ups.OpenApiClient.Models.Locator400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Ups.OpenApiClient.Models.Locator401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Ups.OpenApiClient.Models.Locator403Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Ups.OpenApiClient.Models.Locator429Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.Locator200Response>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.Locator200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The Locator API allows you to find UPS locations - such as drop-off points, retail locations, and UPS access points (third-party retail locations that offer UPS package drop-off, or delivery services). The API provides capabilities to search by location, services offered, program types, and related criteria. You can also retrieve hours of operation, location details, and additional UPS services offered at specific locations.
@@ -72,11 +72,11 @@ namespace Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabiliti
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabilities.Item.WithReqOptionItemRequestBuilder.WithReqOptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabilities.Item.WithReqOptionItemRequestBuilder.WithReqOptionItemRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestWrapper body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabilities.Item.WithReqOptionItemRequestBuilder.WithReqOptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabilities.Item.WithReqOptionItemRequestBuilder.WithReqOptionItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -14,19 +14,61 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataType : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,34 +79,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataType();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7Value;
-            }
             return result;
         }
         /// <summary>
@@ -73,6 +87,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -84,31 +126,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7);
             }
         }
     }

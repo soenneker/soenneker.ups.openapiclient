@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Identifies the success of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatusCode? Code { get; set; }
+        public string? Code { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatusCode Code { get; set; }
+        public string Code { get; set; }
 #endif
         /// <summary>Describes Response Status Code. Such as Success</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Code", n => { Code = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatusCode>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatusCode.CreateFromDiscriminatorValue); } },
+                { "Code", n => { Code = n.GetStringValue(); } },
                 { "Description", n => { Description = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatusCode>("Code", Code);
+            writer.WriteStringValue("Code", Code);
             writer.WriteStringValue("Description", Description);
             writer.WriteAdditionalData(AdditionalData);
         }

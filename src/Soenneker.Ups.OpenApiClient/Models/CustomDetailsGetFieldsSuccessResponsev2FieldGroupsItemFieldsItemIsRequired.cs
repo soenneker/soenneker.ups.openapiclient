@@ -14,11 +14,29 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,18 +47,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3Value;
-            }
             return result;
         }
         /// <summary>
@@ -49,6 +55,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -60,15 +78,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3);
             }
         }
     }

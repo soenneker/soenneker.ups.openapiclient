@@ -14,15 +14,45 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1? ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1 ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2? ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2 ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3? ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3 ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4? ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4 ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5? ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5 ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -33,26 +63,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1 viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1Value)
-            {
-                result.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1 = viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2 viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2Value)
-            {
-                result.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2 = viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3 viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3Value)
-            {
-                result.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3 = viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4>() is global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4 viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4Value)
-            {
-                result.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4 = viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5>() is global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5 viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5Value)
-            {
-                result.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5 = viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5Value;
-            }
             return result;
         }
         /// <summary>
@@ -61,6 +71,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1 != null)
+            {
+                return ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1.GetFieldDeserializers();
+            }
+            else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2 != null)
+            {
+                return ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2.GetFieldDeserializers();
+            }
+            else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3 != null)
+            {
+                return ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3.GetFieldDeserializers();
+            }
+            else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4 != null)
+            {
+                return ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4.GetFieldDeserializers();
+            }
+            else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5 != null)
+            {
+                return ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -72,23 +102,23 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1);
             }
             else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2);
             }
             else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3);
             }
             else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4);
             }
             else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5);
             }
         }
     }

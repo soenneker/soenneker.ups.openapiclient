@@ -34,18 +34,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Notification opt-out - a CTA/link on the transactional PU alert that takes the User to a unique landing page(determined by whether the User/Email combo have a ups.com User ID or not) so that they can opt-out of receivingthese transactional alerts for this account. Required when Action is Add or Update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator? NotificationIndicator { get; set; }
 #nullable restore
 #else
-        public string NotificationIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator NotificationIndicator { get; set; }
 #endif
         /// <summary>Smart pickup trigger when the PU event (PRN) for the Smart PU is moved from pending to scheduled. Required when Action is Add or Updtae.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmartPickupTrigger { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger? SmartPickupTrigger { get; set; }
 #nullable restore
 #else
-        public string SmartPickupTrigger { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger SmartPickupTrigger { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequest"/> and sets the default values.
@@ -74,8 +74,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "AccountInfo", n => { AccountInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo.CreateFromDiscriminatorValue); } },
                 { "Action", n => { Action = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction.CreateFromDiscriminatorValue); } },
-                { "NotificationIndicator", n => { NotificationIndicator = n.GetStringValue(); } },
-                { "SmartPickupTrigger", n => { SmartPickupTrigger = n.GetStringValue(); } },
+                { "NotificationIndicator", n => { NotificationIndicator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator.CreateFromDiscriminatorValue); } },
+                { "SmartPickupTrigger", n => { SmartPickupTrigger = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,8 +87,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo>("AccountInfo", AccountInfo);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction>("Action", Action);
-            writer.WriteStringValue("NotificationIndicator", NotificationIndicator);
-            writer.WriteStringValue("SmartPickupTrigger", SmartPickupTrigger);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator>("NotificationIndicator", NotificationIndicator);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger>("SmartPickupTrigger", SmartPickupTrigger);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

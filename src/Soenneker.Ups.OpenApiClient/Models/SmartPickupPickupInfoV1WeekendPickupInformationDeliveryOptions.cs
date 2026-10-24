@@ -14,9 +14,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptions : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1? SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1 SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2? SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2 SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -27,14 +39,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptions();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1 smartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1Value)
-            {
-                result.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1 = smartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2 smartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2Value)
-            {
-                result.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2 = smartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2Value;
-            }
             return result;
         }
         /// <summary>
@@ -43,6 +47,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1 != null)
+            {
+                return SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1.GetFieldDeserializers();
+            }
+            else if(SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2 != null)
+            {
+                return SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -54,11 +66,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1>(null, SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1>(null, SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1);
             }
             else if(SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2>(null, SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2>(null, SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2);
             }
         }
     }

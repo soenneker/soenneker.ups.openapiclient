@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.QuantumViewReady.Quantumview
     public partial class QuantumviewRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.QuantumViewReady.quantumview.item collection</summary>
-        /// <param name="position">Version of API.Valid values:- v3</param>
+        /// <param name="position">Version of API.Valid values:- v3Version of API.Valid values:- v1</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.QuantumViewReady.Quantumview.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.QuantumViewReady.Quantumview.Item.WithVersionItemRequestBuilder this[string position]
         {

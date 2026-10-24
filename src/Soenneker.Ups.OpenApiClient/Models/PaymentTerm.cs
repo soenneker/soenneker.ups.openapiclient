@@ -15,21 +15,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code representing the payment term.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCode? Code { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCode Code { get; set; }
-#endif
         /// <summary>The type of payment term (e.g., Shipper, Consignee, ThridParty).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTermType Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm"/> and sets the default values.
         /// </summary>
@@ -55,8 +43,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCode>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCode.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermType>(global::Soenneker.Ups.OpenApiClient.Models.PaymentTermType.CreateFromDiscriminatorValue); } },
+                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCode>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermType>(); } },
             };
         }
         /// <summary>
@@ -66,8 +54,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCode>("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermCode>("code", Code);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTermType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

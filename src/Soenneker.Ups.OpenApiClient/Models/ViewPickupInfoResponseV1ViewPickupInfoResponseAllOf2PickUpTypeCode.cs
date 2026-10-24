@@ -14,9 +14,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1? ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1 ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2? ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2 ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -27,14 +39,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1 viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1Value)
-            {
-                result.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1 = viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2 viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2Value)
-            {
-                result.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2 = viewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2Value;
-            }
             return result;
         }
         /// <summary>
@@ -43,6 +47,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1 != null)
+            {
+                return ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1.GetFieldDeserializers();
+            }
+            else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2 != null)
+            {
+                return ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -54,11 +66,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1);
             }
             else if(ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2>(null, ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2);
             }
         }
     }

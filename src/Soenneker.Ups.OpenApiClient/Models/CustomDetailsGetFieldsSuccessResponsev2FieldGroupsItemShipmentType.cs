@@ -14,11 +14,29 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentType : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3? CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3 CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,18 +47,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentType();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3 customDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3Value)
-            {
-                result.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3 = customDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3Value;
-            }
             return result;
         }
         /// <summary>
@@ -49,6 +55,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2.GetFieldDeserializers();
+            }
+            else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3 != null)
+            {
+                return CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -60,15 +78,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2);
             }
             else if(CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3>(null, CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3);
             }
         }
     }

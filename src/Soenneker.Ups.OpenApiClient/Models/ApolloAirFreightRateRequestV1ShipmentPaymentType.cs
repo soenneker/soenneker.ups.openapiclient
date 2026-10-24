@@ -14,11 +14,29 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class ApolloAirFreightRateRequestV1ShipmentPaymentType : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1? ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1 ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2? ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2 ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3? ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3 ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,18 +47,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentType();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1 apolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1Value)
-            {
-                result.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1 = apolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2 apolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2Value)
-            {
-                result.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2 = apolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3 apolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3Value)
-            {
-                result.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3 = apolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3Value;
-            }
             return result;
         }
         /// <summary>
@@ -49,6 +55,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1 != null)
+            {
+                return ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1.GetFieldDeserializers();
+            }
+            else if(ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2 != null)
+            {
+                return ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2.GetFieldDeserializers();
+            }
+            else if(ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3 != null)
+            {
+                return ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -60,15 +78,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1>(null, ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1>(null, ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1);
             }
             else if(ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2>(null, ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2>(null, ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2);
             }
             else if(ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3>(null, ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3>(null, ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3);
             }
         }
     }

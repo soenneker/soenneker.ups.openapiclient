@@ -15,10 +15,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The UPS account information that you want to use for SmartPickupTrigger and NotificationIndicator</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAccountInfo? AccountInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo? AccountInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAccountInfo AccountInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo AccountInfo { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -33,18 +33,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>To set locale information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestLocale? Locale { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale? Locale { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestLocale Locale { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale Locale { get; set; }
 #endif
         /// <summary>PickUpInfo Contains PickUp Location information.  Available when PickupTypeCode is **02**.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestPickUpInfo? PickUpInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo? PickUpInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestPickUpInfo PickUpInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo PickUpInfo { get; set; }
 #endif
         /// <summary>Type of Pickup. Note: Pickup changes are not allowed when PickupType code is 97.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AccountInfo", n => { AccountInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAccountInfo>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAccountInfo.CreateFromDiscriminatorValue); } },
+                { "AccountInfo", n => { AccountInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo.CreateFromDiscriminatorValue); } },
                 { "Address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address.CreateFromDiscriminatorValue); } },
-                { "Locale", n => { Locale = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestLocale>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestLocale.CreateFromDiscriminatorValue); } },
-                { "PickUpInfo", n => { PickUpInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestPickUpInfo>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestPickUpInfo.CreateFromDiscriminatorValue); } },
+                { "Locale", n => { Locale = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale.CreateFromDiscriminatorValue); } },
+                { "PickUpInfo", n => { PickUpInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo.CreateFromDiscriminatorValue); } },
                 { "PickUpTypeCode", n => { PickUpTypeCode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode.CreateFromDiscriminatorValue); } },
             };
         }
@@ -93,10 +93,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAccountInfo>("AccountInfo", AccountInfo);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo>("AccountInfo", AccountInfo);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address>("Address", Address);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestLocale>("Locale", Locale);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestPickUpInfo>("PickUpInfo", PickUpInfo);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale>("Locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo>("PickUpInfo", PickUpInfo);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode>("PickUpTypeCode", PickUpTypeCode);
             writer.WriteAdditionalData(AdditionalData);
         }

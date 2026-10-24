@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The Proper Shipping Name assigned by ADR, CFR or IATA.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetailProperShippingNameItemProperty>? ProperShippingName { get; set; }
+        public UntypedNode? ProperShippingName { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetailProperShippingNameItemProperty> ProperShippingName { get; set; }
+        public UntypedNode ProperShippingName { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetail"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ProperShippingName", n => { ProperShippingName = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetailProperShippingNameItemProperty>(global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetailProperShippingNameItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ProperShippingName", n => { ProperShippingName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetailProperShippingNameItemProperty>("ProperShippingName", ProperShippingName);
+            writer.WriteObjectValue<UntypedNode>("ProperShippingName", ProperShippingName);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -44,10 +44,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The orderNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty? OrderNumber { get; set; }
+        public UntypedNode? OrderNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty OrderNumber { get; set; }
+        public UntypedNode OrderNumber { get; set; }
 #endif
         /// <summary>Shipment number from the Ship or Quote API. When provided alone, layout defaults to AF-UFH.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "format", n => { Format = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1Format>(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
-                { "orderNumber", n => { OrderNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty.CreateFromDiscriminatorValue); } },
+                { "orderNumber", n => { OrderNumber = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
             };
         }
@@ -103,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1Format>("format", Format);
             writer.WriteStringValue("language", Language);
             writer.WriteStringValue("layout", Layout);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderPrintLabelRequestV1OrderNumberProperty>("orderNumber", OrderNumber);
+            writer.WriteObjectValue<UntypedNode>("orderNumber", OrderNumber);
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

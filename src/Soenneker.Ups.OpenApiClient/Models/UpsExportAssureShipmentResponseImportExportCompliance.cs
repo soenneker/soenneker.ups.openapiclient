@@ -31,14 +31,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public bool? IsShipmentOverGiftValueThreshold { get; set; }
         /// <summary>Whether the total weight of the shipment exceeds the weight limit for being classified as a gift</summary>
         public bool? IsShipmentOverGiftWeightThreshold { get; set; }
-        /// <summary>The three-letter code of the currency used to value the items in the shipment.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>The three-letter code that represents the currency used to value the items in the shipment.| Supported enum values        || :--------------------------- || `ARS`&lt;br&gt;Argentine Peso      || `AUD`&lt;br&gt;Australian Dollar   || `BRL`&lt;br&gt;Brazilian Real      || `CAD`&lt;br&gt;Canadian Dollar     || `CHF`&lt;br&gt;Swiss Franc         || `CLP`&lt;br&gt;Chilean Peso        || `CNY`&lt;br&gt;Chinese Yuan        || `CRC`&lt;br&gt;Costa Rican Colon   || `DKK`&lt;br&gt;Danish Krone        || `DOP`&lt;br&gt;Dominican Peso      || `EUR`&lt;br&gt;Euro                || `GBP`&lt;br&gt;Great Britain Pound || `HKD`&lt;br&gt;Hong Kong Dollar    || `INR`&lt;br&gt;India Rupee         || `JPY`&lt;br&gt;Japanese Yen        || `KRW`&lt;br&gt;Korean Won          || `MXN`&lt;br&gt;Mexican Peso        || `MYR`&lt;br&gt;Malaysian Ringgit   || `NOK`&lt;br&gt;Norwegian Kroner    || `NZD`&lt;br&gt;New Zealand Dollar  || `PEN`&lt;br&gt;Peruvian Nuevo Sol  || `PHP`&lt;br&gt;Philippine Peso     || `PLN`&lt;br&gt;Polish Zloty        || `SEK`&lt;br&gt;Swedish Krona       || `SGD`&lt;br&gt;Singapore Dollar    || `THB`&lt;br&gt;Thai Baht           || `TWD`&lt;br&gt;Taiwan Dollar       || `USD`&lt;br&gt;US Dollar           || `VEB`&lt;br&gt;Venezuelan Bolivar  |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode? ShipmentCurrencyCode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode ShipmentCurrencyCode { get; set; }
-#endif
         /// <summary>The message returned if the shipment&apos;s value surpasses the threshold for gift categorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,13 +52,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The total monetary value of all items included in the shipment</summary>
         public double? ShipmentValue { get; set; }
         /// <summary>Translation locale. | Supported enum values      || :------------------------- || `EN`&lt;br&gt;English            || `DE`&lt;br&gt;Germany            || `PL`&lt;br&gt;Polish             || `FR`&lt;br&gt;French             || `IT`&lt;br&gt;Italian            || `NL`&lt;br&gt;Dutch              || `ES`&lt;br&gt;Spanish            || `ZH`&lt;br&gt;Simplified Chinese |</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale? TranslationLocale { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale TranslationLocale { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseImportExportCompliance"/> and sets the default values.
         /// </summary>
@@ -95,11 +83,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "hasShipmentWarnings", n => { HasShipmentWarnings = n.GetBoolValue(); } },
                 { "isShipmentOverGiftValueThreshold", n => { IsShipmentOverGiftValueThreshold = n.GetBoolValue(); } },
                 { "isShipmentOverGiftWeightThreshold", n => { IsShipmentOverGiftWeightThreshold = n.GetBoolValue(); } },
-                { "shipmentCurrencyCode", n => { ShipmentCurrencyCode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode>(global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode.CreateFromDiscriminatorValue); } },
+                { "shipmentCurrencyCode", n => { ShipmentCurrencyCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode>(); } },
                 { "shipmentOverGiftValueThresholdMessage", n => { ShipmentOverGiftValueThresholdMessage = n.GetStringValue(); } },
                 { "shipmentOverGiftWeightThresholdMessage", n => { ShipmentOverGiftWeightThresholdMessage = n.GetStringValue(); } },
                 { "shipmentValue", n => { ShipmentValue = n.GetDoubleValue(); } },
-                { "translationLocale", n => { TranslationLocale = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale>(global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale.CreateFromDiscriminatorValue); } },
+                { "translationLocale", n => { TranslationLocale = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale>(); } },
             };
         }
         /// <summary>
@@ -114,11 +102,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("hasShipmentWarnings", HasShipmentWarnings);
             writer.WriteBoolValue("isShipmentOverGiftValueThreshold", IsShipmentOverGiftValueThreshold);
             writer.WriteBoolValue("isShipmentOverGiftWeightThreshold", IsShipmentOverGiftWeightThreshold);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode>("shipmentCurrencyCode", ShipmentCurrencyCode);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode>("shipmentCurrencyCode", ShipmentCurrencyCode);
             writer.WriteStringValue("shipmentOverGiftValueThresholdMessage", ShipmentOverGiftValueThresholdMessage);
             writer.WriteStringValue("shipmentOverGiftWeightThresholdMessage", ShipmentOverGiftWeightThresholdMessage);
             writer.WriteDoubleValue("shipmentValue", ShipmentValue);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale>("translationLocale", TranslationLocale);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale>("translationLocale", TranslationLocale);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

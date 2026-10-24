@@ -39,14 +39,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string ExporterDocuSignTemplateId { get; set; }
 #endif
-        /// <summary>This schema includes details of whether a POA is required for the exporter.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>Criteria for evaluating POA requirements for both importer and exporter. Supported values:      | Supported enum values                                                                                           |   | :-------------------------------------------------------------------------------------------------------------- |   | `NonConditional`&lt;br&gt;Standard evaluation without specific conditional criteria                                     |   | `Description`&lt;br&gt;Evaluation based on the detailed description of the commodity                                    |   | `FTA`&lt;br&gt;Free Trade Agreement. Evaluation considers Free Trade Agreement stipulations applicable to the shipment. |   | `Value`&lt;br&gt;Evaluation based on the monetary value of the commodities                                              |   | `HTS`&lt;br&gt;Harmonized Tariff Schedule. Evaluation uses HTS codes for tariff classification and compliance           |   | `Quantity`&lt;br&gt;Evaluation focuses on the quantity of the goods being shipped                                       |   | `Weight`&lt;br&gt;Evaluation based on the weight of the shipment                                                        |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria? ExporterEvaluationCriteria { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria ExporterEvaluationCriteria { get; set; }
-#endif
         /// <summary>Whether there is an online form available for the exporter to complete their POA documentation</summary>
         public bool? ExporterOnlineFormFlag { get; set; }
         /// <summary>Whether the exporter has a POA already on file</summary>
@@ -70,13 +64,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string ImporterCommodityId { get; set; }
 #endif
         /// <summary>Criteria for evaluating POA requirements for both importer and exporter. Supported values:      | Supported enum values                                                                                           |   | :-------------------------------------------------------------------------------------------------------------- |   | `NonConditional`&lt;br&gt;Standard evaluation without specific conditional criteria                                     |   | `Description`&lt;br&gt;Evaluation based on the detailed description of the commodity                                    |   | `FTA`&lt;br&gt;Free Trade Agreement. Evaluation considers Free Trade Agreement stipulations applicable to the shipment. |   | `Value`&lt;br&gt;Evaluation based on the monetary value of the commodities                                              |   | `HTS`&lt;br&gt;Harmonized Tariff Schedule. Evaluation uses HTS codes for tariff classification and compliance           |   | `Quantity`&lt;br&gt;Evaluation focuses on the quantity of the goods being shipped                                       |   | `Weight`&lt;br&gt;Evaluation based on the weight of the shipment                                                        |</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria? ImporterEvaluationCriteria { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria ImporterEvaluationCriteria { get; set; }
-#endif
         /// <summary>Whether the importer already has a POA on file</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterPoaOnFileIndicator? ImporterPoaOnFileIndicator { get; set; }
         /// <summary>Whether Power of Attorney (POA) is required for the importer</summary>
@@ -109,13 +97,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "exporterCommodityDescription", n => { ExporterCommodityDescription = n.GetStringValue(); } },
                 { "exporterCommodityId", n => { ExporterCommodityId = n.GetStringValue(); } },
                 { "exporterDocuSignTemplateId", n => { ExporterDocuSignTemplateId = n.GetStringValue(); } },
-                { "exporterEvaluationCriteria", n => { ExporterEvaluationCriteria = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria>(global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria.CreateFromDiscriminatorValue); } },
+                { "exporterEvaluationCriteria", n => { ExporterEvaluationCriteria = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria>(); } },
                 { "exporterOnlineFormFlag", n => { ExporterOnlineFormFlag = n.GetBoolValue(); } },
                 { "exporterPoaOnFileIndicator", n => { ExporterPoaOnFileIndicator = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterPoaOnFileIndicator>(); } },
                 { "exporterPoaRequiredFlag", n => { ExporterPoaRequiredFlag = n.GetBoolValue(); } },
                 { "importerCommodityDescription", n => { ImporterCommodityDescription = n.GetStringValue(); } },
                 { "importerCommodityId", n => { ImporterCommodityId = n.GetStringValue(); } },
-                { "importerEvaluationCriteria", n => { ImporterEvaluationCriteria = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria>(global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria.CreateFromDiscriminatorValue); } },
+                { "importerEvaluationCriteria", n => { ImporterEvaluationCriteria = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria>(); } },
                 { "importerPoaOnFileIndicator", n => { ImporterPoaOnFileIndicator = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterPoaOnFileIndicator>(); } },
                 { "importerPoaRequiredFlag", n => { ImporterPoaRequiredFlag = n.GetBoolValue(); } },
             };
@@ -130,13 +118,13 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("exporterCommodityDescription", ExporterCommodityDescription);
             writer.WriteStringValue("exporterCommodityId", ExporterCommodityId);
             writer.WriteStringValue("exporterDocuSignTemplateId", ExporterDocuSignTemplateId);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria>("exporterEvaluationCriteria", ExporterEvaluationCriteria);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria>("exporterEvaluationCriteria", ExporterEvaluationCriteria);
             writer.WriteBoolValue("exporterOnlineFormFlag", ExporterOnlineFormFlag);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterPoaOnFileIndicator>("exporterPoaOnFileIndicator", ExporterPoaOnFileIndicator);
             writer.WriteBoolValue("exporterPoaRequiredFlag", ExporterPoaRequiredFlag);
             writer.WriteStringValue("importerCommodityDescription", ImporterCommodityDescription);
             writer.WriteStringValue("importerCommodityId", ImporterCommodityId);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria>("importerEvaluationCriteria", ImporterEvaluationCriteria);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria>("importerEvaluationCriteria", ImporterEvaluationCriteria);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterPoaOnFileIndicator>("importerPoaOnFileIndicator", ImporterPoaOnFileIndicator);
             writer.WriteBoolValue("importerPoaRequiredFlag", ImporterPoaRequiredFlag);
             writer.WriteAdditionalData(AdditionalData);

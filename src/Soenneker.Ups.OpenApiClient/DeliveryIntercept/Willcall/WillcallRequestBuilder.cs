@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.DeliveryIntercept.Willcall
     public partial class WillcallRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.DeliveryIntercept.willcall.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The number being tracked.  Each method defines if required.</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Willcall.Item.WithTrackingNumberItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.Willcall.Item.WithTrackingNumberItemRequestBuilder this[string position]
         {

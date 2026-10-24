@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// Contains either a warning message or the label response files.
+    /// A list of responses for the generated pallet labels, each containing details such as the label number and the base64 encoded data.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CloseoutResponsePalletLabelResponses : IAdditionalDataHolder, IParsable

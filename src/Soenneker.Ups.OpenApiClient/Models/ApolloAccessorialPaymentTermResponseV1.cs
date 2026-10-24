@@ -15,13 +15,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Payment term code.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code? Code { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code Code { get; set; }
-#endif
         /// <summary>Payment term description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +49,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code.CreateFromDiscriminatorValue); } },
+                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code>(); } },
                 { "desc", n => { Desc = n.GetStringValue(); } },
             };
         }
@@ -66,7 +60,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code>("code", Code);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code>("code", Code);
             writer.WriteStringValue("desc", Desc);
             writer.WriteAdditionalData(AdditionalData);
         }

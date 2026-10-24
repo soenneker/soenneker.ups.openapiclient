@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.PreNotificationReady.Dangerousgoods
     public partial class DangerousgoodsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.PreNotificationReady.dangerousgoods.item collection</summary>
-        /// <param name="position">Version of API.Valid values:- v2</param>
+        /// <param name="position">Version of API.Valid values:- v2Version of API.Valid values:- v1</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.PreNotificationReady.Dangerousgoods.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.PreNotificationReady.Dangerousgoods.Item.WithVersionItemRequestBuilder this[string position]
         {

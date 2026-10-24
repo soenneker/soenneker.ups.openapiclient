@@ -25,18 +25,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Location of shipment pickup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupPoint { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint? PickupPoint { get; set; }
 #nullable restore
 #else
-        public string PickupPoint { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint PickupPoint { get; set; }
 #endif
         /// <summary>Shipment Pickup Time. Available when PickupTypeCode is **02**.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoPickUpTime? PickUpTime { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime? PickUpTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoPickUpTime PickUpTime { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime PickUpTime { get; set; }
 #endif
         /// <summary>Weekend pickup Information. Available when WeekendServiceTerritoryIndicator is populated and PickupTypeCode is **02**.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,8 +74,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "PickUpDate", n => { PickUpDate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate.CreateFromDiscriminatorValue); } },
-                { "PickUpTime", n => { PickUpTime = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoPickUpTime>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoPickUpTime.CreateFromDiscriminatorValue); } },
-                { "PickupPoint", n => { PickupPoint = n.GetStringValue(); } },
+                { "PickUpTime", n => { PickUpTime = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime.CreateFromDiscriminatorValue); } },
+                { "PickupPoint", n => { PickupPoint = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint.CreateFromDiscriminatorValue); } },
                 { "WeekendPickupInformation", n => { WeekendPickupInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation.CreateFromDiscriminatorValue); } },
                 { "WeekendServiceTerritoryIndicator", n => { WeekendServiceTerritoryIndicator = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator>(); } },
             };
@@ -88,8 +88,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate>("PickUpDate", PickUpDate);
-            writer.WriteStringValue("PickupPoint", PickupPoint);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoPickUpTime>("PickUpTime", PickUpTime);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint>("PickupPoint", PickupPoint);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime>("PickUpTime", PickUpTime);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation>("WeekendPickupInformation", WeekendPickupInformation);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator>("WeekendServiceTerritoryIndicator", WeekendServiceTerritoryIndicator);
             writer.WriteAdditionalData(AdditionalData);

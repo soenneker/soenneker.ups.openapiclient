@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments
     public partial class PaperlessdocumentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.Paperless.paperlessdocuments.item collection</summary>
-        /// <param name="position">Version of APIValid values:- v2</param>
+        /// <param name="position">Version of APIValid values:- v2Version of APIValid values:- v1</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.WithVersionItemRequestBuilder this[string position]
         {

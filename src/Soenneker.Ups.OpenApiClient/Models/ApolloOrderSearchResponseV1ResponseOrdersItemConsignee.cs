@@ -11,7 +11,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// The consignee associated with the Shipment
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApolloOrderSearchResponseV1ResponseOrdersItemConsignee : IAdditionalDataHolder, IParsable
+    public partial class ApolloOrderSearchResponseV1ResponseOrdersItemConsignee : global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentAddressV1, IParsable
     {
         /// <summary>The unique UPS Freight Account Number associated with the Party. It&apos;s required when the party is the Shipper or Payor</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -21,8 +21,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #else
         public string Account { get; set; }
 #endif
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The email of the person who can handle the communications related to the Shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,18 +62,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string ServiceCenterCode { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee"/> and sets the default values.
-        /// </summary>
-        public ApolloOrderSearchResponseV1ResponseOrdersItemConsignee()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
-        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemConsignee();
@@ -84,9 +75,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "contactEmail", n => { ContactEmail = n.GetStringValue(); } },
@@ -100,16 +91,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public virtual void Serialize(ISerializationWriter writer)
+        public override void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            base.Serialize(writer);
             writer.WriteStringValue("account", Account);
             writer.WriteStringValue("contactEmail", ContactEmail);
             writer.WriteStringValue("contactName", ContactName);
             writer.WriteStringValue("contactPhone", ContactPhone);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloCustomArrayV1Item>("details", Details);
             writer.WriteStringValue("serviceCenterCode", ServiceCenterCode);
-            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

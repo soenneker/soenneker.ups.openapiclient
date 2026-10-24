@@ -125,14 +125,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 #endif
         /// <summary>Shipment type. | Supported enum values                                                                                || :--------------------------------------------------------------------------------------------------- || `GIFT`&lt;br&gt;Items sent as gifts, typically for personal reasons.                                       || `COMM`&lt;br&gt;Commercial goods or commodities, usually for business transactions. Sale, sample, repair.  || `OTHR`&lt;br&gt;Return, Other, and Intercompany Data, Anything else not supported.                         || `PERS`&lt;br&gt;Personal items, often for relocation or personal use                                       |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipmentType? ShipmentType { get; set; }
-        /// <summary>The language and country-based preferences of the user. This includes translated texts, currency type, and unit of measurements.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
+        /// <summary>Translation locale. | Supported enum values      || :------------------------- || `EN`&lt;br&gt;English            || `DE`&lt;br&gt;Germany            || `PL`&lt;br&gt;Polish             || `FR`&lt;br&gt;French             || `IT`&lt;br&gt;Italian            || `NL`&lt;br&gt;Dutch              || `ES`&lt;br&gt;Spanish            || `ZH`&lt;br&gt;Simplified Chinese |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale? TranslationLocale { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale TranslationLocale { get; set; }
-#endif
         /// <summary>Mode of transportation for the shipment.| Supported enum values                       ||---------------------------------------------|| `INT_AIR`&lt;br&gt;International Air Freight     || `INT_OCEAN`&lt;br&gt;International Ocean Freight || `INT_RAIL`&lt;br&gt;International Rail Freight   || `INT_TRUCK`&lt;br&gt;International Truck Freight || `DOM_AIR`&lt;br&gt;Domestic Air Freight          || `DOM_OCEAN`&lt;br&gt;Domestic Ocean Freight      || `DOM_RAIL`&lt;br&gt;Domestic Rail Freight        || `DOM_TRUCK`&lt;br&gt;Domestic Truck Freight      |</summary>
         public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestTransModes? TransModes { get; set; }
         /// <summary>
@@ -177,7 +171,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "shipmentItems", n => { ShipmentItems = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shipmentType", n => { ShipmentType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipmentType>(); } },
                 { "transModes", n => { TransModes = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestTransModes>(); } },
-                { "translationLocale", n => { TranslationLocale = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale>(global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale.CreateFromDiscriminatorValue); } },
+                { "translationLocale", n => { TranslationLocale = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale>(); } },
             };
         }
         /// <summary>
@@ -203,7 +197,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipmentDescription", ShipmentDescription);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest>("shipmentItems", ShipmentItems);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipmentType>("shipmentType", ShipmentType);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale>("translationLocale", TranslationLocale);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale>("translationLocale", TranslationLocale);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestTransModes>("transModes", TransModes);
             writer.WriteAdditionalData(AdditionalData);
         }

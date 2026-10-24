@@ -14,15 +14,45 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class DeliveryInterceptRequestV2RequestType : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1? DeliveryInterceptRequestV2RequestTypeOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1 DeliveryInterceptRequestV2RequestTypeOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2? DeliveryInterceptRequestV2RequestTypeOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2 DeliveryInterceptRequestV2RequestTypeOneOf2 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3? DeliveryInterceptRequestV2RequestTypeOneOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3 DeliveryInterceptRequestV2RequestTypeOneOf3 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4? DeliveryInterceptRequestV2RequestTypeOneOf4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4 DeliveryInterceptRequestV2RequestTypeOneOf4 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5? DeliveryInterceptRequestV2RequestTypeOneOf5 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5 DeliveryInterceptRequestV2RequestTypeOneOf5 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -33,26 +63,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1 deliveryInterceptRequestV2RequestTypeOneOf1Value)
-            {
-                result.DeliveryInterceptRequestV2RequestTypeOneOf1 = deliveryInterceptRequestV2RequestTypeOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2 deliveryInterceptRequestV2RequestTypeOneOf2Value)
-            {
-                result.DeliveryInterceptRequestV2RequestTypeOneOf2 = deliveryInterceptRequestV2RequestTypeOneOf2Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3 deliveryInterceptRequestV2RequestTypeOneOf3Value)
-            {
-                result.DeliveryInterceptRequestV2RequestTypeOneOf3 = deliveryInterceptRequestV2RequestTypeOneOf3Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4 deliveryInterceptRequestV2RequestTypeOneOf4Value)
-            {
-                result.DeliveryInterceptRequestV2RequestTypeOneOf4 = deliveryInterceptRequestV2RequestTypeOneOf4Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5 deliveryInterceptRequestV2RequestTypeOneOf5Value)
-            {
-                result.DeliveryInterceptRequestV2RequestTypeOneOf5 = deliveryInterceptRequestV2RequestTypeOneOf5Value;
-            }
             return result;
         }
         /// <summary>
@@ -61,6 +71,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(DeliveryInterceptRequestV2RequestTypeOneOf1 != null)
+            {
+                return DeliveryInterceptRequestV2RequestTypeOneOf1.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2RequestTypeOneOf2 != null)
+            {
+                return DeliveryInterceptRequestV2RequestTypeOneOf2.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2RequestTypeOneOf3 != null)
+            {
+                return DeliveryInterceptRequestV2RequestTypeOneOf3.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2RequestTypeOneOf4 != null)
+            {
+                return DeliveryInterceptRequestV2RequestTypeOneOf4.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2RequestTypeOneOf5 != null)
+            {
+                return DeliveryInterceptRequestV2RequestTypeOneOf5.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -72,23 +102,23 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(DeliveryInterceptRequestV2RequestTypeOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1>(null, DeliveryInterceptRequestV2RequestTypeOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1>(null, DeliveryInterceptRequestV2RequestTypeOneOf1);
             }
             else if(DeliveryInterceptRequestV2RequestTypeOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2>(null, DeliveryInterceptRequestV2RequestTypeOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2>(null, DeliveryInterceptRequestV2RequestTypeOneOf2);
             }
             else if(DeliveryInterceptRequestV2RequestTypeOneOf3 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3>(null, DeliveryInterceptRequestV2RequestTypeOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3>(null, DeliveryInterceptRequestV2RequestTypeOneOf3);
             }
             else if(DeliveryInterceptRequestV2RequestTypeOneOf4 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4>(null, DeliveryInterceptRequestV2RequestTypeOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4>(null, DeliveryInterceptRequestV2RequestTypeOneOf4);
             }
             else if(DeliveryInterceptRequestV2RequestTypeOneOf5 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5>(null, DeliveryInterceptRequestV2RequestTypeOneOf5);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5>(null, DeliveryInterceptRequestV2RequestTypeOneOf5);
             }
         }
     }

@@ -25,10 +25,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>To obtain the pickup Address details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseContactInfo? ContactInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo? ContactInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseContactInfo ContactInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo ContactInfo { get; set; }
 #endif
         /// <summary>The PickUpInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The generic response container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response? Response { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response Response { get; set; }
 #endif
         /// <summary>The SundayPickUpNotifyTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,12 +112,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AccountNumber", n => { AccountNumber = n.GetStringValue(); } },
-                { "ContactInfo", n => { ContactInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseContactInfo>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseContactInfo.CreateFromDiscriminatorValue); } },
+                { "ContactInfo", n => { ContactInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo.CreateFromDiscriminatorValue); } },
                 { "PickUpInfo", n => { PickUpInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo.CreateFromDiscriminatorValue); } },
                 { "PickUpNotifyTime", n => { PickUpNotifyTime = n.GetStringValue(); } },
                 { "PickUpPendingStatusIndicator", n => { PickUpPendingStatusIndicator = n.GetStringValue(); } },
                 { "PickUpTypeCode", n => { PickUpTypeCode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode.CreateFromDiscriminatorValue); } },
-                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseResponse>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseResponse.CreateFromDiscriminatorValue); } },
+                { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response.CreateFromDiscriminatorValue); } },
                 { "SundayPickUpNotifyTime", n => { SundayPickUpNotifyTime = n.GetStringValue(); } },
                 { "WeekEndPickUpNotifyTime", n => { WeekEndPickUpNotifyTime = n.GetStringValue(); } },
             };
@@ -130,12 +130,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("AccountNumber", AccountNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseContactInfo>("ContactInfo", ContactInfo);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo>("ContactInfo", ContactInfo);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo>("PickUpInfo", PickUpInfo);
             writer.WriteStringValue("PickUpNotifyTime", PickUpNotifyTime);
             writer.WriteStringValue("PickUpPendingStatusIndicator", PickUpPendingStatusIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode>("PickUpTypeCode", PickUpTypeCode);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseResponse>("Response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response>("Response", Response);
             writer.WriteStringValue("SundayPickUpNotifyTime", SundayPickUpNotifyTime);
             writer.WriteStringValue("WeekEndPickUpNotifyTime", WeekEndPickUpNotifyTime);
             writer.WriteAdditionalData(AdditionalData);

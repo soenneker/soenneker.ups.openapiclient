@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.DangerousGoods.Dangerousgoods
     public partial class DangerousgoodsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.DangerousGoods.dangerousgoods.item collection</summary>
-        /// <param name="position">Version of the API.Valid values:- v2409</param>
+        /// <param name="position">Version of the API.Valid values:- v2409Version of the API.Valid values:- v1- v1801.</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.DangerousGoods.Dangerousgoods.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.DangerousGoods.Dangerousgoods.Item.WithVersionItemRequestBuilder this[string position]
         {

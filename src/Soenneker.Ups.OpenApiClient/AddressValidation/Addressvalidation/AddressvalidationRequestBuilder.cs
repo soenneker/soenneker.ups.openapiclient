@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.AddressValidation.Addressvalidation
     public partial class AddressvalidationRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.AddressValidation.addressvalidation.item collection</summary>
-        /// <param name="position">Identifies the version of the API.Valid  values:- v2</param>
+        /// <param name="position">Identifies the version of the API.Valid  values:- v2Identifies the version of the API.Valid  values:- v1</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.AddressValidation.Addressvalidation.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.AddressValidation.Addressvalidation.Item.WithVersionItemRequestBuilder this[string position]
         {

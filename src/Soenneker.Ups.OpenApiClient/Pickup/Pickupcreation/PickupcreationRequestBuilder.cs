@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Pickup.Pickupcreation
     public partial class PickupcreationRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.Pickup.pickupcreation.item collection</summary>
-        /// <param name="position">Version of the API.Valid values:- v2409</param>
+        /// <param name="position">Version of the API.Valid values:- v2409Version of the API.Valid values:- v1- v1607- v1707</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Pickup.Pickupcreation.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.Pickup.Pickupcreation.Item.WithVersionItemRequestBuilder this[string position]
         {

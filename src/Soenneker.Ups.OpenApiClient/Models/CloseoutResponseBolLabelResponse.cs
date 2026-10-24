@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
     /// <summary>
-    /// Contains the details of the generated document files, such as the invoices, bill of lading and pallet labels.
+    /// Contains the response details for the generated Bill of Lading (BOL) label, including the format and data of the generated document.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CloseoutResponseBolLabelResponse : IAdditionalDataHolder, IParsable

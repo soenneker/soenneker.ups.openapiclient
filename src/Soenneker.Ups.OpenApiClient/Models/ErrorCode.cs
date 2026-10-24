@@ -26,10 +26,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Description of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty? Description { get; set; }
+        public UntypedNode? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty Description { get; set; }
+        public UntypedNode Description { get; set; }
 #endif
         /// <summary>The path to the field causing the error as returned from the API backend services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty>(global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "field", n => { Field = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeType>(); } },
@@ -98,7 +98,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeDescriptionProperty>("description", Description);
+            writer.WriteObjectValue<UntypedNode>("description", Description);
             writer.WriteStringValue("field", Field);
             writer.WriteStringValue("message", Message);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ErrorCodeType>("type", Type);

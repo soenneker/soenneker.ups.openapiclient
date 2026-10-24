@@ -14,23 +14,77 @@ namespace Soenneker.Ups.OpenApiClient.Models
     public partial class DeliveryInterceptRequestV2ReasonForReturn : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1? DeliveryInterceptRequestV2ReasonForReturnOneOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1 DeliveryInterceptRequestV2ReasonForReturnOneOf1 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf2? DeliveryInterceptRequestV2ReasonForReturnOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf2 DeliveryInterceptRequestV2ReasonForReturnOneOf2 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf3? DeliveryInterceptRequestV2ReasonForReturnOneOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf3 DeliveryInterceptRequestV2ReasonForReturnOneOf3 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf4? DeliveryInterceptRequestV2ReasonForReturnOneOf4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf4 DeliveryInterceptRequestV2ReasonForReturnOneOf4 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf5"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf5? DeliveryInterceptRequestV2ReasonForReturnOneOf5 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf5 DeliveryInterceptRequestV2ReasonForReturnOneOf5 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf6"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf6? DeliveryInterceptRequestV2ReasonForReturnOneOf6 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf6 DeliveryInterceptRequestV2ReasonForReturnOneOf6 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf7"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf7? DeliveryInterceptRequestV2ReasonForReturnOneOf7 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf7 DeliveryInterceptRequestV2ReasonForReturnOneOf7 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf8"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf8? DeliveryInterceptRequestV2ReasonForReturnOneOf8 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf8 DeliveryInterceptRequestV2ReasonForReturnOneOf8 { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf9"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf9? DeliveryInterceptRequestV2ReasonForReturnOneOf9 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf9 DeliveryInterceptRequestV2ReasonForReturnOneOf9 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -41,42 +95,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturn();
-            if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1 deliveryInterceptRequestV2ReasonForReturnOneOf1Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf1 = deliveryInterceptRequestV2ReasonForReturnOneOf1Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf2 deliveryInterceptRequestV2ReasonForReturnOneOf2Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf2 = deliveryInterceptRequestV2ReasonForReturnOneOf2Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf3 deliveryInterceptRequestV2ReasonForReturnOneOf3Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf3 = deliveryInterceptRequestV2ReasonForReturnOneOf3Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf4>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf4 deliveryInterceptRequestV2ReasonForReturnOneOf4Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf4 = deliveryInterceptRequestV2ReasonForReturnOneOf4Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf5>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf5 deliveryInterceptRequestV2ReasonForReturnOneOf5Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf5 = deliveryInterceptRequestV2ReasonForReturnOneOf5Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf6>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf6 deliveryInterceptRequestV2ReasonForReturnOneOf6Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf6 = deliveryInterceptRequestV2ReasonForReturnOneOf6Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf7>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf7 deliveryInterceptRequestV2ReasonForReturnOneOf7Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf7 = deliveryInterceptRequestV2ReasonForReturnOneOf7Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf8>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf8 deliveryInterceptRequestV2ReasonForReturnOneOf8Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf8 = deliveryInterceptRequestV2ReasonForReturnOneOf8Value;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf9>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf9 deliveryInterceptRequestV2ReasonForReturnOneOf9Value)
-            {
-                result.DeliveryInterceptRequestV2ReasonForReturnOneOf9 = deliveryInterceptRequestV2ReasonForReturnOneOf9Value;
-            }
             return result;
         }
         /// <summary>
@@ -85,6 +103,42 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(DeliveryInterceptRequestV2ReasonForReturnOneOf1 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf1.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2ReasonForReturnOneOf2 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf2.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2ReasonForReturnOneOf3 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf3.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2ReasonForReturnOneOf4 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf4.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2ReasonForReturnOneOf5 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf5.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2ReasonForReturnOneOf6 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf6.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2ReasonForReturnOneOf7 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf7.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2ReasonForReturnOneOf8 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf8.GetFieldDeserializers();
+            }
+            else if(DeliveryInterceptRequestV2ReasonForReturnOneOf9 != null)
+            {
+                return DeliveryInterceptRequestV2ReasonForReturnOneOf9.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -96,39 +150,39 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(DeliveryInterceptRequestV2ReasonForReturnOneOf1 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf1);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf2 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf2>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf2>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf2);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf3 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf3>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf3>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf3);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf4 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf4>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf4>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf4);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf5 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf5>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf5);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf5>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf5);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf6 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf6>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf6);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf6>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf6);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf7 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf7>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf7);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf7>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf7);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf8 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf8>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf8);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf8>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf8);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf9 != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf9>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf9);
+                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf9>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf9);
             }
         }
     }

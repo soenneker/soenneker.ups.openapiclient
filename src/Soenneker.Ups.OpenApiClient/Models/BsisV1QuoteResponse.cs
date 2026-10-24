@@ -18,10 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The additionalProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteResponseAdditionalPropertiesProperty? AdditionalProperties { get; set; }
+        public UntypedNode? AdditionalProperties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteResponseAdditionalPropertiesProperty AdditionalProperties { get; set; }
+        public UntypedNode AdditionalProperties { get; set; }
 #endif
         /// <summary>array for buyer and billing Global checkout total items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additionalProperties", n => { AdditionalProperties = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteResponseAdditionalPropertiesProperty>(global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteResponseAdditionalPropertiesProperty.CreateFromDiscriminatorValue); } },
+                { "additionalProperties", n => { AdditionalProperties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "gcTotal", n => { GcTotal = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse>(global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "quoteCreationTimestamp", n => { QuoteCreationTimestamp = n.GetStringValue(); } },
                 { "quoteExpirationDate", n => { QuoteExpirationDate = n.GetDateValue(); } },
@@ -97,7 +97,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteResponseAdditionalPropertiesProperty>("additionalProperties", AdditionalProperties);
+            writer.WriteObjectValue<UntypedNode>("additionalProperties", AdditionalProperties);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse>("gcTotal", GcTotal);
             writer.WriteStringValue("quoteCreationTimestamp", QuoteCreationTimestamp);
             writer.WriteDateValue("quoteExpirationDate", QuoteExpirationDate);

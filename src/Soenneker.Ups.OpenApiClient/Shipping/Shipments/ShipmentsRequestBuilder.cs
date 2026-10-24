@@ -16,7 +16,7 @@ namespace Soenneker.Ups.OpenApiClient.Shipping.Shipments
     public partial class ShipmentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Ups.OpenApiClient.Shipping.shipments.item collection</summary>
-        /// <param name="position">Indicates Ship API to display the new release features in Ship API response based on Ship release.Valid values:- v2409</param>
+        /// <param name="position">Indicates Ship API to display the new release features in Ship API response based on Ship release.Valid values:- v2409Indicates Ship API to display the new release features in Ship API response based on Ship release.Valid values:- v1- v1601- v1607- v1701- v1707- v1801- v1807- v2108- v2205</param>
         /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.WithVersionItemRequestBuilder"/></returns>
         public global::Soenneker.Ups.OpenApiClient.Shipping.Shipments.Item.WithVersionItemRequestBuilder this[string position]
         {
