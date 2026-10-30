@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.OAuthAuthCode.V1.Oauth.Token
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeTokenErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeGenerateTokenSuccessResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.OAuthAuthCodeGenerateTokenSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

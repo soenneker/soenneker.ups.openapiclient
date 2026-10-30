@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RatedShipmentGuaranteedDelivery : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("BusinessDaysInTransit") is { } nullNodeBusinessDaysInTransit && nullNodeBusinessDaysInTransit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessDaysInTransit = null;
+            if (parseNode.GetChildNode("DeliveryByTime") is { } nullNodeDeliveryByTime && nullNodeDeliveryByTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryByTime = null;
+            if (parseNode.GetChildNode("ScheduledDeliveryDate") is { } nullNodeScheduledDeliveryDate && nullNodeScheduledDeliveryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledDeliveryDate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The rated shipments guaranteed delivery date. Denotes UPS published guarantee times. (i.e. 3DaySelect = 3)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessDaysInTransit { get; set; }
+        public string? BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
+        private string? _explicitNullValueBusinessDaysInTransit = default!;
 #nullable restore
 #else
-        public string BusinessDaysInTransit { get; set; }
+        public string BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
+        private string _explicitNullValueBusinessDaysInTransit = default!;
 #endif
         /// <summary>The rated shipments committed delivery time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeliveryByTime { get; set; }
+        public string? DeliveryByTime { get => _explicitNullValueDeliveryByTime; set { _explicitNullValueDeliveryByTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryByTime"); else _explicitNullProperties?.Remove("DeliveryByTime"); } }
+        private string? _explicitNullValueDeliveryByTime = default!;
 #nullable restore
 #else
-        public string DeliveryByTime { get; set; }
+        public string DeliveryByTime { get => _explicitNullValueDeliveryByTime; set { _explicitNullValueDeliveryByTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryByTime"); else _explicitNullProperties?.Remove("DeliveryByTime"); } }
+        private string _explicitNullValueDeliveryByTime = default!;
 #endif
         /// <summary>The rated shipments scheduled delivery date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledDeliveryDate { get; set; }
+        public string? ScheduledDeliveryDate { get => _explicitNullValueScheduledDeliveryDate; set { _explicitNullValueScheduledDeliveryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduledDeliveryDate"); else _explicitNullProperties?.Remove("ScheduledDeliveryDate"); } }
+        private string? _explicitNullValueScheduledDeliveryDate = default!;
 #nullable restore
 #else
-        public string ScheduledDeliveryDate { get; set; }
+        public string ScheduledDeliveryDate { get => _explicitNullValueScheduledDeliveryDate; set { _explicitNullValueScheduledDeliveryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduledDeliveryDate"); else _explicitNullProperties?.Remove("ScheduledDeliveryDate"); } }
+        private string _explicitNullValueScheduledDeliveryDate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentGuaranteedDelivery"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentGuaranteedDelivery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentGuaranteedDelivery();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentGuaranteedDelivery(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("BusinessDaysInTransit", BusinessDaysInTransit);
             writer.WriteStringValue("DeliveryByTime", DeliveryByTime);
             writer.WriteStringValue("ScheduledDeliveryDate", ScheduledDeliveryDate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

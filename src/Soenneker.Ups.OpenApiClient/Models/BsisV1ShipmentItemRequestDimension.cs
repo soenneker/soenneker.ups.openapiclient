@@ -11,17 +11,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BsisV1ShipmentItemRequestDimension : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("length") is { } nullNodeLength && nullNodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Length = null;
+            if (parseNode.GetChildNode("unitOfMeasure") is { } nullNodeUnitOfMeasure && nullNodeUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasure = null;
+            if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>package height (no limit).</summary>
-        public decimal? Height { get; set; }
+        public decimal? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        private decimal? _explicitNullValueHeight = default!;
         /// <summary>package length (no limit).</summary>
-        public decimal? Length { get; set; }
+        public decimal? Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
+        private decimal? _explicitNullValueLength = default!;
         /// <summary>Specifies the units of measure.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1ShipmentItemRequestDimensionUnitOfMeasure? UnitOfMeasure { get; set; }
+#nullable enable
+        public string? UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitOfMeasure"); else _explicitNullProperties?.Remove("unitOfMeasure"); } }
+        private string? _explicitNullValueUnitOfMeasure = default!;
+#nullable restore
         /// <summary>package width (no limit).</summary>
-        public decimal? Width { get; set; }
+        public decimal? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        private decimal? _explicitNullValueWidth = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.BsisV1ShipmentItemRequestDimension"/> and sets the default values.
         /// </summary>
@@ -37,7 +54,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.BsisV1ShipmentItemRequestDimension CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.BsisV1ShipmentItemRequestDimension();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.BsisV1ShipmentItemRequestDimension(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "height", n => { Height = n.GetDecimalValue(); } },
                 { "length", n => { Length = n.GetDecimalValue(); } },
-                { "unitOfMeasure", n => { UnitOfMeasure = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BsisV1ShipmentItemRequestDimensionUnitOfMeasure>(); } },
+                { "unitOfMeasure", n => { UnitOfMeasure = n.GetStringValue(); } },
                 { "width", n => { Width = n.GetDecimalValue(); } },
             };
         }
@@ -62,8 +79,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDecimalValue("height", Height);
             writer.WriteDecimalValue("length", Length);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BsisV1ShipmentItemRequestDimensionUnitOfMeasure>("unitOfMeasure", UnitOfMeasure);
+            writer.WriteStringValue("unitOfMeasure", UnitOfMeasure);
             writer.WriteDecimalValue("width", Width);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

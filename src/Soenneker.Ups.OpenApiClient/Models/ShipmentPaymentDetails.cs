@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentPaymentDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ShipmentCharge") is { } nullNodeShipmentCharge && nullNodeShipmentCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCharge = null;
+            if (parseNode.GetChildNode("SplitDutyVATIndicator") is { } nullNodeSplitDutyVATIndicator && nullNodeSplitDutyVATIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SplitDutyVATIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ShipmentCharge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge>? ShipmentCharge { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge>? ShipmentCharge { get => _explicitNullValueShipmentCharge; set { _explicitNullValueShipmentCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentCharge"); else _explicitNullProperties?.Remove("ShipmentCharge"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge>? _explicitNullValueShipmentCharge = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge> ShipmentCharge { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge> ShipmentCharge { get => _explicitNullValueShipmentCharge; set { _explicitNullValueShipmentCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentCharge"); else _explicitNullProperties?.Remove("ShipmentCharge"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge> _explicitNullValueShipmentCharge = default!;
 #endif
         /// <summary>Split Duty VAT Indicator. The presence indicates the payer specified for Transportation Charges will pay transportation charges and any duties that apply to the shipment. The payer specified for Duties and Taxes will pay the VAT (Value-Added Tax) only.  Empty Tag. The payment method for Transportation charges must be UPS account. The UPS account must be a daily pickup account or an occasional account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SplitDutyVATIndicator { get; set; }
+        public string? SplitDutyVATIndicator { get => _explicitNullValueSplitDutyVATIndicator; set { _explicitNullValueSplitDutyVATIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SplitDutyVATIndicator"); else _explicitNullProperties?.Remove("SplitDutyVATIndicator"); } }
+        private string? _explicitNullValueSplitDutyVATIndicator = default!;
 #nullable restore
 #else
-        public string SplitDutyVATIndicator { get; set; }
+        public string SplitDutyVATIndicator { get => _explicitNullValueSplitDutyVATIndicator; set { _explicitNullValueSplitDutyVATIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SplitDutyVATIndicator"); else _explicitNullProperties?.Remove("SplitDutyVATIndicator"); } }
+        private string _explicitNullValueSplitDutyVATIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentPaymentDetails"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentPaymentDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentPaymentDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentPaymentDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge>("ShipmentCharge", ShipmentCharge);
             writer.WriteStringValue("SplitDutyVATIndicator", SplitDutyVATIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

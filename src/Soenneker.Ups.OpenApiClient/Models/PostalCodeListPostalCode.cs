@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostalCodeListPostalCode : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("PrimaryPostalCode") is { } nullNodePrimaryPostalCode && nullNodePrimaryPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryPostalCode = null;
+            if (parseNode.GetChildNode("SecondaryPostalCode") is { } nullNodeSecondaryPostalCode && nullNodeSecondaryPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryPostalCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Primary postal code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryPostalCode { get; set; }
+        public string? PrimaryPostalCode { get => _explicitNullValuePrimaryPostalCode; set { _explicitNullValuePrimaryPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryPostalCode"); else _explicitNullProperties?.Remove("PrimaryPostalCode"); } }
+        private string? _explicitNullValuePrimaryPostalCode = default!;
 #nullable restore
 #else
-        public string PrimaryPostalCode { get; set; }
+        public string PrimaryPostalCode { get => _explicitNullValuePrimaryPostalCode; set { _explicitNullValuePrimaryPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryPostalCode"); else _explicitNullProperties?.Remove("PrimaryPostalCode"); } }
+        private string _explicitNullValuePrimaryPostalCode = default!;
 #endif
         /// <summary>Secondary postal code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryPostalCode { get; set; }
+        public string? SecondaryPostalCode { get => _explicitNullValueSecondaryPostalCode; set { _explicitNullValueSecondaryPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecondaryPostalCode"); else _explicitNullProperties?.Remove("SecondaryPostalCode"); } }
+        private string? _explicitNullValueSecondaryPostalCode = default!;
 #nullable restore
 #else
-        public string SecondaryPostalCode { get; set; }
+        public string SecondaryPostalCode { get => _explicitNullValueSecondaryPostalCode; set { _explicitNullValueSecondaryPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecondaryPostalCode"); else _explicitNullProperties?.Remove("SecondaryPostalCode"); } }
+        private string _explicitNullValueSecondaryPostalCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PostalCodeListPostalCode"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PostalCodeListPostalCode CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PostalCodeListPostalCode();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PostalCodeListPostalCode(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("PrimaryPostalCode", PrimaryPostalCode);
             writer.WriteStringValue("SecondaryPostalCode", SecondaryPostalCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

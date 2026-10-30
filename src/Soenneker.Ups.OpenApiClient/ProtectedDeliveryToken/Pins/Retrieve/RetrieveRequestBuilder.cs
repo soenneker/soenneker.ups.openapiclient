@@ -67,6 +67,8 @@ namespace Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken.Pins.Retrieve
                 { "415", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.GetPinsForTrackingNumberListResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.GetPinsForTrackingNumberListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

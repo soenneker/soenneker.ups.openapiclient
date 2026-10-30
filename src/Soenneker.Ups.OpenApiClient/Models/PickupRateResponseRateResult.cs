@@ -12,88 +12,125 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PickupRateResponseRateResult : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ChargeDetail") is { } nullNodeChargeDetail && nullNodeChargeDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeDetail = null;
+            if (parseNode.GetChildNode("CurrencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("Disclaimer") is { } nullNodeDisclaimer && nullNodeDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disclaimer = null;
+            if (parseNode.GetChildNode("GrandTotalOfAllCharge") is { } nullNodeGrandTotalOfAllCharge && nullNodeGrandTotalOfAllCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrandTotalOfAllCharge = null;
+            if (parseNode.GetChildNode("GrandTotalOfAllIncentedCharge") is { } nullNodeGrandTotalOfAllIncentedCharge && nullNodeGrandTotalOfAllIncentedCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrandTotalOfAllIncentedCharge = null;
+            if (parseNode.GetChildNode("PreTaxTotalCharge") is { } nullNodePreTaxTotalCharge && nullNodePreTaxTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreTaxTotalCharge = null;
+            if (parseNode.GetChildNode("PreTaxTotalIncentedCharge") is { } nullNodePreTaxTotalIncentedCharge && nullNodePreTaxTotalIncentedCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreTaxTotalIncentedCharge = null;
+            if (parseNode.GetChildNode("RateType") is { } nullNodeRateType && nullNodeRateType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateType = null;
+            if (parseNode.GetChildNode("TaxCharges") is { } nullNodeTaxCharges && nullNodeTaxCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxCharges = null;
+            if (parseNode.GetChildNode("TotalTax") is { } nullNodeTotalTax && nullNodeTotalTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTax = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ChargeDetail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResultChargeDetail>? ChargeDetail { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResultChargeDetail>? ChargeDetail { get => _explicitNullValueChargeDetail; set { _explicitNullValueChargeDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChargeDetail"); else _explicitNullProperties?.Remove("ChargeDetail"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RateResultChargeDetail>? _explicitNullValueChargeDetail = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResultChargeDetail> ChargeDetail { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResultChargeDetail> ChargeDetail { get => _explicitNullValueChargeDetail; set { _explicitNullValueChargeDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChargeDetail"); else _explicitNullProperties?.Remove("ChargeDetail"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RateResultChargeDetail> _explicitNullValueChargeDetail = default!;
 #endif
         /// <summary>IATA currency codes for the pickup charge. Such as USD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get; set; }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrencyCode"); else _explicitNullProperties?.Remove("CurrencyCode"); } }
+        private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get; set; }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrencyCode"); else _explicitNullProperties?.Remove("CurrencyCode"); } }
+        private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>Container to hold Disclaimer message applicable to taxes and charges. Available only when tax information is requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateResultDisclaimer? Disclaimer { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateResultDisclaimer? Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.RateResultDisclaimer? _explicitNullValueDisclaimer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateResultDisclaimer Disclaimer { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateResultDisclaimer Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.RateResultDisclaimer _explicitNullValueDisclaimer = default!;
 #endif
         /// <summary>The grand total of each charge and applied tax.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GrandTotalOfAllCharge { get; set; }
+        public string? GrandTotalOfAllCharge { get => _explicitNullValueGrandTotalOfAllCharge; set { _explicitNullValueGrandTotalOfAllCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GrandTotalOfAllCharge"); else _explicitNullProperties?.Remove("GrandTotalOfAllCharge"); } }
+        private string? _explicitNullValueGrandTotalOfAllCharge = default!;
 #nullable restore
 #else
-        public string GrandTotalOfAllCharge { get; set; }
+        public string GrandTotalOfAllCharge { get => _explicitNullValueGrandTotalOfAllCharge; set { _explicitNullValueGrandTotalOfAllCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GrandTotalOfAllCharge"); else _explicitNullProperties?.Remove("GrandTotalOfAllCharge"); } }
+        private string _explicitNullValueGrandTotalOfAllCharge = default!;
 #endif
         /// <summary>The grand total of each incented charge and applied tax. Only present if 1. UserLevelDiscountIndicator = Y and User Level Promotion is applied to the pickup or 2 .if any incentive rate is applied to the pickup and SubVersion on the request is greater than or equal to 1707.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GrandTotalOfAllIncentedCharge { get; set; }
+        public string? GrandTotalOfAllIncentedCharge { get => _explicitNullValueGrandTotalOfAllIncentedCharge; set { _explicitNullValueGrandTotalOfAllIncentedCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GrandTotalOfAllIncentedCharge"); else _explicitNullProperties?.Remove("GrandTotalOfAllIncentedCharge"); } }
+        private string? _explicitNullValueGrandTotalOfAllIncentedCharge = default!;
 #nullable restore
 #else
-        public string GrandTotalOfAllIncentedCharge { get; set; }
+        public string GrandTotalOfAllIncentedCharge { get => _explicitNullValueGrandTotalOfAllIncentedCharge; set { _explicitNullValueGrandTotalOfAllIncentedCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GrandTotalOfAllIncentedCharge"); else _explicitNullProperties?.Remove("GrandTotalOfAllIncentedCharge"); } }
+        private string _explicitNullValueGrandTotalOfAllIncentedCharge = default!;
 #endif
         /// <summary>Total of charges before taxes. Only present when tax details requested in input.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreTaxTotalCharge { get; set; }
+        public string? PreTaxTotalCharge { get => _explicitNullValuePreTaxTotalCharge; set { _explicitNullValuePreTaxTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreTaxTotalCharge"); else _explicitNullProperties?.Remove("PreTaxTotalCharge"); } }
+        private string? _explicitNullValuePreTaxTotalCharge = default!;
 #nullable restore
 #else
-        public string PreTaxTotalCharge { get; set; }
+        public string PreTaxTotalCharge { get => _explicitNullValuePreTaxTotalCharge; set { _explicitNullValuePreTaxTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreTaxTotalCharge"); else _explicitNullProperties?.Remove("PreTaxTotalCharge"); } }
+        private string _explicitNullValuePreTaxTotalCharge = default!;
 #endif
         /// <summary>Total of incented charges before taxes. Only present if 1. UserLevelDiscountIndicator = Y and User Level Promotion is applied to the pickup or 2 .if any incentive rate is applied to the pickup and SubVersion on the request is greater than or equal to 1707.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreTaxTotalIncentedCharge { get; set; }
+        public string? PreTaxTotalIncentedCharge { get => _explicitNullValuePreTaxTotalIncentedCharge; set { _explicitNullValuePreTaxTotalIncentedCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreTaxTotalIncentedCharge"); else _explicitNullProperties?.Remove("PreTaxTotalIncentedCharge"); } }
+        private string? _explicitNullValuePreTaxTotalIncentedCharge = default!;
 #nullable restore
 #else
-        public string PreTaxTotalIncentedCharge { get; set; }
+        public string PreTaxTotalIncentedCharge { get => _explicitNullValuePreTaxTotalIncentedCharge; set { _explicitNullValuePreTaxTotalIncentedCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreTaxTotalIncentedCharge"); else _explicitNullProperties?.Remove("PreTaxTotalIncentedCharge"); } }
+        private string _explicitNullValuePreTaxTotalIncentedCharge = default!;
 #endif
         /// <summary>Indicates the pickup is rated as same-day or future-day pickup.- SD = Same-day Pickup- FD = Future-day Pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RateType { get; set; }
+        public string? RateType { get => _explicitNullValueRateType; set { _explicitNullValueRateType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateType"); else _explicitNullProperties?.Remove("RateType"); } }
+        private string? _explicitNullValueRateType = default!;
 #nullable restore
 #else
-        public string RateType { get; set; }
+        public string RateType { get => _explicitNullValueRateType; set { _explicitNullValueRateType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateType"); else _explicitNullProperties?.Remove("RateType"); } }
+        private string _explicitNullValueRateType = default!;
 #endif
         /// <summary>The TaxCharges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResultTaxCharges>? TaxCharges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResultTaxCharges>? TaxCharges { get => _explicitNullValueTaxCharges; set { _explicitNullValueTaxCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxCharges"); else _explicitNullProperties?.Remove("TaxCharges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RateResultTaxCharges>? _explicitNullValueTaxCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResultTaxCharges> TaxCharges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RateResultTaxCharges> TaxCharges { get => _explicitNullValueTaxCharges; set { _explicitNullValueTaxCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxCharges"); else _explicitNullProperties?.Remove("TaxCharges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RateResultTaxCharges> _explicitNullValueTaxCharges = default!;
 #endif
         /// <summary>The sum of all taxes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalTax { get; set; }
+        public string? TotalTax { get => _explicitNullValueTotalTax; set { _explicitNullValueTotalTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTax"); else _explicitNullProperties?.Remove("TotalTax"); } }
+        private string? _explicitNullValueTotalTax = default!;
 #nullable restore
 #else
-        public string TotalTax { get; set; }
+        public string TotalTax { get => _explicitNullValueTotalTax; set { _explicitNullValueTotalTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTax"); else _explicitNullProperties?.Remove("TotalTax"); } }
+        private string _explicitNullValueTotalTax = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult"/> and sets the default values.
@@ -110,7 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -149,6 +186,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("RateType", RateType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateResultTaxCharges>("TaxCharges", TaxCharges);
             writer.WriteStringValue("TotalTax", TotalTax);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

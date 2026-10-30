@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IncludeCriteriaSearchFilter : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ClickAndCollectSortWithDistance") is { } nullNodeClickAndCollectSortWithDistance && nullNodeClickAndCollectSortWithDistance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClickAndCollectSortWithDistance = null;
+            if (parseNode.GetChildNode("DCRIndicator") is { } nullNodeDCRIndicator && nullNodeDCRIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DCRIndicator = null;
+            if (parseNode.GetChildNode("ShipperPreparationDelay") is { } nullNodeShipperPreparationDelay && nullNodeShipperPreparationDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperPreparationDelay = null;
+            if (parseNode.GetChildNode("ShippingAvailabilityIndicator") is { } nullNodeShippingAvailabilityIndicator && nullNodeShippingAvailabilityIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAvailabilityIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This contains the distance (in given UnitOfMeasurement) wherin to sort the click and collect access point locations above other access point locations when a UPS Access Point candidate list is obtained in search by address or geocode search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClickAndCollectSortWithDistance { get; set; }
+        public string? ClickAndCollectSortWithDistance { get => _explicitNullValueClickAndCollectSortWithDistance; set { _explicitNullValueClickAndCollectSortWithDistance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClickAndCollectSortWithDistance"); else _explicitNullProperties?.Remove("ClickAndCollectSortWithDistance"); } }
+        private string? _explicitNullValueClickAndCollectSortWithDistance = default!;
 #nullable restore
 #else
-        public string ClickAndCollectSortWithDistance { get; set; }
+        public string ClickAndCollectSortWithDistance { get => _explicitNullValueClickAndCollectSortWithDistance; set { _explicitNullValueClickAndCollectSortWithDistance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClickAndCollectSortWithDistance"); else _explicitNullProperties?.Remove("ClickAndCollectSortWithDistance"); } }
+        private string _explicitNullValueClickAndCollectSortWithDistance = default!;
 #endif
         /// <summary>DCR/DCO Availability indicator for UPS Access Point. Either this indicator is present or not present. Presence indicates a search for access points with DCR. Any data in the element is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DCRIndicator { get; set; }
+        public string? DCRIndicator { get => _explicitNullValueDCRIndicator; set { _explicitNullValueDCRIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCRIndicator"); else _explicitNullProperties?.Remove("DCRIndicator"); } }
+        private string? _explicitNullValueDCRIndicator = default!;
 #nullable restore
 #else
-        public string DCRIndicator { get; set; }
+        public string DCRIndicator { get => _explicitNullValueDCRIndicator; set { _explicitNullValueDCRIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCRIndicator"); else _explicitNullProperties?.Remove("DCRIndicator"); } }
+        private string _explicitNullValueDCRIndicator = default!;
 #endif
         /// <summary>Value for the number of days to check for shipping availability from the current day. When this value is present, ShippingAvailabilityIndicator is implied implicitly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperPreparationDelay { get; set; }
+        public string? ShipperPreparationDelay { get => _explicitNullValueShipperPreparationDelay; set { _explicitNullValueShipperPreparationDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperPreparationDelay"); else _explicitNullProperties?.Remove("ShipperPreparationDelay"); } }
+        private string? _explicitNullValueShipperPreparationDelay = default!;
 #nullable restore
 #else
-        public string ShipperPreparationDelay { get; set; }
+        public string ShipperPreparationDelay { get => _explicitNullValueShipperPreparationDelay; set { _explicitNullValueShipperPreparationDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperPreparationDelay"); else _explicitNullProperties?.Remove("ShipperPreparationDelay"); } }
+        private string _explicitNullValueShipperPreparationDelay = default!;
 #endif
         /// <summary>Shipping Availability indicator for UPS Access Point. Either this indicator is present or not present. Presence indicates a search of access points with shipping availability. Any data in it is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingAvailabilityIndicator { get; set; }
+        public string? ShippingAvailabilityIndicator { get => _explicitNullValueShippingAvailabilityIndicator; set { _explicitNullValueShippingAvailabilityIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingAvailabilityIndicator"); else _explicitNullProperties?.Remove("ShippingAvailabilityIndicator"); } }
+        private string? _explicitNullValueShippingAvailabilityIndicator = default!;
 #nullable restore
 #else
-        public string ShippingAvailabilityIndicator { get; set; }
+        public string ShippingAvailabilityIndicator { get => _explicitNullValueShippingAvailabilityIndicator; set { _explicitNullValueShippingAvailabilityIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingAvailabilityIndicator"); else _explicitNullProperties?.Remove("ShippingAvailabilityIndicator"); } }
+        private string _explicitNullValueShippingAvailabilityIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("DCRIndicator", DCRIndicator);
             writer.WriteStringValue("ShipperPreparationDelay", ShipperPreparationDelay);
             writer.WriteStringValue("ShippingAvailabilityIndicator", ShippingAvailabilityIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

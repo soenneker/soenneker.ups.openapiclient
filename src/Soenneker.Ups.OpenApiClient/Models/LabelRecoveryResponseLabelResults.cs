@@ -12,56 +12,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelRecoveryResponseLabelResults : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Form") is { } nullNodeForm && nullNodeForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Form = null;
+            if (parseNode.GetChildNode("LabelImage") is { } nullNodeLabelImage && nullNodeLabelImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelImage = null;
+            if (parseNode.GetChildNode("MailInnovationsLabelImage") is { } nullNodeMailInnovationsLabelImage && nullNodeMailInnovationsLabelImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailInnovationsLabelImage = null;
+            if (parseNode.GetChildNode("MailInnovationsTrackingNumber") is { } nullNodeMailInnovationsTrackingNumber && nullNodeMailInnovationsTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailInnovationsTrackingNumber = null;
+            if (parseNode.GetChildNode("Receipt") is { } nullNodeReceipt && nullNodeReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receipt = null;
+            if (parseNode.GetChildNode("TrackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container tag for the International Forms. Currently, represents UPS Premium Care Form for Electronic Returns Label and Electronic Import Control Label. UPS  Premium Care Form for Forward shipment if Subverion is 1903 or greater  Applicable for Electronic Return Label and Electronic Import Control Label shipments only. Applies only for Canada domestic shipments. Returned for request with SubVersion greater than or equal to 1707.  UPS  Premium Care Form for Forward shipment if Subverion is 1903 or greater</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsForm? Form { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsForm? Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResultsForm? _explicitNullValueForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsForm Form { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsForm Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResultsForm _explicitNullValueForm = default!;
 #endif
         /// <summary>The elements needed to render a label on a printer or in a browser. Specifies the format in which GraphicImage is represented. If LabelImageFormat is GIF, LabelImage contains GraphicImage and HTMLImage. Otherwise, it contains only GraphicImage. If LabelImageFormat is PDF, LabelImage is only returned at the first package result. If entered in the request, the response mirrors, else the default values are returned.  Returned only if TrackingNumber or Combination of Reference Number and Shipper Number present in request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage? LabelImage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage? LabelImage { get => _explicitNullValueLabelImage; set { _explicitNullValueLabelImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelImage"); else _explicitNullProperties?.Remove("LabelImage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage? _explicitNullValueLabelImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage LabelImage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage LabelImage { get => _explicitNullValueLabelImage; set { _explicitNullValueLabelImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelImage"); else _explicitNullProperties?.Remove("LabelImage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage _explicitNullValueLabelImage = default!;
 #endif
         /// <summary>Container to hold Mail Innovations shipments label. The elements needed to render a label on a printer or in a browser. Specifies the format in which GraphicImage is represented. If LabelImageFormat is GIF, LabelImage contains GraphicImage and HTMLImage. Otherwise, it contains only GraphicImage.   Applicable for Single Mail Innovations Returns and Dual Mail Innovations Returns shipment. Returned only if MailInnovationsTrackingNumber is provided in request.If LabelImageFormat requested was PDF and TrackingNumber was present along with MailInnovationsTrackingNumber in the request, only LabelImage container is returned. MailInnovationsLabelImage will not be returned. In that case, the labels for Small Package Tracking Number and Mail Innovations Tracking Number will be stitched in single PDF file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsMailInnovationsLabelImage? MailInnovationsLabelImage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsMailInnovationsLabelImage? MailInnovationsLabelImage { get => _explicitNullValueMailInnovationsLabelImage; set { _explicitNullValueMailInnovationsLabelImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MailInnovationsLabelImage"); else _explicitNullProperties?.Remove("MailInnovationsLabelImage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResultsMailInnovationsLabelImage? _explicitNullValueMailInnovationsLabelImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsMailInnovationsLabelImage MailInnovationsLabelImage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsMailInnovationsLabelImage MailInnovationsLabelImage { get => _explicitNullValueMailInnovationsLabelImage; set { _explicitNullValueMailInnovationsLabelImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MailInnovationsLabelImage"); else _explicitNullProperties?.Remove("MailInnovationsLabelImage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResultsMailInnovationsLabelImage _explicitNullValueMailInnovationsLabelImage = default!;
 #endif
         /// <summary>Mail Innovations Tracking Number.  Applicable for Single Mail Innovations Returns and Dual Mail Innovations Returns shipment. Returned only if MailInnovationsTrackingNumber is provided in request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MailInnovationsTrackingNumber { get; set; }
+        public string? MailInnovationsTrackingNumber { get => _explicitNullValueMailInnovationsTrackingNumber; set { _explicitNullValueMailInnovationsTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MailInnovationsTrackingNumber"); else _explicitNullProperties?.Remove("MailInnovationsTrackingNumber"); } }
+        private string? _explicitNullValueMailInnovationsTrackingNumber = default!;
 #nullable restore
 #else
-        public string MailInnovationsTrackingNumber { get; set; }
+        public string MailInnovationsTrackingNumber { get => _explicitNullValueMailInnovationsTrackingNumber; set { _explicitNullValueMailInnovationsTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MailInnovationsTrackingNumber"); else _explicitNullProperties?.Remove("MailInnovationsTrackingNumber"); } }
+        private string _explicitNullValueMailInnovationsTrackingNumber = default!;
 #endif
         /// <summary>Container for the HTML receipt and the receipt link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsReceipt? Receipt { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsReceipt? Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Receipt"); else _explicitNullProperties?.Remove("Receipt"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResultsReceipt? _explicitNullValueReceipt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsReceipt Receipt { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResultsReceipt Receipt { get => _explicitNullValueReceipt; set { _explicitNullValueReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Receipt"); else _explicitNullProperties?.Remove("Receipt"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResultsReceipt _explicitNullValueReceipt = default!;
 #endif
         /// <summary>Package Tracking number.  Package 1Z number. Returned only if TrackingNumber or Combination of Reference Number and Shipper Number present in request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get; set; }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get; set; }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("MailInnovationsTrackingNumber", MailInnovationsTrackingNumber);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelResultsReceipt>("Receipt", Receipt);
             writer.WriteStringValue("TrackingNumber", TrackingNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.PaperlessReady.Paperlessdocuments.Item.Upl
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.Upload401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.Upload403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.Upload429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.Upload200Response>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.Upload200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

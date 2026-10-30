@@ -59,6 +59,8 @@ namespace Soenneker.Ups.OpenApiClient.WorldEaseShipmentManagement.MasterShipment
                 { "400", global::Soenneker.Ups.OpenApiClient.Models.WorldEaseShipmentManagementErrorResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.WorldEaseShipmentManagementErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.WorldEaseShipmentManagementErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PostResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

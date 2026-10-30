@@ -11,17 +11,32 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApolloPickupTotalV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("itemCount") is { } nullNodeItemCount && nullNodeItemCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemCount = null;
+            if (parseNode.GetChildNode("pieceCount") is { } nullNodePieceCount && nullNodePieceCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PieceCount = null;
+            if (parseNode.GetChildNode("shipmentCount") is { } nullNodeShipmentCount && nullNodeShipmentCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCount = null;
+            if (parseNode.GetChildNode("totalWeight") is { } nullNodeTotalWeight && nullNodeTotalWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalWeight = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The itemCount property</summary>
-        public int? ItemCount { get; set; }
+        public int? ItemCount { get => _explicitNullValueItemCount; set { _explicitNullValueItemCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemCount"); else _explicitNullProperties?.Remove("itemCount"); } }
+        private int? _explicitNullValueItemCount = default!;
         /// <summary>The pieceCount property</summary>
-        public int? PieceCount { get; set; }
+        public int? PieceCount { get => _explicitNullValuePieceCount; set { _explicitNullValuePieceCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pieceCount"); else _explicitNullProperties?.Remove("pieceCount"); } }
+        private int? _explicitNullValuePieceCount = default!;
         /// <summary>The shipmentCount property</summary>
-        public int? ShipmentCount { get; set; }
+        public int? ShipmentCount { get => _explicitNullValueShipmentCount; set { _explicitNullValueShipmentCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentCount"); else _explicitNullProperties?.Remove("shipmentCount"); } }
+        private int? _explicitNullValueShipmentCount = default!;
         /// <summary>The totalWeight property</summary>
-        public double? TotalWeight { get; set; }
+        public double? TotalWeight { get => _explicitNullValueTotalWeight; set { _explicitNullValueTotalWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalWeight"); else _explicitNullProperties?.Remove("totalWeight"); } }
+        private double? _explicitNullValueTotalWeight = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteIntValue("pieceCount", PieceCount);
             writer.WriteIntValue("shipmentCount", ShipmentCount);
             writer.WriteDoubleValue("totalWeight", TotalWeight);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

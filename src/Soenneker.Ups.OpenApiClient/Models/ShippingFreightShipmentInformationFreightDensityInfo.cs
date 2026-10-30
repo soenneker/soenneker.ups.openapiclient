@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShippingFreightShipmentInformationFreightDensityInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AdjustedHeight") is { } nullNodeAdjustedHeight && nullNodeAdjustedHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjustedHeight = null;
+            if (parseNode.GetChildNode("AdjustedHeightIndicator") is { } nullNodeAdjustedHeightIndicator && nullNodeAdjustedHeightIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjustedHeightIndicator = null;
+            if (parseNode.GetChildNode("HandlingUnits") is { } nullNodeHandlingUnits && nullNodeHandlingUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingUnits = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container for the adjusted height.  Required if AdjustedHeightIndicator is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoAdjustedHeight? AdjustedHeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoAdjustedHeight? AdjustedHeight { get => _explicitNullValueAdjustedHeight; set { _explicitNullValueAdjustedHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdjustedHeight"); else _explicitNullProperties?.Remove("AdjustedHeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoAdjustedHeight? _explicitNullValueAdjustedHeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoAdjustedHeight AdjustedHeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoAdjustedHeight AdjustedHeight { get => _explicitNullValueAdjustedHeight; set { _explicitNullValueAdjustedHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdjustedHeight"); else _explicitNullProperties?.Remove("AdjustedHeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoAdjustedHeight _explicitNullValueAdjustedHeight = default!;
 #endif
         /// <summary>The presence of the AdjustedHeightIndicator indicates that allow the height reduction adjustment for density based rate request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdjustedHeightIndicator { get; set; }
+        public string? AdjustedHeightIndicator { get => _explicitNullValueAdjustedHeightIndicator; set { _explicitNullValueAdjustedHeightIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdjustedHeightIndicator"); else _explicitNullProperties?.Remove("AdjustedHeightIndicator"); } }
+        private string? _explicitNullValueAdjustedHeightIndicator = default!;
 #nullable restore
 #else
-        public string AdjustedHeightIndicator { get; set; }
+        public string AdjustedHeightIndicator { get => _explicitNullValueAdjustedHeightIndicator; set { _explicitNullValueAdjustedHeightIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdjustedHeightIndicator"); else _explicitNullProperties?.Remove("AdjustedHeightIndicator"); } }
+        private string _explicitNullValueAdjustedHeightIndicator = default!;
 #endif
         /// <summary>The HandlingUnits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoHandlingUnits>? HandlingUnits { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoHandlingUnits>? HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingUnits"); else _explicitNullProperties?.Remove("HandlingUnits"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoHandlingUnits>? _explicitNullValueHandlingUnits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoHandlingUnits> HandlingUnits { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoHandlingUnits> HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingUnits"); else _explicitNullProperties?.Remove("HandlingUnits"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoHandlingUnits> _explicitNullValueHandlingUnits = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoAdjustedHeight>("AdjustedHeight", AdjustedHeight);
             writer.WriteStringValue("AdjustedHeightIndicator", AdjustedHeightIndicator);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightDensityInfoHandlingUnits>("HandlingUnits", HandlingUnits);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

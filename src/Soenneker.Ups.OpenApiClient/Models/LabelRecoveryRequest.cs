@@ -12,88 +12,125 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelRecoveryRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("LabelDelivery") is { } nullNodeLabelDelivery && nullNodeLabelDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelDelivery = null;
+            if (parseNode.GetChildNode("LabelSpecification") is { } nullNodeLabelSpecification && nullNodeLabelSpecification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelSpecification = null;
+            if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("MailInnovationsTrackingNumber") is { } nullNodeMailInnovationsTrackingNumber && nullNodeMailInnovationsTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MailInnovationsTrackingNumber = null;
+            if (parseNode.GetChildNode("ReferenceValues") is { } nullNodeReferenceValues && nullNodeReferenceValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceValues = null;
+            if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("TrackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("TrackingNumbers") is { } nullNodeTrackingNumbers && nullNodeTrackingNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumbers = null;
+            if (parseNode.GetChildNode("Translate") is { } nullNodeTranslate && nullNodeTranslate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Translate = null;
+            if (parseNode.GetChildNode("UPSPremiumCareForm") is { } nullNodeUPSPremiumCareForm && nullNodeUPSPremiumCareForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UPSPremiumCareForm = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container for the Label Delivery accessorial. One Label Delivery per shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery? LabelDelivery { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery? LabelDelivery { get => _explicitNullValueLabelDelivery; set { _explicitNullValueLabelDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelDelivery"); else _explicitNullProperties?.Remove("LabelDelivery"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery? _explicitNullValueLabelDelivery = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery LabelDelivery { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery LabelDelivery { get => _explicitNullValueLabelDelivery; set { _explicitNullValueLabelDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelDelivery"); else _explicitNullProperties?.Remove("LabelDelivery"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery _explicitNullValueLabelDelivery = default!;
 #endif
         /// <summary>Container that is used to define the properties required by the user to print and/ or display the UPS shipping label.  Required for the shipment without return service, or shipment with PRL return service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification? LabelSpecification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification? LabelSpecification { get => _explicitNullValueLabelSpecification; set { _explicitNullValueLabelSpecification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelSpecification"); else _explicitNullProperties?.Remove("LabelSpecification"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification? _explicitNullValueLabelSpecification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification LabelSpecification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification LabelSpecification { get => _explicitNullValueLabelSpecification; set { _explicitNullValueLabelSpecification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelSpecification"); else _explicitNullProperties?.Remove("LabelSpecification"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification _explicitNullValueLabelSpecification = default!;
 #endif
         /// <summary>Represents 5 character ISO Locale that allows the user to request Reference Number Code on Label, Label instructions, Receipt instructions (if available for given tracking number) and High Value Report (if available for given tracking number) in desired language. Locale is specified by the combination of language code and country or territory code - 2 character language code and 2 character country code seperated by an underscore (&apos;_&apos;) character. Example - de_DE. Please refer to Appendix for supported values for Locale.  Either Translate container or Locale element can be present in a given request. Both can&apos;t be requested together in same request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get; set; }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get; set; }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>Mail Innovations Tracking Number.  Required if Tracking Number or ReferenceNumber/Value is not populated. If only MailInnovationsTrackingNumber is provided, the request will be treated as Single Mail Innovations Return Shipment. Label Recovery will return label for Mail Innovations Return Tracking Number.If both, TrackingNumber and MailInnovationsTrackingNumber are provided, the request will be treated as Dual Mail Innovations Return Shipment. Label Recovery will return two labels one each for - Small Package Tracking Number and Mail Innovations Return Tracking Number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MailInnovationsTrackingNumber { get; set; }
+        public string? MailInnovationsTrackingNumber { get => _explicitNullValueMailInnovationsTrackingNumber; set { _explicitNullValueMailInnovationsTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MailInnovationsTrackingNumber"); else _explicitNullProperties?.Remove("MailInnovationsTrackingNumber"); } }
+        private string? _explicitNullValueMailInnovationsTrackingNumber = default!;
 #nullable restore
 #else
-        public string MailInnovationsTrackingNumber { get; set; }
+        public string MailInnovationsTrackingNumber { get => _explicitNullValueMailInnovationsTrackingNumber; set { _explicitNullValueMailInnovationsTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MailInnovationsTrackingNumber"); else _explicitNullProperties?.Remove("MailInnovationsTrackingNumber"); } }
+        private string _explicitNullValueMailInnovationsTrackingNumber = default!;
 #endif
         /// <summary>Container that holds reference number and shipper number  If tracking number is not present use reference Number. This is mandatory for only Roadie shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues? ReferenceValues { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues? ReferenceValues { get => _explicitNullValueReferenceValues; set { _explicitNullValueReferenceValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceValues"); else _explicitNullProperties?.Remove("ReferenceValues"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues? _explicitNullValueReferenceValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues ReferenceValues { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues ReferenceValues { get => _explicitNullValueReferenceValues; set { _explicitNullValueReferenceValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceValues"); else _explicitNullProperties?.Remove("ReferenceValues"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestReferenceValues _explicitNullValueReferenceValues = default!;
 #endif
         /// <summary>Request Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestRequest _explicitNullValueRequest = default!;
 #endif
         /// <summary>Small Package Tracking Number. Required if Mail Innovations Tracking Number or ReferenceNumber/Value and ShipperNumber is not provided.  If only TrackingNumber is provided, the request will be treated as Small Package Shipment. Label Recovery will return label for Small Package Tracking Number.If both, TrackingNumber and MailInnovationsTrackingNumber are provided, the request will be treated as Dual Mail Innovations Return Shipment. Label Recovery will return two labels one each for - Small Package Tracking Number and Mail Innovations Return Tracking Number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get; set; }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get; set; }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>List of Roadie (1R) tracking numbers associated with the label recovery request. Each tracking number must start with &quot;1R&quot; or &quot;1r&quot; and must be either 16 characters (offline) or 28 characters (online) in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TrackingNumbers { get; set; }
+        public List<string>? TrackingNumbers { get => _explicitNullValueTrackingNumbers; set { _explicitNullValueTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumbers"); else _explicitNullProperties?.Remove("TrackingNumbers"); } }
+        private List<string>? _explicitNullValueTrackingNumbers = default!;
 #nullable restore
 #else
-        public List<string> TrackingNumbers { get; set; }
+        public List<string> TrackingNumbers { get => _explicitNullValueTrackingNumbers; set { _explicitNullValueTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumbers"); else _explicitNullProperties?.Remove("TrackingNumbers"); } }
+        private List<string> _explicitNullValueTrackingNumbers = default!;
 #endif
         /// <summary>Translate container allows the user to specify the language he/she would like a specific portion of response to return. The language is specified by the combination of language code and dialect code. Valid combinations are: LanguageCode + DialectCode.  Either Translate container or Locale element can be present in a given request. Both can&apos;t be requested together in same request.Combinations: eng GB = Queen&apos;s English Spa 97 = Castilian Spanish ita 97 = Italian fra 97 = France French fra CA = Canadian French deu 97 = German por 97 = Portugal Portuguese nld 97 = Dutch dan 97 = Danish fin 97 = Finnish swe 97 = Swedish eng CA = Canadian English Eng US = US English Default language is Queen&apos;s English If the Ship from country or territory is Canada, the Language defaults to Canadian English. If the ship from country or territory is US, the language defaults to US English.If shipping from some other country or territory, the language defaults to Queens English.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate? Translate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate? Translate { get => _explicitNullValueTranslate; set { _explicitNullValueTranslate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Translate"); else _explicitNullProperties?.Remove("Translate"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate? _explicitNullValueTranslate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate Translate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate Translate { get => _explicitNullValueTranslate; set { _explicitNullValueTranslate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Translate"); else _explicitNullProperties?.Remove("Translate"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate _explicitNullValueTranslate = default!;
 #endif
         /// <summary>UPS Premium Care Form container.  Default is PDF when container is not provided.   Valid only for Canada to Canada movements. UPS Premium Care Form will be returned in  both US English and Canadian French language.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm? UPSPremiumCareForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm? UPSPremiumCareForm { get => _explicitNullValueUPSPremiumCareForm; set { _explicitNullValueUPSPremiumCareForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremiumCareForm"); else _explicitNullProperties?.Remove("UPSPremiumCareForm"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm? _explicitNullValueUPSPremiumCareForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm UPSPremiumCareForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm UPSPremiumCareForm { get => _explicitNullValueUPSPremiumCareForm; set { _explicitNullValueUPSPremiumCareForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremiumCareForm"); else _explicitNullProperties?.Remove("UPSPremiumCareForm"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm _explicitNullValueUPSPremiumCareForm = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest"/> and sets the default values.
@@ -110,7 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -149,6 +186,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("TrackingNumbers", TrackingNumbers);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestTranslate>("Translate", Translate);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestUpsPremiumCareForm>("UPSPremiumCareForm", UPSPremiumCareForm);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

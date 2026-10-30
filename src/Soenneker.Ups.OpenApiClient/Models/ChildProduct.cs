@@ -12,186 +12,261 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChildProduct : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CommodityCode") is { } nullNodeCommodityCode && nullNodeCommodityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCode = null;
+            if (parseNode.GetChildNode("CountryOriginCode") is { } nullNodeCountryOriginCode && nullNodeCountryOriginCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryOriginCode = null;
+            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("EEIInformation") is { } nullNodeEEIInformation && nullNodeEEIInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EEIInformation = null;
+            if (parseNode.GetChildNode("ExcludeFromForm") is { } nullNodeExcludeFromForm && nullNodeExcludeFromForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeFromForm = null;
+            if (parseNode.GetChildNode("ExportType") is { } nullNodeExportType && nullNodeExportType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportType = null;
+            if (parseNode.GetChildNode("JointProductionIndicator") is { } nullNodeJointProductionIndicator && nullNodeJointProductionIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JointProductionIndicator = null;
+            if (parseNode.GetChildNode("MarksAndNumbers") is { } nullNodeMarksAndNumbers && nullNodeMarksAndNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarksAndNumbers = null;
+            if (parseNode.GetChildNode("NetCostCode") is { } nullNodeNetCostCode && nullNodeNetCostCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetCostCode = null;
+            if (parseNode.GetChildNode("NetCostDateRange") is { } nullNodeNetCostDateRange && nullNodeNetCostDateRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetCostDateRange = null;
+            if (parseNode.GetChildNode("NumberOfPackagesPerCommodity") is { } nullNodeNumberOfPackagesPerCommodity && nullNodeNumberOfPackagesPerCommodity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfPackagesPerCommodity = null;
+            if (parseNode.GetChildNode("NumberOfUnits") is { } nullNodeNumberOfUnits && nullNodeNumberOfUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfUnits = null;
+            if (parseNode.GetChildNode("PackingListInfo") is { } nullNodePackingListInfo && nullNodePackingListInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackingListInfo = null;
+            if (parseNode.GetChildNode("PreferenceCriteria") is { } nullNodePreferenceCriteria && nullNodePreferenceCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferenceCriteria = null;
+            if (parseNode.GetChildNode("ProducerInfo") is { } nullNodeProducerInfo && nullNodeProducerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProducerInfo = null;
+            if (parseNode.GetChildNode("ProductNumber") is { } nullNodeProductNumber && nullNodeProductNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductNumber = null;
+            if (parseNode.GetChildNode("ProductWeight") is { } nullNodeProductWeight && nullNodeProductWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductWeight = null;
+            if (parseNode.GetChildNode("ScheduleB") is { } nullNodeScheduleB && nullNodeScheduleB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleB = null;
+            if (parseNode.GetChildNode("SEDTotalValue") is { } nullNodeSEDTotalValue && nullNodeSEDTotalValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SEDTotalValue = null;
+            if (parseNode.GetChildNode("TaxesPaid") is { } nullNodeTaxesPaid && nullNodeTaxesPaid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxesPaid = null;
+            if (parseNode.GetChildNode("UnitOfMeasure") is { } nullNodeUnitOfMeasure && nullNodeUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasure = null;
+            if (parseNode.GetChildNode("UnitPrice") is { } nullNodeUnitPrice && nullNodeUnitPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitPrice = null;
+            if (parseNode.GetChildNode("VehicleID") is { } nullNodeVehicleID && nullNodeVehicleID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VehicleID = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>6-to-15-alphanumeric commodity code. Customs uses this code to determine what duties should be assessed on the commodity.  Applies to Invoice, Partial Invoice and USMCA. Required for USMCA and optional for Partial Invoice. Should be at least 6 alphanumeric. For USMCA: For each good described in Description of Goods field, identify the H.S. tariff classification to six digits. If the good is subject to a specific rule of origin in Annex 401 that requires eight digits, identify to eight digits, using the H.S. tariff classification of the country or territory into whose territory the good is imported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityCode { get; set; }
+        public string? CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommodityCode"); else _explicitNullProperties?.Remove("CommodityCode"); } }
+        private string? _explicitNullValueCommodityCode = default!;
 #nullable restore
 #else
-        public string CommodityCode { get; set; }
+        public string CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommodityCode"); else _explicitNullProperties?.Remove("CommodityCode"); } }
+        private string _explicitNullValueCommodityCode = default!;
 #endif
         /// <summary>Country code of the product being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryOriginCode { get; set; }
+        public string? CountryOriginCode { get => _explicitNullValueCountryOriginCode; set { _explicitNullValueCountryOriginCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryOriginCode"); else _explicitNullProperties?.Remove("CountryOriginCode"); } }
+        private string? _explicitNullValueCountryOriginCode = default!;
 #nullable restore
 #else
-        public string CountryOriginCode { get; set; }
+        public string CountryOriginCode { get => _explicitNullValueCountryOriginCode; set { _explicitNullValueCountryOriginCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryOriginCode"); else _explicitNullProperties?.Remove("CountryOriginCode"); } }
+        private string _explicitNullValueCountryOriginCode = default!;
 #endif
         /// <summary>Description of the product being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Required for EEI form.  Applies to EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation? EEIInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation? EEIInformation { get => _explicitNullValueEEIInformation; set { _explicitNullValueEEIInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIInformation"); else _explicitNullProperties?.Remove("EEIInformation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation? _explicitNullValueEEIInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation EEIInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation EEIInformation { get => _explicitNullValueEEIInformation; set { _explicitNullValueEEIInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIInformation"); else _explicitNullProperties?.Remove("EEIInformation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductEeiInformation _explicitNullValueEEIInformation = default!;
 #endif
         /// <summary>Container tag for determining whether or not to exclude product information from a particular form.  If this container is not present we assume that the DEFAULT is selected which is &quot;none&quot; and all products will appear on all forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm? ExcludeFromForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm? ExcludeFromForm { get => _explicitNullValueExcludeFromForm; set { _explicitNullValueExcludeFromForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExcludeFromForm"); else _explicitNullProperties?.Remove("ExcludeFromForm"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm? _explicitNullValueExcludeFromForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm ExcludeFromForm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm ExcludeFromForm { get => _explicitNullValueExcludeFromForm; set { _explicitNullValueExcludeFromForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExcludeFromForm"); else _explicitNullProperties?.Remove("ExcludeFromForm"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductExcludeFromForm _explicitNullValueExcludeFromForm = default!;
 #endif
         /// <summary>Code indicating Domestic: Exports that have been produced, manufactured, or grown in the United States or Puerto Rico. This includes imported merchandise which has been enhanced in value or changed from the form in which imported by further manufacture or processing in the United States or Puerto Rico. Foreign: Merchandise that has entered the United States and is being exported again in the same condition as when imported.   Applies to EEI forms only. Required for EEI form.  Valid values:  D: Domestic; F: Foreign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportType { get; set; }
+        public string? ExportType { get => _explicitNullValueExportType; set { _explicitNullValueExportType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportType"); else _explicitNullProperties?.Remove("ExportType"); } }
+        private string? _explicitNullValueExportType = default!;
 #nullable restore
 #else
-        public string ExportType { get; set; }
+        public string ExportType { get => _explicitNullValueExportType; set { _explicitNullValueExportType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportType"); else _explicitNullProperties?.Remove("ExportType"); } }
+        private string _explicitNullValueExportType = default!;
 #endif
         /// <summary>If present, JNT will be used as the origin of country or territory code on the USMCA form and the Product/Origincountry or territoryCode tag will be ignored.  Applies to USMCA only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JointProductionIndicator { get; set; }
+        public string? JointProductionIndicator { get => _explicitNullValueJointProductionIndicator; set { _explicitNullValueJointProductionIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JointProductionIndicator"); else _explicitNullProperties?.Remove("JointProductionIndicator"); } }
+        private string? _explicitNullValueJointProductionIndicator = default!;
 #nullable restore
 #else
-        public string JointProductionIndicator { get; set; }
+        public string JointProductionIndicator { get => _explicitNullValueJointProductionIndicator; set { _explicitNullValueJointProductionIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JointProductionIndicator"); else _explicitNullProperties?.Remove("JointProductionIndicator"); } }
+        private string _explicitNullValueJointProductionIndicator = default!;
 #endif
         /// <summary>Any special marks, codes, and numbers that may appear on package.  Applies to CO Only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MarksAndNumbers { get; set; }
+        public string? MarksAndNumbers { get => _explicitNullValueMarksAndNumbers; set { _explicitNullValueMarksAndNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MarksAndNumbers"); else _explicitNullProperties?.Remove("MarksAndNumbers"); } }
+        private string? _explicitNullValueMarksAndNumbers = default!;
 #nullable restore
 #else
-        public string MarksAndNumbers { get; set; }
+        public string MarksAndNumbers { get => _explicitNullValueMarksAndNumbers; set { _explicitNullValueMarksAndNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MarksAndNumbers"); else _explicitNullProperties?.Remove("MarksAndNumbers"); } }
+        private string _explicitNullValueMarksAndNumbers = default!;
 #endif
         /// <summary>For each good described in the Description of Goods field, where the good is subject to a regional value content (RVC) requirement, indicate NC if the RVC is calculated according to the net cost method; otherwise, indicate NO. If the RVC is calculated over a period of time then indicate &quot;NC with begin/end date&quot; by passing code &quot;ND&quot;  Applies to USMCA only. Required for USMCA.  Valid values:- NC- ND- NO</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetCostCode { get; set; }
+        public string? NetCostCode { get => _explicitNullValueNetCostCode; set { _explicitNullValueNetCostCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetCostCode"); else _explicitNullProperties?.Remove("NetCostCode"); } }
+        private string? _explicitNullValueNetCostCode = default!;
 #nullable restore
 #else
-        public string NetCostCode { get; set; }
+        public string NetCostCode { get => _explicitNullValueNetCostCode; set { _explicitNullValueNetCostCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetCostCode"); else _explicitNullProperties?.Remove("NetCostCode"); } }
+        private string _explicitNullValueNetCostCode = default!;
 #endif
         /// <summary>Date Range for regional value content (RVC).  Applies to USMCA CO only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductNetCostDateRange? NetCostDateRange { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductNetCostDateRange? NetCostDateRange { get => _explicitNullValueNetCostDateRange; set { _explicitNullValueNetCostDateRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetCostDateRange"); else _explicitNullProperties?.Remove("NetCostDateRange"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductNetCostDateRange? _explicitNullValueNetCostDateRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductNetCostDateRange NetCostDateRange { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductNetCostDateRange NetCostDateRange { get => _explicitNullValueNetCostDateRange; set { _explicitNullValueNetCostDateRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetCostDateRange"); else _explicitNullProperties?.Remove("NetCostDateRange"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductNetCostDateRange _explicitNullValueNetCostDateRange = default!;
 #endif
         /// <summary>The total number of packages, cartons, or containers for the commodity.  Applicable for CO and is required. Should be numeric. Valid characters are 0 -9.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumberOfPackagesPerCommodity { get; set; }
+        public string? NumberOfPackagesPerCommodity { get => _explicitNullValueNumberOfPackagesPerCommodity; set { _explicitNullValueNumberOfPackagesPerCommodity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberOfPackagesPerCommodity"); else _explicitNullProperties?.Remove("NumberOfPackagesPerCommodity"); } }
+        private string? _explicitNullValueNumberOfPackagesPerCommodity = default!;
 #nullable restore
 #else
-        public string NumberOfPackagesPerCommodity { get; set; }
+        public string NumberOfPackagesPerCommodity { get => _explicitNullValueNumberOfPackagesPerCommodity; set { _explicitNullValueNumberOfPackagesPerCommodity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberOfPackagesPerCommodity"); else _explicitNullProperties?.Remove("NumberOfPackagesPerCommodity"); } }
+        private string _explicitNullValueNumberOfPackagesPerCommodity = default!;
 #endif
         /// <summary>Number of units of the product being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumberOfUnits { get; set; }
+        public string? NumberOfUnits { get => _explicitNullValueNumberOfUnits; set { _explicitNullValueNumberOfUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberOfUnits"); else _explicitNullProperties?.Remove("NumberOfUnits"); } }
+        private string? _explicitNullValueNumberOfUnits = default!;
 #nullable restore
 #else
-        public string NumberOfUnits { get; set; }
+        public string NumberOfUnits { get => _explicitNullValueNumberOfUnits; set { _explicitNullValueNumberOfUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberOfUnits"); else _explicitNullProperties?.Remove("NumberOfUnits"); } }
+        private string _explicitNullValueNumberOfUnits = default!;
 #endif
         /// <summary>Data Container holding package related information.  Required for packaging list, Air Freight Packing list and multi-piece Economy shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductPackingListInfo? PackingListInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductPackingListInfo? PackingListInfo { get => _explicitNullValuePackingListInfo; set { _explicitNullValuePackingListInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackingListInfo"); else _explicitNullProperties?.Remove("PackingListInfo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductPackingListInfo? _explicitNullValuePackingListInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductPackingListInfo PackingListInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductPackingListInfo PackingListInfo { get => _explicitNullValuePackingListInfo; set { _explicitNullValuePackingListInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackingListInfo"); else _explicitNullProperties?.Remove("PackingListInfo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductPackingListInfo _explicitNullValuePackingListInfo = default!;
 #endif
         /// <summary>Indicates the criterion (A through F) for each good described in the Description of Goods field if applicable. The rules of origin are contained in Chapter Four and Annex 401. Additional rules are described in Annex 703.2 (certain agricultural goods), Annex 300-B, Appendix 6 (certain textile goods) and Annex 308.1 (certain automatic data processing goods and their parts).  Applies to USMCA only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferenceCriteria { get; set; }
+        public string? PreferenceCriteria { get => _explicitNullValuePreferenceCriteria; set { _explicitNullValuePreferenceCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreferenceCriteria"); else _explicitNullProperties?.Remove("PreferenceCriteria"); } }
+        private string? _explicitNullValuePreferenceCriteria = default!;
 #nullable restore
 #else
-        public string PreferenceCriteria { get; set; }
+        public string PreferenceCriteria { get => _explicitNullValuePreferenceCriteria; set { _explicitNullValuePreferenceCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreferenceCriteria"); else _explicitNullProperties?.Remove("PreferenceCriteria"); } }
+        private string _explicitNullValuePreferenceCriteria = default!;
 #endif
         /// <summary>Indicate the following:  Yes - If shipper is the producer of the good. If not, state 02, 03, and 04 depending on whether this certificate was based upon:  No [1] - Knowledge of whether the good qualifies as an originating good. No [2] - Reliance on the producers written representation (other than a Certificate of Origin) that the good qualifies as an originating good. No [3] - A completed and signed Certificate for the good voluntarily provided to the exporter by the producer.  Applicable for USMCA and is required. Valid values: Yes, No [1], No [2], and No [3].</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProducerInfo { get; set; }
+        public string? ProducerInfo { get => _explicitNullValueProducerInfo; set { _explicitNullValueProducerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProducerInfo"); else _explicitNullProperties?.Remove("ProducerInfo"); } }
+        private string? _explicitNullValueProducerInfo = default!;
 #nullable restore
 #else
-        public string ProducerInfo { get; set; }
+        public string ProducerInfo { get => _explicitNullValueProducerInfo; set { _explicitNullValueProducerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProducerInfo"); else _explicitNullProperties?.Remove("ProducerInfo"); } }
+        private string _explicitNullValueProducerInfo = default!;
 #endif
         /// <summary>Product number of the product being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductNumber { get; set; }
+        public string? ProductNumber { get => _explicitNullValueProductNumber; set { _explicitNullValueProductNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductNumber"); else _explicitNullProperties?.Remove("ProductNumber"); } }
+        private string? _explicitNullValueProductNumber = default!;
 #nullable restore
 #else
-        public string ProductNumber { get; set; }
+        public string ProductNumber { get => _explicitNullValueProductNumber; set { _explicitNullValueProductNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductNumber"); else _explicitNullProperties?.Remove("ProductNumber"); } }
+        private string _explicitNullValueProductNumber = default!;
 #endif
         /// <summary>The shipping weight, including containers, for each commodity with a separate Harmonized Tariff Code / Schedule B Number. This weight does not include carrier equipment.  Applies to CO and EEI forms only. Required for CO and EEI forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight? ProductWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight? ProductWeight { get => _explicitNullValueProductWeight; set { _explicitNullValueProductWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductWeight"); else _explicitNullProperties?.Remove("ProductWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight? _explicitNullValueProductWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight ProductWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight ProductWeight { get => _explicitNullValueProductWeight; set { _explicitNullValueProductWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductWeight"); else _explicitNullProperties?.Remove("ProductWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductProductWeight _explicitNullValueProductWeight = default!;
 #endif
         /// <summary>Container tag for the schedule B information of a commodity.  Applies to EEI forms only. Required for EEI form</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB? ScheduleB { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB? ScheduleB { get => _explicitNullValueScheduleB; set { _explicitNullValueScheduleB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduleB"); else _explicitNullProperties?.Remove("ScheduleB"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB? _explicitNullValueScheduleB = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB ScheduleB { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB ScheduleB { get => _explicitNullValueScheduleB; set { _explicitNullValueScheduleB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduleB"); else _explicitNullProperties?.Remove("ScheduleB"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ProductScheduleB _explicitNullValueScheduleB = default!;
 #endif
         /// <summary>This amount will always be USD.  Applies to EEI forms only. Required for EEI form. Valid characters are 0-9 and \&apos;.\&apos; (Decimal point). Limit to 2 digit after the decimal. The maximum length of the field is 15 including \&apos;.\&apos; and can hold up to 2 decimal places.Note: This value is calculated based on the Product/Unit/Value and /Product/Unit/Number (Number of Units * Price per Unit). If the total value is incorrect it will be replaced by the actual calculated total value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SEDTotalValue { get; set; }
+        public string? SEDTotalValue { get => _explicitNullValueSEDTotalValue; set { _explicitNullValueSEDTotalValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SEDTotalValue"); else _explicitNullProperties?.Remove("SEDTotalValue"); } }
+        private string? _explicitNullValueSEDTotalValue = default!;
 #nullable restore
 #else
-        public string SEDTotalValue { get; set; }
+        public string SEDTotalValue { get => _explicitNullValueSEDTotalValue; set { _explicitNullValueSEDTotalValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SEDTotalValue"); else _explicitNullProperties?.Remove("SEDTotalValue"); } }
+        private string _explicitNullValueSEDTotalValue = default!;
 #endif
         /// <summary>Invoice Commodity Level Tax Collected Code for each shipment commodity line.Taxes paid Indicator is only applicable for shipments to Singapore. [TaxesPaid = 0 - No on Report], [TaxesPaid = 1 -Yes on Report], [TaxesPaid = empty - null on Report], [If TaxesPaid is not passed in input request = null on Report]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxesPaid { get; set; }
+        public string? TaxesPaid { get => _explicitNullValueTaxesPaid; set { _explicitNullValueTaxesPaid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxesPaid"); else _explicitNullProperties?.Remove("TaxesPaid"); } }
+        private string? _explicitNullValueTaxesPaid = default!;
 #nullable restore
 #else
-        public string TaxesPaid { get; set; }
+        public string TaxesPaid { get => _explicitNullValueTaxesPaid; set { _explicitNullValueTaxesPaid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxesPaid"); else _explicitNullProperties?.Remove("TaxesPaid"); } }
+        private string _explicitNullValueTaxesPaid = default!;
 #endif
         /// <summary>Unit of Measure for the product being shipped.Valid values are : - BA = Barrel - BE = Bundle - BG = Bag - BH =Bunch - BOX = Box - BT = Bolt - LB =Pound - LBS = Pounds - L = Liter - M = Meter - NMB = Number - PA = Packet - BU = Butt - CI =Canister - CM =Centimeter - CON = Container - CR = Crate - CS =Case - CT =Carton - CY =Cylinder - DOZ = Dozen - EA = Each - EN =Envelope - FT =Feet - KG =Kilogram - KGS = Kilograms - PAL = Pallet - PC = Piece - PCS = Pieces - PF = Proof Liters - OTH = Other - PKG = Package - PR = Pair - PRS = Pairs - RL = Roll - SET = Set - SME = Square Meters - SYD = Square Yards - TU =Tube - YD =Yard</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildProductUnitOfMeasure? UnitOfMeasure { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildProductUnitOfMeasure? UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasure"); else _explicitNullProperties?.Remove("UnitOfMeasure"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChildProductUnitOfMeasure? _explicitNullValueUnitOfMeasure = default!;
         /// <summary>Price per unit of the product being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitPrice { get; set; }
+        public string? UnitPrice { get => _explicitNullValueUnitPrice; set { _explicitNullValueUnitPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitPrice"); else _explicitNullProperties?.Remove("UnitPrice"); } }
+        private string? _explicitNullValueUnitPrice = default!;
 #nullable restore
 #else
-        public string UnitPrice { get; set; }
+        public string UnitPrice { get => _explicitNullValueUnitPrice; set { _explicitNullValueUnitPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitPrice"); else _explicitNullProperties?.Remove("UnitPrice"); } }
+        private string _explicitNullValueUnitPrice = default!;
 #endif
         /// <summary>Includes the following information for used self-propelled vehicles as defined in Customs regulations 19 CFR 192.1: The unique Vehicle Identification Number (VIN) in the proper format. Or The Product Identification Number (PIN) for those used self-propelled vehicles for which there are no VINs.  Or the Vehicle Title Number.  Applies to EEI forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VehicleID { get; set; }
+        public string? VehicleID { get => _explicitNullValueVehicleID; set { _explicitNullValueVehicleID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VehicleID"); else _explicitNullProperties?.Remove("VehicleID"); } }
+        private string? _explicitNullValueVehicleID = default!;
 #nullable restore
 #else
-        public string VehicleID { get; set; }
+        public string VehicleID { get => _explicitNullValueVehicleID; set { _explicitNullValueVehicleID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VehicleID"); else _explicitNullProperties?.Remove("VehicleID"); } }
+        private string _explicitNullValueVehicleID = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChildProduct"/> and sets the default values.
@@ -208,7 +283,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ChildProduct CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ChildProduct();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ChildProduct(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -273,6 +348,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChildProductUnitOfMeasure>("UnitOfMeasure", UnitOfMeasure);
             writer.WriteStringValue("UnitPrice", UnitPrice);
             writer.WriteStringValue("VehicleID", VehicleID);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

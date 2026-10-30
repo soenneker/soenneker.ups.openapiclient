@@ -12,28 +12,45 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentItemsResponseImportExportCompliance : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("complianceOutput") is { } nullNodeComplianceOutput && nullNodeComplianceOutput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComplianceOutput = null;
+            if (parseNode.GetChildNode("isTranslatedIndicator") is { } nullNodeIsTranslatedIndicator && nullNodeIsTranslatedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTranslatedIndicator = null;
+            if (parseNode.GetChildNode("isUpsProhibited") is { } nullNodeIsUpsProhibited && nullNodeIsUpsProhibited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUpsProhibited = null;
+            if (parseNode.GetChildNode("upsProhibitedMessage") is { } nullNodeUpsProhibitedMessage && nullNodeUpsProhibitedMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpsProhibitedMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This array includes the output of the compliance review, including customs category and control codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails>? ComplianceOutput { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails>? ComplianceOutput { get => _explicitNullValueComplianceOutput; set { _explicitNullValueComplianceOutput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complianceOutput"); else _explicitNullProperties?.Remove("complianceOutput"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails>? _explicitNullValueComplianceOutput = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails> ComplianceOutput { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails> ComplianceOutput { get => _explicitNullValueComplianceOutput; set { _explicitNullValueComplianceOutput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complianceOutput"); else _explicitNullProperties?.Remove("complianceOutput"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetails> _explicitNullValueComplianceOutput = default!;
 #endif
         /// <summary>Whether shipment details have been translated from the language of the origin country to the user&apos;s language</summary>
-        public bool? IsTranslatedIndicator { get; set; }
+        public bool? IsTranslatedIndicator { get => _explicitNullValueIsTranslatedIndicator; set { _explicitNullValueIsTranslatedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isTranslatedIndicator"); else _explicitNullProperties?.Remove("isTranslatedIndicator"); } }
+        private bool? _explicitNullValueIsTranslatedIndicator = default!;
         /// <summary>Whether UPS prohibits shipment of the item</summary>
-        public bool? IsUpsProhibited { get; set; }
+        public bool? IsUpsProhibited { get => _explicitNullValueIsUpsProhibited; set { _explicitNullValueIsUpsProhibited = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUpsProhibited"); else _explicitNullProperties?.Remove("isUpsProhibited"); } }
+        private bool? _explicitNullValueIsUpsProhibited = default!;
         /// <summary>A message explaining the reason for any prohibited shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage? UpsProhibitedMessage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage? UpsProhibitedMessage { get => _explicitNullValueUpsProhibitedMessage; set { _explicitNullValueUpsProhibitedMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsProhibitedMessage"); else _explicitNullProperties?.Remove("upsProhibitedMessage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage? _explicitNullValueUpsProhibitedMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage UpsProhibitedMessage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage UpsProhibitedMessage { get => _explicitNullValueUpsProhibitedMessage; set { _explicitNullValueUpsProhibitedMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsProhibitedMessage"); else _explicitNullProperties?.Remove("upsProhibitedMessage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage _explicitNullValueUpsProhibitedMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance"/> and sets the default values.
@@ -50,7 +67,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +94,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("isTranslatedIndicator", IsTranslatedIndicator);
             writer.WriteBoolValue("isUpsProhibited", IsUpsProhibited);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportItemLevelResponseUpsProhibitedMessage>("upsProhibitedMessage", UpsProhibitedMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

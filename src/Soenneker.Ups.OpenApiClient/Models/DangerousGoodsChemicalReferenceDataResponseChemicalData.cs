@@ -11,32 +11,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DangerousGoodsChemicalReferenceDataResponseChemicalData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ChemicalDetail") is { } nullNodeChemicalDetail && nullNodeChemicalDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalDetail = null;
+            if (parseNode.GetChildNode("PackageQuantityLimitDetail") is { } nullNodePackageQuantityLimitDetail && nullNodePackageQuantityLimitDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageQuantityLimitDetail = null;
+            if (parseNode.GetChildNode("ProperShippingNameDetail") is { } nullNodeProperShippingNameDetail && nullNodeProperShippingNameDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProperShippingNameDetail = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container to hold Chemical details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail? ChemicalDetail { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail? ChemicalDetail { get => _explicitNullValueChemicalDetail; set { _explicitNullValueChemicalDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalDetail"); else _explicitNullProperties?.Remove("ChemicalDetail"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail? _explicitNullValueChemicalDetail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail ChemicalDetail { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail ChemicalDetail { get => _explicitNullValueChemicalDetail; set { _explicitNullValueChemicalDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalDetail"); else _explicitNullProperties?.Remove("ChemicalDetail"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail _explicitNullValueChemicalDetail = default!;
 #endif
         /// <summary>Container to hold Package Quantity Limit Detail information.  It will be returned if applies for a given chemical record.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail>? PackageQuantityLimitDetail { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail>? PackageQuantityLimitDetail { get => _explicitNullValuePackageQuantityLimitDetail; set { _explicitNullValuePackageQuantityLimitDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitDetail"); else _explicitNullProperties?.Remove("PackageQuantityLimitDetail"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail>? _explicitNullValuePackageQuantityLimitDetail = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail> PackageQuantityLimitDetail { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail> PackageQuantityLimitDetail { get => _explicitNullValuePackageQuantityLimitDetail; set { _explicitNullValuePackageQuantityLimitDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitDetail"); else _explicitNullProperties?.Remove("PackageQuantityLimitDetail"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail> _explicitNullValuePackageQuantityLimitDetail = default!;
 #endif
         /// <summary>Container to hold Proper Shipping Name Detail information.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataProperShippingNameDetail? ProperShippingNameDetail { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataProperShippingNameDetail? ProperShippingNameDetail { get => _explicitNullValueProperShippingNameDetail; set { _explicitNullValueProperShippingNameDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingNameDetail"); else _explicitNullProperties?.Remove("ProperShippingNameDetail"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataProperShippingNameDetail? _explicitNullValueProperShippingNameDetail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataProperShippingNameDetail ProperShippingNameDetail { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataProperShippingNameDetail ProperShippingNameDetail { get => _explicitNullValueProperShippingNameDetail; set { _explicitNullValueProperShippingNameDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingNameDetail"); else _explicitNullProperties?.Remove("ProperShippingNameDetail"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataProperShippingNameDetail _explicitNullValueProperShippingNameDetail = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataResponseChemicalData"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataResponseChemicalData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataResponseChemicalData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataResponseChemicalData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail>("ChemicalDetail", ChemicalDetail);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail>("PackageQuantityLimitDetail", PackageQuantityLimitDetail);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataProperShippingNameDetail>("ProperShippingNameDetail", ProperShippingNameDetail);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

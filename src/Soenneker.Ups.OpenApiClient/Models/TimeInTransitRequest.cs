@@ -12,160 +12,234 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TimeInTransitRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("avvFlag") is { } nullNodeAvvFlag && nullNodeAvvFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvvFlag = null;
+            if (parseNode.GetChildNode("billType") is { } nullNodeBillType && nullNodeBillType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillType = null;
+            if (parseNode.GetChildNode("destinationCityName") is { } nullNodeDestinationCityName && nullNodeDestinationCityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationCityName = null;
+            if (parseNode.GetChildNode("destinationCountryCode") is { } nullNodeDestinationCountryCode && nullNodeDestinationCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationCountryCode = null;
+            if (parseNode.GetChildNode("destinationPostalCode") is { } nullNodeDestinationPostalCode && nullNodeDestinationPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationPostalCode = null;
+            if (parseNode.GetChildNode("destinationStateProvince") is { } nullNodeDestinationStateProvince && nullNodeDestinationStateProvince.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationStateProvince = null;
+            if (parseNode.GetChildNode("destinationTownName") is { } nullNodeDestinationTownName && nullNodeDestinationTownName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationTownName = null;
+            if (parseNode.GetChildNode("dropOffAtFacilityIndicator") is { } nullNodeDropOffAtFacilityIndicator && nullNodeDropOffAtFacilityIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropOffAtFacilityIndicator = null;
+            if (parseNode.GetChildNode("holdForPickupIndicator") is { } nullNodeHoldForPickupIndicator && nullNodeHoldForPickupIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldForPickupIndicator = null;
+            if (parseNode.GetChildNode("maxList") is { } nullNodeMaxList && nullNodeMaxList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxList = null;
+            if (parseNode.GetChildNode("numberOfPackages") is { } nullNodeNumberOfPackages && nullNodeNumberOfPackages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfPackages = null;
+            if (parseNode.GetChildNode("originCityName") is { } nullNodeOriginCityName && nullNodeOriginCityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginCityName = null;
+            if (parseNode.GetChildNode("originCountryCode") is { } nullNodeOriginCountryCode && nullNodeOriginCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginCountryCode = null;
+            if (parseNode.GetChildNode("originPostalCode") is { } nullNodeOriginPostalCode && nullNodeOriginPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginPostalCode = null;
+            if (parseNode.GetChildNode("originStateProvince") is { } nullNodeOriginStateProvince && nullNodeOriginStateProvince.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginStateProvince = null;
+            if (parseNode.GetChildNode("originTownName") is { } nullNodeOriginTownName && nullNodeOriginTownName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginTownName = null;
+            if (parseNode.GetChildNode("premierIndicator") is { } nullNodePremierIndicator && nullNodePremierIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PremierIndicator = null;
+            if (parseNode.GetChildNode("residentialIndicator") is { } nullNodeResidentialIndicator && nullNodeResidentialIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResidentialIndicator = null;
+            if (parseNode.GetChildNode("returnUnfilterdServices") is { } nullNodeReturnUnfilterdServices && nullNodeReturnUnfilterdServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnUnfilterdServices = null;
+            if (parseNode.GetChildNode("shipDate") is { } nullNodeShipDate && nullNodeShipDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipDate = null;
+            if (parseNode.GetChildNode("shipmentContentsCurrencyCode") is { } nullNodeShipmentContentsCurrencyCode && nullNodeShipmentContentsCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentContentsCurrencyCode = null;
+            if (parseNode.GetChildNode("shipmentContentsValue") is { } nullNodeShipmentContentsValue && nullNodeShipmentContentsValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentContentsValue = null;
+            if (parseNode.GetChildNode("shipTime") is { } nullNodeShipTime && nullNodeShipTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipTime = null;
+            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("weightUnitOfMeasure") is { } nullNodeWeightUnitOfMeasure && nullNodeWeightUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnitOfMeasure = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Used to bypass address validation when the address has already been validated by the calling application.    Valid values: true, false   Defaults to true  Note: not to be exposed to external customers.</summary>
-        public bool? AvvFlag { get; set; }
+        public bool? AvvFlag { get => _explicitNullValueAvvFlag; set { _explicitNullValueAvvFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avvFlag"); else _explicitNullProperties?.Remove("avvFlag"); } }
+        private bool? _explicitNullValueAvvFlag = default!;
         /// <summary>Required for International Requests.  Valid values: &quot;02&quot;,&quot;03&quot;,&quot;04&quot;  02 - Document  03 - Non Document  04 - WWEF (Pallet)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillType { get; set; }
+        public string? BillType { get => _explicitNullValueBillType; set { _explicitNullValueBillType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billType"); else _explicitNullProperties?.Remove("billType"); } }
+        private string? _explicitNullValueBillType = default!;
 #nullable restore
 #else
-        public string BillType { get; set; }
+        public string BillType { get => _explicitNullValueBillType; set { _explicitNullValueBillType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billType"); else _explicitNullProperties?.Remove("billType"); } }
+        private string _explicitNullValueBillType = default!;
 #endif
         /// <summary>The shipment destination city. Required for International Requests for those countries that do not utilize postal codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationCityName { get; set; }
+        public string? DestinationCityName { get => _explicitNullValueDestinationCityName; set { _explicitNullValueDestinationCityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationCityName"); else _explicitNullProperties?.Remove("destinationCityName"); } }
+        private string? _explicitNullValueDestinationCityName = default!;
 #nullable restore
 #else
-        public string DestinationCityName { get; set; }
+        public string DestinationCityName { get => _explicitNullValueDestinationCityName; set { _explicitNullValueDestinationCityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationCityName"); else _explicitNullProperties?.Remove("destinationCityName"); } }
+        private string _explicitNullValueDestinationCityName = default!;
 #endif
         /// <summary>The country code of the destination.   Valid values:  Must conform to ISO-defined country codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationCountryCode { get; set; }
+        public string? DestinationCountryCode { get => _explicitNullValueDestinationCountryCode; set { _explicitNullValueDestinationCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationCountryCode"); else _explicitNullProperties?.Remove("destinationCountryCode"); } }
+        private string? _explicitNullValueDestinationCountryCode = default!;
 #nullable restore
 #else
-        public string DestinationCountryCode { get; set; }
+        public string DestinationCountryCode { get => _explicitNullValueDestinationCountryCode; set { _explicitNullValueDestinationCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationCountryCode"); else _explicitNullProperties?.Remove("destinationCountryCode"); } }
+        private string _explicitNullValueDestinationCountryCode = default!;
 #endif
         /// <summary>The shipment destination postal code.   Required for Domestic requests. Either 5, or 9-digit U.S. zip codes must be used for U.S. addresses.  For non-U.S. addresses, this is recommended for all countries that utilize postal codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationPostalCode { get; set; }
+        public string? DestinationPostalCode { get => _explicitNullValueDestinationPostalCode; set { _explicitNullValueDestinationPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationPostalCode"); else _explicitNullProperties?.Remove("destinationPostalCode"); } }
+        private string? _explicitNullValueDestinationPostalCode = default!;
 #nullable restore
 #else
-        public string DestinationPostalCode { get; set; }
+        public string DestinationPostalCode { get => _explicitNullValueDestinationPostalCode; set { _explicitNullValueDestinationPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationPostalCode"); else _explicitNullProperties?.Remove("destinationPostalCode"); } }
+        private string _explicitNullValueDestinationPostalCode = default!;
 #endif
         /// <summary>The shipment destination state or province.  For U.S. addresses, the value must be a valid 2-character value (per U.S. Mail standards).   For non-U.S. addresses the full State or Province name should be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationStateProvince { get; set; }
+        public string? DestinationStateProvince { get => _explicitNullValueDestinationStateProvince; set { _explicitNullValueDestinationStateProvince = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationStateProvince"); else _explicitNullProperties?.Remove("destinationStateProvince"); } }
+        private string? _explicitNullValueDestinationStateProvince = default!;
 #nullable restore
 #else
-        public string DestinationStateProvince { get; set; }
+        public string DestinationStateProvince { get => _explicitNullValueDestinationStateProvince; set { _explicitNullValueDestinationStateProvince = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationStateProvince"); else _explicitNullProperties?.Remove("destinationStateProvince"); } }
+        private string _explicitNullValueDestinationStateProvince = default!;
 #endif
         /// <summary>The shipment destination town.  Town is a subdivision of city.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationTownName { get; set; }
+        public string? DestinationTownName { get => _explicitNullValueDestinationTownName; set { _explicitNullValueDestinationTownName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationTownName"); else _explicitNullProperties?.Remove("destinationTownName"); } }
+        private string? _explicitNullValueDestinationTownName = default!;
 #nullable restore
 #else
-        public string DestinationTownName { get; set; }
+        public string DestinationTownName { get => _explicitNullValueDestinationTownName; set { _explicitNullValueDestinationTownName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationTownName"); else _explicitNullProperties?.Remove("destinationTownName"); } }
+        private string _explicitNullValueDestinationTownName = default!;
 #endif
         /// <summary>Sets the indicator for an international Freight Pallet shipment that is going to be dropped off by shipper to a UPS facility.  The indicator is used when the Bill Type is &quot;04&quot;.    Valid values: &quot;0&quot;, &quot;1&quot;.   0 = WWDTProcessIF.PICKUP_BY_UPS  1 = WWDTProcessIf.DROPOFF_BY_SHIPPER   The default value is &quot;0&quot; </summary>
-        public int? DropOffAtFacilityIndicator { get; set; }
+        public int? DropOffAtFacilityIndicator { get => _explicitNullValueDropOffAtFacilityIndicator; set { _explicitNullValueDropOffAtFacilityIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dropOffAtFacilityIndicator"); else _explicitNullProperties?.Remove("dropOffAtFacilityIndicator"); } }
+        private int? _explicitNullValueDropOffAtFacilityIndicator = default!;
         /// <summary>Sets the indicator for an international Freight Pallet shipment that is going to be pick-up by consignee in a destination facility.  The indicator is used when the Bill Type is &quot;04&quot;.    Valid values: &quot;0&quot;, &quot;1&quot;.   0 = WWDTProcessIF.DELIVERY_BY_UPS  1 = WWDTProcessIf.PICKUP_BY_CONSIGNEE   The default value is &quot;0&quot; </summary>
-        public int? HoldForPickupIndicator { get; set; }
+        public int? HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holdForPickupIndicator"); else _explicitNullProperties?.Remove("holdForPickupIndicator"); } }
+        private int? _explicitNullValueHoldForPickupIndicator = default!;
         /// <summary>Sets the limit for the number of candidates returned in candidate list.    Default value is 200.</summary>
-        public int? MaxList { get; set; }
+        public int? MaxList { get => _explicitNullValueMaxList; set { _explicitNullValueMaxList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxList"); else _explicitNullProperties?.Remove("maxList"); } }
+        private int? _explicitNullValueMaxList = default!;
         /// <summary>Sets the number of packages in shipment.  Default value is 1.</summary>
-        public int? NumberOfPackages { get; set; }
+        public int? NumberOfPackages { get => _explicitNullValueNumberOfPackages; set { _explicitNullValueNumberOfPackages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberOfPackages"); else _explicitNullProperties?.Remove("numberOfPackages"); } }
+        private int? _explicitNullValueNumberOfPackages = default!;
         /// <summary>The shipment origin city. Required for International requests for those countries that do not utilize postal codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginCityName { get; set; }
+        public string? OriginCityName { get => _explicitNullValueOriginCityName; set { _explicitNullValueOriginCityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originCityName"); else _explicitNullProperties?.Remove("originCityName"); } }
+        private string? _explicitNullValueOriginCityName = default!;
 #nullable restore
 #else
-        public string OriginCityName { get; set; }
+        public string OriginCityName { get => _explicitNullValueOriginCityName; set { _explicitNullValueOriginCityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originCityName"); else _explicitNullProperties?.Remove("originCityName"); } }
+        private string _explicitNullValueOriginCityName = default!;
 #endif
         /// <summary>The country code of the origin shipment. Valid Values: Must conform to the ISO-defined, two-letter country or territory codes.  Refer to Country or Territory Codes in the Appendix above for valid values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginCountryCode { get; set; }
+        public string? OriginCountryCode { get => _explicitNullValueOriginCountryCode; set { _explicitNullValueOriginCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originCountryCode"); else _explicitNullProperties?.Remove("originCountryCode"); } }
+        private string? _explicitNullValueOriginCountryCode = default!;
 #nullable restore
 #else
-        public string OriginCountryCode { get; set; }
+        public string OriginCountryCode { get => _explicitNullValueOriginCountryCode; set { _explicitNullValueOriginCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originCountryCode"); else _explicitNullProperties?.Remove("originCountryCode"); } }
+        private string _explicitNullValueOriginCountryCode = default!;
 #endif
         /// <summary>Required for Domestic requests.  The shipment origin postal code.  Either the 5, or 9-digit US zip codes must be used for U.S. addresses.  For non-U.S. addresses, this is recommended for all countries that utilize postal codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginPostalCode { get; set; }
+        public string? OriginPostalCode { get => _explicitNullValueOriginPostalCode; set { _explicitNullValueOriginPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originPostalCode"); else _explicitNullProperties?.Remove("originPostalCode"); } }
+        private string? _explicitNullValueOriginPostalCode = default!;
 #nullable restore
 #else
-        public string OriginPostalCode { get; set; }
+        public string OriginPostalCode { get => _explicitNullValueOriginPostalCode; set { _explicitNullValueOriginPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originPostalCode"); else _explicitNullProperties?.Remove("originPostalCode"); } }
+        private string _explicitNullValueOriginPostalCode = default!;
 #endif
         /// <summary>The shipment origin state or province.  For U.S. addresses, the value must be a valid 2-character value (per U.S. Mail standards)  For non-U.S. addresses the full State or Province name should be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginStateProvince { get; set; }
+        public string? OriginStateProvince { get => _explicitNullValueOriginStateProvince; set { _explicitNullValueOriginStateProvince = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originStateProvince"); else _explicitNullProperties?.Remove("originStateProvince"); } }
+        private string? _explicitNullValueOriginStateProvince = default!;
 #nullable restore
 #else
-        public string OriginStateProvince { get; set; }
+        public string OriginStateProvince { get => _explicitNullValueOriginStateProvince; set { _explicitNullValueOriginStateProvince = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originStateProvince"); else _explicitNullProperties?.Remove("originStateProvince"); } }
+        private string _explicitNullValueOriginStateProvince = default!;
 #endif
         /// <summary>The shipment origin town. Town is a subdivision of city.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginTownName { get; set; }
+        public string? OriginTownName { get => _explicitNullValueOriginTownName; set { _explicitNullValueOriginTownName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originTownName"); else _explicitNullProperties?.Remove("originTownName"); } }
+        private string? _explicitNullValueOriginTownName = default!;
 #nullable restore
 #else
-        public string OriginTownName { get; set; }
+        public string OriginTownName { get => _explicitNullValueOriginTownName; set { _explicitNullValueOriginTownName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originTownName"); else _explicitNullProperties?.Remove("originTownName"); } }
+        private string _explicitNullValueOriginTownName = default!;
 #endif
         /// <summary>Sets the indicator for premier time in transit when the shipment contains a premier package.   Valid values: “00”, “01”.    00 = Non-premier time in transit.   01 = Premier time in transit.    The default value is “00”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PremierIndicator { get; set; }
+        public string? PremierIndicator { get => _explicitNullValuePremierIndicator; set { _explicitNullValuePremierIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premierIndicator"); else _explicitNullProperties?.Remove("premierIndicator"); } }
+        private string? _explicitNullValuePremierIndicator = default!;
 #nullable restore
 #else
-        public string PremierIndicator { get; set; }
+        public string PremierIndicator { get => _explicitNullValuePremierIndicator; set { _explicitNullValuePremierIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premierIndicator"); else _explicitNullProperties?.Remove("premierIndicator"); } }
+        private string _explicitNullValuePremierIndicator = default!;
 #endif
         /// <summary>Indicates if address is residential or commercial. Required for Domestic requests.   Valid values: &quot;01&quot;, &quot;02&quot;   01 = Residential  02 = Commercial   Defaults to commercial for International Requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResidentialIndicator { get; set; }
+        public string? ResidentialIndicator { get => _explicitNullValueResidentialIndicator; set { _explicitNullValueResidentialIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("residentialIndicator"); else _explicitNullProperties?.Remove("residentialIndicator"); } }
+        private string? _explicitNullValueResidentialIndicator = default!;
 #nullable restore
 #else
-        public string ResidentialIndicator { get; set; }
+        public string ResidentialIndicator { get => _explicitNullValueResidentialIndicator; set { _explicitNullValueResidentialIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("residentialIndicator"); else _explicitNullProperties?.Remove("residentialIndicator"); } }
+        private string _explicitNullValueResidentialIndicator = default!;
 #endif
         /// <summary>Used to get back a full list of services - bypassing current WWDT business rules to remove services from the list being returned to clients for US domestic that are slower than UPS Ground.    Default value is false.</summary>
-        public bool? ReturnUnfilterdServices { get; set; }
+        public bool? ReturnUnfilterdServices { get => _explicitNullValueReturnUnfilterdServices; set { _explicitNullValueReturnUnfilterdServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("returnUnfilterdServices"); else _explicitNullProperties?.Remove("returnUnfilterdServices"); } }
+        private bool? _explicitNullValueReturnUnfilterdServices = default!;
         /// <summary>The date the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).  Allowed range is up to 60 days in future and 35 days in past. This date may or may not be the UPS business date. Format is YYYY-MM-DD.  YYYY = 4 digit year; MM = 2 digit month, valid values 01-12; DD = 2 digit day of month, valid values 01-31  If no value is provided, defaults to current system date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipDate { get; set; }
+        public string? ShipDate { get => _explicitNullValueShipDate; set { _explicitNullValueShipDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipDate"); else _explicitNullProperties?.Remove("shipDate"); } }
+        private string? _explicitNullValueShipDate = default!;
 #nullable restore
 #else
-        public string ShipDate { get; set; }
+        public string ShipDate { get => _explicitNullValueShipDate; set { _explicitNullValueShipDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipDate"); else _explicitNullProperties?.Remove("shipDate"); } }
+        private string _explicitNullValueShipDate = default!;
 #endif
         /// <summary>The unit of currency used for values. Required if ShipmentContentsValue is populated.  Valid value: must conform to ISO standards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentContentsCurrencyCode { get; set; }
+        public string? ShipmentContentsCurrencyCode { get => _explicitNullValueShipmentContentsCurrencyCode; set { _explicitNullValueShipmentContentsCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentContentsCurrencyCode"); else _explicitNullProperties?.Remove("shipmentContentsCurrencyCode"); } }
+        private string? _explicitNullValueShipmentContentsCurrencyCode = default!;
 #nullable restore
 #else
-        public string ShipmentContentsCurrencyCode { get; set; }
+        public string ShipmentContentsCurrencyCode { get => _explicitNullValueShipmentContentsCurrencyCode; set { _explicitNullValueShipmentContentsCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentContentsCurrencyCode"); else _explicitNullProperties?.Remove("shipmentContentsCurrencyCode"); } }
+        private string _explicitNullValueShipmentContentsCurrencyCode = default!;
 #endif
         /// <summary>The monetary value of shipment contents.   Required when origin country does not equal destination country and BillType is 03 (non-documented) or 04 (WWEF)   Required when origin country does not equal destination country, and destination country = CA, and BillType = 02 (document).   Note: If decimal values are used, valid values will be rounded to the tenths.</summary>
-        public double? ShipmentContentsValue { get; set; }
+        public double? ShipmentContentsValue { get => _explicitNullValueShipmentContentsValue; set { _explicitNullValueShipmentContentsValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentContentsValue"); else _explicitNullProperties?.Remove("shipmentContentsValue"); } }
+        private double? _explicitNullValueShipmentContentsValue = default!;
         /// <summary>The time the shipment is tendered to UPS for shipping (can be dropped off at UPS or picked up by UPS).   Format is HH:MM:SS  Defaults to current time if not provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipTime { get; set; }
+        public string? ShipTime { get => _explicitNullValueShipTime; set { _explicitNullValueShipTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipTime"); else _explicitNullProperties?.Remove("shipTime"); } }
+        private string? _explicitNullValueShipTime = default!;
 #nullable restore
 #else
-        public string ShipTime { get; set; }
+        public string ShipTime { get => _explicitNullValueShipTime; set { _explicitNullValueShipTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipTime"); else _explicitNullProperties?.Remove("shipTime"); } }
+        private string _explicitNullValueShipTime = default!;
 #endif
         /// <summary>The weight of the shipment. Required for International requests.   Note: If decimal values are used, valid values will be rounded to the tenths.    Note: Maximum value is 70 kilograms or 150 pounds.</summary>
-        public double? Weight { get; set; }
+        public double? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        private double? _explicitNullValueWeight = default!;
         /// <summary>Required for International requests and when weight value is provided.   Valid Values: &quot;LBS&quot;, &quot;KGS&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeightUnitOfMeasure { get; set; }
+        public string? WeightUnitOfMeasure { get => _explicitNullValueWeightUnitOfMeasure; set { _explicitNullValueWeightUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnitOfMeasure"); else _explicitNullProperties?.Remove("weightUnitOfMeasure"); } }
+        private string? _explicitNullValueWeightUnitOfMeasure = default!;
 #nullable restore
 #else
-        public string WeightUnitOfMeasure { get; set; }
+        public string WeightUnitOfMeasure { get => _explicitNullValueWeightUnitOfMeasure; set { _explicitNullValueWeightUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnitOfMeasure"); else _explicitNullProperties?.Remove("weightUnitOfMeasure"); } }
+        private string _explicitNullValueWeightUnitOfMeasure = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitRequest"/> and sets the default values.
@@ -182,7 +256,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -251,6 +325,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipTime", ShipTime);
             writer.WriteDoubleValue("weight", Weight);
             writer.WriteStringValue("weightUnitOfMeasure", WeightUnitOfMeasure);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

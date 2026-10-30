@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PickupGetServiceCenterFacilitiesResponseServiceCenterLocation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DropOffFacilities") is { } nullNodeDropOffFacilities && nullNodeDropOffFacilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropOffFacilities = null;
+            if (parseNode.GetChildNode("PickupFacilities") is { } nullNodePickupFacilities && nullNodePickupFacilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupFacilities = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The DropOffFacilities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities>? DropOffFacilities { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities>? DropOffFacilities { get => _explicitNullValueDropOffFacilities; set { _explicitNullValueDropOffFacilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DropOffFacilities"); else _explicitNullProperties?.Remove("DropOffFacilities"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities>? _explicitNullValueDropOffFacilities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities> DropOffFacilities { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities> DropOffFacilities { get => _explicitNullValueDropOffFacilities; set { _explicitNullValueDropOffFacilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DropOffFacilities"); else _explicitNullProperties?.Remove("DropOffFacilities"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities> _explicitNullValueDropOffFacilities = default!;
 #endif
         /// <summary>Returns information for Pickup Facilities. This includes name of facility, address, and business hours.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationPickupFacilities? PickupFacilities { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationPickupFacilities? PickupFacilities { get => _explicitNullValuePickupFacilities; set { _explicitNullValuePickupFacilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupFacilities"); else _explicitNullProperties?.Remove("PickupFacilities"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationPickupFacilities? _explicitNullValuePickupFacilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationPickupFacilities PickupFacilities { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationPickupFacilities PickupFacilities { get => _explicitNullValuePickupFacilities; set { _explicitNullValuePickupFacilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupFacilities"); else _explicitNullProperties?.Remove("PickupFacilities"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationPickupFacilities _explicitNullValuePickupFacilities = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities>("DropOffFacilities", DropOffFacilities);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationPickupFacilities>("PickupFacilities", PickupFacilities);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

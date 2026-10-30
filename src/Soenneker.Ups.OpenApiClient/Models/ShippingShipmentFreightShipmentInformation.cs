@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShippingShipmentFreightShipmentInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DensityEligibleIndicator") is { } nullNodeDensityEligibleIndicator && nullNodeDensityEligibleIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DensityEligibleIndicator = null;
+            if (parseNode.GetChildNode("FreightDensityInfo") is { } nullNodeFreightDensityInfo && nullNodeFreightDensityInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightDensityInfo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The presence of the tag indicates that the rate request is density based.For Density Based Rating (DBR), the customer must have DBR Contract Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DensityEligibleIndicator { get; set; }
+        public string? DensityEligibleIndicator { get => _explicitNullValueDensityEligibleIndicator; set { _explicitNullValueDensityEligibleIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DensityEligibleIndicator"); else _explicitNullProperties?.Remove("DensityEligibleIndicator"); } }
+        private string? _explicitNullValueDensityEligibleIndicator = default!;
 #nullable restore
 #else
-        public string DensityEligibleIndicator { get; set; }
+        public string DensityEligibleIndicator { get => _explicitNullValueDensityEligibleIndicator; set { _explicitNullValueDensityEligibleIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DensityEligibleIndicator"); else _explicitNullProperties?.Remove("DensityEligibleIndicator"); } }
+        private string _explicitNullValueDensityEligibleIndicator = default!;
 #endif
         /// <summary>Freight Density Info container.  Required if DensityEligibleIndicator is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo? FreightDensityInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo? FreightDensityInfo { get => _explicitNullValueFreightDensityInfo; set { _explicitNullValueFreightDensityInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightDensityInfo"); else _explicitNullProperties?.Remove("FreightDensityInfo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo? _explicitNullValueFreightDensityInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo FreightDensityInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo FreightDensityInfo { get => _explicitNullValueFreightDensityInfo; set { _explicitNullValueFreightDensityInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightDensityInfo"); else _explicitNullProperties?.Remove("FreightDensityInfo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo _explicitNullValueFreightDensityInfo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFreightShipmentInformation"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFreightShipmentInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFreightShipmentInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentFreightShipmentInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("DensityEligibleIndicator", DensityEligibleIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingFreightShipmentInformationFreightDensityInfo>("FreightDensityInfo", FreightDensityInfo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

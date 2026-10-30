@@ -12,36 +12,56 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LandedCostLandedCostRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowPartialLandedCostResult") is { } nullNodeAllowPartialLandedCostResult && nullNodeAllowPartialLandedCostResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowPartialLandedCostResult = null;
+            if (parseNode.GetChildNode("alversion") is { } nullNodeAlversion && nullNodeAlversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alversion = null;
+            if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An optional flag to indicate that partial landed cost calculations are acceptable to be used by upstream systems.When set to *false*, the system will return an error when at least one commodity in the shipment is invalid (all or none), and no results  will be sent back for that request. When set to *true*, the system will return partial calculations when applicable.Valid values: true = Partial Landed Cost result will return. false = All or No result will return (default).</summary>
-        public bool? AllowPartialLandedCostResult { get; set; }
+        public bool? AllowPartialLandedCostResult { get => _explicitNullValueAllowPartialLandedCostResult; set { _explicitNullValueAllowPartialLandedCostResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowPartialLandedCostResult"); else _explicitNullProperties?.Remove("allowPartialLandedCostResult"); } }
+        private bool? _explicitNullValueAllowPartialLandedCostResult = default!;
         /// <summary>Version number of the instance that processed this request. This must match the major number of the corresponding ICD version.</summary>
-        public int? Alversion { get; set; }
+        public int? Alversion { get => _explicitNullValueAlversion; set { _explicitNullValueAlversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alversion"); else _explicitNullProperties?.Remove("alversion"); } }
+        private int? _explicitNullValueAlversion = default!;
         /// <summary>Specifies the currency of transaction or purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get; set; }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get; set; }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>Every Landed Cost request must be based on a shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>Unique transaction ID for the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransID { get; set; }
+        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        private string? _explicitNullValueTransID = default!;
 #nullable restore
 #else
-        public string TransID { get; set; }
+        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        private string _explicitNullValueTransID = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequest"/> and sets the default values.
@@ -58,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("currencyCode", CurrencyCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

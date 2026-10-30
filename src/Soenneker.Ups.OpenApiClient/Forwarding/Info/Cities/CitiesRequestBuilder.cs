@@ -59,6 +59,8 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Info.Cities
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ApolloGetCityResponseV1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

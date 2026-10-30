@@ -12,16 +12,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelrecoveryRequestWrapper : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("LabelRecoveryRequest") is { } nullNodeLabelRecoveryRequest && nullNodeLabelRecoveryRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelRecoveryRequest = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Request for obtaining the Label for the return shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest? LabelRecoveryRequest { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest? LabelRecoveryRequest { get => _explicitNullValueLabelRecoveryRequest; set { _explicitNullValueLabelRecoveryRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelRecoveryRequest"); else _explicitNullProperties?.Remove("LabelRecoveryRequest"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest? _explicitNullValueLabelRecoveryRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest LabelRecoveryRequest { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest LabelRecoveryRequest { get => _explicitNullValueLabelRecoveryRequest; set { _explicitNullValueLabelRecoveryRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelRecoveryRequest"); else _explicitNullProperties?.Remove("LabelRecoveryRequest"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest _explicitNullValueLabelRecoveryRequest = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelrecoveryRequestWrapper"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LabelrecoveryRequestWrapper CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelrecoveryRequestWrapper();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LabelrecoveryRequestWrapper(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest>("LabelRecoveryRequest", LabelRecoveryRequest);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

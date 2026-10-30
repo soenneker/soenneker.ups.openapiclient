@@ -12,72 +12,103 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LocatorRequestLocationSearchCriteria : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AccessPointSearch") is { } nullNodeAccessPointSearch && nullNodeAccessPointSearch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessPointSearch = null;
+            if (parseNode.GetChildNode("BrexitFilter") is { } nullNodeBrexitFilter && nullNodeBrexitFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrexitFilter = null;
+            if (parseNode.GetChildNode("FreightWillCallSearch") is { } nullNodeFreightWillCallSearch && nullNodeFreightWillCallSearch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightWillCallSearch = null;
+            if (parseNode.GetChildNode("MaximumListSize") is { } nullNodeMaximumListSize && nullNodeMaximumListSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumListSize = null;
+            if (parseNode.GetChildNode("OpenTimeCriteria") is { } nullNodeOpenTimeCriteria && nullNodeOpenTimeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenTimeCriteria = null;
+            if (parseNode.GetChildNode("SearchOption") is { } nullNodeSearchOption && nullNodeSearchOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchOption = null;
+            if (parseNode.GetChildNode("SearchRadius") is { } nullNodeSearchRadius && nullNodeSearchRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchRadius = null;
+            if (parseNode.GetChildNode("ServiceSearch") is { } nullNodeServiceSearch && nullNodeServiceSearch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceSearch = null;
+        }
+
         /// <summary>Applicable for request option 64 only. This contains inclusion and exclusion criteria for address search. It also contains Account Number and Access Point Public ID search elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaAccessPointSearch? AccessPointSearch { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaAccessPointSearch? AccessPointSearch { get => _explicitNullValueAccessPointSearch; set { _explicitNullValueAccessPointSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointSearch"); else _explicitNullProperties?.Remove("AccessPointSearch"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaAccessPointSearch? _explicitNullValueAccessPointSearch = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaAccessPointSearch AccessPointSearch { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaAccessPointSearch AccessPointSearch { get => _explicitNullValueAccessPointSearch; set { _explicitNullValueAccessPointSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointSearch"); else _explicitNullProperties?.Remove("AccessPointSearch"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaAccessPointSearch _explicitNullValueAccessPointSearch = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Brexit Filter. Applicable for country code GB; Pass the PostalCode for the address in the location search if Brexit functionality is desired. UAPs with postal code starts with BT returned when brexit filter starts with BT, else UAPs returned with non BT postal code. Applicable for UAP and Proximal building search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrexitFilter { get; set; }
+        public string? BrexitFilter { get => _explicitNullValueBrexitFilter; set { _explicitNullValueBrexitFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BrexitFilter"); else _explicitNullProperties?.Remove("BrexitFilter"); } }
+        private string? _explicitNullValueBrexitFilter = default!;
 #nullable restore
 #else
-        public string BrexitFilter { get; set; }
+        public string BrexitFilter { get => _explicitNullValueBrexitFilter; set { _explicitNullValueBrexitFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BrexitFilter"); else _explicitNullProperties?.Remove("BrexitFilter"); } }
+        private string _explicitNullValueBrexitFilter = default!;
 #endif
         /// <summary>Freight Will Call Search Container. Required if SearchOption is &apos;05-Freight Will Call Search&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaFreightWillCallSearch? FreightWillCallSearch { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaFreightWillCallSearch? FreightWillCallSearch { get => _explicitNullValueFreightWillCallSearch; set { _explicitNullValueFreightWillCallSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightWillCallSearch"); else _explicitNullProperties?.Remove("FreightWillCallSearch"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaFreightWillCallSearch? _explicitNullValueFreightWillCallSearch = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaFreightWillCallSearch FreightWillCallSearch { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaFreightWillCallSearch FreightWillCallSearch { get => _explicitNullValueFreightWillCallSearch; set { _explicitNullValueFreightWillCallSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightWillCallSearch"); else _explicitNullProperties?.Remove("FreightWillCallSearch"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaFreightWillCallSearch _explicitNullValueFreightWillCallSearch = default!;
 #endif
         /// <summary>If present, indicates the maximum number of locations the client wishes to receive in response; ranges from 1 to 50 with a default value of 5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaximumListSize { get; set; }
+        public string? MaximumListSize { get => _explicitNullValueMaximumListSize; set { _explicitNullValueMaximumListSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumListSize"); else _explicitNullProperties?.Remove("MaximumListSize"); } }
+        private string? _explicitNullValueMaximumListSize = default!;
 #nullable restore
 #else
-        public string MaximumListSize { get; set; }
+        public string MaximumListSize { get => _explicitNullValueMaximumListSize; set { _explicitNullValueMaximumListSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumListSize"); else _explicitNullProperties?.Remove("MaximumListSize"); } }
+        private string _explicitNullValueMaximumListSize = default!;
 #endif
         /// <summary>Container to hold open times of the Location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria? OpenTimeCriteria { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria? OpenTimeCriteria { get => _explicitNullValueOpenTimeCriteria; set { _explicitNullValueOpenTimeCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OpenTimeCriteria"); else _explicitNullProperties?.Remove("OpenTimeCriteria"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria? _explicitNullValueOpenTimeCriteria = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria OpenTimeCriteria { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria OpenTimeCriteria { get => _explicitNullValueOpenTimeCriteria; set { _explicitNullValueOpenTimeCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OpenTimeCriteria"); else _explicitNullProperties?.Remove("OpenTimeCriteria"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria _explicitNullValueOpenTimeCriteria = default!;
 #endif
         /// <summary>The SearchOption property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption>? SearchOption { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption>? SearchOption { get => _explicitNullValueSearchOption; set { _explicitNullValueSearchOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchOption"); else _explicitNullProperties?.Remove("SearchOption"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption>? _explicitNullValueSearchOption = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption> SearchOption { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption> SearchOption { get => _explicitNullValueSearchOption; set { _explicitNullValueSearchOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchOption"); else _explicitNullProperties?.Remove("SearchOption"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption> _explicitNullValueSearchOption = default!;
 #endif
         /// <summary>Defines the maximum radius the user wishes to search for a UPS location. If the user does not specify, the default value is 100 miles. Whole numbers only. Valid values are:5-100 for UnitOfMeasure MI5-150 for UnitOfMesaure KM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SearchRadius { get; set; }
+        public string? SearchRadius { get => _explicitNullValueSearchRadius; set { _explicitNullValueSearchRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchRadius"); else _explicitNullProperties?.Remove("SearchRadius"); } }
+        private string? _explicitNullValueSearchRadius = default!;
 #nullable restore
 #else
-        public string SearchRadius { get; set; }
+        public string SearchRadius { get => _explicitNullValueSearchRadius; set { _explicitNullValueSearchRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchRadius"); else _explicitNullProperties?.Remove("SearchRadius"); } }
+        private string _explicitNullValueSearchRadius = default!;
 #endif
         /// <summary>Allows for users to further define the search criteria. Refer to the rules specified in Service Search section.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch? ServiceSearch { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch? ServiceSearch { get => _explicitNullValueServiceSearch; set { _explicitNullValueServiceSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceSearch"); else _explicitNullProperties?.Remove("ServiceSearch"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch? _explicitNullValueServiceSearch = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch ServiceSearch { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch ServiceSearch { get => _explicitNullValueServiceSearch; set { _explicitNullValueServiceSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceSearch"); else _explicitNullProperties?.Remove("ServiceSearch"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch _explicitNullValueServiceSearch = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption>("SearchOption", SearchOption);
             writer.WriteStringValue("SearchRadius", SearchRadius);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch>("ServiceSearch", ServiceSearch);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

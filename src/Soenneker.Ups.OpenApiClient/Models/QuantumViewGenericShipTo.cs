@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class QuantumViewGenericShipTo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Bookmark") is { } nullNodeBookmark && nullNodeBookmark.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bookmark = null;
+            if (parseNode.GetChildNode("LocationID") is { } nullNodeLocationID && nullNodeLocationID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationID = null;
+            if (parseNode.GetChildNode("ReceivingAddressName") is { } nullNodeReceivingAddressName && nullNodeReceivingAddressName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivingAddressName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Bookmark of the package is shifted to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Bookmark { get; set; }
+        public string? Bookmark { get => _explicitNullValueBookmark; set { _explicitNullValueBookmark = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bookmark"); else _explicitNullProperties?.Remove("Bookmark"); } }
+        private string? _explicitNullValueBookmark = default!;
 #nullable restore
 #else
-        public string Bookmark { get; set; }
+        public string Bookmark { get => _explicitNullValueBookmark; set { _explicitNullValueBookmark = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bookmark"); else _explicitNullProperties?.Remove("Bookmark"); } }
+        private string _explicitNullValueBookmark = default!;
 #endif
         /// <summary>Location name that the package is shipped to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationID { get; set; }
+        public string? LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
+        private string? _explicitNullValueLocationID = default!;
 #nullable restore
 #else
-        public string LocationID { get; set; }
+        public string LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
+        private string _explicitNullValueLocationID = default!;
 #endif
         /// <summary>Alias of the location where the package is received.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReceivingAddressName { get; set; }
+        public string? ReceivingAddressName { get => _explicitNullValueReceivingAddressName; set { _explicitNullValueReceivingAddressName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceivingAddressName"); else _explicitNullProperties?.Remove("ReceivingAddressName"); } }
+        private string? _explicitNullValueReceivingAddressName = default!;
 #nullable restore
 #else
-        public string ReceivingAddressName { get; set; }
+        public string ReceivingAddressName { get => _explicitNullValueReceivingAddressName; set { _explicitNullValueReceivingAddressName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceivingAddressName"); else _explicitNullProperties?.Remove("ReceivingAddressName"); } }
+        private string _explicitNullValueReceivingAddressName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuantumViewGenericShipTo"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.QuantumViewGenericShipTo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewGenericShipTo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewGenericShipTo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("Bookmark", Bookmark);
             writer.WriteStringValue("LocationID", LocationID);
             writer.WriteStringValue("ReceivingAddressName", ReceivingAddressName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

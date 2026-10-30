@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.DangerousGoodsReady.Dangerousgoods.Item.Ch
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceData401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceData403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceData429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceData200Response>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ChemicalReferenceData200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

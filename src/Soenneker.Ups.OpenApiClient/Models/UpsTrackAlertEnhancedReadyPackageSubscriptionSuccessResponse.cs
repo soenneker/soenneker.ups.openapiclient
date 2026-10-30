@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsTrackAlertEnhancedReadyPackageSubscriptionSuccessResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("invalidTrackingNumbers") is { } nullNodeInvalidTrackingNumbers && nullNodeInvalidTrackingNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidTrackingNumbers = null;
+            if (parseNode.GetChildNode("validTrackingNumbers") is { } nullNodeValidTrackingNumbers && nullNodeValidTrackingNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidTrackingNumbers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of tracking numbers associated with errors preventing subscription creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InvalidTrackingNumbers { get; set; }
+        public List<string>? InvalidTrackingNumbers { get => _explicitNullValueInvalidTrackingNumbers; set { _explicitNullValueInvalidTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidTrackingNumbers"); else _explicitNullProperties?.Remove("invalidTrackingNumbers"); } }
+        private List<string>? _explicitNullValueInvalidTrackingNumbers = default!;
 #nullable restore
 #else
-        public List<string> InvalidTrackingNumbers { get; set; }
+        public List<string> InvalidTrackingNumbers { get => _explicitNullValueInvalidTrackingNumbers; set { _explicitNullValueInvalidTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidTrackingNumbers"); else _explicitNullProperties?.Remove("invalidTrackingNumbers"); } }
+        private List<string> _explicitNullValueInvalidTrackingNumbers = default!;
 #endif
         /// <summary>Unbounded list of tracking numbers with successful subscription created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ValidTrackingNumbers { get; set; }
+        public List<string>? ValidTrackingNumbers { get => _explicitNullValueValidTrackingNumbers; set { _explicitNullValueValidTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validTrackingNumbers"); else _explicitNullProperties?.Remove("validTrackingNumbers"); } }
+        private List<string>? _explicitNullValueValidTrackingNumbers = default!;
 #nullable restore
 #else
-        public List<string> ValidTrackingNumbers { get; set; }
+        public List<string> ValidTrackingNumbers { get => _explicitNullValueValidTrackingNumbers; set { _explicitNullValueValidTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validTrackingNumbers"); else _explicitNullProperties?.Remove("validTrackingNumbers"); } }
+        private List<string> _explicitNullValueValidTrackingNumbers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionSuccessResponse"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionSuccessResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionSuccessResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyPackageSubscriptionSuccessResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("invalidTrackingNumbers", InvalidTrackingNumbers);
             writer.WriteCollectionOfPrimitiveValues<string>("validTrackingNumbers", ValidTrackingNumbers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

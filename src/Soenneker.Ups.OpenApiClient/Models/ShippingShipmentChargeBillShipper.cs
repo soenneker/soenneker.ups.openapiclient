@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShippingShipmentChargeBillShipper : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("AlternatePaymentMethod") is { } nullNodeAlternatePaymentMethod && nullNodeAlternatePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlternatePaymentMethod = null;
+            if (parseNode.GetChildNode("CreditCard") is { } nullNodeCreditCard && nullNodeCreditCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditCard = null;
+        }
+
         /// <summary>UPS account number.  Must be the same UPS account number as the one provided in Shipper/ShipperNumber. Either this element or one of the sibling elements CreditCard or AlternatePaymentMethod must be provided, but all of them may not be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get; set; }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get; set; }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Alternate Payment Method.Valid value: 01= PayPalOnly valid for forward shipments. It is not valid for Return or Import Control shipments. This element or one of the sibling elements CreditCard or AccountNumber must be provided, but all of them may not be provided.   PayPal 01: Is only valid for forward shipments. It is not valid for Return or Import Control shipments. This element or one of the sibling elements CreditCard or AccountNumber must be provided, but all of them may not be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AlternatePaymentMethod { get; set; }
+        public string? AlternatePaymentMethod { get => _explicitNullValueAlternatePaymentMethod; set { _explicitNullValueAlternatePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlternatePaymentMethod"); else _explicitNullProperties?.Remove("AlternatePaymentMethod"); } }
+        private string? _explicitNullValueAlternatePaymentMethod = default!;
 #nullable restore
 #else
-        public string AlternatePaymentMethod { get; set; }
+        public string AlternatePaymentMethod { get => _explicitNullValueAlternatePaymentMethod; set { _explicitNullValueAlternatePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlternatePaymentMethod"); else _explicitNullProperties?.Remove("AlternatePaymentMethod"); } }
+        private string _explicitNullValueAlternatePaymentMethod = default!;
 #endif
         /// <summary>Credit card information container.  Required if neither of the following is present: /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AccountNumber or /ShipmentRequest/Shipment/PaymentInformation/ShipmentCharge/BillShipper/AlternatePaymentMethod. Credit card payment is valid for shipments without return service only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.BillShipperCreditCard? CreditCard { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.BillShipperCreditCard? CreditCard { get => _explicitNullValueCreditCard; set { _explicitNullValueCreditCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CreditCard"); else _explicitNullProperties?.Remove("CreditCard"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.BillShipperCreditCard? _explicitNullValueCreditCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.BillShipperCreditCard CreditCard { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.BillShipperCreditCard CreditCard { get => _explicitNullValueCreditCard; set { _explicitNullValueCreditCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CreditCard"); else _explicitNullProperties?.Remove("CreditCard"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.BillShipperCreditCard _explicitNullValueCreditCard = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentChargeBillShipper"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentChargeBillShipper CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentChargeBillShipper();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentChargeBillShipper(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("AccountNumber", AccountNumber);
             writer.WriteStringValue("AlternatePaymentMethod", AlternatePaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BillShipperCreditCard>("CreditCard", CreditCard);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

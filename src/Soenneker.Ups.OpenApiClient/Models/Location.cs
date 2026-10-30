@@ -11,48 +11,70 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Location : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("portCode") is { } nullNodePortCode && nullNodePortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortCode = null;
+            if (parseNode.GetChildNode("portName") is { } nullNodePortName && nullNodePortName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortName = null;
+            if (parseNode.GetChildNode("serviceCenterCode") is { } nullNodeServiceCenterCode && nullNodeServiceCenterCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCenterCode = null;
+            if (parseNode.GetChildNode("serviceRatedOverCode") is { } nullNodeServiceRatedOverCode && nullNodeServiceRatedOverCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceRatedOverCode = null;
+            if (parseNode.GetChildNode("serviceType") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The portCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortCode { get; set; }
+        public string? PortCode { get => _explicitNullValuePortCode; set { _explicitNullValuePortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portCode"); else _explicitNullProperties?.Remove("portCode"); } }
+        private string? _explicitNullValuePortCode = default!;
 #nullable restore
 #else
-        public string PortCode { get; set; }
+        public string PortCode { get => _explicitNullValuePortCode; set { _explicitNullValuePortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portCode"); else _explicitNullProperties?.Remove("portCode"); } }
+        private string _explicitNullValuePortCode = default!;
 #endif
         /// <summary>The portName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortName { get; set; }
+        public string? PortName { get => _explicitNullValuePortName; set { _explicitNullValuePortName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portName"); else _explicitNullProperties?.Remove("portName"); } }
+        private string? _explicitNullValuePortName = default!;
 #nullable restore
 #else
-        public string PortName { get; set; }
+        public string PortName { get => _explicitNullValuePortName; set { _explicitNullValuePortName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portName"); else _explicitNullProperties?.Remove("portName"); } }
+        private string _explicitNullValuePortName = default!;
 #endif
         /// <summary>The serviceCenterCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceCenterCode { get; set; }
+        public string? ServiceCenterCode { get => _explicitNullValueServiceCenterCode; set { _explicitNullValueServiceCenterCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCenterCode"); else _explicitNullProperties?.Remove("serviceCenterCode"); } }
+        private string? _explicitNullValueServiceCenterCode = default!;
 #nullable restore
 #else
-        public string ServiceCenterCode { get; set; }
+        public string ServiceCenterCode { get => _explicitNullValueServiceCenterCode; set { _explicitNullValueServiceCenterCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCenterCode"); else _explicitNullProperties?.Remove("serviceCenterCode"); } }
+        private string _explicitNullValueServiceCenterCode = default!;
 #endif
         /// <summary>The serviceRatedOverCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceRatedOverCode { get; set; }
+        public string? ServiceRatedOverCode { get => _explicitNullValueServiceRatedOverCode; set { _explicitNullValueServiceRatedOverCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceRatedOverCode"); else _explicitNullProperties?.Remove("serviceRatedOverCode"); } }
+        private string? _explicitNullValueServiceRatedOverCode = default!;
 #nullable restore
 #else
-        public string ServiceRatedOverCode { get; set; }
+        public string ServiceRatedOverCode { get => _explicitNullValueServiceRatedOverCode; set { _explicitNullValueServiceRatedOverCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceRatedOverCode"); else _explicitNullProperties?.Remove("serviceRatedOverCode"); } }
+        private string _explicitNullValueServiceRatedOverCode = default!;
 #endif
         /// <summary>The serviceType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceType { get; set; }
+        public string? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
+        private string? _explicitNullValueServiceType = default!;
 #nullable restore
 #else
-        public string ServiceType { get; set; }
+        public string ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
+        private string _explicitNullValueServiceType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.Location"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.Location CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.Location();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.Location(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("serviceCenterCode", ServiceCenterCode);
             writer.WriteStringValue("serviceRatedOverCode", ServiceRatedOverCode);
             writer.WriteStringValue("serviceType", ServiceType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,34 +12,52 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivityInformationDeliveryInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actualDeliveryDateTime") is { } nullNodeActualDeliveryDateTime && nullNodeActualDeliveryDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualDeliveryDateTime = null;
+            if (parseNode.GetChildNode("actualDeliveryDateTimegmtOffset") is { } nullNodeActualDeliveryDateTimegmtOffset && nullNodeActualDeliveryDateTimegmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualDeliveryDateTimegmtOffset = null;
+            if (parseNode.GetChildNode("podSignatureImage") is { } nullNodePodSignatureImage && nullNodePodSignatureImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignatureImage = null;
+            if (parseNode.GetChildNode("podSignatureText") is { } nullNodePodSignatureText && nullNodePodSignatureText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignatureText = null;
+        }
+
         /// <summary>Actual delivery date and time</summary>
-        public DateTimeOffset? ActualDeliveryDateTime { get; set; }
+        public DateTimeOffset? ActualDeliveryDateTime { get => _explicitNullValueActualDeliveryDateTime; set { _explicitNullValueActualDeliveryDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTime"); else _explicitNullProperties?.Remove("actualDeliveryDateTime"); } }
+        private DateTimeOffset? _explicitNullValueActualDeliveryDateTime = default!;
         /// <summary>GMT offset for actual delivery time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActualDeliveryDateTimegmtOffset { get; set; }
+        public string? ActualDeliveryDateTimegmtOffset { get => _explicitNullValueActualDeliveryDateTimegmtOffset; set { _explicitNullValueActualDeliveryDateTimegmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTimegmtOffset"); else _explicitNullProperties?.Remove("actualDeliveryDateTimegmtOffset"); } }
+        private string? _explicitNullValueActualDeliveryDateTimegmtOffset = default!;
 #nullable restore
 #else
-        public string ActualDeliveryDateTimegmtOffset { get; set; }
+        public string ActualDeliveryDateTimegmtOffset { get => _explicitNullValueActualDeliveryDateTimegmtOffset; set { _explicitNullValueActualDeliveryDateTimegmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTimegmtOffset"); else _explicitNullProperties?.Remove("actualDeliveryDateTimegmtOffset"); } }
+        private string _explicitNullValueActualDeliveryDateTimegmtOffset = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Base64 encoded signature image</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PodSignatureImage { get; set; }
+        public string? PodSignatureImage { get => _explicitNullValuePodSignatureImage; set { _explicitNullValuePodSignatureImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureImage"); else _explicitNullProperties?.Remove("podSignatureImage"); } }
+        private string? _explicitNullValuePodSignatureImage = default!;
 #nullable restore
 #else
-        public string PodSignatureImage { get; set; }
+        public string PodSignatureImage { get => _explicitNullValuePodSignatureImage; set { _explicitNullValuePodSignatureImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureImage"); else _explicitNullProperties?.Remove("podSignatureImage"); } }
+        private string _explicitNullValuePodSignatureImage = default!;
 #endif
         /// <summary>Signature text/name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PodSignatureText { get; set; }
+        public string? PodSignatureText { get => _explicitNullValuePodSignatureText; set { _explicitNullValuePodSignatureText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureText"); else _explicitNullProperties?.Remove("podSignatureText"); } }
+        private string? _explicitNullValuePodSignatureText = default!;
 #nullable restore
 #else
-        public string PodSignatureText { get; set; }
+        public string PodSignatureText { get => _explicitNullValuePodSignatureText; set { _explicitNullValuePodSignatureText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureText"); else _explicitNullProperties?.Remove("podSignatureText"); } }
+        private string _explicitNullValuePodSignatureText = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ActivityInformationDeliveryInformation"/> and sets the default values.
@@ -56,7 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ActivityInformationDeliveryInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ActivityInformationDeliveryInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ActivityInformationDeliveryInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("actualDeliveryDateTimegmtOffset", ActualDeliveryDateTimegmtOffset);
             writer.WriteStringValue("podSignatureImage", PodSignatureImage);
             writer.WriteStringValue("podSignatureText", PodSignatureText);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FrsShipmentDataFreightDensityRate : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Density") is { } nullNodeDensity && nullNodeDensity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Density = null;
+            if (parseNode.GetChildNode("TotalCubicFeet") is { } nullNodeTotalCubicFeet && nullNodeTotalCubicFeet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCubicFeet = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Density is returned if the Shipper is eligible for Density based rate. Valid values:0 to 999.9</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Density { get; set; }
+        public string? Density { get => _explicitNullValueDensity; set { _explicitNullValueDensity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Density"); else _explicitNullProperties?.Remove("Density"); } }
+        private string? _explicitNullValueDensity = default!;
 #nullable restore
 #else
-        public string Density { get; set; }
+        public string Density { get => _explicitNullValueDensity; set { _explicitNullValueDensity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Density"); else _explicitNullProperties?.Remove("Density"); } }
+        private string _explicitNullValueDensity = default!;
 #endif
         /// <summary>TotalCubic feet is returned if the Shipper is eligible for Density based rate. Valid values:0 to 99999.999</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalCubicFeet { get; set; }
+        public string? TotalCubicFeet { get => _explicitNullValueTotalCubicFeet; set { _explicitNullValueTotalCubicFeet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCubicFeet"); else _explicitNullProperties?.Remove("TotalCubicFeet"); } }
+        private string? _explicitNullValueTotalCubicFeet = default!;
 #nullable restore
 #else
-        public string TotalCubicFeet { get; set; }
+        public string TotalCubicFeet { get => _explicitNullValueTotalCubicFeet; set { _explicitNullValueTotalCubicFeet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCubicFeet"); else _explicitNullProperties?.Remove("TotalCubicFeet"); } }
+        private string _explicitNullValueTotalCubicFeet = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.FrsShipmentDataFreightDensityRate"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.FrsShipmentDataFreightDensityRate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.FrsShipmentDataFreightDensityRate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.FrsShipmentDataFreightDensityRate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Density", Density);
             writer.WriteStringValue("TotalCubicFeet", TotalCubicFeet);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

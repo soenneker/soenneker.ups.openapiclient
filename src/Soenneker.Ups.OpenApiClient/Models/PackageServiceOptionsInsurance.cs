@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PackageServiceOptionsInsurance : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("BasicFlexibleParcelIndicator") is { } nullNodeBasicFlexibleParcelIndicator && nullNodeBasicFlexibleParcelIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BasicFlexibleParcelIndicator = null;
+            if (parseNode.GetChildNode("ExtendedFlexibleParcelIndicator") is { } nullNodeExtendedFlexibleParcelIndicator && nullNodeExtendedFlexibleParcelIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtendedFlexibleParcelIndicator = null;
+            if (parseNode.GetChildNode("PackageProtection") is { } nullNodePackageProtection && nullNodePackageProtection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageProtection = null;
+            if (parseNode.GetChildNode("TimeInTransitFlexibleParcelIndicator") is { } nullNodeTimeInTransitFlexibleParcelIndicator && nullNodeTimeInTransitFlexibleParcelIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeInTransitFlexibleParcelIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container to hold Basic Flexible Parcel Indicator information.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator? BasicFlexibleParcelIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator? BasicFlexibleParcelIndicator { get => _explicitNullValueBasicFlexibleParcelIndicator; set { _explicitNullValueBasicFlexibleParcelIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BasicFlexibleParcelIndicator"); else _explicitNullProperties?.Remove("BasicFlexibleParcelIndicator"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator? _explicitNullValueBasicFlexibleParcelIndicator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator BasicFlexibleParcelIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator BasicFlexibleParcelIndicator { get => _explicitNullValueBasicFlexibleParcelIndicator; set { _explicitNullValueBasicFlexibleParcelIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BasicFlexibleParcelIndicator"); else _explicitNullProperties?.Remove("BasicFlexibleParcelIndicator"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InsuranceBasicFlexibleParcelIndicator _explicitNullValueBasicFlexibleParcelIndicator = default!;
 #endif
         /// <summary>Container for Extended Flexible Parcel Indicator  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator? ExtendedFlexibleParcelIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator? ExtendedFlexibleParcelIndicator { get => _explicitNullValueExtendedFlexibleParcelIndicator; set { _explicitNullValueExtendedFlexibleParcelIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExtendedFlexibleParcelIndicator"); else _explicitNullProperties?.Remove("ExtendedFlexibleParcelIndicator"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator? _explicitNullValueExtendedFlexibleParcelIndicator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator ExtendedFlexibleParcelIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator ExtendedFlexibleParcelIndicator { get => _explicitNullValueExtendedFlexibleParcelIndicator; set { _explicitNullValueExtendedFlexibleParcelIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExtendedFlexibleParcelIndicator"); else _explicitNullProperties?.Remove("ExtendedFlexibleParcelIndicator"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator _explicitNullValueExtendedFlexibleParcelIndicator = default!;
 #endif
         /// <summary>The PackageProtection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection? PackageProtection { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection? PackageProtection { get => _explicitNullValuePackageProtection; set { _explicitNullValuePackageProtection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageProtection"); else _explicitNullProperties?.Remove("PackageProtection"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection? _explicitNullValuePackageProtection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection PackageProtection { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection PackageProtection { get => _explicitNullValuePackageProtection; set { _explicitNullValuePackageProtection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageProtection"); else _explicitNullProperties?.Remove("PackageProtection"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection _explicitNullValuePackageProtection = default!;
 #endif
         /// <summary>Container to hold Time In Transit Flexible Parcel Indicator information.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator? TimeInTransitFlexibleParcelIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator? TimeInTransitFlexibleParcelIndicator { get => _explicitNullValueTimeInTransitFlexibleParcelIndicator; set { _explicitNullValueTimeInTransitFlexibleParcelIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TimeInTransitFlexibleParcelIndicator"); else _explicitNullProperties?.Remove("TimeInTransitFlexibleParcelIndicator"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator? _explicitNullValueTimeInTransitFlexibleParcelIndicator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator TimeInTransitFlexibleParcelIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator TimeInTransitFlexibleParcelIndicator { get => _explicitNullValueTimeInTransitFlexibleParcelIndicator; set { _explicitNullValueTimeInTransitFlexibleParcelIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TimeInTransitFlexibleParcelIndicator"); else _explicitNullProperties?.Remove("TimeInTransitFlexibleParcelIndicator"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator _explicitNullValueTimeInTransitFlexibleParcelIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsuranceExtendedFlexibleParcelIndicator>("ExtendedFlexibleParcelIndicator", ExtendedFlexibleParcelIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsurancePackageProtection>("PackageProtection", PackageProtection);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InsuranceTimeInTransitFlexibleParcelIndicator>("TimeInTransitFlexibleParcelIndicator", TimeInTransitFlexibleParcelIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

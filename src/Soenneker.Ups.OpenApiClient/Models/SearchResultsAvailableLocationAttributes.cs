@@ -11,24 +11,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchResultsAvailableLocationAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("OptionCode") is { } nullNodeOptionCode && nullNodeOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionCode = null;
+            if (parseNode.GetChildNode("OptionType") is { } nullNodeOptionType && nullNodeOptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionCodeElement>? OptionCode { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionCodeElement>? OptionCode { get => _explicitNullValueOptionCode; set { _explicitNullValueOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionCode"); else _explicitNullProperties?.Remove("OptionCode"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionCodeElement>? _explicitNullValueOptionCode = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionCodeElement> OptionCode { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionCodeElement> OptionCode { get => _explicitNullValueOptionCode; set { _explicitNullValueOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionCode"); else _explicitNullProperties?.Remove("OptionCode"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionCodeElement> _explicitNullValueOptionCode = default!;
 #endif
         /// <summary>OptionType is a container that indicates the type of the location attribute that are available. For example if the Option Type is RetailLocation the list of all available retail locations will be returned in 1 or many corresponding OptionCodes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionType? OptionType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionType? OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionType"); else _explicitNullProperties?.Remove("OptionType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionType? _explicitNullValueOptionType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionType OptionType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionType OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionType"); else _explicitNullProperties?.Remove("OptionType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionType _explicitNullValueOptionType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SearchResultsAvailableLocationAttributes"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.SearchResultsAvailableLocationAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.SearchResultsAvailableLocationAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.SearchResultsAvailableLocationAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionCodeElement>("OptionCode", OptionCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesOptionType>("OptionType", OptionType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

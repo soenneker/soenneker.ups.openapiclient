@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.LandedCost.Landedcost.Item.Quotes
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -36,7 +36,7 @@ namespace Soenneker.Ups.OpenApiClient.UPSExportAssure.Importexport.Exportassure
         /// <summary>
         /// Submit shipment details and receive guidance from UPS. This endpoint includes four separate operations which may be requested individually or simultaneously:  -Basic Description Guidance (Free Feature)  -Power of Attorney (POA) Requirements (Free Feature)  -UPS Prohibited Goods Guidance (Free Feature)  -Commodity Compliance Guidance (Premium Feature)  -NOTE: requires UPS Prohibited Goods Guidance (evaluateImportExportRequirements) to be set to true.   To request a specific operation, set the respective value for that property to true:    -evaluateDescriptions to request basic description guidance for the shipment (free)    - evaluatePoaRequirements to request POA requirements for the shipment (free)    - evaluateImportExportRequirements to request UPS Prohibited Goods Guidance only (free)    - evaluateAdvancedImportExportRequirements to request regulatory requirements, shipping restrictions, and required international forms (premium)  Examples:    -To request only Description Guidance, set evaluateDescriptions: true and provide relevant description properties.    -To request all three free operations, set evaluateDescriptions: true, evaluatePoaRequirements: true, evaluateImportExportRequirements: true, and include all required properties for all operations.    -To request Commodity Compliance Guidance, set advancedImportExportRequirements: true, evaluateImportExportRequirements: true, and include all required properties for all operations.    -If you do not wish to be charged, set advancedImportExportRequirements: false
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.SubmitExportAssureSuccessResponse"/></returns>
         /// <param name="body">This object is the primary request structure for the Export Assure API.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -47,11 +47,11 @@ namespace Soenneker.Ups.OpenApiClient.UPSExportAssure.Importexport.Exportassure
         /// <exception cref="global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.SubmitExportAssureSuccessResponse?> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Ups.OpenApiClient.Models.SubmitExportAssureSuccessResponse> PostAsync(global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -63,8 +63,10 @@ namespace Soenneker.Ups.OpenApiClient.UPSExportAssure.Importexport.Exportassure
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse.CreateFromDiscriminatorValue },
                 { "405", global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.SubmitExportAssureSuccessResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.SubmitExportAssureSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Submit shipment details and receive guidance from UPS. This endpoint includes four separate operations which may be requested individually or simultaneously:  -Basic Description Guidance (Free Feature)  -Power of Attorney (POA) Requirements (Free Feature)  -UPS Prohibited Goods Guidance (Free Feature)  -Commodity Compliance Guidance (Premium Feature)  -NOTE: requires UPS Prohibited Goods Guidance (evaluateImportExportRequirements) to be set to true.   To request a specific operation, set the respective value for that property to true:    -evaluateDescriptions to request basic description guidance for the shipment (free)    - evaluatePoaRequirements to request POA requirements for the shipment (free)    - evaluateImportExportRequirements to request UPS Prohibited Goods Guidance only (free)    - evaluateAdvancedImportExportRequirements to request regulatory requirements, shipping restrictions, and required international forms (premium)  Examples:    -To request only Description Guidance, set evaluateDescriptions: true and provide relevant description properties.    -To request all three free operations, set evaluateDescriptions: true, evaluatePoaRequirements: true, evaluateImportExportRequirements: true, and include all required properties for all operations.    -To request Commodity Compliance Guidance, set advancedImportExportRequirements: true, evaluateImportExportRequirements: true, and include all required properties for all operations.    -If you do not wish to be charged, set advancedImportExportRequirements: false

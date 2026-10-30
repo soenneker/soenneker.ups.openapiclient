@@ -11,112 +11,158 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class QuantumViewSubscriptionFileDelivery : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AccessPointLocationID") is { } nullNodeAccessPointLocationID && nullNodeAccessPointLocationID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessPointLocationID = null;
+            if (parseNode.GetChildNode("ActivityLocation") is { } nullNodeActivityLocation && nullNodeActivityLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityLocation = null;
+            if (parseNode.GetChildNode("BillToAccount") is { } nullNodeBillToAccount && nullNodeBillToAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillToAccount = null;
+            if (parseNode.GetChildNode("COD") is { } nullNodeCOD && nullNodeCOD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) COD = null;
+            if (parseNode.GetChildNode("Date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
+            if (parseNode.GetChildNode("DeliveryLocation") is { } nullNodeDeliveryLocation && nullNodeDeliveryLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryLocation = null;
+            if (parseNode.GetChildNode("DriverRelease") is { } nullNodeDriverRelease && nullNodeDriverRelease.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DriverRelease = null;
+            if (parseNode.GetChildNode("LastPickupDate") is { } nullNodeLastPickupDate && nullNodeLastPickupDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastPickupDate = null;
+            if (parseNode.GetChildNode("PackageReferenceNumber") is { } nullNodePackageReferenceNumber && nullNodePackageReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageReferenceNumber = null;
+            if (parseNode.GetChildNode("ShipmentReferenceNumber") is { } nullNodeShipmentReferenceNumber && nullNodeShipmentReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentReferenceNumber = null;
+            if (parseNode.GetChildNode("ShipperNumber") is { } nullNodeShipperNumber && nullNodeShipperNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperNumber = null;
+            if (parseNode.GetChildNode("Time") is { } nullNodeTime && nullNodeTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Time = null;
+            if (parseNode.GetChildNode("TrackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+        }
+
         /// <summary>UPS Access Point Location ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessPointLocationID { get; set; }
+        public string? AccessPointLocationID { get => _explicitNullValueAccessPointLocationID; set { _explicitNullValueAccessPointLocationID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointLocationID"); else _explicitNullProperties?.Remove("AccessPointLocationID"); } }
+        private string? _explicitNullValueAccessPointLocationID = default!;
 #nullable restore
 #else
-        public string AccessPointLocationID { get; set; }
+        public string AccessPointLocationID { get => _explicitNullValueAccessPointLocationID; set { _explicitNullValueAccessPointLocationID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointLocationID"); else _explicitNullProperties?.Remove("AccessPointLocationID"); } }
+        private string _explicitNullValueAccessPointLocationID = default!;
 #endif
         /// <summary>Geographic location where an activity occurred during a movement of a package or shipment. (ActivityLocation in Delivery is identical to the one in Manifest. But all elements in Delivery/ActivityLocation/AddressArtifactFormat are populated in this release. Refer to Manifest for remaining unpopulated elements.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation? ActivityLocation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation? ActivityLocation { get => _explicitNullValueActivityLocation; set { _explicitNullValueActivityLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActivityLocation"); else _explicitNullProperties?.Remove("ActivityLocation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation? _explicitNullValueActivityLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation ActivityLocation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation ActivityLocation { get => _explicitNullValueActivityLocation; set { _explicitNullValueActivityLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActivityLocation"); else _explicitNullProperties?.Remove("ActivityLocation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryActivityLocation _explicitNullValueActivityLocation = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The information provided within this container identifies the shipper number and billing option the user specified to view during the subscription process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount? BillToAccount { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount? BillToAccount { get => _explicitNullValueBillToAccount; set { _explicitNullValueBillToAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillToAccount"); else _explicitNullProperties?.Remove("BillToAccount"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount? _explicitNullValueBillToAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount BillToAccount { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount BillToAccount { get => _explicitNullValueBillToAccount; set { _explicitNullValueBillToAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillToAccount"); else _explicitNullProperties?.Remove("BillToAccount"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryBillToAccount _explicitNullValueBillToAccount = default!;
 #endif
         /// <summary>Container for cash on delivery (COD) information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod? COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod? _explicitNullValueCOD = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryCod _explicitNullValueCOD = default!;
 #endif
         /// <summary>Date that the package is delivered. Date format is YYYYMMDD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Date { get; set; }
+        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Date"); else _explicitNullProperties?.Remove("Date"); } }
+        private string? _explicitNullValueDate = default!;
 #nullable restore
 #else
-        public string Date { get; set; }
+        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Date"); else _explicitNullProperties?.Remove("Date"); } }
+        private string _explicitNullValueDate = default!;
 #endif
         /// <summary>Information about the location where package is delivered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation? DeliveryLocation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation? DeliveryLocation { get => _explicitNullValueDeliveryLocation; set { _explicitNullValueDeliveryLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryLocation"); else _explicitNullProperties?.Remove("DeliveryLocation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation? _explicitNullValueDeliveryLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation DeliveryLocation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation DeliveryLocation { get => _explicitNullValueDeliveryLocation; set { _explicitNullValueDeliveryLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryLocation"); else _explicitNullProperties?.Remove("DeliveryLocation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryDeliveryLocation _explicitNullValueDeliveryLocation = default!;
 #endif
         /// <summary>Information about driver release note / signature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DriverRelease { get; set; }
+        public string? DriverRelease { get => _explicitNullValueDriverRelease; set { _explicitNullValueDriverRelease = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DriverRelease"); else _explicitNullProperties?.Remove("DriverRelease"); } }
+        private string? _explicitNullValueDriverRelease = default!;
 #nullable restore
 #else
-        public string DriverRelease { get; set; }
+        public string DriverRelease { get => _explicitNullValueDriverRelease; set { _explicitNullValueDriverRelease = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DriverRelease"); else _explicitNullProperties?.Remove("DriverRelease"); } }
+        private string _explicitNullValueDriverRelease = default!;
 #endif
         /// <summary>Last pickup by Date from the UPS Access Point Location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastPickupDate { get; set; }
+        public string? LastPickupDate { get => _explicitNullValueLastPickupDate; set { _explicitNullValueLastPickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastPickupDate"); else _explicitNullProperties?.Remove("LastPickupDate"); } }
+        private string? _explicitNullValueLastPickupDate = default!;
 #nullable restore
 #else
-        public string LastPickupDate { get; set; }
+        public string LastPickupDate { get => _explicitNullValueLastPickupDate; set { _explicitNullValueLastPickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastPickupDate"); else _explicitNullProperties?.Remove("LastPickupDate"); } }
+        private string _explicitNullValueLastPickupDate = default!;
 #endif
         /// <summary>Package-level reference number.**NOTE:** For versions &gt;= v3, this element will always be returned as an array. For requests using version = v1 and v2, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryPackageReferenceNumber>? PackageReferenceNumber { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryPackageReferenceNumber>? PackageReferenceNumber { get => _explicitNullValuePackageReferenceNumber; set { _explicitNullValuePackageReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageReferenceNumber"); else _explicitNullProperties?.Remove("PackageReferenceNumber"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryPackageReferenceNumber>? _explicitNullValuePackageReferenceNumber = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryPackageReferenceNumber> PackageReferenceNumber { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryPackageReferenceNumber> PackageReferenceNumber { get => _explicitNullValuePackageReferenceNumber; set { _explicitNullValuePackageReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageReferenceNumber"); else _explicitNullProperties?.Remove("PackageReferenceNumber"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryPackageReferenceNumber> _explicitNullValuePackageReferenceNumber = default!;
 #endif
         /// <summary>Container tag for shipment reference number.**NOTE:** For versions &gt;= v3, this element will always be returned as an array. For requests using version = v1 and v2, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryShipmentReferenceNumber>? ShipmentReferenceNumber { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryShipmentReferenceNumber>? ShipmentReferenceNumber { get => _explicitNullValueShipmentReferenceNumber; set { _explicitNullValueShipmentReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentReferenceNumber"); else _explicitNullProperties?.Remove("ShipmentReferenceNumber"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryShipmentReferenceNumber>? _explicitNullValueShipmentReferenceNumber = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryShipmentReferenceNumber> ShipmentReferenceNumber { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryShipmentReferenceNumber> ShipmentReferenceNumber { get => _explicitNullValueShipmentReferenceNumber; set { _explicitNullValueShipmentReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentReferenceNumber"); else _explicitNullProperties?.Remove("ShipmentReferenceNumber"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewDeliveryShipmentReferenceNumber> _explicitNullValueShipmentReferenceNumber = default!;
 #endif
         /// <summary>Shipper&apos;s six digit alphanumeric account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperNumber { get; set; }
+        public string? ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
+        private string? _explicitNullValueShipperNumber = default!;
 #nullable restore
 #else
-        public string ShipperNumber { get; set; }
+        public string ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
+        private string _explicitNullValueShipperNumber = default!;
 #endif
         /// <summary>Time that the package is delivered. Time format is HHMMSS</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Time { get; set; }
+        public string? Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Time"); else _explicitNullProperties?.Remove("Time"); } }
+        private string? _explicitNullValueTime = default!;
 #nullable restore
 #else
-        public string Time { get; set; }
+        public string Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Time"); else _explicitNullProperties?.Remove("Time"); } }
+        private string _explicitNullValueTime = default!;
 #endif
         /// <summary>Package&apos;s 1Z tracking number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get; set; }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get; set; }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery"/> and sets the default values.
@@ -133,7 +179,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -178,6 +224,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("ShipperNumber", ShipperNumber);
             writer.WriteStringValue("Time", Time);
             writer.WriteStringValue("TrackingNumber", TrackingNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

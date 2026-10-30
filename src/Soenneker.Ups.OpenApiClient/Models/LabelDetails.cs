@@ -12,27 +12,42 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("lblData") is { } nullNodeLblData && nullNodeLblData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LblData = null;
+            if (parseNode.GetChildNode("lblNmbr") is { } nullNodeLblNmbr && nullNodeLblNmbr.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LblNmbr = null;
+            if (parseNode.GetChildNode("opTyp") is { } nullNodeOpTyp && nullNodeOpTyp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpTyp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The base64 encoded data of the generated label.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LblData { get; set; }
+        public string? LblData { get => _explicitNullValueLblData; set { _explicitNullValueLblData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lblData"); else _explicitNullProperties?.Remove("lblData"); } }
+        private string? _explicitNullValueLblData = default!;
 #nullable restore
 #else
-        public string LblData { get; set; }
+        public string LblData { get => _explicitNullValueLblData; set { _explicitNullValueLblData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lblData"); else _explicitNullProperties?.Remove("lblData"); } }
+        private string _explicitNullValueLblData = default!;
 #endif
         /// <summary>The unique label number assigned to the generated label.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LblNmbr { get; set; }
+        public string? LblNmbr { get => _explicitNullValueLblNmbr; set { _explicitNullValueLblNmbr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lblNmbr"); else _explicitNullProperties?.Remove("lblNmbr"); } }
+        private string? _explicitNullValueLblNmbr = default!;
 #nullable restore
 #else
-        public string LblNmbr { get; set; }
+        public string LblNmbr { get => _explicitNullValueLblNmbr; set { _explicitNullValueLblNmbr = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lblNmbr"); else _explicitNullProperties?.Remove("lblNmbr"); } }
+        private string _explicitNullValueLblNmbr = default!;
 #endif
         /// <summary>Image format type for the label requested by customer.| Code   | Description   || :----: | :-----------: || ZPL    | ZPL format    || EPL    | EPL format    || STARPL | STARPL format || SPL    | SPL format    || PNG    | PNG format    || PDF    | PDF format    || GIF    | GIF format    |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelDetailsOpTyp? OpTyp { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelDetailsOpTyp? OpTyp { get => _explicitNullValueOpTyp; set { _explicitNullValueOpTyp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opTyp"); else _explicitNullProperties?.Remove("opTyp"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelDetailsOpTyp? _explicitNullValueOpTyp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelDetails"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LabelDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LabelDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("lblData", LblData);
             writer.WriteStringValue("lblNmbr", LblNmbr);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LabelDetailsOpTyp>("opTyp", OpTyp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

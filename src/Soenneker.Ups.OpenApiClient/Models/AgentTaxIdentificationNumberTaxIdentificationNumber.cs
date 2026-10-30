@@ -12,72 +12,103 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AgentTaxIdentificationNumberTaxIdentificationNumber : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("IdentificationNumber") is { } nullNodeIdentificationNumber && nullNodeIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentificationNumber = null;
+            if (parseNode.GetChildNode("IDNumberCustomerRole") is { } nullNodeIDNumberCustomerRole && nullNodeIDNumberCustomerRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumberCustomerRole = null;
+            if (parseNode.GetChildNode("IDNumberEncryptionIndicator") is { } nullNodeIDNumberEncryptionIndicator && nullNodeIDNumberEncryptionIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumberEncryptionIndicator = null;
+            if (parseNode.GetChildNode("IDNumberIssuingCntryCd") is { } nullNodeIDNumberIssuingCntryCd && nullNodeIDNumberIssuingCntryCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumberIssuingCntryCd = null;
+            if (parseNode.GetChildNode("IDNumberPurposeCode") is { } nullNodeIDNumberPurposeCode && nullNodeIDNumberPurposeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumberPurposeCode = null;
+            if (parseNode.GetChildNode("IDNumberRequestingCntryCd") is { } nullNodeIDNumberRequestingCntryCd && nullNodeIDNumberRequestingCntryCd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumberRequestingCntryCd = null;
+            if (parseNode.GetChildNode("IDNumberTypeCode") is { } nullNodeIDNumberTypeCode && nullNodeIDNumberTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumberTypeCode = null;
+            if (parseNode.GetChildNode("IncludeIDNumberOnShippingBrokerageDocs") is { } nullNodeIncludeIDNumberOnShippingBrokerageDocs && nullNodeIncludeIDNumberOnShippingBrokerageDocs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeIDNumberOnShippingBrokerageDocs = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code or number that a shipper or consignee has registered with a particular country’s authority for doing business, or for identification purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdentificationNumber { get; set; }
+        public string? IdentificationNumber { get => _explicitNullValueIdentificationNumber; set { _explicitNullValueIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IdentificationNumber"); else _explicitNullProperties?.Remove("IdentificationNumber"); } }
+        private string? _explicitNullValueIdentificationNumber = default!;
 #nullable restore
 #else
-        public string IdentificationNumber { get; set; }
+        public string IdentificationNumber { get => _explicitNullValueIdentificationNumber; set { _explicitNullValueIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IdentificationNumber"); else _explicitNullProperties?.Remove("IdentificationNumber"); } }
+        private string _explicitNullValueIdentificationNumber = default!;
 #endif
         /// <summary>A business or individual identification type description (Future Use).specifies the relationship of the customer/ID Number to the shipment  05 =importer Address, 06=Exporter Address  , 18=DeliverTo/Consignee/Reciever Address,  37= Shipper Address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IDNumberCustomerRole { get; set; }
+        public string? IDNumberCustomerRole { get => _explicitNullValueIDNumberCustomerRole; set { _explicitNullValueIDNumberCustomerRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberCustomerRole"); else _explicitNullProperties?.Remove("IDNumberCustomerRole"); } }
+        private string? _explicitNullValueIDNumberCustomerRole = default!;
 #nullable restore
 #else
-        public string IDNumberCustomerRole { get; set; }
+        public string IDNumberCustomerRole { get => _explicitNullValueIDNumberCustomerRole; set { _explicitNullValueIDNumberCustomerRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberCustomerRole"); else _explicitNullProperties?.Remove("IDNumberCustomerRole"); } }
+        private string _explicitNullValueIDNumberCustomerRole = default!;
 #endif
         /// <summary>to determine if decryption is required. 0 = Identification number is not Encrypted1 = Identification number is Encrypted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IDNumberEncryptionIndicator { get; set; }
+        public string? IDNumberEncryptionIndicator { get => _explicitNullValueIDNumberEncryptionIndicator; set { _explicitNullValueIDNumberEncryptionIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberEncryptionIndicator"); else _explicitNullProperties?.Remove("IDNumberEncryptionIndicator"); } }
+        private string? _explicitNullValueIDNumberEncryptionIndicator = default!;
 #nullable restore
 #else
-        public string IDNumberEncryptionIndicator { get; set; }
+        public string IDNumberEncryptionIndicator { get => _explicitNullValueIDNumberEncryptionIndicator; set { _explicitNullValueIDNumberEncryptionIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberEncryptionIndicator"); else _explicitNullProperties?.Remove("IDNumberEncryptionIndicator"); } }
+        private string _explicitNullValueIDNumberEncryptionIndicator = default!;
 #endif
         /// <summary>The ISO-defined country code of the country where the Identification Number was issued, when applicable (as per business requirements). Needed for certain types of Identification Numbers (e.g., Passport Number).Sample Values: &apos;ID&apos; = Indonesia,&apos;VN&apos; = Vietnam,&apos;DE&apos; = Germany</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IDNumberIssuingCntryCd { get; set; }
+        public string? IDNumberIssuingCntryCd { get => _explicitNullValueIDNumberIssuingCntryCd; set { _explicitNullValueIDNumberIssuingCntryCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberIssuingCntryCd"); else _explicitNullProperties?.Remove("IDNumberIssuingCntryCd"); } }
+        private string? _explicitNullValueIDNumberIssuingCntryCd = default!;
 #nullable restore
 #else
-        public string IDNumberIssuingCntryCd { get; set; }
+        public string IDNumberIssuingCntryCd { get => _explicitNullValueIDNumberIssuingCntryCd; set { _explicitNullValueIDNumberIssuingCntryCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberIssuingCntryCd"); else _explicitNullProperties?.Remove("IDNumberIssuingCntryCd"); } }
+        private string _explicitNullValueIDNumberIssuingCntryCd = default!;
 #endif
         /// <summary>Code that specifies the purpose of the Identification Number. For all tax ID that are not EORI = ‘01’Valid values:00/ Spaces = Unknown01= Customs/Brokerage (Default)02= Customs/Brokerage EORI99= Other</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IDNumberPurposeCode { get; set; }
+        public string? IDNumberPurposeCode { get => _explicitNullValueIDNumberPurposeCode; set { _explicitNullValueIDNumberPurposeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberPurposeCode"); else _explicitNullProperties?.Remove("IDNumberPurposeCode"); } }
+        private string? _explicitNullValueIDNumberPurposeCode = default!;
 #nullable restore
 #else
-        public string IDNumberPurposeCode { get; set; }
+        public string IDNumberPurposeCode { get => _explicitNullValueIDNumberPurposeCode; set { _explicitNullValueIDNumberPurposeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberPurposeCode"); else _explicitNullProperties?.Remove("IDNumberPurposeCode"); } }
+        private string _explicitNullValueIDNumberPurposeCode = default!;
 #endif
         /// <summary>The ISO-defined country code of the country whose regulatory agency is requesting the Identification Number.Typically for Import, the Consignee ID is requested by the Ship To countryFor export, the Shipper ID is requested by the Ship From country.Required when a country (e.g., Origin country, Destination country) is requesting an ID Number for a shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IDNumberRequestingCntryCd { get; set; }
+        public string? IDNumberRequestingCntryCd { get => _explicitNullValueIDNumberRequestingCntryCd; set { _explicitNullValueIDNumberRequestingCntryCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberRequestingCntryCd"); else _explicitNullProperties?.Remove("IDNumberRequestingCntryCd"); } }
+        private string? _explicitNullValueIDNumberRequestingCntryCd = default!;
 #nullable restore
 #else
-        public string IDNumberRequestingCntryCd { get; set; }
+        public string IDNumberRequestingCntryCd { get => _explicitNullValueIDNumberRequestingCntryCd; set { _explicitNullValueIDNumberRequestingCntryCd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberRequestingCntryCd"); else _explicitNullProperties?.Remove("IDNumberRequestingCntryCd"); } }
+        private string _explicitNullValueIDNumberRequestingCntryCd = default!;
 #endif
         /// <summary>Valid Values are:0000 = UnknownIDNumberTypeCode equal to ‘0000’ (unknown) is to be used when an ‘ID Number Type’ is not applicable, or when the front-end/client system cannot determine the type of IdentificationNumber (for any reason).0001 = Exporter Tax ID Number0002 = Importer Tax ID Number orEORI Number – WhenIdentificationNumberPurposeCode= 020005 = Personal Tax ID Number1001 = Other / Free Form1002 = Company/Business Tax ID Number1003 = National ID Number1004 = Passport Number1005 = Personal ID Number1006 = Phone Number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IDNumberTypeCode { get; set; }
+        public string? IDNumberTypeCode { get => _explicitNullValueIDNumberTypeCode; set { _explicitNullValueIDNumberTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberTypeCode"); else _explicitNullProperties?.Remove("IDNumberTypeCode"); } }
+        private string? _explicitNullValueIDNumberTypeCode = default!;
 #nullable restore
 #else
-        public string IDNumberTypeCode { get; set; }
+        public string IDNumberTypeCode { get => _explicitNullValueIDNumberTypeCode; set { _explicitNullValueIDNumberTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumberTypeCode"); else _explicitNullProperties?.Remove("IDNumberTypeCode"); } }
+        private string _explicitNullValueIDNumberTypeCode = default!;
 #endif
         /// <summary>field to determine if the Identification Number should be excluded from Shipping/Brokerage documents (not be passed to Document Services)  ‘00’ -&gt; Do Not include 01-&gt; Include.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncludeIDNumberOnShippingBrokerageDocs { get; set; }
+        public string? IncludeIDNumberOnShippingBrokerageDocs { get => _explicitNullValueIncludeIDNumberOnShippingBrokerageDocs; set { _explicitNullValueIncludeIDNumberOnShippingBrokerageDocs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeIDNumberOnShippingBrokerageDocs"); else _explicitNullProperties?.Remove("IncludeIDNumberOnShippingBrokerageDocs"); } }
+        private string? _explicitNullValueIncludeIDNumberOnShippingBrokerageDocs = default!;
 #nullable restore
 #else
-        public string IncludeIDNumberOnShippingBrokerageDocs { get; set; }
+        public string IncludeIDNumberOnShippingBrokerageDocs { get => _explicitNullValueIncludeIDNumberOnShippingBrokerageDocs; set { _explicitNullValueIncludeIDNumberOnShippingBrokerageDocs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeIDNumberOnShippingBrokerageDocs"); else _explicitNullProperties?.Remove("IncludeIDNumberOnShippingBrokerageDocs"); } }
+        private string _explicitNullValueIncludeIDNumberOnShippingBrokerageDocs = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("IDNumberRequestingCntryCd", IDNumberRequestingCntryCd);
             writer.WriteStringValue("IDNumberTypeCode", IDNumberTypeCode);
             writer.WriteStringValue("IncludeIDNumberOnShippingBrokerageDocs", IncludeIDNumberOnShippingBrokerageDocs);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

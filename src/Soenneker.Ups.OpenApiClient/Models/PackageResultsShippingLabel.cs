@@ -12,56 +12,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PackageResultsShippingLabel : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("GraphicImage") is { } nullNodeGraphicImage && nullNodeGraphicImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GraphicImage = null;
+            if (parseNode.GetChildNode("GraphicImagePart") is { } nullNodeGraphicImagePart && nullNodeGraphicImagePart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GraphicImagePart = null;
+            if (parseNode.GetChildNode("HTMLImage") is { } nullNodeHTMLImage && nullNodeHTMLImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HTMLImage = null;
+            if (parseNode.GetChildNode("ImageFormat") is { } nullNodeImageFormat && nullNodeImageFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageFormat = null;
+            if (parseNode.GetChildNode("InternationalSignatureGraphicImage") is { } nullNodeInternationalSignatureGraphicImage && nullNodeInternationalSignatureGraphicImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternationalSignatureGraphicImage = null;
+            if (parseNode.GetChildNode("PDF417") is { } nullNodePDF417 && nullNodePDF417.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PDF417 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Base 64 encoded graphic image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GraphicImage { get; set; }
+        public string? GraphicImage { get => _explicitNullValueGraphicImage; set { _explicitNullValueGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImage"); else _explicitNullProperties?.Remove("GraphicImage"); } }
+        private string? _explicitNullValueGraphicImage = default!;
 #nullable restore
 #else
-        public string GraphicImage { get; set; }
+        public string GraphicImage { get => _explicitNullValueGraphicImage; set { _explicitNullValueGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImage"); else _explicitNullProperties?.Remove("GraphicImage"); } }
+        private string _explicitNullValueGraphicImage = default!;
 #endif
         /// <summary>Base 64 encoded graphic image. Applicable only for Mail Innovations CN22 Combination Forward Label with more than 3 commodities.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? GraphicImagePart { get; set; }
+        public List<string>? GraphicImagePart { get => _explicitNullValueGraphicImagePart; set { _explicitNullValueGraphicImagePart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImagePart"); else _explicitNullProperties?.Remove("GraphicImagePart"); } }
+        private List<string>? _explicitNullValueGraphicImagePart = default!;
 #nullable restore
 #else
-        public List<string> GraphicImagePart { get; set; }
+        public List<string> GraphicImagePart { get => _explicitNullValueGraphicImagePart; set { _explicitNullValueGraphicImagePart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImagePart"); else _explicitNullProperties?.Remove("GraphicImagePart"); } }
+        private List<string> _explicitNullValueGraphicImagePart = default!;
 #endif
         /// <summary>Base 64 encoded html browser image rendering software. This is only returned for gif and png image formats.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HTMLImage { get; set; }
+        public string? HTMLImage { get => _explicitNullValueHTMLImage; set { _explicitNullValueHTMLImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTMLImage"); else _explicitNullProperties?.Remove("HTMLImage"); } }
+        private string? _explicitNullValueHTMLImage = default!;
 #nullable restore
 #else
-        public string HTMLImage { get; set; }
+        public string HTMLImage { get => _explicitNullValueHTMLImage; set { _explicitNullValueHTMLImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTMLImage"); else _explicitNullProperties?.Remove("HTMLImage"); } }
+        private string _explicitNullValueHTMLImage = default!;
 #endif
         /// <summary>The container image format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingLabelImageFormat? ImageFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingLabelImageFormat? ImageFormat { get => _explicitNullValueImageFormat; set { _explicitNullValueImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ImageFormat"); else _explicitNullProperties?.Remove("ImageFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingLabelImageFormat? _explicitNullValueImageFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingLabelImageFormat ImageFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingLabelImageFormat ImageFormat { get => _explicitNullValueImageFormat; set { _explicitNullValueImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ImageFormat"); else _explicitNullProperties?.Remove("ImageFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingLabelImageFormat _explicitNullValueImageFormat = default!;
 #endif
         /// <summary>Base 64 encoded graphic image of the Warsaw text and signature box. EPL2, ZPL and SPL labels. The image will be returned for non-US based shipments. One image will be given per shipment and it will be in the first PackageResults container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InternationalSignatureGraphicImage { get; set; }
+        public string? InternationalSignatureGraphicImage { get => _explicitNullValueInternationalSignatureGraphicImage; set { _explicitNullValueInternationalSignatureGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalSignatureGraphicImage"); else _explicitNullProperties?.Remove("InternationalSignatureGraphicImage"); } }
+        private string? _explicitNullValueInternationalSignatureGraphicImage = default!;
 #nullable restore
 #else
-        public string InternationalSignatureGraphicImage { get; set; }
+        public string InternationalSignatureGraphicImage { get => _explicitNullValueInternationalSignatureGraphicImage; set { _explicitNullValueInternationalSignatureGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalSignatureGraphicImage"); else _explicitNullProperties?.Remove("InternationalSignatureGraphicImage"); } }
+        private string _explicitNullValueInternationalSignatureGraphicImage = default!;
 #endif
         /// <summary>PDF-417 is a two-dimensional barcode, which can store up to about 1,800 printable ASCII characters or 1,100 binary characters per symbol. The symbol is rectangular. The image is Base 64 encoded and returned if the LabelImageFormat code is GIF. Shipment with PRL return service only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PDF417 { get; set; }
+        public string? PDF417 { get => _explicitNullValuePDF417; set { _explicitNullValuePDF417 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PDF417"); else _explicitNullProperties?.Remove("PDF417"); } }
+        private string? _explicitNullValuePDF417 = default!;
 #nullable restore
 #else
-        public string PDF417 { get; set; }
+        public string PDF417 { get => _explicitNullValuePDF417; set { _explicitNullValuePDF417 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PDF417"); else _explicitNullProperties?.Remove("PDF417"); } }
+        private string _explicitNullValuePDF417 = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingLabelImageFormat>("ImageFormat", ImageFormat);
             writer.WriteStringValue("InternationalSignatureGraphicImage", InternationalSignatureGraphicImage);
             writer.WriteStringValue("PDF417", PDF417);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

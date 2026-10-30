@@ -12,72 +12,103 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Cn22FormCn22Content : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CN22ContentCountryOfOrigin") is { } nullNodeCN22ContentCountryOfOrigin && nullNodeCN22ContentCountryOfOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22ContentCountryOfOrigin = null;
+            if (parseNode.GetChildNode("CN22ContentCurrencyCode") is { } nullNodeCN22ContentCurrencyCode && nullNodeCN22ContentCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22ContentCurrencyCode = null;
+            if (parseNode.GetChildNode("CN22ContentDescription") is { } nullNodeCN22ContentDescription && nullNodeCN22ContentDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22ContentDescription = null;
+            if (parseNode.GetChildNode("CN22ContentQuantity") is { } nullNodeCN22ContentQuantity && nullNodeCN22ContentQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22ContentQuantity = null;
+            if (parseNode.GetChildNode("CN22ContentTariffNumber") is { } nullNodeCN22ContentTariffNumber && nullNodeCN22ContentTariffNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22ContentTariffNumber = null;
+            if (parseNode.GetChildNode("CN22ContentTotalValue") is { } nullNodeCN22ContentTotalValue && nullNodeCN22ContentTotalValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22ContentTotalValue = null;
+            if (parseNode.GetChildNode("CN22ContentWeight") is { } nullNodeCN22ContentWeight && nullNodeCN22ContentWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22ContentWeight = null;
+            if (parseNode.GetChildNode("DDSReferenceNumber") is { } nullNodeDDSReferenceNumber && nullNodeDDSReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DDSReferenceNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Country or Territory of Origin from where the CN22 contents originated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22ContentCountryOfOrigin { get; set; }
+        public string? CN22ContentCountryOfOrigin { get => _explicitNullValueCN22ContentCountryOfOrigin; set { _explicitNullValueCN22ContentCountryOfOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentCountryOfOrigin"); else _explicitNullProperties?.Remove("CN22ContentCountryOfOrigin"); } }
+        private string? _explicitNullValueCN22ContentCountryOfOrigin = default!;
 #nullable restore
 #else
-        public string CN22ContentCountryOfOrigin { get; set; }
+        public string CN22ContentCountryOfOrigin { get => _explicitNullValueCN22ContentCountryOfOrigin; set { _explicitNullValueCN22ContentCountryOfOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentCountryOfOrigin"); else _explicitNullProperties?.Remove("CN22ContentCountryOfOrigin"); } }
+        private string _explicitNullValueCN22ContentCountryOfOrigin = default!;
 #endif
         /// <summary>Currently only USD is supported.  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22ContentCurrencyCode { get; set; }
+        public string? CN22ContentCurrencyCode { get => _explicitNullValueCN22ContentCurrencyCode; set { _explicitNullValueCN22ContentCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentCurrencyCode"); else _explicitNullProperties?.Remove("CN22ContentCurrencyCode"); } }
+        private string? _explicitNullValueCN22ContentCurrencyCode = default!;
 #nullable restore
 #else
-        public string CN22ContentCurrencyCode { get; set; }
+        public string CN22ContentCurrencyCode { get => _explicitNullValueCN22ContentCurrencyCode; set { _explicitNullValueCN22ContentCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentCurrencyCode"); else _explicitNullProperties?.Remove("CN22ContentCurrencyCode"); } }
+        private string _explicitNullValueCN22ContentCurrencyCode = default!;
 #endif
         /// <summary>Detailed description of the content.If the combined MI package and CN22 label is requested, only the first 30 characters will appear on the combined label.  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22ContentDescription { get; set; }
+        public string? CN22ContentDescription { get => _explicitNullValueCN22ContentDescription; set { _explicitNullValueCN22ContentDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentDescription"); else _explicitNullProperties?.Remove("CN22ContentDescription"); } }
+        private string? _explicitNullValueCN22ContentDescription = default!;
 #nullable restore
 #else
-        public string CN22ContentDescription { get; set; }
+        public string CN22ContentDescription { get => _explicitNullValueCN22ContentDescription; set { _explicitNullValueCN22ContentDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentDescription"); else _explicitNullProperties?.Remove("CN22ContentDescription"); } }
+        private string _explicitNullValueCN22ContentDescription = default!;
 #endif
         /// <summary>Total number of items associated with this content.  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22ContentQuantity { get; set; }
+        public string? CN22ContentQuantity { get => _explicitNullValueCN22ContentQuantity; set { _explicitNullValueCN22ContentQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentQuantity"); else _explicitNullProperties?.Remove("CN22ContentQuantity"); } }
+        private string? _explicitNullValueCN22ContentQuantity = default!;
 #nullable restore
 #else
-        public string CN22ContentQuantity { get; set; }
+        public string CN22ContentQuantity { get => _explicitNullValueCN22ContentQuantity; set { _explicitNullValueCN22ContentQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentQuantity"); else _explicitNullProperties?.Remove("CN22ContentQuantity"); } }
+        private string _explicitNullValueCN22ContentQuantity = default!;
 #endif
         /// <summary>The tariff number associated with the CN22 contents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22ContentTariffNumber { get; set; }
+        public string? CN22ContentTariffNumber { get => _explicitNullValueCN22ContentTariffNumber; set { _explicitNullValueCN22ContentTariffNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentTariffNumber"); else _explicitNullProperties?.Remove("CN22ContentTariffNumber"); } }
+        private string? _explicitNullValueCN22ContentTariffNumber = default!;
 #nullable restore
 #else
-        public string CN22ContentTariffNumber { get; set; }
+        public string CN22ContentTariffNumber { get => _explicitNullValueCN22ContentTariffNumber; set { _explicitNullValueCN22ContentTariffNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentTariffNumber"); else _explicitNullProperties?.Remove("CN22ContentTariffNumber"); } }
+        private string _explicitNullValueCN22ContentTariffNumber = default!;
 #endif
         /// <summary>Total value of the items associated with this content.  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22ContentTotalValue { get; set; }
+        public string? CN22ContentTotalValue { get => _explicitNullValueCN22ContentTotalValue; set { _explicitNullValueCN22ContentTotalValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentTotalValue"); else _explicitNullProperties?.Remove("CN22ContentTotalValue"); } }
+        private string? _explicitNullValueCN22ContentTotalValue = default!;
 #nullable restore
 #else
-        public string CN22ContentTotalValue { get; set; }
+        public string CN22ContentTotalValue { get => _explicitNullValueCN22ContentTotalValue; set { _explicitNullValueCN22ContentTotalValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentTotalValue"); else _explicitNullProperties?.Remove("CN22ContentTotalValue"); } }
+        private string _explicitNullValueCN22ContentTotalValue = default!;
 #endif
         /// <summary>Container for CN22 content weight.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22ContentWeight? CN22ContentWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22ContentWeight? CN22ContentWeight { get => _explicitNullValueCN22ContentWeight; set { _explicitNullValueCN22ContentWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentWeight"); else _explicitNullProperties?.Remove("CN22ContentWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22ContentWeight? _explicitNullValueCN22ContentWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22ContentWeight CN22ContentWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22ContentWeight CN22ContentWeight { get => _explicitNullValueCN22ContentWeight; set { _explicitNullValueCN22ContentWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22ContentWeight"); else _explicitNullProperties?.Remove("CN22ContentWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22ContentWeight _explicitNullValueCN22ContentWeight = default!;
 #endif
         /// <summary>The DDSReferenceNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22DdsReferenceNumber? DDSReferenceNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22DdsReferenceNumber? DDSReferenceNumber { get => _explicitNullValueDDSReferenceNumber; set { _explicitNullValueDDSReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DDSReferenceNumber"); else _explicitNullProperties?.Remove("DDSReferenceNumber"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22DdsReferenceNumber? _explicitNullValueDDSReferenceNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22DdsReferenceNumber DDSReferenceNumber { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22DdsReferenceNumber DDSReferenceNumber { get => _explicitNullValueDDSReferenceNumber; set { _explicitNullValueDDSReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DDSReferenceNumber"); else _explicitNullProperties?.Remove("DDSReferenceNumber"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22DdsReferenceNumber _explicitNullValueDDSReferenceNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("CN22ContentTotalValue", CN22ContentTotalValue);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22ContentWeight>("CN22ContentWeight", CN22ContentWeight);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Cn22ContentCn22DdsReferenceNumber>("DDSReferenceNumber", DDSReferenceNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

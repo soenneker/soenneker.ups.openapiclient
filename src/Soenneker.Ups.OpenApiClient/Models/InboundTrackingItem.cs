@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InboundTrackingItem : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("inboundToken") is { } nullNodeInboundToken && nullNodeInboundToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundToken = null;
+            if (parseNode.GetChildNode("trackingNumbersList") is { } nullNodeTrackingNumbersList && nullNodeTrackingNumbersList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumbersList = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The inboundToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundToken { get; set; }
+        public string? InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
+        private string? _explicitNullValueInboundToken = default!;
 #nullable restore
 #else
-        public string InboundToken { get; set; }
+        public string InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
+        private string _explicitNullValueInboundToken = default!;
 #endif
         /// <summary>The trackingNumbersList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TrackingNumbersList { get; set; }
+        public List<string>? TrackingNumbersList { get => _explicitNullValueTrackingNumbersList; set { _explicitNullValueTrackingNumbersList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumbersList"); else _explicitNullProperties?.Remove("trackingNumbersList"); } }
+        private List<string>? _explicitNullValueTrackingNumbersList = default!;
 #nullable restore
 #else
-        public List<string> TrackingNumbersList { get; set; }
+        public List<string> TrackingNumbersList { get => _explicitNullValueTrackingNumbersList; set { _explicitNullValueTrackingNumbersList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumbersList"); else _explicitNullProperties?.Remove("trackingNumbersList"); } }
+        private List<string> _explicitNullValueTrackingNumbersList = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("inboundToken", InboundToken);
             writer.WriteCollectionOfPrimitiveValues<string>("trackingNumbersList", TrackingNumbersList);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

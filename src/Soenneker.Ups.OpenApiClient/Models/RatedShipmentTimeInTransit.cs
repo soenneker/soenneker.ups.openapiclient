@@ -12,56 +12,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RatedShipmentTimeInTransit : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AutoDutyCode") is { } nullNodeAutoDutyCode && nullNodeAutoDutyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoDutyCode = null;
+            if (parseNode.GetChildNode("Disclaimer") is { } nullNodeDisclaimer && nullNodeDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disclaimer = null;
+            if (parseNode.GetChildNode("DocumentsOnlyIndicator") is { } nullNodeDocumentsOnlyIndicator && nullNodeDocumentsOnlyIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentsOnlyIndicator = null;
+            if (parseNode.GetChildNode("PackageBillType") is { } nullNodePackageBillType && nullNodePackageBillType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageBillType = null;
+            if (parseNode.GetChildNode("PickupDate") is { } nullNodePickupDate && nullNodePickupDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDate = null;
+            if (parseNode.GetChildNode("ServiceSummary") is { } nullNodeServiceSummary && nullNodeServiceSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceSummary = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Required output for International requests. If Documents indicator is set for Non-document a duty is automatically calculated. The possible values to be returned are: 01 - Dutiable02 - Non-Dutiable03 - Low-value04 - Courier Remission05 - Gift06 - Military07 - Exception08 - Line Release09 - Section 321 low value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoDutyCode { get; set; }
+        public string? AutoDutyCode { get => _explicitNullValueAutoDutyCode; set { _explicitNullValueAutoDutyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoDutyCode"); else _explicitNullProperties?.Remove("AutoDutyCode"); } }
+        private string? _explicitNullValueAutoDutyCode = default!;
 #nullable restore
 #else
-        public string AutoDutyCode { get; set; }
+        public string AutoDutyCode { get => _explicitNullValueAutoDutyCode; set { _explicitNullValueAutoDutyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutoDutyCode"); else _explicitNullProperties?.Remove("AutoDutyCode"); } }
+        private string _explicitNullValueAutoDutyCode = default!;
 #endif
         /// <summary>The Disclaimer is provided based upon the origin and destination country or territory codes provided in the request document. The possible disclaimers that can be returned are available in the Service Guaranteed Disclaimers table.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Disclaimer { get; set; }
+        public string? Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
+        private string? _explicitNullValueDisclaimer = default!;
 #nullable restore
 #else
-        public string Disclaimer { get; set; }
+        public string Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
+        private string _explicitNullValueDisclaimer = default!;
 #endif
         /// <summary>If the indicator is present then the shipment was processed as Document Only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentsOnlyIndicator { get; set; }
+        public string? DocumentsOnlyIndicator { get => _explicitNullValueDocumentsOnlyIndicator; set { _explicitNullValueDocumentsOnlyIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DocumentsOnlyIndicator"); else _explicitNullProperties?.Remove("DocumentsOnlyIndicator"); } }
+        private string? _explicitNullValueDocumentsOnlyIndicator = default!;
 #nullable restore
 #else
-        public string DocumentsOnlyIndicator { get; set; }
+        public string DocumentsOnlyIndicator { get => _explicitNullValueDocumentsOnlyIndicator; set { _explicitNullValueDocumentsOnlyIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DocumentsOnlyIndicator"); else _explicitNullProperties?.Remove("DocumentsOnlyIndicator"); } }
+        private string _explicitNullValueDocumentsOnlyIndicator = default!;
 #endif
         /// <summary>Package bill type for the shipment. Valid values:02 - Document only 03 - Non-Document04 - Pallet</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageBillType { get; set; }
+        public string? PackageBillType { get => _explicitNullValuePackageBillType; set { _explicitNullValuePackageBillType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageBillType"); else _explicitNullProperties?.Remove("PackageBillType"); } }
+        private string? _explicitNullValuePackageBillType = default!;
 #nullable restore
 #else
-        public string PackageBillType { get; set; }
+        public string PackageBillType { get => _explicitNullValuePackageBillType; set { _explicitNullValuePackageBillType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageBillType"); else _explicitNullProperties?.Remove("PackageBillType"); } }
+        private string _explicitNullValuePackageBillType = default!;
 #endif
         /// <summary>The date the user requests UPS to pickup the package from the origin. Format: YYYYMMDD. In the event this Pickup date differs from the Pickup date in the Estimated Arrival Container, a warning will be returned.  In the event this Pickup date differs from the Pickup date in the Estimated Arrival Container, a warning will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupDate { get; set; }
+        public string? PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDate"); else _explicitNullProperties?.Remove("PickupDate"); } }
+        private string? _explicitNullValuePickupDate = default!;
 #nullable restore
 #else
-        public string PickupDate { get; set; }
+        public string PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDate"); else _explicitNullProperties?.Remove("PickupDate"); } }
+        private string _explicitNullValuePickupDate = default!;
 #endif
         /// <summary>Container for all available service information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitServiceSummary? ServiceSummary { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitServiceSummary? ServiceSummary { get => _explicitNullValueServiceSummary; set { _explicitNullValueServiceSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceSummary"); else _explicitNullProperties?.Remove("ServiceSummary"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitServiceSummary? _explicitNullValueServiceSummary = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitServiceSummary ServiceSummary { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitServiceSummary ServiceSummary { get => _explicitNullValueServiceSummary; set { _explicitNullValueServiceSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceSummary"); else _explicitNullProperties?.Remove("ServiceSummary"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitServiceSummary _explicitNullValueServiceSummary = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentTimeInTransit"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentTimeInTransit CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentTimeInTransit();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.RatedShipmentTimeInTransit(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("PackageBillType", PackageBillType);
             writer.WriteStringValue("PickupDate", PickupDate);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitServiceSummary>("ServiceSummary", ServiceSummary);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

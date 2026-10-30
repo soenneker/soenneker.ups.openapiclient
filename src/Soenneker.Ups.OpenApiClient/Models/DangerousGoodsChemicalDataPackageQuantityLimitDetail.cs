@@ -11,40 +11,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DangerousGoodsChemicalDataPackageQuantityLimitDetail : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("PackageQuantityLimitTypeCode") is { } nullNodePackageQuantityLimitTypeCode && nullNodePackageQuantityLimitTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageQuantityLimitTypeCode = null;
+            if (parseNode.GetChildNode("PackagingInstructionCode") is { } nullNodePackagingInstructionCode && nullNodePackagingInstructionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingInstructionCode = null;
+            if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("UOM") is { } nullNodeUOM && nullNodeUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UOM = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of package quantity limit.   It will be returned if applies for a given chemical record.Valid values:CAO - Cargo Aircraft OnlyLTD QTY - Limited QuantityGND - GroundPAX - Passenger AircraftCOMAT CAO - Company Material CAOCOMAT LTD - Company Material LTDCOMAT PAX - Company Material PAX</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageQuantityLimitTypeCode { get; set; }
+        public string? PackageQuantityLimitTypeCode { get => _explicitNullValuePackageQuantityLimitTypeCode; set { _explicitNullValuePackageQuantityLimitTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitTypeCode"); else _explicitNullProperties?.Remove("PackageQuantityLimitTypeCode"); } }
+        private string? _explicitNullValuePackageQuantityLimitTypeCode = default!;
 #nullable restore
 #else
-        public string PackageQuantityLimitTypeCode { get; set; }
+        public string PackageQuantityLimitTypeCode { get => _explicitNullValuePackageQuantityLimitTypeCode; set { _explicitNullValuePackageQuantityLimitTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitTypeCode"); else _explicitNullProperties?.Remove("PackageQuantityLimitTypeCode"); } }
+        private string _explicitNullValuePackageQuantityLimitTypeCode = default!;
 #endif
         /// <summary>The packing instructions related to the chemical record.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagingInstructionCode { get; set; }
+        public string? PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
+        private string? _explicitNullValuePackagingInstructionCode = default!;
 #nullable restore
 #else
-        public string PackagingInstructionCode { get; set; }
+        public string PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
+        private string _explicitNullValuePackagingInstructionCode = default!;
 #endif
         /// <summary>The numerical value of the mass capacity of the regulated good.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get; set; }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get; set; }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>The unit of measure used for the mass capacity of the regulated good.  It will be returned if applies for a given chemical record. Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UOM { get; set; }
+        public string? UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
+        private string? _explicitNullValueUOM = default!;
 #nullable restore
 #else
-        public string UOM { get; set; }
+        public string UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
+        private string _explicitNullValueUOM = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataPackageQuantityLimitDetail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("PackagingInstructionCode", PackagingInstructionCode);
             writer.WriteStringValue("Quantity", Quantity);
             writer.WriteStringValue("UOM", UOM);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

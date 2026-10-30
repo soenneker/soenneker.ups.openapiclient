@@ -12,30 +12,49 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cancelEligibility") is { } nullNodeCancelEligibility && nullNodeCancelEligibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelEligibility = null;
+            if (parseNode.GetChildNode("createEligibility") is { } nullNodeCreateEligibility && nullNodeCreateEligibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateEligibility = null;
+            if (parseNode.GetChildNode("dateOptionsforFutureDelivery") is { } nullNodeDateOptionsforFutureDelivery && nullNodeDateOptionsforFutureDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateOptionsforFutureDelivery = null;
+            if (parseNode.GetChildNode("modifyEligibility") is { } nullNodeModifyEligibility && nullNodeModifyEligibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifyEligibility = null;
+            if (parseNode.GetChildNode("reasonOptionsForRTS") is { } nullNodeReasonOptionsForRTS && nullNodeReasonOptionsForRTS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonOptionsForRTS = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cancelEligibility property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? CancelEligibility { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? CancelEligibility { get => _explicitNullValueCancelEligibility; set { _explicitNullValueCancelEligibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelEligibility"); else _explicitNullProperties?.Remove("cancelEligibility"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? _explicitNullValueCancelEligibility = default!;
         /// <summary>The createEligibility property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? CreateEligibility { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? CreateEligibility { get => _explicitNullValueCreateEligibility; set { _explicitNullValueCreateEligibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createEligibility"); else _explicitNullProperties?.Remove("createEligibility"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? _explicitNullValueCreateEligibility = default!;
         /// <summary>Unbounded array of future delivery dates. Available only for future delivery intercept option</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItem>? DateOptionsforFutureDelivery { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItem>? DateOptionsforFutureDelivery { get => _explicitNullValueDateOptionsforFutureDelivery; set { _explicitNullValueDateOptionsforFutureDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateOptionsforFutureDelivery"); else _explicitNullProperties?.Remove("dateOptionsforFutureDelivery"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItem>? _explicitNullValueDateOptionsforFutureDelivery = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItem> DateOptionsforFutureDelivery { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItem> DateOptionsforFutureDelivery { get => _explicitNullValueDateOptionsforFutureDelivery; set { _explicitNullValueDateOptionsforFutureDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateOptionsforFutureDelivery"); else _explicitNullProperties?.Remove("dateOptionsforFutureDelivery"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItem> _explicitNullValueDateOptionsforFutureDelivery = default!;
 #endif
         /// <summary>The modifyEligibility property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? ModifyEligibility { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? ModifyEligibility { get => _explicitNullValueModifyEligibility; set { _explicitNullValueModifyEligibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modifyEligibility"); else _explicitNullProperties?.Remove("modifyEligibility"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2? _explicitNullValueModifyEligibility = default!;
         /// <summary>Array of reasons why the item is being returned. Available only for RTS intercept option</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItem>? ReasonOptionsForRTS { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItem>? ReasonOptionsForRTS { get => _explicitNullValueReasonOptionsForRTS; set { _explicitNullValueReasonOptionsForRTS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonOptionsForRTS"); else _explicitNullProperties?.Remove("reasonOptionsForRTS"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItem>? _explicitNullValueReasonOptionsForRTS = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItem> ReasonOptionsForRTS { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItem> ReasonOptionsForRTS { get => _explicitNullValueReasonOptionsForRTS; set { _explicitNullValueReasonOptionsForRTS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonOptionsForRTS"); else _explicitNullProperties?.Remove("reasonOptionsForRTS"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItem> _explicitNullValueReasonOptionsForRTS = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue"/> and sets the default values.
@@ -52,7 +71,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -81,6 +100,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItem>("dateOptionsforFutureDelivery", DateOptionsforFutureDelivery);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2>("modifyEligibility", ModifyEligibility);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItem>("reasonOptionsForRTS", ReasonOptionsForRTS);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

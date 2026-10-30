@@ -12,30 +12,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApolloAirUtilityAccessorialsRequestV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("consignee") is { } nullNodeConsignee && nullNodeConsignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consignee = null;
+            if (parseNode.GetChildNode("dropOffTime") is { } nullNodeDropOffTime && nullNodeDropOffTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropOffTime = null;
+            if (parseNode.GetChildNode("pickupDateTime") is { } nullNodePickupDateTime && nullNodePickupDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDateTime = null;
+            if (parseNode.GetChildNode("serviceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("shipper") is { } nullNodeShipper && nullNodeShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipper = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The consignee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? Consignee { get => _explicitNullValueConsignee; set { _explicitNullValueConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consignee"); else _explicitNullProperties?.Remove("consignee"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? _explicitNullValueConsignee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails Consignee { get => _explicitNullValueConsignee; set { _explicitNullValueConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consignee"); else _explicitNullProperties?.Remove("consignee"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails _explicitNullValueConsignee = default!;
 #endif
         /// <summary>The dropOffTime property</summary>
-        public Time? DropOffTime { get; set; }
+#nullable enable
+        public string? DropOffTime { get => _explicitNullValueDropOffTime; set { _explicitNullValueDropOffTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dropOffTime"); else _explicitNullProperties?.Remove("dropOffTime"); } }
+        private string? _explicitNullValueDropOffTime = default!;
+#nullable restore
         /// <summary>Accepted format - yyyy-MM-dd, yyyy/MM/dd, MM-dd-yyyy, MM/dd/yyyy format.</summary>
-        public Date? PickupDateTime { get; set; }
+        public Date? PickupDateTime { get => _explicitNullValuePickupDateTime; set { _explicitNullValuePickupDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDateTime"); else _explicitNullProperties?.Remove("pickupDateTime"); } }
+        private Date? _explicitNullValuePickupDateTime = default!;
         /// <summary>The serviceCode property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode? ServiceCode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode? _explicitNullValueServiceCode = default!;
         /// <summary>The shipper property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? _explicitNullValueShipper = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails _explicitNullValueShipper = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1"/> and sets the default values.
@@ -52,7 +73,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +84,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails.CreateFromDiscriminatorValue); } },
-                { "dropOffTime", n => { DropOffTime = n.GetTimeValue(); } },
+                { "dropOffTime", n => { DropOffTime = n.GetStringValue(); } },
                 { "pickupDateTime", n => { PickupDateTime = n.GetDateValue(); } },
                 { "serviceCode", n => { ServiceCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode>(); } },
                 { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails.CreateFromDiscriminatorValue); } },
@@ -77,10 +98,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>("consignee", Consignee);
-            writer.WriteTimeValue("dropOffTime", DropOffTime);
+            writer.WriteStringValue("dropOffTime", DropOffTime);
             writer.WriteDateValue("pickupDateTime", PickupDateTime);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode>("serviceCode", ServiceCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>("shipper", Shipper);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -93,6 +95,8 @@ namespace Soenneker.Ups.OpenApiClient.CustomsDetailV2.Content.Fields.CustomsDeta
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsErrorResponsev2.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

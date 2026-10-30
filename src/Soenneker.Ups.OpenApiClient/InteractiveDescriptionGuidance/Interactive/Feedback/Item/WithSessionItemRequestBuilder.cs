@@ -62,6 +62,8 @@ namespace Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance.Interactive
                 { "415", global::Soenneker.Ups.OpenApiClient.Models.CustomErrorResponse.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.CustomErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.CustomErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,34 +12,52 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsExportAssureShipmentResponseDescriptionGuidance : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isMatched") is { } nullNodeIsMatched && nullNodeIsMatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMatched = null;
+            if (parseNode.GetChildNode("matchedKeyword") is { } nullNodeMatchedKeyword && nullNodeMatchedKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedKeyword = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("sourceListName") is { } nullNodeSourceListName && nullNodeSourceListName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceListName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the description guidance service has matched a keyword from the shipment description</summary>
-        public bool? IsMatched { get; set; }
+        public bool? IsMatched { get => _explicitNullValueIsMatched; set { _explicitNullValueIsMatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMatched"); else _explicitNullProperties?.Remove("isMatched"); } }
+        private bool? _explicitNullValueIsMatched = default!;
         /// <summary>The keyword(s) from the shipment description that matched the system criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MatchedKeyword { get; set; }
+        public string? MatchedKeyword { get => _explicitNullValueMatchedKeyword; set { _explicitNullValueMatchedKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchedKeyword"); else _explicitNullProperties?.Remove("matchedKeyword"); } }
+        private string? _explicitNullValueMatchedKeyword = default!;
 #nullable restore
 #else
-        public string MatchedKeyword { get; set; }
+        public string MatchedKeyword { get => _explicitNullValueMatchedKeyword; set { _explicitNullValueMatchedKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchedKeyword"); else _explicitNullProperties?.Remove("matchedKeyword"); } }
+        private string _explicitNullValueMatchedKeyword = default!;
 #endif
         /// <summary>A message with guidance on how to improve the shipment description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>A list of terminology used to describe items from a particular regional source</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceListName { get; set; }
+        public string? SourceListName { get => _explicitNullValueSourceListName; set { _explicitNullValueSourceListName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceListName"); else _explicitNullProperties?.Remove("sourceListName"); } }
+        private string? _explicitNullValueSourceListName = default!;
 #nullable restore
 #else
-        public string SourceListName { get; set; }
+        public string SourceListName { get => _explicitNullValueSourceListName; set { _explicitNullValueSourceListName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceListName"); else _explicitNullProperties?.Remove("sourceListName"); } }
+        private string _explicitNullValueSourceListName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseDescriptionGuidance"/> and sets the default values.
@@ -57,7 +75,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseDescriptionGuidance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseDescriptionGuidance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseDescriptionGuidance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +102,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("matchedKeyword", MatchedKeyword);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("sourceListName", SourceListName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

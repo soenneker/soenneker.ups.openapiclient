@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PrimaryInformationShipmentExceptionDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("exceptionCount") is { } nullNodeExceptionCount && nullNodeExceptionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionCount = null;
+            if (parseNode.GetChildNode("exceptionList") is { } nullNodeExceptionList && nullNodeExceptionList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionList = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total count of exceptions for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExceptionCount { get; set; }
+        public string? ExceptionCount { get => _explicitNullValueExceptionCount; set { _explicitNullValueExceptionCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCount"); else _explicitNullProperties?.Remove("exceptionCount"); } }
+        private string? _explicitNullValueExceptionCount = default!;
 #nullable restore
 #else
-        public string ExceptionCount { get; set; }
+        public string ExceptionCount { get => _explicitNullValueExceptionCount; set { _explicitNullValueExceptionCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCount"); else _explicitNullProperties?.Remove("exceptionCount"); } }
+        private string _explicitNullValueExceptionCount = default!;
 #endif
         /// <summary>List of exception details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentException>? ExceptionList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentException>? ExceptionList { get => _explicitNullValueExceptionList; set { _explicitNullValueExceptionList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionList"); else _explicitNullProperties?.Remove("exceptionList"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentException>? _explicitNullValueExceptionList = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentException> ExceptionList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentException> ExceptionList { get => _explicitNullValueExceptionList; set { _explicitNullValueExceptionList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionList"); else _explicitNullProperties?.Remove("exceptionList"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentException> _explicitNullValueExceptionList = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformationShipmentExceptionDetails"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformationShipmentExceptionDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformationShipmentExceptionDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformationShipmentExceptionDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("exceptionCount", ExceptionCount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShipmentException>("exceptionList", ExceptionList);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DropLocationLocationImage : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("NonSecureURL") is { } nullNodeNonSecureURL && nullNodeNonSecureURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonSecureURL = null;
+            if (parseNode.GetChildNode("SecureURL") is { } nullNodeSecureURL && nullNodeSecureURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecureURL = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Non Secure URL for Location Image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NonSecureURL { get; set; }
+        public string? NonSecureURL { get => _explicitNullValueNonSecureURL; set { _explicitNullValueNonSecureURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NonSecureURL"); else _explicitNullProperties?.Remove("NonSecureURL"); } }
+        private string? _explicitNullValueNonSecureURL = default!;
 #nullable restore
 #else
-        public string NonSecureURL { get; set; }
+        public string NonSecureURL { get => _explicitNullValueNonSecureURL; set { _explicitNullValueNonSecureURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NonSecureURL"); else _explicitNullProperties?.Remove("NonSecureURL"); } }
+        private string _explicitNullValueNonSecureURL = default!;
 #endif
         /// <summary>Secure URL for Location Image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecureURL { get; set; }
+        public string? SecureURL { get => _explicitNullValueSecureURL; set { _explicitNullValueSecureURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecureURL"); else _explicitNullProperties?.Remove("SecureURL"); } }
+        private string? _explicitNullValueSecureURL = default!;
 #nullable restore
 #else
-        public string SecureURL { get; set; }
+        public string SecureURL { get => _explicitNullValueSecureURL; set { _explicitNullValueSecureURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecureURL"); else _explicitNullProperties?.Remove("SecureURL"); } }
+        private string _explicitNullValueSecureURL = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocationImage"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocationImage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocationImage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DropLocationLocationImage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("NonSecureURL", NonSecureURL);
             writer.WriteStringValue("SecureURL", SecureURL);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

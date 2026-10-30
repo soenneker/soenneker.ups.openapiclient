@@ -11,56 +11,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class QuantumViewResponseError : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ErrorCode") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("ErrorDescription") is { } nullNodeErrorDescription && nullNodeErrorDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorDescription = null;
+            if (parseNode.GetChildNode("ErrorDigest") is { } nullNodeErrorDigest && nullNodeErrorDigest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorDigest = null;
+            if (parseNode.GetChildNode("ErrorLocation") is { } nullNodeErrorLocation && nullNodeErrorLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorLocation = null;
+            if (parseNode.GetChildNode("ErrorSeverity") is { } nullNodeErrorSeverity && nullNodeErrorSeverity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorSeverity = null;
+            if (parseNode.GetChildNode("MinimumRetrySeconds") is { } nullNodeMinimumRetrySeconds && nullNodeMinimumRetrySeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumRetrySeconds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A numeric value that describes the error. Each tool defines a range of error codes. Required if the error is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorCode { get; set; }
+        public string? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorCode"); else _explicitNullProperties?.Remove("ErrorCode"); } }
+        private string? _explicitNullValueErrorCode = default!;
 #nullable restore
 #else
-        public string ErrorCode { get; set; }
+        public string ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorCode"); else _explicitNullProperties?.Remove("ErrorCode"); } }
+        private string _explicitNullValueErrorCode = default!;
 #endif
         /// <summary>Describes the error code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorDescription { get; set; }
+        public string? ErrorDescription { get => _explicitNullValueErrorDescription; set { _explicitNullValueErrorDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorDescription"); else _explicitNullProperties?.Remove("ErrorDescription"); } }
+        private string? _explicitNullValueErrorDescription = default!;
 #nullable restore
 #else
-        public string ErrorDescription { get; set; }
+        public string ErrorDescription { get => _explicitNullValueErrorDescription; set { _explicitNullValueErrorDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorDescription"); else _explicitNullProperties?.Remove("ErrorDescription"); } }
+        private string _explicitNullValueErrorDescription = default!;
 #endif
         /// <summary>The contents of the element in error.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ErrorDigest { get; set; }
+        public List<string>? ErrorDigest { get => _explicitNullValueErrorDigest; set { _explicitNullValueErrorDigest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorDigest"); else _explicitNullProperties?.Remove("ErrorDigest"); } }
+        private List<string>? _explicitNullValueErrorDigest = default!;
 #nullable restore
 #else
-        public List<string> ErrorDigest { get; set; }
+        public List<string> ErrorDigest { get => _explicitNullValueErrorDigest; set { _explicitNullValueErrorDigest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorDigest"); else _explicitNullProperties?.Remove("ErrorDigest"); } }
+        private List<string> _explicitNullValueErrorDigest = default!;
 #endif
         /// <summary>Identifies the element in error.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation>? ErrorLocation { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation>? ErrorLocation { get => _explicitNullValueErrorLocation; set { _explicitNullValueErrorLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocation"); else _explicitNullProperties?.Remove("ErrorLocation"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation>? _explicitNullValueErrorLocation = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation> ErrorLocation { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation> ErrorLocation { get => _explicitNullValueErrorLocation; set { _explicitNullValueErrorLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocation"); else _explicitNullProperties?.Remove("ErrorLocation"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation> _explicitNullValueErrorLocation = default!;
 #endif
         /// <summary>Describes the severity of the error. Required if the error is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorSeverity { get; set; }
+        public string? ErrorSeverity { get => _explicitNullValueErrorSeverity; set { _explicitNullValueErrorSeverity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorSeverity"); else _explicitNullProperties?.Remove("ErrorSeverity"); } }
+        private string? _explicitNullValueErrorSeverity = default!;
 #nullable restore
 #else
-        public string ErrorSeverity { get; set; }
+        public string ErrorSeverity { get => _explicitNullValueErrorSeverity; set { _explicitNullValueErrorSeverity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorSeverity"); else _explicitNullProperties?.Remove("ErrorSeverity"); } }
+        private string _explicitNullValueErrorSeverity = default!;
 #endif
         /// <summary>Number of seconds to wait until retry. This field is populated on special conditions of the Transient Error only, as defined by the service. A number between 1 and 86400 (24 hours)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinimumRetrySeconds { get; set; }
+        public string? MinimumRetrySeconds { get => _explicitNullValueMinimumRetrySeconds; set { _explicitNullValueMinimumRetrySeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinimumRetrySeconds"); else _explicitNullProperties?.Remove("MinimumRetrySeconds"); } }
+        private string? _explicitNullValueMinimumRetrySeconds = default!;
 #nullable restore
 #else
-        public string MinimumRetrySeconds { get; set; }
+        public string MinimumRetrySeconds { get => _explicitNullValueMinimumRetrySeconds; set { _explicitNullValueMinimumRetrySeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinimumRetrySeconds"); else _explicitNullProperties?.Remove("MinimumRetrySeconds"); } }
+        private string _explicitNullValueMinimumRetrySeconds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuantumViewResponseError"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.QuantumViewResponseError CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewResponseError();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewResponseError(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation>("ErrorLocation", ErrorLocation);
             writer.WriteStringValue("ErrorSeverity", ErrorSeverity);
             writer.WriteStringValue("MinimumRetrySeconds", MinimumRetrySeconds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

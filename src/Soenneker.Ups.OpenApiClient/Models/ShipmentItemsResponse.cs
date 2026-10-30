@@ -12,48 +12,70 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentItemsResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("commodityId") is { } nullNodeCommodityId && nullNodeCommodityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("descriptionGuidance") is { } nullNodeDescriptionGuidance && nullNodeDescriptionGuidance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionGuidance = null;
+            if (parseNode.GetChildNode("hsCode") is { } nullNodeHsCode && nullNodeHsCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsCode = null;
+            if (parseNode.GetChildNode("importExportCompliance") is { } nullNodeImportExportCompliance && nullNodeImportExportCompliance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportExportCompliance = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commodity ID returned in the Import Export Compliance report.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityId { get; set; }
+        public string? CommodityId { get => _explicitNullValueCommodityId; set { _explicitNullValueCommodityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityId"); else _explicitNullProperties?.Remove("commodityId"); } }
+        private string? _explicitNullValueCommodityId = default!;
 #nullable restore
 #else
-        public string CommodityId { get; set; }
+        public string CommodityId { get => _explicitNullValueCommodityId; set { _explicitNullValueCommodityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityId"); else _explicitNullProperties?.Remove("commodityId"); } }
+        private string _explicitNullValueCommodityId = default!;
 #endif
         /// <summary>A description of the shipment item listed in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>This object contains the system&apos;s results to a request for Description Guidance</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance? DescriptionGuidance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance? DescriptionGuidance { get => _explicitNullValueDescriptionGuidance; set { _explicitNullValueDescriptionGuidance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptionGuidance"); else _explicitNullProperties?.Remove("descriptionGuidance"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance? _explicitNullValueDescriptionGuidance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance DescriptionGuidance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance DescriptionGuidance { get => _explicitNullValueDescriptionGuidance; set { _explicitNullValueDescriptionGuidance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptionGuidance"); else _explicitNullProperties?.Remove("descriptionGuidance"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance _explicitNullValueDescriptionGuidance = default!;
 #endif
         /// <summary>The [Harmonized System (HS) code](https://www.trade.gov/harmonized-system-hs-codes). Used commonly throughout the export process for goods, the Harmonized System is a standardized numerical method of classifying traded products. It is used by customs authorities to identify products when assessing duties and taxes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsCode { get; set; }
+        public string? HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hsCode"); else _explicitNullProperties?.Remove("hsCode"); } }
+        private string? _explicitNullValueHsCode = default!;
 #nullable restore
 #else
-        public string HsCode { get; set; }
+        public string HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hsCode"); else _explicitNullProperties?.Remove("hsCode"); } }
+        private string _explicitNullValueHsCode = default!;
 #endif
         /// <summary>This object includes details of the Import Export Compliance assessment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance? ImportExportCompliance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance? ImportExportCompliance { get => _explicitNullValueImportExportCompliance; set { _explicitNullValueImportExportCompliance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importExportCompliance"); else _explicitNullProperties?.Remove("importExportCompliance"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance? _explicitNullValueImportExportCompliance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance ImportExportCompliance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance ImportExportCompliance { get => _explicitNullValueImportExportCompliance; set { _explicitNullValueImportExportCompliance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importExportCompliance"); else _explicitNullProperties?.Remove("importExportCompliance"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance _explicitNullValueImportExportCompliance = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponse"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseDescriptionGuidance>("descriptionGuidance", DescriptionGuidance);
             writer.WriteStringValue("hsCode", HsCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsResponseImportExportCompliance>("importExportCompliance", ImportExportCompliance);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

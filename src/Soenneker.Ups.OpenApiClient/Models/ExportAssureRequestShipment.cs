@@ -12,123 +12,179 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExportAssureRequestShipment : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("exportCountryCode") is { } nullNodeExportCountryCode && nullNodeExportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportCountryCode = null;
+            if (parseNode.GetChildNode("exporterAccountNumber") is { } nullNodeExporterAccountNumber && nullNodeExporterAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterAccountNumber = null;
+            if (parseNode.GetChildNode("exporterCity") is { } nullNodeExporterCity && nullNodeExporterCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterCity = null;
+            if (parseNode.GetChildNode("exporterName") is { } nullNodeExporterName && nullNodeExporterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterName = null;
+            if (parseNode.GetChildNode("exporterZipcode") is { } nullNodeExporterZipcode && nullNodeExporterZipcode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterZipcode = null;
+            if (parseNode.GetChildNode("grossWeight") is { } nullNodeGrossWeight && nullNodeGrossWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrossWeight = null;
+            if (parseNode.GetChildNode("grossWeightUnit") is { } nullNodeGrossWeightUnit && nullNodeGrossWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrossWeightUnit = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("importCountryCode") is { } nullNodeImportCountryCode && nullNodeImportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportCountryCode = null;
+            if (parseNode.GetChildNode("importerAccountNumber") is { } nullNodeImporterAccountNumber && nullNodeImporterAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterAccountNumber = null;
+            if (parseNode.GetChildNode("importerCity") is { } nullNodeImporterCity && nullNodeImporterCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterCity = null;
+            if (parseNode.GetChildNode("importerName") is { } nullNodeImporterName && nullNodeImporterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterName = null;
+            if (parseNode.GetChildNode("importerZipcode") is { } nullNodeImporterZipcode && nullNodeImporterZipcode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterZipcode = null;
+            if (parseNode.GetChildNode("shipmentDescription") is { } nullNodeShipmentDescription && nullNodeShipmentDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentDescription = null;
+            if (parseNode.GetChildNode("shipmentItems") is { } nullNodeShipmentItems && nullNodeShipmentItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentItems = null;
+            if (parseNode.GetChildNode("shipmentType") is { } nullNodeShipmentType && nullNodeShipmentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentType = null;
+            if (parseNode.GetChildNode("translationLocale") is { } nullNodeTranslationLocale && nullNodeTranslationLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranslationLocale = null;
+            if (parseNode.GetChildNode("transModes") is { } nullNodeTransModes && nullNodeTransModes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransModes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The &lt;a href=&quot;https://developer.ups.com/api/reference/shipping/appendix1&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;two-letter identification code&lt;/a&gt; for countries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportCountryCode { get; set; }
+        public string? ExportCountryCode { get => _explicitNullValueExportCountryCode; set { _explicitNullValueExportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportCountryCode"); else _explicitNullProperties?.Remove("exportCountryCode"); } }
+        private string? _explicitNullValueExportCountryCode = default!;
 #nullable restore
 #else
-        public string ExportCountryCode { get; set; }
+        public string ExportCountryCode { get => _explicitNullValueExportCountryCode; set { _explicitNullValueExportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportCountryCode"); else _explicitNullProperties?.Remove("exportCountryCode"); } }
+        private string _explicitNullValueExportCountryCode = default!;
 #endif
         /// <summary>The UPS account number of the exporter</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExporterAccountNumber { get; set; }
+        public string? ExporterAccountNumber { get => _explicitNullValueExporterAccountNumber; set { _explicitNullValueExporterAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterAccountNumber"); else _explicitNullProperties?.Remove("exporterAccountNumber"); } }
+        private string? _explicitNullValueExporterAccountNumber = default!;
 #nullable restore
 #else
-        public string ExporterAccountNumber { get; set; }
+        public string ExporterAccountNumber { get => _explicitNullValueExporterAccountNumber; set { _explicitNullValueExporterAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterAccountNumber"); else _explicitNullProperties?.Remove("exporterAccountNumber"); } }
+        private string _explicitNullValueExporterAccountNumber = default!;
 #endif
         /// <summary>The city from which the exporter operates. Required if exporter&apos;s account number and zip code are not given and POA evaluation is requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExporterCity { get; set; }
+        public string? ExporterCity { get => _explicitNullValueExporterCity; set { _explicitNullValueExporterCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterCity"); else _explicitNullProperties?.Remove("exporterCity"); } }
+        private string? _explicitNullValueExporterCity = default!;
 #nullable restore
 #else
-        public string ExporterCity { get; set; }
+        public string ExporterCity { get => _explicitNullValueExporterCity; set { _explicitNullValueExporterCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterCity"); else _explicitNullProperties?.Remove("exporterCity"); } }
+        private string _explicitNullValueExporterCity = default!;
 #endif
         /// <summary>The name of the exporter. Required when the exporter&apos;s UPS account number is not available and POA requirements are under review.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExporterName { get; set; }
+        public string? ExporterName { get => _explicitNullValueExporterName; set { _explicitNullValueExporterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterName"); else _explicitNullProperties?.Remove("exporterName"); } }
+        private string? _explicitNullValueExporterName = default!;
 #nullable restore
 #else
-        public string ExporterName { get; set; }
+        public string ExporterName { get => _explicitNullValueExporterName; set { _explicitNullValueExporterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterName"); else _explicitNullProperties?.Remove("exporterName"); } }
+        private string _explicitNullValueExporterName = default!;
 #endif
         /// <summary>The postal code of the exporter&apos;s location. Required when exporter&apos;s account number and city are not provided and POA evaluation is requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExporterZipcode { get; set; }
+        public string? ExporterZipcode { get => _explicitNullValueExporterZipcode; set { _explicitNullValueExporterZipcode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterZipcode"); else _explicitNullProperties?.Remove("exporterZipcode"); } }
+        private string? _explicitNullValueExporterZipcode = default!;
 #nullable restore
 #else
-        public string ExporterZipcode { get; set; }
+        public string ExporterZipcode { get => _explicitNullValueExporterZipcode; set { _explicitNullValueExporterZipcode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterZipcode"); else _explicitNullProperties?.Remove("exporterZipcode"); } }
+        private string _explicitNullValueExporterZipcode = default!;
 #endif
         /// <summary>The gross weight of the entire Shipment. If this field is not specified, `grossWeightUnit` must be `null`.</summary>
-        public decimal? GrossWeight { get; set; }
+        public decimal? GrossWeight { get => _explicitNullValueGrossWeight; set { _explicitNullValueGrossWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grossWeight"); else _explicitNullProperties?.Remove("grossWeight"); } }
+        private decimal? _explicitNullValueGrossWeight = default!;
         /// <summary>Gross weight unit. Only required if there is a value for `grossWeight`; If `grossWeight` is not specified, this value must equal `null`.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnit? GrossWeightUnit { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnit? GrossWeightUnit { get => _explicitNullValueGrossWeightUnit; set { _explicitNullValueGrossWeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grossWeightUnit"); else _explicitNullProperties?.Remove("grossWeightUnit"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnit? _explicitNullValueGrossWeightUnit = default!;
         /// <summary>A unique identifier assigned to the shipment as part of the API&apos;s compliance review process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The &lt;a href=&quot;https://developer.ups.com/api/reference/shipping/appendix1&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;two-letter identification code&lt;/a&gt; for countries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportCountryCode { get; set; }
+        public string? ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
+        private string? _explicitNullValueImportCountryCode = default!;
 #nullable restore
 #else
-        public string ImportCountryCode { get; set; }
+        public string ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
+        private string _explicitNullValueImportCountryCode = default!;
 #endif
         /// <summary>The UPS account number of the importer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImporterAccountNumber { get; set; }
+        public string? ImporterAccountNumber { get => _explicitNullValueImporterAccountNumber; set { _explicitNullValueImporterAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerAccountNumber"); else _explicitNullProperties?.Remove("importerAccountNumber"); } }
+        private string? _explicitNullValueImporterAccountNumber = default!;
 #nullable restore
 #else
-        public string ImporterAccountNumber { get; set; }
+        public string ImporterAccountNumber { get => _explicitNullValueImporterAccountNumber; set { _explicitNullValueImporterAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerAccountNumber"); else _explicitNullProperties?.Remove("importerAccountNumber"); } }
+        private string _explicitNullValueImporterAccountNumber = default!;
 #endif
         /// <summary>The city where the importer is located. Required if both importer&apos;s account number and importer&apos;s zip code are not provided and POA evaluation is requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImporterCity { get; set; }
+        public string? ImporterCity { get => _explicitNullValueImporterCity; set { _explicitNullValueImporterCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerCity"); else _explicitNullProperties?.Remove("importerCity"); } }
+        private string? _explicitNullValueImporterCity = default!;
 #nullable restore
 #else
-        public string ImporterCity { get; set; }
+        public string ImporterCity { get => _explicitNullValueImporterCity; set { _explicitNullValueImporterCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerCity"); else _explicitNullProperties?.Remove("importerCity"); } }
+        private string _explicitNullValueImporterCity = default!;
 #endif
         /// <summary>The name of the importer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImporterName { get; set; }
+        public string? ImporterName { get => _explicitNullValueImporterName; set { _explicitNullValueImporterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerName"); else _explicitNullProperties?.Remove("importerName"); } }
+        private string? _explicitNullValueImporterName = default!;
 #nullable restore
 #else
-        public string ImporterName { get; set; }
+        public string ImporterName { get => _explicitNullValueImporterName; set { _explicitNullValueImporterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerName"); else _explicitNullProperties?.Remove("importerName"); } }
+        private string _explicitNullValueImporterName = default!;
 #endif
         /// <summary>The postal code of the importer&apos;s location. Required when the importer&apos;s account number and city are not specified and POA evaluation is requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImporterZipcode { get; set; }
+        public string? ImporterZipcode { get => _explicitNullValueImporterZipcode; set { _explicitNullValueImporterZipcode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerZipcode"); else _explicitNullProperties?.Remove("importerZipcode"); } }
+        private string? _explicitNullValueImporterZipcode = default!;
 #nullable restore
 #else
-        public string ImporterZipcode { get; set; }
+        public string ImporterZipcode { get => _explicitNullValueImporterZipcode; set { _explicitNullValueImporterZipcode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerZipcode"); else _explicitNullProperties?.Remove("importerZipcode"); } }
+        private string _explicitNullValueImporterZipcode = default!;
 #endif
         /// <summary>Description of the contents of the shipment. This description is required if the `evaluateDescriptions` flag is set to true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentDescription { get; set; }
+        public string? ShipmentDescription { get => _explicitNullValueShipmentDescription; set { _explicitNullValueShipmentDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentDescription"); else _explicitNullProperties?.Remove("shipmentDescription"); } }
+        private string? _explicitNullValueShipmentDescription = default!;
 #nullable restore
 #else
-        public string ShipmentDescription { get; set; }
+        public string ShipmentDescription { get => _explicitNullValueShipmentDescription; set { _explicitNullValueShipmentDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentDescription"); else _explicitNullProperties?.Remove("shipmentDescription"); } }
+        private string _explicitNullValueShipmentDescription = default!;
 #endif
         /// <summary>The shipmentItems property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest>? ShipmentItems { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest>? ShipmentItems { get => _explicitNullValueShipmentItems; set { _explicitNullValueShipmentItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentItems"); else _explicitNullProperties?.Remove("shipmentItems"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest>? _explicitNullValueShipmentItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest> ShipmentItems { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest> ShipmentItems { get => _explicitNullValueShipmentItems; set { _explicitNullValueShipmentItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentItems"); else _explicitNullProperties?.Remove("shipmentItems"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest> _explicitNullValueShipmentItems = default!;
 #endif
         /// <summary>Shipment type. | Supported enum values                                                                                || :--------------------------------------------------------------------------------------------------- || `GIFT`&lt;br&gt;Items sent as gifts, typically for personal reasons.                                       || `COMM`&lt;br&gt;Commercial goods or commodities, usually for business transactions. Sale, sample, repair.  || `OTHR`&lt;br&gt;Return, Other, and Intercompany Data, Anything else not supported.                         || `PERS`&lt;br&gt;Personal items, often for relocation or personal use                                       |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipmentType? ShipmentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipmentType? ShipmentType { get => _explicitNullValueShipmentType; set { _explicitNullValueShipmentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentType"); else _explicitNullProperties?.Remove("shipmentType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipmentType? _explicitNullValueShipmentType = default!;
         /// <summary>Translation locale. | Supported enum values      || :------------------------- || `EN`&lt;br&gt;English            || `DE`&lt;br&gt;Germany            || `PL`&lt;br&gt;Polish             || `FR`&lt;br&gt;French             || `IT`&lt;br&gt;Italian            || `NL`&lt;br&gt;Dutch              || `ES`&lt;br&gt;Spanish            || `ZH`&lt;br&gt;Simplified Chinese |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale? TranslationLocale { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale? TranslationLocale { get => _explicitNullValueTranslationLocale; set { _explicitNullValueTranslationLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translationLocale"); else _explicitNullProperties?.Remove("translationLocale"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale? _explicitNullValueTranslationLocale = default!;
         /// <summary>Mode of transportation for the shipment.| Supported enum values                       ||---------------------------------------------|| `INT_AIR`&lt;br&gt;International Air Freight     || `INT_OCEAN`&lt;br&gt;International Ocean Freight || `INT_RAIL`&lt;br&gt;International Rail Freight   || `INT_TRUCK`&lt;br&gt;International Truck Freight || `DOM_AIR`&lt;br&gt;Domestic Air Freight          || `DOM_OCEAN`&lt;br&gt;Domestic Ocean Freight      || `DOM_RAIL`&lt;br&gt;Domestic Rail Freight        || `DOM_TRUCK`&lt;br&gt;Domestic Truck Freight      |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestTransModes? TransModes { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestTransModes? TransModes { get => _explicitNullValueTransModes; set { _explicitNullValueTransModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transModes"); else _explicitNullProperties?.Remove("transModes"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestTransModes? _explicitNullValueTransModes = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment"/> and sets the default values.
         /// </summary>
@@ -144,7 +200,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -199,6 +255,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestShipmentType>("shipmentType", ShipmentType);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentRequestTranslationLocale>("translationLocale", TranslationLocale);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestTransModes>("transModes", TransModes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

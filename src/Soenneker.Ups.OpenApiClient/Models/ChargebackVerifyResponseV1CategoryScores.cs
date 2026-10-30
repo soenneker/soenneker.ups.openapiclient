@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChargebackVerifyResponseV1CategoryScores : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addressReliabilityScore") is { } nullNodeAddressReliabilityScore && nullNodeAddressReliabilityScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressReliabilityScore = null;
+            if (parseNode.GetChildNode("digitalIdentityScore") is { } nullNodeDigitalIdentityScore && nullNodeDigitalIdentityScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DigitalIdentityScore = null;
+            if (parseNode.GetChildNode("paymentReliabilityScore") is { } nullNodePaymentReliabilityScore && nullNodePaymentReliabilityScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentReliabilityScore = null;
+            if (parseNode.GetChildNode("proxyScore") is { } nullNodeProxyScore && nullNodeProxyScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProxyScore = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The addressReliabilityScore property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? AddressReliabilityScore { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? AddressReliabilityScore { get => _explicitNullValueAddressReliabilityScore; set { _explicitNullValueAddressReliabilityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressReliabilityScore"); else _explicitNullProperties?.Remove("addressReliabilityScore"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? _explicitNullValueAddressReliabilityScore = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 AddressReliabilityScore { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 AddressReliabilityScore { get => _explicitNullValueAddressReliabilityScore; set { _explicitNullValueAddressReliabilityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressReliabilityScore"); else _explicitNullProperties?.Remove("addressReliabilityScore"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 _explicitNullValueAddressReliabilityScore = default!;
 #endif
         /// <summary>The digitalIdentityScore property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? DigitalIdentityScore { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? DigitalIdentityScore { get => _explicitNullValueDigitalIdentityScore; set { _explicitNullValueDigitalIdentityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("digitalIdentityScore"); else _explicitNullProperties?.Remove("digitalIdentityScore"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? _explicitNullValueDigitalIdentityScore = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 DigitalIdentityScore { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 DigitalIdentityScore { get => _explicitNullValueDigitalIdentityScore; set { _explicitNullValueDigitalIdentityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("digitalIdentityScore"); else _explicitNullProperties?.Remove("digitalIdentityScore"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 _explicitNullValueDigitalIdentityScore = default!;
 #endif
         /// <summary>The paymentReliabilityScore property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? PaymentReliabilityScore { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? PaymentReliabilityScore { get => _explicitNullValuePaymentReliabilityScore; set { _explicitNullValuePaymentReliabilityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentReliabilityScore"); else _explicitNullProperties?.Remove("paymentReliabilityScore"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? _explicitNullValuePaymentReliabilityScore = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 PaymentReliabilityScore { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 PaymentReliabilityScore { get => _explicitNullValuePaymentReliabilityScore; set { _explicitNullValuePaymentReliabilityScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentReliabilityScore"); else _explicitNullProperties?.Remove("paymentReliabilityScore"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 _explicitNullValuePaymentReliabilityScore = default!;
 #endif
         /// <summary>The proxyScore property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? ProxyScore { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? ProxyScore { get => _explicitNullValueProxyScore; set { _explicitNullValueProxyScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proxyScore"); else _explicitNullProperties?.Remove("proxyScore"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1? _explicitNullValueProxyScore = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 ProxyScore { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 ProxyScore { get => _explicitNullValueProxyScore; set { _explicitNullValueProxyScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("proxyScore"); else _explicitNullProperties?.Remove("proxyScore"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1 _explicitNullValueProxyScore = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1>("digitalIdentityScore", DigitalIdentityScore);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1>("paymentReliabilityScore", PaymentReliabilityScore);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackScoreRankV1>("proxyScore", ProxyScore);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

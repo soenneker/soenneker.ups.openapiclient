@@ -12,56 +12,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class XavResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AddressClassification") is { } nullNodeAddressClassification && nullNodeAddressClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressClassification = null;
+            if (parseNode.GetChildNode("AmbiguousAddressIndicator") is { } nullNodeAmbiguousAddressIndicator && nullNodeAmbiguousAddressIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmbiguousAddressIndicator = null;
+            if (parseNode.GetChildNode("Candidate") is { } nullNodeCandidate && nullNodeCandidate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Candidate = null;
+            if (parseNode.GetChildNode("NoCandidatesIndicator") is { } nullNodeNoCandidatesIndicator && nullNodeNoCandidatesIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoCandidatesIndicator = null;
+            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("ValidAddressIndicator") is { } nullNodeValidAddressIndicator && nullNodeValidAddressIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidAddressIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>AddressClassification Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.XavResponseAddressClassification? AddressClassification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XavResponseAddressClassification? AddressClassification { get => _explicitNullValueAddressClassification; set { _explicitNullValueAddressClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressClassification"); else _explicitNullProperties?.Remove("AddressClassification"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.XavResponseAddressClassification? _explicitNullValueAddressClassification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.XavResponseAddressClassification AddressClassification { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XavResponseAddressClassification AddressClassification { get => _explicitNullValueAddressClassification; set { _explicitNullValueAddressClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressClassification"); else _explicitNullProperties?.Remove("AddressClassification"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.XavResponseAddressClassification _explicitNullValueAddressClassification = default!;
 #endif
         /// <summary>Indicates query could not find exact match. Candidate list follows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AmbiguousAddressIndicator { get; set; }
+        public string? AmbiguousAddressIndicator { get => _explicitNullValueAmbiguousAddressIndicator; set { _explicitNullValueAmbiguousAddressIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AmbiguousAddressIndicator"); else _explicitNullProperties?.Remove("AmbiguousAddressIndicator"); } }
+        private string? _explicitNullValueAmbiguousAddressIndicator = default!;
 #nullable restore
 #else
-        public string AmbiguousAddressIndicator { get; set; }
+        public string AmbiguousAddressIndicator { get => _explicitNullValueAmbiguousAddressIndicator; set { _explicitNullValueAmbiguousAddressIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AmbiguousAddressIndicator"); else _explicitNullProperties?.Remove("AmbiguousAddressIndicator"); } }
+        private string _explicitNullValueAmbiguousAddressIndicator = default!;
 #endif
         /// <summary>Candidate Container.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.XavResponseCandidate>? Candidate { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.XavResponseCandidate>? Candidate { get => _explicitNullValueCandidate; set { _explicitNullValueCandidate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Candidate"); else _explicitNullProperties?.Remove("Candidate"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.XavResponseCandidate>? _explicitNullValueCandidate = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.XavResponseCandidate> Candidate { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.XavResponseCandidate> Candidate { get => _explicitNullValueCandidate; set { _explicitNullValueCandidate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Candidate"); else _explicitNullProperties?.Remove("Candidate"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.XavResponseCandidate> _explicitNullValueCandidate = default!;
 #endif
         /// <summary>No Candidate found.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NoCandidatesIndicator { get; set; }
+        public string? NoCandidatesIndicator { get => _explicitNullValueNoCandidatesIndicator; set { _explicitNullValueNoCandidatesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NoCandidatesIndicator"); else _explicitNullProperties?.Remove("NoCandidatesIndicator"); } }
+        private string? _explicitNullValueNoCandidatesIndicator = default!;
 #nullable restore
 #else
-        public string NoCandidatesIndicator { get; set; }
+        public string NoCandidatesIndicator { get => _explicitNullValueNoCandidatesIndicator; set { _explicitNullValueNoCandidatesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NoCandidatesIndicator"); else _explicitNullProperties?.Remove("NoCandidatesIndicator"); } }
+        private string _explicitNullValueNoCandidatesIndicator = default!;
 #endif
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.XavResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XavResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.XavResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.XavResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.XavResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.XavResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>Indicates query found a valid match.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidAddressIndicator { get; set; }
+        public string? ValidAddressIndicator { get => _explicitNullValueValidAddressIndicator; set { _explicitNullValueValidAddressIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ValidAddressIndicator"); else _explicitNullProperties?.Remove("ValidAddressIndicator"); } }
+        private string? _explicitNullValueValidAddressIndicator = default!;
 #nullable restore
 #else
-        public string ValidAddressIndicator { get; set; }
+        public string ValidAddressIndicator { get => _explicitNullValueValidAddressIndicator; set { _explicitNullValueValidAddressIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ValidAddressIndicator"); else _explicitNullProperties?.Remove("ValidAddressIndicator"); } }
+        private string _explicitNullValueValidAddressIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.XavResponse"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.XavResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.XavResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.XavResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("NoCandidatesIndicator", NoCandidatesIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.XavResponseResponse>("Response", Response);
             writer.WriteStringValue("ValidAddressIndicator", ValidAddressIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

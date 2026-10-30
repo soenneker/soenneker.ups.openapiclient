@@ -11,32 +11,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchResultsGeocodeCandidate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AddressKeyFormat") is { } nullNodeAddressKeyFormat && nullNodeAddressKeyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKeyFormat = null;
+            if (parseNode.GetChildNode("Geocode") is { } nullNodeGeocode && nullNodeGeocode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Geocode = null;
+            if (parseNode.GetChildNode("LandmarkName") is { } nullNodeLandmarkName && nullNodeLandmarkName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandmarkName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains all of the basic information about candidate address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateAddressKeyFormat? AddressKeyFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateAddressKeyFormat? AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateAddressKeyFormat? _explicitNullValueAddressKeyFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateAddressKeyFormat AddressKeyFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateAddressKeyFormat AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateAddressKeyFormat _explicitNullValueAddressKeyFormat = default!;
 #endif
         /// <summary>Geocode is the latitude and longitude of the origin candidate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateGeocode? Geocode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateGeocode? Geocode { get => _explicitNullValueGeocode; set { _explicitNullValueGeocode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Geocode"); else _explicitNullProperties?.Remove("Geocode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateGeocode? _explicitNullValueGeocode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateGeocode Geocode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateGeocode Geocode { get => _explicitNullValueGeocode; set { _explicitNullValueGeocode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Geocode"); else _explicitNullProperties?.Remove("Geocode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateGeocode _explicitNullValueGeocode = default!;
 #endif
         /// <summary>If a Landmark code was provided in the request, a candidate list of Landmark Names will be returned along with the corresponding address and Geocode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LandmarkName { get; set; }
+        public string? LandmarkName { get => _explicitNullValueLandmarkName; set { _explicitNullValueLandmarkName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LandmarkName"); else _explicitNullProperties?.Remove("LandmarkName"); } }
+        private string? _explicitNullValueLandmarkName = default!;
 #nullable restore
 #else
-        public string LandmarkName { get; set; }
+        public string LandmarkName { get => _explicitNullValueLandmarkName; set { _explicitNullValueLandmarkName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LandmarkName"); else _explicitNullProperties?.Remove("LandmarkName"); } }
+        private string _explicitNullValueLandmarkName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SearchResultsGeocodeCandidate"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.SearchResultsGeocodeCandidate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.SearchResultsGeocodeCandidate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.SearchResultsGeocodeCandidate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateAddressKeyFormat>("AddressKeyFormat", AddressKeyFormat);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.GeocodeCandidateGeocode>("Geocode", Geocode);
             writer.WriteStringValue("LandmarkName", LandmarkName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

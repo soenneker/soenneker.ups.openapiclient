@@ -59,6 +59,8 @@ namespace Soenneker.Ups.OpenApiClient.GlobalCheckout.Content.Glc.RequestQuote
                 { "400", global::Soenneker.Ups.OpenApiClient.Models.BsisV1ErrorResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.BsisV1ErrorResponse.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.BsisV1ErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

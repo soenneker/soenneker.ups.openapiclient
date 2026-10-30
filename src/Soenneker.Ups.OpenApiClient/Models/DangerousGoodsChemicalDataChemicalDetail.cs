@@ -12,128 +12,180 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DangerousGoodsChemicalDataChemicalDetail : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AdditionalShippingInformationRequiredIndicator") is { } nullNodeAdditionalShippingInformationRequiredIndicator && nullNodeAdditionalShippingInformationRequiredIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalShippingInformationRequiredIndicator = null;
+            if (parseNode.GetChildNode("CAToUSShipmentAllowedIndicator") is { } nullNodeCAToUSShipmentAllowedIndicator && nullNodeCAToUSShipmentAllowedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CAToUSShipmentAllowedIndicator = null;
+            if (parseNode.GetChildNode("ChannelTunnelAcceptedIndicator") is { } nullNodeChannelTunnelAcceptedIndicator && nullNodeChannelTunnelAcceptedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChannelTunnelAcceptedIndicator = null;
+            if (parseNode.GetChildNode("ChemicalType") is { } nullNodeChemicalType && nullNodeChemicalType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalType = null;
+            if (parseNode.GetChildNode("ClassDivisionNumber") is { } nullNodeClassDivisionNumber && nullNodeClassDivisionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClassDivisionNumber = null;
+            if (parseNode.GetChildNode("HazardousMaterialsDescription") is { } nullNodeHazardousMaterialsDescription && nullNodeHazardousMaterialsDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazardousMaterialsDescription = null;
+            if (parseNode.GetChildNode("IDNumber") is { } nullNodeIDNumber && nullNodeIDNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumber = null;
+            if (parseNode.GetChildNode("PackagingGroupType") is { } nullNodePackagingGroupType && nullNodePackagingGroupType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingGroupType = null;
+            if (parseNode.GetChildNode("RegulationSet") is { } nullNodeRegulationSet && nullNodeRegulationSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSet = null;
+            if (parseNode.GetChildNode("SpecialPermit") is { } nullNodeSpecialPermit && nullNodeSpecialPermit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialPermit = null;
+            if (parseNode.GetChildNode("SubRiskClass") is { } nullNodeSubRiskClass && nullNodeSubRiskClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubRiskClass = null;
+            if (parseNode.GetChildNode("TechnicalNameRequiredIndicator") is { } nullNodeTechnicalNameRequiredIndicator && nullNodeTechnicalNameRequiredIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TechnicalNameRequiredIndicator = null;
+            if (parseNode.GetChildNode("TransportCategory") is { } nullNodeTransportCategory && nullNodeTransportCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportCategory = null;
+            if (parseNode.GetChildNode("TransportMultiplierQuantity") is { } nullNodeTransportMultiplierQuantity && nullNodeTransportMultiplierQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportMultiplierQuantity = null;
+            if (parseNode.GetChildNode("TunnelRestrictionCode") is { } nullNodeTunnelRestrictionCode && nullNodeTunnelRestrictionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TunnelRestrictionCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether or not additional text is required for the shipping papers for the related entity.   It will be returned if applies for a given chemical record.Valid values: N = No, additional information for the shipping papers are not required.Y = Yes, additional information for the shipping papers are required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdditionalShippingInformationRequiredIndicator { get; set; }
+        public string? AdditionalShippingInformationRequiredIndicator { get => _explicitNullValueAdditionalShippingInformationRequiredIndicator; set { _explicitNullValueAdditionalShippingInformationRequiredIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalShippingInformationRequiredIndicator"); else _explicitNullProperties?.Remove("AdditionalShippingInformationRequiredIndicator"); } }
+        private string? _explicitNullValueAdditionalShippingInformationRequiredIndicator = default!;
 #nullable restore
 #else
-        public string AdditionalShippingInformationRequiredIndicator { get; set; }
+        public string AdditionalShippingInformationRequiredIndicator { get => _explicitNullValueAdditionalShippingInformationRequiredIndicator; set { _explicitNullValueAdditionalShippingInformationRequiredIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalShippingInformationRequiredIndicator"); else _explicitNullProperties?.Remove("AdditionalShippingInformationRequiredIndicator"); } }
+        private string _explicitNullValueAdditionalShippingInformationRequiredIndicator = default!;
 #endif
         /// <summary>CAToUSShipmentAllowedIndicator indicates whether this checmical is allowed from CA to USApplicable only for TDG shipments  Y = Permitted from CA to USN = Not Permitted from CA to US</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CAToUSShipmentAllowedIndicator { get; set; }
+        public string? CAToUSShipmentAllowedIndicator { get => _explicitNullValueCAToUSShipmentAllowedIndicator; set { _explicitNullValueCAToUSShipmentAllowedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CAToUSShipmentAllowedIndicator"); else _explicitNullProperties?.Remove("CAToUSShipmentAllowedIndicator"); } }
+        private string? _explicitNullValueCAToUSShipmentAllowedIndicator = default!;
 #nullable restore
 #else
-        public string CAToUSShipmentAllowedIndicator { get; set; }
+        public string CAToUSShipmentAllowedIndicator { get => _explicitNullValueCAToUSShipmentAllowedIndicator; set { _explicitNullValueCAToUSShipmentAllowedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CAToUSShipmentAllowedIndicator"); else _explicitNullProperties?.Remove("CAToUSShipmentAllowedIndicator"); } }
+        private string _explicitNullValueCAToUSShipmentAllowedIndicator = default!;
 #endif
         /// <summary>ChannelTunnelAcceptedIndicator indicates if the chemical is accepted through channel tunnel or not  Y= Accepted through channel tunnelN=Not accepted through channel tunnel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChannelTunnelAcceptedIndicator { get; set; }
+        public string? ChannelTunnelAcceptedIndicator { get => _explicitNullValueChannelTunnelAcceptedIndicator; set { _explicitNullValueChannelTunnelAcceptedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelTunnelAcceptedIndicator"); else _explicitNullProperties?.Remove("ChannelTunnelAcceptedIndicator"); } }
+        private string? _explicitNullValueChannelTunnelAcceptedIndicator = default!;
 #nullable restore
 #else
-        public string ChannelTunnelAcceptedIndicator { get; set; }
+        public string ChannelTunnelAcceptedIndicator { get => _explicitNullValueChannelTunnelAcceptedIndicator; set { _explicitNullValueChannelTunnelAcceptedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChannelTunnelAcceptedIndicator"); else _explicitNullProperties?.Remove("ChannelTunnelAcceptedIndicator"); } }
+        private string _explicitNullValueChannelTunnelAcceptedIndicator = default!;
 #endif
         /// <summary>A set of chemical records in HMMS that correspond to a sub-set of chemicals for a regulation set, or the entire set of chemicals for a regulation set  EXAMPLES OF VALUES:FREIGHTTDGIATA US DOMESTIC AIR49CFRADRIATA INTERNATIONAL AIR</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChemicalType { get; set; }
+        public string? ChemicalType { get => _explicitNullValueChemicalType; set { _explicitNullValueChemicalType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalType"); else _explicitNullProperties?.Remove("ChemicalType"); } }
+        private string? _explicitNullValueChemicalType = default!;
 #nullable restore
 #else
-        public string ChemicalType { get; set; }
+        public string ChemicalType { get => _explicitNullValueChemicalType; set { _explicitNullValueChemicalType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalType"); else _explicitNullProperties?.Remove("ChemicalType"); } }
+        private string _explicitNullValueChemicalType = default!;
 #endif
         /// <summary>This is the hazard class associated to the specified commodity.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClassDivisionNumber { get; set; }
+        public string? ClassDivisionNumber { get => _explicitNullValueClassDivisionNumber; set { _explicitNullValueClassDivisionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClassDivisionNumber"); else _explicitNullProperties?.Remove("ClassDivisionNumber"); } }
+        private string? _explicitNullValueClassDivisionNumber = default!;
 #nullable restore
 #else
-        public string ClassDivisionNumber { get; set; }
+        public string ClassDivisionNumber { get => _explicitNullValueClassDivisionNumber; set { _explicitNullValueClassDivisionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClassDivisionNumber"); else _explicitNullProperties?.Remove("ClassDivisionNumber"); } }
+        private string _explicitNullValueClassDivisionNumber = default!;
 #endif
         /// <summary>Free form text containing the full name that are used to describe a regulated chemical record.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HazardousMaterialsDescription { get; set; }
+        public string? HazardousMaterialsDescription { get => _explicitNullValueHazardousMaterialsDescription; set { _explicitNullValueHazardousMaterialsDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardousMaterialsDescription"); else _explicitNullProperties?.Remove("HazardousMaterialsDescription"); } }
+        private string? _explicitNullValueHazardousMaterialsDescription = default!;
 #nullable restore
 #else
-        public string HazardousMaterialsDescription { get; set; }
+        public string HazardousMaterialsDescription { get => _explicitNullValueHazardousMaterialsDescription; set { _explicitNullValueHazardousMaterialsDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardousMaterialsDescription"); else _explicitNullProperties?.Remove("HazardousMaterialsDescription"); } }
+        private string _explicitNullValueHazardousMaterialsDescription = default!;
 #endif
         /// <summary>This is the ID number (UN/NA/ID) for the specified commodity. UN/NA/ID Identification Number assigned to the specified regulated good. (Include the UN/NA/ID as part of the entry).  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IDNumber { get; set; }
+        public string? IDNumber { get => _explicitNullValueIDNumber; set { _explicitNullValueIDNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumber"); else _explicitNullProperties?.Remove("IDNumber"); } }
+        private string? _explicitNullValueIDNumber = default!;
 #nullable restore
 #else
-        public string IDNumber { get; set; }
+        public string IDNumber { get => _explicitNullValueIDNumber; set { _explicitNullValueIDNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumber"); else _explicitNullProperties?.Remove("IDNumber"); } }
+        private string _explicitNullValueIDNumber = default!;
 #endif
         /// <summary>This is the packing group category associated to the specified commodity. This code represents the potential degree of danger represented by a regulated commodity being transported.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagingGroupType { get; set; }
+        public string? PackagingGroupType { get => _explicitNullValuePackagingGroupType; set { _explicitNullValuePackagingGroupType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingGroupType"); else _explicitNullProperties?.Remove("PackagingGroupType"); } }
+        private string? _explicitNullValuePackagingGroupType = default!;
 #nullable restore
 #else
-        public string PackagingGroupType { get; set; }
+        public string PackagingGroupType { get => _explicitNullValuePackagingGroupType; set { _explicitNullValuePackagingGroupType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingGroupType"); else _explicitNullProperties?.Remove("PackagingGroupType"); } }
+        private string _explicitNullValuePackagingGroupType = default!;
 #endif
         /// <summary>The Regulatory set associated with every regulated shipment.   Possible values are ADR, 49CFR, IATA. It will be returned if applies for a given chemical record.ADR = Europe to Europe Ground Movement49CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada,  IATA= Worldwide Air movement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegulationSet { get; set; }
+        public string? RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
+        private string? _explicitNullValueRegulationSet = default!;
 #nullable restore
 #else
-        public string RegulationSet { get; set; }
+        public string RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
+        private string _explicitNullValueRegulationSet = default!;
 #endif
         /// <summary>Indicates whether or not related entity requires special permit in order to transport the chemical.   It will be returned if applies for a given chemical record.Valid values: AIRGNDBOTH</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpecialPermit { get; set; }
+        public string? SpecialPermit { get => _explicitNullValueSpecialPermit; set { _explicitNullValueSpecialPermit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SpecialPermit"); else _explicitNullProperties?.Remove("SpecialPermit"); } }
+        private string? _explicitNullValueSpecialPermit = default!;
 #nullable restore
 #else
-        public string SpecialPermit { get; set; }
+        public string SpecialPermit { get => _explicitNullValueSpecialPermit; set { _explicitNullValueSpecialPermit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SpecialPermit"); else _explicitNullProperties?.Remove("SpecialPermit"); } }
+        private string _explicitNullValueSpecialPermit = default!;
 #endif
         /// <summary>Secondary hazardous characteristics of a package. (There can be more than one – separate each with a comma).  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubRiskClass { get; set; }
+        public string? SubRiskClass { get => _explicitNullValueSubRiskClass; set { _explicitNullValueSubRiskClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubRiskClass"); else _explicitNullProperties?.Remove("SubRiskClass"); } }
+        private string? _explicitNullValueSubRiskClass = default!;
 #nullable restore
 #else
-        public string SubRiskClass { get; set; }
+        public string SubRiskClass { get => _explicitNullValueSubRiskClass; set { _explicitNullValueSubRiskClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubRiskClass"); else _explicitNullProperties?.Remove("SubRiskClass"); } }
+        private string _explicitNullValueSubRiskClass = default!;
 #endif
         /// <summary>Indicates whether TechnicalName is required or not.  It will be returned if applies for a given chemical record.Y = TechnicalName is required.N = TechnicalName is not required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TechnicalNameRequiredIndicator { get; set; }
+        public string? TechnicalNameRequiredIndicator { get => _explicitNullValueTechnicalNameRequiredIndicator; set { _explicitNullValueTechnicalNameRequiredIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TechnicalNameRequiredIndicator"); else _explicitNullProperties?.Remove("TechnicalNameRequiredIndicator"); } }
+        private string? _explicitNullValueTechnicalNameRequiredIndicator = default!;
 #nullable restore
 #else
-        public string TechnicalNameRequiredIndicator { get; set; }
+        public string TechnicalNameRequiredIndicator { get => _explicitNullValueTechnicalNameRequiredIndicator; set { _explicitNullValueTechnicalNameRequiredIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TechnicalNameRequiredIndicator"); else _explicitNullProperties?.Remove("TechnicalNameRequiredIndicator"); } }
+        private string _explicitNullValueTechnicalNameRequiredIndicator = default!;
 #endif
         /// <summary>Code representing a category of transportation, assigned by a regulation set for each regulated commodity. Each value of this category is associated with a multiplier that is used to calculate a value.This value is then used to determine the placarding to be place on the vehicle or container that holds the related regulated commodity  EXAMPLES OF VALUES:0 = No multiplier - must use placarding1 = Use a multiplier of 502 = Use a multiplier of 33 = Use a multiplier of 14 = Use a multiplier of 0 - do not apply a placard</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransportCategory { get; set; }
+        public string? TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
+        private string? _explicitNullValueTransportCategory = default!;
 #nullable restore
 #else
-        public string TransportCategory { get; set; }
+        public string TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
+        private string _explicitNullValueTransportCategory = default!;
 #endif
         /// <summary>The quantity that represents a multiplication factor used to calculate a value to determine the placarding to be place on the vehicle or container that holds the related regulated commodity. This factor is associated with a code value represented by Regulated Commodity Transport Category Code.   EXAMPLES OF VALUES:0 = No multiplier - must use placarding1 = Use a multiplier of 502 = Use a multiplier of 33 = Use a multiplier of 14 = Use a multiplier of 0 - do not apply a placard</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransportMultiplierQuantity { get; set; }
+        public string? TransportMultiplierQuantity { get => _explicitNullValueTransportMultiplierQuantity; set { _explicitNullValueTransportMultiplierQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportMultiplierQuantity"); else _explicitNullProperties?.Remove("TransportMultiplierQuantity"); } }
+        private string? _explicitNullValueTransportMultiplierQuantity = default!;
 #nullable restore
 #else
-        public string TransportMultiplierQuantity { get; set; }
+        public string TransportMultiplierQuantity { get => _explicitNullValueTransportMultiplierQuantity; set { _explicitNullValueTransportMultiplierQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportMultiplierQuantity"); else _explicitNullProperties?.Remove("TransportMultiplierQuantity"); } }
+        private string _explicitNullValueTransportMultiplierQuantity = default!;
 #endif
         /// <summary>Defines what is restricted to pass through a tunnel.  EXAMPLES OF VALUES:(B),(D),(E),(B/D),(B/E),(C,D),(C/E),(D/E),Blank</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TunnelRestrictionCode { get; set; }
+        public string? TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
+        private string? _explicitNullValueTunnelRestrictionCode = default!;
 #nullable restore
 #else
-        public string TunnelRestrictionCode { get; set; }
+        public string TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
+        private string _explicitNullValueTunnelRestrictionCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail"/> and sets the default values.
@@ -150,7 +202,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalDataChemicalDetail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -199,6 +251,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("TransportCategory", TransportCategory);
             writer.WriteStringValue("TransportMultiplierQuantity", TransportMultiplierQuantity);
             writer.WriteStringValue("TunnelRestrictionCode", TunnelRestrictionCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

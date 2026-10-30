@@ -12,80 +12,119 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FlightVoyageInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("carrierCode") is { } nullNodeCarrierCode && nullNodeCarrierCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierCode = null;
+            if (parseNode.GetChildNode("carrierName") is { } nullNodeCarrierName && nullNodeCarrierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierName = null;
+            if (parseNode.GetChildNode("confirmedArrivalDateTime") is { } nullNodeConfirmedArrivalDateTime && nullNodeConfirmedArrivalDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmedArrivalDateTime = null;
+            if (parseNode.GetChildNode("confirmedDepartureDateTime") is { } nullNodeConfirmedDepartureDateTime && nullNodeConfirmedDepartureDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmedDepartureDateTime = null;
+            if (parseNode.GetChildNode("displayArrivalLocation") is { } nullNodeDisplayArrivalLocation && nullNodeDisplayArrivalLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayArrivalLocation = null;
+            if (parseNode.GetChildNode("displayDepartureLocation") is { } nullNodeDisplayDepartureLocation && nullNodeDisplayDepartureLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayDepartureLocation = null;
+            if (parseNode.GetChildNode("estimatedArrivalDateTime") is { } nullNodeEstimatedArrivalDateTime && nullNodeEstimatedArrivalDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedArrivalDateTime = null;
+            if (parseNode.GetChildNode("estimateDepartureDateTime") is { } nullNodeEstimateDepartureDateTime && nullNodeEstimateDepartureDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateDepartureDateTime = null;
+            if (parseNode.GetChildNode("flightVoyageNumber") is { } nullNodeFlightVoyageNumber && nullNodeFlightVoyageNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlightVoyageNumber = null;
+            if (parseNode.GetChildNode("leg") is { } nullNodeLeg && nullNodeLeg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Leg = null;
+            if (parseNode.GetChildNode("masterBill") is { } nullNodeMasterBill && nullNodeMasterBill.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MasterBill = null;
+            if (parseNode.GetChildNode("vessel") is { } nullNodeVessel && nullNodeVessel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vessel = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The carrier code (airline or shipping line).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierCode { get; set; }
+        public string? CarrierCode { get => _explicitNullValueCarrierCode; set { _explicitNullValueCarrierCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierCode"); else _explicitNullProperties?.Remove("carrierCode"); } }
+        private string? _explicitNullValueCarrierCode = default!;
 #nullable restore
 #else
-        public string CarrierCode { get; set; }
+        public string CarrierCode { get => _explicitNullValueCarrierCode; set { _explicitNullValueCarrierCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierCode"); else _explicitNullProperties?.Remove("carrierCode"); } }
+        private string _explicitNullValueCarrierCode = default!;
 #endif
         /// <summary>The full name of the carrier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierName { get; set; }
+        public string? CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierName"); else _explicitNullProperties?.Remove("carrierName"); } }
+        private string? _explicitNullValueCarrierName = default!;
 #nullable restore
 #else
-        public string CarrierName { get; set; }
+        public string CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierName"); else _explicitNullProperties?.Remove("carrierName"); } }
+        private string _explicitNullValueCarrierName = default!;
 #endif
         /// <summary>The confirmed arrival date and time.</summary>
-        public DateTimeOffset? ConfirmedArrivalDateTime { get; set; }
+        public DateTimeOffset? ConfirmedArrivalDateTime { get => _explicitNullValueConfirmedArrivalDateTime; set { _explicitNullValueConfirmedArrivalDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmedArrivalDateTime"); else _explicitNullProperties?.Remove("confirmedArrivalDateTime"); } }
+        private DateTimeOffset? _explicitNullValueConfirmedArrivalDateTime = default!;
         /// <summary>The confirmed departure date and time.</summary>
-        public DateTimeOffset? ConfirmedDepartureDateTime { get; set; }
+        public DateTimeOffset? ConfirmedDepartureDateTime { get => _explicitNullValueConfirmedDepartureDateTime; set { _explicitNullValueConfirmedDepartureDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmedDepartureDateTime"); else _explicitNullProperties?.Remove("confirmedDepartureDateTime"); } }
+        private DateTimeOffset? _explicitNullValueConfirmedDepartureDateTime = default!;
         /// <summary>The display name of the arrival location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayArrivalLocation { get; set; }
+        public string? DisplayArrivalLocation { get => _explicitNullValueDisplayArrivalLocation; set { _explicitNullValueDisplayArrivalLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayArrivalLocation"); else _explicitNullProperties?.Remove("displayArrivalLocation"); } }
+        private string? _explicitNullValueDisplayArrivalLocation = default!;
 #nullable restore
 #else
-        public string DisplayArrivalLocation { get; set; }
+        public string DisplayArrivalLocation { get => _explicitNullValueDisplayArrivalLocation; set { _explicitNullValueDisplayArrivalLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayArrivalLocation"); else _explicitNullProperties?.Remove("displayArrivalLocation"); } }
+        private string _explicitNullValueDisplayArrivalLocation = default!;
 #endif
         /// <summary>The display name of the departure location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayDepartureLocation { get; set; }
+        public string? DisplayDepartureLocation { get => _explicitNullValueDisplayDepartureLocation; set { _explicitNullValueDisplayDepartureLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayDepartureLocation"); else _explicitNullProperties?.Remove("displayDepartureLocation"); } }
+        private string? _explicitNullValueDisplayDepartureLocation = default!;
 #nullable restore
 #else
-        public string DisplayDepartureLocation { get; set; }
+        public string DisplayDepartureLocation { get => _explicitNullValueDisplayDepartureLocation; set { _explicitNullValueDisplayDepartureLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayDepartureLocation"); else _explicitNullProperties?.Remove("displayDepartureLocation"); } }
+        private string _explicitNullValueDisplayDepartureLocation = default!;
 #endif
         /// <summary>The estimated arrival date and time.</summary>
-        public DateTimeOffset? EstimatedArrivalDateTime { get; set; }
+        public DateTimeOffset? EstimatedArrivalDateTime { get => _explicitNullValueEstimatedArrivalDateTime; set { _explicitNullValueEstimatedArrivalDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimatedArrivalDateTime"); else _explicitNullProperties?.Remove("estimatedArrivalDateTime"); } }
+        private DateTimeOffset? _explicitNullValueEstimatedArrivalDateTime = default!;
         /// <summary>The estimated departure date and time.</summary>
-        public DateTimeOffset? EstimateDepartureDateTime { get; set; }
+        public DateTimeOffset? EstimateDepartureDateTime { get => _explicitNullValueEstimateDepartureDateTime; set { _explicitNullValueEstimateDepartureDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimateDepartureDateTime"); else _explicitNullProperties?.Remove("estimateDepartureDateTime"); } }
+        private DateTimeOffset? _explicitNullValueEstimateDepartureDateTime = default!;
         /// <summary>The flight or voyage number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlightVoyageNumber { get; set; }
+        public string? FlightVoyageNumber { get => _explicitNullValueFlightVoyageNumber; set { _explicitNullValueFlightVoyageNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flightVoyageNumber"); else _explicitNullProperties?.Remove("flightVoyageNumber"); } }
+        private string? _explicitNullValueFlightVoyageNumber = default!;
 #nullable restore
 #else
-        public string FlightVoyageNumber { get; set; }
+        public string FlightVoyageNumber { get => _explicitNullValueFlightVoyageNumber; set { _explicitNullValueFlightVoyageNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flightVoyageNumber"); else _explicitNullProperties?.Remove("flightVoyageNumber"); } }
+        private string _explicitNullValueFlightVoyageNumber = default!;
 #endif
         /// <summary>The leg number in the journey sequence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Leg { get; set; }
+        public string? Leg { get => _explicitNullValueLeg; set { _explicitNullValueLeg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leg"); else _explicitNullProperties?.Remove("leg"); } }
+        private string? _explicitNullValueLeg = default!;
 #nullable restore
 #else
-        public string Leg { get; set; }
+        public string Leg { get => _explicitNullValueLeg; set { _explicitNullValueLeg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leg"); else _explicitNullProperties?.Remove("leg"); } }
+        private string _explicitNullValueLeg = default!;
 #endif
         /// <summary>The master bill of lading or airway bill number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MasterBill { get; set; }
+        public string? MasterBill { get => _explicitNullValueMasterBill; set { _explicitNullValueMasterBill = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masterBill"); else _explicitNullProperties?.Remove("masterBill"); } }
+        private string? _explicitNullValueMasterBill = default!;
 #nullable restore
 #else
-        public string MasterBill { get; set; }
+        public string MasterBill { get => _explicitNullValueMasterBill; set { _explicitNullValueMasterBill = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masterBill"); else _explicitNullProperties?.Remove("masterBill"); } }
+        private string _explicitNullValueMasterBill = default!;
 #endif
         /// <summary>The name or type of vessel/aircraft.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Vessel { get; set; }
+        public string? Vessel { get => _explicitNullValueVessel; set { _explicitNullValueVessel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vessel"); else _explicitNullProperties?.Remove("vessel"); } }
+        private string? _explicitNullValueVessel = default!;
 #nullable restore
 #else
-        public string Vessel { get; set; }
+        public string Vessel { get => _explicitNullValueVessel; set { _explicitNullValueVessel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vessel"); else _explicitNullProperties?.Remove("vessel"); } }
+        private string _explicitNullValueVessel = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.FlightVoyageInfo"/> and sets the default values.
@@ -102,7 +141,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.FlightVoyageInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.FlightVoyageInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.FlightVoyageInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -145,6 +184,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("leg", Leg);
             writer.WriteStringValue("masterBill", MasterBill);
             writer.WriteStringValue("vessel", Vessel);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

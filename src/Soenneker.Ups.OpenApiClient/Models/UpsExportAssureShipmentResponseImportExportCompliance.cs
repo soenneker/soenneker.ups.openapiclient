@@ -12,47 +12,77 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsExportAssureShipmentResponseImportExportCompliance : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("commodityWarningsMessage") is { } nullNodeCommodityWarningsMessage && nullNodeCommodityWarningsMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityWarningsMessage = null;
+            if (parseNode.GetChildNode("hasCommodityWarnings") is { } nullNodeHasCommodityWarnings && nullNodeHasCommodityWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCommodityWarnings = null;
+            if (parseNode.GetChildNode("hasShipmentWarnings") is { } nullNodeHasShipmentWarnings && nullNodeHasShipmentWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasShipmentWarnings = null;
+            if (parseNode.GetChildNode("isShipmentOverGiftValueThreshold") is { } nullNodeIsShipmentOverGiftValueThreshold && nullNodeIsShipmentOverGiftValueThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsShipmentOverGiftValueThreshold = null;
+            if (parseNode.GetChildNode("isShipmentOverGiftWeightThreshold") is { } nullNodeIsShipmentOverGiftWeightThreshold && nullNodeIsShipmentOverGiftWeightThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsShipmentOverGiftWeightThreshold = null;
+            if (parseNode.GetChildNode("shipmentCurrencyCode") is { } nullNodeShipmentCurrencyCode && nullNodeShipmentCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCurrencyCode = null;
+            if (parseNode.GetChildNode("shipmentOverGiftValueThresholdMessage") is { } nullNodeShipmentOverGiftValueThresholdMessage && nullNodeShipmentOverGiftValueThresholdMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentOverGiftValueThresholdMessage = null;
+            if (parseNode.GetChildNode("shipmentOverGiftWeightThresholdMessage") is { } nullNodeShipmentOverGiftWeightThresholdMessage && nullNodeShipmentOverGiftWeightThresholdMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentOverGiftWeightThresholdMessage = null;
+            if (parseNode.GetChildNode("shipmentValue") is { } nullNodeShipmentValue && nullNodeShipmentValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentValue = null;
+            if (parseNode.GetChildNode("translationLocale") is { } nullNodeTranslationLocale && nullNodeTranslationLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranslationLocale = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The warning message returned when the `hasCommodityWarnings` flag is set to true</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityWarningsMessage { get; set; }
+        public string? CommodityWarningsMessage { get => _explicitNullValueCommodityWarningsMessage; set { _explicitNullValueCommodityWarningsMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityWarningsMessage"); else _explicitNullProperties?.Remove("commodityWarningsMessage"); } }
+        private string? _explicitNullValueCommodityWarningsMessage = default!;
 #nullable restore
 #else
-        public string CommodityWarningsMessage { get; set; }
+        public string CommodityWarningsMessage { get => _explicitNullValueCommodityWarningsMessage; set { _explicitNullValueCommodityWarningsMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityWarningsMessage"); else _explicitNullProperties?.Remove("commodityWarningsMessage"); } }
+        private string _explicitNullValueCommodityWarningsMessage = default!;
 #endif
         /// <summary>Whether there are compliance-related warnings or issues at the commodity level within the shipment. A `true` value indicates potential compliance concerns that require the shipper&apos;s attention.</summary>
-        public bool? HasCommodityWarnings { get; set; }
+        public bool? HasCommodityWarnings { get => _explicitNullValueHasCommodityWarnings; set { _explicitNullValueHasCommodityWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasCommodityWarnings"); else _explicitNullProperties?.Remove("hasCommodityWarnings"); } }
+        private bool? _explicitNullValueHasCommodityWarnings = default!;
         /// <summary>Whether there are shipment-level warning. Shipment-level warnings include issues related to documentation and shipment packaging.</summary>
-        public bool? HasShipmentWarnings { get; set; }
+        public bool? HasShipmentWarnings { get => _explicitNullValueHasShipmentWarnings; set { _explicitNullValueHasShipmentWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasShipmentWarnings"); else _explicitNullProperties?.Remove("hasShipmentWarnings"); } }
+        private bool? _explicitNullValueHasShipmentWarnings = default!;
         /// <summary>Whether the total value of the shipment exceeds the allowable threshold for categorizing it as a gift</summary>
-        public bool? IsShipmentOverGiftValueThreshold { get; set; }
+        public bool? IsShipmentOverGiftValueThreshold { get => _explicitNullValueIsShipmentOverGiftValueThreshold; set { _explicitNullValueIsShipmentOverGiftValueThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isShipmentOverGiftValueThreshold"); else _explicitNullProperties?.Remove("isShipmentOverGiftValueThreshold"); } }
+        private bool? _explicitNullValueIsShipmentOverGiftValueThreshold = default!;
         /// <summary>Whether the total weight of the shipment exceeds the weight limit for being classified as a gift</summary>
-        public bool? IsShipmentOverGiftWeightThreshold { get; set; }
+        public bool? IsShipmentOverGiftWeightThreshold { get => _explicitNullValueIsShipmentOverGiftWeightThreshold; set { _explicitNullValueIsShipmentOverGiftWeightThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isShipmentOverGiftWeightThreshold"); else _explicitNullProperties?.Remove("isShipmentOverGiftWeightThreshold"); } }
+        private bool? _explicitNullValueIsShipmentOverGiftWeightThreshold = default!;
         /// <summary>The three-letter code that represents the currency used to value the items in the shipment.| Supported enum values        || :--------------------------- || `ARS`&lt;br&gt;Argentine Peso      || `AUD`&lt;br&gt;Australian Dollar   || `BRL`&lt;br&gt;Brazilian Real      || `CAD`&lt;br&gt;Canadian Dollar     || `CHF`&lt;br&gt;Swiss Franc         || `CLP`&lt;br&gt;Chilean Peso        || `CNY`&lt;br&gt;Chinese Yuan        || `CRC`&lt;br&gt;Costa Rican Colon   || `DKK`&lt;br&gt;Danish Krone        || `DOP`&lt;br&gt;Dominican Peso      || `EUR`&lt;br&gt;Euro                || `GBP`&lt;br&gt;Great Britain Pound || `HKD`&lt;br&gt;Hong Kong Dollar    || `INR`&lt;br&gt;India Rupee         || `JPY`&lt;br&gt;Japanese Yen        || `KRW`&lt;br&gt;Korean Won          || `MXN`&lt;br&gt;Mexican Peso        || `MYR`&lt;br&gt;Malaysian Ringgit   || `NOK`&lt;br&gt;Norwegian Kroner    || `NZD`&lt;br&gt;New Zealand Dollar  || `PEN`&lt;br&gt;Peruvian Nuevo Sol  || `PHP`&lt;br&gt;Philippine Peso     || `PLN`&lt;br&gt;Polish Zloty        || `SEK`&lt;br&gt;Swedish Krona       || `SGD`&lt;br&gt;Singapore Dollar    || `THB`&lt;br&gt;Thai Baht           || `TWD`&lt;br&gt;Taiwan Dollar       || `USD`&lt;br&gt;US Dollar           || `VEB`&lt;br&gt;Venezuelan Bolivar  |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode? ShipmentCurrencyCode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode? ShipmentCurrencyCode { get => _explicitNullValueShipmentCurrencyCode; set { _explicitNullValueShipmentCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentCurrencyCode"); else _explicitNullProperties?.Remove("shipmentCurrencyCode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseShipmentCurrencyCode? _explicitNullValueShipmentCurrencyCode = default!;
         /// <summary>The message returned if the shipment&apos;s value surpasses the threshold for gift categorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentOverGiftValueThresholdMessage { get; set; }
+        public string? ShipmentOverGiftValueThresholdMessage { get => _explicitNullValueShipmentOverGiftValueThresholdMessage; set { _explicitNullValueShipmentOverGiftValueThresholdMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentOverGiftValueThresholdMessage"); else _explicitNullProperties?.Remove("shipmentOverGiftValueThresholdMessage"); } }
+        private string? _explicitNullValueShipmentOverGiftValueThresholdMessage = default!;
 #nullable restore
 #else
-        public string ShipmentOverGiftValueThresholdMessage { get; set; }
+        public string ShipmentOverGiftValueThresholdMessage { get => _explicitNullValueShipmentOverGiftValueThresholdMessage; set { _explicitNullValueShipmentOverGiftValueThresholdMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentOverGiftValueThresholdMessage"); else _explicitNullProperties?.Remove("shipmentOverGiftValueThresholdMessage"); } }
+        private string _explicitNullValueShipmentOverGiftValueThresholdMessage = default!;
 #endif
         /// <summary>A message explaining the implications if the shipment&apos;s weight goes beyond the threshold for gift categorization, guiding users in understanding customs considerations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentOverGiftWeightThresholdMessage { get; set; }
+        public string? ShipmentOverGiftWeightThresholdMessage { get => _explicitNullValueShipmentOverGiftWeightThresholdMessage; set { _explicitNullValueShipmentOverGiftWeightThresholdMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentOverGiftWeightThresholdMessage"); else _explicitNullProperties?.Remove("shipmentOverGiftWeightThresholdMessage"); } }
+        private string? _explicitNullValueShipmentOverGiftWeightThresholdMessage = default!;
 #nullable restore
 #else
-        public string ShipmentOverGiftWeightThresholdMessage { get; set; }
+        public string ShipmentOverGiftWeightThresholdMessage { get => _explicitNullValueShipmentOverGiftWeightThresholdMessage; set { _explicitNullValueShipmentOverGiftWeightThresholdMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentOverGiftWeightThresholdMessage"); else _explicitNullProperties?.Remove("shipmentOverGiftWeightThresholdMessage"); } }
+        private string _explicitNullValueShipmentOverGiftWeightThresholdMessage = default!;
 #endif
         /// <summary>The total monetary value of all items included in the shipment</summary>
-        public double? ShipmentValue { get; set; }
+        public double? ShipmentValue { get => _explicitNullValueShipmentValue; set { _explicitNullValueShipmentValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentValue"); else _explicitNullProperties?.Remove("shipmentValue"); } }
+        private double? _explicitNullValueShipmentValue = default!;
         /// <summary>Translation locale. | Supported enum values      || :------------------------- || `EN`&lt;br&gt;English            || `DE`&lt;br&gt;Germany            || `PL`&lt;br&gt;Polish             || `FR`&lt;br&gt;French             || `IT`&lt;br&gt;Italian            || `NL`&lt;br&gt;Dutch              || `ES`&lt;br&gt;Spanish            || `ZH`&lt;br&gt;Simplified Chinese |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale? TranslationLocale { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale? TranslationLocale { get => _explicitNullValueTranslationLocale; set { _explicitNullValueTranslationLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translationLocale"); else _explicitNullProperties?.Remove("translationLocale"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale? _explicitNullValueTranslationLocale = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseImportExportCompliance"/> and sets the default values.
         /// </summary>
@@ -68,7 +98,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseImportExportCompliance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseImportExportCompliance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponseImportExportCompliance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -107,6 +137,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipmentOverGiftWeightThresholdMessage", ShipmentOverGiftWeightThresholdMessage);
             writer.WriteDoubleValue("shipmentValue", ShipmentValue);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ImportExportShipmentLevelResponseTranslationLocale>("translationLocale", TranslationLocale);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

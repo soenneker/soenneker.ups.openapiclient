@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OriginAddressOriginSearchCriteria : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DistanceUnitOfMeasure") is { } nullNodeDistanceUnitOfMeasure && nullNodeDistanceUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DistanceUnitOfMeasure = null;
+            if (parseNode.GetChildNode("MaximumLocation") is { } nullNodeMaximumLocation && nullNodeMaximumLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumLocation = null;
+            if (parseNode.GetChildNode("SearchRadius") is { } nullNodeSearchRadius && nullNodeSearchRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchRadius = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Unit of Measure  Required if ProximitySearchIndicator is present. Example: MI or KM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DistanceUnitOfMeasure { get; set; }
+        public string? DistanceUnitOfMeasure { get => _explicitNullValueDistanceUnitOfMeasure; set { _explicitNullValueDistanceUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DistanceUnitOfMeasure"); else _explicitNullProperties?.Remove("DistanceUnitOfMeasure"); } }
+        private string? _explicitNullValueDistanceUnitOfMeasure = default!;
 #nullable restore
 #else
-        public string DistanceUnitOfMeasure { get; set; }
+        public string DistanceUnitOfMeasure { get => _explicitNullValueDistanceUnitOfMeasure; set { _explicitNullValueDistanceUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DistanceUnitOfMeasure"); else _explicitNullProperties?.Remove("DistanceUnitOfMeasure"); } }
+        private string _explicitNullValueDistanceUnitOfMeasure = default!;
 #endif
         /// <summary>Maximum Number of locations. Valied values:- 1 to 100Default: 100</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaximumLocation { get; set; }
+        public string? MaximumLocation { get => _explicitNullValueMaximumLocation; set { _explicitNullValueMaximumLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumLocation"); else _explicitNullProperties?.Remove("MaximumLocation"); } }
+        private string? _explicitNullValueMaximumLocation = default!;
 #nullable restore
 #else
-        public string MaximumLocation { get; set; }
+        public string MaximumLocation { get => _explicitNullValueMaximumLocation; set { _explicitNullValueMaximumLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumLocation"); else _explicitNullProperties?.Remove("MaximumLocation"); } }
+        private string _explicitNullValueMaximumLocation = default!;
 #endif
         /// <summary>Search Request range. Valied values:- 1 to 200Default: 200</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SearchRadius { get; set; }
+        public string? SearchRadius { get => _explicitNullValueSearchRadius; set { _explicitNullValueSearchRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchRadius"); else _explicitNullProperties?.Remove("SearchRadius"); } }
+        private string? _explicitNullValueSearchRadius = default!;
 #nullable restore
 #else
-        public string SearchRadius { get; set; }
+        public string SearchRadius { get => _explicitNullValueSearchRadius; set { _explicitNullValueSearchRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchRadius"); else _explicitNullProperties?.Remove("SearchRadius"); } }
+        private string _explicitNullValueSearchRadius = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.OriginAddressOriginSearchCriteria"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.OriginAddressOriginSearchCriteria CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.OriginAddressOriginSearchCriteria();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.OriginAddressOriginSearchCriteria(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("DistanceUnitOfMeasure", DistanceUnitOfMeasure);
             writer.WriteStringValue("MaximumLocation", MaximumLocation);
             writer.WriteStringValue("SearchRadius", SearchRadius);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LocatorResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AllowAllConfidenceLevels") is { } nullNodeAllowAllConfidenceLevels && nullNodeAllowAllConfidenceLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowAllConfidenceLevels = null;
+            if (parseNode.GetChildNode("Geocode") is { } nullNodeGeocode && nullNodeGeocode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Geocode = null;
+            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("SearchResults") is { } nullNodeSearchResults && nullNodeSearchResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchResults = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Confidence level.Valid values: True or False</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllowAllConfidenceLevels { get; set; }
+        public string? AllowAllConfidenceLevels { get => _explicitNullValueAllowAllConfidenceLevels; set { _explicitNullValueAllowAllConfidenceLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowAllConfidenceLevels"); else _explicitNullProperties?.Remove("AllowAllConfidenceLevels"); } }
+        private string? _explicitNullValueAllowAllConfidenceLevels = default!;
 #nullable restore
 #else
-        public string AllowAllConfidenceLevels { get; set; }
+        public string AllowAllConfidenceLevels { get => _explicitNullValueAllowAllConfidenceLevels; set { _explicitNullValueAllowAllConfidenceLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowAllConfidenceLevels"); else _explicitNullProperties?.Remove("AllowAllConfidenceLevels"); } }
+        private string _explicitNullValueAllowAllConfidenceLevels = default!;
 #endif
         /// <summary>Geocode is the latitude and longitude of the origin address. The Geocode is provided in the first successful response. Required to be returned when the origin address or phone number is submitted in the request.Will not be returned when the  requestoption =64</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode? Geocode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode? Geocode { get => _explicitNullValueGeocode; set { _explicitNullValueGeocode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Geocode"); else _explicitNullProperties?.Remove("Geocode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode? _explicitNullValueGeocode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode Geocode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode Geocode { get => _explicitNullValueGeocode; set { _explicitNullValueGeocode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Geocode"); else _explicitNullProperties?.Remove("Geocode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode _explicitNullValueGeocode = default!;
 #endif
         /// <summary>Container for Response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>Container for search results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults? SearchResults { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults? SearchResults { get => _explicitNullValueSearchResults; set { _explicitNullValueSearchResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchResults"); else _explicitNullProperties?.Remove("SearchResults"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults? _explicitNullValueSearchResults = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults SearchResults { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults SearchResults { get => _explicitNullValueSearchResults; set { _explicitNullValueSearchResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchResults"); else _explicitNullProperties?.Remove("SearchResults"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults _explicitNullValueSearchResults = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseGeocode>("Geocode", Geocode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseResponse>("Response", Response);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LocatorResponseSearchResults>("SearchResults", SearchResults);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

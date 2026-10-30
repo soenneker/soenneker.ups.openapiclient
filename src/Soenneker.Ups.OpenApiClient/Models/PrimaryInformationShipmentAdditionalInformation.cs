@@ -12,72 +12,103 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PrimaryInformationShipmentAdditionalInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actualWeight") is { } nullNodeActualWeight && nullNodeActualWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualWeight = null;
+            if (parseNode.GetChildNode("chargeableWeight") is { } nullNodeChargeableWeight && nullNodeChargeableWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeableWeight = null;
+            if (parseNode.GetChildNode("freightPaymentTerm") is { } nullNodeFreightPaymentTerm && nullNodeFreightPaymentTerm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightPaymentTerm = null;
+            if (parseNode.GetChildNode("incoterms") is { } nullNodeIncoterms && nullNodeIncoterms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Incoterms = null;
+            if (parseNode.GetChildNode("itemDescription") is { } nullNodeItemDescription && nullNodeItemDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDescription = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("shipmentCategory") is { } nullNodeShipmentCategory && nullNodeShipmentCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCategory = null;
+            if (parseNode.GetChildNode("shipmentVolume") is { } nullNodeShipmentVolume && nullNodeShipmentVolume.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentVolume = null;
+        }
+
         /// <summary>The actual weight of the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationActualWeight? ActualWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationActualWeight? ActualWeight { get => _explicitNullValueActualWeight; set { _explicitNullValueActualWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualWeight"); else _explicitNullProperties?.Remove("actualWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationActualWeight? _explicitNullValueActualWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationActualWeight ActualWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationActualWeight ActualWeight { get => _explicitNullValueActualWeight; set { _explicitNullValueActualWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualWeight"); else _explicitNullProperties?.Remove("actualWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationActualWeight _explicitNullValueActualWeight = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The chargeable weight used for pricing calculations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationChargeableWeight? ChargeableWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationChargeableWeight? ChargeableWeight { get => _explicitNullValueChargeableWeight; set { _explicitNullValueChargeableWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeableWeight"); else _explicitNullProperties?.Remove("chargeableWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationChargeableWeight? _explicitNullValueChargeableWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationChargeableWeight ChargeableWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationChargeableWeight ChargeableWeight { get => _explicitNullValueChargeableWeight; set { _explicitNullValueChargeableWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeableWeight"); else _explicitNullProperties?.Remove("chargeableWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationChargeableWeight _explicitNullValueChargeableWeight = default!;
 #endif
         /// <summary>The payment terms for the freight (e.g., Prepaid, Collect).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreightPaymentTerm { get; set; }
+        public string? FreightPaymentTerm { get => _explicitNullValueFreightPaymentTerm; set { _explicitNullValueFreightPaymentTerm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freightPaymentTerm"); else _explicitNullProperties?.Remove("freightPaymentTerm"); } }
+        private string? _explicitNullValueFreightPaymentTerm = default!;
 #nullable restore
 #else
-        public string FreightPaymentTerm { get; set; }
+        public string FreightPaymentTerm { get => _explicitNullValueFreightPaymentTerm; set { _explicitNullValueFreightPaymentTerm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freightPaymentTerm"); else _explicitNullProperties?.Remove("freightPaymentTerm"); } }
+        private string _explicitNullValueFreightPaymentTerm = default!;
 #endif
         /// <summary>The Incoterms code governing the shipment (e.g., FOB, CIF, DAP).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Incoterms { get; set; }
+        public string? Incoterms { get => _explicitNullValueIncoterms; set { _explicitNullValueIncoterms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incoterms"); else _explicitNullProperties?.Remove("incoterms"); } }
+        private string? _explicitNullValueIncoterms = default!;
 #nullable restore
 #else
-        public string Incoterms { get; set; }
+        public string Incoterms { get => _explicitNullValueIncoterms; set { _explicitNullValueIncoterms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incoterms"); else _explicitNullProperties?.Remove("incoterms"); } }
+        private string _explicitNullValueIncoterms = default!;
 #endif
         /// <summary>Description of the items being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemDescription { get; set; }
+        public string? ItemDescription { get => _explicitNullValueItemDescription; set { _explicitNullValueItemDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemDescription"); else _explicitNullProperties?.Remove("itemDescription"); } }
+        private string? _explicitNullValueItemDescription = default!;
 #nullable restore
 #else
-        public string ItemDescription { get; set; }
+        public string ItemDescription { get => _explicitNullValueItemDescription; set { _explicitNullValueItemDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemDescription"); else _explicitNullProperties?.Remove("itemDescription"); } }
+        private string _explicitNullValueItemDescription = default!;
 #endif
         /// <summary>The total quantity of items in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get; set; }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get; set; }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>The category or classification of the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentCategory { get; set; }
+        public string? ShipmentCategory { get => _explicitNullValueShipmentCategory; set { _explicitNullValueShipmentCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentCategory"); else _explicitNullProperties?.Remove("shipmentCategory"); } }
+        private string? _explicitNullValueShipmentCategory = default!;
 #nullable restore
 #else
-        public string ShipmentCategory { get; set; }
+        public string ShipmentCategory { get => _explicitNullValueShipmentCategory; set { _explicitNullValueShipmentCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentCategory"); else _explicitNullProperties?.Remove("shipmentCategory"); } }
+        private string _explicitNullValueShipmentCategory = default!;
 #endif
         /// <summary>The total volume of the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationShipmentVolume? ShipmentVolume { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationShipmentVolume? ShipmentVolume { get => _explicitNullValueShipmentVolume; set { _explicitNullValueShipmentVolume = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentVolume"); else _explicitNullProperties?.Remove("shipmentVolume"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationShipmentVolume? _explicitNullValueShipmentVolume = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationShipmentVolume ShipmentVolume { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationShipmentVolume ShipmentVolume { get => _explicitNullValueShipmentVolume; set { _explicitNullValueShipmentVolume = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentVolume"); else _explicitNullProperties?.Remove("shipmentVolume"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationShipmentVolume _explicitNullValueShipmentVolume = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformationShipmentAdditionalInformation"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformationShipmentAdditionalInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformationShipmentAdditionalInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PrimaryInformationShipmentAdditionalInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("quantity", Quantity);
             writer.WriteStringValue("shipmentCategory", ShipmentCategory);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AdditionalInformationShipmentVolume>("shipmentVolume", ShipmentVolume);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

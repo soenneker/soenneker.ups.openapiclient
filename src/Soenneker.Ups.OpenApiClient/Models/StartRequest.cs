@@ -11,92 +11,133 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StartRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("commodityCountryOfOrigin") is { } nullNodeCommodityCountryOfOrigin && nullNodeCommodityCountryOfOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCountryOfOrigin = null;
+            if (parseNode.GetChildNode("commodityCurrencyCode") is { } nullNodeCommodityCurrencyCode && nullNodeCommodityCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCurrencyCode = null;
+            if (parseNode.GetChildNode("commodityDescription") is { } nullNodeCommodityDescription && nullNodeCommodityDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityDescription = null;
+            if (parseNode.GetChildNode("commodityHtsCode") is { } nullNodeCommodityHtsCode && nullNodeCommodityHtsCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityHtsCode = null;
+            if (parseNode.GetChildNode("commodityQuantity") is { } nullNodeCommodityQuantity && nullNodeCommodityQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityQuantity = null;
+            if (parseNode.GetChildNode("commodityUnitOfMeasure") is { } nullNodeCommodityUnitOfMeasure && nullNodeCommodityUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityUnitOfMeasure = null;
+            if (parseNode.GetChildNode("commodityValue") is { } nullNodeCommodityValue && nullNodeCommodityValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityValue = null;
+            if (parseNode.GetChildNode("exportCountryCode") is { } nullNodeExportCountryCode && nullNodeExportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportCountryCode = null;
+            if (parseNode.GetChildNode("importCountryCode") is { } nullNodeImportCountryCode && nullNodeImportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportCountryCode = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("shipperAccountNumber") is { } nullNodeShipperAccountNumber && nullNodeShipperAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccountNumber = null;
+            if (parseNode.GetChildNode("shipperName") is { } nullNodeShipperName && nullNodeShipperName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The two-letter ISO 3166-1 alpha-2 country code representing the country of origin of the commodity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityCountryOfOrigin { get; set; }
+        public string? CommodityCountryOfOrigin { get => _explicitNullValueCommodityCountryOfOrigin; set { _explicitNullValueCommodityCountryOfOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCountryOfOrigin"); else _explicitNullProperties?.Remove("commodityCountryOfOrigin"); } }
+        private string? _explicitNullValueCommodityCountryOfOrigin = default!;
 #nullable restore
 #else
-        public string CommodityCountryOfOrigin { get; set; }
+        public string CommodityCountryOfOrigin { get => _explicitNullValueCommodityCountryOfOrigin; set { _explicitNullValueCommodityCountryOfOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCountryOfOrigin"); else _explicitNullProperties?.Remove("commodityCountryOfOrigin"); } }
+        private string _explicitNullValueCommodityCountryOfOrigin = default!;
 #endif
         /// <summary>The three-letter currency code representing the currency in which the commodity value is expressed, according to the ISO 4217 standard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityCurrencyCode { get; set; }
+        public string? CommodityCurrencyCode { get => _explicitNullValueCommodityCurrencyCode; set { _explicitNullValueCommodityCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCurrencyCode"); else _explicitNullProperties?.Remove("commodityCurrencyCode"); } }
+        private string? _explicitNullValueCommodityCurrencyCode = default!;
 #nullable restore
 #else
-        public string CommodityCurrencyCode { get; set; }
+        public string CommodityCurrencyCode { get => _explicitNullValueCommodityCurrencyCode; set { _explicitNullValueCommodityCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCurrencyCode"); else _explicitNullProperties?.Remove("commodityCurrencyCode"); } }
+        private string _explicitNullValueCommodityCurrencyCode = default!;
 #endif
         /// <summary>A brief description of the commodity, detailing its type and key characteristics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityDescription { get; set; }
+        public string? CommodityDescription { get => _explicitNullValueCommodityDescription; set { _explicitNullValueCommodityDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityDescription"); else _explicitNullProperties?.Remove("commodityDescription"); } }
+        private string? _explicitNullValueCommodityDescription = default!;
 #nullable restore
 #else
-        public string CommodityDescription { get; set; }
+        public string CommodityDescription { get => _explicitNullValueCommodityDescription; set { _explicitNullValueCommodityDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityDescription"); else _explicitNullProperties?.Remove("commodityDescription"); } }
+        private string _explicitNullValueCommodityDescription = default!;
 #endif
         /// <summary>The commodityHtsCode is an optional field that allows the user to submit their known HTS classification. This will be used as a starting point for the interactive description guidance process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityHtsCode { get; set; }
+        public string? CommodityHtsCode { get => _explicitNullValueCommodityHtsCode; set { _explicitNullValueCommodityHtsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityHtsCode"); else _explicitNullProperties?.Remove("commodityHtsCode"); } }
+        private string? _explicitNullValueCommodityHtsCode = default!;
 #nullable restore
 #else
-        public string CommodityHtsCode { get; set; }
+        public string CommodityHtsCode { get => _explicitNullValueCommodityHtsCode; set { _explicitNullValueCommodityHtsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityHtsCode"); else _explicitNullProperties?.Remove("commodityHtsCode"); } }
+        private string _explicitNullValueCommodityHtsCode = default!;
 #endif
         /// <summary>The quantity of the commodity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityQuantity { get; set; }
+        public string? CommodityQuantity { get => _explicitNullValueCommodityQuantity; set { _explicitNullValueCommodityQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityQuantity"); else _explicitNullProperties?.Remove("commodityQuantity"); } }
+        private string? _explicitNullValueCommodityQuantity = default!;
 #nullable restore
 #else
-        public string CommodityQuantity { get; set; }
+        public string CommodityQuantity { get => _explicitNullValueCommodityQuantity; set { _explicitNullValueCommodityQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityQuantity"); else _explicitNullProperties?.Remove("commodityQuantity"); } }
+        private string _explicitNullValueCommodityQuantity = default!;
 #endif
         /// <summary>The unit of measure used for the commodity quantity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityUnitOfMeasure { get; set; }
+        public string? CommodityUnitOfMeasure { get => _explicitNullValueCommodityUnitOfMeasure; set { _explicitNullValueCommodityUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityUnitOfMeasure"); else _explicitNullProperties?.Remove("commodityUnitOfMeasure"); } }
+        private string? _explicitNullValueCommodityUnitOfMeasure = default!;
 #nullable restore
 #else
-        public string CommodityUnitOfMeasure { get; set; }
+        public string CommodityUnitOfMeasure { get => _explicitNullValueCommodityUnitOfMeasure; set { _explicitNullValueCommodityUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityUnitOfMeasure"); else _explicitNullProperties?.Remove("commodityUnitOfMeasure"); } }
+        private string _explicitNullValueCommodityUnitOfMeasure = default!;
 #endif
         /// <summary>The declared value of the commodity for customs and trade purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityValue { get; set; }
+        public string? CommodityValue { get => _explicitNullValueCommodityValue; set { _explicitNullValueCommodityValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityValue"); else _explicitNullProperties?.Remove("commodityValue"); } }
+        private string? _explicitNullValueCommodityValue = default!;
 #nullable restore
 #else
-        public string CommodityValue { get; set; }
+        public string CommodityValue { get => _explicitNullValueCommodityValue; set { _explicitNullValueCommodityValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityValue"); else _explicitNullProperties?.Remove("commodityValue"); } }
+        private string _explicitNullValueCommodityValue = default!;
 #endif
         /// <summary>The two-letter ISO 3166-1 alpha-2 country code representing the export country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportCountryCode { get; set; }
+        public string? ExportCountryCode { get => _explicitNullValueExportCountryCode; set { _explicitNullValueExportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportCountryCode"); else _explicitNullProperties?.Remove("exportCountryCode"); } }
+        private string? _explicitNullValueExportCountryCode = default!;
 #nullable restore
 #else
-        public string ExportCountryCode { get; set; }
+        public string ExportCountryCode { get => _explicitNullValueExportCountryCode; set { _explicitNullValueExportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportCountryCode"); else _explicitNullProperties?.Remove("exportCountryCode"); } }
+        private string _explicitNullValueExportCountryCode = default!;
 #endif
         /// <summary>The two-letter ISO 3166-1 alpha-2 country code representing the import country.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.StartRequestImportCountryCode? ImportCountryCode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.StartRequestImportCountryCode? ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.StartRequestImportCountryCode? _explicitNullValueImportCountryCode = default!;
         /// <summary>The language code following the ISO 639-1 standard.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale? Locale { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>The account number representing the company or individual responsible for shipping the commodity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperAccountNumber { get; set; }
+        public string? ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        private string? _explicitNullValueShipperAccountNumber = default!;
 #nullable restore
 #else
-        public string ShipperAccountNumber { get; set; }
+        public string ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        private string _explicitNullValueShipperAccountNumber = default!;
 #endif
         /// <summary>The name of the company or individual responsible for shipping the commodity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperName { get; set; }
+        public string? ShipperName { get => _explicitNullValueShipperName; set { _explicitNullValueShipperName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperName"); else _explicitNullProperties?.Remove("shipperName"); } }
+        private string? _explicitNullValueShipperName = default!;
 #nullable restore
 #else
-        public string ShipperName { get; set; }
+        public string ShipperName { get => _explicitNullValueShipperName; set { _explicitNullValueShipperName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperName"); else _explicitNullProperties?.Remove("shipperName"); } }
+        private string _explicitNullValueShipperName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.StartRequest"/> and sets the default values.
@@ -113,7 +154,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.StartRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.StartRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.StartRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -156,6 +197,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.StartRequestLocale>("locale", Locale);
             writer.WriteStringValue("shipperAccountNumber", ShipperAccountNumber);
             writer.WriteStringValue("shipperName", ShipperName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CommodityNmfc : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("PrimeCode") is { } nullNodePrimeCode && nullNodePrimeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimeCode = null;
+            if (parseNode.GetChildNode("SubCode") is { } nullNodeSubCode && nullNodeSubCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Value of NMFC Prime. Contact your service representative if you need information concerning NMFC Codes.  Required if NMFC Container is present. For GFP Only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimeCode { get; set; }
+        public string? PrimeCode { get => _explicitNullValuePrimeCode; set { _explicitNullValuePrimeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimeCode"); else _explicitNullProperties?.Remove("PrimeCode"); } }
+        private string? _explicitNullValuePrimeCode = default!;
 #nullable restore
 #else
-        public string PrimeCode { get; set; }
+        public string PrimeCode { get => _explicitNullValuePrimeCode; set { _explicitNullValuePrimeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimeCode"); else _explicitNullProperties?.Remove("PrimeCode"); } }
+        private string _explicitNullValuePrimeCode = default!;
 #endif
         /// <summary>Value of NMFC Sub. Contact your service representative if you need information concerning NMFC Codes.  Needs to be provided when the SubCode associated with the PrimeCode is other than 00. API defaults the sub value to 00 if not provided. If provided the Sub Code should be associated with the PrimeCode of the NMFC.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubCode { get; set; }
+        public string? SubCode { get => _explicitNullValueSubCode; set { _explicitNullValueSubCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubCode"); else _explicitNullProperties?.Remove("SubCode"); } }
+        private string? _explicitNullValueSubCode = default!;
 #nullable restore
 #else
-        public string SubCode { get; set; }
+        public string SubCode { get => _explicitNullValueSubCode; set { _explicitNullValueSubCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubCode"); else _explicitNullProperties?.Remove("SubCode"); } }
+        private string _explicitNullValueSubCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("PrimeCode", PrimeCode);
             writer.WriteStringValue("SubCode", SubCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

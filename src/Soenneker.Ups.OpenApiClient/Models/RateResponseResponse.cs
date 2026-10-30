@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RateResponseResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Alert") is { } nullNodeAlert && nullNodeAlert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alert = null;
+            if (parseNode.GetChildNode("AlertDetail") is { } nullNodeAlertDetail && nullNodeAlertDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlertDetail = null;
+            if (parseNode.GetChildNode("ResponseStatus") is { } nullNodeResponseStatus && nullNodeResponseStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseStatus = null;
+            if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Alert Container.  There can be zero to many alert containers with code and description.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlert>? Alert { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlert>? Alert { get => _explicitNullValueAlert; set { _explicitNullValueAlert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Alert"); else _explicitNullProperties?.Remove("Alert"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlert>? _explicitNullValueAlert = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlert> Alert { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlert> Alert { get => _explicitNullValueAlert; set { _explicitNullValueAlert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Alert"); else _explicitNullProperties?.Remove("Alert"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlert> _explicitNullValueAlert = default!;
 #endif
         /// <summary>Alert Detail Container. Currently applies to and returned only for request containing HazMat and SubVersion greater than or equal to 1701.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlertDetail>? AlertDetail { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlertDetail>? AlertDetail { get => _explicitNullValueAlertDetail; set { _explicitNullValueAlertDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlertDetail"); else _explicitNullProperties?.Remove("AlertDetail"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlertDetail>? _explicitNullValueAlertDetail = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlertDetail> AlertDetail { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlertDetail> AlertDetail { get => _explicitNullValueAlertDetail; set { _explicitNullValueAlertDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlertDetail"); else _explicitNullProperties?.Remove("AlertDetail"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlertDetail> _explicitNullValueAlertDetail = default!;
 #endif
         /// <summary>Response Status Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RatingResponseResponseStatus? ResponseStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatingResponseResponseStatus? ResponseStatus { get => _explicitNullValueResponseStatus; set { _explicitNullValueResponseStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatus"); else _explicitNullProperties?.Remove("ResponseStatus"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.RatingResponseResponseStatus? _explicitNullValueResponseStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RatingResponseResponseStatus ResponseStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatingResponseResponseStatus ResponseStatus { get => _explicitNullValueResponseStatus; set { _explicitNullValueResponseStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatus"); else _explicitNullProperties?.Remove("ResponseStatus"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.RatingResponseResponseStatus _explicitNullValueResponseStatus = default!;
 #endif
         /// <summary>Transaction Reference Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RatingResponseTransactionReference? TransactionReference { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatingResponseTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.RatingResponseTransactionReference? _explicitNullValueTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RatingResponseTransactionReference TransactionReference { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatingResponseTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.RatingResponseTransactionReference _explicitNullValueTransactionReference = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.RateResponseResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseAlertDetail>("AlertDetail", AlertDetail);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseResponseStatus>("ResponseStatus", ResponseStatus);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.RatingResponseTransactionReference>("TransactionReference", TransactionReference);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

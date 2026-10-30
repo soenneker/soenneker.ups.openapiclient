@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.Locator.Locations.Item.Search.Availabiliti
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.Locator401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.Locator403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.Locator429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.Locator200Response>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.Locator200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

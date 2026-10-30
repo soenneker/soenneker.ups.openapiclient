@@ -11,29 +11,46 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ValidationList : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destinationAmbiguous") is { } nullNodeDestinationAmbiguous && nullNodeDestinationAmbiguous.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationAmbiguous = null;
+            if (parseNode.GetChildNode("invalidFieldList") is { } nullNodeInvalidFieldList && nullNodeInvalidFieldList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidFieldList = null;
+            if (parseNode.GetChildNode("invalidFieldListCodes") is { } nullNodeInvalidFieldListCodes && nullNodeInvalidFieldListCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidFieldListCodes = null;
+            if (parseNode.GetChildNode("originAmbiguous") is { } nullNodeOriginAmbiguous && nullNodeOriginAmbiguous.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginAmbiguous = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Returned as true when destination address has a candidate list</summary>
-        public bool? DestinationAmbiguous { get; set; }
+        public bool? DestinationAmbiguous { get => _explicitNullValueDestinationAmbiguous; set { _explicitNullValueDestinationAmbiguous = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationAmbiguous"); else _explicitNullProperties?.Remove("destinationAmbiguous"); } }
+        private bool? _explicitNullValueDestinationAmbiguous = default!;
         /// <summary>The invalidFieldList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InvalidFieldList { get; set; }
+        public List<string>? InvalidFieldList { get => _explicitNullValueInvalidFieldList; set { _explicitNullValueInvalidFieldList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidFieldList"); else _explicitNullProperties?.Remove("invalidFieldList"); } }
+        private List<string>? _explicitNullValueInvalidFieldList = default!;
 #nullable restore
 #else
-        public List<string> InvalidFieldList { get; set; }
+        public List<string> InvalidFieldList { get => _explicitNullValueInvalidFieldList; set { _explicitNullValueInvalidFieldList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidFieldList"); else _explicitNullProperties?.Remove("invalidFieldList"); } }
+        private List<string> _explicitNullValueInvalidFieldList = default!;
 #endif
         /// <summary>The invalidFieldListCodes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InvalidFieldListCodes { get; set; }
+        public List<string>? InvalidFieldListCodes { get => _explicitNullValueInvalidFieldListCodes; set { _explicitNullValueInvalidFieldListCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidFieldListCodes"); else _explicitNullProperties?.Remove("invalidFieldListCodes"); } }
+        private List<string>? _explicitNullValueInvalidFieldListCodes = default!;
 #nullable restore
 #else
-        public List<string> InvalidFieldListCodes { get; set; }
+        public List<string> InvalidFieldListCodes { get => _explicitNullValueInvalidFieldListCodes; set { _explicitNullValueInvalidFieldListCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidFieldListCodes"); else _explicitNullProperties?.Remove("invalidFieldListCodes"); } }
+        private List<string> _explicitNullValueInvalidFieldListCodes = default!;
 #endif
         /// <summary>Returned as true when original address has a candidate list.</summary>
-        public bool? OriginAmbiguous { get; set; }
+        public bool? OriginAmbiguous { get => _explicitNullValueOriginAmbiguous; set { _explicitNullValueOriginAmbiguous = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originAmbiguous"); else _explicitNullProperties?.Remove("originAmbiguous"); } }
+        private bool? _explicitNullValueOriginAmbiguous = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ValidationList"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ValidationList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ValidationList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ValidationList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("invalidFieldList", InvalidFieldList);
             writer.WriteCollectionOfPrimitiveValues<string>("invalidFieldListCodes", InvalidFieldListCodes);
             writer.WriteBoolValue("originAmbiguous", OriginAmbiguous);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

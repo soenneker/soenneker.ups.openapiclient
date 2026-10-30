@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMap : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eligibilityValue") is { } nullNodeEligibilityValue && nullNodeEligibilityValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibilityValue = null;
+            if (parseNode.GetChildNode("interceptFeature") is { } nullNodeInterceptFeature && nullNodeInterceptFeature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptFeature = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Object that holds the eligibility values for a particular delivery change</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue? EligibilityValue { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue? EligibilityValue { get => _explicitNullValueEligibilityValue; set { _explicitNullValueEligibilityValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibilityValue"); else _explicitNullProperties?.Remove("eligibilityValue"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue? _explicitNullValueEligibilityValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue EligibilityValue { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue EligibilityValue { get => _explicitNullValueEligibilityValue; set { _explicitNullValueEligibilityValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibilityValue"); else _explicitNullProperties?.Remove("eligibilityValue"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue _explicitNullValueEligibilityValue = default!;
 #endif
         /// <summary>The specific delivery change options eligibilty is being returned for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature? InterceptFeature { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature? InterceptFeature { get => _explicitNullValueInterceptFeature; set { _explicitNullValueInterceptFeature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptFeature"); else _explicitNullProperties?.Remove("interceptFeature"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature? _explicitNullValueInterceptFeature = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature InterceptFeature { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature InterceptFeature { get => _explicitNullValueInterceptFeature; set { _explicitNullValueInterceptFeature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptFeature"); else _explicitNullProperties?.Remove("interceptFeature"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature _explicitNullValueInterceptFeature = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMap"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMap CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMap();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMap(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValue>("eligibilityValue", EligibilityValue);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature>("interceptFeature", InterceptFeature);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

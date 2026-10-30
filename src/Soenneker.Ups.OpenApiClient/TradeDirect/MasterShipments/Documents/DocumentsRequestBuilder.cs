@@ -63,6 +63,8 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Documents
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.TradeDirectErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.DocumentResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.DocumentResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

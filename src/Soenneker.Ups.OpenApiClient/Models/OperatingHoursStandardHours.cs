@@ -11,24 +11,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class OperatingHoursStandardHours : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
+            if (parseNode.GetChildNode("HoursType") is { } nullNodeHoursType && nullNodeHoursType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoursType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container for the Day of Week.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.StandardHoursDayOfWeek>? DayOfWeek { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.StandardHoursDayOfWeek>? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.StandardHoursDayOfWeek>? _explicitNullValueDayOfWeek = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.StandardHoursDayOfWeek> DayOfWeek { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.StandardHoursDayOfWeek> DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.StandardHoursDayOfWeek> _explicitNullValueDayOfWeek = default!;
 #endif
         /// <summary>Hours Type. Valid values: 10-Regular Operating Hours 11-Will Call Hours12-Same Day Will Call Hours14-Customer PickUp50-Drop Off Hours 51-Prep Hours</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HoursType { get; set; }
+        public string? HoursType { get => _explicitNullValueHoursType; set { _explicitNullValueHoursType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoursType"); else _explicitNullProperties?.Remove("HoursType"); } }
+        private string? _explicitNullValueHoursType = default!;
 #nullable restore
 #else
-        public string HoursType { get; set; }
+        public string HoursType { get => _explicitNullValueHoursType; set { _explicitNullValueHoursType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoursType"); else _explicitNullProperties?.Remove("HoursType"); } }
+        private string _explicitNullValueHoursType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.OperatingHoursStandardHours"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.OperatingHoursStandardHours CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.OperatingHoursStandardHours();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.OperatingHoursStandardHours(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.StandardHoursDayOfWeek>("DayOfWeek", DayOfWeek);
             writer.WriteStringValue("HoursType", HoursType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

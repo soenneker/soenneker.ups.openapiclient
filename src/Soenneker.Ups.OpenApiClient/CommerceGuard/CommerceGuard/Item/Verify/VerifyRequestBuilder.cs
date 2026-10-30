@@ -63,6 +63,8 @@ namespace Soenneker.Ups.OpenApiClient.CommerceGuard.CommerceGuard.Item.Verify
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ChargebackErrorResponseV1.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

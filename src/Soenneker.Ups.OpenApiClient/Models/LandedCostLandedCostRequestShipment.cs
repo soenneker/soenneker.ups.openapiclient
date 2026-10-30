@@ -12,83 +12,119 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LandedCostLandedCostRequestShipment : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("exportCountryCode") is { } nullNodeExportCountryCode && nullNodeExportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportCountryCode = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("importCountryCode") is { } nullNodeImportCountryCode && nullNodeImportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportCountryCode = null;
+            if (parseNode.GetChildNode("importProvince") is { } nullNodeImportProvince && nullNodeImportProvince.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportProvince = null;
+            if (parseNode.GetChildNode("incoterms") is { } nullNodeIncoterms && nullNodeIncoterms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Incoterms = null;
+            if (parseNode.GetChildNode("shipDate") is { } nullNodeShipDate && nullNodeShipDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipDate = null;
+            if (parseNode.GetChildNode("shipmentItems") is { } nullNodeShipmentItems && nullNodeShipmentItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentItems = null;
+            if (parseNode.GetChildNode("shipmentType") is { } nullNodeShipmentType && nullNodeShipmentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentType = null;
+            if (parseNode.GetChildNode("transModes") is { } nullNodeTransModes && nullNodeTransModes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransModes = null;
+            if (parseNode.GetChildNode("transportCost") is { } nullNodeTransportCost && nullNodeTransportCost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportCost = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the export/ship-from/origin country of the shipment. Please check country List in the Appendix section.**Note:** Export country code must be different from the import country code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportCountryCode { get; set; }
+        public string? ExportCountryCode { get => _explicitNullValueExportCountryCode; set { _explicitNullValueExportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportCountryCode"); else _explicitNullProperties?.Remove("exportCountryCode"); } }
+        private string? _explicitNullValueExportCountryCode = default!;
 #nullable restore
 #else
-        public string ExportCountryCode { get; set; }
+        public string ExportCountryCode { get => _explicitNullValueExportCountryCode; set { _explicitNullValueExportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportCountryCode"); else _explicitNullProperties?.Remove("exportCountryCode"); } }
+        private string _explicitNullValueExportCountryCode = default!;
 #endif
         /// <summary>Specifies the Shipment ID in the Landed Cost quote. It is an arbitrary string provided by the user of the API and will be  returned with the Landed Cost Quote to indicate which shipment the tariffs apply to. There are similar IDs associated with the Product and Order objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Specifies the Import/Ship-To/Destination/Final country of the shipment. Please check country list in the Appendix.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportCountryCode { get; set; }
+        public string? ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
+        private string? _explicitNullValueImportCountryCode = default!;
 #nullable restore
 #else
-        public string ImportCountryCode { get; set; }
+        public string ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
+        private string _explicitNullValueImportCountryCode = default!;
 #endif
         /// <summary>Province/State is supported only for a few countries such as Mexico, Canada, etc. Please check Province list in the Appendix</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportProvince { get; set; }
+        public string? ImportProvince { get => _explicitNullValueImportProvince; set { _explicitNullValueImportProvince = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importProvince"); else _explicitNullProperties?.Remove("importProvince"); } }
+        private string? _explicitNullValueImportProvince = default!;
 #nullable restore
 #else
-        public string ImportProvince { get; set; }
+        public string ImportProvince { get => _explicitNullValueImportProvince; set { _explicitNullValueImportProvince = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importProvince"); else _explicitNullProperties?.Remove("importProvince"); } }
+        private string _explicitNullValueImportProvince = default!;
 #endif
         /// <summary>Supported Incoterm Values:1. CFR - Cost &amp; Freight 2. CIF - Cost, Insurance &amp; Freight 3. CIP - Carriage and Insurance Paid-To 4. CPT - Carriage Paid-To 5. DAP - Delivered At Place 6. DAT - Delivered At Terminal 7. DDP - Delivered Duty Paid 8. DPU - Delivered at Place Unloaded 9. EXW - Ex Works 10. FAS - Free Alongside Ship 11. FCA - Free Carrier 12. FOB - Free On Board (Default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Incoterms { get; set; }
+        public string? Incoterms { get => _explicitNullValueIncoterms; set { _explicitNullValueIncoterms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incoterms"); else _explicitNullProperties?.Remove("incoterms"); } }
+        private string? _explicitNullValueIncoterms = default!;
 #nullable restore
 #else
-        public string Incoterms { get; set; }
+        public string Incoterms { get => _explicitNullValueIncoterms; set { _explicitNullValueIncoterms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incoterms"); else _explicitNullProperties?.Remove("incoterms"); } }
+        private string _explicitNullValueIncoterms = default!;
 #endif
         /// <summary>Defaults to current date if not provided. Date format: YYYY-MM-DD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipDate { get; set; }
+        public string? ShipDate { get => _explicitNullValueShipDate; set { _explicitNullValueShipDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipDate"); else _explicitNullProperties?.Remove("shipDate"); } }
+        private string? _explicitNullValueShipDate = default!;
 #nullable restore
 #else
-        public string ShipDate { get; set; }
+        public string ShipDate { get => _explicitNullValueShipDate; set { _explicitNullValueShipDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipDate"); else _explicitNullProperties?.Remove("shipDate"); } }
+        private string _explicitNullValueShipDate = default!;
 #endif
         /// <summary>Array of shipment item objects (commodities), that are in a shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipmentItems>? ShipmentItems { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipmentItems>? ShipmentItems { get => _explicitNullValueShipmentItems; set { _explicitNullValueShipmentItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentItems"); else _explicitNullProperties?.Remove("shipmentItems"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipmentItems>? _explicitNullValueShipmentItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipmentItems> ShipmentItems { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipmentItems> ShipmentItems { get => _explicitNullValueShipmentItems; set { _explicitNullValueShipmentItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentItems"); else _explicitNullProperties?.Remove("shipmentItems"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipmentItems> _explicitNullValueShipmentItems = default!;
 #endif
         /// <summary>Specifies the shipment type such as Gift, Document, Commercial (Sale), etc.Supported Shipment Types: 1. GIFT 2. COMMERCIAL 3. SALE 4. SAMPLE 5. REPAIR 6. RETURN 7. OTHER Default value will vary and based on import country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentType { get; set; }
+        public string? ShipmentType { get => _explicitNullValueShipmentType; set { _explicitNullValueShipmentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentType"); else _explicitNullProperties?.Remove("shipmentType"); } }
+        private string? _explicitNullValueShipmentType = default!;
 #nullable restore
 #else
-        public string ShipmentType { get; set; }
+        public string ShipmentType { get => _explicitNullValueShipmentType; set { _explicitNullValueShipmentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentType"); else _explicitNullProperties?.Remove("shipmentType"); } }
+        private string _explicitNullValueShipmentType = default!;
 #endif
         /// <summary>The modes of transportation (in upper case).Supported Values: 1. INT_AIR 2. INT_OCEAN 3. INT_RAIL 4. INT_TRUCK 5. DOM_AIR 6. DOM_OCEAN 7. DOM_RAIL 8. DOM_TRUCK Default value will vary based on the import country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransModes { get; set; }
+        public string? TransModes { get => _explicitNullValueTransModes; set { _explicitNullValueTransModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transModes"); else _explicitNullProperties?.Remove("transModes"); } }
+        private string? _explicitNullValueTransModes = default!;
 #nullable restore
 #else
-        public string TransModes { get; set; }
+        public string TransModes { get => _explicitNullValueTransModes; set { _explicitNullValueTransModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transModes"); else _explicitNullProperties?.Remove("transModes"); } }
+        private string _explicitNullValueTransModes = default!;
 #endif
         /// <summary>Specifies the Freight charge or transport costs, which are used for tariff calculations. Landed cost result might have some dependency on the freight charges in some countries. Therefore, freight amount should be always provided for accurate Landed Cost result. Allowed values: 1. Any non-negative floating-point number. 2. Numeric value with optional decimal value.</summary>
-        public double? TransportCost { get; set; }
+        public double? TransportCost { get => _explicitNullValueTransportCost; set { _explicitNullValueTransportCost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transportCost"); else _explicitNullProperties?.Remove("transportCost"); } }
+        private double? _explicitNullValueTransportCost = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment"/> and sets the default values.
         /// </summary>
@@ -105,7 +141,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostRequestShipment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -144,6 +180,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipmentType", ShipmentType);
             writer.WriteStringValue("transModes", TransModes);
             writer.WriteDoubleValue("transportCost", TransportCost);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

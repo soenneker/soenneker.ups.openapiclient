@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ScsIngestLogisticsShipmentDetailBillingInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billingTermCode") is { } nullNodeBillingTermCode && nullNodeBillingTermCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingTermCode = null;
+            if (parseNode.GetChildNode("billingTermDescription") is { } nullNodeBillingTermDescription && nullNodeBillingTermDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingTermDescription = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Billing term code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingTermCode { get; set; }
+        public string? BillingTermCode { get => _explicitNullValueBillingTermCode; set { _explicitNullValueBillingTermCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermCode"); else _explicitNullProperties?.Remove("billingTermCode"); } }
+        private string? _explicitNullValueBillingTermCode = default!;
 #nullable restore
 #else
-        public string BillingTermCode { get; set; }
+        public string BillingTermCode { get => _explicitNullValueBillingTermCode; set { _explicitNullValueBillingTermCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermCode"); else _explicitNullProperties?.Remove("billingTermCode"); } }
+        private string _explicitNullValueBillingTermCode = default!;
 #endif
         /// <summary>Billing term description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingTermDescription { get; set; }
+        public string? BillingTermDescription { get => _explicitNullValueBillingTermDescription; set { _explicitNullValueBillingTermDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermDescription"); else _explicitNullProperties?.Remove("billingTermDescription"); } }
+        private string? _explicitNullValueBillingTermDescription = default!;
 #nullable restore
 #else
-        public string BillingTermDescription { get; set; }
+        public string BillingTermDescription { get => _explicitNullValueBillingTermDescription; set { _explicitNullValueBillingTermDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermDescription"); else _explicitNullProperties?.Remove("billingTermDescription"); } }
+        private string _explicitNullValueBillingTermDescription = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ScsIngestLogisticsShipmentDetailBillingInformation"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ScsIngestLogisticsShipmentDetailBillingInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ScsIngestLogisticsShipmentDetailBillingInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ScsIngestLogisticsShipmentDetailBillingInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("billingTermCode", BillingTermCode);
             writer.WriteStringValue("billingTermDescription", BillingTermDescription);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

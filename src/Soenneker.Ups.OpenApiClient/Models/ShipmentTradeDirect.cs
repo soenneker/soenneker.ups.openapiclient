@@ -12,43 +12,64 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentTradeDirect : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Child") is { } nullNodeChild && nullNodeChild.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Child = null;
+            if (parseNode.GetChildNode("CurrencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("GeneralDescriptionOfGoods") is { } nullNodeGeneralDescriptionOfGoods && nullNodeGeneralDescriptionOfGoods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeneralDescriptionOfGoods = null;
+            if (parseNode.GetChildNode("Master") is { } nullNodeMaster && nullNodeMaster.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Master = null;
+            if (parseNode.GetChildNode("ShipmentType") is { } nullNodeShipmentType && nullNodeShipmentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A small package or LTL/TL shipment associated with a Trade Direct Master.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild? Child { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild? Child { get => _explicitNullValueChild; set { _explicitNullValueChild = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Child"); else _explicitNullProperties?.Remove("Child"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild? _explicitNullValueChild = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild Child { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild Child { get => _explicitNullValueChild; set { _explicitNullValueChild = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Child"); else _explicitNullProperties?.Remove("Child"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild _explicitNullValueChild = default!;
 #endif
         /// <summary>The currency code for the shipment as per ISO 4217.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get; set; }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrencyCode"); else _explicitNullProperties?.Remove("CurrencyCode"); } }
+        private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get; set; }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrencyCode"); else _explicitNullProperties?.Remove("CurrencyCode"); } }
+        private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>General description of the goods being shipped. It is required for master shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GeneralDescriptionOfGoods { get; set; }
+        public string? GeneralDescriptionOfGoods { get => _explicitNullValueGeneralDescriptionOfGoods; set { _explicitNullValueGeneralDescriptionOfGoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeneralDescriptionOfGoods"); else _explicitNullProperties?.Remove("GeneralDescriptionOfGoods"); } }
+        private string? _explicitNullValueGeneralDescriptionOfGoods = default!;
 #nullable restore
 #else
-        public string GeneralDescriptionOfGoods { get; set; }
+        public string GeneralDescriptionOfGoods { get => _explicitNullValueGeneralDescriptionOfGoods; set { _explicitNullValueGeneralDescriptionOfGoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeneralDescriptionOfGoods"); else _explicitNullProperties?.Remove("GeneralDescriptionOfGoods"); } }
+        private string _explicitNullValueGeneralDescriptionOfGoods = default!;
 #endif
         /// <summary>A collection of small package and LTL/TL shipments that are transported by UPS from the customer to the destination CFS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster? Master { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster? Master { get => _explicitNullValueMaster; set { _explicitNullValueMaster = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Master"); else _explicitNullProperties?.Remove("Master"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster? _explicitNullValueMaster = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster Master { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster Master { get => _explicitNullValueMaster; set { _explicitNullValueMaster = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Master"); else _explicitNullProperties?.Remove("Master"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster _explicitNullValueMaster = default!;
 #endif
         /// <summary>Consolidated shipment types.Valid values:- TRADEDIRECTAIR =  TradeDirect Air - consolidation, custom clearance, deconsolidation and delivery to multiple addresses                     within destination country, with Airport-to-door or door-to-door.- TRADEDIRECTOCEAN = TradeDirect Ocean - consolidation, ocean transportation, customs clearance, deconsolidation and delivery                      to multiple addresses within a destination country, with port-to-door and door-to-door service from shipper to consignee. Available from more than 70 ports.- TRADEDIRECTCROSSBORDER = TradeDirect CrossBoarder - consolidation, customs clearance, deconsolidation and delivery to multiple addresses                           within the destination country, with door-to-door service across North American borders.                </summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirectShipmentType? ShipmentType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirectShipmentType? ShipmentType { get => _explicitNullValueShipmentType; set { _explicitNullValueShipmentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentType"); else _explicitNullProperties?.Remove("ShipmentType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirectShipmentType? _explicitNullValueShipmentType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect"/> and sets the default values.
         /// </summary>
@@ -64,7 +85,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirect(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("GeneralDescriptionOfGoods", GeneralDescriptionOfGoods);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectMaster>("Master", Master);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentTradeDirectShipmentType>("ShipmentType", ShipmentType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

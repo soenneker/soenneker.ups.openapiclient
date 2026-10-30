@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentResultsFrsShipmentData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("FreightDensityRate") is { } nullNodeFreightDensityRate && nullNodeFreightDensityRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightDensityRate = null;
+            if (parseNode.GetChildNode("HandlingUnits") is { } nullNodeHandlingUnits && nullNodeHandlingUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingUnits = null;
+            if (parseNode.GetChildNode("TransportationCharges") is { } nullNodeTransportationCharges && nullNodeTransportationCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportationCharges = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>FreightDensityRate container for Density based rating.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataFreightDensityRate? FreightDensityRate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataFreightDensityRate? FreightDensityRate { get => _explicitNullValueFreightDensityRate; set { _explicitNullValueFreightDensityRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightDensityRate"); else _explicitNullProperties?.Remove("FreightDensityRate"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataFreightDensityRate? _explicitNullValueFreightDensityRate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataFreightDensityRate FreightDensityRate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataFreightDensityRate FreightDensityRate { get => _explicitNullValueFreightDensityRate; set { _explicitNullValueFreightDensityRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightDensityRate"); else _explicitNullProperties?.Remove("FreightDensityRate"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataFreightDensityRate _explicitNullValueFreightDensityRate = default!;
 #endif
         /// <summary>Handling Unit for Density based rating container.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataHandlingUnits>? HandlingUnits { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataHandlingUnits>? HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingUnits"); else _explicitNullProperties?.Remove("HandlingUnits"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataHandlingUnits>? _explicitNullValueHandlingUnits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataHandlingUnits> HandlingUnits { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataHandlingUnits> HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingUnits"); else _explicitNullProperties?.Remove("HandlingUnits"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataHandlingUnits> _explicitNullValueHandlingUnits = default!;
 #endif
         /// <summary>Transportation charges container. Ground Freight Pricing transportation charges. These are only returned for Ground Freight Pricing enabled shipper account number when the user includes the FRSShipmentIndicator in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges? TransportationCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges? TransportationCharges { get => _explicitNullValueTransportationCharges; set { _explicitNullValueTransportationCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportationCharges"); else _explicitNullProperties?.Remove("TransportationCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges? _explicitNullValueTransportationCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges TransportationCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges TransportationCharges { get => _explicitNullValueTransportationCharges; set { _explicitNullValueTransportationCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportationCharges"); else _explicitNullProperties?.Remove("TransportationCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges _explicitNullValueTransportationCharges = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataFreightDensityRate>("FreightDensityRate", FreightDensityRate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataHandlingUnits>("HandlingUnits", HandlingUnits);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges>("TransportationCharges", TransportationCharges);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

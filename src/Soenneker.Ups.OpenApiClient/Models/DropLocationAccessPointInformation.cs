@@ -12,64 +12,92 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DropLocationAccessPointInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AccessPointStatus") is { } nullNodeAccessPointStatus && nullNodeAccessPointStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessPointStatus = null;
+            if (parseNode.GetChildNode("Availability") is { } nullNodeAvailability && nullNodeAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Availability = null;
+            if (parseNode.GetChildNode("BusinessClassificationList") is { } nullNodeBusinessClassificationList && nullNodeBusinessClassificationList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessClassificationList = null;
+            if (parseNode.GetChildNode("FacilitySLIC") is { } nullNodeFacilitySLIC && nullNodeFacilitySLIC.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacilitySLIC = null;
+            if (parseNode.GetChildNode("ImageURL") is { } nullNodeImageURL && nullNodeImageURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageURL = null;
+            if (parseNode.GetChildNode("PrivateNetworkList") is { } nullNodePrivateNetworkList && nullNodePrivateNetworkList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateNetworkList = null;
+            if (parseNode.GetChildNode("PublicAccessPointID") is { } nullNodePublicAccessPointID && nullNodePublicAccessPointID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicAccessPointID = null;
+        }
+
         /// <summary>Container for UPS AccessPoint status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAccessPointStatus? AccessPointStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAccessPointStatus? AccessPointStatus { get => _explicitNullValueAccessPointStatus; set { _explicitNullValueAccessPointStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointStatus"); else _explicitNullProperties?.Remove("AccessPointStatus"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAccessPointStatus? _explicitNullValueAccessPointStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAccessPointStatus AccessPointStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAccessPointStatus AccessPointStatus { get => _explicitNullValueAccessPointStatus; set { _explicitNullValueAccessPointStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointStatus"); else _explicitNullProperties?.Remove("AccessPointStatus"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAccessPointStatus _explicitNullValueAccessPointStatus = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container to hold the status of shipping or DRC/DCO availability of a UPS Access Point.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability? Availability { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability? Availability { get => _explicitNullValueAvailability; set { _explicitNullValueAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Availability"); else _explicitNullProperties?.Remove("Availability"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability? _explicitNullValueAvailability = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability Availability { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability Availability { get => _explicitNullValueAvailability; set { _explicitNullValueAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Availability"); else _explicitNullProperties?.Remove("Availability"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability _explicitNullValueAvailability = default!;
 #endif
         /// <summary>Container to hold list for business classification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationBusinessClassificationList? BusinessClassificationList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationBusinessClassificationList? BusinessClassificationList { get => _explicitNullValueBusinessClassificationList; set { _explicitNullValueBusinessClassificationList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessClassificationList"); else _explicitNullProperties?.Remove("BusinessClassificationList"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationBusinessClassificationList? _explicitNullValueBusinessClassificationList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationBusinessClassificationList BusinessClassificationList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationBusinessClassificationList BusinessClassificationList { get => _explicitNullValueBusinessClassificationList; set { _explicitNullValueBusinessClassificationList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessClassificationList"); else _explicitNullProperties?.Remove("BusinessClassificationList"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationBusinessClassificationList _explicitNullValueBusinessClassificationList = default!;
 #endif
         /// <summary>Holds the value of facility SLIC of Access Point Location. Not implemented currently. For future use.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FacilitySLIC { get; set; }
+        public string? FacilitySLIC { get => _explicitNullValueFacilitySLIC; set { _explicitNullValueFacilitySLIC = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacilitySLIC"); else _explicitNullProperties?.Remove("FacilitySLIC"); } }
+        private string? _explicitNullValueFacilitySLIC = default!;
 #nullable restore
 #else
-        public string FacilitySLIC { get; set; }
+        public string FacilitySLIC { get => _explicitNullValueFacilitySLIC; set { _explicitNullValueFacilitySLIC = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacilitySLIC"); else _explicitNullProperties?.Remove("FacilitySLIC"); } }
+        private string _explicitNullValueFacilitySLIC = default!;
 #endif
         /// <summary>Image URL associated with UPS access point.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageURL { get; set; }
+        public string? ImageURL { get => _explicitNullValueImageURL; set { _explicitNullValueImageURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ImageURL"); else _explicitNullProperties?.Remove("ImageURL"); } }
+        private string? _explicitNullValueImageURL = default!;
 #nullable restore
 #else
-        public string ImageURL { get; set; }
+        public string ImageURL { get => _explicitNullValueImageURL; set { _explicitNullValueImageURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ImageURL"); else _explicitNullProperties?.Remove("ImageURL"); } }
+        private string _explicitNullValueImageURL = default!;
 #endif
         /// <summary>Container to hold the list of private networks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationPrivateNetworkList? PrivateNetworkList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationPrivateNetworkList? PrivateNetworkList { get => _explicitNullValuePrivateNetworkList; set { _explicitNullValuePrivateNetworkList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrivateNetworkList"); else _explicitNullProperties?.Remove("PrivateNetworkList"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationPrivateNetworkList? _explicitNullValuePrivateNetworkList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationPrivateNetworkList PrivateNetworkList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationPrivateNetworkList PrivateNetworkList { get => _explicitNullValuePrivateNetworkList; set { _explicitNullValuePrivateNetworkList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrivateNetworkList"); else _explicitNullProperties?.Remove("PrivateNetworkList"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationPrivateNetworkList _explicitNullValuePrivateNetworkList = default!;
 #endif
         /// <summary>The Public Access Point ID associated with UPS access point.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PublicAccessPointID { get; set; }
+        public string? PublicAccessPointID { get => _explicitNullValuePublicAccessPointID; set { _explicitNullValuePublicAccessPointID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PublicAccessPointID"); else _explicitNullProperties?.Remove("PublicAccessPointID"); } }
+        private string? _explicitNullValuePublicAccessPointID = default!;
 #nullable restore
 #else
-        public string PublicAccessPointID { get; set; }
+        public string PublicAccessPointID { get => _explicitNullValuePublicAccessPointID; set { _explicitNullValuePublicAccessPointID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PublicAccessPointID"); else _explicitNullProperties?.Remove("PublicAccessPointID"); } }
+        private string _explicitNullValuePublicAccessPointID = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DropLocationAccessPointInformation"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DropLocationAccessPointInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DropLocationAccessPointInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DropLocationAccessPointInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("ImageURL", ImageURL);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationPrivateNetworkList>("PrivateNetworkList", PrivateNetworkList);
             writer.WriteStringValue("PublicAccessPointID", PublicAccessPointID);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

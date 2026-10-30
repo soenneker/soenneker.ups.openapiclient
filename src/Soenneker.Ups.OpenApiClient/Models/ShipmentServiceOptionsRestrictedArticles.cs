@@ -12,80 +12,114 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentServiceOptionsRestrictedArticles : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AlcoholicBeveragesIndicator") is { } nullNodeAlcoholicBeveragesIndicator && nullNodeAlcoholicBeveragesIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlcoholicBeveragesIndicator = null;
+            if (parseNode.GetChildNode("DiagnosticSpecimensIndicator") is { } nullNodeDiagnosticSpecimensIndicator && nullNodeDiagnosticSpecimensIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiagnosticSpecimensIndicator = null;
+            if (parseNode.GetChildNode("ECigarettesIndicator") is { } nullNodeECigarettesIndicator && nullNodeECigarettesIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ECigarettesIndicator = null;
+            if (parseNode.GetChildNode("HempCBDIndicator") is { } nullNodeHempCBDIndicator && nullNodeHempCBDIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HempCBDIndicator = null;
+            if (parseNode.GetChildNode("PerishablesIndicator") is { } nullNodePerishablesIndicator && nullNodePerishablesIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerishablesIndicator = null;
+            if (parseNode.GetChildNode("PlantsIndicator") is { } nullNodePlantsIndicator && nullNodePlantsIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlantsIndicator = null;
+            if (parseNode.GetChildNode("SeedsIndicator") is { } nullNodeSeedsIndicator && nullNodeSeedsIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeedsIndicator = null;
+            if (parseNode.GetChildNode("SpecialExceptionsIndicator") is { } nullNodeSpecialExceptionsIndicator && nullNodeSpecialExceptionsIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialExceptionsIndicator = null;
+            if (parseNode.GetChildNode("TobaccoIndicator") is { } nullNodeTobaccoIndicator && nullNodeTobaccoIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TobaccoIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This field is a flag to indicate if the package has Alcohol. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AlcoholicBeveragesIndicator { get; set; }
+        public string? AlcoholicBeveragesIndicator { get => _explicitNullValueAlcoholicBeveragesIndicator; set { _explicitNullValueAlcoholicBeveragesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlcoholicBeveragesIndicator"); else _explicitNullProperties?.Remove("AlcoholicBeveragesIndicator"); } }
+        private string? _explicitNullValueAlcoholicBeveragesIndicator = default!;
 #nullable restore
 #else
-        public string AlcoholicBeveragesIndicator { get; set; }
+        public string AlcoholicBeveragesIndicator { get => _explicitNullValueAlcoholicBeveragesIndicator; set { _explicitNullValueAlcoholicBeveragesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlcoholicBeveragesIndicator"); else _explicitNullProperties?.Remove("AlcoholicBeveragesIndicator"); } }
+        private string _explicitNullValueAlcoholicBeveragesIndicator = default!;
 #endif
         /// <summary>This field is a flag to indicate if the package has Biological substances. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments. Lane check will happen based on postal code/ city.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiagnosticSpecimensIndicator { get; set; }
+        public string? DiagnosticSpecimensIndicator { get => _explicitNullValueDiagnosticSpecimensIndicator; set { _explicitNullValueDiagnosticSpecimensIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DiagnosticSpecimensIndicator"); else _explicitNullProperties?.Remove("DiagnosticSpecimensIndicator"); } }
+        private string? _explicitNullValueDiagnosticSpecimensIndicator = default!;
 #nullable restore
 #else
-        public string DiagnosticSpecimensIndicator { get; set; }
+        public string DiagnosticSpecimensIndicator { get => _explicitNullValueDiagnosticSpecimensIndicator; set { _explicitNullValueDiagnosticSpecimensIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DiagnosticSpecimensIndicator"); else _explicitNullProperties?.Remove("DiagnosticSpecimensIndicator"); } }
+        private string _explicitNullValueDiagnosticSpecimensIndicator = default!;
 #endif
         /// <summary>This field is a flag to indicate if the package has E-Cigarettes. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ECigarettesIndicator { get; set; }
+        public string? ECigarettesIndicator { get => _explicitNullValueECigarettesIndicator; set { _explicitNullValueECigarettesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ECigarettesIndicator"); else _explicitNullProperties?.Remove("ECigarettesIndicator"); } }
+        private string? _explicitNullValueECigarettesIndicator = default!;
 #nullable restore
 #else
-        public string ECigarettesIndicator { get; set; }
+        public string ECigarettesIndicator { get => _explicitNullValueECigarettesIndicator; set { _explicitNullValueECigarettesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ECigarettesIndicator"); else _explicitNullProperties?.Remove("ECigarettesIndicator"); } }
+        private string _explicitNullValueECigarettesIndicator = default!;
 #endif
         /// <summary>This field is a flag to indicate if the package has Hemp/CBD. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HempCBDIndicator { get; set; }
+        public string? HempCBDIndicator { get => _explicitNullValueHempCBDIndicator; set { _explicitNullValueHempCBDIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HempCBDIndicator"); else _explicitNullProperties?.Remove("HempCBDIndicator"); } }
+        private string? _explicitNullValueHempCBDIndicator = default!;
 #nullable restore
 #else
-        public string HempCBDIndicator { get; set; }
+        public string HempCBDIndicator { get => _explicitNullValueHempCBDIndicator; set { _explicitNullValueHempCBDIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HempCBDIndicator"); else _explicitNullProperties?.Remove("HempCBDIndicator"); } }
+        private string _explicitNullValueHempCBDIndicator = default!;
 #endif
         /// <summary>This field is a flag to indicate if the package has Perishables. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PerishablesIndicator { get; set; }
+        public string? PerishablesIndicator { get => _explicitNullValuePerishablesIndicator; set { _explicitNullValuePerishablesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PerishablesIndicator"); else _explicitNullProperties?.Remove("PerishablesIndicator"); } }
+        private string? _explicitNullValuePerishablesIndicator = default!;
 #nullable restore
 #else
-        public string PerishablesIndicator { get; set; }
+        public string PerishablesIndicator { get => _explicitNullValuePerishablesIndicator; set { _explicitNullValuePerishablesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PerishablesIndicator"); else _explicitNullProperties?.Remove("PerishablesIndicator"); } }
+        private string _explicitNullValuePerishablesIndicator = default!;
 #endif
         /// <summary>This field is a flag to indicate if the package has Plants. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlantsIndicator { get; set; }
+        public string? PlantsIndicator { get => _explicitNullValuePlantsIndicator; set { _explicitNullValuePlantsIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PlantsIndicator"); else _explicitNullProperties?.Remove("PlantsIndicator"); } }
+        private string? _explicitNullValuePlantsIndicator = default!;
 #nullable restore
 #else
-        public string PlantsIndicator { get; set; }
+        public string PlantsIndicator { get => _explicitNullValuePlantsIndicator; set { _explicitNullValuePlantsIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PlantsIndicator"); else _explicitNullProperties?.Remove("PlantsIndicator"); } }
+        private string _explicitNullValuePlantsIndicator = default!;
 #endif
         /// <summary>This field is a flag to indicate if the package has Seeds. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SeedsIndicator { get; set; }
+        public string? SeedsIndicator { get => _explicitNullValueSeedsIndicator; set { _explicitNullValueSeedsIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SeedsIndicator"); else _explicitNullProperties?.Remove("SeedsIndicator"); } }
+        private string? _explicitNullValueSeedsIndicator = default!;
 #nullable restore
 #else
-        public string SeedsIndicator { get; set; }
+        public string SeedsIndicator { get => _explicitNullValueSeedsIndicator; set { _explicitNullValueSeedsIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SeedsIndicator"); else _explicitNullProperties?.Remove("SeedsIndicator"); } }
+        private string _explicitNullValueSeedsIndicator = default!;
 #endif
         /// <summary>This field is a flag to indicate if the package has Special Exceptions Restricted Materials. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpecialExceptionsIndicator { get; set; }
+        public string? SpecialExceptionsIndicator { get => _explicitNullValueSpecialExceptionsIndicator; set { _explicitNullValueSpecialExceptionsIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SpecialExceptionsIndicator"); else _explicitNullProperties?.Remove("SpecialExceptionsIndicator"); } }
+        private string? _explicitNullValueSpecialExceptionsIndicator = default!;
 #nullable restore
 #else
-        public string SpecialExceptionsIndicator { get; set; }
+        public string SpecialExceptionsIndicator { get => _explicitNullValueSpecialExceptionsIndicator; set { _explicitNullValueSpecialExceptionsIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SpecialExceptionsIndicator"); else _explicitNullProperties?.Remove("SpecialExceptionsIndicator"); } }
+        private string _explicitNullValueSpecialExceptionsIndicator = default!;
 #endif
         /// <summary>This field is a flag to indicate if the package has Tobacco. True if present; false otherwise.  Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TobaccoIndicator { get; set; }
+        public string? TobaccoIndicator { get => _explicitNullValueTobaccoIndicator; set { _explicitNullValueTobaccoIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TobaccoIndicator"); else _explicitNullProperties?.Remove("TobaccoIndicator"); } }
+        private string? _explicitNullValueTobaccoIndicator = default!;
 #nullable restore
 #else
-        public string TobaccoIndicator { get; set; }
+        public string TobaccoIndicator { get => _explicitNullValueTobaccoIndicator; set { _explicitNullValueTobaccoIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TobaccoIndicator"); else _explicitNullProperties?.Remove("TobaccoIndicator"); } }
+        private string _explicitNullValueTobaccoIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsRestrictedArticles"/> and sets the default values.
@@ -102,7 +136,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsRestrictedArticles CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsRestrictedArticles();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsRestrictedArticles(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -139,6 +173,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("SeedsIndicator", SeedsIndicator);
             writer.WriteStringValue("SpecialExceptionsIndicator", SpecialExceptionsIndicator);
             writer.WriteStringValue("TobaccoIndicator", TobaccoIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

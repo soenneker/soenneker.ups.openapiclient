@@ -12,36 +12,56 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentException : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("exceptionDateTime") is { } nullNodeExceptionDateTime && nullNodeExceptionDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionDateTime = null;
+            if (parseNode.GetChildNode("exceptionReason") is { } nullNodeExceptionReason && nullNodeExceptionReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionReason = null;
+            if (parseNode.GetChildNode("exceptionResolvedDateTime") is { } nullNodeExceptionResolvedDateTime && nullNodeExceptionResolvedDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionResolvedDateTime = null;
+            if (parseNode.GetChildNode("exceptionType") is { } nullNodeExceptionType && nullNodeExceptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionType = null;
+            if (parseNode.GetChildNode("isException") is { } nullNodeIsException && nullNodeIsException.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsException = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The date and time when the exception occurred.</summary>
-        public DateTimeOffset? ExceptionDateTime { get; set; }
+        public DateTimeOffset? ExceptionDateTime { get => _explicitNullValueExceptionDateTime; set { _explicitNullValueExceptionDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionDateTime"); else _explicitNullProperties?.Remove("exceptionDateTime"); } }
+        private DateTimeOffset? _explicitNullValueExceptionDateTime = default!;
         /// <summary>The reason for the exception.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExceptionReason { get; set; }
+        public string? ExceptionReason { get => _explicitNullValueExceptionReason; set { _explicitNullValueExceptionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionReason"); else _explicitNullProperties?.Remove("exceptionReason"); } }
+        private string? _explicitNullValueExceptionReason = default!;
 #nullable restore
 #else
-        public string ExceptionReason { get; set; }
+        public string ExceptionReason { get => _explicitNullValueExceptionReason; set { _explicitNullValueExceptionReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionReason"); else _explicitNullProperties?.Remove("exceptionReason"); } }
+        private string _explicitNullValueExceptionReason = default!;
 #endif
         /// <summary>The date and time when the exception was resolved, if applicable.</summary>
-        public DateTimeOffset? ExceptionResolvedDateTime { get; set; }
+        public DateTimeOffset? ExceptionResolvedDateTime { get => _explicitNullValueExceptionResolvedDateTime; set { _explicitNullValueExceptionResolvedDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionResolvedDateTime"); else _explicitNullProperties?.Remove("exceptionResolvedDateTime"); } }
+        private DateTimeOffset? _explicitNullValueExceptionResolvedDateTime = default!;
         /// <summary>The type or category of the exception.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExceptionType { get; set; }
+        public string? ExceptionType { get => _explicitNullValueExceptionType; set { _explicitNullValueExceptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionType"); else _explicitNullProperties?.Remove("exceptionType"); } }
+        private string? _explicitNullValueExceptionType = default!;
 #nullable restore
 #else
-        public string ExceptionType { get; set; }
+        public string ExceptionType { get => _explicitNullValueExceptionType; set { _explicitNullValueExceptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionType"); else _explicitNullProperties?.Remove("exceptionType"); } }
+        private string _explicitNullValueExceptionType = default!;
 #endif
         /// <summary>Flag indicating whether this is an active exception (true/false).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsException { get; set; }
+        public string? IsException { get => _explicitNullValueIsException; set { _explicitNullValueIsException = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isException"); else _explicitNullProperties?.Remove("isException"); } }
+        private string? _explicitNullValueIsException = default!;
 #nullable restore
 #else
-        public string IsException { get; set; }
+        public string IsException { get => _explicitNullValueIsException; set { _explicitNullValueIsException = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isException"); else _explicitNullProperties?.Remove("isException"); } }
+        private string _explicitNullValueIsException = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentException"/> and sets the default values.
@@ -58,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentException CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentException();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentException(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("exceptionResolvedDateTime", ExceptionResolvedDateTime);
             writer.WriteStringValue("exceptionType", ExceptionType);
             writer.WriteStringValue("isException", IsException);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

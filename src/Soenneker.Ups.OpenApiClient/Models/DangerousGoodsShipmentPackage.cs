@@ -12,72 +12,103 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DangerousGoodsShipmentPackage : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ChemicalRecord") is { } nullNodeChemicalRecord && nullNodeChemicalRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalRecord = null;
+            if (parseNode.GetChildNode("EmergencyContact") is { } nullNodeEmergencyContact && nullNodeEmergencyContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmergencyContact = null;
+            if (parseNode.GetChildNode("EmergencyPhone") is { } nullNodeEmergencyPhone && nullNodeEmergencyPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmergencyPhone = null;
+            if (parseNode.GetChildNode("OverPackedIndicator") is { } nullNodeOverPackedIndicator && nullNodeOverPackedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverPackedIndicator = null;
+            if (parseNode.GetChildNode("PackageIdentifier") is { } nullNodePackageIdentifier && nullNodePackageIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageIdentifier = null;
+            if (parseNode.GetChildNode("PackageWeight") is { } nullNodePackageWeight && nullNodePackageWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageWeight = null;
+            if (parseNode.GetChildNode("QValue") is { } nullNodeQValue && nullNodeQValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QValue = null;
+            if (parseNode.GetChildNode("TransportationMode") is { } nullNodeTransportationMode && nullNodeTransportationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportationMode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ChemicalRecord property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageChemicalRecord>? ChemicalRecord { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageChemicalRecord>? ChemicalRecord { get => _explicitNullValueChemicalRecord; set { _explicitNullValueChemicalRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecord"); else _explicitNullProperties?.Remove("ChemicalRecord"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageChemicalRecord>? _explicitNullValueChemicalRecord = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageChemicalRecord> ChemicalRecord { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageChemicalRecord> ChemicalRecord { get => _explicitNullValueChemicalRecord; set { _explicitNullValueChemicalRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecord"); else _explicitNullProperties?.Remove("ChemicalRecord"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageChemicalRecord> _explicitNullValueChemicalRecord = default!;
 #endif
         /// <summary>The emergency information, contact name and/or contract number, required to be communicated when a call is placed to the EmergencyPhone.The information is required if there is a value in the EmergencyPhone field above and the shipment is with a US50 or PR origin and/or destination and the RegulationSet is IATA.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmergencyContact { get; set; }
+        public string? EmergencyContact { get => _explicitNullValueEmergencyContact; set { _explicitNullValueEmergencyContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EmergencyContact"); else _explicitNullProperties?.Remove("EmergencyContact"); } }
+        private string? _explicitNullValueEmergencyContact = default!;
 #nullable restore
 #else
-        public string EmergencyContact { get; set; }
+        public string EmergencyContact { get => _explicitNullValueEmergencyContact; set { _explicitNullValueEmergencyContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EmergencyContact"); else _explicitNullProperties?.Remove("EmergencyContact"); } }
+        private string _explicitNullValueEmergencyContact = default!;
 #endif
         /// <summary>24 Hour Emergency Phone Number of the shipper.Valid values for this field are (0) through (9) with trailing blanks.For numbers within the U.S., the layout is 1, area code, 7-digit number. For all other countries or territories the layout is country or territory code, area code, number.  The Emergency Phone Number can only include the following allowable characters“period “.”, dash “-“, plus sign “+” and conventional parentheses “(“ and “)”, “EXT or OPT”Required when (TDG regulation set and CommodityRegulatedLevelCode = FR)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmergencyPhone { get; set; }
+        public string? EmergencyPhone { get => _explicitNullValueEmergencyPhone; set { _explicitNullValueEmergencyPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EmergencyPhone"); else _explicitNullProperties?.Remove("EmergencyPhone"); } }
+        private string? _explicitNullValueEmergencyPhone = default!;
 #nullable restore
 #else
-        public string EmergencyPhone { get; set; }
+        public string EmergencyPhone { get => _explicitNullValueEmergencyPhone; set { _explicitNullValueEmergencyPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EmergencyPhone"); else _explicitNullProperties?.Remove("EmergencyPhone"); } }
+        private string _explicitNullValueEmergencyPhone = default!;
 #endif
         /// <summary>Presence/Absence Indicator. Any value is ignored. Presence indicates that shipment is over pack.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverPackedIndicator { get; set; }
+        public string? OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
+        private string? _explicitNullValueOverPackedIndicator = default!;
 #nullable restore
 #else
-        public string OverPackedIndicator { get; set; }
+        public string OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
+        private string _explicitNullValueOverPackedIndicator = default!;
 #endif
         /// <summary>Identifies the package containing Dangerous Goods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageIdentifier { get; set; }
+        public string? PackageIdentifier { get => _explicitNullValuePackageIdentifier; set { _explicitNullValuePackageIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageIdentifier"); else _explicitNullProperties?.Remove("PackageIdentifier"); } }
+        private string? _explicitNullValuePackageIdentifier = default!;
 #nullable restore
 #else
-        public string PackageIdentifier { get; set; }
+        public string PackageIdentifier { get => _explicitNullValuePackageIdentifier; set { _explicitNullValuePackageIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageIdentifier"); else _explicitNullProperties?.Remove("PackageIdentifier"); } }
+        private string _explicitNullValuePackageIdentifier = default!;
 #endif
         /// <summary>Container to hold package weight information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackagePackageWeight? PackageWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackagePackageWeight? PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageWeight"); else _explicitNullProperties?.Remove("PackageWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackagePackageWeight? _explicitNullValuePackageWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackagePackageWeight PackageWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackagePackageWeight PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageWeight"); else _explicitNullProperties?.Remove("PackageWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackagePackageWeight _explicitNullValuePackageWeight = default!;
 #endif
         /// <summary>This is required when a HazMat shipment specifies AllPackedInOneIndicator and the regulation set for that shipment is IATA.   Valid values: 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QValue { get; set; }
+        public string? QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
+        private string? _explicitNullValueQValue = default!;
 #nullable restore
 #else
-        public string QValue { get; set; }
+        public string QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
+        private string _explicitNullValueQValue = default!;
 #endif
         /// <summary>The method of transport by which a shipment is approved to move and the regulations associated with that method.  Only required when the CommodityRegulatedLevelCode is FR or LQ.  Valid entries include: GND, CAO, and PAX.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransportationMode { get; set; }
+        public string? TransportationMode { get => _explicitNullValueTransportationMode; set { _explicitNullValueTransportationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportationMode"); else _explicitNullProperties?.Remove("TransportationMode"); } }
+        private string? _explicitNullValueTransportationMode = default!;
 #nullable restore
 #else
-        public string TransportationMode { get; set; }
+        public string TransportationMode { get => _explicitNullValueTransportationMode; set { _explicitNullValueTransportationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportationMode"); else _explicitNullProperties?.Remove("TransportationMode"); } }
+        private string _explicitNullValueTransportationMode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsShipmentPackage"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsShipmentPackage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsShipmentPackage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsShipmentPackage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackagePackageWeight>("PackageWeight", PackageWeight);
             writer.WriteStringValue("QValue", QValue);
             writer.WriteStringValue("TransportationMode", TransportationMode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

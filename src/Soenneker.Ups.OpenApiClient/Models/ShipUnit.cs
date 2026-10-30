@@ -12,120 +12,169 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipUnit : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dimensionWeight") is { } nullNodeDimensionWeight && nullNodeDimensionWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DimensionWeight = null;
+            if (parseNode.GetChildNode("dimensionWeightUOM") is { } nullNodeDimensionWeightUOM && nullNodeDimensionWeightUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DimensionWeightUOM = null;
+            if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("heightUOM") is { } nullNodeHeightUOM && nullNodeHeightUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeightUOM = null;
+            if (parseNode.GetChildNode("itemDesciption") is { } nullNodeItemDesciption && nullNodeItemDesciption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemDesciption = null;
+            if (parseNode.GetChildNode("length") is { } nullNodeLength && nullNodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Length = null;
+            if (parseNode.GetChildNode("lengthUOM") is { } nullNodeLengthUOM && nullNodeLengthUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LengthUOM = null;
+            if (parseNode.GetChildNode("shipmentQuantity") is { } nullNodeShipmentQuantity && nullNodeShipmentQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentQuantity = null;
+            if (parseNode.GetChildNode("volume") is { } nullNodeVolume && nullNodeVolume.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Volume = null;
+            if (parseNode.GetChildNode("volumeUOM") is { } nullNodeVolumeUOM && nullNodeVolumeUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VolumeUOM = null;
+            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("weightUOM") is { } nullNodeWeightUOM && nullNodeWeightUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUOM = null;
+            if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
+            if (parseNode.GetChildNode("widthUOM") is { } nullNodeWidthUOM && nullNodeWidthUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WidthUOM = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Dimensional weight</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DimensionWeight { get; set; }
+        public string? DimensionWeight { get => _explicitNullValueDimensionWeight; set { _explicitNullValueDimensionWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensionWeight"); else _explicitNullProperties?.Remove("dimensionWeight"); } }
+        private string? _explicitNullValueDimensionWeight = default!;
 #nullable restore
 #else
-        public string DimensionWeight { get; set; }
+        public string DimensionWeight { get => _explicitNullValueDimensionWeight; set { _explicitNullValueDimensionWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensionWeight"); else _explicitNullProperties?.Remove("dimensionWeight"); } }
+        private string _explicitNullValueDimensionWeight = default!;
 #endif
         /// <summary>Dimensional weight unit of measure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DimensionWeightUOM { get; set; }
+        public string? DimensionWeightUOM { get => _explicitNullValueDimensionWeightUOM; set { _explicitNullValueDimensionWeightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensionWeightUOM"); else _explicitNullProperties?.Remove("dimensionWeightUOM"); } }
+        private string? _explicitNullValueDimensionWeightUOM = default!;
 #nullable restore
 #else
-        public string DimensionWeightUOM { get; set; }
+        public string DimensionWeightUOM { get => _explicitNullValueDimensionWeightUOM; set { _explicitNullValueDimensionWeightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensionWeightUOM"); else _explicitNullProperties?.Remove("dimensionWeightUOM"); } }
+        private string _explicitNullValueDimensionWeightUOM = default!;
 #endif
         /// <summary>Package height</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Height { get; set; }
+        public string? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        private string? _explicitNullValueHeight = default!;
 #nullable restore
 #else
-        public string Height { get; set; }
+        public string Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        private string _explicitNullValueHeight = default!;
 #endif
         /// <summary>Height unit of measure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeightUOM { get; set; }
+        public string? HeightUOM { get => _explicitNullValueHeightUOM; set { _explicitNullValueHeightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heightUOM"); else _explicitNullProperties?.Remove("heightUOM"); } }
+        private string? _explicitNullValueHeightUOM = default!;
 #nullable restore
 #else
-        public string HeightUOM { get; set; }
+        public string HeightUOM { get => _explicitNullValueHeightUOM; set { _explicitNullValueHeightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heightUOM"); else _explicitNullProperties?.Remove("heightUOM"); } }
+        private string _explicitNullValueHeightUOM = default!;
 #endif
         /// <summary>Item description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemDesciption { get; set; }
+        public string? ItemDesciption { get => _explicitNullValueItemDesciption; set { _explicitNullValueItemDesciption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemDesciption"); else _explicitNullProperties?.Remove("itemDesciption"); } }
+        private string? _explicitNullValueItemDesciption = default!;
 #nullable restore
 #else
-        public string ItemDesciption { get; set; }
+        public string ItemDesciption { get => _explicitNullValueItemDesciption; set { _explicitNullValueItemDesciption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemDesciption"); else _explicitNullProperties?.Remove("itemDesciption"); } }
+        private string _explicitNullValueItemDesciption = default!;
 #endif
         /// <summary>Package length</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Length { get; set; }
+        public string? Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
+        private string? _explicitNullValueLength = default!;
 #nullable restore
 #else
-        public string Length { get; set; }
+        public string Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
+        private string _explicitNullValueLength = default!;
 #endif
         /// <summary>Length unit of measure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LengthUOM { get; set; }
+        public string? LengthUOM { get => _explicitNullValueLengthUOM; set { _explicitNullValueLengthUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lengthUOM"); else _explicitNullProperties?.Remove("lengthUOM"); } }
+        private string? _explicitNullValueLengthUOM = default!;
 #nullable restore
 #else
-        public string LengthUOM { get; set; }
+        public string LengthUOM { get => _explicitNullValueLengthUOM; set { _explicitNullValueLengthUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lengthUOM"); else _explicitNullProperties?.Remove("lengthUOM"); } }
+        private string _explicitNullValueLengthUOM = default!;
 #endif
         /// <summary>Shipment quantity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentQuantity { get; set; }
+        public string? ShipmentQuantity { get => _explicitNullValueShipmentQuantity; set { _explicitNullValueShipmentQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentQuantity"); else _explicitNullProperties?.Remove("shipmentQuantity"); } }
+        private string? _explicitNullValueShipmentQuantity = default!;
 #nullable restore
 #else
-        public string ShipmentQuantity { get; set; }
+        public string ShipmentQuantity { get => _explicitNullValueShipmentQuantity; set { _explicitNullValueShipmentQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentQuantity"); else _explicitNullProperties?.Remove("shipmentQuantity"); } }
+        private string _explicitNullValueShipmentQuantity = default!;
 #endif
         /// <summary>Package volume</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Volume { get; set; }
+        public string? Volume { get => _explicitNullValueVolume; set { _explicitNullValueVolume = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volume"); else _explicitNullProperties?.Remove("volume"); } }
+        private string? _explicitNullValueVolume = default!;
 #nullable restore
 #else
-        public string Volume { get; set; }
+        public string Volume { get => _explicitNullValueVolume; set { _explicitNullValueVolume = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volume"); else _explicitNullProperties?.Remove("volume"); } }
+        private string _explicitNullValueVolume = default!;
 #endif
         /// <summary>Volume unit of measure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VolumeUOM { get; set; }
+        public string? VolumeUOM { get => _explicitNullValueVolumeUOM; set { _explicitNullValueVolumeUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumeUOM"); else _explicitNullProperties?.Remove("volumeUOM"); } }
+        private string? _explicitNullValueVolumeUOM = default!;
 #nullable restore
 #else
-        public string VolumeUOM { get; set; }
+        public string VolumeUOM { get => _explicitNullValueVolumeUOM; set { _explicitNullValueVolumeUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumeUOM"); else _explicitNullProperties?.Remove("volumeUOM"); } }
+        private string _explicitNullValueVolumeUOM = default!;
 #endif
         /// <summary>Package weight</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Weight { get; set; }
+        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        private string? _explicitNullValueWeight = default!;
 #nullable restore
 #else
-        public string Weight { get; set; }
+        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        private string _explicitNullValueWeight = default!;
 #endif
         /// <summary>Weight unit of measure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeightUOM { get; set; }
+        public string? WeightUOM { get => _explicitNullValueWeightUOM; set { _explicitNullValueWeightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUOM"); else _explicitNullProperties?.Remove("weightUOM"); } }
+        private string? _explicitNullValueWeightUOM = default!;
 #nullable restore
 #else
-        public string WeightUOM { get; set; }
+        public string WeightUOM { get => _explicitNullValueWeightUOM; set { _explicitNullValueWeightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUOM"); else _explicitNullProperties?.Remove("weightUOM"); } }
+        private string _explicitNullValueWeightUOM = default!;
 #endif
         /// <summary>Package width</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Width { get; set; }
+        public string? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        private string? _explicitNullValueWidth = default!;
 #nullable restore
 #else
-        public string Width { get; set; }
+        public string Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        private string _explicitNullValueWidth = default!;
 #endif
         /// <summary>Width unit of measure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WidthUOM { get; set; }
+        public string? WidthUOM { get => _explicitNullValueWidthUOM; set { _explicitNullValueWidthUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widthUOM"); else _explicitNullProperties?.Remove("widthUOM"); } }
+        private string? _explicitNullValueWidthUOM = default!;
 #nullable restore
 #else
-        public string WidthUOM { get; set; }
+        public string WidthUOM { get => _explicitNullValueWidthUOM; set { _explicitNullValueWidthUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widthUOM"); else _explicitNullProperties?.Remove("widthUOM"); } }
+        private string _explicitNullValueWidthUOM = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipUnit"/> and sets the default values.
@@ -142,7 +191,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipUnit CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipUnit();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipUnit(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -189,6 +238,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("weightUOM", WeightUOM);
             writer.WriteStringValue("width", Width);
             writer.WriteStringValue("widthUOM", WidthUOM);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LocationSearchCriteriaServiceSearch : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ServiceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("ServiceOptionCode") is { } nullNodeServiceOptionCode && nullNodeServiceOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceOptionCode = null;
+            if (parseNode.GetChildNode("Time") is { } nullNodeTime && nullNodeTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Time = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ServiceCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode>? ServiceCode { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode>? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode>? _explicitNullValueServiceCode = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode> ServiceCode { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode> ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode> _explicitNullValueServiceCode = default!;
 #endif
         /// <summary>The ServiceOptionCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode>? ServiceOptionCode { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode>? ServiceOptionCode { get => _explicitNullValueServiceOptionCode; set { _explicitNullValueServiceOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOptionCode"); else _explicitNullProperties?.Remove("ServiceOptionCode"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode>? _explicitNullValueServiceOptionCode = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode> ServiceOptionCode { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode> ServiceOptionCode { get => _explicitNullValueServiceOptionCode; set { _explicitNullValueServiceOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOptionCode"); else _explicitNullProperties?.Remove("ServiceOptionCode"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode> _explicitNullValueServiceOptionCode = default!;
 #endif
         /// <summary>Scheduled Local Drop-off Time. Format: HHMM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Time { get; set; }
+        public string? Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Time"); else _explicitNullProperties?.Remove("Time"); } }
+        private string? _explicitNullValueTime = default!;
 #nullable restore
 #else
-        public string Time { get; set; }
+        public string Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Time"); else _explicitNullProperties?.Remove("Time"); } }
+        private string _explicitNullValueTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaServiceSearch(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode>("ServiceCode", ServiceCode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode>("ServiceOptionCode", ServiceOptionCode);
             writer.WriteStringValue("Time", Time);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

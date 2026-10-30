@@ -12,36 +12,56 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DocumentRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("docFormat") is { } nullNodeDocFormat && nullNodeDocFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocFormat = null;
+            if (parseNode.GetChildNode("requestedDoc") is { } nullNodeRequestedDoc && nullNodeRequestedDoc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedDoc = null;
+            if (parseNode.GetChildNode("shipperAccountNumber") is { } nullNodeShipperAccountNumber && nullNodeShipperAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccountNumber = null;
+            if (parseNode.GetChildNode("subproNumber") is { } nullNodeSubproNumber && nullNodeSubproNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubproNumber = null;
+            if (parseNode.GetChildNode("usiNumber") is { } nullNodeUsiNumber && nullNodeUsiNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsiNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Image format type for the label requested by customer.| Code   | Description   || :----: | :-----------: || ZPL    | ZPL format    || EPL    | EPL format    || STARPL | STARPL format || SPL    | SPL format    || PNG    | PNG format    || PDF    | PDF format    || GIF    | GIF format    |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestDocFormat? DocFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestDocFormat? DocFormat { get => _explicitNullValueDocFormat; set { _explicitNullValueDocFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docFormat"); else _explicitNullProperties?.Remove("docFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestDocFormat? _explicitNullValueDocFormat = default!;
         /// <summary>The type of document requested for generation.| Code   | Description                     || :----: | :-----------------------------: || CCI    | Consolidated Commercial Invoice || CBOL   | Consolidated Bill of Lading     || BOL    | Bill of Lading                  || PLT    | Pallet Label                    || PKGPLT | Package Pallet Label            |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestRequestedDoc? RequestedDoc { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestRequestedDoc? RequestedDoc { get => _explicitNullValueRequestedDoc; set { _explicitNullValueRequestedDoc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestedDoc"); else _explicitNullProperties?.Remove("requestedDoc"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestRequestedDoc? _explicitNullValueRequestedDoc = default!;
         /// <summary>The UPS account number of the shipper that was used in clouseout shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperAccountNumber { get; set; }
+        public string? ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        private string? _explicitNullValueShipperAccountNumber = default!;
 #nullable restore
 #else
-        public string ShipperAccountNumber { get; set; }
+        public string ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        private string _explicitNullValueShipperAccountNumber = default!;
 #endif
         /// <summary>A unique tracking number used for LTL shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubproNumber { get; set; }
+        public string? SubproNumber { get => _explicitNullValueSubproNumber; set { _explicitNullValueSubproNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subproNumber"); else _explicitNullProperties?.Remove("subproNumber"); } }
+        private string? _explicitNullValueSubproNumber = default!;
 #nullable restore
 #else
-        public string SubproNumber { get; set; }
+        public string SubproNumber { get => _explicitNullValueSubproNumber; set { _explicitNullValueSubproNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subproNumber"); else _explicitNullProperties?.Remove("subproNumber"); } }
+        private string _explicitNullValueSubproNumber = default!;
 #endif
         /// <summary>The unique shipment identifier (USI) is used to create Master, LTL and Child shipments. Used for Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UsiNumber { get; set; }
+        public string? UsiNumber { get => _explicitNullValueUsiNumber; set { _explicitNullValueUsiNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usiNumber"); else _explicitNullProperties?.Remove("usiNumber"); } }
+        private string? _explicitNullValueUsiNumber = default!;
 #nullable restore
 #else
-        public string UsiNumber { get; set; }
+        public string UsiNumber { get => _explicitNullValueUsiNumber; set { _explicitNullValueUsiNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usiNumber"); else _explicitNullProperties?.Remove("usiNumber"); } }
+        private string _explicitNullValueUsiNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest"/> and sets the default values.
@@ -58,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DocumentRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipperAccountNumber", ShipperAccountNumber);
             writer.WriteStringValue("subproNumber", SubproNumber);
             writer.WriteStringValue("usiNumber", UsiNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,72 +12,103 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PreNotificationPreNotificationRequestShipment : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Package") is { } nullNodePackage && nullNodePackage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Package = null;
+            if (parseNode.GetChildNode("PickupDate") is { } nullNodePickupDate && nullNodePickupDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDate = null;
+            if (parseNode.GetChildNode("RegulationSet") is { } nullNodeRegulationSet && nullNodeRegulationSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSet = null;
+            if (parseNode.GetChildNode("Service") is { } nullNodeService && nullNodeService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Service = null;
+            if (parseNode.GetChildNode("ShipFromAddress") is { } nullNodeShipFromAddress && nullNodeShipFromAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipFromAddress = null;
+            if (parseNode.GetChildNode("ShipmentIdentificationNumber") is { } nullNodeShipmentIdentificationNumber && nullNodeShipmentIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentIdentificationNumber = null;
+            if (parseNode.GetChildNode("ShipperNumber") is { } nullNodeShipperNumber && nullNodeShipperNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperNumber = null;
+            if (parseNode.GetChildNode("ShipToAddress") is { } nullNodeShipToAddress && nullNodeShipToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipToAddress = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Package property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage>? Package { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage>? Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Package"); else _explicitNullProperties?.Remove("Package"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage>? _explicitNullValuePackage = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage> Package { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage> Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Package"); else _explicitNullProperties?.Remove("Package"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage> _explicitNullValuePackage = default!;
 #endif
         /// <summary>Date of the On Call Air Pickup. Format is YYYYMMDD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupDate { get; set; }
+        public string? PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDate"); else _explicitNullProperties?.Remove("PickupDate"); } }
+        private string? _explicitNullValuePickupDate = default!;
 #nullable restore
 #else
-        public string PickupDate { get; set; }
+        public string PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDate"); else _explicitNullProperties?.Remove("PickupDate"); } }
+        private string _explicitNullValuePickupDate = default!;
 #endif
         /// <summary>The Regulatory set associated with every regulated shipment. It must be same across the shipment. Valid values are:- ADR – European Agreement concerning the International Carriage of Dangerous Goods by Road.- 49CFR – Title 49 of the United States Code of Federal Regulations.- IATA – International Air Transport Association (IATA) Dangerous Goods Regulations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegulationSet { get; set; }
+        public string? RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
+        private string? _explicitNullValueRegulationSet = default!;
 #nullable restore
 #else
-        public string RegulationSet { get; set; }
+        public string RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
+        private string _explicitNullValueRegulationSet = default!;
 #endif
         /// <summary>UPS service type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentService? Service { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentService? Service { get => _explicitNullValueService; set { _explicitNullValueService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentService? _explicitNullValueService = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentService Service { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentService Service { get => _explicitNullValueService; set { _explicitNullValueService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentService _explicitNullValueService = default!;
 #endif
         /// <summary>Ship From address container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipFromAddress? ShipFromAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipFromAddress? ShipFromAddress { get => _explicitNullValueShipFromAddress; set { _explicitNullValueShipFromAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipFromAddress"); else _explicitNullProperties?.Remove("ShipFromAddress"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipFromAddress? _explicitNullValueShipFromAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipFromAddress ShipFromAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipFromAddress ShipFromAddress { get => _explicitNullValueShipFromAddress; set { _explicitNullValueShipFromAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipFromAddress"); else _explicitNullProperties?.Remove("ShipFromAddress"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipFromAddress _explicitNullValueShipFromAddress = default!;
 #endif
         /// <summary>1Z Number of the first package in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentIdentificationNumber { get; set; }
+        public string? ShipmentIdentificationNumber { get => _explicitNullValueShipmentIdentificationNumber; set { _explicitNullValueShipmentIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentIdentificationNumber"); else _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); } }
+        private string? _explicitNullValueShipmentIdentificationNumber = default!;
 #nullable restore
 #else
-        public string ShipmentIdentificationNumber { get; set; }
+        public string ShipmentIdentificationNumber { get => _explicitNullValueShipmentIdentificationNumber; set { _explicitNullValueShipmentIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentIdentificationNumber"); else _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); } }
+        private string _explicitNullValueShipmentIdentificationNumber = default!;
 #endif
         /// <summary>Shipper&apos;s six digit account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperNumber { get; set; }
+        public string? ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
+        private string? _explicitNullValueShipperNumber = default!;
 #nullable restore
 #else
-        public string ShipperNumber { get; set; }
+        public string ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
+        private string _explicitNullValueShipperNumber = default!;
 #endif
         /// <summary>Ship To address container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipToAddress? ShipToAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipToAddress? ShipToAddress { get => _explicitNullValueShipToAddress; set { _explicitNullValueShipToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipToAddress"); else _explicitNullProperties?.Remove("ShipToAddress"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipToAddress? _explicitNullValueShipToAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipToAddress ShipToAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipToAddress ShipToAddress { get => _explicitNullValueShipToAddress; set { _explicitNullValueShipToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipToAddress"); else _explicitNullProperties?.Remove("ShipToAddress"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipToAddress _explicitNullValueShipToAddress = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("ShipmentIdentificationNumber", ShipmentIdentificationNumber);
             writer.WriteStringValue("ShipperNumber", ShipperNumber);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentShipToAddress>("ShipToAddress", ShipToAddress);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

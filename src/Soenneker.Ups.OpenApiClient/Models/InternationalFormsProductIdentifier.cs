@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InternationalFormsProductIdentifier : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ProductID") is { } nullNodeProductID && nullNodeProductID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductID = null;
+            if (parseNode.GetChildNode("ProductIDTypeCode") is { } nullNodeProductIDTypeCode && nullNodeProductIDTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductIDTypeCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A generic field that can contain any type of product identifier used to specify a commodity/product. Every Product ID field must have a corresponding Product ID Type Code field to specify the type of product identifier it contains. This field can hold any one of the defined Product Identifiers - Merchant Product Identifier, Manufacturer Product Identifier and Standardized Product Identifier. Conditionally Required for EU Inbound shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductID { get; set; }
+        public string? ProductID { get => _explicitNullValueProductID; set { _explicitNullValueProductID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductID"); else _explicitNullProperties?.Remove("ProductID"); } }
+        private string? _explicitNullValueProductID = default!;
 #nullable restore
 #else
-        public string ProductID { get; set; }
+        public string ProductID { get => _explicitNullValueProductID; set { _explicitNullValueProductID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductID"); else _explicitNullProperties?.Remove("ProductID"); } }
+        private string _explicitNullValueProductID = default!;
 #endif
         /// <summary>A code that specifies the type of product identifier in the Product ID field. Conditionally Required for EU Inbound shipments.&lt;br/&gt;Valid values&lt;br/&gt;0100 = Merchant Product Identifier&lt;br/&gt;0200 = Manufacturer Product Identifier&lt;br/&gt;0300 = Standardized Product Identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductIDTypeCode { get; set; }
+        public string? ProductIDTypeCode { get => _explicitNullValueProductIDTypeCode; set { _explicitNullValueProductIDTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductIDTypeCode"); else _explicitNullProperties?.Remove("ProductIDTypeCode"); } }
+        private string? _explicitNullValueProductIDTypeCode = default!;
 #nullable restore
 #else
-        public string ProductIDTypeCode { get; set; }
+        public string ProductIDTypeCode { get => _explicitNullValueProductIDTypeCode; set { _explicitNullValueProductIDTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductIDTypeCode"); else _explicitNullProperties?.Remove("ProductIDTypeCode"); } }
+        private string _explicitNullValueProductIDTypeCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProductIdentifier(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ProductID", ProductID);
             writer.WriteStringValue("ProductIDTypeCode", ProductIDTypeCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

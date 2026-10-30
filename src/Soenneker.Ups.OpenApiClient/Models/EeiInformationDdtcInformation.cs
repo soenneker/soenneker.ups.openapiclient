@@ -12,72 +12,103 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EeiInformationDdtcInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ACMNumber") is { } nullNodeACMNumber && nullNodeACMNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ACMNumber = null;
+            if (parseNode.GetChildNode("EligiblePartyIndicator") is { } nullNodeEligiblePartyIndicator && nullNodeEligiblePartyIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligiblePartyIndicator = null;
+            if (parseNode.GetChildNode("ITARExemptionNumber") is { } nullNodeITARExemptionNumber && nullNodeITARExemptionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ITARExemptionNumber = null;
+            if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("RegistrationNumber") is { } nullNodeRegistrationNumber && nullNodeRegistrationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationNumber = null;
+            if (parseNode.GetChildNode("SignificantMilitaryEquipmentIndicator") is { } nullNodeSignificantMilitaryEquipmentIndicator && nullNodeSignificantMilitaryEquipmentIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignificantMilitaryEquipmentIndicator = null;
+            if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
+            if (parseNode.GetChildNode("USMLCategoryCode") is { } nullNodeUSMLCategoryCode && nullNodeUSMLCategoryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) USMLCategoryCode = null;
+        }
+
         /// <summary>Approved Community Member Number (ACM). It is required to be provided along with ITARExemptionNumber for some License code (SGB and SAU). The ACM# for the United Kingdom (License code SGB) must begin with UK followed by 9 numbers.  The ACM# for Australia (License Code SAU) must begin with DTT followed by 8 numbers.  Applies to EEI form only.  It is required for EEIFilingOption code 1A and 3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ACMNumber { get; set; }
+        public string? ACMNumber { get => _explicitNullValueACMNumber; set { _explicitNullValueACMNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ACMNumber"); else _explicitNullProperties?.Remove("ACMNumber"); } }
+        private string? _explicitNullValueACMNumber = default!;
 #nullable restore
 #else
-        public string ACMNumber { get; set; }
+        public string ACMNumber { get => _explicitNullValueACMNumber; set { _explicitNullValueACMNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ACMNumber"); else _explicitNullProperties?.Remove("ACMNumber"); } }
+        private string _explicitNullValueACMNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Presence/Absent indicator. Certification by the U.S. exporter that the exporter is an eligible party to participate in the defense trade.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EligiblePartyIndicator { get; set; }
+        public string? EligiblePartyIndicator { get => _explicitNullValueEligiblePartyIndicator; set { _explicitNullValueEligiblePartyIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EligiblePartyIndicator"); else _explicitNullProperties?.Remove("EligiblePartyIndicator"); } }
+        private string? _explicitNullValueEligiblePartyIndicator = default!;
 #nullable restore
 #else
-        public string EligiblePartyIndicator { get; set; }
+        public string EligiblePartyIndicator { get => _explicitNullValueEligiblePartyIndicator; set { _explicitNullValueEligiblePartyIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EligiblePartyIndicator"); else _explicitNullProperties?.Remove("EligiblePartyIndicator"); } }
+        private string _explicitNullValueEligiblePartyIndicator = default!;
 #endif
         /// <summary>The specific citation (exemption number) under the International Traffic in Arms Regulations (ITAR) from the Code of Federal Register (see 22 CFR 120-130) that exempts the shipment from the requirements for a license or other written authorization from the Directorate of Trade Controls (DDTC). Refer to EEI License Codes in the Appendix for valid values.  Applies to EEI Form only. This field is applicable for EEIFiling option 1A and 3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ITARExemptionNumber { get; set; }
+        public string? ITARExemptionNumber { get => _explicitNullValueITARExemptionNumber; set { _explicitNullValueITARExemptionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ITARExemptionNumber"); else _explicitNullProperties?.Remove("ITARExemptionNumber"); } }
+        private string? _explicitNullValueITARExemptionNumber = default!;
 #nullable restore
 #else
-        public string ITARExemptionNumber { get; set; }
+        public string ITARExemptionNumber { get => _explicitNullValueITARExemptionNumber; set { _explicitNullValueITARExemptionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ITARExemptionNumber"); else _explicitNullProperties?.Remove("ITARExemptionNumber"); } }
+        private string _explicitNullValueITARExemptionNumber = default!;
 #endif
         /// <summary>Export Quantity.  Applies to EEI form only. It is required for EEIFilingOption code 3. Only positive integer value is valid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get; set; }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get; set; }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>It is a unique registration code assigned to the registrant. The DDTC registration code consist of a letter prefix, M (assigned to a manufacturer and/or exporter) or K (assigned to a broker), followed by four or five digits (e.g. K-1234 or M12345).  It is required for EEIFilingOption code 3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistrationNumber { get; set; }
+        public string? RegistrationNumber { get => _explicitNullValueRegistrationNumber; set { _explicitNullValueRegistrationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegistrationNumber"); else _explicitNullProperties?.Remove("RegistrationNumber"); } }
+        private string? _explicitNullValueRegistrationNumber = default!;
 #nullable restore
 #else
-        public string RegistrationNumber { get; set; }
+        public string RegistrationNumber { get => _explicitNullValueRegistrationNumber; set { _explicitNullValueRegistrationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegistrationNumber"); else _explicitNullProperties?.Remove("RegistrationNumber"); } }
+        private string _explicitNullValueRegistrationNumber = default!;
 #endif
         /// <summary>Presence/ Absence Indicator.  Applies to EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignificantMilitaryEquipmentIndicator { get; set; }
+        public string? SignificantMilitaryEquipmentIndicator { get => _explicitNullValueSignificantMilitaryEquipmentIndicator; set { _explicitNullValueSignificantMilitaryEquipmentIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SignificantMilitaryEquipmentIndicator"); else _explicitNullProperties?.Remove("SignificantMilitaryEquipmentIndicator"); } }
+        private string? _explicitNullValueSignificantMilitaryEquipmentIndicator = default!;
 #nullable restore
 #else
-        public string SignificantMilitaryEquipmentIndicator { get; set; }
+        public string SignificantMilitaryEquipmentIndicator { get => _explicitNullValueSignificantMilitaryEquipmentIndicator; set { _explicitNullValueSignificantMilitaryEquipmentIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SignificantMilitaryEquipmentIndicator"); else _explicitNullProperties?.Remove("SignificantMilitaryEquipmentIndicator"); } }
+        private string _explicitNullValueSignificantMilitaryEquipmentIndicator = default!;
 #endif
         /// <summary>Container for unit of measurement.  Applies to EEI form only. It is required for EEIFilingOption code 3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DdtcInformationUnitOfMeasurement? UnitOfMeasurement { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DdtcInformationUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DdtcInformationUnitOfMeasurement? _explicitNullValueUnitOfMeasurement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DdtcInformationUnitOfMeasurement UnitOfMeasurement { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DdtcInformationUnitOfMeasurement UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DdtcInformationUnitOfMeasurement _explicitNullValueUnitOfMeasurement = default!;
 #endif
         /// <summary>Digit numeric code (e.g. 01-18, 20 or 21). Indicates the U.S. Munitions List (USML) category article, service or related technical data as it applies to the article reported.  Applies to EEI form only. It is required for EEIFilingOption code 3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? USMLCategoryCode { get; set; }
+        public string? USMLCategoryCode { get => _explicitNullValueUSMLCategoryCode; set { _explicitNullValueUSMLCategoryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USMLCategoryCode"); else _explicitNullProperties?.Remove("USMLCategoryCode"); } }
+        private string? _explicitNullValueUSMLCategoryCode = default!;
 #nullable restore
 #else
-        public string USMLCategoryCode { get; set; }
+        public string USMLCategoryCode { get => _explicitNullValueUSMLCategoryCode; set { _explicitNullValueUSMLCategoryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USMLCategoryCode"); else _explicitNullProperties?.Remove("USMLCategoryCode"); } }
+        private string _explicitNullValueUSMLCategoryCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("SignificantMilitaryEquipmentIndicator", SignificantMilitaryEquipmentIndicator);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DdtcInformationUnitOfMeasurement>("UnitOfMeasurement", UnitOfMeasurement);
             writer.WriteStringValue("USMLCategoryCode", USMLCategoryCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

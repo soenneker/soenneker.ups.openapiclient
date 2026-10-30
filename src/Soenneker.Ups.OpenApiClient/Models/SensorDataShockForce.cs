@@ -12,36 +12,56 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SensorDataShockForce : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("gmtDateTime") is { } nullNodeGmtDateTime && nullNodeGmtDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtDateTime = null;
+            if (parseNode.GetChildNode("gmtOffset") is { } nullNodeGmtOffset && nullNodeGmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtOffset = null;
+            if (parseNode.GetChildNode("localDateTime") is { } nullNodeLocalDateTime && nullNodeLocalDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalDateTime = null;
+            if (parseNode.GetChildNode("shock") is { } nullNodeShock && nullNodeShock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shock = null;
+            if (parseNode.GetChildNode("shockUOM") is { } nullNodeShockUOM && nullNodeShockUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShockUOM = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The gmtDateTime property</summary>
-        public DateTimeOffset? GmtDateTime { get; set; }
+        public DateTimeOffset? GmtDateTime { get => _explicitNullValueGmtDateTime; set { _explicitNullValueGmtDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtDateTime"); else _explicitNullProperties?.Remove("gmtDateTime"); } }
+        private DateTimeOffset? _explicitNullValueGmtDateTime = default!;
         /// <summary>The gmtOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GmtOffset { get; set; }
+        public string? GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
+        private string? _explicitNullValueGmtOffset = default!;
 #nullable restore
 #else
-        public string GmtOffset { get; set; }
+        public string GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
+        private string _explicitNullValueGmtOffset = default!;
 #endif
         /// <summary>The localDateTime property</summary>
-        public DateTimeOffset? LocalDateTime { get; set; }
+        public DateTimeOffset? LocalDateTime { get => _explicitNullValueLocalDateTime; set { _explicitNullValueLocalDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localDateTime"); else _explicitNullProperties?.Remove("localDateTime"); } }
+        private DateTimeOffset? _explicitNullValueLocalDateTime = default!;
         /// <summary>Shipment has been dropped or otherwise exposed to an impact force that exceeds a predetermined level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Shock { get; set; }
+        public string? Shock { get => _explicitNullValueShock; set { _explicitNullValueShock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shock"); else _explicitNullProperties?.Remove("shock"); } }
+        private string? _explicitNullValueShock = default!;
 #nullable restore
 #else
-        public string Shock { get; set; }
+        public string Shock { get => _explicitNullValueShock; set { _explicitNullValueShock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shock"); else _explicitNullProperties?.Remove("shock"); } }
+        private string _explicitNullValueShock = default!;
 #endif
         /// <summary>Shock Unit of measurement</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShockUOM { get; set; }
+        public string? ShockUOM { get => _explicitNullValueShockUOM; set { _explicitNullValueShockUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shockUOM"); else _explicitNullProperties?.Remove("shockUOM"); } }
+        private string? _explicitNullValueShockUOM = default!;
 #nullable restore
 #else
-        public string ShockUOM { get; set; }
+        public string ShockUOM { get => _explicitNullValueShockUOM; set { _explicitNullValueShockUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shockUOM"); else _explicitNullProperties?.Remove("shockUOM"); } }
+        private string _explicitNullValueShockUOM = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce"/> and sets the default values.
@@ -58,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("localDateTime", LocalDateTime);
             writer.WriteStringValue("shock", Shock);
             writer.WriteStringValue("shockUOM", ShockUOM);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

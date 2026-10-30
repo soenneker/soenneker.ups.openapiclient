@@ -12,56 +12,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PackagePackageServiceOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AddShippingChargesToCODIndicator") is { } nullNodeAddShippingChargesToCODIndicator && nullNodeAddShippingChargesToCODIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddShippingChargesToCODIndicator = null;
+            if (parseNode.GetChildNode("COD") is { } nullNodeCOD && nullNodeCOD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) COD = null;
+            if (parseNode.GetChildNode("EarliestDeliveryTime") is { } nullNodeEarliestDeliveryTime && nullNodeEarliestDeliveryTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EarliestDeliveryTime = null;
+            if (parseNode.GetChildNode("HazardousMaterialsCode") is { } nullNodeHazardousMaterialsCode && nullNodeHazardousMaterialsCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazardousMaterialsCode = null;
+            if (parseNode.GetChildNode("HoldForPickup") is { } nullNodeHoldForPickup && nullNodeHoldForPickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldForPickup = null;
+            if (parseNode.GetChildNode("InsuredValue") is { } nullNodeInsuredValue && nullNodeInsuredValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsuredValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An indicator flag that represents a Collect on Delivery (COD) package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddShippingChargesToCODIndicator { get; set; }
+        public string? AddShippingChargesToCODIndicator { get => _explicitNullValueAddShippingChargesToCODIndicator; set { _explicitNullValueAddShippingChargesToCODIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddShippingChargesToCODIndicator"); else _explicitNullProperties?.Remove("AddShippingChargesToCODIndicator"); } }
+        private string? _explicitNullValueAddShippingChargesToCODIndicator = default!;
 #nullable restore
 #else
-        public string AddShippingChargesToCODIndicator { get; set; }
+        public string AddShippingChargesToCODIndicator { get => _explicitNullValueAddShippingChargesToCODIndicator; set { _explicitNullValueAddShippingChargesToCODIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddShippingChargesToCODIndicator"); else _explicitNullProperties?.Remove("AddShippingChargesToCODIndicator"); } }
+        private string _explicitNullValueAddShippingChargesToCODIndicator = default!;
 #endif
         /// <summary>Container for cash on delivery (COD) information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsCod? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsCod? COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsCod? _explicitNullValueCOD = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsCod COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsCod COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsCod _explicitNullValueCOD = default!;
 #endif
         /// <summary>Earliest delivery time. Time format is HHMMSS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EarliestDeliveryTime { get; set; }
+        public string? EarliestDeliveryTime { get => _explicitNullValueEarliestDeliveryTime; set { _explicitNullValueEarliestDeliveryTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarliestDeliveryTime"); else _explicitNullProperties?.Remove("EarliestDeliveryTime"); } }
+        private string? _explicitNullValueEarliestDeliveryTime = default!;
 #nullable restore
 #else
-        public string EarliestDeliveryTime { get; set; }
+        public string EarliestDeliveryTime { get => _explicitNullValueEarliestDeliveryTime; set { _explicitNullValueEarliestDeliveryTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarliestDeliveryTime"); else _explicitNullProperties?.Remove("EarliestDeliveryTime"); } }
+        private string _explicitNullValueEarliestDeliveryTime = default!;
 #endif
         /// <summary>Indicates if the package contains hazardous materials. Valid values:- 1 - Hazardous Material- 2 - Electronically billed hazardous material.If present, only one package may exist in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HazardousMaterialsCode { get; set; }
+        public string? HazardousMaterialsCode { get => _explicitNullValueHazardousMaterialsCode; set { _explicitNullValueHazardousMaterialsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardousMaterialsCode"); else _explicitNullProperties?.Remove("HazardousMaterialsCode"); } }
+        private string? _explicitNullValueHazardousMaterialsCode = default!;
 #nullable restore
 #else
-        public string HazardousMaterialsCode { get; set; }
+        public string HazardousMaterialsCode { get => _explicitNullValueHazardousMaterialsCode; set { _explicitNullValueHazardousMaterialsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardousMaterialsCode"); else _explicitNullProperties?.Remove("HazardousMaterialsCode"); } }
+        private string _explicitNullValueHazardousMaterialsCode = default!;
 #endif
         /// <summary>A flag indicating if a package should be held for pickup. True if tag exists, false otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HoldForPickup { get; set; }
+        public string? HoldForPickup { get => _explicitNullValueHoldForPickup; set { _explicitNullValueHoldForPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickup"); else _explicitNullProperties?.Remove("HoldForPickup"); } }
+        private string? _explicitNullValueHoldForPickup = default!;
 #nullable restore
 #else
-        public string HoldForPickup { get; set; }
+        public string HoldForPickup { get => _explicitNullValueHoldForPickup; set { _explicitNullValueHoldForPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickup"); else _explicitNullProperties?.Remove("HoldForPickup"); } }
+        private string _explicitNullValueHoldForPickup = default!;
 #endif
         /// <summary>Container tag for insured value amount for the package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsuredValue? InsuredValue { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsuredValue? InsuredValue { get => _explicitNullValueInsuredValue; set { _explicitNullValueInsuredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InsuredValue"); else _explicitNullProperties?.Remove("InsuredValue"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsuredValue? _explicitNullValueInsuredValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsuredValue InsuredValue { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsuredValue InsuredValue { get => _explicitNullValueInsuredValue; set { _explicitNullValueInsuredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InsuredValue"); else _explicitNullProperties?.Remove("InsuredValue"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsuredValue _explicitNullValueInsuredValue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PackagePackageServiceOptions"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PackagePackageServiceOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PackagePackageServiceOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PackagePackageServiceOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("HazardousMaterialsCode", HazardousMaterialsCode);
             writer.WriteStringValue("HoldForPickup", HoldForPickup);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsuredValue>("InsuredValue", InsuredValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

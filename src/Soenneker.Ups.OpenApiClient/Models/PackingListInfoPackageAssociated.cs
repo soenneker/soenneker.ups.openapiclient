@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PackingListInfoPackageAssociated : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("PackageNumber") is { } nullNodePackageNumber && nullNodePackageNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageNumber = null;
+            if (parseNode.GetChildNode("ProductAmount") is { } nullNodeProductAmount && nullNodeProductAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductAmount = null;
+            if (parseNode.GetChildNode("ProductNote") is { } nullNodeProductNote && nullNodeProductNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductNote = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Package number the product should be allocated to ont he packing list.  Required for packaging list and Air Freight Packing list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageNumber { get; set; }
+        public string? PackageNumber { get => _explicitNullValuePackageNumber; set { _explicitNullValuePackageNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageNumber"); else _explicitNullProperties?.Remove("PackageNumber"); } }
+        private string? _explicitNullValuePackageNumber = default!;
 #nullable restore
 #else
-        public string PackageNumber { get; set; }
+        public string PackageNumber { get => _explicitNullValuePackageNumber; set { _explicitNullValuePackageNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageNumber"); else _explicitNullProperties?.Remove("PackageNumber"); } }
+        private string _explicitNullValuePackageNumber = default!;
 #endif
         /// <summary>Amount of Product associated with a package.  Required for packaging list and Air Freight Packing list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductAmount { get; set; }
+        public string? ProductAmount { get => _explicitNullValueProductAmount; set { _explicitNullValueProductAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductAmount"); else _explicitNullProperties?.Remove("ProductAmount"); } }
+        private string? _explicitNullValueProductAmount = default!;
 #nullable restore
 #else
-        public string ProductAmount { get; set; }
+        public string ProductAmount { get => _explicitNullValueProductAmount; set { _explicitNullValueProductAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductAmount"); else _explicitNullProperties?.Remove("ProductAmount"); } }
+        private string _explicitNullValueProductAmount = default!;
 #endif
         /// <summary>Product Note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductNote { get; set; }
+        public string? ProductNote { get => _explicitNullValueProductNote; set { _explicitNullValueProductNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductNote"); else _explicitNullProperties?.Remove("ProductNote"); } }
+        private string? _explicitNullValueProductNote = default!;
 #nullable restore
 #else
-        public string ProductNote { get; set; }
+        public string ProductNote { get => _explicitNullValueProductNote; set { _explicitNullValueProductNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductNote"); else _explicitNullProperties?.Remove("ProductNote"); } }
+        private string _explicitNullValueProductNote = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PackingListInfoPackageAssociated"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PackingListInfoPackageAssociated CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PackingListInfoPackageAssociated();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PackingListInfoPackageAssociated(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("PackageNumber", PackageNumber);
             writer.WriteStringValue("ProductAmount", ProductAmount);
             writer.WriteStringValue("ProductNote", ProductNote);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

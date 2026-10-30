@@ -11,19 +11,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TradeDirectPackage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("handlingUnits") is { } nullNodeHandlingUnits && nullNodeHandlingUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingUnits = null;
+            if (parseNode.GetChildNode("numberOfIdenticalUnits") is { } nullNodeNumberOfIdenticalUnits && nullNodeNumberOfIdenticalUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfIdenticalUnits = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Used to provide information about the handling units in the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits? HandlingUnits { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits? HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingUnits"); else _explicitNullProperties?.Remove("handlingUnits"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits? _explicitNullValueHandlingUnits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits HandlingUnits { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingUnits"); else _explicitNullProperties?.Remove("handlingUnits"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits _explicitNullValueHandlingUnits = default!;
 #endif
         /// <summary>Number of identical units in the package/ltl.</summary>
-        public int? NumberOfIdenticalUnits { get; set; }
+        public int? NumberOfIdenticalUnits { get => _explicitNullValueNumberOfIdenticalUnits; set { _explicitNullValueNumberOfIdenticalUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberOfIdenticalUnits"); else _explicitNullProperties?.Remove("numberOfIdenticalUnits"); } }
+        private int? _explicitNullValueNumberOfIdenticalUnits = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits>("handlingUnits", HandlingUnits);
             writer.WriteIntValue("numberOfIdenticalUnits", NumberOfIdenticalUnits);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

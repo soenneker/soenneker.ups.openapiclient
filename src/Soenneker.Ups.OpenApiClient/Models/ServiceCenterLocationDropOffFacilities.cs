@@ -12,96 +12,136 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ServiceCenterLocationDropOffFacilities : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("Distance") is { } nullNodeDistance && nullNodeDistance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Distance = null;
+            if (parseNode.GetChildNode("FacilityTime") is { } nullNodeFacilityTime && nullNodeFacilityTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacilityTime = null;
+            if (parseNode.GetChildNode("Fax") is { } nullNodeFax && nullNodeFax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fax = null;
+            if (parseNode.GetChildNode("LocalizedInstruction") is { } nullNodeLocalizedInstruction && nullNodeLocalizedInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalizedInstruction = null;
+            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("OriginOrDestination") is { } nullNodeOriginOrDestination && nullNodeOriginOrDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginOrDestination = null;
+            if (parseNode.GetChildNode("Phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("SLIC") is { } nullNodeSLIC && nullNodeSLIC.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SLIC = null;
+            if (parseNode.GetChildNode("Timezone") is { } nullNodeTimezone && nullNodeTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timezone = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Address of the facility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesAddress? Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesAddress Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>Distance from origin  Distance will be retuned for drop off location search by proximity order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesDistance? Distance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesDistance? Distance { get => _explicitNullValueDistance; set { _explicitNullValueDistance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Distance"); else _explicitNullProperties?.Remove("Distance"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesDistance? _explicitNullValueDistance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesDistance Distance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesDistance Distance { get => _explicitNullValueDistance; set { _explicitNullValueDistance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Distance"); else _explicitNullProperties?.Remove("Distance"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesDistance _explicitNullValueDistance = default!;
 #endif
         /// <summary>Facility Time Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesFacilityTime? FacilityTime { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesFacilityTime? FacilityTime { get => _explicitNullValueFacilityTime; set { _explicitNullValueFacilityTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacilityTime"); else _explicitNullProperties?.Remove("FacilityTime"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesFacilityTime? _explicitNullValueFacilityTime = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesFacilityTime FacilityTime { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesFacilityTime FacilityTime { get => _explicitNullValueFacilityTime; set { _explicitNullValueFacilityTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacilityTime"); else _explicitNullProperties?.Remove("FacilityTime"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesFacilityTime _explicitNullValueFacilityTime = default!;
 #endif
         /// <summary>Drop off Facilities Fax Number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fax { get; set; }
+        public string? Fax { get => _explicitNullValueFax; set { _explicitNullValueFax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Fax"); else _explicitNullProperties?.Remove("Fax"); } }
+        private string? _explicitNullValueFax = default!;
 #nullable restore
 #else
-        public string Fax { get; set; }
+        public string Fax { get => _explicitNullValueFax; set { _explicitNullValueFax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Fax"); else _explicitNullProperties?.Remove("Fax"); } }
+        private string _explicitNullValueFax = default!;
 #endif
         /// <summary>The LocalizedInstruction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesLocalizedInstruction>? LocalizedInstruction { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesLocalizedInstruction>? LocalizedInstruction { get => _explicitNullValueLocalizedInstruction; set { _explicitNullValueLocalizedInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalizedInstruction"); else _explicitNullProperties?.Remove("LocalizedInstruction"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesLocalizedInstruction>? _explicitNullValueLocalizedInstruction = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesLocalizedInstruction> LocalizedInstruction { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesLocalizedInstruction> LocalizedInstruction { get => _explicitNullValueLocalizedInstruction; set { _explicitNullValueLocalizedInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalizedInstruction"); else _explicitNullProperties?.Remove("LocalizedInstruction"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DropOffFacilitiesLocalizedInstruction> _explicitNullValueLocalizedInstruction = default!;
 #endif
         /// <summary>Name of the Facility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Type of Facility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginOrDestination { get; set; }
+        public string? OriginOrDestination { get => _explicitNullValueOriginOrDestination; set { _explicitNullValueOriginOrDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginOrDestination"); else _explicitNullProperties?.Remove("OriginOrDestination"); } }
+        private string? _explicitNullValueOriginOrDestination = default!;
 #nullable restore
 #else
-        public string OriginOrDestination { get; set; }
+        public string OriginOrDestination { get => _explicitNullValueOriginOrDestination; set { _explicitNullValueOriginOrDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginOrDestination"); else _explicitNullProperties?.Remove("OriginOrDestination"); } }
+        private string _explicitNullValueOriginOrDestination = default!;
 #endif
         /// <summary>Phone Number of the Drop off Facility</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Phone { get; set; }
+        public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Phone"); else _explicitNullProperties?.Remove("Phone"); } }
+        private string? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public string Phone { get; set; }
+        public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Phone"); else _explicitNullProperties?.Remove("Phone"); } }
+        private string _explicitNullValuePhone = default!;
 #endif
         /// <summary>SLIC code for the UPS Drop off facility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SLIC { get; set; }
+        public string? SLIC { get => _explicitNullValueSLIC; set { _explicitNullValueSLIC = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SLIC"); else _explicitNullProperties?.Remove("SLIC"); } }
+        private string? _explicitNullValueSLIC = default!;
 #nullable restore
 #else
-        public string SLIC { get; set; }
+        public string SLIC { get => _explicitNullValueSLIC; set { _explicitNullValueSLIC = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SLIC"); else _explicitNullProperties?.Remove("SLIC"); } }
+        private string _explicitNullValueSLIC = default!;
 #endif
         /// <summary>Facility&apos;s Timezone. Format:- America/New_York- Asia/Hong_Kong- Europe/London</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Timezone { get; set; }
+        public string? Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timezone"); else _explicitNullProperties?.Remove("Timezone"); } }
+        private string? _explicitNullValueTimezone = default!;
 #nullable restore
 #else
-        public string Timezone { get; set; }
+        public string Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timezone"); else _explicitNullProperties?.Remove("Timezone"); } }
+        private string _explicitNullValueTimezone = default!;
 #endif
         /// <summary>FRT for Freight or PKG for Package</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities"/> and sets the default values.
@@ -118,7 +158,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ServiceCenterLocationDropOffFacilities(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -159,6 +199,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("SLIC", SLIC);
             writer.WriteStringValue("Timezone", Timezone);
             writer.WriteStringValue("Type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

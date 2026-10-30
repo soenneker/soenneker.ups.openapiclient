@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExportAssureResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("perfStats") is { } nullNodePerfStats && nullNodePerfStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerfStats = null;
+            if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The perfStats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? PerfStats { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? _explicitNullValuePerfStats = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats PerfStats { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats _explicitNullValuePerfStats = default!;
 #endif
         /// <summary>This object contains metadata about the shipment and includes the response objects for each of the three operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>The unique, reference identifier that correlates an API request with its response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransID { get; set; }
+        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        private string? _explicitNullValueTransID = default!;
 #nullable restore
 #else
-        public string TransID { get; set; }
+        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        private string _explicitNullValueTransID = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats>("perfStats", PerfStats);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

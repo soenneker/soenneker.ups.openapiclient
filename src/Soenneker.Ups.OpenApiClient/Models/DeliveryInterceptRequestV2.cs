@@ -11,56 +11,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeliveryInterceptRequestV2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("deliveryDate") is { } nullNodeDeliveryDate && nullNodeDeliveryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryDate = null;
+            if (parseNode.GetChildNode("newDeliveryAddress") is { } nullNodeNewDeliveryAddress && nullNodeNewDeliveryAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewDeliveryAddress = null;
+            if (parseNode.GetChildNode("reasonForReturn") is { } nullNodeReasonForReturn && nullNodeReasonForReturn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonForReturn = null;
+            if (parseNode.GetChildNode("requesterContactInfo") is { } nullNodeRequesterContactInfo && nullNodeRequesterContactInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequesterContactInfo = null;
+            if (parseNode.GetChildNode("requestType") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
+            if (parseNode.GetChildNode("specialInstructions") is { } nullNodeSpecialInstructions && nullNodeSpecialInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialInstructions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Original scheduled date of delivery. Required olny for FD intercept type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeliveryDate { get; set; }
+        public string? DeliveryDate { get => _explicitNullValueDeliveryDate; set { _explicitNullValueDeliveryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryDate"); else _explicitNullProperties?.Remove("deliveryDate"); } }
+        private string? _explicitNullValueDeliveryDate = default!;
 #nullable restore
 #else
-        public string DeliveryDate { get; set; }
+        public string DeliveryDate { get => _explicitNullValueDeliveryDate; set { _explicitNullValueDeliveryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryDate"); else _explicitNullProperties?.Remove("deliveryDate"); } }
+        private string _explicitNullValueDeliveryDate = default!;
 #endif
         /// <summary>New delivery address. Required olny for AA intercept type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress? NewDeliveryAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress? NewDeliveryAddress { get => _explicitNullValueNewDeliveryAddress; set { _explicitNullValueNewDeliveryAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newDeliveryAddress"); else _explicitNullProperties?.Remove("newDeliveryAddress"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress? _explicitNullValueNewDeliveryAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress NewDeliveryAddress { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress NewDeliveryAddress { get => _explicitNullValueNewDeliveryAddress; set { _explicitNullValueNewDeliveryAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newDeliveryAddress"); else _explicitNullProperties?.Remove("newDeliveryAddress"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress _explicitNullValueNewDeliveryAddress = default!;
 #endif
         /// <summary>Reason for return code. Required only for RS intercept type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturn? ReasonForReturn { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturn? ReasonForReturn { get => _explicitNullValueReasonForReturn; set { _explicitNullValueReasonForReturn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonForReturn"); else _explicitNullProperties?.Remove("reasonForReturn"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturn? _explicitNullValueReasonForReturn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturn ReasonForReturn { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturn ReasonForReturn { get => _explicitNullValueReasonForReturn; set { _explicitNullValueReasonForReturn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonForReturn"); else _explicitNullProperties?.Remove("reasonForReturn"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturn _explicitNullValueReasonForReturn = default!;
 #endif
         /// <summary>The requesterContactInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequesterContactInfo? RequesterContactInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequesterContactInfo? RequesterContactInfo { get => _explicitNullValueRequesterContactInfo; set { _explicitNullValueRequesterContactInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesterContactInfo"); else _explicitNullProperties?.Remove("requesterContactInfo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequesterContactInfo? _explicitNullValueRequesterContactInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequesterContactInfo RequesterContactInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequesterContactInfo RequesterContactInfo { get => _explicitNullValueRequesterContactInfo; set { _explicitNullValueRequesterContactInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesterContactInfo"); else _explicitNullProperties?.Remove("requesterContactInfo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequesterContactInfo _explicitNullValueRequesterContactInfo = default!;
 #endif
         /// <summary>The request type of the intercept being performed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType? RequestType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestType"); else _explicitNullProperties?.Remove("requestType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType? _explicitNullValueRequestType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType RequestType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestType"); else _explicitNullProperties?.Remove("requestType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType _explicitNullValueRequestType = default!;
 #endif
         /// <summary>Special Instructions sent to the driver. Available only to AA intercept type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpecialInstructions { get; set; }
+        public string? SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
+        private string? _explicitNullValueSpecialInstructions = default!;
 #nullable restore
 #else
-        public string SpecialInstructions { get; set; }
+        public string SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
+        private string _explicitNullValueSpecialInstructions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequesterContactInfo>("requesterContactInfo", RequesterContactInfo);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType>("requestType", RequestType);
             writer.WriteStringValue("specialInstructions", SpecialInstructions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

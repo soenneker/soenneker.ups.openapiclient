@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelRecoveryRequestLabelSpecification : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("HTTPUserAgent") is { } nullNodeHTTPUserAgent && nullNodeHTTPUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HTTPUserAgent = null;
+            if (parseNode.GetChildNode("LabelImageFormat") is { } nullNodeLabelImageFormat && nullNodeLabelImageFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelImageFormat = null;
+            if (parseNode.GetChildNode("LabelStockSize") is { } nullNodeLabelStockSize && nullNodeLabelStockSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelStockSize = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Browser HTTPUserAgent String. This is the preferred way of identifying GIF image type to be generated.  Required if &lt;Root node&gt;/ LabelSpecification/LabelImageFormat/Code = Gif. Default to Mozilla/4.5 if this field is missing or has invalid value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HTTPUserAgent { get; set; }
+        public string? HTTPUserAgent { get => _explicitNullValueHTTPUserAgent; set { _explicitNullValueHTTPUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTTPUserAgent"); else _explicitNullProperties?.Remove("HTTPUserAgent"); } }
+        private string? _explicitNullValueHTTPUserAgent = default!;
 #nullable restore
 #else
-        public string HTTPUserAgent { get; set; }
+        public string HTTPUserAgent { get => _explicitNullValueHTTPUserAgent; set { _explicitNullValueHTTPUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTTPUserAgent"); else _explicitNullProperties?.Remove("HTTPUserAgent"); } }
+        private string _explicitNullValueHTTPUserAgent = default!;
 #endif
         /// <summary>The file format of the label and receipt. Defaults to HTML format if this node does not exist.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat? LabelImageFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat? LabelImageFormat { get => _explicitNullValueLabelImageFormat; set { _explicitNullValueLabelImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelImageFormat"); else _explicitNullProperties?.Remove("LabelImageFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat? _explicitNullValueLabelImageFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat LabelImageFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat LabelImageFormat { get => _explicitNullValueLabelImageFormat; set { _explicitNullValueLabelImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelImageFormat"); else _explicitNullProperties?.Remove("LabelImageFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat _explicitNullValueLabelImageFormat = default!;
 #endif
         /// <summary>Container to hold Label Height and Width information.  Applicable if Label Image Code is ZPL, EPL and SPL. Ignored for other Label Image Code types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelStockSize? LabelStockSize { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelStockSize? LabelStockSize { get => _explicitNullValueLabelStockSize; set { _explicitNullValueLabelStockSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelStockSize"); else _explicitNullProperties?.Remove("LabelStockSize"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelStockSize? _explicitNullValueLabelStockSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelStockSize LabelStockSize { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelStockSize LabelStockSize { get => _explicitNullValueLabelStockSize; set { _explicitNullValueLabelStockSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelStockSize"); else _explicitNullProperties?.Remove("LabelStockSize"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelStockSize _explicitNullValueLabelStockSize = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelSpecification(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("HTTPUserAgent", HTTPUserAgent);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelImageFormat>("LabelImageFormat", LabelImageFormat);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryLabelSpecificationLabelStockSize>("LabelStockSize", LabelStockSize);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

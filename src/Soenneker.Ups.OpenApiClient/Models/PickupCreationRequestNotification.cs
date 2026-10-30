@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PickupCreationRequestNotification : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ConfirmationEmailAddress") is { } nullNodeConfirmationEmailAddress && nullNodeConfirmationEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmationEmailAddress = null;
+            if (parseNode.GetChildNode("UndeliverableEmailAddress") is { } nullNodeUndeliverableEmailAddress && nullNodeUndeliverableEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UndeliverableEmailAddress = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Email address where the pickup notification is sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfirmationEmailAddress { get; set; }
+        public string? ConfirmationEmailAddress { get => _explicitNullValueConfirmationEmailAddress; set { _explicitNullValueConfirmationEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConfirmationEmailAddress"); else _explicitNullProperties?.Remove("ConfirmationEmailAddress"); } }
+        private string? _explicitNullValueConfirmationEmailAddress = default!;
 #nullable restore
 #else
-        public string ConfirmationEmailAddress { get; set; }
+        public string ConfirmationEmailAddress { get => _explicitNullValueConfirmationEmailAddress; set { _explicitNullValueConfirmationEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConfirmationEmailAddress"); else _explicitNullProperties?.Remove("ConfirmationEmailAddress"); } }
+        private string _explicitNullValueConfirmationEmailAddress = default!;
 #endif
         /// <summary>Email address for used exceptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UndeliverableEmailAddress { get; set; }
+        public string? UndeliverableEmailAddress { get => _explicitNullValueUndeliverableEmailAddress; set { _explicitNullValueUndeliverableEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEmailAddress"); else _explicitNullProperties?.Remove("UndeliverableEmailAddress"); } }
+        private string? _explicitNullValueUndeliverableEmailAddress = default!;
 #nullable restore
 #else
-        public string UndeliverableEmailAddress { get; set; }
+        public string UndeliverableEmailAddress { get => _explicitNullValueUndeliverableEmailAddress; set { _explicitNullValueUndeliverableEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEmailAddress"); else _explicitNullProperties?.Remove("UndeliverableEmailAddress"); } }
+        private string _explicitNullValueUndeliverableEmailAddress = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequestNotification(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ConfirmationEmailAddress", ConfirmationEmailAddress);
             writer.WriteStringValue("UndeliverableEmailAddress", UndeliverableEmailAddress);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

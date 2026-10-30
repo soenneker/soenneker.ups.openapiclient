@@ -13,7 +13,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsExportAssureErrorResponse : ApiException, IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("perfStats") is { } nullNodePerfStats && nullNodePerfStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerfStats = null;
+            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The primary error message.</summary>
@@ -21,18 +30,22 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The perfStats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? PerfStats { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? _explicitNullValuePerfStats = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats PerfStats { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats _explicitNullValuePerfStats = default!;
 #endif
         /// <summary>This object contains an array of error codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse"/> and sets the default values.
@@ -49,7 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +85,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats>("perfStats", PerfStats);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureErrorResponseResponse>("response", Response);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

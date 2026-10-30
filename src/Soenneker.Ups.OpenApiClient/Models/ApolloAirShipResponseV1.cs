@@ -11,88 +11,125 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApolloAirShipResponseV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("airWaybillDocument") is { } nullNodeAirWaybillDocument && nullNodeAirWaybillDocument.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AirWaybillDocument = null;
+            if (parseNode.GetChildNode("destinationServiceCenter") is { } nullNodeDestinationServiceCenter && nullNodeDestinationServiceCenter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationServiceCenter = null;
+            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("originServiceCenter") is { } nullNodeOriginServiceCenter && nullNodeOriginServiceCenter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginServiceCenter = null;
+            if (parseNode.GetChildNode("paymentType") is { } nullNodePaymentType && nullNodePaymentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentType = null;
+            if (parseNode.GetChildNode("prqNumber") is { } nullNodePrqNumber && nullNodePrqNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrqNumber = null;
+            if (parseNode.GetChildNode("prqStatus") is { } nullNodePrqStatus && nullNodePrqStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrqStatus = null;
+            if (parseNode.GetChildNode("rates") is { } nullNodeRates && nullNodeRates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rates = null;
+            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("shipmentNumber") is { } nullNodeShipmentNumber && nullNodeShipmentNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Base64-encoded air waybill document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? AirWaybillDocument { get; set; }
+        public byte[]? AirWaybillDocument { get => _explicitNullValueAirWaybillDocument; set { _explicitNullValueAirWaybillDocument = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airWaybillDocument"); else _explicitNullProperties?.Remove("airWaybillDocument"); } }
+        private byte[]? _explicitNullValueAirWaybillDocument = default!;
 #nullable restore
 #else
-        public byte[] AirWaybillDocument { get; set; }
+        public byte[] AirWaybillDocument { get => _explicitNullValueAirWaybillDocument; set { _explicitNullValueAirWaybillDocument = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airWaybillDocument"); else _explicitNullProperties?.Remove("airWaybillDocument"); } }
+        private byte[] _explicitNullValueAirWaybillDocument = default!;
 #endif
         /// <summary>The destination service center code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationServiceCenter { get; set; }
+        public string? DestinationServiceCenter { get => _explicitNullValueDestinationServiceCenter; set { _explicitNullValueDestinationServiceCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationServiceCenter"); else _explicitNullProperties?.Remove("destinationServiceCenter"); } }
+        private string? _explicitNullValueDestinationServiceCenter = default!;
 #nullable restore
 #else
-        public string DestinationServiceCenter { get; set; }
+        public string DestinationServiceCenter { get => _explicitNullValueDestinationServiceCenter; set { _explicitNullValueDestinationServiceCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationServiceCenter"); else _explicitNullProperties?.Remove("destinationServiceCenter"); } }
+        private string _explicitNullValueDestinationServiceCenter = default!;
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResponse? Label { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResponse? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResponse? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelResponse Label { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelResponse Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelResponse _explicitNullValueLabel = default!;
 #endif
         /// <summary>The origin service center code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginServiceCenter { get; set; }
+        public string? OriginServiceCenter { get => _explicitNullValueOriginServiceCenter; set { _explicitNullValueOriginServiceCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originServiceCenter"); else _explicitNullProperties?.Remove("originServiceCenter"); } }
+        private string? _explicitNullValueOriginServiceCenter = default!;
 #nullable restore
 #else
-        public string OriginServiceCenter { get; set; }
+        public string OriginServiceCenter { get => _explicitNullValueOriginServiceCenter; set { _explicitNullValueOriginServiceCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originServiceCenter"); else _explicitNullProperties?.Remove("originServiceCenter"); } }
+        private string _explicitNullValueOriginServiceCenter = default!;
 #endif
         /// <summary>The payment type for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentType { get; set; }
+        public string? PaymentType { get => _explicitNullValuePaymentType; set { _explicitNullValuePaymentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentType"); else _explicitNullProperties?.Remove("paymentType"); } }
+        private string? _explicitNullValuePaymentType = default!;
 #nullable restore
 #else
-        public string PaymentType { get; set; }
+        public string PaymentType { get => _explicitNullValuePaymentType; set { _explicitNullValuePaymentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentType"); else _explicitNullProperties?.Remove("paymentType"); } }
+        private string _explicitNullValuePaymentType = default!;
 #endif
         /// <summary>The PRQ details associated with the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrqNumber { get; set; }
+        public string? PrqNumber { get => _explicitNullValuePrqNumber; set { _explicitNullValuePrqNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prqNumber"); else _explicitNullProperties?.Remove("prqNumber"); } }
+        private string? _explicitNullValuePrqNumber = default!;
 #nullable restore
 #else
-        public string PrqNumber { get; set; }
+        public string PrqNumber { get => _explicitNullValuePrqNumber; set { _explicitNullValuePrqNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prqNumber"); else _explicitNullProperties?.Remove("prqNumber"); } }
+        private string _explicitNullValuePrqNumber = default!;
 #endif
         /// <summary>The shipment status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrqStatus { get; set; }
+        public string? PrqStatus { get => _explicitNullValuePrqStatus; set { _explicitNullValuePrqStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prqStatus"); else _explicitNullProperties?.Remove("prqStatus"); } }
+        private string? _explicitNullValuePrqStatus = default!;
 #nullable restore
 #else
-        public string PrqStatus { get; set; }
+        public string PrqStatus { get => _explicitNullValuePrqStatus; set { _explicitNullValuePrqStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prqStatus"); else _explicitNullProperties?.Remove("prqStatus"); } }
+        private string _explicitNullValuePrqStatus = default!;
 #endif
         /// <summary>The rates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RateDetail>? Rates { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RateDetail>? Rates { get => _explicitNullValueRates; set { _explicitNullValueRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rates"); else _explicitNullProperties?.Remove("rates"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RateDetail>? _explicitNullValueRates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RateDetail> Rates { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RateDetail> Rates { get => _explicitNullValueRates; set { _explicitNullValueRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rates"); else _explicitNullProperties?.Remove("rates"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RateDetail> _explicitNullValueRates = default!;
 #endif
         /// <summary>The response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2 Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2 Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2 _explicitNullValueResponse = default!;
 #endif
         /// <summary>The shipment number associated with the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentNumber { get; set; }
+        public string? ShipmentNumber { get => _explicitNullValueShipmentNumber; set { _explicitNullValueShipmentNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentNumber"); else _explicitNullProperties?.Remove("shipmentNumber"); } }
+        private string? _explicitNullValueShipmentNumber = default!;
 #nullable restore
 #else
-        public string ShipmentNumber { get; set; }
+        public string ShipmentNumber { get => _explicitNullValueShipmentNumber; set { _explicitNullValueShipmentNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentNumber"); else _explicitNullProperties?.Remove("shipmentNumber"); } }
+        private string _explicitNullValueShipmentNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1"/> and sets the default values.
@@ -109,7 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +185,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateDetail>("rates", Rates);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2>("response", Response);
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

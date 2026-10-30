@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UploadResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("FormsHistoryDocumentID") is { } nullNodeFormsHistoryDocumentID && nullNodeFormsHistoryDocumentID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormsHistoryDocumentID = null;
+            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The container for DocumentID(s).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentId? FormsHistoryDocumentID { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentId? FormsHistoryDocumentID { get => _explicitNullValueFormsHistoryDocumentID; set { _explicitNullValueFormsHistoryDocumentID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormsHistoryDocumentID"); else _explicitNullProperties?.Remove("FormsHistoryDocumentID"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentId? _explicitNullValueFormsHistoryDocumentID = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentId FormsHistoryDocumentID { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentId FormsHistoryDocumentID { get => _explicitNullValueFormsHistoryDocumentID; set { _explicitNullValueFormsHistoryDocumentID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormsHistoryDocumentID"); else _explicitNullProperties?.Remove("FormsHistoryDocumentID"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentId _explicitNullValueFormsHistoryDocumentID = default!;
 #endif
         /// <summary>Response container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UploadResponse"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.UploadResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UploadResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.UploadResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponseFormsHistoryDocumentId>("FormsHistoryDocumentID", FormsHistoryDocumentID);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UploadResponseResponse>("Response", Response);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

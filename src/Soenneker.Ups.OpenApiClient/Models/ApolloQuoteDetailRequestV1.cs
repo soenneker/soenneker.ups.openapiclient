@@ -11,48 +11,70 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApolloQuoteDetailRequestV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("quoteData") is { } nullNodeQuoteData && nullNodeQuoteData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteData = null;
+            if (parseNode.GetChildNode("requestType") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
+            if (parseNode.GetChildNode("routing") is { } nullNodeRouting && nullNodeRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Routing = null;
+            if (parseNode.GetChildNode("shipmentDetails") is { } nullNodeShipmentDetails && nullNodeShipmentDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentDetails = null;
+            if (parseNode.GetChildNode("shipmentPartyDetail") is { } nullNodeShipmentPartyDetail && nullNodeShipmentPartyDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentPartyDetail = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The quoteData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuoteData? QuoteData { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuoteData? QuoteData { get => _explicitNullValueQuoteData; set { _explicitNullValueQuoteData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteData"); else _explicitNullProperties?.Remove("quoteData"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuoteData? _explicitNullValueQuoteData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuoteData QuoteData { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuoteData QuoteData { get => _explicitNullValueQuoteData; set { _explicitNullValueQuoteData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteData"); else _explicitNullProperties?.Remove("quoteData"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuoteData _explicitNullValueQuoteData = default!;
 #endif
         /// <summary>The type of quote request (i.e, Air, Ocean).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestType { get; set; }
+        public string? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestType"); else _explicitNullProperties?.Remove("requestType"); } }
+        private string? _explicitNullValueRequestType = default!;
 #nullable restore
 #else
-        public string RequestType { get; set; }
+        public string RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestType"); else _explicitNullProperties?.Remove("requestType"); } }
+        private string _explicitNullValueRequestType = default!;
 #endif
         /// <summary>The routing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Routing? Routing { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.Routing? Routing { get => _explicitNullValueRouting; set { _explicitNullValueRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routing"); else _explicitNullProperties?.Remove("routing"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.Routing? _explicitNullValueRouting = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Routing Routing { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.Routing Routing { get => _explicitNullValueRouting; set { _explicitNullValueRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routing"); else _explicitNullProperties?.Remove("routing"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.Routing _explicitNullValueRouting = default!;
 #endif
         /// <summary>The shipmentDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetails? ShipmentDetails { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetails? ShipmentDetails { get => _explicitNullValueShipmentDetails; set { _explicitNullValueShipmentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentDetails"); else _explicitNullProperties?.Remove("shipmentDetails"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetails? _explicitNullValueShipmentDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetails ShipmentDetails { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetails ShipmentDetails { get => _explicitNullValueShipmentDetails; set { _explicitNullValueShipmentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentDetails"); else _explicitNullProperties?.Remove("shipmentDetails"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetails _explicitNullValueShipmentDetails = default!;
 #endif
         /// <summary>List of parties involved in the shipment (e.g., shipper, consignee, third party).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetail>? ShipmentPartyDetail { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetail>? ShipmentPartyDetail { get => _explicitNullValueShipmentPartyDetail; set { _explicitNullValueShipmentPartyDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentPartyDetail"); else _explicitNullProperties?.Remove("shipmentPartyDetail"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetail>? _explicitNullValueShipmentPartyDetail = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetail> ShipmentPartyDetail { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetail> ShipmentPartyDetail { get => _explicitNullValueShipmentPartyDetail; set { _explicitNullValueShipmentPartyDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentPartyDetail"); else _explicitNullProperties?.Remove("shipmentPartyDetail"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetail> _explicitNullValueShipmentPartyDetail = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloQuoteDetailRequestV1"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ApolloQuoteDetailRequestV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloQuoteDetailRequestV1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ApolloQuoteDetailRequestV1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Routing>("routing", Routing);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetails>("shipmentDetails", ShipmentDetails);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetail>("shipmentPartyDetail", ShipmentPartyDetail);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

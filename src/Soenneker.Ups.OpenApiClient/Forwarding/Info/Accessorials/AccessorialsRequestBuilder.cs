@@ -59,6 +59,8 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Info.Accessorials
                 { "400", global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ApolloErrorResponseV1.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityValidAccessorialsResponseV1>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityValidAccessorialsResponseV1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

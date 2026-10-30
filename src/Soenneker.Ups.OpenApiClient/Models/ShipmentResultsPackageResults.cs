@@ -11,112 +11,158 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ShipmentResultsPackageResults : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Accessorial") is { } nullNodeAccessorial && nullNodeAccessorial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accessorial = null;
+            if (parseNode.GetChildNode("BaseServiceCharge") is { } nullNodeBaseServiceCharge && nullNodeBaseServiceCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseServiceCharge = null;
+            if (parseNode.GetChildNode("CN22Number") is { } nullNodeCN22Number && nullNodeCN22Number.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22Number = null;
+            if (parseNode.GetChildNode("Form") is { } nullNodeForm && nullNodeForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Form = null;
+            if (parseNode.GetChildNode("ItemizedCharges") is { } nullNodeItemizedCharges && nullNodeItemizedCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemizedCharges = null;
+            if (parseNode.GetChildNode("NegotiatedCharges") is { } nullNodeNegotiatedCharges && nullNodeNegotiatedCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NegotiatedCharges = null;
+            if (parseNode.GetChildNode("RateModifier") is { } nullNodeRateModifier && nullNodeRateModifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateModifier = null;
+            if (parseNode.GetChildNode("ServiceOptionsCharges") is { } nullNodeServiceOptionsCharges && nullNodeServiceOptionsCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceOptionsCharges = null;
+            if (parseNode.GetChildNode("ShippingLabel") is { } nullNodeShippingLabel && nullNodeShippingLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingLabel = null;
+            if (parseNode.GetChildNode("ShippingReceipt") is { } nullNodeShippingReceipt && nullNodeShippingReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingReceipt = null;
+            if (parseNode.GetChildNode("SimpleRate") is { } nullNodeSimpleRate && nullNodeSimpleRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimpleRate = null;
+            if (parseNode.GetChildNode("TrackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("USPSPICNumber") is { } nullNodeUSPSPICNumber && nullNodeUSPSPICNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) USPSPICNumber = null;
+        }
+
         /// <summary>The container for Accessorial indicators. This information would be returned only for UPS Worldwide Express Freight and UPS Worldwide Express Freight Mid-day service request with Dry Ice or Oversize Pallet and SubVersion greater than or equal to 1707. This is valid only for UPS Worldwide Express Freight and UPS Worldwide Express Freight Mid-day service.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsAccessorial>? Accessorial { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsAccessorial>? Accessorial { get => _explicitNullValueAccessorial; set { _explicitNullValueAccessorial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Accessorial"); else _explicitNullProperties?.Remove("Accessorial"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsAccessorial>? _explicitNullValueAccessorial = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsAccessorial> Accessorial { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsAccessorial> Accessorial { get => _explicitNullValueAccessorial; set { _explicitNullValueAccessorial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Accessorial"); else _explicitNullProperties?.Remove("Accessorial"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsAccessorial> _explicitNullValueAccessorial = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Base Service Charge container.Transportation charge = BaseServiceCharge + Fuel charge  Returned only if Subversion &gt;=1701.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsBaseServiceCharge? BaseServiceCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsBaseServiceCharge? BaseServiceCharge { get => _explicitNullValueBaseServiceCharge; set { _explicitNullValueBaseServiceCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BaseServiceCharge"); else _explicitNullProperties?.Remove("BaseServiceCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsBaseServiceCharge? _explicitNullValueBaseServiceCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsBaseServiceCharge BaseServiceCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsBaseServiceCharge BaseServiceCharge { get => _explicitNullValueBaseServiceCharge; set { _explicitNullValueBaseServiceCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BaseServiceCharge"); else _explicitNullProperties?.Remove("BaseServiceCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsBaseServiceCharge _explicitNullValueBaseServiceCharge = default!;
 #endif
         /// <summary>USPS defined CN22 ID number format varies based on destination country or territory. Not applicable as of Jan 2015. Mail Innovations shipments US to VI, PR, and GU are not considered international.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22Number { get; set; }
+        public string? CN22Number { get => _explicitNullValueCN22Number; set { _explicitNullValueCN22Number = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Number"); else _explicitNullProperties?.Remove("CN22Number"); } }
+        private string? _explicitNullValueCN22Number = default!;
 #nullable restore
 #else
-        public string CN22Number { get; set; }
+        public string CN22Number { get => _explicitNullValueCN22Number; set { _explicitNullValueCN22Number = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Number"); else _explicitNullProperties?.Remove("CN22Number"); } }
+        private string _explicitNullValueCN22Number = default!;
 #endif
         /// <summary>Container tag for the International forms image.  Currently this container would be returned for UPS Premium Care shipments. Form is returned for following shipments -Forward shipments,Shipments with PRL ReturnService,Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707. CN22 data for Worlwide economy services will be returned within the PDF417 barcode of the label.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsForm? Form { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsForm? Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsForm? _explicitNullValueForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsForm Form { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsForm Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsForm _explicitNullValueForm = default!;
 #endif
         /// <summary>Itemized Charges are returned only when the subversion element is present and greater than or equal to 1607. Package level itemized charges are only returned for US domestic movements.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsItemizedCharges>? ItemizedCharges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsItemizedCharges>? ItemizedCharges { get => _explicitNullValueItemizedCharges; set { _explicitNullValueItemizedCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ItemizedCharges"); else _explicitNullProperties?.Remove("ItemizedCharges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsItemizedCharges>? _explicitNullValueItemizedCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsItemizedCharges> ItemizedCharges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsItemizedCharges> ItemizedCharges { get => _explicitNullValueItemizedCharges; set { _explicitNullValueItemizedCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ItemizedCharges"); else _explicitNullProperties?.Remove("ItemizedCharges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsItemizedCharges> _explicitNullValueItemizedCharges = default!;
 #endif
         /// <summary>Negotiated Rates Charge Container.  These charges are returned when:1) Subversion is greater than or equal to 16072) If negotiated rates were requested for GFP shipments and account number is eligible to receive negotiated rates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsNegotiatedCharges? NegotiatedCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsNegotiatedCharges? NegotiatedCharges { get => _explicitNullValueNegotiatedCharges; set { _explicitNullValueNegotiatedCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedCharges"); else _explicitNullProperties?.Remove("NegotiatedCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsNegotiatedCharges? _explicitNullValueNegotiatedCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsNegotiatedCharges NegotiatedCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsNegotiatedCharges NegotiatedCharges { get => _explicitNullValueNegotiatedCharges; set { _explicitNullValueNegotiatedCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedCharges"); else _explicitNullProperties?.Remove("NegotiatedCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsNegotiatedCharges _explicitNullValueNegotiatedCharges = default!;
 #endif
         /// <summary>Returned Package Information.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsRateModifier>? RateModifier { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsRateModifier>? RateModifier { get => _explicitNullValueRateModifier; set { _explicitNullValueRateModifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateModifier"); else _explicitNullProperties?.Remove("RateModifier"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsRateModifier>? _explicitNullValueRateModifier = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsRateModifier> RateModifier { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsRateModifier> RateModifier { get => _explicitNullValueRateModifier; set { _explicitNullValueRateModifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateModifier"); else _explicitNullProperties?.Remove("RateModifier"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsRateModifier> _explicitNullValueRateModifier = default!;
 #endif
         /// <summary>Shipment charges info. Shipment charges are only guaranteed to be returned for shipments whose origin country or territory is US or Puerto Rico.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsServiceOptionsCharges? ServiceOptionsCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsServiceOptionsCharges? ServiceOptionsCharges { get => _explicitNullValueServiceOptionsCharges; set { _explicitNullValueServiceOptionsCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOptionsCharges"); else _explicitNullProperties?.Remove("ServiceOptionsCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsServiceOptionsCharges? _explicitNullValueServiceOptionsCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsServiceOptionsCharges ServiceOptionsCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsServiceOptionsCharges ServiceOptionsCharges { get => _explicitNullValueServiceOptionsCharges; set { _explicitNullValueServiceOptionsCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOptionsCharges"); else _explicitNullProperties?.Remove("ServiceOptionsCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsServiceOptionsCharges _explicitNullValueServiceOptionsCharges = default!;
 #endif
         /// <summary>The container for UPS shipping label. Returned for following shipments -Forward shipments,Shipments with PRL returns service, Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707. Shipping label wont be returned if BarCodeImageIndicator is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel? ShippingLabel { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel? ShippingLabel { get => _explicitNullValueShippingLabel; set { _explicitNullValueShippingLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingLabel"); else _explicitNullProperties?.Remove("ShippingLabel"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel? _explicitNullValueShippingLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel ShippingLabel { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel ShippingLabel { get => _explicitNullValueShippingLabel; set { _explicitNullValueShippingLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingLabel"); else _explicitNullProperties?.Remove("ShippingLabel"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingLabel _explicitNullValueShippingLabel = default!;
 #endif
         /// <summary>Supported for following shipments -PRL shipments,Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingReceipt? ShippingReceipt { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingReceipt? ShippingReceipt { get => _explicitNullValueShippingReceipt; set { _explicitNullValueShippingReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingReceipt"); else _explicitNullProperties?.Remove("ShippingReceipt"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingReceipt? _explicitNullValueShippingReceipt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingReceipt ShippingReceipt { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingReceipt ShippingReceipt { get => _explicitNullValueShippingReceipt; set { _explicitNullValueShippingReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingReceipt"); else _explicitNullProperties?.Remove("ShippingReceipt"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsShippingReceipt _explicitNullValueShippingReceipt = default!;
 #endif
         /// <summary>SimpleRate will be returned if Simple Rate  present in request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsSimpleRate? SimpleRate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsSimpleRate? SimpleRate { get => _explicitNullValueSimpleRate; set { _explicitNullValueSimpleRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SimpleRate"); else _explicitNullProperties?.Remove("SimpleRate"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsSimpleRate? _explicitNullValueSimpleRate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsSimpleRate SimpleRate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageResultsSimpleRate SimpleRate { get => _explicitNullValueSimpleRate; set { _explicitNullValueSimpleRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SimpleRate"); else _explicitNullProperties?.Remove("SimpleRate"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageResultsSimpleRate _explicitNullValueSimpleRate = default!;
 #endif
         /// <summary>Package 1Z number.  For Mail Innovations shipments, please use the USPSPICNumber when tracking packages (a non-1Z number Mail Manifest Id is returned).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get; set; }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get; set; }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>USPSPICNumber is USPS Package Identification; it should be used for tracking Mail Innovations shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? USPSPICNumber { get; set; }
+        public string? USPSPICNumber { get => _explicitNullValueUSPSPICNumber; set { _explicitNullValueUSPSPICNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USPSPICNumber"); else _explicitNullProperties?.Remove("USPSPICNumber"); } }
+        private string? _explicitNullValueUSPSPICNumber = default!;
 #nullable restore
 #else
-        public string USPSPICNumber { get; set; }
+        public string USPSPICNumber { get => _explicitNullValueUSPSPICNumber; set { _explicitNullValueUSPSPICNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USPSPICNumber"); else _explicitNullProperties?.Remove("USPSPICNumber"); } }
+        private string _explicitNullValueUSPSPICNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults"/> and sets the default values.
@@ -133,7 +179,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -178,6 +224,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageResultsSimpleRate>("SimpleRate", SimpleRate);
             writer.WriteStringValue("TrackingNumber", TrackingNumber);
             writer.WriteStringValue("USPSPICNumber", USPSPICNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

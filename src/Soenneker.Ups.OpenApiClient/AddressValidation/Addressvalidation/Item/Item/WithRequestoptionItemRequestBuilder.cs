@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.AddressValidation.Addressvalidation.Item.I
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.AddressValidationAddressValidation401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.AddressValidationAddressValidation403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.AddressValidationAddressValidation429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.AddressValidationAddressValidation200Response>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.AddressValidationAddressValidation200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

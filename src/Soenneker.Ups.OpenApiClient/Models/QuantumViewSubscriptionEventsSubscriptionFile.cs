@@ -11,64 +11,92 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class QuantumViewSubscriptionEventsSubscriptionFile : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Delivery") is { } nullNodeDelivery && nullNodeDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Delivery = null;
+            if (parseNode.GetChildNode("Exception") is { } nullNodeException && nullNodeException.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exception = null;
+            if (parseNode.GetChildNode("FileName") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
+            if (parseNode.GetChildNode("Generic") is { } nullNodeGeneric && nullNodeGeneric.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Generic = null;
+            if (parseNode.GetChildNode("Manifest") is { } nullNodeManifest && nullNodeManifest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Manifest = null;
+            if (parseNode.GetChildNode("Origin") is { } nullNodeOrigin && nullNodeOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Origin = null;
+            if (parseNode.GetChildNode("StatusType") is { } nullNodeStatusType && nullNodeStatusType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container for delivery information.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery>? Delivery { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery>? Delivery { get => _explicitNullValueDelivery; set { _explicitNullValueDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Delivery"); else _explicitNullProperties?.Remove("Delivery"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery>? _explicitNullValueDelivery = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery> Delivery { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery> Delivery { get => _explicitNullValueDelivery; set { _explicitNullValueDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Delivery"); else _explicitNullProperties?.Remove("Delivery"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileDelivery> _explicitNullValueDelivery = default!;
 #endif
         /// <summary>Shipment exception data.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileException>? Exception { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileException>? Exception { get => _explicitNullValueException; set { _explicitNullValueException = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Exception"); else _explicitNullProperties?.Remove("Exception"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileException>? _explicitNullValueException = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileException> Exception { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileException> Exception { get => _explicitNullValueException; set { _explicitNullValueException = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Exception"); else _explicitNullProperties?.Remove("Exception"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileException> _explicitNullValueException = default!;
 #endif
         /// <summary>File name belonging to specific subscription requested by user.Format: YYMMDD_HHmmssnnn</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileName { get; set; }
+        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FileName"); else _explicitNullProperties?.Remove("FileName"); } }
+        private string? _explicitNullValueFileName = default!;
 #nullable restore
 #else
-        public string FileName { get; set; }
+        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FileName"); else _explicitNullProperties?.Remove("FileName"); } }
+        private string _explicitNullValueFileName = default!;
 #endif
         /// <summary>Container for generic record information.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileGeneric>? Generic { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileGeneric>? Generic { get => _explicitNullValueGeneric; set { _explicitNullValueGeneric = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Generic"); else _explicitNullProperties?.Remove("Generic"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileGeneric>? _explicitNullValueGeneric = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileGeneric> Generic { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileGeneric> Generic { get => _explicitNullValueGeneric; set { _explicitNullValueGeneric = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Generic"); else _explicitNullProperties?.Remove("Generic"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileGeneric> _explicitNullValueGeneric = default!;
 #endif
         /// <summary>Container represents all data that is relevant for the shipment, such as origin, destination, shipper, payment method etc. It will be returned when available.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileManifest>? Manifest { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileManifest>? Manifest { get => _explicitNullValueManifest; set { _explicitNullValueManifest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Manifest"); else _explicitNullProperties?.Remove("Manifest"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileManifest>? _explicitNullValueManifest = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileManifest> Manifest { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileManifest> Manifest { get => _explicitNullValueManifest; set { _explicitNullValueManifest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Manifest"); else _explicitNullProperties?.Remove("Manifest"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileManifest> _explicitNullValueManifest = default!;
 #endif
         /// <summary>Information about shipment&apos;s origin.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileOrigin>? Origin { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileOrigin>? Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Origin"); else _explicitNullProperties?.Remove("Origin"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileOrigin>? _explicitNullValueOrigin = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileOrigin> Origin { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileOrigin> Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Origin"); else _explicitNullProperties?.Remove("Origin"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileOrigin> _explicitNullValueOrigin = default!;
 #endif
         /// <summary>Container that displays whether the file is read or unread.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileStatusType? StatusType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileStatusType? StatusType { get => _explicitNullValueStatusType; set { _explicitNullValueStatusType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusType"); else _explicitNullProperties?.Remove("StatusType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileStatusType? _explicitNullValueStatusType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileStatusType StatusType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileStatusType StatusType { get => _explicitNullValueStatusType; set { _explicitNullValueStatusType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusType"); else _explicitNullProperties?.Remove("StatusType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileStatusType _explicitNullValueStatusType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileManifest>("Manifest", Manifest);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileOrigin>("Origin", Origin);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionFileStatusType>("StatusType", StatusType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

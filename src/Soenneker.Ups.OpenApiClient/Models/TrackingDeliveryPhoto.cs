@@ -12,34 +12,52 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TrackingDeliveryPhoto : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isNonPostalCodeCountry") is { } nullNodeIsNonPostalCodeCountry && nullNodeIsNonPostalCodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNonPostalCodeCountry = null;
+            if (parseNode.GetChildNode("photo") is { } nullNodePhoto && nullNodePhoto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Photo = null;
+            if (parseNode.GetChildNode("photoCaptureInd") is { } nullNodePhotoCaptureInd && nullNodePhotoCaptureInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhotoCaptureInd = null;
+            if (parseNode.GetChildNode("photoDispositionCode") is { } nullNodePhotoDispositionCode && nullNodePhotoDispositionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhotoDispositionCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The indication if the country does not use postal code. Valid values: &apos;true&apos; this country does not use postal code. &apos;false&apos; this country uses postal code</summary>
-        public bool? IsNonPostalCodeCountry { get; set; }
+        public bool? IsNonPostalCodeCountry { get => _explicitNullValueIsNonPostalCodeCountry; set { _explicitNullValueIsNonPostalCodeCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isNonPostalCodeCountry"); else _explicitNullProperties?.Remove("isNonPostalCodeCountry"); } }
+        private bool? _explicitNullValueIsNonPostalCodeCountry = default!;
         /// <summary>The photo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Photo { get; set; }
+        public string? Photo { get => _explicitNullValuePhoto; set { _explicitNullValuePhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photo"); else _explicitNullProperties?.Remove("photo"); } }
+        private string? _explicitNullValuePhoto = default!;
 #nullable restore
 #else
-        public string Photo { get; set; }
+        public string Photo { get => _explicitNullValuePhoto; set { _explicitNullValuePhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photo"); else _explicitNullProperties?.Remove("photo"); } }
+        private string _explicitNullValuePhoto = default!;
 #endif
         /// <summary>The photo capture indicator. Valid values: &apos;Y&apos; the photo is an photo capture. &apos;N&apos; the photo is not a capture</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhotoCaptureInd { get; set; }
+        public string? PhotoCaptureInd { get => _explicitNullValuePhotoCaptureInd; set { _explicitNullValuePhotoCaptureInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoCaptureInd"); else _explicitNullProperties?.Remove("photoCaptureInd"); } }
+        private string? _explicitNullValuePhotoCaptureInd = default!;
 #nullable restore
 #else
-        public string PhotoCaptureInd { get; set; }
+        public string PhotoCaptureInd { get => _explicitNullValuePhotoCaptureInd; set { _explicitNullValuePhotoCaptureInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoCaptureInd"); else _explicitNullProperties?.Remove("photoCaptureInd"); } }
+        private string _explicitNullValuePhotoCaptureInd = default!;
 #endif
         /// <summary>The photo disposition code. Valid values: &apos;V&apos; the photo is viewable. &apos;N&apos; the photo is not viewable. &apos;U&apos; the photo is not stored</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhotoDispositionCode { get; set; }
+        public string? PhotoDispositionCode { get => _explicitNullValuePhotoDispositionCode; set { _explicitNullValuePhotoDispositionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoDispositionCode"); else _explicitNullProperties?.Remove("photoDispositionCode"); } }
+        private string? _explicitNullValuePhotoDispositionCode = default!;
 #nullable restore
 #else
-        public string PhotoDispositionCode { get; set; }
+        public string PhotoDispositionCode { get => _explicitNullValuePhotoDispositionCode; set { _explicitNullValuePhotoDispositionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoDispositionCode"); else _explicitNullProperties?.Remove("photoDispositionCode"); } }
+        private string _explicitNullValuePhotoDispositionCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingDeliveryPhoto"/> and sets the default values.
@@ -56,7 +74,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.TrackingDeliveryPhoto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.TrackingDeliveryPhoto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.TrackingDeliveryPhoto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("photo", Photo);
             writer.WriteStringValue("photoCaptureInd", PhotoCaptureInd);
             writer.WriteStringValue("photoDispositionCode", PhotoDispositionCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

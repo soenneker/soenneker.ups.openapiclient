@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ControlDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("controlDetailDescription") is { } nullNodeControlDetailDescription && nullNodeControlDetailDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetailDescription = null;
+            if (parseNode.GetChildNode("controlDetailName") is { } nullNodeControlDetailName && nullNodeControlDetailName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetailName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A detailed description of the control measure, translated for the user as required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlDetailDescription { get; set; }
+        public string? ControlDetailDescription { get => _explicitNullValueControlDetailDescription; set { _explicitNullValueControlDetailDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailDescription"); else _explicitNullProperties?.Remove("controlDetailDescription"); } }
+        private string? _explicitNullValueControlDetailDescription = default!;
 #nullable restore
 #else
-        public string ControlDetailDescription { get; set; }
+        public string ControlDetailDescription { get => _explicitNullValueControlDetailDescription; set { _explicitNullValueControlDetailDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailDescription"); else _explicitNullProperties?.Remove("controlDetailDescription"); } }
+        private string _explicitNullValueControlDetailDescription = default!;
 #endif
         /// <summary>The formal name or title of the control measure. This property serves as the header for `ControlDetails`.  Where no specific control name is applicable, this field may be left empty (and consequently, no header will be displayed in the response). This property is translated to the user&apos;s language as required. **Note**: When the `controlTypeCode` is set to `DOC`, the `controlDetailName` is also the identifier for the corresponding DocuSign template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlDetailName { get; set; }
+        public string? ControlDetailName { get => _explicitNullValueControlDetailName; set { _explicitNullValueControlDetailName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailName"); else _explicitNullProperties?.Remove("controlDetailName"); } }
+        private string? _explicitNullValueControlDetailName = default!;
 #nullable restore
 #else
-        public string ControlDetailName { get; set; }
+        public string ControlDetailName { get => _explicitNullValueControlDetailName; set { _explicitNullValueControlDetailName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailName"); else _explicitNullProperties?.Remove("controlDetailName"); } }
+        private string _explicitNullValueControlDetailName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ControlDetails"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ControlDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ControlDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ControlDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("controlDetailDescription", ControlDetailDescription);
             writer.WriteStringValue("controlDetailName", ControlDetailName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

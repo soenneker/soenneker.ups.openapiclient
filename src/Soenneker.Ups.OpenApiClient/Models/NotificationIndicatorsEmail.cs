@@ -12,35 +12,68 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NotificationIndicatorsEmail : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dayBeforePickupInd") is { } nullNodeDayBeforePickupInd && nullNodeDayBeforePickupInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayBeforePickupInd = null;
+            if (parseNode.GetChildNode("dayOfPickupInd") is { } nullNodeDayOfPickupInd && nullNodeDayOfPickupInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfPickupInd = null;
+            if (parseNode.GetChildNode("enrollmentConfirmationInd") is { } nullNodeEnrollmentConfirmationInd && nullNodeEnrollmentConfirmationInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnrollmentConfirmationInd = null;
+            if (parseNode.GetChildNode("pickupCancellationInd") is { } nullNodePickupCancellationInd && nullNodePickupCancellationInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupCancellationInd = null;
+            if (parseNode.GetChildNode("pickupCompleteInd") is { } nullNodePickupCompleteInd && nullNodePickupCompleteInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupCompleteInd = null;
+            if (parseNode.GetChildNode("pickupDelayedInd") is { } nullNodePickupDelayedInd && nullNodePickupDelayedInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDelayedInd = null;
+            if (parseNode.GetChildNode("pickupIncompleteNotificationInd") is { } nullNodePickupIncompleteNotificationInd && nullNodePickupIncompleteNotificationInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupIncompleteNotificationInd = null;
+            if (parseNode.GetChildNode("pickupUpdateInd") is { } nullNodePickupUpdateInd && nullNodePickupUpdateInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupUpdateInd = null;
+            if (parseNode.GetChildNode("preArrivalInd") is { } nullNodePreArrivalInd && nullNodePreArrivalInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreArrivalInd = null;
+            if (parseNode.GetChildNode("smartPickupCutOffNotificationTimeInd") is { } nullNodeSmartPickupCutOffNotificationTimeInd && nullNodeSmartPickupCutOffNotificationTimeInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartPickupCutOffNotificationTimeInd = null;
+            if (parseNode.GetChildNode("smartPickupTriggerCancellationInd") is { } nullNodeSmartPickupTriggerCancellationInd && nullNodeSmartPickupTriggerCancellationInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartPickupTriggerCancellationInd = null;
+            if (parseNode.GetChildNode("smartPickupTriggerNotificationInd") is { } nullNodeSmartPickupTriggerNotificationInd && nullNodeSmartPickupTriggerNotificationInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartPickupTriggerNotificationInd = null;
+            if (parseNode.GetChildNode("smartPickupTriggerWarningInd") is { } nullNodeSmartPickupTriggerWarningInd && nullNodeSmartPickupTriggerWarningInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartPickupTriggerWarningInd = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether to send notifications on the day before pickup.</summary>
-        public bool? DayBeforePickupInd { get; set; }
+        public bool? DayBeforePickupInd { get => _explicitNullValueDayBeforePickupInd; set { _explicitNullValueDayBeforePickupInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayBeforePickupInd"); else _explicitNullProperties?.Remove("dayBeforePickupInd"); } }
+        private bool? _explicitNullValueDayBeforePickupInd = default!;
         /// <summary>Indicates whether to send notifications on the day of pickup.</summary>
-        public bool? DayOfPickupInd { get; set; }
+        public bool? DayOfPickupInd { get => _explicitNullValueDayOfPickupInd; set { _explicitNullValueDayOfPickupInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfPickupInd"); else _explicitNullProperties?.Remove("dayOfPickupInd"); } }
+        private bool? _explicitNullValueDayOfPickupInd = default!;
         /// <summary>Indicates enrollment confirmation</summary>
-        public bool? EnrollmentConfirmationInd { get; set; }
+        public bool? EnrollmentConfirmationInd { get => _explicitNullValueEnrollmentConfirmationInd; set { _explicitNullValueEnrollmentConfirmationInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enrollmentConfirmationInd"); else _explicitNullProperties?.Remove("enrollmentConfirmationInd"); } }
+        private bool? _explicitNullValueEnrollmentConfirmationInd = default!;
         /// <summary>Indicates whether to send notifications on pickup cancellation.</summary>
-        public bool? PickupCancellationInd { get; set; }
+        public bool? PickupCancellationInd { get => _explicitNullValuePickupCancellationInd; set { _explicitNullValuePickupCancellationInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupCancellationInd"); else _explicitNullProperties?.Remove("pickupCancellationInd"); } }
+        private bool? _explicitNullValuePickupCancellationInd = default!;
         /// <summary>Indicates whether to send notifications on pickup completion.</summary>
-        public bool? PickupCompleteInd { get; set; }
+        public bool? PickupCompleteInd { get => _explicitNullValuePickupCompleteInd; set { _explicitNullValuePickupCompleteInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupCompleteInd"); else _explicitNullProperties?.Remove("pickupCompleteInd"); } }
+        private bool? _explicitNullValuePickupCompleteInd = default!;
         /// <summary>Indicates delayed pickup</summary>
-        public bool? PickupDelayedInd { get; set; }
+        public bool? PickupDelayedInd { get => _explicitNullValuePickupDelayedInd; set { _explicitNullValuePickupDelayedInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDelayedInd"); else _explicitNullProperties?.Remove("pickupDelayedInd"); } }
+        private bool? _explicitNullValuePickupDelayedInd = default!;
         /// <summary>Indicates incomplete pickup notification</summary>
-        public bool? PickupIncompleteNotificationInd { get; set; }
+        public bool? PickupIncompleteNotificationInd { get => _explicitNullValuePickupIncompleteNotificationInd; set { _explicitNullValuePickupIncompleteNotificationInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupIncompleteNotificationInd"); else _explicitNullProperties?.Remove("pickupIncompleteNotificationInd"); } }
+        private bool? _explicitNullValuePickupIncompleteNotificationInd = default!;
         /// <summary>Indicates whether to send notifications on pickup schedule update.</summary>
-        public bool? PickupUpdateInd { get; set; }
+        public bool? PickupUpdateInd { get => _explicitNullValuePickupUpdateInd; set { _explicitNullValuePickupUpdateInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupUpdateInd"); else _explicitNullProperties?.Remove("pickupUpdateInd"); } }
+        private bool? _explicitNullValuePickupUpdateInd = default!;
         /// <summary>Indicates whether to send notifications before arrival.</summary>
-        public bool? PreArrivalInd { get; set; }
+        public bool? PreArrivalInd { get => _explicitNullValuePreArrivalInd; set { _explicitNullValuePreArrivalInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preArrivalInd"); else _explicitNullProperties?.Remove("preArrivalInd"); } }
+        private bool? _explicitNullValuePreArrivalInd = default!;
         /// <summary>Indicates the Smart pickup cut off notification time</summary>
-        public bool? SmartPickupCutOffNotificationTimeInd { get; set; }
+        public bool? SmartPickupCutOffNotificationTimeInd { get => _explicitNullValueSmartPickupCutOffNotificationTimeInd; set { _explicitNullValueSmartPickupCutOffNotificationTimeInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartPickupCutOffNotificationTimeInd"); else _explicitNullProperties?.Remove("smartPickupCutOffNotificationTimeInd"); } }
+        private bool? _explicitNullValueSmartPickupCutOffNotificationTimeInd = default!;
         /// <summary>Indicates Smart pickup trigger cancellation</summary>
-        public bool? SmartPickupTriggerCancellationInd { get; set; }
+        public bool? SmartPickupTriggerCancellationInd { get => _explicitNullValueSmartPickupTriggerCancellationInd; set { _explicitNullValueSmartPickupTriggerCancellationInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartPickupTriggerCancellationInd"); else _explicitNullProperties?.Remove("smartPickupTriggerCancellationInd"); } }
+        private bool? _explicitNullValueSmartPickupTriggerCancellationInd = default!;
         /// <summary>Indicates Smart pickup trigger notification</summary>
-        public bool? SmartPickupTriggerNotificationInd { get; set; }
+        public bool? SmartPickupTriggerNotificationInd { get => _explicitNullValueSmartPickupTriggerNotificationInd; set { _explicitNullValueSmartPickupTriggerNotificationInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartPickupTriggerNotificationInd"); else _explicitNullProperties?.Remove("smartPickupTriggerNotificationInd"); } }
+        private bool? _explicitNullValueSmartPickupTriggerNotificationInd = default!;
         /// <summary>Indicates the Smart pickup trigger warning</summary>
-        public bool? SmartPickupTriggerWarningInd { get; set; }
+        public bool? SmartPickupTriggerWarningInd { get => _explicitNullValueSmartPickupTriggerWarningInd; set { _explicitNullValueSmartPickupTriggerWarningInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartPickupTriggerWarningInd"); else _explicitNullProperties?.Remove("smartPickupTriggerWarningInd"); } }
+        private bool? _explicitNullValueSmartPickupTriggerWarningInd = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicatorsEmail"/> and sets the default values.
         /// </summary>
@@ -69,7 +102,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicatorsEmail CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicatorsEmail();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.NotificationIndicatorsEmail(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("smartPickupTriggerCancellationInd", SmartPickupTriggerCancellationInd);
             writer.WriteBoolValue("smartPickupTriggerNotificationInd", SmartPickupTriggerNotificationInd);
             writer.WriteBoolValue("smartPickupTriggerWarningInd", SmartPickupTriggerWarningInd);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

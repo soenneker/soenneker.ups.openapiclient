@@ -12,64 +12,92 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FacilityTimeDayOfWeek : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CloseHours") is { } nullNodeCloseHours && nullNodeCloseHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseHours = null;
+            if (parseNode.GetChildNode("Day") is { } nullNodeDay && nullNodeDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Day = null;
+            if (parseNode.GetChildNode("EarliestDropOfforPickup") is { } nullNodeEarliestDropOfforPickup && nullNodeEarliestDropOfforPickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EarliestDropOfforPickup = null;
+            if (parseNode.GetChildNode("LastDrop") is { } nullNodeLastDrop && nullNodeLastDrop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastDrop = null;
+            if (parseNode.GetChildNode("LatestDropOfforPickup") is { } nullNodeLatestDropOfforPickup && nullNodeLatestDropOfforPickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestDropOfforPickup = null;
+            if (parseNode.GetChildNode("OpenHours") is { } nullNodeOpenHours && nullNodeOpenHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenHours = null;
+            if (parseNode.GetChildNode("PrepTime") is { } nullNodePrepTime && nullNodePrepTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Facility Close Hours. The latest local close time. Format: HHmm- Hour: 0-23- Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CloseHours { get; set; }
+        public string? CloseHours { get => _explicitNullValueCloseHours; set { _explicitNullValueCloseHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseHours"); else _explicitNullProperties?.Remove("CloseHours"); } }
+        private string? _explicitNullValueCloseHours = default!;
 #nullable restore
 #else
-        public string CloseHours { get; set; }
+        public string CloseHours { get => _explicitNullValueCloseHours; set { _explicitNullValueCloseHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseHours"); else _explicitNullProperties?.Remove("CloseHours"); } }
+        private string _explicitNullValueCloseHours = default!;
 #endif
         /// <summary>Day of the week. Mon-Sun</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Day { get; set; }
+        public string? Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Day"); else _explicitNullProperties?.Remove("Day"); } }
+        private string? _explicitNullValueDay = default!;
 #nullable restore
 #else
-        public string Day { get; set; }
+        public string Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Day"); else _explicitNullProperties?.Remove("Day"); } }
+        private string _explicitNullValueDay = default!;
 #endif
         /// <summary>Earliest time that a customer can drop-off a package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EarliestDropOfforPickup { get; set; }
+        public string? EarliestDropOfforPickup { get => _explicitNullValueEarliestDropOfforPickup; set { _explicitNullValueEarliestDropOfforPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarliestDropOfforPickup"); else _explicitNullProperties?.Remove("EarliestDropOfforPickup"); } }
+        private string? _explicitNullValueEarliestDropOfforPickup = default!;
 #nullable restore
 #else
-        public string EarliestDropOfforPickup { get; set; }
+        public string EarliestDropOfforPickup { get => _explicitNullValueEarliestDropOfforPickup; set { _explicitNullValueEarliestDropOfforPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarliestDropOfforPickup"); else _explicitNullProperties?.Remove("EarliestDropOfforPickup"); } }
+        private string _explicitNullValueEarliestDropOfforPickup = default!;
 #endif
         /// <summary>Cut-off time for drop off that day.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastDrop { get; set; }
+        public string? LastDrop { get => _explicitNullValueLastDrop; set { _explicitNullValueLastDrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastDrop"); else _explicitNullProperties?.Remove("LastDrop"); } }
+        private string? _explicitNullValueLastDrop = default!;
 #nullable restore
 #else
-        public string LastDrop { get; set; }
+        public string LastDrop { get => _explicitNullValueLastDrop; set { _explicitNullValueLastDrop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastDrop"); else _explicitNullProperties?.Remove("LastDrop"); } }
+        private string _explicitNullValueLastDrop = default!;
 #endif
         /// <summary>Latest time that a customer can drop-off a package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LatestDropOfforPickup { get; set; }
+        public string? LatestDropOfforPickup { get => _explicitNullValueLatestDropOfforPickup; set { _explicitNullValueLatestDropOfforPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestDropOfforPickup"); else _explicitNullProperties?.Remove("LatestDropOfforPickup"); } }
+        private string? _explicitNullValueLatestDropOfforPickup = default!;
 #nullable restore
 #else
-        public string LatestDropOfforPickup { get; set; }
+        public string LatestDropOfforPickup { get => _explicitNullValueLatestDropOfforPickup; set { _explicitNullValueLatestDropOfforPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestDropOfforPickup"); else _explicitNullProperties?.Remove("LatestDropOfforPickup"); } }
+        private string _explicitNullValueLatestDropOfforPickup = default!;
 #endif
         /// <summary>Facility Open Hours. The latest local open time. Format: HHmm- Hour: 0-23- Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OpenHours { get; set; }
+        public string? OpenHours { get => _explicitNullValueOpenHours; set { _explicitNullValueOpenHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OpenHours"); else _explicitNullProperties?.Remove("OpenHours"); } }
+        private string? _explicitNullValueOpenHours = default!;
 #nullable restore
 #else
-        public string OpenHours { get; set; }
+        public string OpenHours { get => _explicitNullValueOpenHours; set { _explicitNullValueOpenHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OpenHours"); else _explicitNullProperties?.Remove("OpenHours"); } }
+        private string _explicitNullValueOpenHours = default!;
 #endif
         /// <summary>Time required by the facility to prepare your shipment for movement</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrepTime { get; set; }
+        public string? PrepTime { get => _explicitNullValuePrepTime; set { _explicitNullValuePrepTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrepTime"); else _explicitNullProperties?.Remove("PrepTime"); } }
+        private string? _explicitNullValuePrepTime = default!;
 #nullable restore
 #else
-        public string PrepTime { get; set; }
+        public string PrepTime { get => _explicitNullValuePrepTime; set { _explicitNullValuePrepTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrepTime"); else _explicitNullProperties?.Remove("PrepTime"); } }
+        private string _explicitNullValuePrepTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.FacilityTimeDayOfWeek"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.FacilityTimeDayOfWeek CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.FacilityTimeDayOfWeek();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.FacilityTimeDayOfWeek(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("LatestDropOfforPickup", LatestDropOfforPickup);
             writer.WriteStringValue("OpenHours", OpenHours);
             writer.WriteStringValue("PrepTime", PrepTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,21 +11,35 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ChargebackVerifyResponseV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("categoryScores") is { } nullNodeCategoryScores && nullNodeCategoryScores.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryScores = null;
+            if (parseNode.GetChildNode("decision") is { } nullNodeDecision && nullNodeDecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Decision = null;
+            if (parseNode.GetChildNode("superScore") is { } nullNodeSuperScore && nullNodeSuperScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuperScore = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Detailed category risk scores</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores? CategoryScores { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores? CategoryScores { get => _explicitNullValueCategoryScores; set { _explicitNullValueCategoryScores = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryScores"); else _explicitNullProperties?.Remove("categoryScores"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores? _explicitNullValueCategoryScores = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores CategoryScores { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores CategoryScores { get => _explicitNullValueCategoryScores; set { _explicitNullValueCategoryScores = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryScores"); else _explicitNullProperties?.Remove("categoryScores"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores _explicitNullValueCategoryScores = default!;
 #endif
         /// <summary>Risk decision—whether to reject, review, or undecided</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision? Decision { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision? Decision { get => _explicitNullValueDecision; set { _explicitNullValueDecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decision"); else _explicitNullProperties?.Remove("decision"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision? _explicitNullValueDecision = default!;
         /// <summary>Overall risk score from 0 (lowest) to 999 (highest risk)</summary>
-        public double? SuperScore { get; set; }
+        public double? SuperScore { get => _explicitNullValueSuperScore; set { _explicitNullValueSuperScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("superScore"); else _explicitNullProperties?.Remove("superScore"); } }
+        private double? _explicitNullValueSuperScore = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores>("categoryScores", CategoryScores);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision>("decision", Decision);
             writer.WriteDoubleValue("superScore", SuperScore);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,32 +12,53 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExportAssureRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("evaluateAdvancedImportExportRequirements") is { } nullNodeEvaluateAdvancedImportExportRequirements && nullNodeEvaluateAdvancedImportExportRequirements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvaluateAdvancedImportExportRequirements = null;
+            if (parseNode.GetChildNode("evaluateDescriptions") is { } nullNodeEvaluateDescriptions && nullNodeEvaluateDescriptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvaluateDescriptions = null;
+            if (parseNode.GetChildNode("evaluateImportExportRequirements") is { } nullNodeEvaluateImportExportRequirements && nullNodeEvaluateImportExportRequirements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvaluateImportExportRequirements = null;
+            if (parseNode.GetChildNode("evaluatePoaRequirements") is { } nullNodeEvaluatePoaRequirements && nullNodeEvaluatePoaRequirements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvaluatePoaRequirements = null;
+            if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the user has requested an Advanced Import/Export Compliance review</summary>
-        public bool? EvaluateAdvancedImportExportRequirements { get; set; }
+        public bool? EvaluateAdvancedImportExportRequirements { get => _explicitNullValueEvaluateAdvancedImportExportRequirements; set { _explicitNullValueEvaluateAdvancedImportExportRequirements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluateAdvancedImportExportRequirements"); else _explicitNullProperties?.Remove("evaluateAdvancedImportExportRequirements"); } }
+        private bool? _explicitNullValueEvaluateAdvancedImportExportRequirements = default!;
         /// <summary>Whether the user has requested description guidance</summary>
-        public bool? EvaluateDescriptions { get; set; }
+        public bool? EvaluateDescriptions { get => _explicitNullValueEvaluateDescriptions; set { _explicitNullValueEvaluateDescriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluateDescriptions"); else _explicitNullProperties?.Remove("evaluateDescriptions"); } }
+        private bool? _explicitNullValueEvaluateDescriptions = default!;
         /// <summary>Whether the user has requested an Import/Export Compliance review</summary>
-        public bool? EvaluateImportExportRequirements { get; set; }
+        public bool? EvaluateImportExportRequirements { get => _explicitNullValueEvaluateImportExportRequirements; set { _explicitNullValueEvaluateImportExportRequirements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluateImportExportRequirements"); else _explicitNullProperties?.Remove("evaluateImportExportRequirements"); } }
+        private bool? _explicitNullValueEvaluateImportExportRequirements = default!;
         /// <summary>Whether the user has requested Power of Attorney (POA) requirements</summary>
-        public bool? EvaluatePoaRequirements { get; set; }
+        public bool? EvaluatePoaRequirements { get => _explicitNullValueEvaluatePoaRequirements; set { _explicitNullValueEvaluatePoaRequirements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evaluatePoaRequirements"); else _explicitNullProperties?.Remove("evaluatePoaRequirements"); } }
+        private bool? _explicitNullValueEvaluatePoaRequirements = default!;
         /// <summary>This object contains all necessary details about a shipment for compliance evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>The unique, reference identifier that correlates an API request with its response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransID { get; set; }
+        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        private string? _explicitNullValueTransID = default!;
 #nullable restore
 #else
-        public string TransID { get; set; }
+        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        private string _explicitNullValueTransID = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest"/> and sets the default values.
@@ -58,7 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +110,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("evaluatePoaRequirements", EvaluatePoaRequirements);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ExportAssureRequestShipment>("shipment", Shipment);
             writer.WriteStringValue("transID", TransID);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

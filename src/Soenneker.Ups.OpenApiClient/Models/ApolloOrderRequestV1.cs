@@ -12,64 +12,92 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApolloOrderRequestV1 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("consignee") is { } nullNodeConsignee && nullNodeConsignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consignee = null;
+            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("shipper") is { } nullNodeShipper && nullNodeShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipper = null;
+            if (parseNode.GetChildNode("thirdParty") is { } nullNodeThirdParty && nullNodeThirdParty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdParty = null;
+            if (parseNode.GetChildNode("transId") is { } nullNodeTransId && nullNodeTransId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Consignee associated with the Shipment.  UPS Freight Account Number is required if the consignee is the payor.  must be different Shipper. Consolidation Key - Consolidation keys should be Identical with previous orders to get consolidated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee? Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee? Consignee { get => _explicitNullValueConsignee; set { _explicitNullValueConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consignee"); else _explicitNullProperties?.Remove("consignee"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee? _explicitNullValueConsignee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee Consignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee Consignee { get => _explicitNullValueConsignee; set { _explicitNullValueConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consignee"); else _explicitNullProperties?.Remove("consignee"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee _explicitNullValueConsignee = default!;
 #endif
         /// <summary>The label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label? Label { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label Label { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label _explicitNullValueLabel = default!;
 #endif
         /// <summary>The language/culture that is being used for the API</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Language { get; set; }
+        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string? _explicitNullValueLanguage = default!;
 #nullable restore
 #else
-        public string Language { get; set; }
+        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private string _explicitNullValueLanguage = default!;
 #endif
         /// <summary>The shipment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment? Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment Shipment { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>Shipper associated with the Shipment. UPS Freight Account Number is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper? Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper? Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper? _explicitNullValueShipper = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper Shipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper _explicitNullValueShipper = default!;
 #endif
         /// <summary>Any other Party involved in the Shipment, usually a payor. Details Required when third party is payor, must be different from consignee and shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1? ThirdParty { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1? ThirdParty { get => _explicitNullValueThirdParty; set { _explicitNullValueThirdParty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdParty"); else _explicitNullProperties?.Remove("thirdParty"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1? _explicitNullValueThirdParty = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1 ThirdParty { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1 ThirdParty { get => _explicitNullValueThirdParty; set { _explicitNullValueThirdParty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdParty"); else _explicitNullProperties?.Remove("thirdParty"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1 _explicitNullValueThirdParty = default!;
 #endif
         /// <summary>A transaction Id to track this API call</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransId { get; set; }
+        public string? TransId { get => _explicitNullValueTransId; set { _explicitNullValueTransId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transId"); else _explicitNullProperties?.Remove("transId"); } }
+        private string? _explicitNullValueTransId = default!;
 #nullable restore
 #else
-        public string TransId { get; set; }
+        public string TransId { get => _explicitNullValueTransId; set { _explicitNullValueTransId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transId"); else _explicitNullProperties?.Remove("transId"); } }
+        private string _explicitNullValueTransId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Shipper>("shipper", Shipper);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloShipmentPartyV1>("thirdParty", ThirdParty);
             writer.WriteStringValue("transId", TransId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

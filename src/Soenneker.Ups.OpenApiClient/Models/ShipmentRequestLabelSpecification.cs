@@ -12,48 +12,70 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentRequestLabelSpecification : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CharacterSet") is { } nullNodeCharacterSet && nullNodeCharacterSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CharacterSet = null;
+            if (parseNode.GetChildNode("HTTPUserAgent") is { } nullNodeHTTPUserAgent && nullNodeHTTPUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HTTPUserAgent = null;
+            if (parseNode.GetChildNode("Instruction") is { } nullNodeInstruction && nullNodeInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instruction = null;
+            if (parseNode.GetChildNode("LabelImageFormat") is { } nullNodeLabelImageFormat && nullNodeLabelImageFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelImageFormat = null;
+            if (parseNode.GetChildNode("LabelStockSize") is { } nullNodeLabelStockSize && nullNodeLabelStockSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelStockSize = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Language character set expected on label.Valid values:dan = Danish (Latin-1)nld = Dutch (Latin-1)fin = Finnish (Latin-1)fra = French (Latin-1)deu = German (Latin-1)itl = Italian (Latin-1)nor = Norwegian (Latin-1)pol  = Polish (Latin-2)por = Poruguese (Latin-1)spa = Spanish (Latin-1) swe = Swedish (Latin-1) ces = Czech (Latin-2)hun = Hungarian (Latin-2)slk = Slovak (Latin-2)rus = Russian (Cyrillic)tur = Turkish (Latin-5)ron = Romanian (Latin-2)bul = Bulgarian (Latin-2)est = Estonian (Latin-2)ell = Greek (Latin-2)lav = Latvian (Latin-2)lit = Lithuanian (Latin-2)eng = English (Latin-1)  Default is English (Latin-1).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CharacterSet { get; set; }
+        public string? CharacterSet { get => _explicitNullValueCharacterSet; set { _explicitNullValueCharacterSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CharacterSet"); else _explicitNullProperties?.Remove("CharacterSet"); } }
+        private string? _explicitNullValueCharacterSet = default!;
 #nullable restore
 #else
-        public string CharacterSet { get; set; }
+        public string CharacterSet { get => _explicitNullValueCharacterSet; set { _explicitNullValueCharacterSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CharacterSet"); else _explicitNullProperties?.Remove("CharacterSet"); } }
+        private string _explicitNullValueCharacterSet = default!;
 #endif
         /// <summary>Browser HTTPUserAgent String. This is the preferred way of identifying GIF image type to be generated.  Required if /ShipmentRequest/LabelSpecificationLabelSpecification/LabelImageFormat/Code = Gif. Default to Mozilla/4.5 if this field is missing or has invalid value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HTTPUserAgent { get; set; }
+        public string? HTTPUserAgent { get => _explicitNullValueHTTPUserAgent; set { _explicitNullValueHTTPUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTTPUserAgent"); else _explicitNullProperties?.Remove("HTTPUserAgent"); } }
+        private string? _explicitNullValueHTTPUserAgent = default!;
 #nullable restore
 #else
-        public string HTTPUserAgent { get; set; }
+        public string HTTPUserAgent { get => _explicitNullValueHTTPUserAgent; set { _explicitNullValueHTTPUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTTPUserAgent"); else _explicitNullProperties?.Remove("HTTPUserAgent"); } }
+        private string _explicitNullValueHTTPUserAgent = default!;
 #endif
         /// <summary>The Instruction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationInstruction>? Instruction { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationInstruction>? Instruction { get => _explicitNullValueInstruction; set { _explicitNullValueInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Instruction"); else _explicitNullProperties?.Remove("Instruction"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationInstruction>? _explicitNullValueInstruction = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationInstruction> Instruction { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationInstruction> Instruction { get => _explicitNullValueInstruction; set { _explicitNullValueInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Instruction"); else _explicitNullProperties?.Remove("Instruction"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationInstruction> _explicitNullValueInstruction = default!;
 #endif
         /// <summary>LabelImageFormat Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelImageFormat? LabelImageFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelImageFormat? LabelImageFormat { get => _explicitNullValueLabelImageFormat; set { _explicitNullValueLabelImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelImageFormat"); else _explicitNullProperties?.Remove("LabelImageFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelImageFormat? _explicitNullValueLabelImageFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelImageFormat LabelImageFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelImageFormat LabelImageFormat { get => _explicitNullValueLabelImageFormat; set { _explicitNullValueLabelImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelImageFormat"); else _explicitNullProperties?.Remove("LabelImageFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelImageFormat _explicitNullValueLabelImageFormat = default!;
 #endif
         /// <summary>Container for the EPL2, ZPL or SPL label size.  Valid for EPL2, ZPL and SPL Labels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelStockSize? LabelStockSize { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelStockSize? LabelStockSize { get => _explicitNullValueLabelStockSize; set { _explicitNullValueLabelStockSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelStockSize"); else _explicitNullProperties?.Remove("LabelStockSize"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelStockSize? _explicitNullValueLabelStockSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelStockSize LabelStockSize { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelStockSize LabelStockSize { get => _explicitNullValueLabelStockSize; set { _explicitNullValueLabelStockSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelStockSize"); else _explicitNullProperties?.Remove("LabelStockSize"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelStockSize _explicitNullValueLabelStockSize = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestLabelSpecification(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationInstruction>("Instruction", Instruction);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelImageFormat>("LabelImageFormat", LabelImageFormat);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelSpecificationLabelStockSize>("LabelStockSize", LabelStockSize);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

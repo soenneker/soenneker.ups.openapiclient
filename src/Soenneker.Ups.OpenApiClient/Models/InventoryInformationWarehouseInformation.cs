@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InventoryInformationWarehouseInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("warehouseCode") is { } nullNodeWarehouseCode && nullNodeWarehouseCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarehouseCode = null;
+            if (parseNode.GetChildNode("warehouseName") is { } nullNodeWarehouseName && nullNodeWarehouseName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarehouseName = null;
+            if (parseNode.GetChildNode("warehouseTimeZone") is { } nullNodeWarehouseTimeZone && nullNodeWarehouseTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarehouseTimeZone = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Warehouse physical address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.WarehouseInformationAddress? Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.WarehouseInformationAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.WarehouseInformationAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.WarehouseInformationAddress Address { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.WarehouseInformationAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.WarehouseInformationAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>Warehouse code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WarehouseCode { get; set; }
+        public string? WarehouseCode { get => _explicitNullValueWarehouseCode; set { _explicitNullValueWarehouseCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warehouseCode"); else _explicitNullProperties?.Remove("warehouseCode"); } }
+        private string? _explicitNullValueWarehouseCode = default!;
 #nullable restore
 #else
-        public string WarehouseCode { get; set; }
+        public string WarehouseCode { get => _explicitNullValueWarehouseCode; set { _explicitNullValueWarehouseCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warehouseCode"); else _explicitNullProperties?.Remove("warehouseCode"); } }
+        private string _explicitNullValueWarehouseCode = default!;
 #endif
         /// <summary>Warehouse name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WarehouseName { get; set; }
+        public string? WarehouseName { get => _explicitNullValueWarehouseName; set { _explicitNullValueWarehouseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warehouseName"); else _explicitNullProperties?.Remove("warehouseName"); } }
+        private string? _explicitNullValueWarehouseName = default!;
 #nullable restore
 #else
-        public string WarehouseName { get; set; }
+        public string WarehouseName { get => _explicitNullValueWarehouseName; set { _explicitNullValueWarehouseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warehouseName"); else _explicitNullProperties?.Remove("warehouseName"); } }
+        private string _explicitNullValueWarehouseName = default!;
 #endif
         /// <summary>Warehouse time zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WarehouseTimeZone { get; set; }
+        public string? WarehouseTimeZone { get => _explicitNullValueWarehouseTimeZone; set { _explicitNullValueWarehouseTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warehouseTimeZone"); else _explicitNullProperties?.Remove("warehouseTimeZone"); } }
+        private string? _explicitNullValueWarehouseTimeZone = default!;
 #nullable restore
 #else
-        public string WarehouseTimeZone { get; set; }
+        public string WarehouseTimeZone { get => _explicitNullValueWarehouseTimeZone; set { _explicitNullValueWarehouseTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warehouseTimeZone"); else _explicitNullProperties?.Remove("warehouseTimeZone"); } }
+        private string _explicitNullValueWarehouseTimeZone = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.InventoryInformationWarehouseInformation"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.InventoryInformationWarehouseInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.InventoryInformationWarehouseInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.InventoryInformationWarehouseInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("warehouseCode", WarehouseCode);
             writer.WriteStringValue("warehouseName", WarehouseName);
             writer.WriteStringValue("warehouseTimeZone", WarehouseTimeZone);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccessPointInformationAvailability : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DCRAvailability") is { } nullNodeDCRAvailability && nullNodeDCRAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DCRAvailability = null;
+            if (parseNode.GetChildNode("ShippingAvailability") is { } nullNodeShippingAvailability && nullNodeShippingAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAvailability = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Holds status of DCR/DCO availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability? DCRAvailability { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability? DCRAvailability { get => _explicitNullValueDCRAvailability; set { _explicitNullValueDCRAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCRAvailability"); else _explicitNullProperties?.Remove("DCRAvailability"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability? _explicitNullValueDCRAvailability = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability DCRAvailability { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability DCRAvailability { get => _explicitNullValueDCRAvailability; set { _explicitNullValueDCRAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCRAvailability"); else _explicitNullProperties?.Remove("DCRAvailability"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability _explicitNullValueDCRAvailability = default!;
 #endif
         /// <summary>Holds status of shipping availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability? ShippingAvailability { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability? ShippingAvailability { get => _explicitNullValueShippingAvailability; set { _explicitNullValueShippingAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingAvailability"); else _explicitNullProperties?.Remove("ShippingAvailability"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability? _explicitNullValueShippingAvailability = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability ShippingAvailability { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability ShippingAvailability { get => _explicitNullValueShippingAvailability; set { _explicitNullValueShippingAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingAvailability"); else _explicitNullProperties?.Remove("ShippingAvailability"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability _explicitNullValueShippingAvailability = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.AccessPointInformationAvailability(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability>("DCRAvailability", DCRAvailability);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability>("ShippingAvailability", ShippingAvailability);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,48 +12,70 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InternationalFormsEeiFilingOption : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
+            if (parseNode.GetChildNode("ShipperFiled") is { } nullNodeShipperFiled && nullNodeShipperFiled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperFiled = null;
+            if (parseNode.GetChildNode("UPSFiled") is { } nullNodeUPSFiled && nullNodeUPSFiled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UPSFiled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Required for EEI Form.  Applicable for EEI form.Valid values: 1 - Shipper filed,2 - AES Direct, 3 - UPS filed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get; set; }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
+        private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get; set; }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
+        private string _explicitNullValueCode = default!;
 #endif
         /// <summary>Optional Description of Filing Code.  Applicable for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Email Address where the notification is sent. Valid for UPS filed (option 3), Shipper filed (option 1- A , 1-C)  Applicable for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EMailAddress { get; set; }
+        public string? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        private string? _explicitNullValueEMailAddress = default!;
 #nullable restore
 #else
-        public string EMailAddress { get; set; }
+        public string EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        private string _explicitNullValueEMailAddress = default!;
 #endif
         /// <summary>Indicates the EEI Shipper Filed option or AES Direct. (Option 1 or 2).  Applicable for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionShipperFiled? ShipperFiled { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionShipperFiled? ShipperFiled { get => _explicitNullValueShipperFiled; set { _explicitNullValueShipperFiled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperFiled"); else _explicitNullProperties?.Remove("ShipperFiled"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionShipperFiled? _explicitNullValueShipperFiled = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionShipperFiled ShipperFiled { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionShipperFiled ShipperFiled { get => _explicitNullValueShipperFiled; set { _explicitNullValueShipperFiled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperFiled"); else _explicitNullProperties?.Remove("ShipperFiled"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionShipperFiled _explicitNullValueShipperFiled = default!;
 #endif
         /// <summary>Indicates the EEI UPS Filed option. (option 3)  Applicable for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionUpsFiled? UPSFiled { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionUpsFiled? UPSFiled { get => _explicitNullValueUPSFiled; set { _explicitNullValueUPSFiled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSFiled"); else _explicitNullProperties?.Remove("UPSFiled"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionUpsFiled? _explicitNullValueUPSFiled = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionUpsFiled UPSFiled { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionUpsFiled UPSFiled { get => _explicitNullValueUPSFiled; set { _explicitNullValueUPSFiled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSFiled"); else _explicitNullProperties?.Remove("UPSFiled"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionUpsFiled _explicitNullValueUPSFiled = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("EMailAddress", EMailAddress);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionShipperFiled>("ShipperFiled", ShipperFiled);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.EeiFilingOptionUpsFiled>("UPSFiled", UPSFiled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

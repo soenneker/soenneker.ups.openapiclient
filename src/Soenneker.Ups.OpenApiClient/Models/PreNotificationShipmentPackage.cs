@@ -12,56 +12,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PreNotificationShipmentPackage : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ChemicalRecord") is { } nullNodeChemicalRecord && nullNodeChemicalRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalRecord = null;
+            if (parseNode.GetChildNode("PackagePoints") is { } nullNodePackagePoints && nullNodePackagePoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagePoints = null;
+            if (parseNode.GetChildNode("PackageWeight") is { } nullNodePackageWeight && nullNodePackageWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageWeight = null;
+            if (parseNode.GetChildNode("TrackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("TransportationMode") is { } nullNodeTransportationMode && nullNodeTransportationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportationMode = null;
+            if (parseNode.GetChildNode("VoidIndicator") is { } nullNodeVoidIndicator && nullNodeVoidIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoidIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ChemicalRecord property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackageChemicalRecord>? ChemicalRecord { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackageChemicalRecord>? ChemicalRecord { get => _explicitNullValueChemicalRecord; set { _explicitNullValueChemicalRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecord"); else _explicitNullProperties?.Remove("ChemicalRecord"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackageChemicalRecord>? _explicitNullValueChemicalRecord = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackageChemicalRecord> ChemicalRecord { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackageChemicalRecord> ChemicalRecord { get => _explicitNullValueChemicalRecord; set { _explicitNullValueChemicalRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecord"); else _explicitNullProperties?.Remove("ChemicalRecord"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackageChemicalRecord> _explicitNullValueChemicalRecord = default!;
 #endif
         /// <summary>Regulated Commodity Transport Package Score Quantity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagePoints { get; set; }
+        public string? PackagePoints { get => _explicitNullValuePackagePoints; set { _explicitNullValuePackagePoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagePoints"); else _explicitNullProperties?.Remove("PackagePoints"); } }
+        private string? _explicitNullValuePackagePoints = default!;
 #nullable restore
 #else
-        public string PackagePoints { get; set; }
+        public string PackagePoints { get => _explicitNullValuePackagePoints; set { _explicitNullValuePackagePoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagePoints"); else _explicitNullProperties?.Remove("PackagePoints"); } }
+        private string _explicitNullValuePackagePoints = default!;
 #endif
         /// <summary>Container to hold package weight information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackagePackageWeight? PackageWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackagePackageWeight? PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageWeight"); else _explicitNullProperties?.Remove("PackageWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackagePackageWeight? _explicitNullValuePackageWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackagePackageWeight PackageWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackagePackageWeight PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageWeight"); else _explicitNullProperties?.Remove("PackageWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPackagePackageWeight _explicitNullValuePackageWeight = default!;
 #endif
         /// <summary>The packages tracking number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get; set; }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get; set; }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>Declares that a package was prepared according to ground, passenger aircraft, or cargo aircraft only. Only required when the CommodityRegulatedLevelCode is FR or LQ.  Valid entries include: GND, CAO, PAX.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransportationMode { get; set; }
+        public string? TransportationMode { get => _explicitNullValueTransportationMode; set { _explicitNullValueTransportationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportationMode"); else _explicitNullProperties?.Remove("TransportationMode"); } }
+        private string? _explicitNullValueTransportationMode = default!;
 #nullable restore
 #else
-        public string TransportationMode { get; set; }
+        public string TransportationMode { get => _explicitNullValueTransportationMode; set { _explicitNullValueTransportationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportationMode"); else _explicitNullProperties?.Remove("TransportationMode"); } }
+        private string _explicitNullValueTransportationMode = default!;
 #endif
         /// <summary>Indicator to specify that a Dangerous Goods package is voided. True if VoidIndicator tag exists; false otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VoidIndicator { get; set; }
+        public string? VoidIndicator { get => _explicitNullValueVoidIndicator; set { _explicitNullValueVoidIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoidIndicator"); else _explicitNullProperties?.Remove("VoidIndicator"); } }
+        private string? _explicitNullValueVoidIndicator = default!;
 #nullable restore
 #else
-        public string VoidIndicator { get; set; }
+        public string VoidIndicator { get => _explicitNullValueVoidIndicator; set { _explicitNullValueVoidIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoidIndicator"); else _explicitNullProperties?.Remove("VoidIndicator"); } }
+        private string _explicitNullValueVoidIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PreNotificationShipmentPackage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("TrackingNumber", TrackingNumber);
             writer.WriteStringValue("TransportationMode", TransportationMode);
             writer.WriteStringValue("VoidIndicator", VoidIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

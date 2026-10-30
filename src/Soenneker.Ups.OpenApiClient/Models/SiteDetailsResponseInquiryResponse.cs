@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SiteDetailsResponseInquiryResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("recordsPerPage") is { } nullNodeRecordsPerPage && nullNodeRecordsPerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsPerPage = null;
+            if (parseNode.GetChildNode("totalRecords") is { } nullNodeTotalRecords && nullNodeTotalRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRecords = null;
+            if (parseNode.GetChildNode("transactionref") is { } nullNodeTransactionref && nullNodeTransactionref.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transactionref = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The offset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Offset { get; set; }
+        public string? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private string? _explicitNullValueOffset = default!;
 #nullable restore
 #else
-        public string Offset { get; set; }
+        public string Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private string _explicitNullValueOffset = default!;
 #endif
         /// <summary>The recordsPerPage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordsPerPage { get; set; }
+        public string? RecordsPerPage { get => _explicitNullValueRecordsPerPage; set { _explicitNullValueRecordsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordsPerPage"); else _explicitNullProperties?.Remove("recordsPerPage"); } }
+        private string? _explicitNullValueRecordsPerPage = default!;
 #nullable restore
 #else
-        public string RecordsPerPage { get; set; }
+        public string RecordsPerPage { get => _explicitNullValueRecordsPerPage; set { _explicitNullValueRecordsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordsPerPage"); else _explicitNullProperties?.Remove("recordsPerPage"); } }
+        private string _explicitNullValueRecordsPerPage = default!;
 #endif
         /// <summary>The totalRecords property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalRecords { get; set; }
+        public string? TotalRecords { get => _explicitNullValueTotalRecords; set { _explicitNullValueTotalRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRecords"); else _explicitNullProperties?.Remove("totalRecords"); } }
+        private string? _explicitNullValueTotalRecords = default!;
 #nullable restore
 #else
-        public string TotalRecords { get; set; }
+        public string TotalRecords { get => _explicitNullValueTotalRecords; set { _explicitNullValueTotalRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRecords"); else _explicitNullProperties?.Remove("totalRecords"); } }
+        private string _explicitNullValueTotalRecords = default!;
 #endif
         /// <summary>Transaction reference details used to correlate API requests and responses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref? Transactionref { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref? Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref? _explicitNullValueTransactionref = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref Transactionref { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref _explicitNullValueTransactionref = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsResponseInquiryResponse"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsResponseInquiryResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsResponseInquiryResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsResponseInquiryResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("recordsPerPage", RecordsPerPage);
             writer.WriteStringValue("totalRecords", TotalRecords);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref>("transactionref", Transactionref);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

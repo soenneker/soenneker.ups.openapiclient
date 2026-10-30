@@ -11,62 +11,93 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeliveryInterceptChargeDetailV2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accessorialCharge") is { } nullNodeAccessorialCharge && nullNodeAccessorialCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessorialCharge = null;
+            if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("displayShipperPaidInterceptCharges") is { } nullNodeDisplayShipperPaidInterceptCharges && nullNodeDisplayShipperPaidInterceptCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayShipperPaidInterceptCharges = null;
+            if (parseNode.GetChildNode("interceptCharge") is { } nullNodeInterceptCharge && nullNodeInterceptCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptCharge = null;
+            if (parseNode.GetChildNode("interceptOption") is { } nullNodeInterceptOption && nullNodeInterceptOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptOption = null;
+            if (parseNode.GetChildNode("shipperPaidInterceptCharges") is { } nullNodeShipperPaidInterceptCharges && nullNodeShipperPaidInterceptCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperPaidInterceptCharges = null;
+            if (parseNode.GetChildNode("successful") is { } nullNodeSuccessful && nullNodeSuccessful.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Successful = null;
+            if (parseNode.GetChildNode("totalCharge") is { } nullNodeTotalCharge && nullNodeTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCharge = null;
+            if (parseNode.GetChildNode("transportationCharge") is { } nullNodeTransportationCharge && nullNodeTransportationCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportationCharge = null;
+        }
+
         /// <summary>Includes sum of all accessorial charges (i.e. including addition handling, intercept)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessorialCharge { get; set; }
+        public string? AccessorialCharge { get => _explicitNullValueAccessorialCharge; set { _explicitNullValueAccessorialCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorialCharge"); else _explicitNullProperties?.Remove("accessorialCharge"); } }
+        private string? _explicitNullValueAccessorialCharge = default!;
 #nullable restore
 #else
-        public string AccessorialCharge { get; set; }
+        public string AccessorialCharge { get => _explicitNullValueAccessorialCharge; set { _explicitNullValueAccessorialCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorialCharge"); else _explicitNullProperties?.Remove("accessorialCharge"); } }
+        private string _explicitNullValueAccessorialCharge = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This will be used when authorizing  credit cards or PayPal accounts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get; set; }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get; set; }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>Indicates if a message should be displayed that the shipper has paid for the charges related to the intercept.</summary>
-        public bool? DisplayShipperPaidInterceptCharges { get; set; }
+        public bool? DisplayShipperPaidInterceptCharges { get => _explicitNullValueDisplayShipperPaidInterceptCharges; set { _explicitNullValueDisplayShipperPaidInterceptCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayShipperPaidInterceptCharges"); else _explicitNullProperties?.Remove("displayShipperPaidInterceptCharges"); } }
+        private bool? _explicitNullValueDisplayShipperPaidInterceptCharges = default!;
         /// <summary>The flat rate charge specific for the intercept</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InterceptCharge { get; set; }
+        public string? InterceptCharge { get => _explicitNullValueInterceptCharge; set { _explicitNullValueInterceptCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptCharge"); else _explicitNullProperties?.Remove("interceptCharge"); } }
+        private string? _explicitNullValueInterceptCharge = default!;
 #nullable restore
 #else
-        public string InterceptCharge { get; set; }
+        public string InterceptCharge { get => _explicitNullValueInterceptCharge; set { _explicitNullValueInterceptCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptCharge"); else _explicitNullProperties?.Remove("interceptCharge"); } }
+        private string _explicitNullValueInterceptCharge = default!;
 #endif
         /// <summary>Intercept name of the charges</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InterceptOption { get; set; }
+        public string? InterceptOption { get => _explicitNullValueInterceptOption; set { _explicitNullValueInterceptOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptOption"); else _explicitNullProperties?.Remove("interceptOption"); } }
+        private string? _explicitNullValueInterceptOption = default!;
 #nullable restore
 #else
-        public string InterceptOption { get; set; }
+        public string InterceptOption { get => _explicitNullValueInterceptOption; set { _explicitNullValueInterceptOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptOption"); else _explicitNullProperties?.Remove("interceptOption"); } }
+        private string _explicitNullValueInterceptOption = default!;
 #endif
         /// <summary>Indicates if charges related to the intercept are paid by the shipper.</summary>
-        public bool? ShipperPaidInterceptCharges { get; set; }
+        public bool? ShipperPaidInterceptCharges { get => _explicitNullValueShipperPaidInterceptCharges; set { _explicitNullValueShipperPaidInterceptCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperPaidInterceptCharges"); else _explicitNullProperties?.Remove("shipperPaidInterceptCharges"); } }
+        private bool? _explicitNullValueShipperPaidInterceptCharges = default!;
         /// <summary>The successful property</summary>
-        public bool? Successful { get; set; }
+        public bool? Successful { get => _explicitNullValueSuccessful; set { _explicitNullValueSuccessful = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("successful"); else _explicitNullProperties?.Remove("successful"); } }
+        private bool? _explicitNullValueSuccessful = default!;
         /// <summary>totalCharge</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalCharge { get; set; }
+        public string? TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
+        private string? _explicitNullValueTotalCharge = default!;
 #nullable restore
 #else
-        public string TotalCharge { get; set; }
+        public string TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
+        private string _explicitNullValueTotalCharge = default!;
 #endif
         /// <summary>Transportation Charge Only for Alternate Address (Redirect, Deliver to Another Address)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransportationCharge { get; set; }
+        public string? TransportationCharge { get => _explicitNullValueTransportationCharge; set { _explicitNullValueTransportationCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transportationCharge"); else _explicitNullProperties?.Remove("transportationCharge"); } }
+        private string? _explicitNullValueTransportationCharge = default!;
 #nullable restore
 #else
-        public string TransportationCharge { get; set; }
+        public string TransportationCharge { get => _explicitNullValueTransportationCharge; set { _explicitNullValueTransportationCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transportationCharge"); else _explicitNullProperties?.Remove("transportationCharge"); } }
+        private string _explicitNullValueTransportationCharge = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2"/> and sets the default values.
@@ -85,7 +116,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +153,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("successful", Successful);
             writer.WriteStringValue("totalCharge", TotalCharge);
             writer.WriteStringValue("transportationCharge", TransportationCharge);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

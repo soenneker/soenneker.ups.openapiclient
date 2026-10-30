@@ -59,6 +59,8 @@ namespace Soenneker.Ups.OpenApiClient.SCSIngestLogistics.LogisticsData
                 { "400", global::Soenneker.Ups.OpenApiClient.Models.ObjectServiceResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.ObjectServiceResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ObjectServiceResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.Sc360ResponseListServiceResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.Sc360ResponseListServiceResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

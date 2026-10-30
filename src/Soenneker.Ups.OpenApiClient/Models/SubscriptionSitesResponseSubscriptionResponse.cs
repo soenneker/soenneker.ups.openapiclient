@@ -12,68 +12,100 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubscriptionSitesResponseSubscriptionResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emailID") is { } nullNodeEmailID && nullNodeEmailID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailID = null;
+            if (parseNode.GetChildNode("emailSubscribedPlacardIDs") is { } nullNodeEmailSubscribedPlacardIDs && nullNodeEmailSubscribedPlacardIDs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSubscribedPlacardIDs = null;
+            if (parseNode.GetChildNode("isEmailSubscribed") is { } nullNodeIsEmailSubscribed && nullNodeIsEmailSubscribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEmailSubscribed = null;
+            if (parseNode.GetChildNode("isSMSSubscribed") is { } nullNodeIsSMSSubscribed && nullNodeIsSMSSubscribed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSMSSubscribed = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("smsPhone") is { } nullNodeSmsPhone && nullNodeSmsPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPhone = null;
+            if (parseNode.GetChildNode("smsPhonePrefix") is { } nullNodeSmsPhonePrefix && nullNodeSmsPhonePrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPhonePrefix = null;
+            if (parseNode.GetChildNode("smsSubscribedPlacardIDs") is { } nullNodeSmsSubscribedPlacardIDs && nullNodeSmsSubscribedPlacardIDs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsSubscribedPlacardIDs = null;
+            if (parseNode.GetChildNode("subscriptionType") is { } nullNodeSubscriptionType && nullNodeSubscriptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The emailID property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailID { get; set; }
+        public string? EmailID { get => _explicitNullValueEmailID; set { _explicitNullValueEmailID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailID"); else _explicitNullProperties?.Remove("emailID"); } }
+        private string? _explicitNullValueEmailID = default!;
 #nullable restore
 #else
-        public string EmailID { get; set; }
+        public string EmailID { get => _explicitNullValueEmailID; set { _explicitNullValueEmailID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailID"); else _explicitNullProperties?.Remove("emailID"); } }
+        private string _explicitNullValueEmailID = default!;
 #endif
         /// <summary>The emailSubscribedPlacardIDs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EmailSubscribedPlacardIDs { get; set; }
+        public List<string>? EmailSubscribedPlacardIDs { get => _explicitNullValueEmailSubscribedPlacardIDs; set { _explicitNullValueEmailSubscribedPlacardIDs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailSubscribedPlacardIDs"); else _explicitNullProperties?.Remove("emailSubscribedPlacardIDs"); } }
+        private List<string>? _explicitNullValueEmailSubscribedPlacardIDs = default!;
 #nullable restore
 #else
-        public List<string> EmailSubscribedPlacardIDs { get; set; }
+        public List<string> EmailSubscribedPlacardIDs { get => _explicitNullValueEmailSubscribedPlacardIDs; set { _explicitNullValueEmailSubscribedPlacardIDs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailSubscribedPlacardIDs"); else _explicitNullProperties?.Remove("emailSubscribedPlacardIDs"); } }
+        private List<string> _explicitNullValueEmailSubscribedPlacardIDs = default!;
 #endif
         /// <summary>The isEmailSubscribed property</summary>
-        public bool? IsEmailSubscribed { get; set; }
+        public bool? IsEmailSubscribed { get => _explicitNullValueIsEmailSubscribed; set { _explicitNullValueIsEmailSubscribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEmailSubscribed"); else _explicitNullProperties?.Remove("isEmailSubscribed"); } }
+        private bool? _explicitNullValueIsEmailSubscribed = default!;
         /// <summary>The isSMSSubscribed property</summary>
-        public bool? IsSMSSubscribed { get; set; }
+        public bool? IsSMSSubscribed { get => _explicitNullValueIsSMSSubscribed; set { _explicitNullValueIsSMSSubscribed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSMSSubscribed"); else _explicitNullProperties?.Remove("isSMSSubscribed"); } }
+        private bool? _explicitNullValueIsSMSSubscribed = default!;
         /// <summary>The locale property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get; set; }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get; set; }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>The smsPhone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsPhone { get; set; }
+        public string? SmsPhone { get => _explicitNullValueSmsPhone; set { _explicitNullValueSmsPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsPhone"); else _explicitNullProperties?.Remove("smsPhone"); } }
+        private string? _explicitNullValueSmsPhone = default!;
 #nullable restore
 #else
-        public string SmsPhone { get; set; }
+        public string SmsPhone { get => _explicitNullValueSmsPhone; set { _explicitNullValueSmsPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsPhone"); else _explicitNullProperties?.Remove("smsPhone"); } }
+        private string _explicitNullValueSmsPhone = default!;
 #endif
         /// <summary>The smsPhonePrefix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsPhonePrefix { get; set; }
+        public string? SmsPhonePrefix { get => _explicitNullValueSmsPhonePrefix; set { _explicitNullValueSmsPhonePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsPhonePrefix"); else _explicitNullProperties?.Remove("smsPhonePrefix"); } }
+        private string? _explicitNullValueSmsPhonePrefix = default!;
 #nullable restore
 #else
-        public string SmsPhonePrefix { get; set; }
+        public string SmsPhonePrefix { get => _explicitNullValueSmsPhonePrefix; set { _explicitNullValueSmsPhonePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsPhonePrefix"); else _explicitNullProperties?.Remove("smsPhonePrefix"); } }
+        private string _explicitNullValueSmsPhonePrefix = default!;
 #endif
         /// <summary>The smsSubscribedPlacardIDs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SmsSubscribedPlacardIDs { get; set; }
+        public List<string>? SmsSubscribedPlacardIDs { get => _explicitNullValueSmsSubscribedPlacardIDs; set { _explicitNullValueSmsSubscribedPlacardIDs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsSubscribedPlacardIDs"); else _explicitNullProperties?.Remove("smsSubscribedPlacardIDs"); } }
+        private List<string>? _explicitNullValueSmsSubscribedPlacardIDs = default!;
 #nullable restore
 #else
-        public List<string> SmsSubscribedPlacardIDs { get; set; }
+        public List<string> SmsSubscribedPlacardIDs { get => _explicitNullValueSmsSubscribedPlacardIDs; set { _explicitNullValueSmsSubscribedPlacardIDs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsSubscribedPlacardIDs"); else _explicitNullProperties?.Remove("smsSubscribedPlacardIDs"); } }
+        private List<string> _explicitNullValueSmsSubscribedPlacardIDs = default!;
 #endif
         /// <summary>The subscriptionType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionType { get; set; }
+        public string? SubscriptionType { get => _explicitNullValueSubscriptionType; set { _explicitNullValueSubscriptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionType"); else _explicitNullProperties?.Remove("subscriptionType"); } }
+        private string? _explicitNullValueSubscriptionType = default!;
 #nullable restore
 #else
-        public string SubscriptionType { get; set; }
+        public string SubscriptionType { get => _explicitNullValueSubscriptionType; set { _explicitNullValueSubscriptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionType"); else _explicitNullProperties?.Remove("subscriptionType"); } }
+        private string _explicitNullValueSubscriptionType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse"/> and sets the default values.
@@ -90,7 +122,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -127,6 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("smsPhonePrefix", SmsPhonePrefix);
             writer.WriteCollectionOfPrimitiveValues<string>("smsSubscribedPlacardIDs", SmsSubscribedPlacardIDs);
             writer.WriteStringValue("subscriptionType", SubscriptionType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

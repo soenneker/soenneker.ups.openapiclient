@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DropLocationIvr : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("PhraseID") is { } nullNodePhraseID && nullNodePhraseID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhraseID = null;
+            if (parseNode.GetChildNode("TextToSpeechIndicator") is { } nullNodeTextToSpeechIndicator && nullNodeTextToSpeechIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextToSpeechIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains the name of the IVR file that relates to this drop location. The file is an audio recording of information related to the location.ONLY FOR IVR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhraseID { get; set; }
+        public string? PhraseID { get => _explicitNullValuePhraseID; set { _explicitNullValuePhraseID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhraseID"); else _explicitNullProperties?.Remove("PhraseID"); } }
+        private string? _explicitNullValuePhraseID = default!;
 #nullable restore
 #else
-        public string PhraseID { get; set; }
+        public string PhraseID { get => _explicitNullValuePhraseID; set { _explicitNullValuePhraseID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhraseID"); else _explicitNullProperties?.Remove("PhraseID"); } }
+        private string _explicitNullValuePhraseID = default!;
 #endif
         /// <summary>Indicates to the response recipient that the information has changed, and a new audio file should be produced. ONLY FOR IVR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextToSpeechIndicator { get; set; }
+        public string? TextToSpeechIndicator { get => _explicitNullValueTextToSpeechIndicator; set { _explicitNullValueTextToSpeechIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextToSpeechIndicator"); else _explicitNullProperties?.Remove("TextToSpeechIndicator"); } }
+        private string? _explicitNullValueTextToSpeechIndicator = default!;
 #nullable restore
 #else
-        public string TextToSpeechIndicator { get; set; }
+        public string TextToSpeechIndicator { get => _explicitNullValueTextToSpeechIndicator; set { _explicitNullValueTextToSpeechIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextToSpeechIndicator"); else _explicitNullProperties?.Remove("TextToSpeechIndicator"); } }
+        private string _explicitNullValueTextToSpeechIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DropLocationIvr(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("PhraseID", PhraseID);
             writer.WriteStringValue("TextToSpeechIndicator", TextToSpeechIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

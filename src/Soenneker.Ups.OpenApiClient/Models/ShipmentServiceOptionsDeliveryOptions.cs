@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentServiceOptionsDeliveryOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DropOffAtUPSFacilityIndicator") is { } nullNodeDropOffAtUPSFacilityIndicator && nullNodeDropOffAtUPSFacilityIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropOffAtUPSFacilityIndicator = null;
+            if (parseNode.GetChildNode("LiftGateAtDeliveryIndicator") is { } nullNodeLiftGateAtDeliveryIndicator && nullNodeLiftGateAtDeliveryIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiftGateAtDeliveryIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The presence of the tag DropOffAtUPSFacilityIndicator indicates the package will be dropped at a UPS facility for shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DropOffAtUPSFacilityIndicator { get; set; }
+        public string? DropOffAtUPSFacilityIndicator { get => _explicitNullValueDropOffAtUPSFacilityIndicator; set { _explicitNullValueDropOffAtUPSFacilityIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DropOffAtUPSFacilityIndicator"); else _explicitNullProperties?.Remove("DropOffAtUPSFacilityIndicator"); } }
+        private string? _explicitNullValueDropOffAtUPSFacilityIndicator = default!;
 #nullable restore
 #else
-        public string DropOffAtUPSFacilityIndicator { get; set; }
+        public string DropOffAtUPSFacilityIndicator { get => _explicitNullValueDropOffAtUPSFacilityIndicator; set { _explicitNullValueDropOffAtUPSFacilityIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DropOffAtUPSFacilityIndicator"); else _explicitNullProperties?.Remove("DropOffAtUPSFacilityIndicator"); } }
+        private string _explicitNullValueDropOffAtUPSFacilityIndicator = default!;
 #endif
         /// <summary>The presence of the tag LiftGateAtDeliveryIndicator indicates that the shipment requires a lift gate for delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LiftGateAtDeliveryIndicator { get; set; }
+        public string? LiftGateAtDeliveryIndicator { get => _explicitNullValueLiftGateAtDeliveryIndicator; set { _explicitNullValueLiftGateAtDeliveryIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LiftGateAtDeliveryIndicator"); else _explicitNullProperties?.Remove("LiftGateAtDeliveryIndicator"); } }
+        private string? _explicitNullValueLiftGateAtDeliveryIndicator = default!;
 #nullable restore
 #else
-        public string LiftGateAtDeliveryIndicator { get; set; }
+        public string LiftGateAtDeliveryIndicator { get => _explicitNullValueLiftGateAtDeliveryIndicator; set { _explicitNullValueLiftGateAtDeliveryIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LiftGateAtDeliveryIndicator"); else _explicitNullProperties?.Remove("LiftGateAtDeliveryIndicator"); } }
+        private string _explicitNullValueLiftGateAtDeliveryIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsDeliveryOptions"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsDeliveryOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsDeliveryOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsDeliveryOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("DropOffAtUPSFacilityIndicator", DropOffAtUPSFacilityIndicator);
             writer.WriteStringValue("LiftGateAtDeliveryIndicator", LiftGateAtDeliveryIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

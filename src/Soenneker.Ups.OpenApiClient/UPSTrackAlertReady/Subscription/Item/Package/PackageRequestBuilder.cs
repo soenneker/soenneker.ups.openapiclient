@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.UPSTrackAlertReady.Subscription.Item.Packa
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessage.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessage.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertReadyErrorMessage.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PackageSubscriptionSuccessResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PackageSubscriptionSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

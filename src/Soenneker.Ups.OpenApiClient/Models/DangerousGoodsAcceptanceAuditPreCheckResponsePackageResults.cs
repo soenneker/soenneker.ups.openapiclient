@@ -11,40 +11,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DangerousGoodsAcceptanceAuditPreCheckResponsePackageResults : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AccessibleIndicator") is { } nullNodeAccessibleIndicator && nullNodeAccessibleIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessibleIndicator = null;
+            if (parseNode.GetChildNode("ChemicalRecordResults") is { } nullNodeChemicalRecordResults && nullNodeChemicalRecordResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalRecordResults = null;
+            if (parseNode.GetChildNode("EuropeBUIndicator") is { } nullNodeEuropeBUIndicator && nullNodeEuropeBUIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EuropeBUIndicator = null;
+            if (parseNode.GetChildNode("PackageIdentifier") is { } nullNodePackageIdentifier && nullNodePackageIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageIdentifier = null;
+        }
+
         /// <summary>Indicates if a package is crew accessible or not.  Y = Package is crew accessible.N = Package is not crew accessible.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessibleIndicator { get; set; }
+        public string? AccessibleIndicator { get => _explicitNullValueAccessibleIndicator; set { _explicitNullValueAccessibleIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessibleIndicator"); else _explicitNullProperties?.Remove("AccessibleIndicator"); } }
+        private string? _explicitNullValueAccessibleIndicator = default!;
 #nullable restore
 #else
-        public string AccessibleIndicator { get; set; }
+        public string AccessibleIndicator { get => _explicitNullValueAccessibleIndicator; set { _explicitNullValueAccessibleIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessibleIndicator"); else _explicitNullProperties?.Remove("AccessibleIndicator"); } }
+        private string _explicitNullValueAccessibleIndicator = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Chemical Records Results container.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageResultsChemicalRecordResults>? ChemicalRecordResults { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageResultsChemicalRecordResults>? ChemicalRecordResults { get => _explicitNullValueChemicalRecordResults; set { _explicitNullValueChemicalRecordResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordResults"); else _explicitNullProperties?.Remove("ChemicalRecordResults"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageResultsChemicalRecordResults>? _explicitNullValueChemicalRecordResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageResultsChemicalRecordResults> ChemicalRecordResults { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageResultsChemicalRecordResults> ChemicalRecordResults { get => _explicitNullValueChemicalRecordResults; set { _explicitNullValueChemicalRecordResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordResults"); else _explicitNullProperties?.Remove("ChemicalRecordResults"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageResultsChemicalRecordResults> _explicitNullValueChemicalRecordResults = default!;
 #endif
         /// <summary>Indicates if origin country or territory is in the Europe Business Unit.   Y = Origin country or territory is in the Europe Business Unit.N = Origin country or territory is not in the Europe Business Unit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EuropeBUIndicator { get; set; }
+        public string? EuropeBUIndicator { get => _explicitNullValueEuropeBUIndicator; set { _explicitNullValueEuropeBUIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EuropeBUIndicator"); else _explicitNullProperties?.Remove("EuropeBUIndicator"); } }
+        private string? _explicitNullValueEuropeBUIndicator = default!;
 #nullable restore
 #else
-        public string EuropeBUIndicator { get; set; }
+        public string EuropeBUIndicator { get => _explicitNullValueEuropeBUIndicator; set { _explicitNullValueEuropeBUIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EuropeBUIndicator"); else _explicitNullProperties?.Remove("EuropeBUIndicator"); } }
+        private string _explicitNullValueEuropeBUIndicator = default!;
 #endif
         /// <summary>Identifies the package containing Dangerous Goods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageIdentifier { get; set; }
+        public string? PackageIdentifier { get => _explicitNullValuePackageIdentifier; set { _explicitNullValuePackageIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageIdentifier"); else _explicitNullProperties?.Remove("PackageIdentifier"); } }
+        private string? _explicitNullValuePackageIdentifier = default!;
 #nullable restore
 #else
-        public string PackageIdentifier { get; set; }
+        public string PackageIdentifier { get => _explicitNullValuePackageIdentifier; set { _explicitNullValuePackageIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageIdentifier"); else _explicitNullProperties?.Remove("PackageIdentifier"); } }
+        private string _explicitNullValuePackageIdentifier = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckResponsePackageResults"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckResponsePackageResults CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckResponsePackageResults();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckResponsePackageResults(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsPackageResultsChemicalRecordResults>("ChemicalRecordResults", ChemicalRecordResults);
             writer.WriteStringValue("EuropeBUIndicator", EuropeBUIndicator);
             writer.WriteStringValue("PackageIdentifier", PackageIdentifier);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

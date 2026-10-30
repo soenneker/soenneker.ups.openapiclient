@@ -12,63 +12,99 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsExportAssureShipmentResponsePoaCompliance : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("exporterCommodityDescription") is { } nullNodeExporterCommodityDescription && nullNodeExporterCommodityDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterCommodityDescription = null;
+            if (parseNode.GetChildNode("exporterCommodityId") is { } nullNodeExporterCommodityId && nullNodeExporterCommodityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterCommodityId = null;
+            if (parseNode.GetChildNode("exporterDocuSignTemplateId") is { } nullNodeExporterDocuSignTemplateId && nullNodeExporterDocuSignTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterDocuSignTemplateId = null;
+            if (parseNode.GetChildNode("exporterEvaluationCriteria") is { } nullNodeExporterEvaluationCriteria && nullNodeExporterEvaluationCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterEvaluationCriteria = null;
+            if (parseNode.GetChildNode("exporterOnlineFormFlag") is { } nullNodeExporterOnlineFormFlag && nullNodeExporterOnlineFormFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterOnlineFormFlag = null;
+            if (parseNode.GetChildNode("exporterPoaOnFileIndicator") is { } nullNodeExporterPoaOnFileIndicator && nullNodeExporterPoaOnFileIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterPoaOnFileIndicator = null;
+            if (parseNode.GetChildNode("exporterPoaRequiredFlag") is { } nullNodeExporterPoaRequiredFlag && nullNodeExporterPoaRequiredFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExporterPoaRequiredFlag = null;
+            if (parseNode.GetChildNode("importerCommodityDescription") is { } nullNodeImporterCommodityDescription && nullNodeImporterCommodityDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterCommodityDescription = null;
+            if (parseNode.GetChildNode("importerCommodityId") is { } nullNodeImporterCommodityId && nullNodeImporterCommodityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterCommodityId = null;
+            if (parseNode.GetChildNode("importerEvaluationCriteria") is { } nullNodeImporterEvaluationCriteria && nullNodeImporterEvaluationCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterEvaluationCriteria = null;
+            if (parseNode.GetChildNode("importerPoaOnFileIndicator") is { } nullNodeImporterPoaOnFileIndicator && nullNodeImporterPoaOnFileIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterPoaOnFileIndicator = null;
+            if (parseNode.GetChildNode("importerPoaRequiredFlag") is { } nullNodeImporterPoaRequiredFlag && nullNodeImporterPoaRequiredFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImporterPoaRequiredFlag = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commodity that triggers the POA requirement for the exporter</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExporterCommodityDescription { get; set; }
+        public string? ExporterCommodityDescription { get => _explicitNullValueExporterCommodityDescription; set { _explicitNullValueExporterCommodityDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterCommodityDescription"); else _explicitNullProperties?.Remove("exporterCommodityDescription"); } }
+        private string? _explicitNullValueExporterCommodityDescription = default!;
 #nullable restore
 #else
-        public string ExporterCommodityDescription { get; set; }
+        public string ExporterCommodityDescription { get => _explicitNullValueExporterCommodityDescription; set { _explicitNullValueExporterCommodityDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterCommodityDescription"); else _explicitNullProperties?.Remove("exporterCommodityDescription"); } }
+        private string _explicitNullValueExporterCommodityDescription = default!;
 #endif
         /// <summary>The commodity ID returned in the Import Export Compliance report.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExporterCommodityId { get; set; }
+        public string? ExporterCommodityId { get => _explicitNullValueExporterCommodityId; set { _explicitNullValueExporterCommodityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterCommodityId"); else _explicitNullProperties?.Remove("exporterCommodityId"); } }
+        private string? _explicitNullValueExporterCommodityId = default!;
 #nullable restore
 #else
-        public string ExporterCommodityId { get; set; }
+        public string ExporterCommodityId { get => _explicitNullValueExporterCommodityId; set { _explicitNullValueExporterCommodityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterCommodityId"); else _explicitNullProperties?.Remove("exporterCommodityId"); } }
+        private string _explicitNullValueExporterCommodityId = default!;
 #endif
         /// <summary>The ID of the DocuSign template, which the exporter can use for electronic completion of the POA.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExporterDocuSignTemplateId { get; set; }
+        public string? ExporterDocuSignTemplateId { get => _explicitNullValueExporterDocuSignTemplateId; set { _explicitNullValueExporterDocuSignTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterDocuSignTemplateId"); else _explicitNullProperties?.Remove("exporterDocuSignTemplateId"); } }
+        private string? _explicitNullValueExporterDocuSignTemplateId = default!;
 #nullable restore
 #else
-        public string ExporterDocuSignTemplateId { get; set; }
+        public string ExporterDocuSignTemplateId { get => _explicitNullValueExporterDocuSignTemplateId; set { _explicitNullValueExporterDocuSignTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterDocuSignTemplateId"); else _explicitNullProperties?.Remove("exporterDocuSignTemplateId"); } }
+        private string _explicitNullValueExporterDocuSignTemplateId = default!;
 #endif
         /// <summary>Criteria for evaluating POA requirements for both importer and exporter. Supported values:      | Supported enum values                                                                                           |   | :-------------------------------------------------------------------------------------------------------------- |   | `NonConditional`&lt;br&gt;Standard evaluation without specific conditional criteria                                     |   | `Description`&lt;br&gt;Evaluation based on the detailed description of the commodity                                    |   | `FTA`&lt;br&gt;Free Trade Agreement. Evaluation considers Free Trade Agreement stipulations applicable to the shipment. |   | `Value`&lt;br&gt;Evaluation based on the monetary value of the commodities                                              |   | `HTS`&lt;br&gt;Harmonized Tariff Schedule. Evaluation uses HTS codes for tariff classification and compliance           |   | `Quantity`&lt;br&gt;Evaluation focuses on the quantity of the goods being shipped                                       |   | `Weight`&lt;br&gt;Evaluation based on the weight of the shipment                                                        |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria? ExporterEvaluationCriteria { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria? ExporterEvaluationCriteria { get => _explicitNullValueExporterEvaluationCriteria; set { _explicitNullValueExporterEvaluationCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterEvaluationCriteria"); else _explicitNullProperties?.Remove("exporterEvaluationCriteria"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterEvaluationCriteria? _explicitNullValueExporterEvaluationCriteria = default!;
         /// <summary>Whether there is an online form available for the exporter to complete their POA documentation</summary>
-        public bool? ExporterOnlineFormFlag { get; set; }
+        public bool? ExporterOnlineFormFlag { get => _explicitNullValueExporterOnlineFormFlag; set { _explicitNullValueExporterOnlineFormFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterOnlineFormFlag"); else _explicitNullProperties?.Remove("exporterOnlineFormFlag"); } }
+        private bool? _explicitNullValueExporterOnlineFormFlag = default!;
         /// <summary>Whether the exporter has a POA already on file</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterPoaOnFileIndicator? ExporterPoaOnFileIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterPoaOnFileIndicator? ExporterPoaOnFileIndicator { get => _explicitNullValueExporterPoaOnFileIndicator; set { _explicitNullValueExporterPoaOnFileIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterPoaOnFileIndicator"); else _explicitNullProperties?.Remove("exporterPoaOnFileIndicator"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseExporterPoaOnFileIndicator? _explicitNullValueExporterPoaOnFileIndicator = default!;
         /// <summary>Whether the exporter is required to provide a POA for customs clearance.</summary>
-        public bool? ExporterPoaRequiredFlag { get; set; }
+        public bool? ExporterPoaRequiredFlag { get => _explicitNullValueExporterPoaRequiredFlag; set { _explicitNullValueExporterPoaRequiredFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exporterPoaRequiredFlag"); else _explicitNullProperties?.Remove("exporterPoaRequiredFlag"); } }
+        private bool? _explicitNullValueExporterPoaRequiredFlag = default!;
         /// <summary>A description of the commodity regarding what led to the POA requirement for the importer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImporterCommodityDescription { get; set; }
+        public string? ImporterCommodityDescription { get => _explicitNullValueImporterCommodityDescription; set { _explicitNullValueImporterCommodityDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerCommodityDescription"); else _explicitNullProperties?.Remove("importerCommodityDescription"); } }
+        private string? _explicitNullValueImporterCommodityDescription = default!;
 #nullable restore
 #else
-        public string ImporterCommodityDescription { get; set; }
+        public string ImporterCommodityDescription { get => _explicitNullValueImporterCommodityDescription; set { _explicitNullValueImporterCommodityDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerCommodityDescription"); else _explicitNullProperties?.Remove("importerCommodityDescription"); } }
+        private string _explicitNullValueImporterCommodityDescription = default!;
 #endif
         /// <summary>The commodity ID returned in the Import Export Compliance report.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImporterCommodityId { get; set; }
+        public string? ImporterCommodityId { get => _explicitNullValueImporterCommodityId; set { _explicitNullValueImporterCommodityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerCommodityId"); else _explicitNullProperties?.Remove("importerCommodityId"); } }
+        private string? _explicitNullValueImporterCommodityId = default!;
 #nullable restore
 #else
-        public string ImporterCommodityId { get; set; }
+        public string ImporterCommodityId { get => _explicitNullValueImporterCommodityId; set { _explicitNullValueImporterCommodityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerCommodityId"); else _explicitNullProperties?.Remove("importerCommodityId"); } }
+        private string _explicitNullValueImporterCommodityId = default!;
 #endif
         /// <summary>Criteria for evaluating POA requirements for both importer and exporter. Supported values:      | Supported enum values                                                                                           |   | :-------------------------------------------------------------------------------------------------------------- |   | `NonConditional`&lt;br&gt;Standard evaluation without specific conditional criteria                                     |   | `Description`&lt;br&gt;Evaluation based on the detailed description of the commodity                                    |   | `FTA`&lt;br&gt;Free Trade Agreement. Evaluation considers Free Trade Agreement stipulations applicable to the shipment. |   | `Value`&lt;br&gt;Evaluation based on the monetary value of the commodities                                              |   | `HTS`&lt;br&gt;Harmonized Tariff Schedule. Evaluation uses HTS codes for tariff classification and compliance           |   | `Quantity`&lt;br&gt;Evaluation focuses on the quantity of the goods being shipped                                       |   | `Weight`&lt;br&gt;Evaluation based on the weight of the shipment                                                        |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria? ImporterEvaluationCriteria { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria? ImporterEvaluationCriteria { get => _explicitNullValueImporterEvaluationCriteria; set { _explicitNullValueImporterEvaluationCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerEvaluationCriteria"); else _explicitNullProperties?.Remove("importerEvaluationCriteria"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria? _explicitNullValueImporterEvaluationCriteria = default!;
         /// <summary>Whether the importer already has a POA on file</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterPoaOnFileIndicator? ImporterPoaOnFileIndicator { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterPoaOnFileIndicator? ImporterPoaOnFileIndicator { get => _explicitNullValueImporterPoaOnFileIndicator; set { _explicitNullValueImporterPoaOnFileIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerPoaOnFileIndicator"); else _explicitNullProperties?.Remove("importerPoaOnFileIndicator"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterPoaOnFileIndicator? _explicitNullValueImporterPoaOnFileIndicator = default!;
         /// <summary>Whether Power of Attorney (POA) is required for the importer</summary>
-        public bool? ImporterPoaRequiredFlag { get; set; }
+        public bool? ImporterPoaRequiredFlag { get => _explicitNullValueImporterPoaRequiredFlag; set { _explicitNullValueImporterPoaRequiredFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importerPoaRequiredFlag"); else _explicitNullProperties?.Remove("importerPoaRequiredFlag"); } }
+        private bool? _explicitNullValueImporterPoaRequiredFlag = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponsePoaCompliance"/> and sets the default values.
         /// </summary>
@@ -84,7 +120,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponsePoaCompliance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponsePoaCompliance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.UpsExportAssureShipmentResponsePoaCompliance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -127,6 +163,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterEvaluationCriteria>("importerEvaluationCriteria", ImporterEvaluationCriteria);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.PowerOfAttorneyResponseImporterPoaOnFileIndicator>("importerPoaOnFileIndicator", ImporterPoaOnFileIndicator);
             writer.WriteBoolValue("importerPoaRequiredFlag", ImporterPoaRequiredFlag);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

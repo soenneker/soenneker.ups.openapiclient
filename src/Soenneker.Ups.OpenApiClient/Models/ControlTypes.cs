@@ -12,43 +12,64 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ControlTypes : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("controlDetails") is { } nullNodeControlDetails && nullNodeControlDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetails = null;
+            if (parseNode.GetChildNode("controlType") is { } nullNodeControlType && nullNodeControlType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlType = null;
+            if (parseNode.GetChildNode("controlTypeCode") is { } nullNodeControlTypeCode && nullNodeControlTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlTypeCode = null;
+            if (parseNode.GetChildNode("controlTypeMessage") is { } nullNodeControlTypeMessage && nullNodeControlTypeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlTypeMessage = null;
+            if (parseNode.GetChildNode("isRequired") is { } nullNodeIsRequired && nullNodeIsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequired = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array that contains a list of control types and codes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails>? ControlDetails { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails>? ControlDetails { get => _explicitNullValueControlDetails; set { _explicitNullValueControlDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetails"); else _explicitNullProperties?.Remove("controlDetails"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails>? _explicitNullValueControlDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails> ControlDetails { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails> ControlDetails { get => _explicitNullValueControlDetails; set { _explicitNullValueControlDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetails"); else _explicitNullProperties?.Remove("controlDetails"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails> _explicitNullValueControlDetails = default!;
 #endif
         /// <summary>The category of customs control applicable to the shipment. This property is translated to the user&apos;s language as required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlType { get; set; }
+        public string? ControlType { get => _explicitNullValueControlType; set { _explicitNullValueControlType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlType"); else _explicitNullProperties?.Remove("controlType"); } }
+        private string? _explicitNullValueControlType = default!;
 #nullable restore
 #else
-        public string ControlType { get; set; }
+        public string ControlType { get => _explicitNullValueControlType; set { _explicitNullValueControlType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlType"); else _explicitNullProperties?.Remove("controlType"); } }
+        private string _explicitNullValueControlType = default!;
 #endif
         /// <summary>A unique code that distinctly identifies each control type. This code is not translated and is used for specific system-logic related to the control type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlTypeCode { get; set; }
+        public string? ControlTypeCode { get => _explicitNullValueControlTypeCode; set { _explicitNullValueControlTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeCode"); else _explicitNullProperties?.Remove("controlTypeCode"); } }
+        private string? _explicitNullValueControlTypeCode = default!;
 #nullable restore
 #else
-        public string ControlTypeCode { get; set; }
+        public string ControlTypeCode { get => _explicitNullValueControlTypeCode; set { _explicitNullValueControlTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeCode"); else _explicitNullProperties?.Remove("controlTypeCode"); } }
+        private string _explicitNullValueControlTypeCode = default!;
 #endif
         /// <summary>Additional guidance or instructions based on the specific control type condition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlTypeMessage { get; set; }
+        public string? ControlTypeMessage { get => _explicitNullValueControlTypeMessage; set { _explicitNullValueControlTypeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeMessage"); else _explicitNullProperties?.Remove("controlTypeMessage"); } }
+        private string? _explicitNullValueControlTypeMessage = default!;
 #nullable restore
 #else
-        public string ControlTypeMessage { get; set; }
+        public string ControlTypeMessage { get => _explicitNullValueControlTypeMessage; set { _explicitNullValueControlTypeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeMessage"); else _explicitNullProperties?.Remove("controlTypeMessage"); } }
+        private string _explicitNullValueControlTypeMessage = default!;
 #endif
         /// <summary>Whether shipment compliance with a specific control type is required</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired? IsRequired { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired? IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired? _explicitNullValueIsRequired = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ControlTypes"/> and sets the default values.
         /// </summary>
@@ -64,7 +85,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ControlTypes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ControlTypes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ControlTypes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("controlTypeCode", ControlTypeCode);
             writer.WriteStringValue("controlTypeMessage", ControlTypeMessage);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired>("isRequired", IsRequired);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

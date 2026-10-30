@@ -12,37 +12,57 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LtlHandlingUnits : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Dimensions") is { } nullNodeDimensions && nullNodeDimensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dimensions = null;
+            if (parseNode.GetChildNode("FreightClass") is { } nullNodeFreightClass && nullNodeFreightClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightClass = null;
+            if (parseNode.GetChildNode("PackageWeight") is { } nullNodePackageWeight && nullNodePackageWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageWeight = null;
+            if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Dimensions for the handling unit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlDimensions? Dimensions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlDimensions? Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dimensions"); else _explicitNullProperties?.Remove("Dimensions"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LtlDimensions? _explicitNullValueDimensions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlDimensions Dimensions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlDimensions Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dimensions"); else _explicitNullProperties?.Remove("Dimensions"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LtlDimensions _explicitNullValueDimensions = default!;
 #endif
         /// <summary>Freight class of the handling unit.Valid values are:- 50 = over 50 lbs - Fits on standard shrink-wrapped 4X4 pallet, very durable- 55 = 35-50 pounds - Bricks, cement, mortar, hardwood flooring- 60 = 30-35 pounds - Car accessories &amp; car parts- 65 = 22.5-30 pounds - Car accessories &amp; car parts, bottled beverages, books in boxes- 70 = 15 to 22.5 pounds - Car accessories &amp; car parts, food items, automobile engines- 77.5 = 13.5 to 15 pounds - Tires, bathroom fixtures- 85 =12-13.5 pounds - Crated machinery, cast iron stoves- 92.5 = 10.5-12 pounds - Computers, monitors, refrigerators- 100 =9-10.5 pounds - Boat covers, car covers, canvas, wine cases, caskets- 110 =8-9 pounds - Cabinets, framed artwork, table saw- 125 =7-8 pounds - Small Household appliances- 150 =6-7 pounds - Auto sheet metal parts, bookcases- 175 =5-6 pounds - Clothing, couches stuffed furniture- 200 =4-5 pounds - Auto sheet metal parts, aircraft parts, aluminum table, packaged mattresses- 250 =3-4 pounds - Bamboo furniture, mattress and box spring, plasma TV- 300 =2-3 pounds - Wood cabinets, tables, chairs setup, model boats- 400 =1-2 pounds - Deer antlers- 500 =Less than 1 lbs - Bags of gold dust, ping pong balls</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnitsFreightClass? FreightClass { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnitsFreightClass? FreightClass { get => _explicitNullValueFreightClass; set { _explicitNullValueFreightClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightClass"); else _explicitNullProperties?.Remove("FreightClass"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnitsFreightClass? _explicitNullValueFreightClass = default!;
         /// <summary>Weight for the handling unit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightType? PackageWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightType? PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageWeight"); else _explicitNullProperties?.Remove("PackageWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightType? _explicitNullValuePackageWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightType PackageWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightType PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageWeight"); else _explicitNullProperties?.Remove("PackageWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightType _explicitNullValuePackageWeight = default!;
 #endif
         /// <summary>Quantity of handling units.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get; set; }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get; set; }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>Type of handling unit.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnitsType? Type { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnitsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnitsType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits"/> and sets the default values.
         /// </summary>
@@ -58,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightType>("PackageWeight", PackageWeight);
             writer.WriteStringValue("Quantity", Quantity);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnitsType>("Type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

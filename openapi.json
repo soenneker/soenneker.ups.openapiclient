@@ -41617,7 +41617,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CloseoutResponse"
+                  "$ref": "#/components/schemas/CloseoutMasterShipmentSuccessResponse"
                 },
                 "example": {
                   "invoiceLabelResponse": {
@@ -41647,6 +41647,9 @@
                       }
                     ]
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/CloseoutResponse"
                 }
               }
             }
@@ -41667,7 +41670,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CloseoutMasterShipment207Response"
+                  "$ref": "#/components/schemas/CloseoutMasterShipmentSuccessResponse"
                 },
                 "example": {
                   "message": "Movement has been closed successfully.",
@@ -41692,6 +41695,9 @@
                       }
                     ]
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/CloseoutMasterShipment207Response"
                 }
               }
             }
@@ -42571,7 +42577,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExportAssureResponse"
+                  "$ref": "#/components/schemas/SubmitExportAssureSuccessResponse"
                 },
                 "examples": {
                   "descriptionGuidanceResponseExample": {
@@ -42589,6 +42595,9 @@
                   "cieResponseExample": {
                     "$ref": "#/components/examples/cie-success-response"
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/ExportAssureResponse"
                 }
               }
             }
@@ -42605,12 +42614,15 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExportAssurePartialResponse"
+                  "$ref": "#/components/schemas/SubmitExportAssureSuccessResponse"
                 },
                 "examples": {
                   "samplePartialResponse": {
                     "$ref": "#/components/examples/sample-partial-response"
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/ExportAssurePartialResponse"
                 }
               }
             }
@@ -106885,6 +106897,16 @@
           ]
         }
       },
+      "CloseoutMasterShipmentSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/CloseoutResponse"
+          },
+          {
+            "$ref": "#/components/schemas/CloseoutMasterShipment207Response"
+          }
+        ]
+      },
       "UPSExportAssure_AccountNumber": {
         "examples": [
           "985123",
@@ -108651,6 +108673,16 @@
             }
           ]
         }
+      },
+      "SubmitExportAssureSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/ExportAssureResponse"
+          },
+          {
+            "$ref": "#/components/schemas/ExportAssurePartialResponse"
+          }
+        ]
       },
       "PickupPointOrderRequest": {
         "required": [

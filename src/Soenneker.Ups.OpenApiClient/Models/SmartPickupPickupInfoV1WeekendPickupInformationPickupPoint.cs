@@ -12,7 +12,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SmartPickupPickupInfoV1WeekendPickupInformationPickupPoint : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,7 +140,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickupPoint();
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.SmartPickupPickupPointV1OneOf1 == null && result.SmartPickupPickupPointV1OneOf10 == null && result.SmartPickupPickupPointV1OneOf11 == null && result.SmartPickupPickupPointV1OneOf12 == null && result.SmartPickupPickupPointV1OneOf13 == null && result.SmartPickupPickupPointV1OneOf14 == null && result.SmartPickupPickupPointV1OneOf2 == null && result.SmartPickupPickupPointV1OneOf3 == null && result.SmartPickupPickupPointV1OneOf4 == null && result.SmartPickupPickupPointV1OneOf5 == null && result.SmartPickupPickupPointV1OneOf6 == null && result.SmartPickupPickupPointV1OneOf7 == null && result.SmartPickupPickupPointV1OneOf8 == null && result.SmartPickupPickupPointV1OneOf9 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -207,61 +215,78 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (SmartPickupPickupPointV1OneOf1 == null && SmartPickupPickupPointV1OneOf10 == null && SmartPickupPickupPointV1OneOf11 == null && SmartPickupPickupPointV1OneOf12 == null && SmartPickupPickupPointV1OneOf13 == null && SmartPickupPickupPointV1OneOf14 == null && SmartPickupPickupPointV1OneOf2 == null && SmartPickupPickupPointV1OneOf3 == null && SmartPickupPickupPointV1OneOf4 == null && SmartPickupPickupPointV1OneOf5 == null && SmartPickupPickupPointV1OneOf6 == null && SmartPickupPickupPointV1OneOf7 == null && SmartPickupPickupPointV1OneOf8 == null && SmartPickupPickupPointV1OneOf9 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(SmartPickupPickupPointV1OneOf1 != null)
             {
+                if (SmartPickupPickupPointV1OneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf1>(null, SmartPickupPickupPointV1OneOf1);
             }
             else if(SmartPickupPickupPointV1OneOf10 != null)
             {
+                if (SmartPickupPickupPointV1OneOf10 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf10>(null, SmartPickupPickupPointV1OneOf10);
             }
             else if(SmartPickupPickupPointV1OneOf11 != null)
             {
+                if (SmartPickupPickupPointV1OneOf11 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf11>(null, SmartPickupPickupPointV1OneOf11);
             }
             else if(SmartPickupPickupPointV1OneOf12 != null)
             {
+                if (SmartPickupPickupPointV1OneOf12 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf12>(null, SmartPickupPickupPointV1OneOf12);
             }
             else if(SmartPickupPickupPointV1OneOf13 != null)
             {
+                if (SmartPickupPickupPointV1OneOf13 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf13>(null, SmartPickupPickupPointV1OneOf13);
             }
             else if(SmartPickupPickupPointV1OneOf14 != null)
             {
+                if (SmartPickupPickupPointV1OneOf14 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf14>(null, SmartPickupPickupPointV1OneOf14);
             }
             else if(SmartPickupPickupPointV1OneOf2 != null)
             {
+                if (SmartPickupPickupPointV1OneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf2>(null, SmartPickupPickupPointV1OneOf2);
             }
             else if(SmartPickupPickupPointV1OneOf3 != null)
             {
+                if (SmartPickupPickupPointV1OneOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf3>(null, SmartPickupPickupPointV1OneOf3);
             }
             else if(SmartPickupPickupPointV1OneOf4 != null)
             {
+                if (SmartPickupPickupPointV1OneOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf4>(null, SmartPickupPickupPointV1OneOf4);
             }
             else if(SmartPickupPickupPointV1OneOf5 != null)
             {
+                if (SmartPickupPickupPointV1OneOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf5>(null, SmartPickupPickupPointV1OneOf5);
             }
             else if(SmartPickupPickupPointV1OneOf6 != null)
             {
+                if (SmartPickupPickupPointV1OneOf6 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf6>(null, SmartPickupPickupPointV1OneOf6);
             }
             else if(SmartPickupPickupPointV1OneOf7 != null)
             {
+                if (SmartPickupPickupPointV1OneOf7 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf7>(null, SmartPickupPickupPointV1OneOf7);
             }
             else if(SmartPickupPickupPointV1OneOf8 != null)
             {
+                if (SmartPickupPickupPointV1OneOf8 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf8>(null, SmartPickupPickupPointV1OneOf8);
             }
             else if(SmartPickupPickupPointV1OneOf9 != null)
             {
+                if (SmartPickupPickupPointV1OneOf9 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupPointV1OneOf9>(null, SmartPickupPickupPointV1OneOf9);
             }
         }

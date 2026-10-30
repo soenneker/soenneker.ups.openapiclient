@@ -12,7 +12,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeliveryInterceptRequestV2ReasonForReturn : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,7 +100,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturn();
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.DeliveryInterceptRequestV2ReasonForReturnOneOf1 == null && result.DeliveryInterceptRequestV2ReasonForReturnOneOf2 == null && result.DeliveryInterceptRequestV2ReasonForReturnOneOf3 == null && result.DeliveryInterceptRequestV2ReasonForReturnOneOf4 == null && result.DeliveryInterceptRequestV2ReasonForReturnOneOf5 == null && result.DeliveryInterceptRequestV2ReasonForReturnOneOf6 == null && result.DeliveryInterceptRequestV2ReasonForReturnOneOf7 == null && result.DeliveryInterceptRequestV2ReasonForReturnOneOf8 == null && result.DeliveryInterceptRequestV2ReasonForReturnOneOf9 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -147,41 +155,53 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (DeliveryInterceptRequestV2ReasonForReturnOneOf1 == null && DeliveryInterceptRequestV2ReasonForReturnOneOf2 == null && DeliveryInterceptRequestV2ReasonForReturnOneOf3 == null && DeliveryInterceptRequestV2ReasonForReturnOneOf4 == null && DeliveryInterceptRequestV2ReasonForReturnOneOf5 == null && DeliveryInterceptRequestV2ReasonForReturnOneOf6 == null && DeliveryInterceptRequestV2ReasonForReturnOneOf7 == null && DeliveryInterceptRequestV2ReasonForReturnOneOf8 == null && DeliveryInterceptRequestV2ReasonForReturnOneOf9 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(DeliveryInterceptRequestV2ReasonForReturnOneOf1 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf1>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf1);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf2 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf2>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf2);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf3 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf3>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf3);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf4 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf4>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf4);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf5 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf5>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf5);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf6 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf6 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf6>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf6);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf7 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf7 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf7>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf7);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf8 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf8 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf8>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf8);
             }
             else if(DeliveryInterceptRequestV2ReasonForReturnOneOf9 != null)
             {
+                if (DeliveryInterceptRequestV2ReasonForReturnOneOf9 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2ReasonForReturnOneOf9>(null, DeliveryInterceptRequestV2ReasonForReturnOneOf9);
             }
         }

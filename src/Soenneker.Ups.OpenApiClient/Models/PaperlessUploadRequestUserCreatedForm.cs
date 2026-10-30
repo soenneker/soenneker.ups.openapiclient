@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaperlessUploadRequestUserCreatedForm : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("UserCreatedFormDocumentType") is { } nullNodeUserCreatedFormDocumentType && nullNodeUserCreatedFormDocumentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCreatedFormDocumentType = null;
+            if (parseNode.GetChildNode("UserCreatedFormFile") is { } nullNodeUserCreatedFormFile && nullNodeUserCreatedFormFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCreatedFormFile = null;
+            if (parseNode.GetChildNode("UserCreatedFormFileFormat") is { } nullNodeUserCreatedFormFileFormat && nullNodeUserCreatedFormFileFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCreatedFormFileFormat = null;
+            if (parseNode.GetChildNode("UserCreatedFormFileName") is { } nullNodeUserCreatedFormFileName && nullNodeUserCreatedFormFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCreatedFormFileName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type of documents in UserCreatedForm file.  The allowed document types are 001 - Authorization Form, 002 - Commercial Invoice, 003 - Certificate of Origin, 004 - Export Accompanying Document, 005 - Export License, 006 - Import Permit, 007 - One Time USMCA, 008 - Other Document, 009 - Power of Attorney, 010 - Packing List, 011 - SED Document, 012 - Shipper&apos;s Letter of Instruction, 013 - Declaration. The total number of documents allowed per file or per shipment is 13. Each document type needs to be three digits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserCreatedFormDocumentType { get; set; }
+        public string? UserCreatedFormDocumentType { get => _explicitNullValueUserCreatedFormDocumentType; set { _explicitNullValueUserCreatedFormDocumentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedFormDocumentType"); else _explicitNullProperties?.Remove("UserCreatedFormDocumentType"); } }
+        private string? _explicitNullValueUserCreatedFormDocumentType = default!;
 #nullable restore
 #else
-        public string UserCreatedFormDocumentType { get; set; }
+        public string UserCreatedFormDocumentType { get => _explicitNullValueUserCreatedFormDocumentType; set { _explicitNullValueUserCreatedFormDocumentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedFormDocumentType"); else _explicitNullProperties?.Remove("UserCreatedFormDocumentType"); } }
+        private string _explicitNullValueUserCreatedFormDocumentType = default!;
 #endif
         /// <summary>The user created form file.  The maximum allowable size of each file is restricted to 10 MB. Should be a base64 encoded string.Note: The maximum allowable size of each file is restriced to 1MB in CIE (Customer Integration Environment).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserCreatedFormFile { get; set; }
+        public string? UserCreatedFormFile { get => _explicitNullValueUserCreatedFormFile; set { _explicitNullValueUserCreatedFormFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedFormFile"); else _explicitNullProperties?.Remove("UserCreatedFormFile"); } }
+        private string? _explicitNullValueUserCreatedFormFile = default!;
 #nullable restore
 #else
-        public string UserCreatedFormFile { get; set; }
+        public string UserCreatedFormFile { get => _explicitNullValueUserCreatedFormFile; set { _explicitNullValueUserCreatedFormFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedFormFile"); else _explicitNullProperties?.Remove("UserCreatedFormFile"); } }
+        private string _explicitNullValueUserCreatedFormFile = default!;
 #endif
         /// <summary>The UserCreatedForm file format.  The allowed file formats are bmp, doc, gif, jpg, pdf, png, rtf, tif, txt and xls. The only exceptions for having file format of length 4 character are docx and xlsx. All other file formats needs to be of length 3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserCreatedFormFileFormat { get; set; }
+        public string? UserCreatedFormFileFormat { get => _explicitNullValueUserCreatedFormFileFormat; set { _explicitNullValueUserCreatedFormFileFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedFormFileFormat"); else _explicitNullProperties?.Remove("UserCreatedFormFileFormat"); } }
+        private string? _explicitNullValueUserCreatedFormFileFormat = default!;
 #nullable restore
 #else
-        public string UserCreatedFormFileFormat { get; set; }
+        public string UserCreatedFormFileFormat { get => _explicitNullValueUserCreatedFormFileFormat; set { _explicitNullValueUserCreatedFormFileFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedFormFileFormat"); else _explicitNullProperties?.Remove("UserCreatedFormFileFormat"); } }
+        private string _explicitNullValueUserCreatedFormFileFormat = default!;
 #endif
         /// <summary>The name of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserCreatedFormFileName { get; set; }
+        public string? UserCreatedFormFileName { get => _explicitNullValueUserCreatedFormFileName; set { _explicitNullValueUserCreatedFormFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedFormFileName"); else _explicitNullProperties?.Remove("UserCreatedFormFileName"); } }
+        private string? _explicitNullValueUserCreatedFormFileName = default!;
 #nullable restore
 #else
-        public string UserCreatedFormFileName { get; set; }
+        public string UserCreatedFormFileName { get => _explicitNullValueUserCreatedFormFileName; set { _explicitNullValueUserCreatedFormFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedFormFileName"); else _explicitNullProperties?.Remove("UserCreatedFormFileName"); } }
+        private string _explicitNullValueUserCreatedFormFileName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadRequestUserCreatedForm"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadRequestUserCreatedForm CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadRequestUserCreatedForm();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PaperlessUploadRequestUserCreatedForm(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("UserCreatedFormFile", UserCreatedFormFile);
             writer.WriteStringValue("UserCreatedFormFileFormat", UserCreatedFormFileFormat);
             writer.WriteStringValue("UserCreatedFormFileName", UserCreatedFormFileName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

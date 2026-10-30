@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelRecoveryRequestLabelDelivery : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("LabelLinkIndicator") is { } nullNodeLabelLinkIndicator && nullNodeLabelLinkIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelLinkIndicator = null;
+            if (parseNode.GetChildNode("ResendEMailIndicator") is { } nullNodeResendEMailIndicator && nullNodeResendEMailIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResendEMailIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates the Label Recovery and Receipt Recovery URL links are to be returned in the XML Response. Valid for following shipment -Print/Electronic Return LabelPrint/Electronic Import Control LabelForward shipment except for Mail Innovations Forward</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LabelLinkIndicator { get; set; }
+        public string? LabelLinkIndicator { get => _explicitNullValueLabelLinkIndicator; set { _explicitNullValueLabelLinkIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinkIndicator"); else _explicitNullProperties?.Remove("LabelLinkIndicator"); } }
+        private string? _explicitNullValueLabelLinkIndicator = default!;
 #nullable restore
 #else
-        public string LabelLinkIndicator { get; set; }
+        public string LabelLinkIndicator { get => _explicitNullValueLabelLinkIndicator; set { _explicitNullValueLabelLinkIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinkIndicator"); else _explicitNullProperties?.Remove("LabelLinkIndicator"); } }
+        private string _explicitNullValueLabelLinkIndicator = default!;
 #endif
         /// <summary>Not Used. If this tag is present, resend the Label Delivery notification email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResendEMailIndicator { get; set; }
+        public string? ResendEMailIndicator { get => _explicitNullValueResendEMailIndicator; set { _explicitNullValueResendEMailIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResendEMailIndicator"); else _explicitNullProperties?.Remove("ResendEMailIndicator"); } }
+        private string? _explicitNullValueResendEMailIndicator = default!;
 #nullable restore
 #else
-        public string ResendEMailIndicator { get; set; }
+        public string ResendEMailIndicator { get => _explicitNullValueResendEMailIndicator; set { _explicitNullValueResendEMailIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResendEMailIndicator"); else _explicitNullProperties?.Remove("ResendEMailIndicator"); } }
+        private string _explicitNullValueResendEMailIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequestLabelDelivery(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("LabelLinkIndicator", LabelLinkIndicator);
             writer.WriteStringValue("ResendEMailIndicator", ResendEMailIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

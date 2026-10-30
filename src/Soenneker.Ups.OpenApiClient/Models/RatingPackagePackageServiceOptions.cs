@@ -12,104 +12,147 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RatingPackagePackageServiceOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AccessPointCOD") is { } nullNodeAccessPointCOD && nullNodeAccessPointCOD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessPointCOD = null;
+            if (parseNode.GetChildNode("COD") is { } nullNodeCOD && nullNodeCOD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) COD = null;
+            if (parseNode.GetChildNode("DeclaredValue") is { } nullNodeDeclaredValue && nullNodeDeclaredValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclaredValue = null;
+            if (parseNode.GetChildNode("DeliveryConfirmation") is { } nullNodeDeliveryConfirmation && nullNodeDeliveryConfirmation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryConfirmation = null;
+            if (parseNode.GetChildNode("DryIce") is { } nullNodeDryIce && nullNodeDryIce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DryIce = null;
+            if (parseNode.GetChildNode("HazMat") is { } nullNodeHazMat && nullNodeHazMat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazMat = null;
+            if (parseNode.GetChildNode("Insurance") is { } nullNodeInsurance && nullNodeInsurance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Insurance = null;
+            if (parseNode.GetChildNode("ProactiveIndicator") is { } nullNodeProactiveIndicator && nullNodeProactiveIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProactiveIndicator = null;
+            if (parseNode.GetChildNode("RefrigerationIndicator") is { } nullNodeRefrigerationIndicator && nullNodeRefrigerationIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefrigerationIndicator = null;
+            if (parseNode.GetChildNode("ShipperDeclaredValue") is { } nullNodeShipperDeclaredValue && nullNodeShipperDeclaredValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperDeclaredValue = null;
+            if (parseNode.GetChildNode("ShipperReleaseIndicator") is { } nullNodeShipperReleaseIndicator && nullNodeShipperReleaseIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperReleaseIndicator = null;
+            if (parseNode.GetChildNode("UPSPremiumCareIndicator") is { } nullNodeUPSPremiumCareIndicator && nullNodeUPSPremiumCareIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UPSPremiumCareIndicator = null;
+        }
+
         /// <summary>Access Point COD indicates Package COD is requested for a shipment.  Valid only for : 01 - Hold For Pickup At UPS Access Point, Shipment Indication type. Package Access Point COD is valid only for shipment without return service from US/PR to US/PR and CA to CA. Not valid with (Package) COD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod? AccessPointCOD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod? AccessPointCOD { get => _explicitNullValueAccessPointCOD; set { _explicitNullValueAccessPointCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointCOD"); else _explicitNullProperties?.Remove("AccessPointCOD"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod? _explicitNullValueAccessPointCOD = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod AccessPointCOD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod AccessPointCOD { get => _explicitNullValueAccessPointCOD; set { _explicitNullValueAccessPointCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointCOD"); else _explicitNullProperties?.Remove("AccessPointCOD"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsAccessPointCod _explicitNullValueAccessPointCOD = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>COD Container. Indicates COD is requested.   Valid for the following country or territory combinations: US/PR to US/PRCA to CACA to USNot allowed for CA to US for packages that are designated as Letters or Envelopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod? COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod? COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod? _explicitNullValueCOD = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod COD { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.RatingPackageServiceOptionsCod _explicitNullValueCOD = default!;
 #endif
         /// <summary>Declared Value Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue? DeclaredValue { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue? DeclaredValue { get => _explicitNullValueDeclaredValue; set { _explicitNullValueDeclaredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeclaredValue"); else _explicitNullProperties?.Remove("DeclaredValue"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue? _explicitNullValueDeclaredValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue DeclaredValue { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue DeclaredValue { get => _explicitNullValueDeclaredValue; set { _explicitNullValueDeclaredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeclaredValue"); else _explicitNullProperties?.Remove("DeclaredValue"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeclaredValue _explicitNullValueDeclaredValue = default!;
 #endif
         /// <summary>Delivery Confirmation Container. For a list of valid origin/destination countries or territories please refer to appendix.  DeliveryConfirmation and COD are mutually exclusive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation? DeliveryConfirmation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation? DeliveryConfirmation { get => _explicitNullValueDeliveryConfirmation; set { _explicitNullValueDeliveryConfirmation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryConfirmation"); else _explicitNullProperties?.Remove("DeliveryConfirmation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation? _explicitNullValueDeliveryConfirmation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation DeliveryConfirmation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation DeliveryConfirmation { get => _explicitNullValueDeliveryConfirmation; set { _explicitNullValueDeliveryConfirmation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryConfirmation"); else _explicitNullProperties?.Remove("DeliveryConfirmation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDeliveryConfirmation _explicitNullValueDeliveryConfirmation = default!;
 #endif
         /// <summary>Container to hold Dry Ice information.  Lane check will happen based on postal code/ city.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce? DryIce { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce? DryIce { get => _explicitNullValueDryIce; set { _explicitNullValueDryIce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DryIce"); else _explicitNullProperties?.Remove("DryIce"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce? _explicitNullValueDryIce = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce DryIce { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce DryIce { get => _explicitNullValueDryIce; set { _explicitNullValueDryIce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DryIce"); else _explicitNullProperties?.Remove("DryIce"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsDryIce _explicitNullValueDryIce = default!;
 #endif
         /// <summary>Container to hold HazMat information.  Applies only if SubVersion is greater than or equal to 1701.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHazMat? HazMat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHazMat? HazMat { get => _explicitNullValueHazMat; set { _explicitNullValueHazMat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMat"); else _explicitNullProperties?.Remove("HazMat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHazMat? _explicitNullValueHazMat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHazMat HazMat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHazMat HazMat { get => _explicitNullValueHazMat; set { _explicitNullValueHazMat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMat"); else _explicitNullProperties?.Remove("HazMat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsHazMat _explicitNullValueHazMat = default!;
 #endif
         /// <summary>Insurance Accesorial. Only one type of insurance can exist at a time on the shipment. Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance? Insurance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance? Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Insurance"); else _explicitNullProperties?.Remove("Insurance"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance? _explicitNullValueInsurance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance Insurance { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Insurance"); else _explicitNullProperties?.Remove("Insurance"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsInsurance _explicitNullValueInsurance = default!;
 #endif
         /// <summary>Any value associated with this element will be ignored. If present, the package is rated for UPS Proactive Response and proactive package tracking.Contractual accessorial for health care companies to allow package monitoring throughout the UPS system.  Shippers account needs to have valid contract for UPS Proactive Response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProactiveIndicator { get; set; }
+        public string? ProactiveIndicator { get => _explicitNullValueProactiveIndicator; set { _explicitNullValueProactiveIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProactiveIndicator"); else _explicitNullProperties?.Remove("ProactiveIndicator"); } }
+        private string? _explicitNullValueProactiveIndicator = default!;
 #nullable restore
 #else
-        public string ProactiveIndicator { get; set; }
+        public string ProactiveIndicator { get => _explicitNullValueProactiveIndicator; set { _explicitNullValueProactiveIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProactiveIndicator"); else _explicitNullProperties?.Remove("ProactiveIndicator"); } }
+        private string _explicitNullValueProactiveIndicator = default!;
 #endif
         /// <summary>Presence/Absence Indicator. Any value is ignored. If present, indicates that the package contains an item that needs refrigeration.  Shippers account needs to have a valid contract for Refrigeration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefrigerationIndicator { get; set; }
+        public string? RefrigerationIndicator { get => _explicitNullValueRefrigerationIndicator; set { _explicitNullValueRefrigerationIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RefrigerationIndicator"); else _explicitNullProperties?.Remove("RefrigerationIndicator"); } }
+        private string? _explicitNullValueRefrigerationIndicator = default!;
 #nullable restore
 #else
-        public string RefrigerationIndicator { get; set; }
+        public string RefrigerationIndicator { get => _explicitNullValueRefrigerationIndicator; set { _explicitNullValueRefrigerationIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RefrigerationIndicator"); else _explicitNullProperties?.Remove("RefrigerationIndicator"); } }
+        private string _explicitNullValueRefrigerationIndicator = default!;
 #endif
         /// <summary>Shipper Paid Declared Value Charge at Package level.   Valid for UPS World Wide Express Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsShipperDeclaredValue? ShipperDeclaredValue { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsShipperDeclaredValue? ShipperDeclaredValue { get => _explicitNullValueShipperDeclaredValue; set { _explicitNullValueShipperDeclaredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperDeclaredValue"); else _explicitNullProperties?.Remove("ShipperDeclaredValue"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsShipperDeclaredValue? _explicitNullValueShipperDeclaredValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsShipperDeclaredValue ShipperDeclaredValue { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsShipperDeclaredValue ShipperDeclaredValue { get => _explicitNullValueShipperDeclaredValue; set { _explicitNullValueShipperDeclaredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperDeclaredValue"); else _explicitNullProperties?.Remove("ShipperDeclaredValue"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsShipperDeclaredValue _explicitNullValueShipperDeclaredValue = default!;
 #endif
         /// <summary>The presence indicates that the package may be released by driver without a signature from the consignee.  Empty Tag. Only available for US50/PR to US50/PR packages without return service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperReleaseIndicator { get; set; }
+        public string? ShipperReleaseIndicator { get => _explicitNullValueShipperReleaseIndicator; set { _explicitNullValueShipperReleaseIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperReleaseIndicator"); else _explicitNullProperties?.Remove("ShipperReleaseIndicator"); } }
+        private string? _explicitNullValueShipperReleaseIndicator = default!;
 #nullable restore
 #else
-        public string ShipperReleaseIndicator { get; set; }
+        public string ShipperReleaseIndicator { get => _explicitNullValueShipperReleaseIndicator; set { _explicitNullValueShipperReleaseIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperReleaseIndicator"); else _explicitNullProperties?.Remove("ShipperReleaseIndicator"); } }
+        private string _explicitNullValueShipperReleaseIndicator = default!;
 #endif
         /// <summary>The UPSPremiumCareIndicator indicates special handling is required for shipment having controlled substances.  Empty Tag means indicator is present.Valid only for Canada to Canada movements.Available for the following Return Services:- Returns Exchange (available with a contract)- Print Return Label- Print and Mail- Electronic Return Label- Return Service Three AttemptMay be requested with following UPS services:- UPS Express® Early- UPS Express- UPS Express Saver- UPS Standard.Not available for packages with the following:- Delivery Confirmation - Signature Required- Delivery Confirmation - Adult Signature Required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UPSPremiumCareIndicator { get; set; }
+        public string? UPSPremiumCareIndicator { get => _explicitNullValueUPSPremiumCareIndicator; set { _explicitNullValueUPSPremiumCareIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremiumCareIndicator"); else _explicitNullProperties?.Remove("UPSPremiumCareIndicator"); } }
+        private string? _explicitNullValueUPSPremiumCareIndicator = default!;
 #nullable restore
 #else
-        public string UPSPremiumCareIndicator { get; set; }
+        public string UPSPremiumCareIndicator { get => _explicitNullValueUPSPremiumCareIndicator; set { _explicitNullValueUPSPremiumCareIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremiumCareIndicator"); else _explicitNullProperties?.Remove("UPSPremiumCareIndicator"); } }
+        private string _explicitNullValueUPSPremiumCareIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.RatingPackagePackageServiceOptions"/> and sets the default values.
@@ -126,7 +169,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.RatingPackagePackageServiceOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.RatingPackagePackageServiceOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.RatingPackagePackageServiceOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -169,6 +212,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsShipperDeclaredValue>("ShipperDeclaredValue", ShipperDeclaredValue);
             writer.WriteStringValue("ShipperReleaseIndicator", ShipperReleaseIndicator);
             writer.WriteStringValue("UPSPremiumCareIndicator", UPSPremiumCareIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

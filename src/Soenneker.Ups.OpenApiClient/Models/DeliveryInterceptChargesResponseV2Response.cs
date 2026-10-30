@@ -11,66 +11,96 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeliveryInterceptChargesResponseV2Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("chargeInfo") is { } nullNodeChargeInfo && nullNodeChargeInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeInfo = null;
+            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("statusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+            if (parseNode.GetChildNode("statusMsg") is { } nullNodeStatusMsg && nullNodeStatusMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMsg = null;
+            if (parseNode.GetChildNode("subStatusCode") is { } nullNodeSubStatusCode && nullNodeSubStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubStatusCode = null;
+            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+            if (parseNode.GetChildNode("transactionId") is { } nullNodeTransactionId && nullNodeTransactionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionId = null;
+            if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For each 1z there will exist a ChargeInfo object. These are the charges that were applied. This array is unbounded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem>? ChargeInfo { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem>? ChargeInfo { get => _explicitNullValueChargeInfo; set { _explicitNullValueChargeInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeInfo"); else _explicitNullProperties?.Remove("chargeInfo"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem>? _explicitNullValueChargeInfo = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem> ChargeInfo { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem> ChargeInfo { get => _explicitNullValueChargeInfo; set { _explicitNullValueChargeInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeInfo"); else _explicitNullProperties?.Remove("chargeInfo"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItem> _explicitNullValueChargeInfo = default!;
 #endif
         /// <summary>Unbounded array of error objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2>? Errors { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2> Errors { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptSuccessErrorV2> _explicitNullValueErrors = default!;
 #endif
         /// <summary>API response status code, Internal code regarding the success or failure of the operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCode { get; set; }
+        public string? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
+        private string? _explicitNullValueStatusCode = default!;
 #nullable restore
 #else
-        public string StatusCode { get; set; }
+        public string StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
+        private string _explicitNullValueStatusCode = default!;
 #endif
         /// <summary>API response status message, Internal message regarding the success or failure of the operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusMsg { get; set; }
+        public string? StatusMsg { get => _explicitNullValueStatusMsg; set { _explicitNullValueStatusMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMsg"); else _explicitNullProperties?.Remove("statusMsg"); } }
+        private string? _explicitNullValueStatusMsg = default!;
 #nullable restore
 #else
-        public string StatusMsg { get; set; }
+        public string StatusMsg { get => _explicitNullValueStatusMsg; set { _explicitNullValueStatusMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMsg"); else _explicitNullProperties?.Remove("statusMsg"); } }
+        private string _explicitNullValueStatusMsg = default!;
 #endif
         /// <summary>A new status code for adding granularity to the existing status code structure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubStatusCode { get; set; }
+        public string? SubStatusCode { get => _explicitNullValueSubStatusCode; set { _explicitNullValueSubStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subStatusCode"); else _explicitNullProperties?.Remove("subStatusCode"); } }
+        private string? _explicitNullValueSubStatusCode = default!;
 #nullable restore
 #else
-        public string SubStatusCode { get; set; }
+        public string SubStatusCode { get => _explicitNullValueSubStatusCode; set { _explicitNullValueSubStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subStatusCode"); else _explicitNullProperties?.Remove("subStatusCode"); } }
+        private string _explicitNullValueSubStatusCode = default!;
 #endif
         /// <summary>Indicates if the transaction is considered successful.</summary>
-        public bool? Success { get; set; }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        private bool? _explicitNullValueSuccess = default!;
         /// <summary>A unique value that will be used to identify the transaction for logging and troubleshooting purposes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransactionId { get; set; }
+        public string? TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionId"); else _explicitNullProperties?.Remove("transactionId"); } }
+        private string? _explicitNullValueTransactionId = default!;
 #nullable restore
 #else
-        public string TransactionId { get; set; }
+        public string TransactionId { get => _explicitNullValueTransactionId; set { _explicitNullValueTransactionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionId"); else _explicitNullProperties?.Remove("transactionId"); } }
+        private string _explicitNullValueTransactionId = default!;
 #endif
         /// <summary>A map containing warning codes and descriptions as key/value pairs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseWarningsProperty? Warnings { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseWarningsProperty? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseWarningsProperty? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseWarningsProperty Warnings { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseWarningsProperty Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseWarningsProperty _explicitNullValueWarnings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response"/> and sets the default values.
@@ -88,7 +118,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -123,6 +153,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteBoolValue("success", Success);
             writer.WriteStringValue("transactionId", TransactionId);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseWarningsProperty>("warnings", Warnings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

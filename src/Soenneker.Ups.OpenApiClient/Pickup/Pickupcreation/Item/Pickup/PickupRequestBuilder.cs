@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.Pickup.Pickupcreation.Item.Pickup
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.PickupCreation401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.PickupCreation403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.PickupCreation429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseWrapper>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PickupCreationResponseWrapper.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

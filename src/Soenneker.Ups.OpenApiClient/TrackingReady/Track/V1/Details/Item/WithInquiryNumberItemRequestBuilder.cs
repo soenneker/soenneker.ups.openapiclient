@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.TrackingReady.Track.V1.Details.Item
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.ResponseValue.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ResponseValue.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Ups.OpenApiClient.Models.ResponseValue.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.TrackApiResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.TrackApiResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

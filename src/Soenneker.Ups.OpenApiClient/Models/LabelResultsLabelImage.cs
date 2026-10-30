@@ -12,56 +12,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelResultsLabelImage : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("GraphicImage") is { } nullNodeGraphicImage && nullNodeGraphicImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GraphicImage = null;
+            if (parseNode.GetChildNode("HTMLImage") is { } nullNodeHTMLImage && nullNodeHTMLImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HTMLImage = null;
+            if (parseNode.GetChildNode("InternationalSignatureGraphicImage") is { } nullNodeInternationalSignatureGraphicImage && nullNodeInternationalSignatureGraphicImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternationalSignatureGraphicImage = null;
+            if (parseNode.GetChildNode("LabelImageFormat") is { } nullNodeLabelImageFormat && nullNodeLabelImageFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelImageFormat = null;
+            if (parseNode.GetChildNode("PDF417") is { } nullNodePDF417 && nullNodePDF417.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PDF417 = null;
+            if (parseNode.GetChildNode("URL") is { } nullNodeURL && nullNodeURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) URL = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Base 64 encoded graphic image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GraphicImage { get; set; }
+        public string? GraphicImage { get => _explicitNullValueGraphicImage; set { _explicitNullValueGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImage"); else _explicitNullProperties?.Remove("GraphicImage"); } }
+        private string? _explicitNullValueGraphicImage = default!;
 #nullable restore
 #else
-        public string GraphicImage { get; set; }
+        public string GraphicImage { get => _explicitNullValueGraphicImage; set { _explicitNullValueGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImage"); else _explicitNullProperties?.Remove("GraphicImage"); } }
+        private string _explicitNullValueGraphicImage = default!;
 #endif
         /// <summary>Base 64 encoded html browser image rendering software. This is only returned for GIF image formats.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HTMLImage { get; set; }
+        public string? HTMLImage { get => _explicitNullValueHTMLImage; set { _explicitNullValueHTMLImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTMLImage"); else _explicitNullProperties?.Remove("HTMLImage"); } }
+        private string? _explicitNullValueHTMLImage = default!;
 #nullable restore
 #else
-        public string HTMLImage { get; set; }
+        public string HTMLImage { get => _explicitNullValueHTMLImage; set { _explicitNullValueHTMLImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTMLImage"); else _explicitNullProperties?.Remove("HTMLImage"); } }
+        private string _explicitNullValueHTMLImage = default!;
 #endif
         /// <summary>Base 64 encoded graphic image of the Warsaw text and signature box.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InternationalSignatureGraphicImage { get; set; }
+        public string? InternationalSignatureGraphicImage { get => _explicitNullValueInternationalSignatureGraphicImage; set { _explicitNullValueInternationalSignatureGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalSignatureGraphicImage"); else _explicitNullProperties?.Remove("InternationalSignatureGraphicImage"); } }
+        private string? _explicitNullValueInternationalSignatureGraphicImage = default!;
 #nullable restore
 #else
-        public string InternationalSignatureGraphicImage { get; set; }
+        public string InternationalSignatureGraphicImage { get => _explicitNullValueInternationalSignatureGraphicImage; set { _explicitNullValueInternationalSignatureGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InternationalSignatureGraphicImage"); else _explicitNullProperties?.Remove("InternationalSignatureGraphicImage"); } }
+        private string _explicitNullValueInternationalSignatureGraphicImage = default!;
 #endif
         /// <summary>The format of a label image byte stream.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelImageLabelImageFormat? LabelImageFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelImageLabelImageFormat? LabelImageFormat { get => _explicitNullValueLabelImageFormat; set { _explicitNullValueLabelImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelImageFormat"); else _explicitNullProperties?.Remove("LabelImageFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelImageLabelImageFormat? _explicitNullValueLabelImageFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelImageLabelImageFormat LabelImageFormat { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelImageLabelImageFormat LabelImageFormat { get => _explicitNullValueLabelImageFormat; set { _explicitNullValueLabelImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelImageFormat"); else _explicitNullProperties?.Remove("LabelImageFormat"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelImageLabelImageFormat _explicitNullValueLabelImageFormat = default!;
 #endif
         /// <summary>PDF-417 is a two-dimensional barcode, which can store up to about 1,800 printable ASCII characters or 1,100 binary characters per symbol. The symbol is rectangular. The PDF417 image will be returned when the shipment is trans-border and the service option is one of the following: Standard Express, Saver Express Plus. The image is Base 64 encoded and only returned for GIF image format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PDF417 { get; set; }
+        public string? PDF417 { get => _explicitNullValuePDF417; set { _explicitNullValuePDF417 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PDF417"); else _explicitNullProperties?.Remove("PDF417"); } }
+        private string? _explicitNullValuePDF417 = default!;
 #nullable restore
 #else
-        public string PDF417 { get; set; }
+        public string PDF417 { get => _explicitNullValuePDF417; set { _explicitNullValuePDF417 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PDF417"); else _explicitNullProperties?.Remove("PDF417"); } }
+        private string _explicitNullValuePDF417 = default!;
 #endif
         /// <summary>This is only returned if the label link is requested to be returned and only at the first package result  Applicable for following types of shipments:Print/Electronic Return LabelPrint/Electronic Import Control LabelForward shipment except for Mail Innovations Forward</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? URL { get; set; }
+        public string? URL { get => _explicitNullValueURL; set { _explicitNullValueURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("URL"); else _explicitNullProperties?.Remove("URL"); } }
+        private string? _explicitNullValueURL = default!;
 #nullable restore
 #else
-        public string URL { get; set; }
+        public string URL { get => _explicitNullValueURL; set { _explicitNullValueURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("URL"); else _explicitNullProperties?.Remove("URL"); } }
+        private string _explicitNullValueURL = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage"/> and sets the default values.
@@ -78,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +134,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelImageLabelImageFormat>("LabelImageFormat", LabelImageFormat);
             writer.WriteStringValue("PDF417", PDF417);
             writer.WriteStringValue("URL", URL);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

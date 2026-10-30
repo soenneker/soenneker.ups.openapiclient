@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DropLocationSortCode : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("FreightSortFacilityCode") is { } nullNodeFreightSortFacilityCode && nullNodeFreightSortFacilityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightSortFacilityCode = null;
+            if (parseNode.GetChildNode("HubSortCode") is { } nullNodeHubSortCode && nullNodeHubSortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubSortCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Holds the value of the facility location code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreightSortFacilityCode { get; set; }
+        public string? FreightSortFacilityCode { get => _explicitNullValueFreightSortFacilityCode; set { _explicitNullValueFreightSortFacilityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightSortFacilityCode"); else _explicitNullProperties?.Remove("FreightSortFacilityCode"); } }
+        private string? _explicitNullValueFreightSortFacilityCode = default!;
 #nullable restore
 #else
-        public string FreightSortFacilityCode { get; set; }
+        public string FreightSortFacilityCode { get => _explicitNullValueFreightSortFacilityCode; set { _explicitNullValueFreightSortFacilityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightSortFacilityCode"); else _explicitNullProperties?.Remove("FreightSortFacilityCode"); } }
+        private string _explicitNullValueFreightSortFacilityCode = default!;
 #endif
         /// <summary>Holds the value of the hub sort code or airport code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HubSortCode { get; set; }
+        public string? HubSortCode { get => _explicitNullValueHubSortCode; set { _explicitNullValueHubSortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HubSortCode"); else _explicitNullProperties?.Remove("HubSortCode"); } }
+        private string? _explicitNullValueHubSortCode = default!;
 #nullable restore
 #else
-        public string HubSortCode { get; set; }
+        public string HubSortCode { get => _explicitNullValueHubSortCode; set { _explicitNullValueHubSortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HubSortCode"); else _explicitNullProperties?.Remove("HubSortCode"); } }
+        private string _explicitNullValueHubSortCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DropLocationSortCode"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DropLocationSortCode CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DropLocationSortCode();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DropLocationSortCode(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("FreightSortFacilityCode", FreightSortFacilityCode);
             writer.WriteStringValue("HubSortCode", HubSortCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

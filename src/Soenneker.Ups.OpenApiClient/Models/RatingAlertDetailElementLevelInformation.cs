@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RatingAlertDetailElementLevelInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ElementIdentifier") is { } nullNodeElementIdentifier && nullNodeElementIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElementIdentifier = null;
+            if (parseNode.GetChildNode("Level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains more information about the type of element. Returned if Level is &apos;P&apos; or &apos;C&apos;.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier>? ElementIdentifier { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier>? ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier>? _explicitNullValueElementIdentifier = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier> ElementIdentifier { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier> ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier> _explicitNullValueElementIdentifier = default!;
 #endif
         /// <summary>Define type of element in request. Possible values are -- &apos;H&apos; for the header details level,- &apos;S&apos; for the shipment level,- &apos;P&apos; for the package level,- &apos;C&apos; for the commodity level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Level { get; set; }
+        public string? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
+        private string? _explicitNullValueLevel = default!;
 #nullable restore
 #else
-        public string Level { get; set; }
+        public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
+        private string _explicitNullValueLevel = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.RatingAlertDetailElementLevelInformation"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.RatingAlertDetailElementLevelInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.RatingAlertDetailElementLevelInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.RatingAlertDetailElementLevelInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier>("ElementIdentifier", ElementIdentifier);
             writer.WriteStringValue("Level", Level);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

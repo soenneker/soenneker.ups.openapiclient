@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SmartPickupPickupInfoResponseV1Response : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Alert") is { } nullNodeAlert && nullNodeAlert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alert = null;
+            if (parseNode.GetChildNode("ResponseStatus") is { } nullNodeResponseStatus && nullNodeResponseStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseStatus = null;
+            if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Alert Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1Alert? Alert { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1Alert? Alert { get => _explicitNullValueAlert; set { _explicitNullValueAlert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Alert"); else _explicitNullProperties?.Remove("Alert"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1Alert? _explicitNullValueAlert = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1Alert Alert { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1Alert Alert { get => _explicitNullValueAlert; set { _explicitNullValueAlert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Alert"); else _explicitNullProperties?.Remove("Alert"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1Alert _explicitNullValueAlert = default!;
 #endif
         /// <summary>The Response status container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatus? ResponseStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatus? ResponseStatus { get => _explicitNullValueResponseStatus; set { _explicitNullValueResponseStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatus"); else _explicitNullProperties?.Remove("ResponseStatus"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatus? _explicitNullValueResponseStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatus ResponseStatus { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatus ResponseStatus { get => _explicitNullValueResponseStatus; set { _explicitNullValueResponseStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatus"); else _explicitNullProperties?.Remove("ResponseStatus"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatus _explicitNullValueResponseStatus = default!;
 #endif
         /// <summary>Transaction Reference Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1TransactionReference? TransactionReference { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1TransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1TransactionReference? _explicitNullValueTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1TransactionReference TransactionReference { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1TransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1TransactionReference _explicitNullValueTransactionReference = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1Alert>("Alert", Alert);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1ResponseStatus>("ResponseStatus", ResponseStatus);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupCommonResponseV1TransactionReference>("TransactionReference", TransactionReference);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,80 +12,114 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PickupPendingStatusResponsePendingStatus : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("BillingCode") is { } nullNodeBillingCode && nullNodeBillingCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingCode = null;
+            if (parseNode.GetChildNode("ContactName") is { } nullNodeContactName && nullNodeContactName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactName = null;
+            if (parseNode.GetChildNode("GWNStatusCode") is { } nullNodeGWNStatusCode && nullNodeGWNStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GWNStatusCode = null;
+            if (parseNode.GetChildNode("OnCallStatusCode") is { } nullNodeOnCallStatusCode && nullNodeOnCallStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnCallStatusCode = null;
+            if (parseNode.GetChildNode("PickupStatusMessage") is { } nullNodePickupStatusMessage && nullNodePickupStatusMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupStatusMessage = null;
+            if (parseNode.GetChildNode("PickupType") is { } nullNodePickupType && nullNodePickupType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupType = null;
+            if (parseNode.GetChildNode("PRN") is { } nullNodePRN && nullNodePRN.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PRN = null;
+            if (parseNode.GetChildNode("ReferenceNumber") is { } nullNodeReferenceNumber && nullNodeReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceNumber = null;
+            if (parseNode.GetChildNode("ServiceDate") is { } nullNodeServiceDate && nullNodeServiceDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Pickup billing classification for on call- 01 = Regular- 02 = Return- 03 = Alternate Address (Not supported for now)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingCode { get; set; }
+        public string? BillingCode { get => _explicitNullValueBillingCode; set { _explicitNullValueBillingCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingCode"); else _explicitNullProperties?.Remove("BillingCode"); } }
+        private string? _explicitNullValueBillingCode = default!;
 #nullable restore
 #else
-        public string BillingCode { get; set; }
+        public string BillingCode { get => _explicitNullValueBillingCode; set { _explicitNullValueBillingCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingCode"); else _explicitNullProperties?.Remove("BillingCode"); } }
+        private string _explicitNullValueBillingCode = default!;
 #endif
         /// <summary>on-callpickup contact name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactName { get; set; }
+        public string? ContactName { get => _explicitNullValueContactName; set { _explicitNullValueContactName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactName"); else _explicitNullProperties?.Remove("ContactName"); } }
+        private string? _explicitNullValueContactName = default!;
 #nullable restore
 #else
-        public string ContactName { get; set; }
+        public string ContactName { get => _explicitNullValueContactName; set { _explicitNullValueContactName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactName"); else _explicitNullProperties?.Remove("ContactName"); } }
+        private string _explicitNullValueContactName = default!;
 #endif
         /// <summary>Status code for Smart Pickup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GWNStatusCode { get; set; }
+        public string? GWNStatusCode { get => _explicitNullValueGWNStatusCode; set { _explicitNullValueGWNStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GWNStatusCode"); else _explicitNullProperties?.Remove("GWNStatusCode"); } }
+        private string? _explicitNullValueGWNStatusCode = default!;
 #nullable restore
 #else
-        public string GWNStatusCode { get; set; }
+        public string GWNStatusCode { get => _explicitNullValueGWNStatusCode; set { _explicitNullValueGWNStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GWNStatusCode"); else _explicitNullProperties?.Remove("GWNStatusCode"); } }
+        private string _explicitNullValueGWNStatusCode = default!;
 #endif
         /// <summary>A unique string identifier to identify a success pre-notification processing. Only available if end result is success.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OnCallStatusCode { get; set; }
+        public string? OnCallStatusCode { get => _explicitNullValueOnCallStatusCode; set { _explicitNullValueOnCallStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OnCallStatusCode"); else _explicitNullProperties?.Remove("OnCallStatusCode"); } }
+        private string? _explicitNullValueOnCallStatusCode = default!;
 #nullable restore
 #else
-        public string OnCallStatusCode { get; set; }
+        public string OnCallStatusCode { get => _explicitNullValueOnCallStatusCode; set { _explicitNullValueOnCallStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OnCallStatusCode"); else _explicitNullProperties?.Remove("OnCallStatusCode"); } }
+        private string _explicitNullValueOnCallStatusCode = default!;
 #endif
         /// <summary>The status for on-callpickup.PickupPendingStatusResponse will only display incomplete status for today and tomorrow only.- 002 and 012 are the most common responses.- 001 = Received at dispatch- 002 = Dispatched to driver- 003 = Order successfully completed- 004 = Order unsuccessfully completed- 005 = Missed commit – Updated ETA supplied by driver- 007 = Cancelled- 008 = Order has invalid order status- 012 = Your pickup request is being processed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupStatusMessage { get; set; }
+        public string? PickupStatusMessage { get => _explicitNullValuePickupStatusMessage; set { _explicitNullValuePickupStatusMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupStatusMessage"); else _explicitNullProperties?.Remove("PickupStatusMessage"); } }
+        private string? _explicitNullValuePickupStatusMessage = default!;
 #nullable restore
 #else
-        public string PickupStatusMessage { get; set; }
+        public string PickupStatusMessage { get => _explicitNullValuePickupStatusMessage; set { _explicitNullValuePickupStatusMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupStatusMessage"); else _explicitNullProperties?.Remove("PickupStatusMessage"); } }
+        private string _explicitNullValuePickupStatusMessage = default!;
 #endif
         /// <summary>Specify the type of pending pickup.- 01 = on-callPickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupType { get; set; }
+        public string? PickupType { get => _explicitNullValuePickupType; set { _explicitNullValuePickupType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupType"); else _explicitNullProperties?.Remove("PickupType"); } }
+        private string? _explicitNullValuePickupType = default!;
 #nullable restore
 #else
-        public string PickupType { get; set; }
+        public string PickupType { get => _explicitNullValuePickupType; set { _explicitNullValuePickupType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupType"); else _explicitNullProperties?.Remove("PickupType"); } }
+        private string _explicitNullValuePickupType = default!;
 #endif
         /// <summary>Returned PRN</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PRN { get; set; }
+        public string? PRN { get => _explicitNullValuePRN; set { _explicitNullValuePRN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PRN"); else _explicitNullProperties?.Remove("PRN"); } }
+        private string? _explicitNullValuePRN = default!;
 #nullable restore
 #else
-        public string PRN { get; set; }
+        public string PRN { get => _explicitNullValuePRN; set { _explicitNullValuePRN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PRN"); else _explicitNullProperties?.Remove("PRN"); } }
+        private string _explicitNullValuePRN = default!;
 #endif
         /// <summary>Customer provided reference number for on-call pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceNumber { get; set; }
+        public string? ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceNumber"); else _explicitNullProperties?.Remove("ReferenceNumber"); } }
+        private string? _explicitNullValueReferenceNumber = default!;
 #nullable restore
 #else
-        public string ReferenceNumber { get; set; }
+        public string ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceNumber"); else _explicitNullProperties?.Remove("ReferenceNumber"); } }
+        private string _explicitNullValueReferenceNumber = default!;
 #endif
         /// <summary>Local service date. Format: yyyyMMdd- yyyy = Year applicable- MM = 01-12- dd = 01-31</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceDate { get; set; }
+        public string? ServiceDate { get => _explicitNullValueServiceDate; set { _explicitNullValueServiceDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceDate"); else _explicitNullProperties?.Remove("ServiceDate"); } }
+        private string? _explicitNullValueServiceDate = default!;
 #nullable restore
 #else
-        public string ServiceDate { get; set; }
+        public string ServiceDate { get => _explicitNullValueServiceDate; set { _explicitNullValueServiceDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceDate"); else _explicitNullProperties?.Remove("ServiceDate"); } }
+        private string _explicitNullValueServiceDate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus"/> and sets the default values.
@@ -102,7 +136,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PickupPendingStatusResponsePendingStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -139,6 +173,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("PRN", PRN);
             writer.WriteStringValue("ReferenceNumber", ReferenceNumber);
             writer.WriteStringValue("ServiceDate", ServiceDate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

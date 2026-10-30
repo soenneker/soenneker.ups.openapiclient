@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChildLtlCharges : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("FreightCharges") is { } nullNodeFreightCharges && nullNodeFreightCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightCharges = null;
+            if (parseNode.GetChildNode("InsuranceCharges") is { } nullNodeInsuranceCharges && nullNodeInsuranceCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsuranceCharges = null;
+            if (parseNode.GetChildNode("OtherCharges") is { } nullNodeOtherCharges && nullNodeOtherCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherCharges = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The monetary value of the discount/rebate charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Discount { get; set; }
+        public string? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Discount"); else _explicitNullProperties?.Remove("Discount"); } }
+        private string? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public string Discount { get; set; }
+        public string Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Discount"); else _explicitNullProperties?.Remove("Discount"); } }
+        private string _explicitNullValueDiscount = default!;
 #endif
         /// <summary>Freight charges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreightCharges { get; set; }
+        public string? FreightCharges { get => _explicitNullValueFreightCharges; set { _explicitNullValueFreightCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightCharges"); else _explicitNullProperties?.Remove("FreightCharges"); } }
+        private string? _explicitNullValueFreightCharges = default!;
 #nullable restore
 #else
-        public string FreightCharges { get; set; }
+        public string FreightCharges { get => _explicitNullValueFreightCharges; set { _explicitNullValueFreightCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightCharges"); else _explicitNullProperties?.Remove("FreightCharges"); } }
+        private string _explicitNullValueFreightCharges = default!;
 #endif
         /// <summary>The monetary value of the insurance charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InsuranceCharges { get; set; }
+        public string? InsuranceCharges { get => _explicitNullValueInsuranceCharges; set { _explicitNullValueInsuranceCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InsuranceCharges"); else _explicitNullProperties?.Remove("InsuranceCharges"); } }
+        private string? _explicitNullValueInsuranceCharges = default!;
 #nullable restore
 #else
-        public string InsuranceCharges { get; set; }
+        public string InsuranceCharges { get => _explicitNullValueInsuranceCharges; set { _explicitNullValueInsuranceCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InsuranceCharges"); else _explicitNullProperties?.Remove("InsuranceCharges"); } }
+        private string _explicitNullValueInsuranceCharges = default!;
 #endif
         /// <summary>Any other miscellaneous charges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlOtherCharges? OtherCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlOtherCharges? OtherCharges { get => _explicitNullValueOtherCharges; set { _explicitNullValueOtherCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OtherCharges"); else _explicitNullProperties?.Remove("OtherCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LtlOtherCharges? _explicitNullValueOtherCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlOtherCharges OtherCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlOtherCharges OtherCharges { get => _explicitNullValueOtherCharges; set { _explicitNullValueOtherCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OtherCharges"); else _explicitNullProperties?.Remove("OtherCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LtlOtherCharges _explicitNullValueOtherCharges = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("FreightCharges", FreightCharges);
             writer.WriteStringValue("InsuranceCharges", InsuranceCharges);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LtlOtherCharges>("OtherCharges", OtherCharges);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

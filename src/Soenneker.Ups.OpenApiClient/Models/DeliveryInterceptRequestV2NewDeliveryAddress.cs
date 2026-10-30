@@ -12,64 +12,92 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeliveryInterceptRequestV2NewDeliveryAddress : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addressInfo") is { } nullNodeAddressInfo && nullNodeAddressInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressInfo = null;
+            if (parseNode.GetChildNode("addressNickName") is { } nullNodeAddressNickName && nullNodeAddressNickName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressNickName = null;
+            if (parseNode.GetChildNode("contactName") is { } nullNodeContactName && nullNodeContactName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactName = null;
+            if (parseNode.GetChildNode("emailAddress") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("nameOrCompanyName") is { } nullNodeNameOrCompanyName && nullNodeNameOrCompanyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameOrCompanyName = null;
+            if (parseNode.GetChildNode("phoneExt") is { } nullNodePhoneExt && nullNodePhoneExt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneExt = null;
+            if (parseNode.GetChildNode("phoneNumber") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Address object, include line1, line2, line 3 state, postal code and country code. Required when processing a request if imsAddressIdentifier is not present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddressAddressInfo? AddressInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddressAddressInfo? AddressInfo { get => _explicitNullValueAddressInfo; set { _explicitNullValueAddressInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressInfo"); else _explicitNullProperties?.Remove("addressInfo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddressAddressInfo? _explicitNullValueAddressInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddressAddressInfo AddressInfo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddressAddressInfo AddressInfo { get => _explicitNullValueAddressInfo; set { _explicitNullValueAddressInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressInfo"); else _explicitNullProperties?.Remove("addressInfo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddressAddressInfo _explicitNullValueAddressInfo = default!;
 #endif
         /// <summary>The nickname string assigned to the address entry. Required only for AA intercept type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressNickName { get; set; }
+        public string? AddressNickName { get => _explicitNullValueAddressNickName; set { _explicitNullValueAddressNickName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressNickName"); else _explicitNullProperties?.Remove("addressNickName"); } }
+        private string? _explicitNullValueAddressNickName = default!;
 #nullable restore
 #else
-        public string AddressNickName { get; set; }
+        public string AddressNickName { get => _explicitNullValueAddressNickName; set { _explicitNullValueAddressNickName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressNickName"); else _explicitNullProperties?.Remove("addressNickName"); } }
+        private string _explicitNullValueAddressNickName = default!;
 #endif
         /// <summary>The contact name at the customer address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactName { get; set; }
+        public string? ContactName { get => _explicitNullValueContactName; set { _explicitNullValueContactName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactName"); else _explicitNullProperties?.Remove("contactName"); } }
+        private string? _explicitNullValueContactName = default!;
 #nullable restore
 #else
-        public string ContactName { get; set; }
+        public string ContactName { get => _explicitNullValueContactName; set { _explicitNullValueContactName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactName"); else _explicitNullProperties?.Remove("contactName"); } }
+        private string _explicitNullValueContactName = default!;
 #endif
         /// <summary>Email Address at the customer address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get; set; }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailAddress"); else _explicitNullProperties?.Remove("emailAddress"); } }
+        private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get; set; }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailAddress"); else _explicitNullProperties?.Remove("emailAddress"); } }
+        private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The name of the company or person customer address.(Required When calling submitAddress() API  Empty String  can be passed)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameOrCompanyName { get; set; }
+        public string? NameOrCompanyName { get => _explicitNullValueNameOrCompanyName; set { _explicitNullValueNameOrCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameOrCompanyName"); else _explicitNullProperties?.Remove("nameOrCompanyName"); } }
+        private string? _explicitNullValueNameOrCompanyName = default!;
 #nullable restore
 #else
-        public string NameOrCompanyName { get; set; }
+        public string NameOrCompanyName { get => _explicitNullValueNameOrCompanyName; set { _explicitNullValueNameOrCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameOrCompanyName"); else _explicitNullProperties?.Remove("nameOrCompanyName"); } }
+        private string _explicitNullValueNameOrCompanyName = default!;
 #endif
         /// <summary>The phone extension number at the customer address.(Required When calling submitAddress() API  Empty String  can be passed)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneExt { get; set; }
+        public string? PhoneExt { get => _explicitNullValuePhoneExt; set { _explicitNullValuePhoneExt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneExt"); else _explicitNullProperties?.Remove("phoneExt"); } }
+        private string? _explicitNullValuePhoneExt = default!;
 #nullable restore
 #else
-        public string PhoneExt { get; set; }
+        public string PhoneExt { get => _explicitNullValuePhoneExt; set { _explicitNullValuePhoneExt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneExt"); else _explicitNullProperties?.Remove("phoneExt"); } }
+        private string _explicitNullValuePhoneExt = default!;
 #endif
         /// <summary>The contact phone number at the customer address.(Required When calling submitAddress() API  Empty String  can be passed)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get; set; }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2NewDeliveryAddress(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("nameOrCompanyName", NameOrCompanyName);
             writer.WriteStringValue("phoneExt", PhoneExt);
             writer.WriteStringValue("phoneNumber", PhoneNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

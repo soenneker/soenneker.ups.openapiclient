@@ -12,48 +12,70 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InternationalFormsContacts : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ForwardAgent") is { } nullNodeForwardAgent && nullNodeForwardAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardAgent = null;
+            if (parseNode.GetChildNode("IntermediateConsignee") is { } nullNodeIntermediateConsignee && nullNodeIntermediateConsignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntermediateConsignee = null;
+            if (parseNode.GetChildNode("Producer") is { } nullNodeProducer && nullNodeProducer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Producer = null;
+            if (parseNode.GetChildNode("SoldTo") is { } nullNodeSoldTo && nullNodeSoldTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoldTo = null;
+            if (parseNode.GetChildNode("UltimateConsignee") is { } nullNodeUltimateConsignee && nullNodeUltimateConsignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UltimateConsignee = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The forwarding agent is the company or person acting as agent in the trans-shipping of freight to the destination country or territory.  Applicable for EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsForwardAgent? ForwardAgent { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsForwardAgent? ForwardAgent { get => _explicitNullValueForwardAgent; set { _explicitNullValueForwardAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ForwardAgent"); else _explicitNullProperties?.Remove("ForwardAgent"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsForwardAgent? _explicitNullValueForwardAgent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsForwardAgent ForwardAgent { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsForwardAgent ForwardAgent { get => _explicitNullValueForwardAgent; set { _explicitNullValueForwardAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ForwardAgent"); else _explicitNullProperties?.Remove("ForwardAgent"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsForwardAgent _explicitNullValueForwardAgent = default!;
 #endif
         /// <summary>The intermediate consignee is the person or company in the importing country or territory that makes final delivery to the ultimate consignee.  Applicable for EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsIntermediateConsignee? IntermediateConsignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsIntermediateConsignee? IntermediateConsignee { get => _explicitNullValueIntermediateConsignee; set { _explicitNullValueIntermediateConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IntermediateConsignee"); else _explicitNullProperties?.Remove("IntermediateConsignee"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsIntermediateConsignee? _explicitNullValueIntermediateConsignee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsIntermediateConsignee IntermediateConsignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsIntermediateConsignee IntermediateConsignee { get => _explicitNullValueIntermediateConsignee; set { _explicitNullValueIntermediateConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IntermediateConsignee"); else _explicitNullProperties?.Remove("IntermediateConsignee"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsIntermediateConsignee _explicitNullValueIntermediateConsignee = default!;
 #endif
         /// <summary>Information of the producer. The USMCA Certificate of Origin must be completed, signed, and dated by the exporter. When the Certificate is completed by the producer for use by the exporter, it must be completed, signed, and dated by the producer. The date must be the date the Certificate was completed and signed.  Applies to USMCA.  Required for USMCA forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsProducer? Producer { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsProducer? Producer { get => _explicitNullValueProducer; set { _explicitNullValueProducer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Producer"); else _explicitNullProperties?.Remove("Producer"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsProducer? _explicitNullValueProducer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsProducer Producer { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsProducer Producer { get => _explicitNullValueProducer; set { _explicitNullValueProducer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Producer"); else _explicitNullProperties?.Remove("Producer"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsProducer _explicitNullValueProducer = default!;
 #endif
         /// <summary>SoldTo Container. The Sold To party&apos;s country code must be the same as the Ship To party&apos;s country code with the exception of Canada and satellite countries.  Applies to Invoice and USMCA Forms. Required if Invoice or USMCA (International Form) is requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsSoldTo? SoldTo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsSoldTo? SoldTo { get => _explicitNullValueSoldTo; set { _explicitNullValueSoldTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SoldTo"); else _explicitNullProperties?.Remove("SoldTo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsSoldTo? _explicitNullValueSoldTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsSoldTo SoldTo { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsSoldTo SoldTo { get => _explicitNullValueSoldTo; set { _explicitNullValueSoldTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SoldTo"); else _explicitNullProperties?.Remove("SoldTo"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsSoldTo _explicitNullValueSoldTo = default!;
 #endif
         /// <summary>The ultimate consignee is the person or company who receives the goods for end-use or the person or company listed on the export license. This is the end-user of the goods.  Applicable for EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsUltimateConsignee? UltimateConsignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsUltimateConsignee? UltimateConsignee { get => _explicitNullValueUltimateConsignee; set { _explicitNullValueUltimateConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UltimateConsignee"); else _explicitNullProperties?.Remove("UltimateConsignee"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsUltimateConsignee? _explicitNullValueUltimateConsignee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ContactsUltimateConsignee UltimateConsignee { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContactsUltimateConsignee UltimateConsignee { get => _explicitNullValueUltimateConsignee; set { _explicitNullValueUltimateConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UltimateConsignee"); else _explicitNullProperties?.Remove("UltimateConsignee"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContactsUltimateConsignee _explicitNullValueUltimateConsignee = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactsProducer>("Producer", Producer);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactsSoldTo>("SoldTo", SoldTo);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactsUltimateConsignee>("UltimateConsignee", UltimateConsignee);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

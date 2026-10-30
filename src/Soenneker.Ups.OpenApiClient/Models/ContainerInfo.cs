@@ -12,64 +12,92 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ContainerInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("containerDescription") is { } nullNodeContainerDescription && nullNodeContainerDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerDescription = null;
+            if (parseNode.GetChildNode("containerNumber") is { } nullNodeContainerNumber && nullNodeContainerNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerNumber = null;
+            if (parseNode.GetChildNode("containerType") is { } nullNodeContainerType && nullNodeContainerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerType = null;
+            if (parseNode.GetChildNode("containerVolume") is { } nullNodeContainerVolume && nullNodeContainerVolume.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerVolume = null;
+            if (parseNode.GetChildNode("containerWeight") is { } nullNodeContainerWeight && nullNodeContainerWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerWeight = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("seal") is { } nullNodeSeal && nullNodeSeal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Seal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A description of the container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainerDescription { get; set; }
+        public string? ContainerDescription { get => _explicitNullValueContainerDescription; set { _explicitNullValueContainerDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerDescription"); else _explicitNullProperties?.Remove("containerDescription"); } }
+        private string? _explicitNullValueContainerDescription = default!;
 #nullable restore
 #else
-        public string ContainerDescription { get; set; }
+        public string ContainerDescription { get => _explicitNullValueContainerDescription; set { _explicitNullValueContainerDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerDescription"); else _explicitNullProperties?.Remove("containerDescription"); } }
+        private string _explicitNullValueContainerDescription = default!;
 #endif
         /// <summary>The unique container or package number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainerNumber { get; set; }
+        public string? ContainerNumber { get => _explicitNullValueContainerNumber; set { _explicitNullValueContainerNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerNumber"); else _explicitNullProperties?.Remove("containerNumber"); } }
+        private string? _explicitNullValueContainerNumber = default!;
 #nullable restore
 #else
-        public string ContainerNumber { get; set; }
+        public string ContainerNumber { get => _explicitNullValueContainerNumber; set { _explicitNullValueContainerNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerNumber"); else _explicitNullProperties?.Remove("containerNumber"); } }
+        private string _explicitNullValueContainerNumber = default!;
 #endif
         /// <summary>The type of container (e.g., Pallet, Box, Crate).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainerType { get; set; }
+        public string? ContainerType { get => _explicitNullValueContainerType; set { _explicitNullValueContainerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerType"); else _explicitNullProperties?.Remove("containerType"); } }
+        private string? _explicitNullValueContainerType = default!;
 #nullable restore
 #else
-        public string ContainerType { get; set; }
+        public string ContainerType { get => _explicitNullValueContainerType; set { _explicitNullValueContainerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerType"); else _explicitNullProperties?.Remove("containerType"); } }
+        private string _explicitNullValueContainerType = default!;
 #endif
         /// <summary>The volume of the container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume? ContainerVolume { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume? ContainerVolume { get => _explicitNullValueContainerVolume; set { _explicitNullValueContainerVolume = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerVolume"); else _explicitNullProperties?.Remove("containerVolume"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume? _explicitNullValueContainerVolume = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume ContainerVolume { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume ContainerVolume { get => _explicitNullValueContainerVolume; set { _explicitNullValueContainerVolume = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerVolume"); else _explicitNullProperties?.Remove("containerVolume"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerVolume _explicitNullValueContainerVolume = default!;
 #endif
         /// <summary>The weight of the container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight? ContainerWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight? ContainerWeight { get => _explicitNullValueContainerWeight; set { _explicitNullValueContainerWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerWeight"); else _explicitNullProperties?.Remove("containerWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight? _explicitNullValueContainerWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight ContainerWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight ContainerWeight { get => _explicitNullValueContainerWeight; set { _explicitNullValueContainerWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerWeight"); else _explicitNullProperties?.Remove("containerWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight _explicitNullValueContainerWeight = default!;
 #endif
         /// <summary>The quantity of items in the container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get; set; }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get; set; }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>The seal number applied to the container for security.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Seal { get; set; }
+        public string? Seal { get => _explicitNullValueSeal; set { _explicitNullValueSeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seal"); else _explicitNullProperties?.Remove("seal"); } }
+        private string? _explicitNullValueSeal = default!;
 #nullable restore
 #else
-        public string Seal { get; set; }
+        public string Seal { get => _explicitNullValueSeal; set { _explicitNullValueSeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seal"); else _explicitNullProperties?.Remove("seal"); } }
+        private string _explicitNullValueSeal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ContainerInfo"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ContainerInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ContainerInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ContainerInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContainerInfoContainerWeight>("containerWeight", ContainerWeight);
             writer.WriteStringValue("quantity", Quantity);
             writer.WriteStringValue("seal", Seal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,64 +12,92 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LabelRecoveryResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CODTurnInPage") is { } nullNodeCODTurnInPage && nullNodeCODTurnInPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODTurnInPage = null;
+            if (parseNode.GetChildNode("Form") is { } nullNodeForm && nullNodeForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Form = null;
+            if (parseNode.GetChildNode("HighValueReport") is { } nullNodeHighValueReport && nullNodeHighValueReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HighValueReport = null;
+            if (parseNode.GetChildNode("LabelResults") is { } nullNodeLabelResults && nullNodeLabelResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelResults = null;
+            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("ShipmentIdentificationNumber") is { } nullNodeShipmentIdentificationNumber && nullNodeShipmentIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentIdentificationNumber = null;
+            if (parseNode.GetChildNode("TrackingCandidate") is { } nullNodeTrackingCandidate && nullNodeTrackingCandidate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingCandidate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container for COD Turnin Page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage? CODTurnInPage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage? CODTurnInPage { get => _explicitNullValueCODTurnInPage; set { _explicitNullValueCODTurnInPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODTurnInPage"); else _explicitNullProperties?.Remove("CODTurnInPage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage? _explicitNullValueCODTurnInPage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage CODTurnInPage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage CODTurnInPage { get => _explicitNullValueCODTurnInPage; set { _explicitNullValueCODTurnInPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODTurnInPage"); else _explicitNullProperties?.Remove("CODTurnInPage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseCodTurnInPage _explicitNullValueCODTurnInPage = default!;
 #endif
         /// <summary>Container tag for the International Forms. Currently, represents Commercial Invoice for Electronic Returns Label and Electronic Import Control Label.  Applicable for Electronic Return Label and Electronic Import Control Label shipments only. Returned for request with SubVersion greater than or equal to 1707.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm? Form { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm? Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm? _explicitNullValueForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm Form { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseForm _explicitNullValueForm = default!;
 #endif
         /// <summary>Container tag for the High Value Report for Electronic Returns Label and Electronic Import Control Label.  Applicable for Electronic Return Label and Electronic Import Control Label shipments only. Returned for request with SubVersion greater than or equal to 1707.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport? HighValueReport { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport? HighValueReport { get => _explicitNullValueHighValueReport; set { _explicitNullValueHighValueReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HighValueReport"); else _explicitNullProperties?.Remove("HighValueReport"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport? _explicitNullValueHighValueReport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport HighValueReport { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport HighValueReport { get => _explicitNullValueHighValueReport; set { _explicitNullValueHighValueReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HighValueReport"); else _explicitNullProperties?.Remove("HighValueReport"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseHighValueReport _explicitNullValueHighValueReport = default!;
 #endif
         /// <summary>The LabelResults property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults>? LabelResults { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults>? LabelResults { get => _explicitNullValueLabelResults; set { _explicitNullValueLabelResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelResults"); else _explicitNullProperties?.Remove("LabelResults"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults>? _explicitNullValueLabelResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults> LabelResults { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults> LabelResults { get => _explicitNullValueLabelResults; set { _explicitNullValueLabelResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelResults"); else _explicitNullProperties?.Remove("LabelResults"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseLabelResults> _explicitNullValueLabelResults = default!;
 #endif
         /// <summary>Response Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>Tracking number of the leading package in the shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentIdentificationNumber { get; set; }
+        public string? ShipmentIdentificationNumber { get => _explicitNullValueShipmentIdentificationNumber; set { _explicitNullValueShipmentIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentIdentificationNumber"); else _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); } }
+        private string? _explicitNullValueShipmentIdentificationNumber = default!;
 #nullable restore
 #else
-        public string ShipmentIdentificationNumber { get; set; }
+        public string ShipmentIdentificationNumber { get => _explicitNullValueShipmentIdentificationNumber; set { _explicitNullValueShipmentIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentIdentificationNumber"); else _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); } }
+        private string _explicitNullValueShipmentIdentificationNumber = default!;
 #endif
         /// <summary>The TrackingCandidate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseTrackingCandidate>? TrackingCandidate { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseTrackingCandidate>? TrackingCandidate { get => _explicitNullValueTrackingCandidate; set { _explicitNullValueTrackingCandidate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingCandidate"); else _explicitNullProperties?.Remove("TrackingCandidate"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseTrackingCandidate>? _explicitNullValueTrackingCandidate = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseTrackingCandidate> TrackingCandidate { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseTrackingCandidate> TrackingCandidate { get => _explicitNullValueTrackingCandidate; set { _explicitNullValueTrackingCandidate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingCandidate"); else _explicitNullProperties?.Remove("TrackingCandidate"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseTrackingCandidate> _explicitNullValueTrackingCandidate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponse"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseResponse>("Response", Response);
             writer.WriteStringValue("ShipmentIdentificationNumber", ShipmentIdentificationNumber);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryResponseTrackingCandidate>("TrackingCandidate", TrackingCandidate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

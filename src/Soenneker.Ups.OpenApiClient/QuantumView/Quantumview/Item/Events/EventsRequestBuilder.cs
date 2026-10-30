@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.QuantumView.Quantumview.Item.Events
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumView401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumView403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumView429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumView200Response>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumView200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

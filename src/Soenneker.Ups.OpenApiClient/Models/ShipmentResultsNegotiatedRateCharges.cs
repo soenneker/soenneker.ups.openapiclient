@@ -12,48 +12,70 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentResultsNegotiatedRateCharges : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ItemizedCharges") is { } nullNodeItemizedCharges && nullNodeItemizedCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemizedCharges = null;
+            if (parseNode.GetChildNode("RateModifier") is { } nullNodeRateModifier && nullNodeRateModifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateModifier = null;
+            if (parseNode.GetChildNode("TaxCharges") is { } nullNodeTaxCharges && nullNodeTaxCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxCharges = null;
+            if (parseNode.GetChildNode("TotalCharge") is { } nullNodeTotalCharge && nullNodeTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCharge = null;
+            if (parseNode.GetChildNode("TotalChargesWithTaxes") is { } nullNodeTotalChargesWithTaxes && nullNodeTotalChargesWithTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalChargesWithTaxes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Itemized Charges are returned only when the Subversion element is present and greater than or equal to 1601.Negotiated itemized charges are only returned for certain contract-only shipments as well as Worldwide Express Freight, Ground Freight Pricing, and Hazmat movements.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesItemizedCharges>? ItemizedCharges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesItemizedCharges>? ItemizedCharges { get => _explicitNullValueItemizedCharges; set { _explicitNullValueItemizedCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ItemizedCharges"); else _explicitNullProperties?.Remove("ItemizedCharges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesItemizedCharges>? _explicitNullValueItemizedCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesItemizedCharges> ItemizedCharges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesItemizedCharges> ItemizedCharges { get => _explicitNullValueItemizedCharges; set { _explicitNullValueItemizedCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ItemizedCharges"); else _explicitNullProperties?.Remove("ItemizedCharges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesItemizedCharges> _explicitNullValueItemizedCharges = default!;
 #endif
         /// <summary>The RateModifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesRateModifier>? RateModifier { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesRateModifier>? RateModifier { get => _explicitNullValueRateModifier; set { _explicitNullValueRateModifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateModifier"); else _explicitNullProperties?.Remove("RateModifier"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesRateModifier>? _explicitNullValueRateModifier = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesRateModifier> RateModifier { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesRateModifier> RateModifier { get => _explicitNullValueRateModifier; set { _explicitNullValueRateModifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateModifier"); else _explicitNullProperties?.Remove("RateModifier"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesRateModifier> _explicitNullValueRateModifier = default!;
 #endif
         /// <summary>TaxCharges container are returned only when TaxInformationIndicator is present in request. TaxCharges container contains Tax information for a given shipment.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTaxCharges>? TaxCharges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTaxCharges>? TaxCharges { get => _explicitNullValueTaxCharges; set { _explicitNullValueTaxCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxCharges"); else _explicitNullProperties?.Remove("TaxCharges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTaxCharges>? _explicitNullValueTaxCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTaxCharges> TaxCharges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTaxCharges> TaxCharges { get => _explicitNullValueTaxCharges; set { _explicitNullValueTaxCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxCharges"); else _explicitNullProperties?.Remove("TaxCharges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTaxCharges> _explicitNullValueTaxCharges = default!;
 #endif
         /// <summary>Total charges container. Account Based Rates info. Total charges are only returned for ABR eligible shipper account/UserId combinations when the user includes the NegotiatedRatesIndicator in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalCharge? TotalCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalCharge? TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCharge"); else _explicitNullProperties?.Remove("TotalCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalCharge? _explicitNullValueTotalCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalCharge TotalCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalCharge TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCharge"); else _explicitNullProperties?.Remove("TotalCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalCharge _explicitNullValueTotalCharge = default!;
 #endif
         /// <summary>TotalChargesWithTaxes container would be returned only if TaxInformationIndicator is present in request. TotalChargesWithTaxes contains total charges including total taxes applied to a shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalChargesWithTaxes? TotalChargesWithTaxes { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalChargesWithTaxes? TotalChargesWithTaxes { get => _explicitNullValueTotalChargesWithTaxes; set { _explicitNullValueTotalChargesWithTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalChargesWithTaxes"); else _explicitNullProperties?.Remove("TotalChargesWithTaxes"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalChargesWithTaxes? _explicitNullValueTotalChargesWithTaxes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalChargesWithTaxes TotalChargesWithTaxes { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalChargesWithTaxes TotalChargesWithTaxes { get => _explicitNullValueTotalChargesWithTaxes; set { _explicitNullValueTotalChargesWithTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalChargesWithTaxes"); else _explicitNullProperties?.Remove("TotalChargesWithTaxes"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalChargesWithTaxes _explicitNullValueTotalChargesWithTaxes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTaxCharges>("TaxCharges", TaxCharges);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalCharge>("TotalCharge", TotalCharge);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingNegotiatedRateChargesTotalChargesWithTaxes>("TotalChargesWithTaxes", TotalChargesWithTaxes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

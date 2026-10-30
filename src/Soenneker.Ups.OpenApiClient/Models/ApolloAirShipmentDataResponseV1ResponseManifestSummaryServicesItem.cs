@@ -11,35 +11,63 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addedChargesAmount") is { } nullNodeAddedChargesAmount && nullNodeAddedChargesAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedChargesAmount = null;
+            if (parseNode.GetChildNode("billedAmount") is { } nullNodeBilledAmount && nullNodeBilledAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BilledAmount = null;
+            if (parseNode.GetChildNode("freightChargesAmount") is { } nullNodeFreightChargesAmount && nullNodeFreightChargesAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightChargesAmount = null;
+            if (parseNode.GetChildNode("itemCount") is { } nullNodeItemCount && nullNodeItemCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemCount = null;
+            if (parseNode.GetChildNode("pieceCount") is { } nullNodePieceCount && nullNodePieceCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PieceCount = null;
+            if (parseNode.GetChildNode("serviceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("serviceName") is { } nullNodeServiceName && nullNodeServiceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceName = null;
+            if (parseNode.GetChildNode("shipmentCount") is { } nullNodeShipmentCount && nullNodeShipmentCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCount = null;
+            if (parseNode.GetChildNode("surchargesAmount") is { } nullNodeSurchargesAmount && nullNodeSurchargesAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SurchargesAmount = null;
+            if (parseNode.GetChildNode("totalWeight") is { } nullNodeTotalWeight && nullNodeTotalWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalWeight = null;
+        }
+
         /// <summary>The total added charges for this service associated with this manifest</summary>
-        public double? AddedChargesAmount { get; set; }
+        public double? AddedChargesAmount { get => _explicitNullValueAddedChargesAmount; set { _explicitNullValueAddedChargesAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addedChargesAmount"); else _explicitNullProperties?.Remove("addedChargesAmount"); } }
+        private double? _explicitNullValueAddedChargesAmount = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total Billed amount for this service</summary>
-        public double? BilledAmount { get; set; }
+        public double? BilledAmount { get => _explicitNullValueBilledAmount; set { _explicitNullValueBilledAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billedAmount"); else _explicitNullProperties?.Remove("billedAmount"); } }
+        private double? _explicitNullValueBilledAmount = default!;
         /// <summary>The total charges for this service</summary>
-        public double? FreightChargesAmount { get; set; }
+        public double? FreightChargesAmount { get => _explicitNullValueFreightChargesAmount; set { _explicitNullValueFreightChargesAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freightChargesAmount"); else _explicitNullProperties?.Remove("freightChargesAmount"); } }
+        private double? _explicitNullValueFreightChargesAmount = default!;
         /// <summary>The total number items in those shipments</summary>
-        public int? ItemCount { get; set; }
+        public int? ItemCount { get => _explicitNullValueItemCount; set { _explicitNullValueItemCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemCount"); else _explicitNullProperties?.Remove("itemCount"); } }
+        private int? _explicitNullValueItemCount = default!;
         /// <summary>The total number pieces for this service</summary>
-        public int? PieceCount { get; set; }
+        public int? PieceCount { get => _explicitNullValuePieceCount; set { _explicitNullValuePieceCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pieceCount"); else _explicitNullProperties?.Remove("pieceCount"); } }
+        private int? _explicitNullValuePieceCount = default!;
         /// <summary>The code for this service</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItemServiceCode? ServiceCode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItemServiceCode? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItemServiceCode? _explicitNullValueServiceCode = default!;
         /// <summary>The name of the service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceName { get; set; }
+        public string? ServiceName { get => _explicitNullValueServiceName; set { _explicitNullValueServiceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceName"); else _explicitNullProperties?.Remove("serviceName"); } }
+        private string? _explicitNullValueServiceName = default!;
 #nullable restore
 #else
-        public string ServiceName { get; set; }
+        public string ServiceName { get => _explicitNullValueServiceName; set { _explicitNullValueServiceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceName"); else _explicitNullProperties?.Remove("serviceName"); } }
+        private string _explicitNullValueServiceName = default!;
 #endif
         /// <summary>number of shipments using this service associated with this manifest</summary>
-        public int? ShipmentCount { get; set; }
+        public int? ShipmentCount { get => _explicitNullValueShipmentCount; set { _explicitNullValueShipmentCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentCount"); else _explicitNullProperties?.Remove("shipmentCount"); } }
+        private int? _explicitNullValueShipmentCount = default!;
         /// <summary>The total surcharges for this service associated with this manifest</summary>
-        public double? SurchargesAmount { get; set; }
+        public double? SurchargesAmount { get => _explicitNullValueSurchargesAmount; set { _explicitNullValueSurchargesAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("surchargesAmount"); else _explicitNullProperties?.Remove("surchargesAmount"); } }
+        private double? _explicitNullValueSurchargesAmount = default!;
         /// <summary>The total weight of the items</summary>
-        public double? TotalWeight { get; set; }
+        public double? TotalWeight { get => _explicitNullValueTotalWeight; set { _explicitNullValueTotalWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalWeight"); else _explicitNullProperties?.Remove("totalWeight"); } }
+        private double? _explicitNullValueTotalWeight = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem"/> and sets the default values.
         /// </summary>
@@ -55,7 +83,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +124,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteIntValue("shipmentCount", ShipmentCount);
             writer.WriteDoubleValue("surchargesAmount", SurchargesAmount);
             writer.WriteDoubleValue("totalWeight", TotalWeight);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

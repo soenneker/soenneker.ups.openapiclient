@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsscsTransportationShipmentDetailCarrier : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("carrierCode") is { } nullNodeCarrierCode && nullNodeCarrierCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierCode = null;
+            if (parseNode.GetChildNode("carrierName") is { } nullNodeCarrierName && nullNodeCarrierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierName = null;
+            if (parseNode.GetChildNode("carrierType") is { } nullNodeCarrierType && nullNodeCarrierType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Carrier code of carrier used for shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierCode { get; set; }
+        public string? CarrierCode { get => _explicitNullValueCarrierCode; set { _explicitNullValueCarrierCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierCode"); else _explicitNullProperties?.Remove("carrierCode"); } }
+        private string? _explicitNullValueCarrierCode = default!;
 #nullable restore
 #else
-        public string CarrierCode { get; set; }
+        public string CarrierCode { get => _explicitNullValueCarrierCode; set { _explicitNullValueCarrierCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierCode"); else _explicitNullProperties?.Remove("carrierCode"); } }
+        private string _explicitNullValueCarrierCode = default!;
 #endif
         /// <summary>The carrierName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierName { get; set; }
+        public string? CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierName"); else _explicitNullProperties?.Remove("carrierName"); } }
+        private string? _explicitNullValueCarrierName = default!;
 #nullable restore
 #else
-        public string CarrierName { get; set; }
+        public string CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierName"); else _explicitNullProperties?.Remove("carrierName"); } }
+        private string _explicitNullValueCarrierName = default!;
 #endif
         /// <summary>Carrier type of carrier used for shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierType { get; set; }
+        public string? CarrierType { get => _explicitNullValueCarrierType; set { _explicitNullValueCarrierType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierType"); else _explicitNullProperties?.Remove("carrierType"); } }
+        private string? _explicitNullValueCarrierType = default!;
 #nullable restore
 #else
-        public string CarrierType { get; set; }
+        public string CarrierType { get => _explicitNullValueCarrierType; set { _explicitNullValueCarrierType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierType"); else _explicitNullProperties?.Remove("carrierType"); } }
+        private string _explicitNullValueCarrierType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetailCarrier"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetailCarrier CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetailCarrier();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetailCarrier(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("carrierCode", CarrierCode);
             writer.WriteStringValue("carrierName", CarrierName);
             writer.WriteStringValue("carrierType", CarrierType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

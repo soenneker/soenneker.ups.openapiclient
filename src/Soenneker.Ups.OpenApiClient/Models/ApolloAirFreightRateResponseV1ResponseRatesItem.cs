@@ -12,49 +12,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApolloAirFreightRateResponseV1ResponseRatesItem : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billableWeight") is { } nullNodeBillableWeight && nullNodeBillableWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableWeight = null;
+            if (parseNode.GetChildNode("charges") is { } nullNodeCharges && nullNodeCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charges = null;
+            if (parseNode.GetChildNode("contractRate") is { } nullNodeContractRate && nullNodeContractRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContractRate = null;
+            if (parseNode.GetChildNode("deliveryTime") is { } nullNodeDeliveryTime && nullNodeDeliveryTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryTime = null;
+            if (parseNode.GetChildNode("dimensionalWeight") is { } nullNodeDimensionalWeight && nullNodeDimensionalWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DimensionalWeight = null;
+            if (parseNode.GetChildNode("guaranteedDelivery") is { } nullNodeGuaranteedDelivery && nullNodeGuaranteedDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuaranteedDelivery = null;
+            if (parseNode.GetChildNode("holdAtAirportTime") is { } nullNodeHoldAtAirportTime && nullNodeHoldAtAirportTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldAtAirportTime = null;
+            if (parseNode.GetChildNode("minimumBillableWeightApplied") is { } nullNodeMinimumBillableWeightApplied && nullNodeMinimumBillableWeightApplied.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumBillableWeightApplied = null;
+            if (parseNode.GetChildNode("serviceType") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
+            if (parseNode.GetChildNode("totalCharge") is { } nullNodeTotalCharge && nullNodeTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCharge = null;
+            if (parseNode.GetChildNode("weightUnit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billableWeight property</summary>
-        public decimal? BillableWeight { get; set; }
+        public decimal? BillableWeight { get => _explicitNullValueBillableWeight; set { _explicitNullValueBillableWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billableWeight"); else _explicitNullProperties?.Remove("billableWeight"); } }
+        private decimal? _explicitNullValueBillableWeight = default!;
         /// <summary>Unbounded list of charges applied</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemChargesItem>? Charges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemChargesItem>? Charges { get => _explicitNullValueCharges; set { _explicitNullValueCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges"); else _explicitNullProperties?.Remove("charges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemChargesItem>? _explicitNullValueCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemChargesItem> Charges { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemChargesItem> Charges { get => _explicitNullValueCharges; set { _explicitNullValueCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges"); else _explicitNullProperties?.Remove("charges"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemChargesItem> _explicitNullValueCharges = default!;
 #endif
         /// <summary>Indicates if the contract rate applies.</summary>
-        public bool? ContractRate { get; set; }
+        public bool? ContractRate { get => _explicitNullValueContractRate; set { _explicitNullValueContractRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contractRate"); else _explicitNullProperties?.Remove("contractRate"); } }
+        private bool? _explicitNullValueContractRate = default!;
         /// <summary>The deliveryTime property</summary>
-        public DateTimeOffset? DeliveryTime { get; set; }
+        public DateTimeOffset? DeliveryTime { get => _explicitNullValueDeliveryTime; set { _explicitNullValueDeliveryTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryTime"); else _explicitNullProperties?.Remove("deliveryTime"); } }
+        private DateTimeOffset? _explicitNullValueDeliveryTime = default!;
         /// <summary>The dimensionalWeight property</summary>
-        public decimal? DimensionalWeight { get; set; }
+        public decimal? DimensionalWeight { get => _explicitNullValueDimensionalWeight; set { _explicitNullValueDimensionalWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensionalWeight"); else _explicitNullProperties?.Remove("dimensionalWeight"); } }
+        private decimal? _explicitNullValueDimensionalWeight = default!;
         /// <summary>Indicates if delivery is guaranteed.</summary>
-        public bool? GuaranteedDelivery { get; set; }
+        public bool? GuaranteedDelivery { get => _explicitNullValueGuaranteedDelivery; set { _explicitNullValueGuaranteedDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteedDelivery"); else _explicitNullProperties?.Remove("guaranteedDelivery"); } }
+        private bool? _explicitNullValueGuaranteedDelivery = default!;
         /// <summary>The holdAtAirportTime property</summary>
-        public DateTimeOffset? HoldAtAirportTime { get; set; }
+        public DateTimeOffset? HoldAtAirportTime { get => _explicitNullValueHoldAtAirportTime; set { _explicitNullValueHoldAtAirportTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holdAtAirportTime"); else _explicitNullProperties?.Remove("holdAtAirportTime"); } }
+        private DateTimeOffset? _explicitNullValueHoldAtAirportTime = default!;
         /// <summary>Indicates if the minimum billable weight was applied.</summary>
-        public bool? MinimumBillableWeightApplied { get; set; }
+        public bool? MinimumBillableWeightApplied { get => _explicitNullValueMinimumBillableWeightApplied; set { _explicitNullValueMinimumBillableWeightApplied = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimumBillableWeightApplied"); else _explicitNullProperties?.Remove("minimumBillableWeightApplied"); } }
+        private bool? _explicitNullValueMinimumBillableWeightApplied = default!;
         /// <summary>Service type for the rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceType { get; set; }
+        public string? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
+        private string? _explicitNullValueServiceType = default!;
 #nullable restore
 #else
-        public string ServiceType { get; set; }
+        public string ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
+        private string _explicitNullValueServiceType = default!;
 #endif
         /// <summary>Total charge for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge? TotalCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge? TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge? _explicitNullValueTotalCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge TotalCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge _explicitNullValueTotalCharge = default!;
 #endif
         /// <summary>The Weight unit used.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemWeightUnit? WeightUnit { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemWeightUnit? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemWeightUnit? _explicitNullValueWeightUnit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem"/> and sets the default values.
         /// </summary>
@@ -73,7 +105,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("serviceType", ServiceType);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemTotalCharge>("totalCharge", TotalCharge);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItemWeightUnit>("weightUnit", WeightUnit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

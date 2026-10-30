@@ -63,6 +63,8 @@ namespace Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken.Pins.Token
                 { "404", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.GetPinByTokenResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.GetPinByTokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -100,6 +102,8 @@ namespace Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken.Pins.Token
                 { "415", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.ProtectedDeliveryTokenErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.GenerateTokenResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

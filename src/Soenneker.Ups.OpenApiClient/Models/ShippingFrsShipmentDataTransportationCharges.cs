@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShippingFrsShipmentDataTransportationCharges : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DiscountAmount") is { } nullNodeDiscountAmount && nullNodeDiscountAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAmount = null;
+            if (parseNode.GetChildNode("DiscountPercentage") is { } nullNodeDiscountPercentage && nullNodeDiscountPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountPercentage = null;
+            if (parseNode.GetChildNode("GrossCharge") is { } nullNodeGrossCharge && nullNodeGrossCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrossCharge = null;
+            if (parseNode.GetChildNode("NetCharge") is { } nullNodeNetCharge && nullNodeNetCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetCharge = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Discount Amount container. It indicates the shipment level Ground Freight Pricing discount amount for transportation charges</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesDiscountAmount? DiscountAmount { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesDiscountAmount? DiscountAmount { get => _explicitNullValueDiscountAmount; set { _explicitNullValueDiscountAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DiscountAmount"); else _explicitNullProperties?.Remove("DiscountAmount"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesDiscountAmount? _explicitNullValueDiscountAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesDiscountAmount DiscountAmount { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesDiscountAmount DiscountAmount { get => _explicitNullValueDiscountAmount; set { _explicitNullValueDiscountAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DiscountAmount"); else _explicitNullProperties?.Remove("DiscountAmount"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesDiscountAmount _explicitNullValueDiscountAmount = default!;
 #endif
         /// <summary>It indicates the shipment level discount percentage for transportation charges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscountPercentage { get; set; }
+        public string? DiscountPercentage { get => _explicitNullValueDiscountPercentage; set { _explicitNullValueDiscountPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DiscountPercentage"); else _explicitNullProperties?.Remove("DiscountPercentage"); } }
+        private string? _explicitNullValueDiscountPercentage = default!;
 #nullable restore
 #else
-        public string DiscountPercentage { get; set; }
+        public string DiscountPercentage { get => _explicitNullValueDiscountPercentage; set { _explicitNullValueDiscountPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DiscountPercentage"); else _explicitNullProperties?.Remove("DiscountPercentage"); } }
+        private string _explicitNullValueDiscountPercentage = default!;
 #endif
         /// <summary>Gross Charges container. It indicates the shipment level gross Ground Freight Pricing transportation charges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesGrossCharge? GrossCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesGrossCharge? GrossCharge { get => _explicitNullValueGrossCharge; set { _explicitNullValueGrossCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GrossCharge"); else _explicitNullProperties?.Remove("GrossCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesGrossCharge? _explicitNullValueGrossCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesGrossCharge GrossCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesGrossCharge GrossCharge { get => _explicitNullValueGrossCharge; set { _explicitNullValueGrossCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GrossCharge"); else _explicitNullProperties?.Remove("GrossCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesGrossCharge _explicitNullValueGrossCharge = default!;
 #endif
         /// <summary>Net Charges container. It indicates the shipment level net Ground Freight Pricing transportation charges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesNetCharge? NetCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesNetCharge? NetCharge { get => _explicitNullValueNetCharge; set { _explicitNullValueNetCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetCharge"); else _explicitNullProperties?.Remove("NetCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesNetCharge? _explicitNullValueNetCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesNetCharge NetCharge { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesNetCharge NetCharge { get => _explicitNullValueNetCharge; set { _explicitNullValueNetCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetCharge"); else _explicitNullProperties?.Remove("NetCharge"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesNetCharge _explicitNullValueNetCharge = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShippingFrsShipmentDataTransportationCharges(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("DiscountPercentage", DiscountPercentage);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesGrossCharge>("GrossCharge", GrossCharge);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingTransportationChargesNetCharge>("NetCharge", NetCharge);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

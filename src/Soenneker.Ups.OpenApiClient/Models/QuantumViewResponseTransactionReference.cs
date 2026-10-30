@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class QuantumViewResponseTransactionReference : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CustomerContext") is { } nullNodeCustomerContext && nullNodeCustomerContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerContext = null;
+            if (parseNode.GetChildNode("ToolVersion") is { } nullNodeToolVersion && nullNodeToolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToolVersion = null;
+            if (parseNode.GetChildNode("XpciVersion") is { } nullNodeXpciVersion && nullNodeXpciVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XpciVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CustomerContext Information which will be echoed during response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerContext { get; set; }
+        public string? CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
+        private string? _explicitNullValueCustomerContext = default!;
 #nullable restore
 #else
-        public string CustomerContext { get; set; }
+        public string CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
+        private string _explicitNullValueCustomerContext = default!;
 #endif
         /// <summary>Current tool version. Valid value: 1.0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToolVersion { get; set; }
+        public string? ToolVersion { get => _explicitNullValueToolVersion; set { _explicitNullValueToolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToolVersion"); else _explicitNullProperties?.Remove("ToolVersion"); } }
+        private string? _explicitNullValueToolVersion = default!;
 #nullable restore
 #else
-        public string ToolVersion { get; set; }
+        public string ToolVersion { get => _explicitNullValueToolVersion; set { _explicitNullValueToolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToolVersion"); else _explicitNullProperties?.Remove("ToolVersion"); } }
+        private string _explicitNullValueToolVersion = default!;
 #endif
         /// <summary>XPCI version. Current version: 1.0007</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? XpciVersion { get; set; }
+        public string? XpciVersion { get => _explicitNullValueXpciVersion; set { _explicitNullValueXpciVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XpciVersion"); else _explicitNullProperties?.Remove("XpciVersion"); } }
+        private string? _explicitNullValueXpciVersion = default!;
 #nullable restore
 #else
-        public string XpciVersion { get; set; }
+        public string XpciVersion { get => _explicitNullValueXpciVersion; set { _explicitNullValueXpciVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XpciVersion"); else _explicitNullProperties?.Remove("XpciVersion"); } }
+        private string _explicitNullValueXpciVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuantumViewResponseTransactionReference"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.QuantumViewResponseTransactionReference CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewResponseTransactionReference();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewResponseTransactionReference(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("CustomerContext", CustomerContext);
             writer.WriteStringValue("ToolVersion", ToolVersion);
             writer.WriteStringValue("XpciVersion", XpciVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

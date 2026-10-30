@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LandedCostLandedCostResponseShipmentPerfStats : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("absLayerTime") is { } nullNodeAbsLayerTime && nullNodeAbsLayerTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbsLayerTime = null;
+            if (parseNode.GetChildNode("fulfillTime") is { } nullNodeFulfillTime && nullNodeFulfillTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FulfillTime = null;
+            if (parseNode.GetChildNode("receiptTime") is { } nullNodeReceiptTime && nullNodeReceiptTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceiptTime = null;
+        }
+
         /// <summary>Time taken through the abstraction layer in milliseconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AbsLayerTime { get; set; }
+        public string? AbsLayerTime { get => _explicitNullValueAbsLayerTime; set { _explicitNullValueAbsLayerTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absLayerTime"); else _explicitNullProperties?.Remove("absLayerTime"); } }
+        private string? _explicitNullValueAbsLayerTime = default!;
 #nullable restore
 #else
-        public string AbsLayerTime { get; set; }
+        public string AbsLayerTime { get => _explicitNullValueAbsLayerTime; set { _explicitNullValueAbsLayerTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absLayerTime"); else _explicitNullProperties?.Remove("absLayerTime"); } }
+        private string _explicitNullValueAbsLayerTime = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time taken to complete the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FulfillTime { get; set; }
+        public string? FulfillTime { get => _explicitNullValueFulfillTime; set { _explicitNullValueFulfillTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillTime"); else _explicitNullProperties?.Remove("fulfillTime"); } }
+        private string? _explicitNullValueFulfillTime = default!;
 #nullable restore
 #else
-        public string FulfillTime { get; set; }
+        public string FulfillTime { get => _explicitNullValueFulfillTime; set { _explicitNullValueFulfillTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillTime"); else _explicitNullProperties?.Remove("fulfillTime"); } }
+        private string _explicitNullValueFulfillTime = default!;
 #endif
         /// <summary>Time taken to receive the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReceiptTime { get; set; }
+        public string? ReceiptTime { get => _explicitNullValueReceiptTime; set { _explicitNullValueReceiptTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiptTime"); else _explicitNullProperties?.Remove("receiptTime"); } }
+        private string? _explicitNullValueReceiptTime = default!;
 #nullable restore
 #else
-        public string ReceiptTime { get; set; }
+        public string ReceiptTime { get => _explicitNullValueReceiptTime; set { _explicitNullValueReceiptTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiptTime"); else _explicitNullProperties?.Remove("receiptTime"); } }
+        private string _explicitNullValueReceiptTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("absLayerTime", AbsLayerTime);
             writer.WriteStringValue("fulfillTime", FulfillTime);
             writer.WriteStringValue("receiptTime", ReceiptTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

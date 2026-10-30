@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PickupPointOrderResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("pickupPoint") is { } nullNodePickupPoint && nullNodePickupPoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupPoint = null;
+            if (parseNode.GetChildNode("prn") is { } nullNodePrn && nullNodePrn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prn = null;
+            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Details of a UPS pickup point location including address, schedule, and status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponsePickupPoint? PickupPoint { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponsePickupPoint? PickupPoint { get => _explicitNullValuePickupPoint; set { _explicitNullValuePickupPoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupPoint"); else _explicitNullProperties?.Remove("pickupPoint"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponsePickupPoint? _explicitNullValuePickupPoint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponsePickupPoint PickupPoint { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponsePickupPoint PickupPoint { get => _explicitNullValuePickupPoint; set { _explicitNullValuePickupPoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupPoint"); else _explicitNullProperties?.Remove("pickupPoint"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponsePickupPoint _explicitNullValuePickupPoint = default!;
 #endif
         /// <summary>The prn property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Prn { get; set; }
+        public string? Prn { get => _explicitNullValuePrn; set { _explicitNullValuePrn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prn"); else _explicitNullProperties?.Remove("prn"); } }
+        private string? _explicitNullValuePrn = default!;
 #nullable restore
 #else
-        public string Prn { get; set; }
+        public string Prn { get => _explicitNullValuePrn; set { _explicitNullValuePrn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prn"); else _explicitNullProperties?.Remove("prn"); } }
+        private string _explicitNullValuePrn = default!;
 #endif
         /// <summary>Standard response envelope containing transaction reference information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponse"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponsePickupPoint>("pickupPoint", PickupPoint);
             writer.WriteStringValue("prn", Prn);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupPointOrderResponseResponse>("response", Response);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

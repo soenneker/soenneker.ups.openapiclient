@@ -11,72 +11,103 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class QuoteData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("exportCustomsBrokerageFee") is { } nullNodeExportCustomsBrokerageFee && nullNodeExportCustomsBrokerageFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportCustomsBrokerageFee = null;
+            if (parseNode.GetChildNode("importCustomsBrokerageFee") is { } nullNodeImportCustomsBrokerageFee && nullNodeImportCustomsBrokerageFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportCustomsBrokerageFee = null;
+            if (parseNode.GetChildNode("incoTermType") is { } nullNodeIncoTermType && nullNodeIncoTermType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncoTermType = null;
+            if (parseNode.GetChildNode("movementTypeCode") is { } nullNodeMovementTypeCode && nullNodeMovementTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovementTypeCode = null;
+            if (parseNode.GetChildNode("paymentTerm") is { } nullNodePaymentTerm && nullNodePaymentTerm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentTerm = null;
+            if (parseNode.GetChildNode("serviceLine") is { } nullNodeServiceLine && nullNodeServiceLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceLine = null;
+            if (parseNode.GetChildNode("serviceType") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ISO 4217 currency code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get; set; }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get; set; }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>Indicates if export customs brokerage fee applies (&quot;Y&quot; or &quot;N&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportCustomsBrokerageFee { get; set; }
+        public string? ExportCustomsBrokerageFee { get => _explicitNullValueExportCustomsBrokerageFee; set { _explicitNullValueExportCustomsBrokerageFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportCustomsBrokerageFee"); else _explicitNullProperties?.Remove("exportCustomsBrokerageFee"); } }
+        private string? _explicitNullValueExportCustomsBrokerageFee = default!;
 #nullable restore
 #else
-        public string ExportCustomsBrokerageFee { get; set; }
+        public string ExportCustomsBrokerageFee { get => _explicitNullValueExportCustomsBrokerageFee; set { _explicitNullValueExportCustomsBrokerageFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportCustomsBrokerageFee"); else _explicitNullProperties?.Remove("exportCustomsBrokerageFee"); } }
+        private string _explicitNullValueExportCustomsBrokerageFee = default!;
 #endif
         /// <summary>Indicates if import customs brokerage fee applies (&quot;Y&quot; or &quot;N&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportCustomsBrokerageFee { get; set; }
+        public string? ImportCustomsBrokerageFee { get => _explicitNullValueImportCustomsBrokerageFee; set { _explicitNullValueImportCustomsBrokerageFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCustomsBrokerageFee"); else _explicitNullProperties?.Remove("importCustomsBrokerageFee"); } }
+        private string? _explicitNullValueImportCustomsBrokerageFee = default!;
 #nullable restore
 #else
-        public string ImportCustomsBrokerageFee { get; set; }
+        public string ImportCustomsBrokerageFee { get => _explicitNullValueImportCustomsBrokerageFee; set { _explicitNullValueImportCustomsBrokerageFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCustomsBrokerageFee"); else _explicitNullProperties?.Remove("importCustomsBrokerageFee"); } }
+        private string _explicitNullValueImportCustomsBrokerageFee = default!;
 #endif
         /// <summary>Incoterm type for the shipment (e.g., EXW, DAP).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncoTermType { get; set; }
+        public string? IncoTermType { get => _explicitNullValueIncoTermType; set { _explicitNullValueIncoTermType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incoTermType"); else _explicitNullProperties?.Remove("incoTermType"); } }
+        private string? _explicitNullValueIncoTermType = default!;
 #nullable restore
 #else
-        public string IncoTermType { get; set; }
+        public string IncoTermType { get => _explicitNullValueIncoTermType; set { _explicitNullValueIncoTermType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incoTermType"); else _explicitNullProperties?.Remove("incoTermType"); } }
+        private string _explicitNullValueIncoTermType = default!;
 #endif
         /// <summary>Code representing the movement type (e.g., DTD).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MovementTypeCode { get; set; }
+        public string? MovementTypeCode { get => _explicitNullValueMovementTypeCode; set { _explicitNullValueMovementTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movementTypeCode"); else _explicitNullProperties?.Remove("movementTypeCode"); } }
+        private string? _explicitNullValueMovementTypeCode = default!;
 #nullable restore
 #else
-        public string MovementTypeCode { get; set; }
+        public string MovementTypeCode { get => _explicitNullValueMovementTypeCode; set { _explicitNullValueMovementTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movementTypeCode"); else _explicitNullProperties?.Remove("movementTypeCode"); } }
+        private string _explicitNullValueMovementTypeCode = default!;
 #endif
         /// <summary>The paymentTerm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm? PaymentTerm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm? PaymentTerm { get => _explicitNullValuePaymentTerm; set { _explicitNullValuePaymentTerm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentTerm"); else _explicitNullProperties?.Remove("paymentTerm"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm? _explicitNullValuePaymentTerm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm PaymentTerm { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm PaymentTerm { get => _explicitNullValuePaymentTerm; set { _explicitNullValuePaymentTerm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentTerm"); else _explicitNullProperties?.Remove("paymentTerm"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm _explicitNullValuePaymentTerm = default!;
 #endif
         /// <summary>The service line.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceLine { get; set; }
+        public string? ServiceLine { get => _explicitNullValueServiceLine; set { _explicitNullValueServiceLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceLine"); else _explicitNullProperties?.Remove("serviceLine"); } }
+        private string? _explicitNullValueServiceLine = default!;
 #nullable restore
 #else
-        public string ServiceLine { get; set; }
+        public string ServiceLine { get => _explicitNullValueServiceLine; set { _explicitNullValueServiceLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceLine"); else _explicitNullProperties?.Remove("serviceLine"); } }
+        private string _explicitNullValueServiceLine = default!;
 #endif
         /// <summary>The type of service (e.g., DF, AM).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceType { get; set; }
+        public string? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
+        private string? _explicitNullValueServiceType = default!;
 #nullable restore
 #else
-        public string ServiceType { get; set; }
+        public string ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
+        private string _explicitNullValueServiceType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuoteData"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.QuoteData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.QuoteData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.QuoteData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PaymentTerm>("paymentTerm", PaymentTerm);
             writer.WriteStringValue("serviceLine", ServiceLine);
             writer.WriteStringValue("serviceType", ServiceType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

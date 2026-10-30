@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TimeInTransitResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destinationPickList") is { } nullNodeDestinationPickList && nullNodeDestinationPickList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationPickList = null;
+            if (parseNode.GetChildNode("emsResponse") is { } nullNodeEmsResponse && nullNodeEmsResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmsResponse = null;
+            if (parseNode.GetChildNode("originPickList") is { } nullNodeOriginPickList && nullNodeOriginPickList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginPickList = null;
+            if (parseNode.GetChildNode("validationList") is { } nullNodeValidationList && nullNodeValidationList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationList = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The destinationPickList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>? DestinationPickList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>? DestinationPickList { get => _explicitNullValueDestinationPickList; set { _explicitNullValueDestinationPickList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationPickList"); else _explicitNullProperties?.Remove("destinationPickList"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>? _explicitNullValueDestinationPickList = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress> DestinationPickList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress> DestinationPickList { get => _explicitNullValueDestinationPickList; set { _explicitNullValueDestinationPickList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationPickList"); else _explicitNullProperties?.Remove("destinationPickList"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress> _explicitNullValueDestinationPickList = default!;
 #endif
         /// <summary>The emsResponse property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.EmsResponse? EmsResponse { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.EmsResponse? EmsResponse { get => _explicitNullValueEmsResponse; set { _explicitNullValueEmsResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emsResponse"); else _explicitNullProperties?.Remove("emsResponse"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.EmsResponse? _explicitNullValueEmsResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.EmsResponse EmsResponse { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.EmsResponse EmsResponse { get => _explicitNullValueEmsResponse; set { _explicitNullValueEmsResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emsResponse"); else _explicitNullProperties?.Remove("emsResponse"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.EmsResponse _explicitNullValueEmsResponse = default!;
 #endif
         /// <summary>The originPickList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>? OriginPickList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>? OriginPickList { get => _explicitNullValueOriginPickList; set { _explicitNullValueOriginPickList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originPickList"); else _explicitNullProperties?.Remove("originPickList"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>? _explicitNullValueOriginPickList = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress> OriginPickList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress> OriginPickList { get => _explicitNullValueOriginPickList; set { _explicitNullValueOriginPickList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originPickList"); else _explicitNullProperties?.Remove("originPickList"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress> _explicitNullValueOriginPickList = default!;
 #endif
         /// <summary>The validationList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ValidationList? ValidationList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ValidationList? ValidationList { get => _explicitNullValueValidationList; set { _explicitNullValueValidationList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validationList"); else _explicitNullProperties?.Remove("validationList"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ValidationList? _explicitNullValueValidationList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ValidationList ValidationList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ValidationList ValidationList { get => _explicitNullValueValidationList; set { _explicitNullValueValidationList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validationList"); else _explicitNullProperties?.Remove("validationList"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ValidationList _explicitNullValueValidationList = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitResponse"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.EmsResponse>("emsResponse", EmsResponse);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CandidateAddress>("originPickList", OriginPickList);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ValidationList>("validationList", ValidationList);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

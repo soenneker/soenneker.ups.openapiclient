@@ -59,6 +59,8 @@ namespace Soenneker.Ups.OpenApiClient.UPSSCSTransportation.Ingest
                 { "400", global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationObjectServiceResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationObjectServiceResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationObjectServiceResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationSc360ResponseListServiceResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationSc360ResponseListServiceResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

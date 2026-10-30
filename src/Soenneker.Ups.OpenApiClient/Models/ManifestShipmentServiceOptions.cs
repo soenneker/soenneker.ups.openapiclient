@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ManifestShipmentServiceOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CallTagARS") is { } nullNodeCallTagARS && nullNodeCallTagARS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallTagARS = null;
+            if (parseNode.GetChildNode("SaturdayDelivery") is { } nullNodeSaturdayDelivery && nullNodeSaturdayDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDelivery = null;
+            if (parseNode.GetChildNode("SaturdayPickup") is { } nullNodeSaturdayPickup && nullNodeSaturdayPickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayPickup = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container for Call Tag service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs? CallTagARS { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs? CallTagARS { get => _explicitNullValueCallTagARS; set { _explicitNullValueCallTagARS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTagARS"); else _explicitNullProperties?.Remove("CallTagARS"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs? _explicitNullValueCallTagARS = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs CallTagARS { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs CallTagARS { get => _explicitNullValueCallTagARS; set { _explicitNullValueCallTagARS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTagARS"); else _explicitNullProperties?.Remove("CallTagARS"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs _explicitNullValueCallTagARS = default!;
 #endif
         /// <summary>A flag indicating if the shipment requires a Saturday Delivery. True if tag exists, false otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaturdayDelivery { get; set; }
+        public string? SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
+        private string? _explicitNullValueSaturdayDelivery = default!;
 #nullable restore
 #else
-        public string SaturdayDelivery { get; set; }
+        public string SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
+        private string _explicitNullValueSaturdayDelivery = default!;
 #endif
         /// <summary>A flag indicating if the shipment requires a Saturday pickup. True if tag exists, false otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaturdayPickup { get; set; }
+        public string? SaturdayPickup { get => _explicitNullValueSaturdayPickup; set { _explicitNullValueSaturdayPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayPickup"); else _explicitNullProperties?.Remove("SaturdayPickup"); } }
+        private string? _explicitNullValueSaturdayPickup = default!;
 #nullable restore
 #else
-        public string SaturdayPickup { get; set; }
+        public string SaturdayPickup { get => _explicitNullValueSaturdayPickup; set { _explicitNullValueSaturdayPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayPickup"); else _explicitNullProperties?.Remove("SaturdayPickup"); } }
+        private string _explicitNullValueSaturdayPickup = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ManifestShipmentServiceOptions"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ManifestShipmentServiceOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ManifestShipmentServiceOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ManifestShipmentServiceOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs>("CallTagARS", CallTagARS);
             writer.WriteStringValue("SaturdayDelivery", SaturdayDelivery);
             writer.WriteStringValue("SaturdayPickup", SaturdayPickup);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

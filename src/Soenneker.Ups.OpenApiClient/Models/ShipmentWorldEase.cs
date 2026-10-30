@@ -12,66 +12,96 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentWorldEase : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DestinationCountryCode") is { } nullNodeDestinationCountryCode && nullNodeDestinationCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationCountryCode = null;
+            if (parseNode.GetChildNode("DestinationPostalCode") is { } nullNodeDestinationPostalCode && nullNodeDestinationPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationPostalCode = null;
+            if (parseNode.GetChildNode("GCCN") is { } nullNodeGCCN && nullNodeGCCN.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GCCN = null;
+            if (parseNode.GetChildNode("MasterEUConsolidationIndicator") is { } nullNodeMasterEUConsolidationIndicator && nullNodeMasterEUConsolidationIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MasterEUConsolidationIndicator = null;
+            if (parseNode.GetChildNode("MasterHasDocBox") is { } nullNodeMasterHasDocBox && nullNodeMasterHasDocBox.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MasterHasDocBox = null;
+            if (parseNode.GetChildNode("MasterShipmentChgType") is { } nullNodeMasterShipmentChgType && nullNodeMasterShipmentChgType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MasterShipmentChgType = null;
+            if (parseNode.GetChildNode("PortOfEntry") is { } nullNodePortOfEntry && nullNodePortOfEntry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortOfEntry = null;
+            if (parseNode.GetChildNode("VendorCollectIDNumberExemptIndicator") is { } nullNodeVendorCollectIDNumberExemptIndicator && nullNodeVendorCollectIDNumberExemptIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorCollectIDNumberExemptIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The final destination country code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationCountryCode { get; set; }
+        public string? DestinationCountryCode { get => _explicitNullValueDestinationCountryCode; set { _explicitNullValueDestinationCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationCountryCode"); else _explicitNullProperties?.Remove("DestinationCountryCode"); } }
+        private string? _explicitNullValueDestinationCountryCode = default!;
 #nullable restore
 #else
-        public string DestinationCountryCode { get; set; }
+        public string DestinationCountryCode { get => _explicitNullValueDestinationCountryCode; set { _explicitNullValueDestinationCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationCountryCode"); else _explicitNullProperties?.Remove("DestinationCountryCode"); } }
+        private string _explicitNullValueDestinationCountryCode = default!;
 #endif
         /// <summary>The final destination postal code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationPostalCode { get; set; }
+        public string? DestinationPostalCode { get => _explicitNullValueDestinationPostalCode; set { _explicitNullValueDestinationPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationPostalCode"); else _explicitNullProperties?.Remove("DestinationPostalCode"); } }
+        private string? _explicitNullValueDestinationPostalCode = default!;
 #nullable restore
 #else
-        public string DestinationPostalCode { get; set; }
+        public string DestinationPostalCode { get => _explicitNullValueDestinationPostalCode; set { _explicitNullValueDestinationPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationPostalCode"); else _explicitNullProperties?.Remove("DestinationPostalCode"); } }
+        private string _explicitNullValueDestinationPostalCode = default!;
 #endif
         /// <summary>The Global Consolidation Clearance Number(GCCN) generated for the master shipment. This is required for child shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GCCN { get; set; }
+        public string? GCCN { get => _explicitNullValueGCCN; set { _explicitNullValueGCCN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GCCN"); else _explicitNullProperties?.Remove("GCCN"); } }
+        private string? _explicitNullValueGCCN = default!;
 #nullable restore
 #else
-        public string GCCN { get; set; }
+        public string GCCN { get => _explicitNullValueGCCN; set { _explicitNullValueGCCN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GCCN"); else _explicitNullProperties?.Remove("GCCN"); } }
+        private string _explicitNullValueGCCN = default!;
 #endif
         /// <summary>1 indicates a Master Consolidation request for the European Union.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MasterEUConsolidationIndicator { get; set; }
+        public string? MasterEUConsolidationIndicator { get => _explicitNullValueMasterEUConsolidationIndicator; set { _explicitNullValueMasterEUConsolidationIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterEUConsolidationIndicator"); else _explicitNullProperties?.Remove("MasterEUConsolidationIndicator"); } }
+        private string? _explicitNullValueMasterEUConsolidationIndicator = default!;
 #nullable restore
 #else
-        public string MasterEUConsolidationIndicator { get; set; }
+        public string MasterEUConsolidationIndicator { get => _explicitNullValueMasterEUConsolidationIndicator; set { _explicitNullValueMasterEUConsolidationIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterEUConsolidationIndicator"); else _explicitNullProperties?.Remove("MasterEUConsolidationIndicator"); } }
+        private string _explicitNullValueMasterEUConsolidationIndicator = default!;
 #endif
         /// <summary>This field indicates whether the shipment is a master shipment and specifies the document box type. This is required for Master shipment only.&lt;br/&gt;Valid values &lt;br/&gt;0 - Virtual DocBox &lt;br/&gt;1 - Physical DocBox.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MasterHasDocBox { get; set; }
+        public string? MasterHasDocBox { get => _explicitNullValueMasterHasDocBox; set { _explicitNullValueMasterHasDocBox = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterHasDocBox"); else _explicitNullProperties?.Remove("MasterHasDocBox"); } }
+        private string? _explicitNullValueMasterHasDocBox = default!;
 #nullable restore
 #else
-        public string MasterHasDocBox { get; set; }
+        public string MasterHasDocBox { get => _explicitNullValueMasterHasDocBox; set { _explicitNullValueMasterHasDocBox = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterHasDocBox"); else _explicitNullProperties?.Remove("MasterHasDocBox"); } }
+        private string _explicitNullValueMasterHasDocBox = default!;
 #endif
         /// <summary>Code that indicates how shipping charges will be paid.| Code  | Name                | Description:                                                              || :--:  | :--                 | :--                                                                       || CAF   | Cost And Freight    | Shipper pays to point of import, conignee pays balance.                   || COL   | Freight Collect     | Consignee (with valid UPS account) pays all shipping charges              || DDP   | Delivered Duty Paid | Shipper pays shipping and duty, consignee pays the Value Added Tax (VAT)  || FOB   | Free On Board       | Shipper pays to point to export, consignee pays balance                   || PRE   | Prepaid             | Shipper pays all shipping charges                                         || SDT   | Free Domicile       | Child Shipper pays for shipping, duities and taxes                        |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEaseMasterShipmentChgType? MasterShipmentChgType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEaseMasterShipmentChgType? MasterShipmentChgType { get => _explicitNullValueMasterShipmentChgType; set { _explicitNullValueMasterShipmentChgType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterShipmentChgType"); else _explicitNullProperties?.Remove("MasterShipmentChgType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEaseMasterShipmentChgType? _explicitNullValueMasterShipmentChgType = default!;
         /// <summary>Container for port of entry details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry? PortOfEntry { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry? PortOfEntry { get => _explicitNullValuePortOfEntry; set { _explicitNullValuePortOfEntry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfEntry"); else _explicitNullProperties?.Remove("PortOfEntry"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry? _explicitNullValuePortOfEntry = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry PortOfEntry { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry PortOfEntry { get => _explicitNullValuePortOfEntry; set { _explicitNullValuePortOfEntry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfEntry"); else _explicitNullProperties?.Remove("PortOfEntry"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry _explicitNullValuePortOfEntry = default!;
 #endif
         /// <summary>This field indicates if VendorCollectIDTypeCode and VendorCollectIDNumber should be exempt from validation. &quot;0&quot; indicates VendorCollectIDTypeCode and VendorCollectIDNumber fields are required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VendorCollectIDNumberExemptIndicator { get; set; }
+        public string? VendorCollectIDNumberExemptIndicator { get => _explicitNullValueVendorCollectIDNumberExemptIndicator; set { _explicitNullValueVendorCollectIDNumberExemptIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDNumberExemptIndicator"); else _explicitNullProperties?.Remove("VendorCollectIDNumberExemptIndicator"); } }
+        private string? _explicitNullValueVendorCollectIDNumberExemptIndicator = default!;
 #nullable restore
 #else
-        public string VendorCollectIDNumberExemptIndicator { get; set; }
+        public string VendorCollectIDNumberExemptIndicator { get => _explicitNullValueVendorCollectIDNumberExemptIndicator; set { _explicitNullValueVendorCollectIDNumberExemptIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDNumberExemptIndicator"); else _explicitNullProperties?.Remove("VendorCollectIDNumberExemptIndicator"); } }
+        private string _explicitNullValueVendorCollectIDNumberExemptIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEase"/> and sets the default values.
@@ -88,7 +118,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEase CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEase();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEase(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -123,6 +153,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEaseMasterShipmentChgType>("MasterShipmentChgType", MasterShipmentChgType);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentWorldEasePortOfEntry>("PortOfEntry", PortOfEntry);
             writer.WriteStringValue("VendorCollectIDNumberExemptIndicator", VendorCollectIDNumberExemptIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

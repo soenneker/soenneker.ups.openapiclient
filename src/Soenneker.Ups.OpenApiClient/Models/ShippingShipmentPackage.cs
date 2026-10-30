@@ -12,152 +12,213 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShippingShipmentPackage : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AdditionalHandlingIndicator") is { } nullNodeAdditionalHandlingIndicator && nullNodeAdditionalHandlingIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalHandlingIndicator = null;
+            if (parseNode.GetChildNode("Commodity") is { } nullNodeCommodity && nullNodeCommodity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Commodity = null;
+            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("Dimensions") is { } nullNodeDimensions && nullNodeDimensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dimensions = null;
+            if (parseNode.GetChildNode("DimWeight") is { } nullNodeDimWeight && nullNodeDimWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DimWeight = null;
+            if (parseNode.GetChildNode("HazMatPackageInformation") is { } nullNodeHazMatPackageInformation && nullNodeHazMatPackageInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazMatPackageInformation = null;
+            if (parseNode.GetChildNode("LargePackageIndicator") is { } nullNodeLargePackageIndicator && nullNodeLargePackageIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LargePackageIndicator = null;
+            if (parseNode.GetChildNode("MinimumBillableWeightIndicator") is { } nullNodeMinimumBillableWeightIndicator && nullNodeMinimumBillableWeightIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumBillableWeightIndicator = null;
+            if (parseNode.GetChildNode("NumOfPieces") is { } nullNodeNumOfPieces && nullNodeNumOfPieces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumOfPieces = null;
+            if (parseNode.GetChildNode("OversizeIndicator") is { } nullNodeOversizeIndicator && nullNodeOversizeIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OversizeIndicator = null;
+            if (parseNode.GetChildNode("PackageServiceOptions") is { } nullNodePackageServiceOptions && nullNodePackageServiceOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageServiceOptions = null;
+            if (parseNode.GetChildNode("PackageWeight") is { } nullNodePackageWeight && nullNodePackageWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageWeight = null;
+            if (parseNode.GetChildNode("Packaging") is { } nullNodePackaging && nullNodePackaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Packaging = null;
+            if (parseNode.GetChildNode("PalletDescription") is { } nullNodePalletDescription && nullNodePalletDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletDescription = null;
+            if (parseNode.GetChildNode("ReferenceNumber") is { } nullNodeReferenceNumber && nullNodeReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceNumber = null;
+            if (parseNode.GetChildNode("SimpleRate") is { } nullNodeSimpleRate && nullNodeSimpleRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimpleRate = null;
+            if (parseNode.GetChildNode("UnitPrice") is { } nullNodeUnitPrice && nullNodeUnitPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitPrice = null;
+            if (parseNode.GetChildNode("UPSPremier") is { } nullNodeUPSPremier && nullNodeUPSPremier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UPSPremier = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Additional Handling Required. The presence indicates additional handling is required, the absence indicates no additional handling is required. Additional Handling indicator indicates it&apos;s a non-corrugated package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdditionalHandlingIndicator { get; set; }
+        public string? AdditionalHandlingIndicator { get => _explicitNullValueAdditionalHandlingIndicator; set { _explicitNullValueAdditionalHandlingIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalHandlingIndicator"); else _explicitNullProperties?.Remove("AdditionalHandlingIndicator"); } }
+        private string? _explicitNullValueAdditionalHandlingIndicator = default!;
 #nullable restore
 #else
-        public string AdditionalHandlingIndicator { get; set; }
+        public string AdditionalHandlingIndicator { get => _explicitNullValueAdditionalHandlingIndicator; set { _explicitNullValueAdditionalHandlingIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalHandlingIndicator"); else _explicitNullProperties?.Remove("AdditionalHandlingIndicator"); } }
+        private string _explicitNullValueAdditionalHandlingIndicator = default!;
 #endif
         /// <summary>Container to hold the Commodity information.  It is required if the Ground Freight Pricing Shipment indicator is present in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageCommodity? Commodity { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageCommodity? Commodity { get => _explicitNullValueCommodity; set { _explicitNullValueCommodity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Commodity"); else _explicitNullProperties?.Remove("Commodity"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageCommodity? _explicitNullValueCommodity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageCommodity Commodity { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageCommodity Commodity { get => _explicitNullValueCommodity; set { _explicitNullValueCommodity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Commodity"); else _explicitNullProperties?.Remove("Commodity"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageCommodity _explicitNullValueCommodity = default!;
 #endif
         /// <summary>Merchandise description of package.  Required for shipment with return service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Dimensions information container. Note: Currently dimensions are not applicable to Ground Freight Pricing.  Length + 2*(Width + Height) must be less than or equal to 165 IN or 330 CM. Required for Heavy Goods service. Package Dimension will be ignored for Simple Rate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimensions? Dimensions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimensions? Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dimensions"); else _explicitNullProperties?.Remove("Dimensions"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimensions? _explicitNullValueDimensions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimensions Dimensions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimensions Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dimensions"); else _explicitNullProperties?.Remove("Dimensions"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimensions _explicitNullValueDimensions = default!;
 #endif
         /// <summary>Dimensional weight of shipment. Please visit ups.com for rules on calculating. There is one implied decimal place (e.g. 115 = 11.5).  If dimensions are provided, dimensional weight is ignored. For US/PR/CA shipments, dimensional weight is ignored</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimWeight? DimWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimWeight? DimWeight { get => _explicitNullValueDimWeight; set { _explicitNullValueDimWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DimWeight"); else _explicitNullProperties?.Remove("DimWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimWeight? _explicitNullValueDimWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimWeight DimWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimWeight DimWeight { get => _explicitNullValueDimWeight; set { _explicitNullValueDimWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DimWeight"); else _explicitNullProperties?.Remove("DimWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageDimWeight _explicitNullValueDimWeight = default!;
 #endif
         /// <summary>Required when number of hazmat containers in a package is greater than 1. It indicates whether all the hazmat materials are kept in a single box or multiple boxes.  Required when number of hazmat container in a package is greater than 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageHazMatPackageInformation? HazMatPackageInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageHazMatPackageInformation? HazMatPackageInformation { get => _explicitNullValueHazMatPackageInformation; set { _explicitNullValueHazMatPackageInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMatPackageInformation"); else _explicitNullProperties?.Remove("HazMatPackageInformation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageHazMatPackageInformation? _explicitNullValueHazMatPackageInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageHazMatPackageInformation HazMatPackageInformation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageHazMatPackageInformation HazMatPackageInformation { get => _explicitNullValueHazMatPackageInformation; set { _explicitNullValueHazMatPackageInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMatPackageInformation"); else _explicitNullProperties?.Remove("HazMatPackageInformation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackageHazMatPackageInformation _explicitNullValueHazMatPackageInformation = default!;
 #endif
         /// <summary>Presence of the indicator mentions that the package is Large Package.This is an empty tag, any value inside is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LargePackageIndicator { get; set; }
+        public string? LargePackageIndicator { get => _explicitNullValueLargePackageIndicator; set { _explicitNullValueLargePackageIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LargePackageIndicator"); else _explicitNullProperties?.Remove("LargePackageIndicator"); } }
+        private string? _explicitNullValueLargePackageIndicator = default!;
 #nullable restore
 #else
-        public string LargePackageIndicator { get; set; }
+        public string LargePackageIndicator { get => _explicitNullValueLargePackageIndicator; set { _explicitNullValueLargePackageIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LargePackageIndicator"); else _explicitNullProperties?.Remove("LargePackageIndicator"); } }
+        private string _explicitNullValueLargePackageIndicator = default!;
 #endif
         /// <summary>Presence/Absence Indicator. Any value is ignored. If present, indicates that the package is qualified for minimum billable weight.   Applicable for UPS Worldwide Economy DDU service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinimumBillableWeightIndicator { get; set; }
+        public string? MinimumBillableWeightIndicator { get => _explicitNullValueMinimumBillableWeightIndicator; set { _explicitNullValueMinimumBillableWeightIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinimumBillableWeightIndicator"); else _explicitNullProperties?.Remove("MinimumBillableWeightIndicator"); } }
+        private string? _explicitNullValueMinimumBillableWeightIndicator = default!;
 #nullable restore
 #else
-        public string MinimumBillableWeightIndicator { get; set; }
+        public string MinimumBillableWeightIndicator { get => _explicitNullValueMinimumBillableWeightIndicator; set { _explicitNullValueMinimumBillableWeightIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinimumBillableWeightIndicator"); else _explicitNullProperties?.Remove("MinimumBillableWeightIndicator"); } }
+        private string _explicitNullValueMinimumBillableWeightIndicator = default!;
 #endif
         /// <summary>Number of Pieces. Applicable for Air Freight only</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumOfPieces { get; set; }
+        public string? NumOfPieces { get => _explicitNullValueNumOfPieces; set { _explicitNullValueNumOfPieces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumOfPieces"); else _explicitNullProperties?.Remove("NumOfPieces"); } }
+        private string? _explicitNullValueNumOfPieces = default!;
 #nullable restore
 #else
-        public string NumOfPieces { get; set; }
+        public string NumOfPieces { get => _explicitNullValueNumOfPieces; set { _explicitNullValueNumOfPieces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumOfPieces"); else _explicitNullProperties?.Remove("NumOfPieces"); } }
+        private string _explicitNullValueNumOfPieces = default!;
 #endif
         /// <summary>Presence/Absence Indicator. Any value is ignored. If present, indicates that the package is over size.   Applicable for UPS Worldwide Economy DDU service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OversizeIndicator { get; set; }
+        public string? OversizeIndicator { get => _explicitNullValueOversizeIndicator; set { _explicitNullValueOversizeIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OversizeIndicator"); else _explicitNullProperties?.Remove("OversizeIndicator"); } }
+        private string? _explicitNullValueOversizeIndicator = default!;
 #nullable restore
 #else
-        public string OversizeIndicator { get; set; }
+        public string OversizeIndicator { get => _explicitNullValueOversizeIndicator; set { _explicitNullValueOversizeIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OversizeIndicator"); else _explicitNullProperties?.Remove("OversizeIndicator"); } }
+        private string _explicitNullValueOversizeIndicator = default!;
 #endif
         /// <summary>Package Service Options container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageServiceOptions? PackageServiceOptions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageServiceOptions? PackageServiceOptions { get => _explicitNullValuePackageServiceOptions; set { _explicitNullValuePackageServiceOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageServiceOptions"); else _explicitNullProperties?.Remove("PackageServiceOptions"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageServiceOptions? _explicitNullValuePackageServiceOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageServiceOptions PackageServiceOptions { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageServiceOptions PackageServiceOptions { get => _explicitNullValuePackageServiceOptions; set { _explicitNullValuePackageServiceOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageServiceOptions"); else _explicitNullProperties?.Remove("PackageServiceOptions"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageServiceOptions _explicitNullValuePackageServiceOptions = default!;
 #endif
         /// <summary>Container to hold package weight information.  Package weight is a required for Ground Freight Pricing shipments and Heavy Goods service. Package Weight will be ignored for Simple Rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageWeight? PackageWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageWeight? PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageWeight"); else _explicitNullProperties?.Remove("PackageWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageWeight? _explicitNullValuePackageWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageWeight PackageWeight { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageWeight PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageWeight"); else _explicitNullProperties?.Remove("PackageWeight"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackagePackageWeight _explicitNullValuePackageWeight = default!;
 #endif
         /// <summary>Packaging container.  Container for Packaging Type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackagePackaging? Packaging { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackagePackaging? Packaging { get => _explicitNullValuePackaging; set { _explicitNullValuePackaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Packaging"); else _explicitNullProperties?.Remove("Packaging"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackagePackaging? _explicitNullValuePackaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackagePackaging Packaging { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackagePackaging Packaging { get => _explicitNullValuePackaging; set { _explicitNullValuePackaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Packaging"); else _explicitNullProperties?.Remove("Packaging"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.PackagePackaging _explicitNullValuePackaging = default!;
 #endif
         /// <summary>Description of articles &amp; special marks. Applicable for Air Freight only</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PalletDescription { get; set; }
+        public string? PalletDescription { get => _explicitNullValuePalletDescription; set { _explicitNullValuePalletDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletDescription"); else _explicitNullProperties?.Remove("PalletDescription"); } }
+        private string? _explicitNullValuePalletDescription = default!;
 #nullable restore
 #else
-        public string PalletDescription { get; set; }
+        public string PalletDescription { get => _explicitNullValuePalletDescription; set { _explicitNullValuePalletDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletDescription"); else _explicitNullProperties?.Remove("PalletDescription"); } }
+        private string _explicitNullValuePalletDescription = default!;
 #endif
         /// <summary>The ReferenceNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber>? ReferenceNumber { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber>? ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceNumber"); else _explicitNullProperties?.Remove("ReferenceNumber"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber>? _explicitNullValueReferenceNumber = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber> ReferenceNumber { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber> ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceNumber"); else _explicitNullProperties?.Remove("ReferenceNumber"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageReferenceNumber> _explicitNullValueReferenceNumber = default!;
 #endif
         /// <summary>SimpleRate Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate? SimpleRate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate? SimpleRate { get => _explicitNullValueSimpleRate; set { _explicitNullValueSimpleRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SimpleRate"); else _explicitNullProperties?.Remove("SimpleRate"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate? _explicitNullValueSimpleRate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate SimpleRate { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate SimpleRate { get => _explicitNullValueSimpleRate; set { _explicitNullValueSimpleRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SimpleRate"); else _explicitNullProperties?.Remove("SimpleRate"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate _explicitNullValueSimpleRate = default!;
 #endif
         /// <summary>Unit price of the commodity. Applicable for Air Freight only  Limit to 2 digit after the decimal. The maximum length of the field is 12 including &apos;.&apos; and can hold up to 2 decimal place. (e.g. 999999999.99)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitPrice { get; set; }
+        public string? UnitPrice { get => _explicitNullValueUnitPrice; set { _explicitNullValueUnitPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitPrice"); else _explicitNullProperties?.Remove("UnitPrice"); } }
+        private string? _explicitNullValueUnitPrice = default!;
 #nullable restore
 #else
-        public string UnitPrice { get; set; }
+        public string UnitPrice { get => _explicitNullValueUnitPrice; set { _explicitNullValueUnitPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitPrice"); else _explicitNullProperties?.Remove("UnitPrice"); } }
+        private string _explicitNullValueUnitPrice = default!;
 #endif
         /// <summary>UPS Premier Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier? UPSPremier { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier? UPSPremier { get => _explicitNullValueUPSPremier; set { _explicitNullValueUPSPremier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremier"); else _explicitNullProperties?.Remove("UPSPremier"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier? _explicitNullValueUPSPremier = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier UPSPremier { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier UPSPremier { get => _explicitNullValueUPSPremier; set { _explicitNullValueUPSPremier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremier"); else _explicitNullProperties?.Remove("UPSPremier"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier _explicitNullValueUPSPremier = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentPackage"/> and sets the default values.
@@ -174,7 +235,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentPackage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentPackage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentPackage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -229,6 +290,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageSimpleRate>("SimpleRate", SimpleRate);
             writer.WriteStringValue("UnitPrice", UnitPrice);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingPackageUpsPremier>("UPSPremier", UPSPremier);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

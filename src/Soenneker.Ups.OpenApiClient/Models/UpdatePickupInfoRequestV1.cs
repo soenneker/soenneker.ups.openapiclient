@@ -12,16 +12,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdatePickupInfoRequestV1 : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("UpdatePickupInfoRequest") is { } nullNodeUpdatePickupInfoRequest && nullNodeUpdatePickupInfoRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatePickupInfoRequest = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The UpdatePickupInfoRequest property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequest? UpdatePickupInfoRequest { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequest? UpdatePickupInfoRequest { get => _explicitNullValueUpdatePickupInfoRequest; set { _explicitNullValueUpdatePickupInfoRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdatePickupInfoRequest"); else _explicitNullProperties?.Remove("UpdatePickupInfoRequest"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequest? _explicitNullValueUpdatePickupInfoRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequest UpdatePickupInfoRequest { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequest UpdatePickupInfoRequest { get => _explicitNullValueUpdatePickupInfoRequest; set { _explicitNullValueUpdatePickupInfoRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UpdatePickupInfoRequest"); else _explicitNullProperties?.Remove("UpdatePickupInfoRequest"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequest _explicitNullValueUpdatePickupInfoRequest = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequest>("UpdatePickupInfoRequest", UpdatePickupInfoRequest);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

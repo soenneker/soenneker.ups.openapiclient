@@ -11,24 +11,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class QuantumViewErrorErrorLocation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ErrorLocationAttributeName") is { } nullNodeErrorLocationAttributeName && nullNodeErrorLocationAttributeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorLocationAttributeName = null;
+            if (parseNode.GetChildNode("ErrorLocationElementName") is { } nullNodeErrorLocationElementName && nullNodeErrorLocationElementName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorLocationElementName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the attribute in error. This is the name of the attribute contained by the Error Location element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorLocationAttributeName { get; set; }
+        public string? ErrorLocationAttributeName { get => _explicitNullValueErrorLocationAttributeName; set { _explicitNullValueErrorLocationAttributeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationAttributeName"); else _explicitNullProperties?.Remove("ErrorLocationAttributeName"); } }
+        private string? _explicitNullValueErrorLocationAttributeName = default!;
 #nullable restore
 #else
-        public string ErrorLocationAttributeName { get; set; }
+        public string ErrorLocationAttributeName { get => _explicitNullValueErrorLocationAttributeName; set { _explicitNullValueErrorLocationAttributeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationAttributeName"); else _explicitNullProperties?.Remove("ErrorLocationAttributeName"); } }
+        private string _explicitNullValueErrorLocationAttributeName = default!;
 #endif
         /// <summary>The Xpath name of the element in error. This is a valid Xpath pointing to an element in the request document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorLocationElementName { get; set; }
+        public string? ErrorLocationElementName { get => _explicitNullValueErrorLocationElementName; set { _explicitNullValueErrorLocationElementName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationElementName"); else _explicitNullProperties?.Remove("ErrorLocationElementName"); } }
+        private string? _explicitNullValueErrorLocationElementName = default!;
 #nullable restore
 #else
-        public string ErrorLocationElementName { get; set; }
+        public string ErrorLocationElementName { get => _explicitNullValueErrorLocationElementName; set { _explicitNullValueErrorLocationElementName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationElementName"); else _explicitNullProperties?.Remove("ErrorLocationElementName"); } }
+        private string _explicitNullValueErrorLocationElementName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewErrorErrorLocation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("ErrorLocationAttributeName", ErrorLocationAttributeName);
             writer.WriteStringValue("ErrorLocationElementName", ErrorLocationElementName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

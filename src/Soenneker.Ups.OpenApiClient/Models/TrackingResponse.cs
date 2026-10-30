@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TrackingResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("inboundTrackingList") is { } nullNodeInboundTrackingList && nullNodeInboundTrackingList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundTrackingList = null;
+            if (parseNode.GetChildNode("locationIdentifier") is { } nullNodeLocationIdentifier && nullNodeLocationIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationIdentifier = null;
+            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The inboundTrackingList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>? InboundTrackingList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>? InboundTrackingList { get => _explicitNullValueInboundTrackingList; set { _explicitNullValueInboundTrackingList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundTrackingList"); else _explicitNullProperties?.Remove("inboundTrackingList"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>? _explicitNullValueInboundTrackingList = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem> InboundTrackingList { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem> InboundTrackingList { get => _explicitNullValueInboundTrackingList; set { _explicitNullValueInboundTrackingList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundTrackingList"); else _explicitNullProperties?.Remove("inboundTrackingList"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem> _explicitNullValueInboundTrackingList = default!;
 #endif
         /// <summary>The locationIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationIdentifier { get; set; }
+        public string? LocationIdentifier { get => _explicitNullValueLocationIdentifier; set { _explicitNullValueLocationIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIdentifier"); else _explicitNullProperties?.Remove("locationIdentifier"); } }
+        private string? _explicitNullValueLocationIdentifier = default!;
 #nullable restore
 #else
-        public string LocationIdentifier { get; set; }
+        public string LocationIdentifier { get => _explicitNullValueLocationIdentifier; set { _explicitNullValueLocationIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIdentifier"); else _explicitNullProperties?.Remove("locationIdentifier"); } }
+        private string _explicitNullValueLocationIdentifier = default!;
 #endif
         /// <summary>Standard response envelope containing transaction reference information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TrackingResponseResponse? Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TrackingResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TrackingResponseResponse Response { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TrackingResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.TrackingResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InboundTrackingItem>("inboundTrackingList", InboundTrackingList);
             writer.WriteStringValue("locationIdentifier", LocationIdentifier);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TrackingResponseResponse>("response", Response);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

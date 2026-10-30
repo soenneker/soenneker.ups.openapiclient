@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LocationSearchCriteriaOpenTimeCriteria : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DayOfWeekCode") is { } nullNodeDayOfWeekCode && nullNodeDayOfWeekCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekCode = null;
+            if (parseNode.GetChildNode("FromTime") is { } nullNodeFromTime && nullNodeFromTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromTime = null;
+            if (parseNode.GetChildNode("ToTime") is { } nullNodeToTime && nullNodeToTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Day Of week Code.Valid values:1-Sunday2-Monday3-Tuesday4-Wednesday5-Thursday6-Friday7-Saturday</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DayOfWeekCode { get; set; }
+        public string? DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
+        private string? _explicitNullValueDayOfWeekCode = default!;
 #nullable restore
 #else
-        public string DayOfWeekCode { get; set; }
+        public string DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
+        private string _explicitNullValueDayOfWeekCode = default!;
 #endif
         /// <summary>From time. Time Format HHMM.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromTime { get; set; }
+        public string? FromTime { get => _explicitNullValueFromTime; set { _explicitNullValueFromTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromTime"); else _explicitNullProperties?.Remove("FromTime"); } }
+        private string? _explicitNullValueFromTime = default!;
 #nullable restore
 #else
-        public string FromTime { get; set; }
+        public string FromTime { get => _explicitNullValueFromTime; set { _explicitNullValueFromTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromTime"); else _explicitNullProperties?.Remove("FromTime"); } }
+        private string _explicitNullValueFromTime = default!;
 #endif
         /// <summary>To Time. Time Format HHMM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToTime { get; set; }
+        public string? ToTime { get => _explicitNullValueToTime; set { _explicitNullValueToTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToTime"); else _explicitNullProperties?.Remove("ToTime"); } }
+        private string? _explicitNullValueToTime = default!;
 #nullable restore
 #else
-        public string ToTime { get; set; }
+        public string ToTime { get => _explicitNullValueToTime; set { _explicitNullValueToTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToTime"); else _explicitNullProperties?.Remove("ToTime"); } }
+        private string _explicitNullValueToTime = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaOpenTimeCriteria(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("DayOfWeekCode", DayOfWeekCode);
             writer.WriteStringValue("FromTime", FromTime);
             writer.WriteStringValue("ToTime", ToTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

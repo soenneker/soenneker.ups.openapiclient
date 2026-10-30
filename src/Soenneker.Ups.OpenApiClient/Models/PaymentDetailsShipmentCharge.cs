@@ -12,48 +12,70 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentDetailsShipmentCharge : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("BillReceiver") is { } nullNodeBillReceiver && nullNodeBillReceiver.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillReceiver = null;
+            if (parseNode.GetChildNode("BillShipper") is { } nullNodeBillShipper && nullNodeBillShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillShipper = null;
+            if (parseNode.GetChildNode("BillThirdParty") is { } nullNodeBillThirdParty && nullNodeBillThirdParty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillThirdParty = null;
+            if (parseNode.GetChildNode("ConsigneeBilledIndicator") is { } nullNodeConsigneeBilledIndicator && nullNodeConsigneeBilledIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsigneeBilledIndicator = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container for the BillReceiver billing option.  This element or its sibling element, BillShipper, BillThirdParty or Consignee Billed, must be present but no more than one can be present. For a return shipment, Bill Receiver is invalid for Transportation charges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver? BillReceiver { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver? BillReceiver { get => _explicitNullValueBillReceiver; set { _explicitNullValueBillReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillReceiver"); else _explicitNullProperties?.Remove("BillReceiver"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver? _explicitNullValueBillReceiver = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver BillReceiver { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver BillReceiver { get => _explicitNullValueBillReceiver; set { _explicitNullValueBillReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillReceiver"); else _explicitNullProperties?.Remove("BillReceiver"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver _explicitNullValueBillReceiver = default!;
 #endif
         /// <summary>Container for the BillShipper billing option.  This element or its sibling element, BillReceiver, BillThirdParty or ConsigneeBilledIndicator, must be present but no more than one can be present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper? BillShipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper? BillShipper { get => _explicitNullValueBillShipper; set { _explicitNullValueBillShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillShipper"); else _explicitNullProperties?.Remove("BillShipper"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper? _explicitNullValueBillShipper = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper BillShipper { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper BillShipper { get => _explicitNullValueBillShipper; set { _explicitNullValueBillShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillShipper"); else _explicitNullProperties?.Remove("BillShipper"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper _explicitNullValueBillShipper = default!;
 #endif
         /// <summary>Container for the third party billing option.  This element or its sibling element, BillShipper, BillReceiver or Consignee Billed, must be present but no more than one can be present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty? BillThirdParty { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty? BillThirdParty { get => _explicitNullValueBillThirdParty; set { _explicitNullValueBillThirdParty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillThirdParty"); else _explicitNullProperties?.Remove("BillThirdParty"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty? _explicitNullValueBillThirdParty = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty BillThirdParty { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty BillThirdParty { get => _explicitNullValueBillThirdParty; set { _explicitNullValueBillThirdParty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillThirdParty"); else _explicitNullProperties?.Remove("BillThirdParty"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty _explicitNullValueBillThirdParty = default!;
 #endif
         /// <summary>Consignee Billing payment option indicator. The presence indicates consignee billing option is selected. The absence indicates one of the other payment options is selected.  Empty Tag. This element or its sibling element, BillShipper, BillReceiver or BillThirdParty, must be present but no more than one can be present. This billing option is valid for a shipment charge type of Transportation only. Only applies to US/PR and PR/US shipment origins and destination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConsigneeBilledIndicator { get; set; }
+        public string? ConsigneeBilledIndicator { get => _explicitNullValueConsigneeBilledIndicator; set { _explicitNullValueConsigneeBilledIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeBilledIndicator"); else _explicitNullProperties?.Remove("ConsigneeBilledIndicator"); } }
+        private string? _explicitNullValueConsigneeBilledIndicator = default!;
 #nullable restore
 #else
-        public string ConsigneeBilledIndicator { get; set; }
+        public string ConsigneeBilledIndicator { get => _explicitNullValueConsigneeBilledIndicator; set { _explicitNullValueConsigneeBilledIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeBilledIndicator"); else _explicitNullProperties?.Remove("ConsigneeBilledIndicator"); } }
+        private string _explicitNullValueConsigneeBilledIndicator = default!;
 #endif
         /// <summary>Values are 01 = Transportation, 02 = Duties and Taxes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PaymentDetailsShipmentCharge(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty>("BillThirdParty", BillThirdParty);
             writer.WriteStringValue("ConsigneeBilledIndicator", ConsigneeBilledIndicator);
             writer.WriteStringValue("Type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccessPointSearchExcludeFromResult : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("BusinessClassificationCode") is { } nullNodeBusinessClassificationCode && nullNodeBusinessClassificationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessClassificationCode = null;
+            if (parseNode.GetChildNode("BusinessName") is { } nullNodeBusinessName && nullNodeBusinessName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessName = null;
+            if (parseNode.GetChildNode("PostalCodeList") is { } nullNodePostalCodeList && nullNodePostalCodeList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostalCodeList = null;
+            if (parseNode.GetChildNode("Radius") is { } nullNodeRadius && nullNodeRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Radius = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This contains the business classification code to exclude from UPS Access Point Search by address or geocode. Multiple codes can are possible in separate elements. Please refer to Appendix D for detailed business codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BusinessClassificationCode { get; set; }
+        public List<string>? BusinessClassificationCode { get => _explicitNullValueBusinessClassificationCode; set { _explicitNullValueBusinessClassificationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessClassificationCode"); else _explicitNullProperties?.Remove("BusinessClassificationCode"); } }
+        private List<string>? _explicitNullValueBusinessClassificationCode = default!;
 #nullable restore
 #else
-        public List<string> BusinessClassificationCode { get; set; }
+        public List<string> BusinessClassificationCode { get => _explicitNullValueBusinessClassificationCode; set { _explicitNullValueBusinessClassificationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessClassificationCode"); else _explicitNullProperties?.Remove("BusinessClassificationCode"); } }
+        private List<string> _explicitNullValueBusinessClassificationCode = default!;
 #endif
         /// <summary>This contains the business name to exclude from UPS Access Point Search by address or geocode. Partial names are accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessName { get; set; }
+        public string? BusinessName { get => _explicitNullValueBusinessName; set { _explicitNullValueBusinessName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessName"); else _explicitNullProperties?.Remove("BusinessName"); } }
+        private string? _explicitNullValueBusinessName = default!;
 #nullable restore
 #else
-        public string BusinessName { get; set; }
+        public string BusinessName { get => _explicitNullValueBusinessName; set { _explicitNullValueBusinessName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessName"); else _explicitNullProperties?.Remove("BusinessName"); } }
+        private string _explicitNullValueBusinessName = default!;
 #endif
         /// <summary>Container to hold a list of postal codes to exclude from the access point address or geocode search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ExcludeFromResultPostalCodeList? PostalCodeList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExcludeFromResultPostalCodeList? PostalCodeList { get => _explicitNullValuePostalCodeList; set { _explicitNullValuePostalCodeList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostalCodeList"); else _explicitNullProperties?.Remove("PostalCodeList"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ExcludeFromResultPostalCodeList? _explicitNullValuePostalCodeList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ExcludeFromResultPostalCodeList PostalCodeList { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExcludeFromResultPostalCodeList PostalCodeList { get => _explicitNullValuePostalCodeList; set { _explicitNullValuePostalCodeList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PostalCodeList"); else _explicitNullProperties?.Remove("PostalCodeList"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ExcludeFromResultPostalCodeList _explicitNullValuePostalCodeList = default!;
 #endif
         /// <summary>Public Access points within Radius (in specified Unit of Measure) of any included private access points will be excluded from the results. Valid only if at least one IncludeCriteria/MerchantAccountNumber is provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Radius { get; set; }
+        public string? Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Radius"); else _explicitNullProperties?.Remove("Radius"); } }
+        private string? _explicitNullValueRadius = default!;
 #nullable restore
 #else
-        public string Radius { get; set; }
+        public string Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Radius"); else _explicitNullProperties?.Remove("Radius"); } }
+        private string _explicitNullValueRadius = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("BusinessName", BusinessName);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ExcludeFromResultPostalCodeList>("PostalCodeList", PostalCodeList);
             writer.WriteStringValue("Radius", Radius);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

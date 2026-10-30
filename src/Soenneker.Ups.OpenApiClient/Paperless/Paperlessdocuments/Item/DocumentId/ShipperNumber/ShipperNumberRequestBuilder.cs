@@ -59,6 +59,8 @@ namespace Soenneker.Ups.OpenApiClient.Paperless.Paperlessdocuments.Item.Document
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.PaperlessDelete401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.PaperlessDelete403Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.PaperlessDelete429Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.PaperlessDelete200Response>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.PaperlessDelete200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentDeliveryTimeInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("PackageBillType") is { } nullNodePackageBillType && nullNodePackageBillType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageBillType = null;
+            if (parseNode.GetChildNode("Pickup") is { } nullNodePickup && nullNodePickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pickup = null;
+            if (parseNode.GetChildNode("ReturnContractServices") is { } nullNodeReturnContractServices && nullNodeReturnContractServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnContractServices = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Valid values are:- 02 - Document only- 03 - Non-Document- 04 - WWEF Pallet- 07 - Domestic PalletIf 04 is included, Worldwide Express Freight and UPS Worldwide Express Freight Midday services (if applicable) will be included in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageBillType { get; set; }
+        public string? PackageBillType { get => _explicitNullValuePackageBillType; set { _explicitNullValuePackageBillType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageBillType"); else _explicitNullProperties?.Remove("PackageBillType"); } }
+        private string? _explicitNullValuePackageBillType = default!;
 #nullable restore
 #else
-        public string PackageBillType { get; set; }
+        public string PackageBillType { get => _explicitNullValuePackageBillType; set { _explicitNullValuePackageBillType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageBillType"); else _explicitNullProperties?.Remove("PackageBillType"); } }
+        private string _explicitNullValuePackageBillType = default!;
 #endif
         /// <summary>Pickup container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationPickup? Pickup { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationPickup? Pickup { get => _explicitNullValuePickup; set { _explicitNullValuePickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pickup"); else _explicitNullProperties?.Remove("Pickup"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationPickup? _explicitNullValuePickup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationPickup Pickup { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationPickup Pickup { get => _explicitNullValuePickup; set { _explicitNullValuePickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pickup"); else _explicitNullProperties?.Remove("Pickup"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationPickup _explicitNullValuePickup = default!;
 #endif
         /// <summary>The ReturnContractServices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationReturnContractServices>? ReturnContractServices { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationReturnContractServices>? ReturnContractServices { get => _explicitNullValueReturnContractServices; set { _explicitNullValueReturnContractServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReturnContractServices"); else _explicitNullProperties?.Remove("ReturnContractServices"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationReturnContractServices>? _explicitNullValueReturnContractServices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationReturnContractServices> ReturnContractServices { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationReturnContractServices> ReturnContractServices { get => _explicitNullValueReturnContractServices; set { _explicitNullValueReturnContractServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReturnContractServices"); else _explicitNullProperties?.Remove("ReturnContractServices"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationReturnContractServices> _explicitNullValueReturnContractServices = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentDeliveryTimeInformation"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentDeliveryTimeInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentDeliveryTimeInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentDeliveryTimeInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("PackageBillType", PackageBillType);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationPickup>("Pickup", Pickup);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryTimeInformationReturnContractServices>("ReturnContractServices", ReturnContractServices);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

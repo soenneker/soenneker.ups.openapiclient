@@ -41617,7 +41617,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CloseoutResponse"
+                  "$ref": "#/components/schemas/CloseoutMasterShipmentSuccessResponse"
                 },
                 "example": {
                   "invoiceLabelResponse": {
@@ -41647,6 +41647,9 @@
                       }
                     ]
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/CloseoutResponse"
                 }
               }
             }
@@ -41667,7 +41670,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CloseoutMasterShipment207Response"
+                  "$ref": "#/components/schemas/CloseoutMasterShipmentSuccessResponse"
                 },
                 "example": {
                   "message": "Movement has been closed successfully.",
@@ -41692,6 +41695,9 @@
                       }
                     ]
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/CloseoutMasterShipment207Response"
                 }
               }
             }
@@ -42571,7 +42577,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExportAssureResponse"
+                  "$ref": "#/components/schemas/SubmitExportAssureSuccessResponse"
                 },
                 "examples": {
                   "descriptionGuidanceResponseExample": {
@@ -42589,6 +42595,9 @@
                   "cieResponseExample": {
                     "$ref": "#/components/examples/cie-success-response"
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/ExportAssureResponse"
                 }
               }
             }
@@ -42605,12 +42614,15 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ExportAssurePartialResponse"
+                  "$ref": "#/components/schemas/SubmitExportAssureSuccessResponse"
                 },
                 "examples": {
                   "samplePartialResponse": {
                     "$ref": "#/components/examples/sample-partial-response"
                   }
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/ExportAssurePartialResponse"
                 }
               }
             }
@@ -105230,6 +105242,41 @@
           ]
         }
       },
+      "CloseoutMasterShipmentSuccessResponse": {
+        "x-client-original-anyOf": [
+          {
+            "$ref": "#/components/schemas/CloseoutResponse"
+          },
+          {
+            "$ref": "#/components/schemas/CloseoutMasterShipment207Response"
+          }
+        ],
+        "type": "object",
+        "properties": {
+          "invoiceLabelResponse": {
+            "description": "Contains the response details for the generated invoice label, including the format and data of the generated document.",
+            "$ref": "#/components/schemas/CloseoutResponseInvoiceLabelResponse"
+          },
+          "bolLabelResponse": {
+            "description": "Contains the response details for the generated Bill of Lading (BOL) label, including the format and data of the generated document.",
+            "$ref": "#/components/schemas/CloseoutResponseBolLabelResponse"
+          },
+          "palletLabelResponses": {
+            "description": "A list of responses for the generated pallet labels, each containing details such as the label number and the base64 encoded data.",
+            "$ref": "#/components/schemas/CloseoutResponsePalletLabelResponses"
+          },
+          "message": {
+            "type": "string",
+            "description": "A message providing additional information about the response.",
+            "example": "Closeout operation completed with warnings."
+          }
+        },
+        "required": [
+          "bolLabelResponse",
+          "invoiceLabelResponse",
+          "palletLabelResponses"
+        ]
+      },
       "UpsExportAssureAccountNumber": {
         "examples": [
           "985123",
@@ -106928,6 +106975,16 @@
             }
           ]
         }
+      },
+      "SubmitExportAssureSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/ExportAssureResponse"
+          },
+          {
+            "$ref": "#/components/schemas/ExportAssurePartialResponse"
+          }
+        ]
       },
       "PickupPointOrderRequest": {
         "required": [
@@ -118371,630 +118428,6 @@
           "object"
         ],
         "description": "List of shipments received in request with the status if they were processed successfully or not"
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2RequestTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2RequestTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2RequestTypeOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2RequestTypeOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2RequestTypeOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf7AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf8AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptRequestV2ReasonForReturnOneOf9AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf7AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf7AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf8AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf9AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupNotificationIndicatorV1OneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupNotificationIndicatorV1OneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf7AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf8AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf9AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf10AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf11AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf12AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf13AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupPointV1OneOf14AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupTriggerV1OneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupTriggerV1OneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupRequestV1SmartPickupRequestActionOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupRequestV1SmartPickupRequestActionOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupRequestV1SmartPickupRequestActionOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "SmartPickupCommonResponseV1ResponseStatusCodeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCodeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCodeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "TrackingEventRequestActivityStatusTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "TrackingEventRequestActivityStatusTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "TrackingEventRequestActivityStatusTypeOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "TrackingEventRequestActivityStatusTypeOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "TrackingEventRequestActivityStatusTypeOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "TrackingEventRequestActivityStatusTypeOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "EventPreferencesItemOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "EventPreferencesItemOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "EventPreferencesItemOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "EventPreferencesItemOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "TypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "TypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEventPreferencesItemOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEventPreferencesItemOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEventPreferencesItemOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEventPreferencesItemOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedReadyTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf5AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf6AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedEventPreferencesItemOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedEventPreferencesItemOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedEventPreferencesItemOneOf3AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedEventPreferencesItemOneOf4AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedTypeOneOf1AllOf1": {
-        "type": "string",
-        "not": {}
-      },
-      "UpsTrackAlertEnhancedTypeOneOf2AllOf1": {
-        "type": "string",
-        "not": {}
       }
     },
     "responses": {

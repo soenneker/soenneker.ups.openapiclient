@@ -12,42 +12,63 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrderDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customerAccountNumber") is { } nullNodeCustomerAccountNumber && nullNodeCustomerAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAccountNumber = null;
+            if (parseNode.GetChildNode("customerPONumber") is { } nullNodeCustomerPONumber && nullNodeCustomerPONumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPONumber = null;
+            if (parseNode.GetChildNode("orderNumber") is { } nullNodeOrderNumber && nullNodeOrderNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderNumber = null;
+            if (parseNode.GetChildNode("orderPlacedDate") is { } nullNodeOrderPlacedDate && nullNodeOrderPlacedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderPlacedDate = null;
+            if (parseNode.GetChildNode("shipmentDetails") is { } nullNodeShipmentDetails && nullNodeShipmentDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customerAccountNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerAccountNumber { get; set; }
+        public string? CustomerAccountNumber { get => _explicitNullValueCustomerAccountNumber; set { _explicitNullValueCustomerAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAccountNumber"); else _explicitNullProperties?.Remove("customerAccountNumber"); } }
+        private string? _explicitNullValueCustomerAccountNumber = default!;
 #nullable restore
 #else
-        public string CustomerAccountNumber { get; set; }
+        public string CustomerAccountNumber { get => _explicitNullValueCustomerAccountNumber; set { _explicitNullValueCustomerAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAccountNumber"); else _explicitNullProperties?.Remove("customerAccountNumber"); } }
+        private string _explicitNullValueCustomerAccountNumber = default!;
 #endif
         /// <summary>Customer Purchase Order Number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerPONumber { get; set; }
+        public string? CustomerPONumber { get => _explicitNullValueCustomerPONumber; set { _explicitNullValueCustomerPONumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerPONumber"); else _explicitNullProperties?.Remove("customerPONumber"); } }
+        private string? _explicitNullValueCustomerPONumber = default!;
 #nullable restore
 #else
-        public string CustomerPONumber { get; set; }
+        public string CustomerPONumber { get => _explicitNullValueCustomerPONumber; set { _explicitNullValueCustomerPONumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerPONumber"); else _explicitNullProperties?.Remove("customerPONumber"); } }
+        private string _explicitNullValueCustomerPONumber = default!;
 #endif
         /// <summary>The orderNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderNumber { get; set; }
+        public string? OrderNumber { get => _explicitNullValueOrderNumber; set { _explicitNullValueOrderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderNumber"); else _explicitNullProperties?.Remove("orderNumber"); } }
+        private string? _explicitNullValueOrderNumber = default!;
 #nullable restore
 #else
-        public string OrderNumber { get; set; }
+        public string OrderNumber { get => _explicitNullValueOrderNumber; set { _explicitNullValueOrderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderNumber"); else _explicitNullProperties?.Remove("orderNumber"); } }
+        private string _explicitNullValueOrderNumber = default!;
 #endif
         /// <summary>The orderPlacedDate property</summary>
-        public DateTimeOffset? OrderPlacedDate { get; set; }
+        public DateTimeOffset? OrderPlacedDate { get => _explicitNullValueOrderPlacedDate; set { _explicitNullValueOrderPlacedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderPlacedDate"); else _explicitNullProperties?.Remove("orderPlacedDate"); } }
+        private DateTimeOffset? _explicitNullValueOrderPlacedDate = default!;
         /// <summary>Use this section to provide information about the shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetail>? ShipmentDetails { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetail>? ShipmentDetails { get => _explicitNullValueShipmentDetails; set { _explicitNullValueShipmentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentDetails"); else _explicitNullProperties?.Remove("shipmentDetails"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetail>? _explicitNullValueShipmentDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetail> ShipmentDetails { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetail> ShipmentDetails { get => _explicitNullValueShipmentDetails; set { _explicitNullValueShipmentDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentDetails"); else _explicitNullProperties?.Remove("shipmentDetails"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetail> _explicitNullValueShipmentDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.OrderDetails"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.OrderDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.OrderDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.OrderDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("orderNumber", OrderNumber);
             writer.WriteDateTimeOffsetValue("orderPlacedDate", OrderPlacedDate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetail>("shipmentDetails", ShipmentDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

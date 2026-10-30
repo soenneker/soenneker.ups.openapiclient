@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LocationSearchCriteriaSearchOption : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("OptionCode") is { } nullNodeOptionCode && nullNodeOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionCode = null;
+            if (parseNode.GetChildNode("OptionType") is { } nullNodeOptionType && nullNodeOptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionType = null;
+            if (parseNode.GetChildNode("Relation") is { } nullNodeRelation && nullNodeRelation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relation = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The OptionCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionCode>? OptionCode { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionCode>? OptionCode { get => _explicitNullValueOptionCode; set { _explicitNullValueOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionCode"); else _explicitNullProperties?.Remove("OptionCode"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionCode>? _explicitNullValueOptionCode = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionCode> OptionCode { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionCode> OptionCode { get => _explicitNullValueOptionCode; set { _explicitNullValueOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionCode"); else _explicitNullProperties?.Remove("OptionCode"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionCode> _explicitNullValueOptionCode = default!;
 #endif
         /// <summary>OptionType is a container that indicates the type of search for locations. There are 5 types of search. They are search by: Location, Retail Location, Additional Services, Program Type, and a Service Level Option. If search criteria by Location or Retail Location is not provided the default search of The UPS Store, UPS Center, UPS Drop Box, and Authorized Shipping Outlet location types will be performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionType? OptionType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionType? OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionType"); else _explicitNullProperties?.Remove("OptionType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionType? _explicitNullValueOptionType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionType OptionType { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionType OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionType"); else _explicitNullProperties?.Remove("OptionType"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionType _explicitNullValueOptionType = default!;
 #endif
         /// <summary>The relation container will contain the relation parameter (And/Or) that has to be used among multiple option codes in the location search. This is only applicable to option type Additional Services and Program Types. If this container is not present for Additional Services and Program Types, the default relation of And is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SearchOptionRelation? Relation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SearchOptionRelation? Relation { get => _explicitNullValueRelation; set { _explicitNullValueRelation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Relation"); else _explicitNullProperties?.Remove("Relation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SearchOptionRelation? _explicitNullValueRelation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SearchOptionRelation Relation { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.SearchOptionRelation Relation { get => _explicitNullValueRelation; set { _explicitNullValueRelation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Relation"); else _explicitNullProperties?.Remove("Relation"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.SearchOptionRelation _explicitNullValueRelation = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.LocationSearchCriteriaSearchOption(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionCode>("OptionCode", OptionCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionOptionType>("OptionType", OptionType);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SearchOptionRelation>("Relation", Relation);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

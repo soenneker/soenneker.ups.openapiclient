@@ -12,24 +12,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentServiceOptionsLabelDelivery : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("EMail") is { } nullNodeEMail && nullNodeEMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMail = null;
+            if (parseNode.GetChildNode("LabelLinksIndicator") is { } nullNodeLabelLinksIndicator && nullNodeLabelLinksIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelLinksIndicator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container for the email message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail? EMail { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail? EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail? _explicitNullValueEMail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail EMail { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail _explicitNullValueEMail = default!;
 #endif
         /// <summary>Indicates the Label and Receipt URLs are to be returned in the XML response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LabelLinksIndicator { get; set; }
+        public string? LabelLinksIndicator { get => _explicitNullValueLabelLinksIndicator; set { _explicitNullValueLabelLinksIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinksIndicator"); else _explicitNullProperties?.Remove("LabelLinksIndicator"); } }
+        private string? _explicitNullValueLabelLinksIndicator = default!;
 #nullable restore
 #else
-        public string LabelLinksIndicator { get; set; }
+        public string LabelLinksIndicator { get => _explicitNullValueLabelLinksIndicator; set { _explicitNullValueLabelLinksIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinksIndicator"); else _explicitNullProperties?.Remove("LabelLinksIndicator"); } }
+        private string _explicitNullValueLabelLinksIndicator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsLabelDelivery"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsLabelDelivery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsLabelDelivery();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsLabelDelivery(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail>("EMail", EMail);
             writer.WriteStringValue("LabelLinksIndicator", LabelLinksIndicator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

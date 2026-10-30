@@ -12,32 +12,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class QuantumViewQuantumViewRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Bookmark") is { } nullNodeBookmark && nullNodeBookmark.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bookmark = null;
+            if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("SubscriptionRequest") is { } nullNodeSubscriptionRequest && nullNodeSubscriptionRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionRequest = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Bookmarks the file for next retrieval. It is a base64Encoded String. It contains the combination of SubscriberID + SubscriptionName + File Name if the request is for all data. It contains SubscriberID  if the request is for unread data. When a response comes back with a bookmark it indicates that there is more data. To fetch the remaining data, the requester should come back with the bookmark added to the original request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Bookmark { get; set; }
+        public string? Bookmark { get => _explicitNullValueBookmark; set { _explicitNullValueBookmark = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bookmark"); else _explicitNullProperties?.Remove("Bookmark"); } }
+        private string? _explicitNullValueBookmark = default!;
 #nullable restore
 #else
-        public string Bookmark { get; set; }
+        public string Bookmark { get => _explicitNullValueBookmark; set { _explicitNullValueBookmark = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bookmark"); else _explicitNullProperties?.Remove("Bookmark"); } }
+        private string _explicitNullValueBookmark = default!;
 #endif
         /// <summary>Contains QuantumView request criteria components.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestRequest? Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestRequest? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestRequest Request { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestRequest _explicitNullValueRequest = default!;
 #endif
         /// <summary>The SubscriptionRequest property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestSubscriptionRequest>? SubscriptionRequest { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestSubscriptionRequest>? SubscriptionRequest { get => _explicitNullValueSubscriptionRequest; set { _explicitNullValueSubscriptionRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionRequest"); else _explicitNullProperties?.Remove("SubscriptionRequest"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestSubscriptionRequest>? _explicitNullValueSubscriptionRequest = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestSubscriptionRequest> SubscriptionRequest { get; set; }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestSubscriptionRequest> SubscriptionRequest { get => _explicitNullValueSubscriptionRequest; set { _explicitNullValueSubscriptionRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionRequest"); else _explicitNullProperties?.Remove("SubscriptionRequest"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestSubscriptionRequest> _explicitNullValueSubscriptionRequest = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequest"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("Bookmark", Bookmark);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestRequest>("Request", Request);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewRequestSubscriptionRequest>("SubscriptionRequest", SubscriptionRequest);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

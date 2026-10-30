@@ -61,6 +61,8 @@ namespace Soenneker.Ups.OpenApiClient.TimeInTransit.Shipments.Item.Transittimes
                 { "401", global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitResponse>(requestInfo, global::Soenneker.Ups.OpenApiClient.Models.TimeInTransitResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

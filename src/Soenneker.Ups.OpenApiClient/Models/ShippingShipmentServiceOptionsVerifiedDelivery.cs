@@ -12,40 +12,59 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShippingShipmentServiceOptionsVerifiedDelivery : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("RecipientEmail") is { } nullNodeRecipientEmail && nullNodeRecipientEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientEmail = null;
+            if (parseNode.GetChildNode("RecipientPhone") is { } nullNodeRecipientPhone && nullNodeRecipientPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientPhone = null;
+            if (parseNode.GetChildNode("SecurePINType") is { } nullNodeSecurePINType && nullNodeSecurePINType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurePINType = null;
+            if (parseNode.GetChildNode("TokenValue") is { } nullNodeTokenValue && nullNodeTokenValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies the recipient&apos;s email address for delivery notifications. This field is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientEmail { get; set; }
+        public string? RecipientEmail { get => _explicitNullValueRecipientEmail; set { _explicitNullValueRecipientEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecipientEmail"); else _explicitNullProperties?.Remove("RecipientEmail"); } }
+        private string? _explicitNullValueRecipientEmail = default!;
 #nullable restore
 #else
-        public string RecipientEmail { get; set; }
+        public string RecipientEmail { get => _explicitNullValueRecipientEmail; set { _explicitNullValueRecipientEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecipientEmail"); else _explicitNullProperties?.Remove("RecipientEmail"); } }
+        private string _explicitNullValueRecipientEmail = default!;
 #endif
         /// <summary>Recipient phone number for notifications. Valid characters are digits (0-9) only. This field is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientPhone { get; set; }
+        public string? RecipientPhone { get => _explicitNullValueRecipientPhone; set { _explicitNullValueRecipientPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecipientPhone"); else _explicitNullProperties?.Remove("RecipientPhone"); } }
+        private string? _explicitNullValueRecipientPhone = default!;
 #nullable restore
 #else
-        public string RecipientPhone { get; set; }
+        public string RecipientPhone { get => _explicitNullValueRecipientPhone; set { _explicitNullValueRecipientPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecipientPhone"); else _explicitNullProperties?.Remove("RecipientPhone"); } }
+        private string _explicitNullValueRecipientPhone = default!;
 #endif
         /// <summary>Specifies the type of Secure PIN. Valid value is 2, which represents VDS (Shipper Generated PIN). This field is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecurePINType { get; set; }
+        public string? SecurePINType { get => _explicitNullValueSecurePINType; set { _explicitNullValueSecurePINType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurePINType"); else _explicitNullProperties?.Remove("SecurePINType"); } }
+        private string? _explicitNullValueSecurePINType = default!;
 #nullable restore
 #else
-        public string SecurePINType { get; set; }
+        public string SecurePINType { get => _explicitNullValueSecurePINType; set { _explicitNullValueSecurePINType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurePINType"); else _explicitNullProperties?.Remove("SecurePINType"); } }
+        private string _explicitNullValueSecurePINType = default!;
 #endif
         /// <summary>This field is required and must contain a 32-character hexadecimal string, using only the characters 0-9 and A-F (case-insensitive).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TokenValue { get; set; }
+        public string? TokenValue { get => _explicitNullValueTokenValue; set { _explicitNullValueTokenValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TokenValue"); else _explicitNullProperties?.Remove("TokenValue"); } }
+        private string? _explicitNullValueTokenValue = default!;
 #nullable restore
 #else
-        public string TokenValue { get; set; }
+        public string TokenValue { get => _explicitNullValueTokenValue; set { _explicitNullValueTokenValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TokenValue"); else _explicitNullProperties?.Remove("TokenValue"); } }
+        private string _explicitNullValueTokenValue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("RecipientPhone", RecipientPhone);
             writer.WriteStringValue("SecurePINType", SecurePINType);
             writer.WriteStringValue("TokenValue", TokenValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

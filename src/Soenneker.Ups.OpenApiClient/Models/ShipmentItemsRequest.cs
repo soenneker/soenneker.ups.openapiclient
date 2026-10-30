@@ -12,57 +12,87 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentItemsRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amountValue") is { } nullNodeAmountValue && nullNodeAmountValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountValue = null;
+            if (parseNode.GetChildNode("commodityId") is { } nullNodeCommodityId && nullNodeCommodityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityId = null;
+            if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("eccn") is { } nullNodeEccn && nullNodeEccn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eccn = null;
+            if (parseNode.GetChildNode("hsCode") is { } nullNodeHsCode && nullNodeHsCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsCode = null;
+            if (parseNode.GetChildNode("originCountryCode") is { } nullNodeOriginCountryCode && nullNodeOriginCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginCountryCode = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("UOM") is { } nullNodeUOM && nullNodeUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UOM = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total value of the items in the shipment.</summary>
-        public double? AmountValue { get; set; }
+        public double? AmountValue { get => _explicitNullValueAmountValue; set { _explicitNullValueAmountValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountValue"); else _explicitNullProperties?.Remove("amountValue"); } }
+        private double? _explicitNullValueAmountValue = default!;
         /// <summary>The commodity ID returned in the Import Export Compliance report.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityId { get; set; }
+        public string? CommodityId { get => _explicitNullValueCommodityId; set { _explicitNullValueCommodityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityId"); else _explicitNullProperties?.Remove("commodityId"); } }
+        private string? _explicitNullValueCommodityId = default!;
 #nullable restore
 #else
-        public string CommodityId { get; set; }
+        public string CommodityId { get => _explicitNullValueCommodityId; set { _explicitNullValueCommodityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityId"); else _explicitNullProperties?.Remove("commodityId"); } }
+        private string _explicitNullValueCommodityId = default!;
 #endif
         /// <summary>The three-letter code that represents the currency used to value the items in the shipment.| Supported enum values        || :--------------------------- || `ARS`&lt;br&gt;Argentine Peso      || `AUD`&lt;br&gt;Australian Dollar   || `BRL`&lt;br&gt;Brazilian Real      || `CAD`&lt;br&gt;Canadian Dollar     || `CHF`&lt;br&gt;Swiss Franc         || `CLP`&lt;br&gt;Chilean Peso        || `CNY`&lt;br&gt;Chinese Yuan        || `CRC`&lt;br&gt;Costa Rican Colon   || `DKK`&lt;br&gt;Danish Krone        || `DOP`&lt;br&gt;Dominican Peso      || `EUR`&lt;br&gt;Euro                || `GBP`&lt;br&gt;Great Britain Pound || `HKD`&lt;br&gt;Hong Kong Dollar    || `INR`&lt;br&gt;India Rupee         || `JPY`&lt;br&gt;Japanese Yen        || `KRW`&lt;br&gt;Korean Won          || `MXN`&lt;br&gt;Mexican Peso        || `MYR`&lt;br&gt;Malaysian Ringgit   || `NOK`&lt;br&gt;Norwegian Kroner    || `NZD`&lt;br&gt;New Zealand Dollar  || `PEN`&lt;br&gt;Peruvian Nuevo Sol  || `PHP`&lt;br&gt;Philippine Peso     || `PLN`&lt;br&gt;Polish Zloty        || `SEK`&lt;br&gt;Swedish Krona       || `SGD`&lt;br&gt;Singapore Dollar    || `THB`&lt;br&gt;Thai Baht           || `TWD`&lt;br&gt;Taiwan Dollar       || `USD`&lt;br&gt;US Dollar           || `VEB`&lt;br&gt;Venezuelan Bolivar  |</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestCurrencyCode? CurrencyCode { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestCurrencyCode? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestCurrencyCode? _explicitNullValueCurrencyCode = default!;
         /// <summary>A description of the shipment item listed in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The [US Export Commodity Control Number (ECCN)](https://www.bis.doc.gov/index.php/licensing/commerce-control-list-classification/export-control-classification-number-eccn)a key identifier used in the export control system.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Eccn { get; set; }
+        public string? Eccn { get => _explicitNullValueEccn; set { _explicitNullValueEccn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eccn"); else _explicitNullProperties?.Remove("eccn"); } }
+        private string? _explicitNullValueEccn = default!;
 #nullable restore
 #else
-        public string Eccn { get; set; }
+        public string Eccn { get => _explicitNullValueEccn; set { _explicitNullValueEccn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eccn"); else _explicitNullProperties?.Remove("eccn"); } }
+        private string _explicitNullValueEccn = default!;
 #endif
         /// <summary>The [Harmonized System (HS) code](https://www.trade.gov/harmonized-system-hs-codes). Used commonly throughout the export process for goods, the Harmonized System is a standardized numerical method of classifying traded products. It is used by customs authorities to identify products when assessing duties and taxes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsCode { get; set; }
+        public string? HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hsCode"); else _explicitNullProperties?.Remove("hsCode"); } }
+        private string? _explicitNullValueHsCode = default!;
 #nullable restore
 #else
-        public string HsCode { get; set; }
+        public string HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hsCode"); else _explicitNullProperties?.Remove("hsCode"); } }
+        private string _explicitNullValueHsCode = default!;
 #endif
         /// <summary>The &lt;a href=&quot;https://developer.ups.com/api/reference/shipping/appendix1&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;two-letter identification code&lt;/a&gt; for countries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginCountryCode { get; set; }
+        public string? OriginCountryCode { get => _explicitNullValueOriginCountryCode; set { _explicitNullValueOriginCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originCountryCode"); else _explicitNullProperties?.Remove("originCountryCode"); } }
+        private string? _explicitNullValueOriginCountryCode = default!;
 #nullable restore
 #else
-        public string OriginCountryCode { get; set; }
+        public string OriginCountryCode { get => _explicitNullValueOriginCountryCode; set { _explicitNullValueOriginCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originCountryCode"); else _explicitNullProperties?.Remove("originCountryCode"); } }
+        private string _explicitNullValueOriginCountryCode = default!;
 #endif
         /// <summary>The total number of items shipped.</summary>
-        public double? Quantity { get; set; }
+        public double? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private double? _explicitNullValueQuantity = default!;
         /// <summary>The unit of measurement for the quantity of shipment items</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom? UOM { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom? UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom? _explicitNullValueUOM = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest"/> and sets the default values.
         /// </summary>
@@ -78,7 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -115,6 +145,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("originCountryCode", OriginCountryCode);
             writer.WriteDoubleValue("quantity", Quantity);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentItemsRequestUom>("UOM", UOM);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

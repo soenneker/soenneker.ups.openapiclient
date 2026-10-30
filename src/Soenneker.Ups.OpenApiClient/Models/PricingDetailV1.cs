@@ -11,44 +11,67 @@ namespace Soenneker.Ups.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PricingDetailV1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actualTotalPrice") is { } nullNodeActualTotalPrice && nullNodeActualTotalPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualTotalPrice = null;
+            if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("discountDetail") is { } nullNodeDiscountDetail && nullNodeDiscountDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountDetail = null;
+            if (parseNode.GetChildNode("netTotalPrice") is { } nullNodeNetTotalPrice && nullNodeNetTotalPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetTotalPrice = null;
+            if (parseNode.GetChildNode("rateDescription") is { } nullNodeRateDescription && nullNodeRateDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateDescription = null;
+            if (parseNode.GetChildNode("rateType") is { } nullNodeRateType && nullNodeRateType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateType = null;
+        }
+
         /// <summary>The actualTotalPrice property</summary>
-        public double? ActualTotalPrice { get; set; }
+        public double? ActualTotalPrice { get => _explicitNullValueActualTotalPrice; set { _explicitNullValueActualTotalPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualTotalPrice"); else _explicitNullProperties?.Remove("actualTotalPrice"); } }
+        private double? _explicitNullValueActualTotalPrice = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currencyCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get; set; }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get; set; }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>The discountDetail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DiscountDetailV1? DiscountDetail { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DiscountDetailV1? DiscountDetail { get => _explicitNullValueDiscountDetail; set { _explicitNullValueDiscountDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountDetail"); else _explicitNullProperties?.Remove("discountDetail"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DiscountDetailV1? _explicitNullValueDiscountDetail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DiscountDetailV1 DiscountDetail { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.DiscountDetailV1 DiscountDetail { get => _explicitNullValueDiscountDetail; set { _explicitNullValueDiscountDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountDetail"); else _explicitNullProperties?.Remove("discountDetail"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DiscountDetailV1 _explicitNullValueDiscountDetail = default!;
 #endif
         /// <summary>The netTotalPrice property</summary>
-        public double? NetTotalPrice { get; set; }
+        public double? NetTotalPrice { get => _explicitNullValueNetTotalPrice; set { _explicitNullValueNetTotalPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("netTotalPrice"); else _explicitNullProperties?.Remove("netTotalPrice"); } }
+        private double? _explicitNullValueNetTotalPrice = default!;
         /// <summary>The rateDescription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RateDescription { get; set; }
+        public string? RateDescription { get => _explicitNullValueRateDescription; set { _explicitNullValueRateDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateDescription"); else _explicitNullProperties?.Remove("rateDescription"); } }
+        private string? _explicitNullValueRateDescription = default!;
 #nullable restore
 #else
-        public string RateDescription { get; set; }
+        public string RateDescription { get => _explicitNullValueRateDescription; set { _explicitNullValueRateDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateDescription"); else _explicitNullProperties?.Remove("rateDescription"); } }
+        private string _explicitNullValueRateDescription = default!;
 #endif
         /// <summary>The rateType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RateType { get; set; }
+        public string? RateType { get => _explicitNullValueRateType; set { _explicitNullValueRateType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateType"); else _explicitNullProperties?.Remove("rateType"); } }
+        private string? _explicitNullValueRateType = default!;
 #nullable restore
 #else
-        public string RateType { get; set; }
+        public string RateType { get => _explicitNullValueRateType; set { _explicitNullValueRateType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateType"); else _explicitNullProperties?.Remove("rateType"); } }
+        private string _explicitNullValueRateType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.PricingDetailV1"/> and sets the default values.
@@ -65,7 +88,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.PricingDetailV1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.PricingDetailV1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.PricingDetailV1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteDoubleValue("netTotalPrice", NetTotalPrice);
             writer.WriteStringValue("rateDescription", RateDescription);
             writer.WriteStringValue("rateType", RateType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

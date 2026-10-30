@@ -12,50 +12,74 @@ namespace Soenneker.Ups.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TradeDirectChild : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("HazMatIndicator") is { } nullNodeHazMatIndicator && nullNodeHazMatIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazMatIndicator = null;
+            if (parseNode.GetChildNode("LtlCharges") is { } nullNodeLtlCharges && nullNodeLtlCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LtlCharges = null;
+            if (parseNode.GetChildNode("LtlPackage") is { } nullNodeLtlPackage && nullNodeLtlPackage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LtlPackage = null;
+            if (parseNode.GetChildNode("Product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("USI") is { } nullNodeUSI && nullNodeUSI.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) USI = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates the Presence/Absence of HazMat on the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HazMatIndicator { get; set; }
+        public string? HazMatIndicator { get => _explicitNullValueHazMatIndicator; set { _explicitNullValueHazMatIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMatIndicator"); else _explicitNullProperties?.Remove("HazMatIndicator"); } }
+        private string? _explicitNullValueHazMatIndicator = default!;
 #nullable restore
 #else
-        public string HazMatIndicator { get; set; }
+        public string HazMatIndicator { get => _explicitNullValueHazMatIndicator; set { _explicitNullValueHazMatIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMatIndicator"); else _explicitNullProperties?.Remove("HazMatIndicator"); } }
+        private string _explicitNullValueHazMatIndicator = default!;
 #endif
         /// <summary>Represents transportation charges for child shipments categorized as &quot;Less than Truck Load&quot; (LTL), including freight, fuel surcharges, and accessorial fees. These charges are calculated based on shipment weight, volume, or distance. Applicable only for LTL child.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges? LtlCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges? LtlCharges { get => _explicitNullValueLtlCharges; set { _explicitNullValueLtlCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LtlCharges"); else _explicitNullProperties?.Remove("LtlCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges? _explicitNullValueLtlCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges LtlCharges { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges LtlCharges { get => _explicitNullValueLtlCharges; set { _explicitNullValueLtlCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LtlCharges"); else _explicitNullProperties?.Remove("LtlCharges"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChildLtlCharges _explicitNullValueLtlCharges = default!;
 #endif
         /// <summary>LTL package information. Applicable only for LTL child.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage? LtlPackage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage? LtlPackage { get => _explicitNullValueLtlPackage; set { _explicitNullValueLtlPackage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LtlPackage"); else _explicitNullProperties?.Remove("LtlPackage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage? _explicitNullValueLtlPackage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage LtlPackage { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage LtlPackage { get => _explicitNullValueLtlPackage; set { _explicitNullValueLtlPackage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LtlPackage"); else _explicitNullProperties?.Remove("LtlPackage"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChildLtlPackage _explicitNullValueLtlPackage = default!;
 #endif
         /// <summary>This variable represents the product details. It is used to provide information about the product being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildProduct? Product { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildProduct? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Product"); else _explicitNullProperties?.Remove("Product"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChildProduct? _explicitNullValueProduct = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChildProduct Product { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChildProduct Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Product"); else _explicitNullProperties?.Remove("Product"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ChildProduct _explicitNullValueProduct = default!;
 #endif
         /// <summary>The type of shipment. Valid values:- LTL - SMALLPACKAGE - MI</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChildType? Type { get; set; }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChildType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChildType? _explicitNullValueType = default!;
         /// <summary>The unique shipment identifier (USI) is used to create Master, LTL and Child shipments. Used for Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? USI { get; set; }
+        public string? USI { get => _explicitNullValueUSI; set { _explicitNullValueUSI = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USI"); else _explicitNullProperties?.Remove("USI"); } }
+        private string? _explicitNullValueUSI = default!;
 #nullable restore
 #else
-        public string USI { get; set; }
+        public string USI { get => _explicitNullValueUSI; set { _explicitNullValueUSI = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USI"); else _explicitNullProperties?.Remove("USI"); } }
+        private string _explicitNullValueUSI = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild"/> and sets the default values.
@@ -72,7 +96,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public static global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChild(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,6 +127,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChildProduct>("Product", Product);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectChildType>("Type", Type);
             writer.WriteStringValue("USI", USI);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
