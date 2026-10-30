@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("shipmentNumber") is { } nullNodeShipmentNumber && nullNodeShipmentNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentNumber = null;
-            if (parseNode.GetChildNode("shipperAccountNumber") is { } nullNodeShipperAccountNumber && nullNodeShipperAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccountNumber = null;
-            if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("shipmentNumber") is null) { _explicitNullValueShipmentNumber = default!; _explicitNullProperties?.Remove("shipmentNumber"); }
+            else if (parseNode.GetChildNode("shipmentNumber") is { } nullNodeShipmentNumber && nullNodeShipmentNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentNumber = null;
+            if (parseNode.GetChildNode("shipperAccountNumber") is null) { _explicitNullValueShipperAccountNumber = default!; _explicitNullProperties?.Remove("shipperAccountNumber"); }
+            else if (parseNode.GetChildNode("shipperAccountNumber") is { } nullNodeShipperAccountNumber && nullNodeShipperAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccountNumber = null;
+            if (parseNode.GetChildNode("warnings") is null) { _explicitNullValueWarnings = default!; _explicitNullProperties?.Remove("warnings"); }
+            else if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>Unique identifier for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentNumber { get => _explicitNullValueShipmentNumber; set { _explicitNullValueShipmentNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentNumber"); else _explicitNullProperties?.Remove("shipmentNumber"); } }
+        public string? ShipmentNumber { get => _explicitNullValueShipmentNumber; set { _explicitNullValueShipmentNumber = value; AdditionalData?.Remove("shipmentNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentNumber"); else _explicitNullProperties?.Remove("shipmentNumber"); } }
         private string? _explicitNullValueShipmentNumber = default!;
 #nullable restore
 #else
-        public string ShipmentNumber { get => _explicitNullValueShipmentNumber; set { _explicitNullValueShipmentNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentNumber"); else _explicitNullProperties?.Remove("shipmentNumber"); } }
+        public string ShipmentNumber { get => _explicitNullValueShipmentNumber; set { _explicitNullValueShipmentNumber = value; AdditionalData?.Remove("shipmentNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentNumber"); else _explicitNullProperties?.Remove("shipmentNumber"); } }
         private string _explicitNullValueShipmentNumber = default!;
 #endif
         /// <summary>The UPS Freight Account Number that identifies the Shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        public string? ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; AdditionalData?.Remove("shipperAccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
         private string? _explicitNullValueShipperAccountNumber = default!;
 #nullable restore
 #else
-        public string ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        public string ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; AdditionalData?.Remove("shipperAccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
         private string _explicitNullValueShipperAccountNumber = default!;
 #endif
         /// <summary>Unbounded array containing one or more warning objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> _explicitNullValueWarnings = default!;
 #endif
         /// <summary>

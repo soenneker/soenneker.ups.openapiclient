@@ -18,13 +18,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CN22Content") is { } nullNodeCN22Content && nullNodeCN22Content.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22Content = null;
-            if (parseNode.GetChildNode("CN22OtherDescription") is { } nullNodeCN22OtherDescription && nullNodeCN22OtherDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22OtherDescription = null;
-            if (parseNode.GetChildNode("CN22Type") is { } nullNodeCN22Type && nullNodeCN22Type.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22Type = null;
-            if (parseNode.GetChildNode("FoldHereText") is { } nullNodeFoldHereText && nullNodeFoldHereText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FoldHereText = null;
-            if (parseNode.GetChildNode("LabelPrintType") is { } nullNodeLabelPrintType && nullNodeLabelPrintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelPrintType = null;
-            if (parseNode.GetChildNode("LabelSize") is { } nullNodeLabelSize && nullNodeLabelSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelSize = null;
-            if (parseNode.GetChildNode("PrintsPerPage") is { } nullNodePrintsPerPage && nullNodePrintsPerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintsPerPage = null;
+            if (parseNode.GetChildNode("CN22Content") is null) { _explicitNullValueCN22Content = default!; _explicitNullProperties?.Remove("CN22Content"); }
+            else if (parseNode.GetChildNode("CN22Content") is { } nullNodeCN22Content && nullNodeCN22Content.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22Content = null;
+            if (parseNode.GetChildNode("CN22OtherDescription") is null) { _explicitNullValueCN22OtherDescription = default!; _explicitNullProperties?.Remove("CN22OtherDescription"); }
+            else if (parseNode.GetChildNode("CN22OtherDescription") is { } nullNodeCN22OtherDescription && nullNodeCN22OtherDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22OtherDescription = null;
+            if (parseNode.GetChildNode("CN22Type") is null) { _explicitNullValueCN22Type = default!; _explicitNullProperties?.Remove("CN22Type"); }
+            else if (parseNode.GetChildNode("CN22Type") is { } nullNodeCN22Type && nullNodeCN22Type.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22Type = null;
+            if (parseNode.GetChildNode("FoldHereText") is null) { _explicitNullValueFoldHereText = default!; _explicitNullProperties?.Remove("FoldHereText"); }
+            else if (parseNode.GetChildNode("FoldHereText") is { } nullNodeFoldHereText && nullNodeFoldHereText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FoldHereText = null;
+            if (parseNode.GetChildNode("LabelPrintType") is null) { _explicitNullValueLabelPrintType = default!; _explicitNullProperties?.Remove("LabelPrintType"); }
+            else if (parseNode.GetChildNode("LabelPrintType") is { } nullNodeLabelPrintType && nullNodeLabelPrintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelPrintType = null;
+            if (parseNode.GetChildNode("LabelSize") is null) { _explicitNullValueLabelSize = default!; _explicitNullProperties?.Remove("LabelSize"); }
+            else if (parseNode.GetChildNode("LabelSize") is { } nullNodeLabelSize && nullNodeLabelSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelSize = null;
+            if (parseNode.GetChildNode("PrintsPerPage") is null) { _explicitNullValuePrintsPerPage = default!; _explicitNullProperties?.Remove("PrintsPerPage"); }
+            else if (parseNode.GetChildNode("PrintsPerPage") is { } nullNodePrintsPerPage && nullNodePrintsPerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintsPerPage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,71 +39,71 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The CN22Content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content>? CN22Content { get => _explicitNullValueCN22Content; set { _explicitNullValueCN22Content = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Content"); else _explicitNullProperties?.Remove("CN22Content"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content>? CN22Content { get => _explicitNullValueCN22Content; set { _explicitNullValueCN22Content = value; AdditionalData?.Remove("CN22Content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Content"); else _explicitNullProperties?.Remove("CN22Content"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content>? _explicitNullValueCN22Content = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content> CN22Content { get => _explicitNullValueCN22Content; set { _explicitNullValueCN22Content = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Content"); else _explicitNullProperties?.Remove("CN22Content"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content> CN22Content { get => _explicitNullValueCN22Content; set { _explicitNullValueCN22Content = value; AdditionalData?.Remove("CN22Content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Content"); else _explicitNullProperties?.Remove("CN22Content"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content> _explicitNullValueCN22Content = default!;
 #endif
         /// <summary>Required if CN22Type is OTHER.  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22OtherDescription { get => _explicitNullValueCN22OtherDescription; set { _explicitNullValueCN22OtherDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22OtherDescription"); else _explicitNullProperties?.Remove("CN22OtherDescription"); } }
+        public string? CN22OtherDescription { get => _explicitNullValueCN22OtherDescription; set { _explicitNullValueCN22OtherDescription = value; AdditionalData?.Remove("CN22OtherDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22OtherDescription"); else _explicitNullProperties?.Remove("CN22OtherDescription"); } }
         private string? _explicitNullValueCN22OtherDescription = default!;
 #nullable restore
 #else
-        public string CN22OtherDescription { get => _explicitNullValueCN22OtherDescription; set { _explicitNullValueCN22OtherDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22OtherDescription"); else _explicitNullProperties?.Remove("CN22OtherDescription"); } }
+        public string CN22OtherDescription { get => _explicitNullValueCN22OtherDescription; set { _explicitNullValueCN22OtherDescription = value; AdditionalData?.Remove("CN22OtherDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22OtherDescription"); else _explicitNullProperties?.Remove("CN22OtherDescription"); } }
         private string _explicitNullValueCN22OtherDescription = default!;
 #endif
         /// <summary>Valid values: 1 = GIFT2 = DOCUMENTS3 = COMMERCIAL SAMPLE4 = OTHER  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CN22Type { get => _explicitNullValueCN22Type; set { _explicitNullValueCN22Type = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Type"); else _explicitNullProperties?.Remove("CN22Type"); } }
+        public string? CN22Type { get => _explicitNullValueCN22Type; set { _explicitNullValueCN22Type = value; AdditionalData?.Remove("CN22Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Type"); else _explicitNullProperties?.Remove("CN22Type"); } }
         private string? _explicitNullValueCN22Type = default!;
 #nullable restore
 #else
-        public string CN22Type { get => _explicitNullValueCN22Type; set { _explicitNullValueCN22Type = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Type"); else _explicitNullProperties?.Remove("CN22Type"); } }
+        public string CN22Type { get => _explicitNullValueCN22Type; set { _explicitNullValueCN22Type = value; AdditionalData?.Remove("CN22Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Type"); else _explicitNullProperties?.Remove("CN22Type"); } }
         private string _explicitNullValueCN22Type = default!;
 #endif
         /// <summary>String will replace default &quot;Fold Here&quot; text displayed on the label.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FoldHereText { get => _explicitNullValueFoldHereText; set { _explicitNullValueFoldHereText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FoldHereText"); else _explicitNullProperties?.Remove("FoldHereText"); } }
+        public string? FoldHereText { get => _explicitNullValueFoldHereText; set { _explicitNullValueFoldHereText = value; AdditionalData?.Remove("FoldHereText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FoldHereText"); else _explicitNullProperties?.Remove("FoldHereText"); } }
         private string? _explicitNullValueFoldHereText = default!;
 #nullable restore
 #else
-        public string FoldHereText { get => _explicitNullValueFoldHereText; set { _explicitNullValueFoldHereText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FoldHereText"); else _explicitNullProperties?.Remove("FoldHereText"); } }
+        public string FoldHereText { get => _explicitNullValueFoldHereText; set { _explicitNullValueFoldHereText = value; AdditionalData?.Remove("FoldHereText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FoldHereText"); else _explicitNullProperties?.Remove("FoldHereText"); } }
         private string _explicitNullValueFoldHereText = default!;
 #endif
         /// <summary>Valid Values are pdf, png, gif, zpl, star, epl2 and spl.  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LabelPrintType { get => _explicitNullValueLabelPrintType; set { _explicitNullValueLabelPrintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelPrintType"); else _explicitNullProperties?.Remove("LabelPrintType"); } }
+        public string? LabelPrintType { get => _explicitNullValueLabelPrintType; set { _explicitNullValueLabelPrintType = value; AdditionalData?.Remove("LabelPrintType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelPrintType"); else _explicitNullProperties?.Remove("LabelPrintType"); } }
         private string? _explicitNullValueLabelPrintType = default!;
 #nullable restore
 #else
-        public string LabelPrintType { get => _explicitNullValueLabelPrintType; set { _explicitNullValueLabelPrintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelPrintType"); else _explicitNullProperties?.Remove("LabelPrintType"); } }
+        public string LabelPrintType { get => _explicitNullValueLabelPrintType; set { _explicitNullValueLabelPrintType = value; AdditionalData?.Remove("LabelPrintType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelPrintType"); else _explicitNullProperties?.Remove("LabelPrintType"); } }
         private string _explicitNullValueLabelPrintType = default!;
 #endif
         /// <summary>Provide the valid values: 6 = 4X61 = 8.5X11  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LabelSize { get => _explicitNullValueLabelSize; set { _explicitNullValueLabelSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelSize"); else _explicitNullProperties?.Remove("LabelSize"); } }
+        public string? LabelSize { get => _explicitNullValueLabelSize; set { _explicitNullValueLabelSize = value; AdditionalData?.Remove("LabelSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelSize"); else _explicitNullProperties?.Remove("LabelSize"); } }
         private string? _explicitNullValueLabelSize = default!;
 #nullable restore
 #else
-        public string LabelSize { get => _explicitNullValueLabelSize; set { _explicitNullValueLabelSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelSize"); else _explicitNullProperties?.Remove("LabelSize"); } }
+        public string LabelSize { get => _explicitNullValueLabelSize; set { _explicitNullValueLabelSize = value; AdditionalData?.Remove("LabelSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelSize"); else _explicitNullProperties?.Remove("LabelSize"); } }
         private string _explicitNullValueLabelSize = default!;
 #endif
         /// <summary>Number of label per page. Currently 1 per page is supported.  Required if the CN22 form container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrintsPerPage { get => _explicitNullValuePrintsPerPage; set { _explicitNullValuePrintsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintsPerPage"); else _explicitNullProperties?.Remove("PrintsPerPage"); } }
+        public string? PrintsPerPage { get => _explicitNullValuePrintsPerPage; set { _explicitNullValuePrintsPerPage = value; AdditionalData?.Remove("PrintsPerPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintsPerPage"); else _explicitNullProperties?.Remove("PrintsPerPage"); } }
         private string? _explicitNullValuePrintsPerPage = default!;
 #nullable restore
 #else
-        public string PrintsPerPage { get => _explicitNullValuePrintsPerPage; set { _explicitNullValuePrintsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintsPerPage"); else _explicitNullProperties?.Remove("PrintsPerPage"); } }
+        public string PrintsPerPage { get => _explicitNullValuePrintsPerPage; set { _explicitNullValuePrintsPerPage = value; AdditionalData?.Remove("PrintsPerPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintsPerPage"); else _explicitNullProperties?.Remove("PrintsPerPage"); } }
         private string _explicitNullValuePrintsPerPage = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("BeginDate") is { } nullNodeBeginDate && nullNodeBeginDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeginDate = null;
-            if (parseNode.GetChildNode("EndDate") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("BeginDate") is null) { _explicitNullValueBeginDate = default!; _explicitNullProperties?.Remove("BeginDate"); }
+            else if (parseNode.GetChildNode("BeginDate") is { } nullNodeBeginDate && nullNodeBeginDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BeginDate = null;
+            if (parseNode.GetChildNode("EndDate") is null) { _explicitNullValueEndDate = default!; _explicitNullProperties?.Remove("EndDate"); }
+            else if (parseNode.GetChildNode("EndDate") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Begin date of the blanket period. It is the date upon which the Certificate becomes applicable to the good covered by the blanket Certificate (it may be prior to the date of signing this Certificate).  Applies to USMCA form only. Required for USMCA. Format is yyyyMMdd. This is not valid for a paperless shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BeginDate { get => _explicitNullValueBeginDate; set { _explicitNullValueBeginDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BeginDate"); else _explicitNullProperties?.Remove("BeginDate"); } }
+        public string? BeginDate { get => _explicitNullValueBeginDate; set { _explicitNullValueBeginDate = value; AdditionalData?.Remove("BeginDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BeginDate"); else _explicitNullProperties?.Remove("BeginDate"); } }
         private string? _explicitNullValueBeginDate = default!;
 #nullable restore
 #else
-        public string BeginDate { get => _explicitNullValueBeginDate; set { _explicitNullValueBeginDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BeginDate"); else _explicitNullProperties?.Remove("BeginDate"); } }
+        public string BeginDate { get => _explicitNullValueBeginDate; set { _explicitNullValueBeginDate = value; AdditionalData?.Remove("BeginDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BeginDate"); else _explicitNullProperties?.Remove("BeginDate"); } }
         private string _explicitNullValueBeginDate = default!;
 #endif
         /// <summary>End Date of the blanket period. It is the date upon which the blanket period expires.  Applies to USMCA form only. Required for USMCA CO. Format is yyyyMMdd.  This is not valid for a paperless shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndDate"); else _explicitNullProperties?.Remove("EndDate"); } }
+        public string? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("EndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndDate"); else _explicitNullProperties?.Remove("EndDate"); } }
         private string? _explicitNullValueEndDate = default!;
 #nullable restore
 #else
-        public string EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndDate"); else _explicitNullProperties?.Remove("EndDate"); } }
+        public string EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("EndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndDate"); else _explicitNullProperties?.Remove("EndDate"); } }
         private string _explicitNullValueEndDate = default!;
 #endif
         /// <summary>

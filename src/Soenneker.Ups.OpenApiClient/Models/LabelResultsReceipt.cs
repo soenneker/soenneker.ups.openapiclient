@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("HTMLImage") is { } nullNodeHTMLImage && nullNodeHTMLImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HTMLImage = null;
-            if (parseNode.GetChildNode("Image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
-            if (parseNode.GetChildNode("URL") is { } nullNodeURL && nullNodeURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) URL = null;
+            if (parseNode.GetChildNode("HTMLImage") is null) { _explicitNullValueHTMLImage = default!; _explicitNullProperties?.Remove("HTMLImage"); }
+            else if (parseNode.GetChildNode("HTMLImage") is { } nullNodeHTMLImage && nullNodeHTMLImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HTMLImage = null;
+            if (parseNode.GetChildNode("Image") is null) { _explicitNullValueImage = default!; _explicitNullProperties?.Remove("Image"); }
+            else if (parseNode.GetChildNode("Image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
+            if (parseNode.GetChildNode("URL") is null) { _explicitNullValueURL = default!; _explicitNullProperties?.Remove("URL"); }
+            else if (parseNode.GetChildNode("URL") is { } nullNodeURL && nullNodeURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) URL = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Base 64 encoded html browser image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HTMLImage { get => _explicitNullValueHTMLImage; set { _explicitNullValueHTMLImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTMLImage"); else _explicitNullProperties?.Remove("HTMLImage"); } }
+        public string? HTMLImage { get => _explicitNullValueHTMLImage; set { _explicitNullValueHTMLImage = value; AdditionalData?.Remove("HTMLImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTMLImage"); else _explicitNullProperties?.Remove("HTMLImage"); } }
         private string? _explicitNullValueHTMLImage = default!;
 #nullable restore
 #else
-        public string HTMLImage { get => _explicitNullValueHTMLImage; set { _explicitNullValueHTMLImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTMLImage"); else _explicitNullProperties?.Remove("HTMLImage"); } }
+        public string HTMLImage { get => _explicitNullValueHTMLImage; set { _explicitNullValueHTMLImage = value; AdditionalData?.Remove("HTMLImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HTMLImage"); else _explicitNullProperties?.Remove("HTMLImage"); } }
         private string _explicitNullValueHTMLImage = default!;
 #endif
         /// <summary>Container for the receipt in the format other than HTML.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ReceiptImage? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Image"); else _explicitNullProperties?.Remove("Image"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ReceiptImage? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("Image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Image"); else _explicitNullProperties?.Remove("Image"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ReceiptImage? _explicitNullValueImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ReceiptImage Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Image"); else _explicitNullProperties?.Remove("Image"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ReceiptImage Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("Image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Image"); else _explicitNullProperties?.Remove("Image"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ReceiptImage _explicitNullValueImage = default!;
 #endif
         /// <summary>Receipt&apos;s url  Applicable for following types of shipments:Print/Electronic Return LabelPrint/Electronic Import Control Label</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? URL { get => _explicitNullValueURL; set { _explicitNullValueURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("URL"); else _explicitNullProperties?.Remove("URL"); } }
+        public string? URL { get => _explicitNullValueURL; set { _explicitNullValueURL = value; AdditionalData?.Remove("URL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("URL"); else _explicitNullProperties?.Remove("URL"); } }
         private string? _explicitNullValueURL = default!;
 #nullable restore
 #else
-        public string URL { get => _explicitNullValueURL; set { _explicitNullValueURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("URL"); else _explicitNullProperties?.Remove("URL"); } }
+        public string URL { get => _explicitNullValueURL; set { _explicitNullValueURL = value; AdditionalData?.Remove("URL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("URL"); else _explicitNullProperties?.Remove("URL"); } }
         private string _explicitNullValueURL = default!;
 #endif
         /// <summary>

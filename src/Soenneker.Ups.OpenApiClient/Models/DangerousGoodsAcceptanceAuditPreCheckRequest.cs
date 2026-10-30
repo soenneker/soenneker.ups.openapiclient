@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("OriginRecordTransactionTimestamp") is { } nullNodeOriginRecordTransactionTimestamp && nullNodeOriginRecordTransactionTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginRecordTransactionTimestamp = null;
-            if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
-            if (parseNode.GetChildNode("Shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("OriginRecordTransactionTimestamp") is null) { _explicitNullValueOriginRecordTransactionTimestamp = default!; _explicitNullProperties?.Remove("OriginRecordTransactionTimestamp"); }
+            else if (parseNode.GetChildNode("OriginRecordTransactionTimestamp") is { } nullNodeOriginRecordTransactionTimestamp && nullNodeOriginRecordTransactionTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginRecordTransactionTimestamp = null;
+            if (parseNode.GetChildNode("Request") is null) { _explicitNullValueRequest = default!; _explicitNullProperties?.Remove("Request"); }
+            else if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("Shipment") is null) { _explicitNullValueShipment = default!; _explicitNullProperties?.Remove("Shipment"); }
+            else if (parseNode.GetChildNode("Shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The time that the request was made from the originating system. UTC time down to milliseconds. Example: 2016-07-14T12:01:33.999</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginRecordTransactionTimestamp { get => _explicitNullValueOriginRecordTransactionTimestamp; set { _explicitNullValueOriginRecordTransactionTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRecordTransactionTimestamp"); else _explicitNullProperties?.Remove("OriginRecordTransactionTimestamp"); } }
+        public string? OriginRecordTransactionTimestamp { get => _explicitNullValueOriginRecordTransactionTimestamp; set { _explicitNullValueOriginRecordTransactionTimestamp = value; AdditionalData?.Remove("OriginRecordTransactionTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRecordTransactionTimestamp"); else _explicitNullProperties?.Remove("OriginRecordTransactionTimestamp"); } }
         private string? _explicitNullValueOriginRecordTransactionTimestamp = default!;
 #nullable restore
 #else
-        public string OriginRecordTransactionTimestamp { get => _explicitNullValueOriginRecordTransactionTimestamp; set { _explicitNullValueOriginRecordTransactionTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRecordTransactionTimestamp"); else _explicitNullProperties?.Remove("OriginRecordTransactionTimestamp"); } }
+        public string OriginRecordTransactionTimestamp { get => _explicitNullValueOriginRecordTransactionTimestamp; set { _explicitNullValueOriginRecordTransactionTimestamp = value; AdditionalData?.Remove("OriginRecordTransactionTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRecordTransactionTimestamp"); else _explicitNullProperties?.Remove("OriginRecordTransactionTimestamp"); } }
         private string _explicitNullValueOriginRecordTransactionTimestamp = default!;
 #endif
         /// <summary>Contains Dangerous Goods Utility Acceptance Audit Pre-check request criteria elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestRequest? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestRequest _explicitNullValueRequest = default!;
 #endif
         /// <summary>Contains shipment information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("Shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestShipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("Shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequestShipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>

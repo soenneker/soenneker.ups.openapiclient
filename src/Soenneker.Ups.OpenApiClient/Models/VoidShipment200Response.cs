@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("VoidShipmentResponse") is { } nullNodeVoidShipmentResponse && nullNodeVoidShipmentResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoidShipmentResponse = null;
+            if (parseNode.GetChildNode("VoidShipmentResponse") is null) { _explicitNullValueVoidShipmentResponse = default!; _explicitNullProperties?.Remove("VoidShipmentResponse"); }
+            else if (parseNode.GetChildNode("VoidShipmentResponse") is { } nullNodeVoidShipmentResponse && nullNodeVoidShipmentResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoidShipmentResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Void Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse? VoidShipmentResponse { get => _explicitNullValueVoidShipmentResponse; set { _explicitNullValueVoidShipmentResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoidShipmentResponse"); else _explicitNullProperties?.Remove("VoidShipmentResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse? VoidShipmentResponse { get => _explicitNullValueVoidShipmentResponse; set { _explicitNullValueVoidShipmentResponse = value; AdditionalData?.Remove("VoidShipmentResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoidShipmentResponse"); else _explicitNullProperties?.Remove("VoidShipmentResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse? _explicitNullValueVoidShipmentResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse VoidShipmentResponse { get => _explicitNullValueVoidShipmentResponse; set { _explicitNullValueVoidShipmentResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoidShipmentResponse"); else _explicitNullProperties?.Remove("VoidShipmentResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse VoidShipmentResponse { get => _explicitNullValueVoidShipmentResponse; set { _explicitNullValueVoidShipmentResponse = value; AdditionalData?.Remove("VoidShipmentResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoidShipmentResponse"); else _explicitNullProperties?.Remove("VoidShipmentResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponse _explicitNullValueVoidShipmentResponse = default!;
 #endif
         /// <summary>

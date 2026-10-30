@@ -18,13 +18,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
-            if (parseNode.GetChildNode("FromEMailAddress") is { } nullNodeFromEMailAddress && nullNodeFromEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromEMailAddress = null;
-            if (parseNode.GetChildNode("FromName") is { } nullNodeFromName && nullNodeFromName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromName = null;
-            if (parseNode.GetChildNode("Memo") is { } nullNodeMemo && nullNodeMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memo = null;
-            if (parseNode.GetChildNode("Subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
-            if (parseNode.GetChildNode("SubjectCode") is { } nullNodeSubjectCode && nullNodeSubjectCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubjectCode = null;
-            if (parseNode.GetChildNode("UndeliverableEMailAddress") is { } nullNodeUndeliverableEMailAddress && nullNodeUndeliverableEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UndeliverableEMailAddress = null;
+            if (parseNode.GetChildNode("EMailAddress") is null) { _explicitNullValueEMailAddress = default!; _explicitNullProperties?.Remove("EMailAddress"); }
+            else if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
+            if (parseNode.GetChildNode("FromEMailAddress") is null) { _explicitNullValueFromEMailAddress = default!; _explicitNullProperties?.Remove("FromEMailAddress"); }
+            else if (parseNode.GetChildNode("FromEMailAddress") is { } nullNodeFromEMailAddress && nullNodeFromEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromEMailAddress = null;
+            if (parseNode.GetChildNode("FromName") is null) { _explicitNullValueFromName = default!; _explicitNullProperties?.Remove("FromName"); }
+            else if (parseNode.GetChildNode("FromName") is { } nullNodeFromName && nullNodeFromName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromName = null;
+            if (parseNode.GetChildNode("Memo") is null) { _explicitNullValueMemo = default!; _explicitNullProperties?.Remove("Memo"); }
+            else if (parseNode.GetChildNode("Memo") is { } nullNodeMemo && nullNodeMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memo = null;
+            if (parseNode.GetChildNode("Subject") is null) { _explicitNullValueSubject = default!; _explicitNullProperties?.Remove("Subject"); }
+            else if (parseNode.GetChildNode("Subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+            if (parseNode.GetChildNode("SubjectCode") is null) { _explicitNullValueSubjectCode = default!; _explicitNullProperties?.Remove("SubjectCode"); }
+            else if (parseNode.GetChildNode("SubjectCode") is { } nullNodeSubjectCode && nullNodeSubjectCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubjectCode = null;
+            if (parseNode.GetChildNode("UndeliverableEMailAddress") is null) { _explicitNullValueUndeliverableEMailAddress = default!; _explicitNullProperties?.Remove("UndeliverableEMailAddress"); }
+            else if (parseNode.GetChildNode("UndeliverableEMailAddress") is { } nullNodeUndeliverableEMailAddress && nullNodeUndeliverableEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UndeliverableEMailAddress = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,71 +39,71 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The destination email address of the receiver returns notification email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        public List<string>? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; AdditionalData?.Remove("EMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
         private List<string>? _explicitNullValueEMailAddress = default!;
 #nullable restore
 #else
-        public List<string> EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        public List<string> EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; AdditionalData?.Remove("EMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
         private List<string> _explicitNullValueEMailAddress = default!;
 #endif
         /// <summary>The email address listed in the Reply To field of the message header, includes name and e-mail address of sender. The &quot;From&quot; field of the message header contains pkginfo@ups.com.  Only allowed at the first package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromEMailAddress { get => _explicitNullValueFromEMailAddress; set { _explicitNullValueFromEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromEMailAddress"); else _explicitNullProperties?.Remove("FromEMailAddress"); } }
+        public string? FromEMailAddress { get => _explicitNullValueFromEMailAddress; set { _explicitNullValueFromEMailAddress = value; AdditionalData?.Remove("FromEMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromEMailAddress"); else _explicitNullProperties?.Remove("FromEMailAddress"); } }
         private string? _explicitNullValueFromEMailAddress = default!;
 #nullable restore
 #else
-        public string FromEMailAddress { get => _explicitNullValueFromEMailAddress; set { _explicitNullValueFromEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromEMailAddress"); else _explicitNullProperties?.Remove("FromEMailAddress"); } }
+        public string FromEMailAddress { get => _explicitNullValueFromEMailAddress; set { _explicitNullValueFromEMailAddress = value; AdditionalData?.Remove("FromEMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromEMailAddress"); else _explicitNullProperties?.Remove("FromEMailAddress"); } }
         private string _explicitNullValueFromEMailAddress = default!;
 #endif
         /// <summary>The name the receiver return notification will appear to be from. Defaults to the Shipper Name. Only allowed at the first package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromName { get => _explicitNullValueFromName; set { _explicitNullValueFromName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromName"); else _explicitNullProperties?.Remove("FromName"); } }
+        public string? FromName { get => _explicitNullValueFromName; set { _explicitNullValueFromName = value; AdditionalData?.Remove("FromName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromName"); else _explicitNullProperties?.Remove("FromName"); } }
         private string? _explicitNullValueFromName = default!;
 #nullable restore
 #else
-        public string FromName { get => _explicitNullValueFromName; set { _explicitNullValueFromName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromName"); else _explicitNullProperties?.Remove("FromName"); } }
+        public string FromName { get => _explicitNullValueFromName; set { _explicitNullValueFromName = value; AdditionalData?.Remove("FromName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromName"); else _explicitNullProperties?.Remove("FromName"); } }
         private string _explicitNullValueFromName = default!;
 #endif
         /// <summary>User defined text that will be included in the email. Only allowed at the first package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Memo"); else _explicitNullProperties?.Remove("Memo"); } }
+        public string? Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; AdditionalData?.Remove("Memo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Memo"); else _explicitNullProperties?.Remove("Memo"); } }
         private string? _explicitNullValueMemo = default!;
 #nullable restore
 #else
-        public string Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Memo"); else _explicitNullProperties?.Remove("Memo"); } }
+        public string Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; AdditionalData?.Remove("Memo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Memo"); else _explicitNullProperties?.Remove("Memo"); } }
         private string _explicitNullValueMemo = default!;
 #endif
         /// <summary>The eMails subject. Defaults to the UPS Receiver Return Notification plus the shipment ID.  Only allowed at the first package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Subject"); else _explicitNullProperties?.Remove("Subject"); } }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("Subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Subject"); else _explicitNullProperties?.Remove("Subject"); } }
         private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Subject"); else _explicitNullProperties?.Remove("Subject"); } }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("Subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Subject"); else _explicitNullProperties?.Remove("Subject"); } }
         private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>Specifies a reference code and reference number to display in the subject of the Receiver Return Notification.When the subject code is provided, the subject will contain the following: UPS Receiver Return Notification.The reference code (the reference code will be mapped to the corresponding ANSI value) Plus the reference number.The valid subject codes are:- 01 - Shipment Reference Number 1,- 02 - Shipment Reference Number 2,- 03 - package Reference Number 1,- 04 - package Reference Number 2,- 05 - package Reference Number 3,- 06 - package Reference Number 4,- 07 - package Reference Number 5,- 08 - Subject Text (Return Notification only).If the subject code tag is not provided and the subject text is provided, the subject of the notification will be the subject text.If the subject text is provided, and subject code tag exists, then the subject code value must be 08.If the subject code is 08, the subject text must exist. If a subject code is provided that refers to a nonexistent reference number, the subject will default to the tracking number. Only allowed at the first package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubjectCode { get => _explicitNullValueSubjectCode; set { _explicitNullValueSubjectCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectCode"); else _explicitNullProperties?.Remove("SubjectCode"); } }
+        public string? SubjectCode { get => _explicitNullValueSubjectCode; set { _explicitNullValueSubjectCode = value; AdditionalData?.Remove("SubjectCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectCode"); else _explicitNullProperties?.Remove("SubjectCode"); } }
         private string? _explicitNullValueSubjectCode = default!;
 #nullable restore
 #else
-        public string SubjectCode { get => _explicitNullValueSubjectCode; set { _explicitNullValueSubjectCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectCode"); else _explicitNullProperties?.Remove("SubjectCode"); } }
+        public string SubjectCode { get => _explicitNullValueSubjectCode; set { _explicitNullValueSubjectCode = value; AdditionalData?.Remove("SubjectCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubjectCode"); else _explicitNullProperties?.Remove("SubjectCode"); } }
         private string _explicitNullValueSubjectCode = default!;
 #endif
         /// <summary>The e-mail address where an undeliverable email message is sent if the Receiver Return Notification email is undeliverable. Defaults to FromEMailAddress. Only allowed at the first package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UndeliverableEMailAddress { get => _explicitNullValueUndeliverableEMailAddress; set { _explicitNullValueUndeliverableEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEMailAddress"); else _explicitNullProperties?.Remove("UndeliverableEMailAddress"); } }
+        public string? UndeliverableEMailAddress { get => _explicitNullValueUndeliverableEMailAddress; set { _explicitNullValueUndeliverableEMailAddress = value; AdditionalData?.Remove("UndeliverableEMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEMailAddress"); else _explicitNullProperties?.Remove("UndeliverableEMailAddress"); } }
         private string? _explicitNullValueUndeliverableEMailAddress = default!;
 #nullable restore
 #else
-        public string UndeliverableEMailAddress { get => _explicitNullValueUndeliverableEMailAddress; set { _explicitNullValueUndeliverableEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEMailAddress"); else _explicitNullProperties?.Remove("UndeliverableEMailAddress"); } }
+        public string UndeliverableEMailAddress { get => _explicitNullValueUndeliverableEMailAddress; set { _explicitNullValueUndeliverableEMailAddress = value; AdditionalData?.Remove("UndeliverableEMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEMailAddress"); else _explicitNullProperties?.Remove("UndeliverableEMailAddress"); } }
         private string _explicitNullValueUndeliverableEMailAddress = default!;
 #endif
         /// <summary>

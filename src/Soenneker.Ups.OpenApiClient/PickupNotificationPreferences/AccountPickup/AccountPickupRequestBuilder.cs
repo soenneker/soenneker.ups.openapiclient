@@ -111,7 +111,7 @@ namespace Soenneker.Ups.OpenApiClient.PickupNotificationPreferences.AccountPicku
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.PickupNotificationPreferences.AccountPickup.AccountPickupRequestBuilder.AccountPickupRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://onlinetools.ups.com/api/digital-experience/preferences/v1", "/PickupNotificationPreferences/account-pickup", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -132,7 +132,7 @@ namespace Soenneker.Ups.OpenApiClient.PickupNotificationPreferences.AccountPicku
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://onlinetools.ups.com/api/digital-experience/preferences/v1", "/PickupNotificationPreferences/account-pickup", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

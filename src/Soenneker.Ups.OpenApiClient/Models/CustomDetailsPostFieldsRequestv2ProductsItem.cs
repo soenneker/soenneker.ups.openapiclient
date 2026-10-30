@@ -17,11 +17,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("commodityCode") is { } nullNodeCommodityCode && nullNodeCommodityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCode = null;
-            if (parseNode.GetChildNode("lineNumber") is { } nullNodeLineNumber && nullNodeLineNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineNumber = null;
-            if (parseNode.GetChildNode("productDescription") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
-            if (parseNode.GetChildNode("productId") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
-            if (parseNode.GetChildNode("productMetaData") is { } nullNodeProductMetaData && nullNodeProductMetaData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductMetaData = null;
+            if (parseNode.GetChildNode("commodityCode") is null) { _explicitNullValueCommodityCode = default!; _explicitNullProperties?.Remove("commodityCode"); }
+            else if (parseNode.GetChildNode("commodityCode") is { } nullNodeCommodityCode && nullNodeCommodityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCode = null;
+            if (parseNode.GetChildNode("lineNumber") is null) { _explicitNullValueLineNumber = default!; _explicitNullProperties?.Remove("lineNumber"); }
+            else if (parseNode.GetChildNode("lineNumber") is { } nullNodeLineNumber && nullNodeLineNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineNumber = null;
+            if (parseNode.GetChildNode("productDescription") is null) { _explicitNullValueProductDescription = default!; _explicitNullProperties?.Remove("productDescription"); }
+            else if (parseNode.GetChildNode("productDescription") is { } nullNodeProductDescription && nullNodeProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDescription = null;
+            if (parseNode.GetChildNode("productId") is null) { _explicitNullValueProductId = default!; _explicitNullProperties?.Remove("productId"); }
+            else if (parseNode.GetChildNode("productId") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
+            if (parseNode.GetChildNode("productMetaData") is null) { _explicitNullValueProductMetaData = default!; _explicitNullProperties?.Remove("productMetaData"); }
+            else if (parseNode.GetChildNode("productMetaData") is { } nullNodeProductMetaData && nullNodeProductMetaData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductMetaData = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The tariff code for the product for the selected import country and process type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCode"); else _explicitNullProperties?.Remove("commodityCode"); } }
+        public string? CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; AdditionalData?.Remove("commodityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCode"); else _explicitNullProperties?.Remove("commodityCode"); } }
         private string? _explicitNullValueCommodityCode = default!;
 #nullable restore
 #else
-        public string CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCode"); else _explicitNullProperties?.Remove("commodityCode"); } }
+        public string CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; AdditionalData?.Remove("commodityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCode"); else _explicitNullProperties?.Remove("commodityCode"); } }
         private string _explicitNullValueCommodityCode = default!;
 #endif
         /// <summary>The sequence number of the product line item on the commercial invoice. Use this field to identify which invoice line item the customs detail data applies to. For example, enter 1 for the first invoice line item, 2 for the second invoice line item, and so on. This helps correlate customs detail data with the correct product, shipment data, and customs declaration.</summary>
-        public int? LineNumber { get => _explicitNullValueLineNumber; set { _explicitNullValueLineNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineNumber"); else _explicitNullProperties?.Remove("lineNumber"); } }
+        public int? LineNumber { get => _explicitNullValueLineNumber; set { _explicitNullValueLineNumber = value; AdditionalData?.Remove("lineNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineNumber"); else _explicitNullProperties?.Remove("lineNumber"); } }
         private int? _explicitNullValueLineNumber = default!;
         /// <summary>Provide a clear and accurate description of the product exactly as it appears on the Commercial Invoice and any other applicable international shipping documents. The description should clearly identify the item and, when relevant, its intended use. Avoid generic terms such as parts, samples, goods, accessories, or merchandise, as these descriptions may not provide sufficient detail for customs authorities and could result in clearance delays or requests for additional information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productDescription"); else _explicitNullProperties?.Remove("productDescription"); } }
+        public string? ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; AdditionalData?.Remove("productDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productDescription"); else _explicitNullProperties?.Remove("productDescription"); } }
         private string? _explicitNullValueProductDescription = default!;
 #nullable restore
 #else
-        public string ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productDescription"); else _explicitNullProperties?.Remove("productDescription"); } }
+        public string ProductDescription { get => _explicitNullValueProductDescription; set { _explicitNullValueProductDescription = value; AdditionalData?.Remove("productDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productDescription"); else _explicitNullProperties?.Remove("productDescription"); } }
         private string _explicitNullValueProductDescription = default!;
 #endif
         /// <summary>A customer-defined identifier for the product. This should match the product part number, SKU, item number, or reference number provided for the Part Number on the Commercial Invoice. Use the same value to help UPS associate Customs Detail API product data with the corresponding invoice line item in the shipment request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productId"); else _explicitNullProperties?.Remove("productId"); } }
+        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; AdditionalData?.Remove("productId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productId"); else _explicitNullProperties?.Remove("productId"); } }
         private string? _explicitNullValueProductId = default!;
 #nullable restore
 #else
-        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productId"); else _explicitNullProperties?.Remove("productId"); } }
+        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; AdditionalData?.Remove("productId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productId"); else _explicitNullProperties?.Remove("productId"); } }
         private string _explicitNullValueProductId = default!;
 #endif
         /// <summary>Unbounded list of containers for product metadata groups. Include at least one metadata entry in either ShipmentMetaData or ProductMetaData.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>? ProductMetaData { get => _explicitNullValueProductMetaData; set { _explicitNullValueProductMetaData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productMetaData"); else _explicitNullProperties?.Remove("productMetaData"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>? ProductMetaData { get => _explicitNullValueProductMetaData; set { _explicitNullValueProductMetaData = value; AdditionalData?.Remove("productMetaData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productMetaData"); else _explicitNullProperties?.Remove("productMetaData"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item>? _explicitNullValueProductMetaData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item> ProductMetaData { get => _explicitNullValueProductMetaData; set { _explicitNullValueProductMetaData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productMetaData"); else _explicitNullProperties?.Remove("productMetaData"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item> ProductMetaData { get => _explicitNullValueProductMetaData; set { _explicitNullValueProductMetaData = value; AdditionalData?.Remove("productMetaData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productMetaData"); else _explicitNullProperties?.Remove("productMetaData"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRequestMetaDatav2Item> _explicitNullValueProductMetaData = default!;
 #endif
         /// <summary>

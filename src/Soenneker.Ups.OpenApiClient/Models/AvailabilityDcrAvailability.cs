@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AvailableIndicator") is { } nullNodeAvailableIndicator && nullNodeAvailableIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableIndicator = null;
-            if (parseNode.GetChildNode("UnavailableReason") is { } nullNodeUnavailableReason && nullNodeUnavailableReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnavailableReason = null;
+            if (parseNode.GetChildNode("AvailableIndicator") is null) { _explicitNullValueAvailableIndicator = default!; _explicitNullProperties?.Remove("AvailableIndicator"); }
+            else if (parseNode.GetChildNode("AvailableIndicator") is { } nullNodeAvailableIndicator && nullNodeAvailableIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableIndicator = null;
+            if (parseNode.GetChildNode("UnavailableReason") is null) { _explicitNullValueUnavailableReason = default!; _explicitNullProperties?.Remove("UnavailableReason"); }
+            else if (parseNode.GetChildNode("UnavailableReason") is { } nullNodeUnavailableReason && nullNodeUnavailableReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnavailableReason = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Presence or absence indicator. Presence means the location is available for DCR/DCO.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvailableIndicator { get => _explicitNullValueAvailableIndicator; set { _explicitNullValueAvailableIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AvailableIndicator"); else _explicitNullProperties?.Remove("AvailableIndicator"); } }
+        public string? AvailableIndicator { get => _explicitNullValueAvailableIndicator; set { _explicitNullValueAvailableIndicator = value; AdditionalData?.Remove("AvailableIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AvailableIndicator"); else _explicitNullProperties?.Remove("AvailableIndicator"); } }
         private string? _explicitNullValueAvailableIndicator = default!;
 #nullable restore
 #else
-        public string AvailableIndicator { get => _explicitNullValueAvailableIndicator; set { _explicitNullValueAvailableIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AvailableIndicator"); else _explicitNullProperties?.Remove("AvailableIndicator"); } }
+        public string AvailableIndicator { get => _explicitNullValueAvailableIndicator; set { _explicitNullValueAvailableIndicator = value; AdditionalData?.Remove("AvailableIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AvailableIndicator"); else _explicitNullProperties?.Remove("AvailableIndicator"); } }
         private string _explicitNullValueAvailableIndicator = default!;
 #endif
         /// <summary>Container to hold shipping unavailable reason.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DcrAvailabilityUnavailableReason? UnavailableReason { get => _explicitNullValueUnavailableReason; set { _explicitNullValueUnavailableReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnavailableReason"); else _explicitNullProperties?.Remove("UnavailableReason"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DcrAvailabilityUnavailableReason? UnavailableReason { get => _explicitNullValueUnavailableReason; set { _explicitNullValueUnavailableReason = value; AdditionalData?.Remove("UnavailableReason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnavailableReason"); else _explicitNullProperties?.Remove("UnavailableReason"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DcrAvailabilityUnavailableReason? _explicitNullValueUnavailableReason = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DcrAvailabilityUnavailableReason UnavailableReason { get => _explicitNullValueUnavailableReason; set { _explicitNullValueUnavailableReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnavailableReason"); else _explicitNullProperties?.Remove("UnavailableReason"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DcrAvailabilityUnavailableReason UnavailableReason { get => _explicitNullValueUnavailableReason; set { _explicitNullValueUnavailableReason = value; AdditionalData?.Remove("UnavailableReason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnavailableReason"); else _explicitNullProperties?.Remove("UnavailableReason"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DcrAvailabilityUnavailableReason _explicitNullValueUnavailableReason = default!;
 #endif
         /// <summary>

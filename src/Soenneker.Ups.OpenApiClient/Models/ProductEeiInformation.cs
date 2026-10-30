@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DDTCInformation") is { } nullNodeDDTCInformation && nullNodeDDTCInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DDTCInformation = null;
-            if (parseNode.GetChildNode("ExportInformation") is { } nullNodeExportInformation && nullNodeExportInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportInformation = null;
-            if (parseNode.GetChildNode("License") is { } nullNodeLicense && nullNodeLicense.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) License = null;
+            if (parseNode.GetChildNode("DDTCInformation") is null) { _explicitNullValueDDTCInformation = default!; _explicitNullProperties?.Remove("DDTCInformation"); }
+            else if (parseNode.GetChildNode("DDTCInformation") is { } nullNodeDDTCInformation && nullNodeDDTCInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DDTCInformation = null;
+            if (parseNode.GetChildNode("ExportInformation") is null) { _explicitNullValueExportInformation = default!; _explicitNullProperties?.Remove("ExportInformation"); }
+            else if (parseNode.GetChildNode("ExportInformation") is { } nullNodeExportInformation && nullNodeExportInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportInformation = null;
+            if (parseNode.GetChildNode("License") is null) { _explicitNullValueLicense = default!; _explicitNullProperties?.Remove("License"); }
+            else if (parseNode.GetChildNode("License") is { } nullNodeLicense && nullNodeLicense.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) License = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Department of State/ Directorate of Defense Trade Control Information. This element is a container for additional information that is applicable to SDL products. It will only be evaluated if the provided license code is an SDL code.  Applies to EEI Form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation? DDTCInformation { get => _explicitNullValueDDTCInformation; set { _explicitNullValueDDTCInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DDTCInformation"); else _explicitNullProperties?.Remove("DDTCInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation? DDTCInformation { get => _explicitNullValueDDTCInformation; set { _explicitNullValueDDTCInformation = value; AdditionalData?.Remove("DDTCInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DDTCInformation"); else _explicitNullProperties?.Remove("DDTCInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation? _explicitNullValueDDTCInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation DDTCInformation { get => _explicitNullValueDDTCInformation; set { _explicitNullValueDDTCInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DDTCInformation"); else _explicitNullProperties?.Remove("DDTCInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation DDTCInformation { get => _explicitNullValueDDTCInformation; set { _explicitNullValueDDTCInformation = value; AdditionalData?.Remove("DDTCInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DDTCInformation"); else _explicitNullProperties?.Remove("DDTCInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.EeiInformationDdtcInformation _explicitNullValueDDTCInformation = default!;
 #endif
         /// <summary>Required for EEI form id it is a SDL product. Valid values: LC, LV, SS,MS, GS, DP, HR, UG, IC, SC, DD, HH, SR, TE,TL, IS, CR, GP, RJ, TP, IP, IR, DB, CH, RS, OS  Applies to EEI form only. Required if EEIFilingOption code 3 specified for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportInformation { get => _explicitNullValueExportInformation; set { _explicitNullValueExportInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportInformation"); else _explicitNullProperties?.Remove("ExportInformation"); } }
+        public string? ExportInformation { get => _explicitNullValueExportInformation; set { _explicitNullValueExportInformation = value; AdditionalData?.Remove("ExportInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportInformation"); else _explicitNullProperties?.Remove("ExportInformation"); } }
         private string? _explicitNullValueExportInformation = default!;
 #nullable restore
 #else
-        public string ExportInformation { get => _explicitNullValueExportInformation; set { _explicitNullValueExportInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportInformation"); else _explicitNullProperties?.Remove("ExportInformation"); } }
+        public string ExportInformation { get => _explicitNullValueExportInformation; set { _explicitNullValueExportInformation = value; AdditionalData?.Remove("ExportInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportInformation"); else _explicitNullProperties?.Remove("ExportInformation"); } }
         private string _explicitNullValueExportInformation = default!;
 #endif
         /// <summary>Licence information for SDL commodity.  Applies to EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.EeiInformationLicense? License { get => _explicitNullValueLicense; set { _explicitNullValueLicense = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("License"); else _explicitNullProperties?.Remove("License"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.EeiInformationLicense? License { get => _explicitNullValueLicense; set { _explicitNullValueLicense = value; AdditionalData?.Remove("License"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("License"); else _explicitNullProperties?.Remove("License"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.EeiInformationLicense? _explicitNullValueLicense = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.EeiInformationLicense License { get => _explicitNullValueLicense; set { _explicitNullValueLicense = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("License"); else _explicitNullProperties?.Remove("License"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.EeiInformationLicense License { get => _explicitNullValueLicense; set { _explicitNullValueLicense = value; AdditionalData?.Remove("License"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("License"); else _explicitNullProperties?.Remove("License"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.EeiInformationLicense _explicitNullValueLicense = default!;
 #endif
         /// <summary>

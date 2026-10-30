@@ -17,11 +17,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PickUpDate") is { } nullNodePickUpDate && nullNodePickUpDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpDate = null;
-            if (parseNode.GetChildNode("PickupPoint") is { } nullNodePickupPoint && nullNodePickupPoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupPoint = null;
-            if (parseNode.GetChildNode("PickUpTime") is { } nullNodePickUpTime && nullNodePickUpTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpTime = null;
-            if (parseNode.GetChildNode("WeekendPickupInformation") is { } nullNodeWeekendPickupInformation && nullNodeWeekendPickupInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekendPickupInformation = null;
-            if (parseNode.GetChildNode("WeekendServiceTerritoryIndicator") is { } nullNodeWeekendServiceTerritoryIndicator && nullNodeWeekendServiceTerritoryIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekendServiceTerritoryIndicator = null;
+            if (parseNode.GetChildNode("PickUpDate") is null) { _explicitNullValuePickUpDate = default!; _explicitNullProperties?.Remove("PickUpDate"); }
+            else if (parseNode.GetChildNode("PickUpDate") is { } nullNodePickUpDate && nullNodePickUpDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpDate = null;
+            if (parseNode.GetChildNode("PickupPoint") is null) { _explicitNullValuePickupPoint = default!; _explicitNullProperties?.Remove("PickupPoint"); }
+            else if (parseNode.GetChildNode("PickupPoint") is { } nullNodePickupPoint && nullNodePickupPoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupPoint = null;
+            if (parseNode.GetChildNode("PickUpTime") is null) { _explicitNullValuePickUpTime = default!; _explicitNullProperties?.Remove("PickUpTime"); }
+            else if (parseNode.GetChildNode("PickUpTime") is { } nullNodePickUpTime && nullNodePickUpTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpTime = null;
+            if (parseNode.GetChildNode("WeekendPickupInformation") is null) { _explicitNullValueWeekendPickupInformation = default!; _explicitNullProperties?.Remove("WeekendPickupInformation"); }
+            else if (parseNode.GetChildNode("WeekendPickupInformation") is { } nullNodeWeekendPickupInformation && nullNodeWeekendPickupInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekendPickupInformation = null;
+            if (parseNode.GetChildNode("WeekendServiceTerritoryIndicator") is null) { _explicitNullValueWeekendServiceTerritoryIndicator = default!; _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); }
+            else if (parseNode.GetChildNode("WeekendServiceTerritoryIndicator") is { } nullNodeWeekendServiceTerritoryIndicator && nullNodeWeekendServiceTerritoryIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekendServiceTerritoryIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,45 +34,38 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Shipment Pickup Date. Available when PickupTypeCode is **03,04,05,06**.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate? PickUpDate { get => _explicitNullValuePickUpDate; set { _explicitNullValuePickUpDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDate"); else _explicitNullProperties?.Remove("PickUpDate"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate? PickUpDate { get => _explicitNullValuePickUpDate; set { _explicitNullValuePickUpDate = value; AdditionalData?.Remove("PickUpDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDate"); else _explicitNullProperties?.Remove("PickUpDate"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate? _explicitNullValuePickUpDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate PickUpDate { get => _explicitNullValuePickUpDate; set { _explicitNullValuePickUpDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDate"); else _explicitNullProperties?.Remove("PickUpDate"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate PickUpDate { get => _explicitNullValuePickUpDate; set { _explicitNullValuePickUpDate = value; AdditionalData?.Remove("PickUpDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDate"); else _explicitNullProperties?.Remove("PickUpDate"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate _explicitNullValuePickUpDate = default!;
 #endif
         /// <summary>Location of shipment pickup.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint? PickupPoint { get => _explicitNullValuePickupPoint; set { _explicitNullValuePickupPoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupPoint"); else _explicitNullProperties?.Remove("PickupPoint"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint? PickupPoint { get => _explicitNullValuePickupPoint; set { _explicitNullValuePickupPoint = value; AdditionalData?.Remove("PickupPoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupPoint"); else _explicitNullProperties?.Remove("PickupPoint"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint? _explicitNullValuePickupPoint = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint PickupPoint { get => _explicitNullValuePickupPoint; set { _explicitNullValuePickupPoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupPoint"); else _explicitNullProperties?.Remove("PickupPoint"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint _explicitNullValuePickupPoint = default!;
-#endif
         /// <summary>Shipment Pickup Time. Available when PickupTypeCode is **02**.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime? PickUpTime { get => _explicitNullValuePickUpTime; set { _explicitNullValuePickUpTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTime"); else _explicitNullProperties?.Remove("PickUpTime"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime? PickUpTime { get => _explicitNullValuePickUpTime; set { _explicitNullValuePickUpTime = value; AdditionalData?.Remove("PickUpTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTime"); else _explicitNullProperties?.Remove("PickUpTime"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime? _explicitNullValuePickUpTime = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime PickUpTime { get => _explicitNullValuePickUpTime; set { _explicitNullValuePickUpTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTime"); else _explicitNullProperties?.Remove("PickUpTime"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime PickUpTime { get => _explicitNullValuePickUpTime; set { _explicitNullValuePickUpTime = value; AdditionalData?.Remove("PickUpTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTime"); else _explicitNullProperties?.Remove("PickUpTime"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime _explicitNullValuePickUpTime = default!;
 #endif
         /// <summary>Weekend pickup Information. Available when WeekendServiceTerritoryIndicator is populated and PickupTypeCode is **02**.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation? WeekendPickupInformation { get => _explicitNullValueWeekendPickupInformation; set { _explicitNullValueWeekendPickupInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendPickupInformation"); else _explicitNullProperties?.Remove("WeekendPickupInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation? WeekendPickupInformation { get => _explicitNullValueWeekendPickupInformation; set { _explicitNullValueWeekendPickupInformation = value; AdditionalData?.Remove("WeekendPickupInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendPickupInformation"); else _explicitNullProperties?.Remove("WeekendPickupInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation? _explicitNullValueWeekendPickupInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation WeekendPickupInformation { get => _explicitNullValueWeekendPickupInformation; set { _explicitNullValueWeekendPickupInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendPickupInformation"); else _explicitNullProperties?.Remove("WeekendPickupInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation WeekendPickupInformation { get => _explicitNullValueWeekendPickupInformation; set { _explicitNullValueWeekendPickupInformation = value; AdditionalData?.Remove("WeekendPickupInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendPickupInformation"); else _explicitNullProperties?.Remove("WeekendPickupInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation _explicitNullValueWeekendPickupInformation = default!;
 #endif
         /// <summary>Indicates if the pickup address qualifies for WST (Weekend Service Territory) pickup. Available when PickupTypeCode is **02** and pickup address is WST area. </summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator? WeekendServiceTerritoryIndicator { get => _explicitNullValueWeekendServiceTerritoryIndicator; set { _explicitNullValueWeekendServiceTerritoryIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritoryIndicator"); else _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator? WeekendServiceTerritoryIndicator { get => _explicitNullValueWeekendServiceTerritoryIndicator; set { _explicitNullValueWeekendServiceTerritoryIndicator = value; AdditionalData?.Remove("WeekendServiceTerritoryIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritoryIndicator"); else _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator? _explicitNullValueWeekendServiceTerritoryIndicator = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo"/> and sets the default values.
@@ -96,9 +94,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "PickUpDate", n => { PickUpDate = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate.CreateFromDiscriminatorValue); } },
                 { "PickUpTime", n => { PickUpTime = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime.CreateFromDiscriminatorValue); } },
-                { "PickupPoint", n => { PickupPoint = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint.CreateFromDiscriminatorValue); } },
+                { "PickupPoint", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePickupPoint = default; _explicitNullProperties?.Remove("PickupPoint"); AdditionalData["PickupPoint"] = unknown; } else { PickupPoint = parsed; AdditionalData.Remove("PickupPoint"); } } },
                 { "WeekendPickupInformation", n => { WeekendPickupInformation = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation.CreateFromDiscriminatorValue); } },
-                { "WeekendServiceTerritoryIndicator", n => { WeekendServiceTerritoryIndicator = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator>(); } },
+                { "WeekendServiceTerritoryIndicator", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWeekendServiceTerritoryIndicator = default; _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); AdditionalData["WeekendServiceTerritoryIndicator"] = unknown; } else { WeekendServiceTerritoryIndicator = parsed; AdditionalData.Remove("WeekendServiceTerritoryIndicator"); } } },
             };
         }
         /// <summary>
@@ -109,7 +107,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate>("PickUpDate", PickUpDate);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint>("PickupPoint", PickupPoint);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickupPoint>("PickupPoint", PickupPoint);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1PickUpTime>("PickUpTime", PickUpTime);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformation>("WeekendPickupInformation", WeekendPickupInformation);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator>("WeekendServiceTerritoryIndicator", WeekendServiceTerritoryIndicator);

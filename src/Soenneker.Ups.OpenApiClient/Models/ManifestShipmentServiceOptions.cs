@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CallTagARS") is { } nullNodeCallTagARS && nullNodeCallTagARS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallTagARS = null;
-            if (parseNode.GetChildNode("SaturdayDelivery") is { } nullNodeSaturdayDelivery && nullNodeSaturdayDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDelivery = null;
-            if (parseNode.GetChildNode("SaturdayPickup") is { } nullNodeSaturdayPickup && nullNodeSaturdayPickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayPickup = null;
+            if (parseNode.GetChildNode("CallTagARS") is null) { _explicitNullValueCallTagARS = default!; _explicitNullProperties?.Remove("CallTagARS"); }
+            else if (parseNode.GetChildNode("CallTagARS") is { } nullNodeCallTagARS && nullNodeCallTagARS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallTagARS = null;
+            if (parseNode.GetChildNode("SaturdayDelivery") is null) { _explicitNullValueSaturdayDelivery = default!; _explicitNullProperties?.Remove("SaturdayDelivery"); }
+            else if (parseNode.GetChildNode("SaturdayDelivery") is { } nullNodeSaturdayDelivery && nullNodeSaturdayDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDelivery = null;
+            if (parseNode.GetChildNode("SaturdayPickup") is null) { _explicitNullValueSaturdayPickup = default!; _explicitNullProperties?.Remove("SaturdayPickup"); }
+            else if (parseNode.GetChildNode("SaturdayPickup") is { } nullNodeSaturdayPickup && nullNodeSaturdayPickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayPickup = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for Call Tag service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs? CallTagARS { get => _explicitNullValueCallTagARS; set { _explicitNullValueCallTagARS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTagARS"); else _explicitNullProperties?.Remove("CallTagARS"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs? CallTagARS { get => _explicitNullValueCallTagARS; set { _explicitNullValueCallTagARS = value; AdditionalData?.Remove("CallTagARS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTagARS"); else _explicitNullProperties?.Remove("CallTagARS"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs? _explicitNullValueCallTagARS = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs CallTagARS { get => _explicitNullValueCallTagARS; set { _explicitNullValueCallTagARS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTagARS"); else _explicitNullProperties?.Remove("CallTagARS"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs CallTagARS { get => _explicitNullValueCallTagARS; set { _explicitNullValueCallTagARS = value; AdditionalData?.Remove("CallTagARS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CallTagARS"); else _explicitNullProperties?.Remove("CallTagARS"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentServiceOptionsCallTagArs _explicitNullValueCallTagARS = default!;
 #endif
         /// <summary>A flag indicating if the shipment requires a Saturday Delivery. True if tag exists, false otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
+        public string? SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; AdditionalData?.Remove("SaturdayDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
         private string? _explicitNullValueSaturdayDelivery = default!;
 #nullable restore
 #else
-        public string SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
+        public string SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; AdditionalData?.Remove("SaturdayDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
         private string _explicitNullValueSaturdayDelivery = default!;
 #endif
         /// <summary>A flag indicating if the shipment requires a Saturday pickup. True if tag exists, false otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaturdayPickup { get => _explicitNullValueSaturdayPickup; set { _explicitNullValueSaturdayPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayPickup"); else _explicitNullProperties?.Remove("SaturdayPickup"); } }
+        public string? SaturdayPickup { get => _explicitNullValueSaturdayPickup; set { _explicitNullValueSaturdayPickup = value; AdditionalData?.Remove("SaturdayPickup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayPickup"); else _explicitNullProperties?.Remove("SaturdayPickup"); } }
         private string? _explicitNullValueSaturdayPickup = default!;
 #nullable restore
 #else
-        public string SaturdayPickup { get => _explicitNullValueSaturdayPickup; set { _explicitNullValueSaturdayPickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayPickup"); else _explicitNullProperties?.Remove("SaturdayPickup"); } }
+        public string SaturdayPickup { get => _explicitNullValueSaturdayPickup; set { _explicitNullValueSaturdayPickup = value; AdditionalData?.Remove("SaturdayPickup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayPickup"); else _explicitNullProperties?.Remove("SaturdayPickup"); } }
         private string _explicitNullValueSaturdayPickup = default!;
 #endif
         /// <summary>

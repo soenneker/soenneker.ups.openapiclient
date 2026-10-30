@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
-            if (parseNode.GetChildNode("AttentionName") is { } nullNodeAttentionName && nullNodeAttentionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttentionName = null;
-            if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("Phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("Address") is null) { _explicitNullValueAddress = default!; _explicitNullProperties?.Remove("Address"); }
+            else if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("AttentionName") is null) { _explicitNullValueAttentionName = default!; _explicitNullProperties?.Remove("AttentionName"); }
+            else if (parseNode.GetChildNode("AttentionName") is { } nullNodeAttentionName && nullNodeAttentionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttentionName = null;
+            if (parseNode.GetChildNode("EMailAddress") is null) { _explicitNullValueEMailAddress = default!; _explicitNullProperties?.Remove("EMailAddress"); }
+            else if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("Phone") is null) { _explicitNullValuePhone = default!; _explicitNullProperties?.Remove("Phone"); }
+            else if (parseNode.GetChildNode("Phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains the address details including street address, city, state or province code, postal code, and country code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>Master Pickup Contact Name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AttentionName { get => _explicitNullValueAttentionName; set { _explicitNullValueAttentionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttentionName"); else _explicitNullProperties?.Remove("AttentionName"); } }
+        public string? AttentionName { get => _explicitNullValueAttentionName; set { _explicitNullValueAttentionName = value; AdditionalData?.Remove("AttentionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttentionName"); else _explicitNullProperties?.Remove("AttentionName"); } }
         private string? _explicitNullValueAttentionName = default!;
 #nullable restore
 #else
-        public string AttentionName { get => _explicitNullValueAttentionName; set { _explicitNullValueAttentionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttentionName"); else _explicitNullProperties?.Remove("AttentionName"); } }
+        public string AttentionName { get => _explicitNullValueAttentionName; set { _explicitNullValueAttentionName = value; AdditionalData?.Remove("AttentionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttentionName"); else _explicitNullProperties?.Remove("AttentionName"); } }
         private string _explicitNullValueAttentionName = default!;
 #endif
         /// <summary>Master Pickup Email Address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        public string? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; AdditionalData?.Remove("EMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
         private string? _explicitNullValueEMailAddress = default!;
 #nullable restore
 #else
-        public string EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        public string EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; AdditionalData?.Remove("EMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
         private string _explicitNullValueEMailAddress = default!;
 #endif
         /// <summary>Master Pickup Company Name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Contains the phone details including the phone number and extension.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Phone"); else _explicitNullProperties?.Remove("Phone"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("Phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Phone"); else _explicitNullProperties?.Remove("Phone"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Phone"); else _explicitNullProperties?.Remove("Phone"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("Phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Phone"); else _explicitNullProperties?.Remove("Phone"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPhone _explicitNullValuePhone = default!;
 #endif
         /// <summary>

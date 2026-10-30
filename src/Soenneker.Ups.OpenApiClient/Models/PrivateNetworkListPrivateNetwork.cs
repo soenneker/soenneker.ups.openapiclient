@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("NetworkDescription") is { } nullNodeNetworkDescription && nullNodeNetworkDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkDescription = null;
-            if (parseNode.GetChildNode("NetworkID") is { } nullNodeNetworkID && nullNodeNetworkID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkID = null;
+            if (parseNode.GetChildNode("NetworkDescription") is null) { _explicitNullValueNetworkDescription = default!; _explicitNullProperties?.Remove("NetworkDescription"); }
+            else if (parseNode.GetChildNode("NetworkDescription") is { } nullNodeNetworkDescription && nullNodeNetworkDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkDescription = null;
+            if (parseNode.GetChildNode("NetworkID") is null) { _explicitNullValueNetworkID = default!; _explicitNullProperties?.Remove("NetworkID"); }
+            else if (parseNode.GetChildNode("NetworkID") is { } nullNodeNetworkID && nullNodeNetworkID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkID = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Description of the Network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetworkDescription { get => _explicitNullValueNetworkDescription; set { _explicitNullValueNetworkDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkDescription"); else _explicitNullProperties?.Remove("NetworkDescription"); } }
+        public string? NetworkDescription { get => _explicitNullValueNetworkDescription; set { _explicitNullValueNetworkDescription = value; AdditionalData?.Remove("NetworkDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkDescription"); else _explicitNullProperties?.Remove("NetworkDescription"); } }
         private string? _explicitNullValueNetworkDescription = default!;
 #nullable restore
 #else
-        public string NetworkDescription { get => _explicitNullValueNetworkDescription; set { _explicitNullValueNetworkDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkDescription"); else _explicitNullProperties?.Remove("NetworkDescription"); } }
+        public string NetworkDescription { get => _explicitNullValueNetworkDescription; set { _explicitNullValueNetworkDescription = value; AdditionalData?.Remove("NetworkDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkDescription"); else _explicitNullProperties?.Remove("NetworkDescription"); } }
         private string _explicitNullValueNetworkDescription = default!;
 #endif
         /// <summary>Value of networkID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetworkID { get => _explicitNullValueNetworkID; set { _explicitNullValueNetworkID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkID"); else _explicitNullProperties?.Remove("NetworkID"); } }
+        public string? NetworkID { get => _explicitNullValueNetworkID; set { _explicitNullValueNetworkID = value; AdditionalData?.Remove("NetworkID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkID"); else _explicitNullProperties?.Remove("NetworkID"); } }
         private string? _explicitNullValueNetworkID = default!;
 #nullable restore
 #else
-        public string NetworkID { get => _explicitNullValueNetworkID; set { _explicitNullValueNetworkID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkID"); else _explicitNullProperties?.Remove("NetworkID"); } }
+        public string NetworkID { get => _explicitNullValueNetworkID; set { _explicitNullValueNetworkID = value; AdditionalData?.Remove("NetworkID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NetworkID"); else _explicitNullProperties?.Remove("NetworkID"); } }
         private string _explicitNullValueNetworkID = default!;
 #endif
         /// <summary>

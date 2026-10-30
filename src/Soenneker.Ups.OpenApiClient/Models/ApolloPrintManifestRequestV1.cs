@@ -18,20 +18,24 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
-            if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
-            if (parseNode.GetChildNode("manifestFormat") is { } nullNodeManifestFormat && nullNodeManifestFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestFormat = null;
-            if (parseNode.GetChildNode("manifestNumber") is { } nullNodeManifestNumber && nullNodeManifestNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestNumber = null;
+            if (parseNode.GetChildNode("accountNumber") is null) { _explicitNullValueAccountNumber = default!; _explicitNullProperties?.Remove("accountNumber"); }
+            else if (parseNode.GetChildNode("accountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("language") is null) { _explicitNullValueLanguage = default!; _explicitNullProperties?.Remove("language"); }
+            else if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("manifestFormat") is null) { _explicitNullValueManifestFormat = default!; _explicitNullProperties?.Remove("manifestFormat"); }
+            else if (parseNode.GetChildNode("manifestFormat") is { } nullNodeManifestFormat && nullNodeManifestFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestFormat = null;
+            if (parseNode.GetChildNode("manifestNumber") is null) { _explicitNullValueManifestNumber = default!; _explicitNullProperties?.Remove("manifestNumber"); }
+            else if (parseNode.GetChildNode("manifestNumber") is { } nullNodeManifestNumber && nullNodeManifestNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestNumber = null;
         }
 
         /// <summary>The UPS Freight Account Number that identifies the Shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountNumber"); else _explicitNullProperties?.Remove("accountNumber"); } }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("accountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountNumber"); else _explicitNullProperties?.Remove("accountNumber"); } }
         private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountNumber"); else _explicitNullProperties?.Remove("accountNumber"); } }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("accountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountNumber"); else _explicitNullProperties?.Remove("accountNumber"); } }
         private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,24 +43,24 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The language/culture that is being used for the API</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        public string? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
         private string? _explicitNullValueLanguage = default!;
 #nullable restore
 #else
-        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        public string Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; AdditionalData?.Remove("language"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
         private string _explicitNullValueLanguage = default!;
 #endif
         /// <summary>The output format of the document.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat? ManifestFormat { get => _explicitNullValueManifestFormat; set { _explicitNullValueManifestFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestFormat"); else _explicitNullProperties?.Remove("manifestFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat? ManifestFormat { get => _explicitNullValueManifestFormat; set { _explicitNullValueManifestFormat = value; AdditionalData?.Remove("manifestFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestFormat"); else _explicitNullProperties?.Remove("manifestFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat? _explicitNullValueManifestFormat = default!;
         /// <summary>The unique Id to identify the Manifest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestNumber"); else _explicitNullProperties?.Remove("manifestNumber"); } }
+        public string? ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; AdditionalData?.Remove("manifestNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestNumber"); else _explicitNullProperties?.Remove("manifestNumber"); } }
         private string? _explicitNullValueManifestNumber = default!;
 #nullable restore
 #else
-        public string ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestNumber"); else _explicitNullProperties?.Remove("manifestNumber"); } }
+        public string ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; AdditionalData?.Remove("manifestNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestNumber"); else _explicitNullProperties?.Remove("manifestNumber"); } }
         private string _explicitNullValueManifestNumber = default!;
 #endif
         /// <summary>
@@ -87,7 +91,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "accountNumber", n => { AccountNumber = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
-                { "manifestFormat", n => { ManifestFormat = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat>(); } },
+                { "manifestFormat", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPrintManifestRequestV1ManifestFormat>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueManifestFormat = default; _explicitNullProperties?.Remove("manifestFormat"); AdditionalData["manifestFormat"] = unknown; } else { ManifestFormat = parsed; AdditionalData.Remove("manifestFormat"); } } },
                 { "manifestNumber", n => { ManifestNumber = n.GetStringValue(); } },
             };
         }

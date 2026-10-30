@@ -17,23 +17,25 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
-            if (parseNode.GetChildNode("desc") is { } nullNodeDesc && nullNodeDesc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Desc = null;
+            if (parseNode.GetChildNode("code") is null) { _explicitNullValueCode = default!; _explicitNullProperties?.Remove("code"); }
+            else if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("desc") is null) { _explicitNullValueDesc = default!; _explicitNullProperties?.Remove("desc"); }
+            else if (parseNode.GetChildNode("desc") is { } nullNodeDesc && nullNodeDesc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Desc = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Payment term code.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code? _explicitNullValueCode = default!;
         /// <summary>Payment term description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Desc { get => _explicitNullValueDesc; set { _explicitNullValueDesc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desc"); else _explicitNullProperties?.Remove("desc"); } }
+        public string? Desc { get => _explicitNullValueDesc; set { _explicitNullValueDesc = value; AdditionalData?.Remove("desc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desc"); else _explicitNullProperties?.Remove("desc"); } }
         private string? _explicitNullValueDesc = default!;
 #nullable restore
 #else
-        public string Desc { get => _explicitNullValueDesc; set { _explicitNullValueDesc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desc"); else _explicitNullProperties?.Remove("desc"); } }
+        public string Desc { get => _explicitNullValueDesc; set { _explicitNullValueDesc = value; AdditionalData?.Remove("desc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desc"); else _explicitNullProperties?.Remove("desc"); } }
         private string _explicitNullValueDesc = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code>(); } },
+                { "code", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1Code>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCode = default; _explicitNullProperties?.Remove("code"); AdditionalData["code"] = unknown; } else { Code = parsed; AdditionalData.Remove("code"); } } },
                 { "desc", n => { Desc = n.GetStringValue(); } },
             };
         }

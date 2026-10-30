@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shipperAccountNumber") is { } nullNodeShipperAccountNumber && nullNodeShipperAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccountNumber = null;
+            if (parseNode.GetChildNode("shipperAccountNumber") is null) { _explicitNullValueShipperAccountNumber = default!; _explicitNullProperties?.Remove("shipperAccountNumber"); }
+            else if (parseNode.GetChildNode("shipperAccountNumber") is { } nullNodeShipperAccountNumber && nullNodeShipperAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccountNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This is the unique account number associated with the Shipper. It is also known as UPS Shipper Account Number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        public string? ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; AdditionalData?.Remove("shipperAccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
         private string? _explicitNullValueShipperAccountNumber = default!;
 #nullable restore
 #else
-        public string ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        public string ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; AdditionalData?.Remove("shipperAccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
         private string _explicitNullValueShipperAccountNumber = default!;
 #endif
         /// <summary>

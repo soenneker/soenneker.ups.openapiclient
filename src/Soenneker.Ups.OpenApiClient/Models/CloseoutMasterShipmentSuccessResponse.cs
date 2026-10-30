@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bolLabelResponse") is { } nullNodeBolLabelResponse && nullNodeBolLabelResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BolLabelResponse = null;
-            if (parseNode.GetChildNode("invoiceLabelResponse") is { } nullNodeInvoiceLabelResponse && nullNodeInvoiceLabelResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceLabelResponse = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("palletLabelResponses") is { } nullNodePalletLabelResponses && nullNodePalletLabelResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletLabelResponses = null;
+            if (parseNode.GetChildNode("bolLabelResponse") is null) { _explicitNullValueBolLabelResponse = default!; _explicitNullProperties?.Remove("bolLabelResponse"); }
+            else if (parseNode.GetChildNode("bolLabelResponse") is { } nullNodeBolLabelResponse && nullNodeBolLabelResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BolLabelResponse = null;
+            if (parseNode.GetChildNode("invoiceLabelResponse") is null) { _explicitNullValueInvoiceLabelResponse = default!; _explicitNullProperties?.Remove("invoiceLabelResponse"); }
+            else if (parseNode.GetChildNode("invoiceLabelResponse") is { } nullNodeInvoiceLabelResponse && nullNodeInvoiceLabelResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceLabelResponse = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("palletLabelResponses") is null) { _explicitNullValuePalletLabelResponses = default!; _explicitNullProperties?.Remove("palletLabelResponses"); }
+            else if (parseNode.GetChildNode("palletLabelResponses") is { } nullNodePalletLabelResponses && nullNodePalletLabelResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletLabelResponses = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains the response details for the generated Bill of Lading (BOL) label, including the format and data of the generated document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse? BolLabelResponse { get => _explicitNullValueBolLabelResponse; set { _explicitNullValueBolLabelResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bolLabelResponse"); else _explicitNullProperties?.Remove("bolLabelResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse? BolLabelResponse { get => _explicitNullValueBolLabelResponse; set { _explicitNullValueBolLabelResponse = value; AdditionalData?.Remove("bolLabelResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bolLabelResponse"); else _explicitNullProperties?.Remove("bolLabelResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse? _explicitNullValueBolLabelResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse BolLabelResponse { get => _explicitNullValueBolLabelResponse; set { _explicitNullValueBolLabelResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bolLabelResponse"); else _explicitNullProperties?.Remove("bolLabelResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse BolLabelResponse { get => _explicitNullValueBolLabelResponse; set { _explicitNullValueBolLabelResponse = value; AdditionalData?.Remove("bolLabelResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bolLabelResponse"); else _explicitNullProperties?.Remove("bolLabelResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseBolLabelResponse _explicitNullValueBolLabelResponse = default!;
 #endif
         /// <summary>Contains the response details for the generated invoice label, including the format and data of the generated document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse? InvoiceLabelResponse { get => _explicitNullValueInvoiceLabelResponse; set { _explicitNullValueInvoiceLabelResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceLabelResponse"); else _explicitNullProperties?.Remove("invoiceLabelResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse? InvoiceLabelResponse { get => _explicitNullValueInvoiceLabelResponse; set { _explicitNullValueInvoiceLabelResponse = value; AdditionalData?.Remove("invoiceLabelResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceLabelResponse"); else _explicitNullProperties?.Remove("invoiceLabelResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse? _explicitNullValueInvoiceLabelResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse InvoiceLabelResponse { get => _explicitNullValueInvoiceLabelResponse; set { _explicitNullValueInvoiceLabelResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceLabelResponse"); else _explicitNullProperties?.Remove("invoiceLabelResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse InvoiceLabelResponse { get => _explicitNullValueInvoiceLabelResponse; set { _explicitNullValueInvoiceLabelResponse = value; AdditionalData?.Remove("invoiceLabelResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceLabelResponse"); else _explicitNullProperties?.Remove("invoiceLabelResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponseInvoiceLabelResponse _explicitNullValueInvoiceLabelResponse = default!;
 #endif
         /// <summary>A message providing additional information about the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>A list of responses for the generated pallet labels, each containing details such as the label number and the base64 encoded data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses? PalletLabelResponses { get => _explicitNullValuePalletLabelResponses; set { _explicitNullValuePalletLabelResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("palletLabelResponses"); else _explicitNullProperties?.Remove("palletLabelResponses"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses? PalletLabelResponses { get => _explicitNullValuePalletLabelResponses; set { _explicitNullValuePalletLabelResponses = value; AdditionalData?.Remove("palletLabelResponses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("palletLabelResponses"); else _explicitNullProperties?.Remove("palletLabelResponses"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses? _explicitNullValuePalletLabelResponses = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses PalletLabelResponses { get => _explicitNullValuePalletLabelResponses; set { _explicitNullValuePalletLabelResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("palletLabelResponses"); else _explicitNullProperties?.Remove("palletLabelResponses"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses PalletLabelResponses { get => _explicitNullValuePalletLabelResponses; set { _explicitNullValuePalletLabelResponses = value; AdditionalData?.Remove("palletLabelResponses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("palletLabelResponses"); else _explicitNullProperties?.Remove("palletLabelResponses"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CloseoutResponsePalletLabelResponses _explicitNullValuePalletLabelResponses = default!;
 #endif
         /// <summary>

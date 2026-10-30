@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DensityEligibleIndicator") is { } nullNodeDensityEligibleIndicator && nullNodeDensityEligibleIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DensityEligibleIndicator = null;
-            if (parseNode.GetChildNode("FreightDensityInfo") is { } nullNodeFreightDensityInfo && nullNodeFreightDensityInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightDensityInfo = null;
+            if (parseNode.GetChildNode("DensityEligibleIndicator") is null) { _explicitNullValueDensityEligibleIndicator = default!; _explicitNullProperties?.Remove("DensityEligibleIndicator"); }
+            else if (parseNode.GetChildNode("DensityEligibleIndicator") is { } nullNodeDensityEligibleIndicator && nullNodeDensityEligibleIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DensityEligibleIndicator = null;
+            if (parseNode.GetChildNode("FreightDensityInfo") is null) { _explicitNullValueFreightDensityInfo = default!; _explicitNullProperties?.Remove("FreightDensityInfo"); }
+            else if (parseNode.GetChildNode("FreightDensityInfo") is { } nullNodeFreightDensityInfo && nullNodeFreightDensityInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightDensityInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The presence of the tag indicates that the  rate request is density based.For Density Based Rating (DBR), the customer must have DBR Contract Service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DensityEligibleIndicator { get => _explicitNullValueDensityEligibleIndicator; set { _explicitNullValueDensityEligibleIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DensityEligibleIndicator"); else _explicitNullProperties?.Remove("DensityEligibleIndicator"); } }
+        public string? DensityEligibleIndicator { get => _explicitNullValueDensityEligibleIndicator; set { _explicitNullValueDensityEligibleIndicator = value; AdditionalData?.Remove("DensityEligibleIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DensityEligibleIndicator"); else _explicitNullProperties?.Remove("DensityEligibleIndicator"); } }
         private string? _explicitNullValueDensityEligibleIndicator = default!;
 #nullable restore
 #else
-        public string DensityEligibleIndicator { get => _explicitNullValueDensityEligibleIndicator; set { _explicitNullValueDensityEligibleIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DensityEligibleIndicator"); else _explicitNullProperties?.Remove("DensityEligibleIndicator"); } }
+        public string DensityEligibleIndicator { get => _explicitNullValueDensityEligibleIndicator; set { _explicitNullValueDensityEligibleIndicator = value; AdditionalData?.Remove("DensityEligibleIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DensityEligibleIndicator"); else _explicitNullProperties?.Remove("DensityEligibleIndicator"); } }
         private string _explicitNullValueDensityEligibleIndicator = default!;
 #endif
         /// <summary>Freight Density Info container.  Required if DensityEligibleIndicator is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.FreightShipmentInformationFreightDensityInfo? FreightDensityInfo { get => _explicitNullValueFreightDensityInfo; set { _explicitNullValueFreightDensityInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightDensityInfo"); else _explicitNullProperties?.Remove("FreightDensityInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.FreightShipmentInformationFreightDensityInfo? FreightDensityInfo { get => _explicitNullValueFreightDensityInfo; set { _explicitNullValueFreightDensityInfo = value; AdditionalData?.Remove("FreightDensityInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightDensityInfo"); else _explicitNullProperties?.Remove("FreightDensityInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.FreightShipmentInformationFreightDensityInfo? _explicitNullValueFreightDensityInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.FreightShipmentInformationFreightDensityInfo FreightDensityInfo { get => _explicitNullValueFreightDensityInfo; set { _explicitNullValueFreightDensityInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightDensityInfo"); else _explicitNullProperties?.Remove("FreightDensityInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.FreightShipmentInformationFreightDensityInfo FreightDensityInfo { get => _explicitNullValueFreightDensityInfo; set { _explicitNullValueFreightDensityInfo = value; AdditionalData?.Remove("FreightDensityInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightDensityInfo"); else _explicitNullProperties?.Remove("FreightDensityInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.FreightShipmentInformationFreightDensityInfo _explicitNullValueFreightDensityInfo = default!;
 #endif
         /// <summary>

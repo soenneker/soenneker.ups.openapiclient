@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
-            if (parseNode.GetChildNode("CompanyName") is { } nullNodeCompanyName && nullNodeCompanyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyName = null;
-            if (parseNode.GetChildNode("TaxIdentificationNumber") is { } nullNodeTaxIdentificationNumber && nullNodeTaxIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdentificationNumber = null;
+            if (parseNode.GetChildNode("Address") is null) { _explicitNullValueAddress = default!; _explicitNullProperties?.Remove("Address"); }
+            else if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("CompanyName") is null) { _explicitNullValueCompanyName = default!; _explicitNullProperties?.Remove("CompanyName"); }
+            else if (parseNode.GetChildNode("CompanyName") is { } nullNodeCompanyName && nullNodeCompanyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyName = null;
+            if (parseNode.GetChildNode("TaxIdentificationNumber") is null) { _explicitNullValueTaxIdentificationNumber = default!; _explicitNullProperties?.Remove("TaxIdentificationNumber"); }
+            else if (parseNode.GetChildNode("TaxIdentificationNumber") is { } nullNodeTaxIdentificationNumber && nullNodeTaxIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdentificationNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Address information of the Forwarding agent.  Applicable for EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ForwardAgentAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ForwardAgentAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ForwardAgentAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ForwardAgentAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ForwardAgentAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ForwardAgentAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>Company Name or the Individual name of the Forwarding agent.  Applicable for EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompanyName"); else _explicitNullProperties?.Remove("CompanyName"); } }
+        public string? CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; AdditionalData?.Remove("CompanyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompanyName"); else _explicitNullProperties?.Remove("CompanyName"); } }
         private string? _explicitNullValueCompanyName = default!;
 #nullable restore
 #else
-        public string CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompanyName"); else _explicitNullProperties?.Remove("CompanyName"); } }
+        public string CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; AdditionalData?.Remove("CompanyName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompanyName"); else _explicitNullProperties?.Remove("CompanyName"); } }
         private string _explicitNullValueCompanyName = default!;
 #endif
         /// <summary>Tax ID of the Forwarding agent.Valid Values: (Below values are applicable for EEIFilingOption Code =3)94-308351500 13-168669100    Applicable for EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
+        public string? TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; AdditionalData?.Remove("TaxIdentificationNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
         private string? _explicitNullValueTaxIdentificationNumber = default!;
 #nullable restore
 #else
-        public string TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
+        public string TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; AdditionalData?.Remove("TaxIdentificationNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
         private string _explicitNullValueTaxIdentificationNumber = default!;
 #endif
         /// <summary>

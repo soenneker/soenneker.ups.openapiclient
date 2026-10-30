@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("RequestOption") is { } nullNodeRequestOption && nullNodeRequestOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestOption = null;
-            if (parseNode.GetChildNode("SubVersion") is { } nullNodeSubVersion && nullNodeSubVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubVersion = null;
-            if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
+            if (parseNode.GetChildNode("RequestOption") is null) { _explicitNullValueRequestOption = default!; _explicitNullProperties?.Remove("RequestOption"); }
+            else if (parseNode.GetChildNode("RequestOption") is { } nullNodeRequestOption && nullNodeRequestOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestOption = null;
+            if (parseNode.GetChildNode("SubVersion") is null) { _explicitNullValueSubVersion = default!; _explicitNullProperties?.Remove("SubVersion"); }
+            else if (parseNode.GetChildNode("SubVersion") is { } nullNodeSubVersion && nullNodeSubVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubVersion = null;
+            if (parseNode.GetChildNode("TransactionReference") is null) { _explicitNullValueTransactionReference = default!; _explicitNullProperties?.Remove("TransactionReference"); }
+            else if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Enables the user to specify optional processing. Currently, there is no optional process in Dangerous Goods Utility WS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestOption { get => _explicitNullValueRequestOption; set { _explicitNullValueRequestOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestOption"); else _explicitNullProperties?.Remove("RequestOption"); } }
+        public string? RequestOption { get => _explicitNullValueRequestOption; set { _explicitNullValueRequestOption = value; AdditionalData?.Remove("RequestOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestOption"); else _explicitNullProperties?.Remove("RequestOption"); } }
         private string? _explicitNullValueRequestOption = default!;
 #nullable restore
 #else
-        public string RequestOption { get => _explicitNullValueRequestOption; set { _explicitNullValueRequestOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestOption"); else _explicitNullProperties?.Remove("RequestOption"); } }
+        public string RequestOption { get => _explicitNullValueRequestOption; set { _explicitNullValueRequestOption = value; AdditionalData?.Remove("RequestOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestOption"); else _explicitNullProperties?.Remove("RequestOption"); } }
         private string _explicitNullValueRequestOption = default!;
 #endif
         /// <summary>Not Used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubVersion { get => _explicitNullValueSubVersion; set { _explicitNullValueSubVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubVersion"); else _explicitNullProperties?.Remove("SubVersion"); } }
+        public string? SubVersion { get => _explicitNullValueSubVersion; set { _explicitNullValueSubVersion = value; AdditionalData?.Remove("SubVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubVersion"); else _explicitNullProperties?.Remove("SubVersion"); } }
         private string? _explicitNullValueSubVersion = default!;
 #nullable restore
 #else
-        public string SubVersion { get => _explicitNullValueSubVersion; set { _explicitNullValueSubVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubVersion"); else _explicitNullProperties?.Remove("SubVersion"); } }
+        public string SubVersion { get => _explicitNullValueSubVersion; set { _explicitNullValueSubVersion = value; AdditionalData?.Remove("SubVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubVersion"); else _explicitNullProperties?.Remove("SubVersion"); } }
         private string _explicitNullValueSubVersion = default!;
 #endif
         /// <summary>TransactionReference identifies transactions between client and server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsRequestTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsRequestTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; AdditionalData?.Remove("TransactionReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsRequestTransactionReference? _explicitNullValueTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsRequestTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsRequestTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; AdditionalData?.Remove("TransactionReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsRequestTransactionReference _explicitNullValueTransactionReference = default!;
 #endif
         /// <summary>

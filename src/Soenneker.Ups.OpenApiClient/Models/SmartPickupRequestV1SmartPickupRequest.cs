@@ -18,54 +18,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AccountInfo") is { } nullNodeAccountInfo && nullNodeAccountInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountInfo = null;
-            if (parseNode.GetChildNode("Action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
-            if (parseNode.GetChildNode("NotificationIndicator") is { } nullNodeNotificationIndicator && nullNodeNotificationIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationIndicator = null;
-            if (parseNode.GetChildNode("SmartPickupTrigger") is { } nullNodeSmartPickupTrigger && nullNodeSmartPickupTrigger.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartPickupTrigger = null;
+            if (parseNode.GetChildNode("AccountInfo") is null) { _explicitNullValueAccountInfo = default!; _explicitNullProperties?.Remove("AccountInfo"); }
+            else if (parseNode.GetChildNode("AccountInfo") is { } nullNodeAccountInfo && nullNodeAccountInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountInfo = null;
+            if (parseNode.GetChildNode("Action") is null) { _explicitNullValueAction = default!; _explicitNullProperties?.Remove("Action"); }
+            else if (parseNode.GetChildNode("Action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("NotificationIndicator") is null) { _explicitNullValueNotificationIndicator = default!; _explicitNullProperties?.Remove("NotificationIndicator"); }
+            else if (parseNode.GetChildNode("NotificationIndicator") is { } nullNodeNotificationIndicator && nullNodeNotificationIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationIndicator = null;
+            if (parseNode.GetChildNode("SmartPickupTrigger") is null) { _explicitNullValueSmartPickupTrigger = default!; _explicitNullProperties?.Remove("SmartPickupTrigger"); }
+            else if (parseNode.GetChildNode("SmartPickupTrigger") is { } nullNodeSmartPickupTrigger && nullNodeSmartPickupTrigger.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartPickupTrigger = null;
         }
 
         /// <summary>The UPS account information that you want to use for SmartPickupTrigger and NotificationIndicator</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo? AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo? AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; AdditionalData?.Remove("AccountInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo? _explicitNullValueAccountInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; AdditionalData?.Remove("AccountInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo _explicitNullValueAccountInfo = default!;
 #endif
         /// <summary>Action indicator to decide the flow.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Action"); else _explicitNullProperties?.Remove("Action"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("Action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Action"); else _explicitNullProperties?.Remove("Action"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction? _explicitNullValueAction = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Action"); else _explicitNullProperties?.Remove("Action"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction _explicitNullValueAction = default!;
-#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Notification opt-out - a CTA/link on the transactional PU alert that takes the User to a unique landing page(determined by whether the User/Email combo have a ups.com User ID or not) so that they can opt-out of receivingthese transactional alerts for this account. Required when Action is Add or Update.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator? NotificationIndicator { get => _explicitNullValueNotificationIndicator; set { _explicitNullValueNotificationIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationIndicator"); else _explicitNullProperties?.Remove("NotificationIndicator"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator? NotificationIndicator { get => _explicitNullValueNotificationIndicator; set { _explicitNullValueNotificationIndicator = value; AdditionalData?.Remove("NotificationIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationIndicator"); else _explicitNullProperties?.Remove("NotificationIndicator"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator? _explicitNullValueNotificationIndicator = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator NotificationIndicator { get => _explicitNullValueNotificationIndicator; set { _explicitNullValueNotificationIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationIndicator"); else _explicitNullProperties?.Remove("NotificationIndicator"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator _explicitNullValueNotificationIndicator = default!;
-#endif
         /// <summary>Smart pickup trigger when the PU event (PRN) for the Smart PU is moved from pending to scheduled. Required when Action is Add or Updtae.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger? SmartPickupTrigger { get => _explicitNullValueSmartPickupTrigger; set { _explicitNullValueSmartPickupTrigger = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmartPickupTrigger"); else _explicitNullProperties?.Remove("SmartPickupTrigger"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger? SmartPickupTrigger { get => _explicitNullValueSmartPickupTrigger; set { _explicitNullValueSmartPickupTrigger = value; AdditionalData?.Remove("SmartPickupTrigger"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmartPickupTrigger"); else _explicitNullProperties?.Remove("SmartPickupTrigger"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger? _explicitNullValueSmartPickupTrigger = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger SmartPickupTrigger { get => _explicitNullValueSmartPickupTrigger; set { _explicitNullValueSmartPickupTrigger = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmartPickupTrigger"); else _explicitNullProperties?.Remove("SmartPickupTrigger"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger _explicitNullValueSmartPickupTrigger = default!;
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequest"/> and sets the default values.
         /// </summary>
@@ -92,9 +75,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AccountInfo", n => { AccountInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo.CreateFromDiscriminatorValue); } },
-                { "Action", n => { Action = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction.CreateFromDiscriminatorValue); } },
-                { "NotificationIndicator", n => { NotificationIndicator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator.CreateFromDiscriminatorValue); } },
-                { "SmartPickupTrigger", n => { SmartPickupTrigger = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger.CreateFromDiscriminatorValue); } },
+                { "Action", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("Action"); AdditionalData["Action"] = unknown; } else { Action = parsed; AdditionalData.Remove("Action"); } } },
+                { "NotificationIndicator", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNotificationIndicator = default; _explicitNullProperties?.Remove("NotificationIndicator"); AdditionalData["NotificationIndicator"] = unknown; } else { NotificationIndicator = parsed; AdditionalData.Remove("NotificationIndicator"); } } },
+                { "SmartPickupTrigger", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSmartPickupTrigger = default; _explicitNullProperties?.Remove("SmartPickupTrigger"); AdditionalData["SmartPickupTrigger"] = unknown; } else { SmartPickupTrigger = parsed; AdditionalData.Remove("SmartPickupTrigger"); } } },
             };
         }
         /// <summary>
@@ -105,9 +88,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo>("AccountInfo", AccountInfo);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction>("Action", Action);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator>("NotificationIndicator", NotificationIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger>("SmartPickupTrigger", SmartPickupTrigger);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction>("Action", Action);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestNotificationIndicator>("NotificationIndicator", NotificationIndicator);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger>("SmartPickupTrigger", SmartPickupTrigger);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

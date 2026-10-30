@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CountryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
-            if (parseNode.GetChildNode("PoliticalDivision1") is { } nullNodePoliticalDivision1 && nullNodePoliticalDivision1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalDivision1 = null;
-            if (parseNode.GetChildNode("PoliticalDivision2") is { } nullNodePoliticalDivision2 && nullNodePoliticalDivision2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalDivision2 = null;
+            if (parseNode.GetChildNode("CountryCode") is null) { _explicitNullValueCountryCode = default!; _explicitNullProperties?.Remove("CountryCode"); }
+            else if (parseNode.GetChildNode("CountryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("PoliticalDivision1") is null) { _explicitNullValuePoliticalDivision1 = default!; _explicitNullProperties?.Remove("PoliticalDivision1"); }
+            else if (parseNode.GetChildNode("PoliticalDivision1") is { } nullNodePoliticalDivision1 && nullNodePoliticalDivision1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalDivision1 = null;
+            if (parseNode.GetChildNode("PoliticalDivision2") is null) { _explicitNullValuePoliticalDivision2 = default!; _explicitNullProperties?.Remove("PoliticalDivision2"); }
+            else if (parseNode.GetChildNode("PoliticalDivision2") is { } nullNodePoliticalDivision2 && nullNodePoliticalDivision2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalDivision2 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Country or Territory code of an activity occurred during a package shipment. Valid values: CA, MX, PR, US, AT, BE, DE, DK, ES, FI, FR, GB, IE, IT, NL, PT, SE, MC, and VA</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryCode"); else _explicitNullProperties?.Remove("CountryCode"); } }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("CountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryCode"); else _explicitNullProperties?.Remove("CountryCode"); } }
         private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryCode"); else _explicitNullProperties?.Remove("CountryCode"); } }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("CountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryCode"); else _explicitNullProperties?.Remove("CountryCode"); } }
         private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>State or province code of an activity occurred during a package shipment. Must be valid US state. If the country or territory is US or CA a two character code is required, otherwise, the StateProvinceCode is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PoliticalDivision1 { get => _explicitNullValuePoliticalDivision1; set { _explicitNullValuePoliticalDivision1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision1"); else _explicitNullProperties?.Remove("PoliticalDivision1"); } }
+        public string? PoliticalDivision1 { get => _explicitNullValuePoliticalDivision1; set { _explicitNullValuePoliticalDivision1 = value; AdditionalData?.Remove("PoliticalDivision1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision1"); else _explicitNullProperties?.Remove("PoliticalDivision1"); } }
         private string? _explicitNullValuePoliticalDivision1 = default!;
 #nullable restore
 #else
-        public string PoliticalDivision1 { get => _explicitNullValuePoliticalDivision1; set { _explicitNullValuePoliticalDivision1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision1"); else _explicitNullProperties?.Remove("PoliticalDivision1"); } }
+        public string PoliticalDivision1 { get => _explicitNullValuePoliticalDivision1; set { _explicitNullValuePoliticalDivision1 = value; AdditionalData?.Remove("PoliticalDivision1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision1"); else _explicitNullProperties?.Remove("PoliticalDivision1"); } }
         private string _explicitNullValuePoliticalDivision1 = default!;
 #endif
         /// <summary>City of an activity occurred during a package shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PoliticalDivision2 { get => _explicitNullValuePoliticalDivision2; set { _explicitNullValuePoliticalDivision2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision2"); else _explicitNullProperties?.Remove("PoliticalDivision2"); } }
+        public string? PoliticalDivision2 { get => _explicitNullValuePoliticalDivision2; set { _explicitNullValuePoliticalDivision2 = value; AdditionalData?.Remove("PoliticalDivision2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision2"); else _explicitNullProperties?.Remove("PoliticalDivision2"); } }
         private string? _explicitNullValuePoliticalDivision2 = default!;
 #nullable restore
 #else
-        public string PoliticalDivision2 { get => _explicitNullValuePoliticalDivision2; set { _explicitNullValuePoliticalDivision2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision2"); else _explicitNullProperties?.Remove("PoliticalDivision2"); } }
+        public string PoliticalDivision2 { get => _explicitNullValuePoliticalDivision2; set { _explicitNullValuePoliticalDivision2 = value; AdditionalData?.Remove("PoliticalDivision2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision2"); else _explicitNullProperties?.Remove("PoliticalDivision2"); } }
         private string _explicitNullValuePoliticalDivision2 = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("airportDetails") is { } nullNodeAirportDetails && nullNodeAirportDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AirportDetails = null;
+            if (parseNode.GetChildNode("airportDetails") is null) { _explicitNullValueAirportDetails = default!; _explicitNullProperties?.Remove("airportDetails"); }
+            else if (parseNode.GetChildNode("airportDetails") is { } nullNodeAirportDetails && nullNodeAirportDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AirportDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>List of airport details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirportResponseDetailsV1>? AirportDetails { get => _explicitNullValueAirportDetails; set { _explicitNullValueAirportDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airportDetails"); else _explicitNullProperties?.Remove("airportDetails"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirportResponseDetailsV1>? AirportDetails { get => _explicitNullValueAirportDetails; set { _explicitNullValueAirportDetails = value; AdditionalData?.Remove("airportDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airportDetails"); else _explicitNullProperties?.Remove("airportDetails"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirportResponseDetailsV1>? _explicitNullValueAirportDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirportResponseDetailsV1> AirportDetails { get => _explicitNullValueAirportDetails; set { _explicitNullValueAirportDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airportDetails"); else _explicitNullProperties?.Remove("airportDetails"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirportResponseDetailsV1> AirportDetails { get => _explicitNullValueAirportDetails; set { _explicitNullValueAirportDetails = value; AdditionalData?.Remove("airportDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airportDetails"); else _explicitNullProperties?.Remove("airportDetails"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirportResponseDetailsV1> _explicitNullValueAirportDetails = default!;
 #endif
         /// <summary>

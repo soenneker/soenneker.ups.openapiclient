@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LabelLinkIndicator") is { } nullNodeLabelLinkIndicator && nullNodeLabelLinkIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelLinkIndicator = null;
-            if (parseNode.GetChildNode("ResendEMailIndicator") is { } nullNodeResendEMailIndicator && nullNodeResendEMailIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResendEMailIndicator = null;
+            if (parseNode.GetChildNode("LabelLinkIndicator") is null) { _explicitNullValueLabelLinkIndicator = default!; _explicitNullProperties?.Remove("LabelLinkIndicator"); }
+            else if (parseNode.GetChildNode("LabelLinkIndicator") is { } nullNodeLabelLinkIndicator && nullNodeLabelLinkIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelLinkIndicator = null;
+            if (parseNode.GetChildNode("ResendEMailIndicator") is null) { _explicitNullValueResendEMailIndicator = default!; _explicitNullProperties?.Remove("ResendEMailIndicator"); }
+            else if (parseNode.GetChildNode("ResendEMailIndicator") is { } nullNodeResendEMailIndicator && nullNodeResendEMailIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResendEMailIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates the Label Recovery and Receipt Recovery URL links are to be returned in the XML Response. Valid for following shipment -Print/Electronic Return LabelPrint/Electronic Import Control LabelForward shipment except for Mail Innovations Forward</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LabelLinkIndicator { get => _explicitNullValueLabelLinkIndicator; set { _explicitNullValueLabelLinkIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinkIndicator"); else _explicitNullProperties?.Remove("LabelLinkIndicator"); } }
+        public string? LabelLinkIndicator { get => _explicitNullValueLabelLinkIndicator; set { _explicitNullValueLabelLinkIndicator = value; AdditionalData?.Remove("LabelLinkIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinkIndicator"); else _explicitNullProperties?.Remove("LabelLinkIndicator"); } }
         private string? _explicitNullValueLabelLinkIndicator = default!;
 #nullable restore
 #else
-        public string LabelLinkIndicator { get => _explicitNullValueLabelLinkIndicator; set { _explicitNullValueLabelLinkIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinkIndicator"); else _explicitNullProperties?.Remove("LabelLinkIndicator"); } }
+        public string LabelLinkIndicator { get => _explicitNullValueLabelLinkIndicator; set { _explicitNullValueLabelLinkIndicator = value; AdditionalData?.Remove("LabelLinkIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinkIndicator"); else _explicitNullProperties?.Remove("LabelLinkIndicator"); } }
         private string _explicitNullValueLabelLinkIndicator = default!;
 #endif
         /// <summary>Not Used. If this tag is present, resend the Label Delivery notification email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResendEMailIndicator { get => _explicitNullValueResendEMailIndicator; set { _explicitNullValueResendEMailIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResendEMailIndicator"); else _explicitNullProperties?.Remove("ResendEMailIndicator"); } }
+        public string? ResendEMailIndicator { get => _explicitNullValueResendEMailIndicator; set { _explicitNullValueResendEMailIndicator = value; AdditionalData?.Remove("ResendEMailIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResendEMailIndicator"); else _explicitNullProperties?.Remove("ResendEMailIndicator"); } }
         private string? _explicitNullValueResendEMailIndicator = default!;
 #nullable restore
 #else
-        public string ResendEMailIndicator { get => _explicitNullValueResendEMailIndicator; set { _explicitNullValueResendEMailIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResendEMailIndicator"); else _explicitNullProperties?.Remove("ResendEMailIndicator"); } }
+        public string ResendEMailIndicator { get => _explicitNullValueResendEMailIndicator; set { _explicitNullValueResendEMailIndicator = value; AdditionalData?.Remove("ResendEMailIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResendEMailIndicator"); else _explicitNullProperties?.Remove("ResendEMailIndicator"); } }
         private string _explicitNullValueResendEMailIndicator = default!;
 #endif
         /// <summary>

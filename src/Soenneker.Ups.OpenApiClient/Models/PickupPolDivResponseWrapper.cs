@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PickupGetPoliticalDivision1ListResponse") is { } nullNodePickupGetPoliticalDivision1ListResponse && nullNodePickupGetPoliticalDivision1ListResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupGetPoliticalDivision1ListResponse = null;
+            if (parseNode.GetChildNode("PickupGetPoliticalDivision1ListResponse") is null) { _explicitNullValuePickupGetPoliticalDivision1ListResponse = default!; _explicitNullProperties?.Remove("PickupGetPoliticalDivision1ListResponse"); }
+            else if (parseNode.GetChildNode("PickupGetPoliticalDivision1ListResponse") is { } nullNodePickupGetPoliticalDivision1ListResponse && nullNodePickupGetPoliticalDivision1ListResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupGetPoliticalDivision1ListResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The response for getting a list of valid Political Division 1 or State field in the specified country or territory.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse? PickupGetPoliticalDivision1ListResponse { get => _explicitNullValuePickupGetPoliticalDivision1ListResponse; set { _explicitNullValuePickupGetPoliticalDivision1ListResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupGetPoliticalDivision1ListResponse"); else _explicitNullProperties?.Remove("PickupGetPoliticalDivision1ListResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse? PickupGetPoliticalDivision1ListResponse { get => _explicitNullValuePickupGetPoliticalDivision1ListResponse; set { _explicitNullValuePickupGetPoliticalDivision1ListResponse = value; AdditionalData?.Remove("PickupGetPoliticalDivision1ListResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupGetPoliticalDivision1ListResponse"); else _explicitNullProperties?.Remove("PickupGetPoliticalDivision1ListResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse? _explicitNullValuePickupGetPoliticalDivision1ListResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse PickupGetPoliticalDivision1ListResponse { get => _explicitNullValuePickupGetPoliticalDivision1ListResponse; set { _explicitNullValuePickupGetPoliticalDivision1ListResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupGetPoliticalDivision1ListResponse"); else _explicitNullProperties?.Remove("PickupGetPoliticalDivision1ListResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse PickupGetPoliticalDivision1ListResponse { get => _explicitNullValuePickupGetPoliticalDivision1ListResponse; set { _explicitNullValuePickupGetPoliticalDivision1ListResponse = value; AdditionalData?.Remove("PickupGetPoliticalDivision1ListResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupGetPoliticalDivision1ListResponse"); else _explicitNullProperties?.Remove("PickupGetPoliticalDivision1ListResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponse _explicitNullValuePickupGetPoliticalDivision1ListResponse = default!;
 #endif
         /// <summary>

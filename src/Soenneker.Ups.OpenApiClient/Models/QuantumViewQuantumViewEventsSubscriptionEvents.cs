@@ -17,11 +17,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DateRange") is { } nullNodeDateRange && nullNodeDateRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateRange = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("Number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
-            if (parseNode.GetChildNode("SubscriptionFile") is { } nullNodeSubscriptionFile && nullNodeSubscriptionFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionFile = null;
-            if (parseNode.GetChildNode("SubscriptionStatus") is { } nullNodeSubscriptionStatus && nullNodeSubscriptionStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionStatus = null;
+            if (parseNode.GetChildNode("DateRange") is null) { _explicitNullValueDateRange = default!; _explicitNullProperties?.Remove("DateRange"); }
+            else if (parseNode.GetChildNode("DateRange") is { } nullNodeDateRange && nullNodeDateRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateRange = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("Number") is null) { _explicitNullValueNumber = default!; _explicitNullProperties?.Remove("Number"); }
+            else if (parseNode.GetChildNode("Number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
+            if (parseNode.GetChildNode("SubscriptionFile") is null) { _explicitNullValueSubscriptionFile = default!; _explicitNullProperties?.Remove("SubscriptionFile"); }
+            else if (parseNode.GetChildNode("SubscriptionFile") is { } nullNodeSubscriptionFile && nullNodeSubscriptionFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionFile = null;
+            if (parseNode.GetChildNode("SubscriptionStatus") is null) { _explicitNullValueSubscriptionStatus = default!; _explicitNullProperties?.Remove("SubscriptionStatus"); }
+            else if (parseNode.GetChildNode("SubscriptionStatus") is { } nullNodeSubscriptionStatus && nullNodeSubscriptionStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The range of date time of subscription requested by user, as one type of request criteria, valid up to but not exceeding 7 days into the past, starting from current day.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsDateRange? DateRange { get => _explicitNullValueDateRange; set { _explicitNullValueDateRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateRange"); else _explicitNullProperties?.Remove("DateRange"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsDateRange? DateRange { get => _explicitNullValueDateRange; set { _explicitNullValueDateRange = value; AdditionalData?.Remove("DateRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateRange"); else _explicitNullProperties?.Remove("DateRange"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsDateRange? _explicitNullValueDateRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsDateRange DateRange { get => _explicitNullValueDateRange; set { _explicitNullValueDateRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateRange"); else _explicitNullProperties?.Remove("DateRange"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsDateRange DateRange { get => _explicitNullValueDateRange; set { _explicitNullValueDateRange = value; AdditionalData?.Remove("DateRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateRange"); else _explicitNullProperties?.Remove("DateRange"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsDateRange _explicitNullValueDateRange = default!;
 #endif
         /// <summary>A name uniquely defined associated to the Subscription ID, for each subscription. Required if the SubscriptionEvents container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>A number uniquely defined associated to the Subscriber ID, for each subscription. Required if the SubscriptionEvents container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
+        public string? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("Number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
         private string? _explicitNullValueNumber = default!;
 #nullable restore
 #else
-        public string Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
+        public string Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("Number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
         private string _explicitNullValueNumber = default!;
 #endif
         /// <summary>Container holds all of the unread files associated with the subscription.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile>? SubscriptionFile { get => _explicitNullValueSubscriptionFile; set { _explicitNullValueSubscriptionFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionFile"); else _explicitNullProperties?.Remove("SubscriptionFile"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile>? SubscriptionFile { get => _explicitNullValueSubscriptionFile; set { _explicitNullValueSubscriptionFile = value; AdditionalData?.Remove("SubscriptionFile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionFile"); else _explicitNullProperties?.Remove("SubscriptionFile"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile>? _explicitNullValueSubscriptionFile = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile> SubscriptionFile { get => _explicitNullValueSubscriptionFile; set { _explicitNullValueSubscriptionFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionFile"); else _explicitNullProperties?.Remove("SubscriptionFile"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile> SubscriptionFile { get => _explicitNullValueSubscriptionFile; set { _explicitNullValueSubscriptionFile = value; AdditionalData?.Remove("SubscriptionFile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionFile"); else _explicitNullProperties?.Remove("SubscriptionFile"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionFile> _explicitNullValueSubscriptionFile = default!;
 #endif
         /// <summary>Container for whether the subscription is active or not.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionStatus? SubscriptionStatus { get => _explicitNullValueSubscriptionStatus; set { _explicitNullValueSubscriptionStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionStatus"); else _explicitNullProperties?.Remove("SubscriptionStatus"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionStatus? SubscriptionStatus { get => _explicitNullValueSubscriptionStatus; set { _explicitNullValueSubscriptionStatus = value; AdditionalData?.Remove("SubscriptionStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionStatus"); else _explicitNullProperties?.Remove("SubscriptionStatus"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionStatus? _explicitNullValueSubscriptionStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionStatus SubscriptionStatus { get => _explicitNullValueSubscriptionStatus; set { _explicitNullValueSubscriptionStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionStatus"); else _explicitNullProperties?.Remove("SubscriptionStatus"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionStatus SubscriptionStatus { get => _explicitNullValueSubscriptionStatus; set { _explicitNullValueSubscriptionStatus = value; AdditionalData?.Remove("SubscriptionStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubscriptionStatus"); else _explicitNullProperties?.Remove("SubscriptionStatus"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewSubscriptionEventsSubscriptionStatus _explicitNullValueSubscriptionStatus = default!;
 #endif
         /// <summary>

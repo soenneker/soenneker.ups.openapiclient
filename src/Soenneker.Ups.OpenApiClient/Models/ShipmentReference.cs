@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("referenceType") is { } nullNodeReferenceType && nullNodeReferenceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceType = null;
-            if (parseNode.GetChildNode("referenceValue") is { } nullNodeReferenceValue && nullNodeReferenceValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceValue = null;
+            if (parseNode.GetChildNode("referenceType") is null) { _explicitNullValueReferenceType = default!; _explicitNullProperties?.Remove("referenceType"); }
+            else if (parseNode.GetChildNode("referenceType") is { } nullNodeReferenceType && nullNodeReferenceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceType = null;
+            if (parseNode.GetChildNode("referenceValue") is null) { _explicitNullValueReferenceValue = default!; _explicitNullProperties?.Remove("referenceValue"); }
+            else if (parseNode.GetChildNode("referenceValue") is { } nullNodeReferenceValue && nullNodeReferenceValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Reference type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceType { get => _explicitNullValueReferenceType; set { _explicitNullValueReferenceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceType"); else _explicitNullProperties?.Remove("referenceType"); } }
+        public string? ReferenceType { get => _explicitNullValueReferenceType; set { _explicitNullValueReferenceType = value; AdditionalData?.Remove("referenceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceType"); else _explicitNullProperties?.Remove("referenceType"); } }
         private string? _explicitNullValueReferenceType = default!;
 #nullable restore
 #else
-        public string ReferenceType { get => _explicitNullValueReferenceType; set { _explicitNullValueReferenceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceType"); else _explicitNullProperties?.Remove("referenceType"); } }
+        public string ReferenceType { get => _explicitNullValueReferenceType; set { _explicitNullValueReferenceType = value; AdditionalData?.Remove("referenceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceType"); else _explicitNullProperties?.Remove("referenceType"); } }
         private string _explicitNullValueReferenceType = default!;
 #endif
         /// <summary>Reference value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceValue { get => _explicitNullValueReferenceValue; set { _explicitNullValueReferenceValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceValue"); else _explicitNullProperties?.Remove("referenceValue"); } }
+        public string? ReferenceValue { get => _explicitNullValueReferenceValue; set { _explicitNullValueReferenceValue = value; AdditionalData?.Remove("referenceValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceValue"); else _explicitNullProperties?.Remove("referenceValue"); } }
         private string? _explicitNullValueReferenceValue = default!;
 #nullable restore
 #else
-        public string ReferenceValue { get => _explicitNullValueReferenceValue; set { _explicitNullValueReferenceValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceValue"); else _explicitNullProperties?.Remove("referenceValue"); } }
+        public string ReferenceValue { get => _explicitNullValueReferenceValue; set { _explicitNullValueReferenceValue = value; AdditionalData?.Remove("referenceValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceValue"); else _explicitNullProperties?.Remove("referenceValue"); } }
         private string _explicitNullValueReferenceValue = default!;
 #endif
         /// <summary>

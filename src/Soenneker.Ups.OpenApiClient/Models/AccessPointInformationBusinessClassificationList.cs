@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("BusinessClassification") is { } nullNodeBusinessClassification && nullNodeBusinessClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessClassification = null;
+            if (parseNode.GetChildNode("BusinessClassification") is null) { _explicitNullValueBusinessClassification = default!; _explicitNullProperties?.Remove("BusinessClassification"); }
+            else if (parseNode.GetChildNode("BusinessClassification") is { } nullNodeBusinessClassification && nullNodeBusinessClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessClassification = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to hold Business classification of UPS access point.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.BusinessClassificationListBusinessClassification>? BusinessClassification { get => _explicitNullValueBusinessClassification; set { _explicitNullValueBusinessClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessClassification"); else _explicitNullProperties?.Remove("BusinessClassification"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.BusinessClassificationListBusinessClassification>? BusinessClassification { get => _explicitNullValueBusinessClassification; set { _explicitNullValueBusinessClassification = value; AdditionalData?.Remove("BusinessClassification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessClassification"); else _explicitNullProperties?.Remove("BusinessClassification"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.BusinessClassificationListBusinessClassification>? _explicitNullValueBusinessClassification = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.BusinessClassificationListBusinessClassification> BusinessClassification { get => _explicitNullValueBusinessClassification; set { _explicitNullValueBusinessClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessClassification"); else _explicitNullProperties?.Remove("BusinessClassification"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.BusinessClassificationListBusinessClassification> BusinessClassification { get => _explicitNullValueBusinessClassification; set { _explicitNullValueBusinessClassification = value; AdditionalData?.Remove("BusinessClassification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessClassification"); else _explicitNullProperties?.Remove("BusinessClassification"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.BusinessClassificationListBusinessClassification> _explicitNullValueBusinessClassification = default!;
 #endif
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("commodityCode") is { } nullNodeCommodityCode && nullNodeCommodityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCode = null;
-            if (parseNode.GetChildNode("regulations") is { } nullNodeRegulations && nullNodeRegulations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regulations = null;
+            if (parseNode.GetChildNode("commodityCode") is null) { _explicitNullValueCommodityCode = default!; _explicitNullProperties?.Remove("commodityCode"); }
+            else if (parseNode.GetChildNode("commodityCode") is { } nullNodeCommodityCode && nullNodeCommodityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCode = null;
+            if (parseNode.GetChildNode("regulations") is null) { _explicitNullValueRegulations = default!; _explicitNullProperties?.Remove("regulations"); }
+            else if (parseNode.GetChildNode("regulations") is { } nullNodeRegulations && nullNodeRegulations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regulations = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The tariff code for the product for the selected import country and process type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCode"); else _explicitNullProperties?.Remove("commodityCode"); } }
+        public string? CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; AdditionalData?.Remove("commodityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCode"); else _explicitNullProperties?.Remove("commodityCode"); } }
         private string? _explicitNullValueCommodityCode = default!;
 #nullable restore
 #else
-        public string CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCode"); else _explicitNullProperties?.Remove("commodityCode"); } }
+        public string CommodityCode { get => _explicitNullValueCommodityCode; set { _explicitNullValueCommodityCode = value; AdditionalData?.Remove("commodityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCode"); else _explicitNullProperties?.Remove("commodityCode"); } }
         private string _explicitNullValueCommodityCode = default!;
 #endif
         /// <summary>Regulations that require additional data for this commodity code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItemRegulationsItem>? Regulations { get => _explicitNullValueRegulations; set { _explicitNullValueRegulations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulations"); else _explicitNullProperties?.Remove("regulations"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItemRegulationsItem>? Regulations { get => _explicitNullValueRegulations; set { _explicitNullValueRegulations = value; AdditionalData?.Remove("regulations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulations"); else _explicitNullProperties?.Remove("regulations"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItemRegulationsItem>? _explicitNullValueRegulations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItemRegulationsItem> Regulations { get => _explicitNullValueRegulations; set { _explicitNullValueRegulations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulations"); else _explicitNullProperties?.Remove("regulations"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItemRegulationsItem> Regulations { get => _explicitNullValueRegulations; set { _explicitNullValueRegulations = value; AdditionalData?.Remove("regulations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulations"); else _explicitNullProperties?.Remove("regulations"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItemRegulationsItem> _explicitNullValueRegulations = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("packages") is { } nullNodePackages && nullNodePackages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Packages = null;
-            if (parseNode.GetChildNode("shipper") is { } nullNodeShipper && nullNodeShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipper = null;
+            if (parseNode.GetChildNode("packages") is null) { _explicitNullValuePackages = default!; _explicitNullProperties?.Remove("packages"); }
+            else if (parseNode.GetChildNode("packages") is { } nullNodePackages && nullNodePackages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Packages = null;
+            if (parseNode.GetChildNode("shipper") is null) { _explicitNullValueShipper = default!; _explicitNullProperties?.Remove("shipper"); }
+            else if (parseNode.GetChildNode("shipper") is { } nullNodeShipper && nullNodeShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipper = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The list of packages in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage>? Packages { get => _explicitNullValuePackages; set { _explicitNullValuePackages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages"); else _explicitNullProperties?.Remove("packages"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage>? Packages { get => _explicitNullValuePackages; set { _explicitNullValuePackages = value; AdditionalData?.Remove("packages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages"); else _explicitNullProperties?.Remove("packages"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage>? _explicitNullValuePackages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage> Packages { get => _explicitNullValuePackages; set { _explicitNullValuePackages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages"); else _explicitNullProperties?.Remove("packages"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage> Packages { get => _explicitNullValuePackages; set { _explicitNullValuePackages = value; AdditionalData?.Remove("packages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages"); else _explicitNullProperties?.Remove("packages"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage> _explicitNullValuePackages = default!;
 #endif
         /// <summary>Contains the account number to be used in closeout request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutRequestShipmentShipper? Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutRequestShipmentShipper? Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; AdditionalData?.Remove("shipper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CloseoutRequestShipmentShipper? _explicitNullValueShipper = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutRequestShipmentShipper Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CloseoutRequestShipmentShipper Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; AdditionalData?.Remove("shipper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CloseoutRequestShipmentShipper _explicitNullValueShipper = default!;
 #endif
         /// <summary>

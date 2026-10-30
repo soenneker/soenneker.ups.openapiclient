@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("RequestAction") is { } nullNodeRequestAction && nullNodeRequestAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestAction = null;
-            if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
+            if (parseNode.GetChildNode("RequestAction") is null) { _explicitNullValueRequestAction = default!; _explicitNullProperties?.Remove("RequestAction"); }
+            else if (parseNode.GetChildNode("RequestAction") is { } nullNodeRequestAction && nullNodeRequestAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestAction = null;
+            if (parseNode.GetChildNode("TransactionReference") is null) { _explicitNullValueTransactionReference = default!; _explicitNullProperties?.Remove("TransactionReference"); }
+            else if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates the action to be taken by the XML service. The only valid value is  &apos;QVEvents&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestAction { get => _explicitNullValueRequestAction; set { _explicitNullValueRequestAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestAction"); else _explicitNullProperties?.Remove("RequestAction"); } }
+        public string? RequestAction { get => _explicitNullValueRequestAction; set { _explicitNullValueRequestAction = value; AdditionalData?.Remove("RequestAction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestAction"); else _explicitNullProperties?.Remove("RequestAction"); } }
         private string? _explicitNullValueRequestAction = default!;
 #nullable restore
 #else
-        public string RequestAction { get => _explicitNullValueRequestAction; set { _explicitNullValueRequestAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestAction"); else _explicitNullProperties?.Remove("RequestAction"); } }
+        public string RequestAction { get => _explicitNullValueRequestAction; set { _explicitNullValueRequestAction = value; AdditionalData?.Remove("RequestAction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestAction"); else _explicitNullProperties?.Remove("RequestAction"); } }
         private string _explicitNullValueRequestAction = default!;
 #endif
         /// <summary>TransactionReference identifies transactions between client and server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; AdditionalData?.Remove("TransactionReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestTransactionReference? _explicitNullValueTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; AdditionalData?.Remove("TransactionReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewRequestTransactionReference _explicitNullValueTransactionReference = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inboundToken") is { } nullNodeInboundToken && nullNodeInboundToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundToken = null;
-            if (parseNode.GetChildNode("trackingNumbersList") is { } nullNodeTrackingNumbersList && nullNodeTrackingNumbersList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumbersList = null;
+            if (parseNode.GetChildNode("inboundToken") is null) { _explicitNullValueInboundToken = default!; _explicitNullProperties?.Remove("inboundToken"); }
+            else if (parseNode.GetChildNode("inboundToken") is { } nullNodeInboundToken && nullNodeInboundToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundToken = null;
+            if (parseNode.GetChildNode("trackingNumbersList") is null) { _explicitNullValueTrackingNumbersList = default!; _explicitNullProperties?.Remove("trackingNumbersList"); }
+            else if (parseNode.GetChildNode("trackingNumbersList") is { } nullNodeTrackingNumbersList && nullNodeTrackingNumbersList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumbersList = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The inboundToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
+        public string? InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; AdditionalData?.Remove("inboundToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
         private string? _explicitNullValueInboundToken = default!;
 #nullable restore
 #else
-        public string InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
+        public string InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; AdditionalData?.Remove("inboundToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
         private string _explicitNullValueInboundToken = default!;
 #endif
         /// <summary>The trackingNumbersList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TrackingNumbersList { get => _explicitNullValueTrackingNumbersList; set { _explicitNullValueTrackingNumbersList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumbersList"); else _explicitNullProperties?.Remove("trackingNumbersList"); } }
+        public List<string>? TrackingNumbersList { get => _explicitNullValueTrackingNumbersList; set { _explicitNullValueTrackingNumbersList = value; AdditionalData?.Remove("trackingNumbersList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumbersList"); else _explicitNullProperties?.Remove("trackingNumbersList"); } }
         private List<string>? _explicitNullValueTrackingNumbersList = default!;
 #nullable restore
 #else
-        public List<string> TrackingNumbersList { get => _explicitNullValueTrackingNumbersList; set { _explicitNullValueTrackingNumbersList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumbersList"); else _explicitNullProperties?.Remove("trackingNumbersList"); } }
+        public List<string> TrackingNumbersList { get => _explicitNullValueTrackingNumbersList; set { _explicitNullValueTrackingNumbersList = value; AdditionalData?.Remove("trackingNumbersList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumbersList"); else _explicitNullProperties?.Remove("trackingNumbersList"); } }
         private List<string> _explicitNullValueTrackingNumbersList = default!;
 #endif
         /// <summary>

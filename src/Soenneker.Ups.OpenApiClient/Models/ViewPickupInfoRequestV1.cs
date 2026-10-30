@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ViewPickupInfoRequest") is { } nullNodeViewPickupInfoRequest && nullNodeViewPickupInfoRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewPickupInfoRequest = null;
+            if (parseNode.GetChildNode("ViewPickupInfoRequest") is null) { _explicitNullValueViewPickupInfoRequest = default!; _explicitNullProperties?.Remove("ViewPickupInfoRequest"); }
+            else if (parseNode.GetChildNode("ViewPickupInfoRequest") is { } nullNodeViewPickupInfoRequest && nullNodeViewPickupInfoRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewPickupInfoRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The View Pickup Info request container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequest? ViewPickupInfoRequest { get => _explicitNullValueViewPickupInfoRequest; set { _explicitNullValueViewPickupInfoRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ViewPickupInfoRequest"); else _explicitNullProperties?.Remove("ViewPickupInfoRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequest? ViewPickupInfoRequest { get => _explicitNullValueViewPickupInfoRequest; set { _explicitNullValueViewPickupInfoRequest = value; AdditionalData?.Remove("ViewPickupInfoRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ViewPickupInfoRequest"); else _explicitNullProperties?.Remove("ViewPickupInfoRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequest? _explicitNullValueViewPickupInfoRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequest ViewPickupInfoRequest { get => _explicitNullValueViewPickupInfoRequest; set { _explicitNullValueViewPickupInfoRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ViewPickupInfoRequest"); else _explicitNullProperties?.Remove("ViewPickupInfoRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequest ViewPickupInfoRequest { get => _explicitNullValueViewPickupInfoRequest; set { _explicitNullValueViewPickupInfoRequest = value; AdditionalData?.Remove("ViewPickupInfoRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ViewPickupInfoRequest"); else _explicitNullProperties?.Remove("ViewPickupInfoRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequest _explicitNullValueViewPickupInfoRequest = default!;
 #endif
         /// <summary>

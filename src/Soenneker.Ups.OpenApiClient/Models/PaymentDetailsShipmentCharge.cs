@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("BillReceiver") is { } nullNodeBillReceiver && nullNodeBillReceiver.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillReceiver = null;
-            if (parseNode.GetChildNode("BillShipper") is { } nullNodeBillShipper && nullNodeBillShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillShipper = null;
-            if (parseNode.GetChildNode("BillThirdParty") is { } nullNodeBillThirdParty && nullNodeBillThirdParty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillThirdParty = null;
-            if (parseNode.GetChildNode("ConsigneeBilledIndicator") is { } nullNodeConsigneeBilledIndicator && nullNodeConsigneeBilledIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsigneeBilledIndicator = null;
-            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("BillReceiver") is null) { _explicitNullValueBillReceiver = default!; _explicitNullProperties?.Remove("BillReceiver"); }
+            else if (parseNode.GetChildNode("BillReceiver") is { } nullNodeBillReceiver && nullNodeBillReceiver.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillReceiver = null;
+            if (parseNode.GetChildNode("BillShipper") is null) { _explicitNullValueBillShipper = default!; _explicitNullProperties?.Remove("BillShipper"); }
+            else if (parseNode.GetChildNode("BillShipper") is { } nullNodeBillShipper && nullNodeBillShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillShipper = null;
+            if (parseNode.GetChildNode("BillThirdParty") is null) { _explicitNullValueBillThirdParty = default!; _explicitNullProperties?.Remove("BillThirdParty"); }
+            else if (parseNode.GetChildNode("BillThirdParty") is { } nullNodeBillThirdParty && nullNodeBillThirdParty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillThirdParty = null;
+            if (parseNode.GetChildNode("ConsigneeBilledIndicator") is null) { _explicitNullValueConsigneeBilledIndicator = default!; _explicitNullProperties?.Remove("ConsigneeBilledIndicator"); }
+            else if (parseNode.GetChildNode("ConsigneeBilledIndicator") is { } nullNodeConsigneeBilledIndicator && nullNodeConsigneeBilledIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsigneeBilledIndicator = null;
+            if (parseNode.GetChildNode("Type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("Type"); }
+            else if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for the BillReceiver billing option.  This element or its sibling element, BillShipper, BillThirdParty or Consignee Billed, must be present but no more than one can be present. For a return shipment, Bill Receiver is invalid for Transportation charges.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver? BillReceiver { get => _explicitNullValueBillReceiver; set { _explicitNullValueBillReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillReceiver"); else _explicitNullProperties?.Remove("BillReceiver"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver? BillReceiver { get => _explicitNullValueBillReceiver; set { _explicitNullValueBillReceiver = value; AdditionalData?.Remove("BillReceiver"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillReceiver"); else _explicitNullProperties?.Remove("BillReceiver"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver? _explicitNullValueBillReceiver = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver BillReceiver { get => _explicitNullValueBillReceiver; set { _explicitNullValueBillReceiver = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillReceiver"); else _explicitNullProperties?.Remove("BillReceiver"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver BillReceiver { get => _explicitNullValueBillReceiver; set { _explicitNullValueBillReceiver = value; AdditionalData?.Remove("BillReceiver"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillReceiver"); else _explicitNullProperties?.Remove("BillReceiver"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillReceiver _explicitNullValueBillReceiver = default!;
 #endif
         /// <summary>Container for the BillShipper billing option.  This element or its sibling element, BillReceiver, BillThirdParty or ConsigneeBilledIndicator, must be present but no more than one can be present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper? BillShipper { get => _explicitNullValueBillShipper; set { _explicitNullValueBillShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillShipper"); else _explicitNullProperties?.Remove("BillShipper"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper? BillShipper { get => _explicitNullValueBillShipper; set { _explicitNullValueBillShipper = value; AdditionalData?.Remove("BillShipper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillShipper"); else _explicitNullProperties?.Remove("BillShipper"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper? _explicitNullValueBillShipper = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper BillShipper { get => _explicitNullValueBillShipper; set { _explicitNullValueBillShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillShipper"); else _explicitNullProperties?.Remove("BillShipper"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper BillShipper { get => _explicitNullValueBillShipper; set { _explicitNullValueBillShipper = value; AdditionalData?.Remove("BillShipper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillShipper"); else _explicitNullProperties?.Remove("BillShipper"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillShipper _explicitNullValueBillShipper = default!;
 #endif
         /// <summary>Container for the third party billing option.  This element or its sibling element, BillShipper, BillReceiver or Consignee Billed, must be present but no more than one can be present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty? BillThirdParty { get => _explicitNullValueBillThirdParty; set { _explicitNullValueBillThirdParty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillThirdParty"); else _explicitNullProperties?.Remove("BillThirdParty"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty? BillThirdParty { get => _explicitNullValueBillThirdParty; set { _explicitNullValueBillThirdParty = value; AdditionalData?.Remove("BillThirdParty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillThirdParty"); else _explicitNullProperties?.Remove("BillThirdParty"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty? _explicitNullValueBillThirdParty = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty BillThirdParty { get => _explicitNullValueBillThirdParty; set { _explicitNullValueBillThirdParty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillThirdParty"); else _explicitNullProperties?.Remove("BillThirdParty"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty BillThirdParty { get => _explicitNullValueBillThirdParty; set { _explicitNullValueBillThirdParty = value; AdditionalData?.Remove("BillThirdParty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillThirdParty"); else _explicitNullProperties?.Remove("BillThirdParty"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentChargeBillThirdParty _explicitNullValueBillThirdParty = default!;
 #endif
         /// <summary>Consignee Billing payment option indicator. The presence indicates consignee billing option is selected. The absence indicates one of the other payment options is selected.  Empty Tag. This element or its sibling element, BillShipper, BillReceiver or BillThirdParty, must be present but no more than one can be present. This billing option is valid for a shipment charge type of Transportation only. Only applies to US/PR and PR/US shipment origins and destination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConsigneeBilledIndicator { get => _explicitNullValueConsigneeBilledIndicator; set { _explicitNullValueConsigneeBilledIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeBilledIndicator"); else _explicitNullProperties?.Remove("ConsigneeBilledIndicator"); } }
+        public string? ConsigneeBilledIndicator { get => _explicitNullValueConsigneeBilledIndicator; set { _explicitNullValueConsigneeBilledIndicator = value; AdditionalData?.Remove("ConsigneeBilledIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeBilledIndicator"); else _explicitNullProperties?.Remove("ConsigneeBilledIndicator"); } }
         private string? _explicitNullValueConsigneeBilledIndicator = default!;
 #nullable restore
 #else
-        public string ConsigneeBilledIndicator { get => _explicitNullValueConsigneeBilledIndicator; set { _explicitNullValueConsigneeBilledIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeBilledIndicator"); else _explicitNullProperties?.Remove("ConsigneeBilledIndicator"); } }
+        public string ConsigneeBilledIndicator { get => _explicitNullValueConsigneeBilledIndicator; set { _explicitNullValueConsigneeBilledIndicator = value; AdditionalData?.Remove("ConsigneeBilledIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeBilledIndicator"); else _explicitNullProperties?.Remove("ConsigneeBilledIndicator"); } }
         private string _explicitNullValueConsigneeBilledIndicator = default!;
 #endif
         /// <summary>Values are 01 = Transportation, 02 = Duties and Taxes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>

@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
-            if (parseNode.GetChildNode("Length") is { } nullNodeLength && nullNodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Length = null;
-            if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
-            if (parseNode.GetChildNode("Width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
+            if (parseNode.GetChildNode("Height") is null) { _explicitNullValueHeight = default!; _explicitNullProperties?.Remove("Height"); }
+            else if (parseNode.GetChildNode("Height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("Length") is null) { _explicitNullValueLength = default!; _explicitNullProperties?.Remove("Length"); }
+            else if (parseNode.GetChildNode("Length") is { } nullNodeLength && nullNodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Length = null;
+            if (parseNode.GetChildNode("UnitOfMeasurement") is null) { _explicitNullValueUnitOfMeasurement = default!; _explicitNullProperties?.Remove("UnitOfMeasurement"); }
+            else if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
+            if (parseNode.GetChildNode("Width") is null) { _explicitNullValueWidth = default!; _explicitNullProperties?.Remove("Width"); }
+            else if (parseNode.GetChildNode("Width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,34 +33,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Height of the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Height"); else _explicitNullProperties?.Remove("Height"); } }
+        public string? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("Height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Height"); else _explicitNullProperties?.Remove("Height"); } }
         private string? _explicitNullValueHeight = default!;
 #nullable restore
 #else
-        public string Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Height"); else _explicitNullProperties?.Remove("Height"); } }
+        public string Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("Height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Height"); else _explicitNullProperties?.Remove("Height"); } }
         private string _explicitNullValueHeight = default!;
 #endif
         /// <summary>Length of the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Length"); else _explicitNullProperties?.Remove("Length"); } }
+        public string? Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; AdditionalData?.Remove("Length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Length"); else _explicitNullProperties?.Remove("Length"); } }
         private string? _explicitNullValueLength = default!;
 #nullable restore
 #else
-        public string Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Length"); else _explicitNullProperties?.Remove("Length"); } }
+        public string Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; AdditionalData?.Remove("Length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Length"); else _explicitNullProperties?.Remove("Length"); } }
         private string _explicitNullValueLength = default!;
 #endif
         /// <summary>The code associated with unit of measurement. The requested code must be valid for the shipper country or territory.Valid values are :- IN = Inches- CM = Centimeters</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlDimensionsUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlDimensionsUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; AdditionalData?.Remove("UnitOfMeasurement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LtlDimensionsUnitOfMeasurement? _explicitNullValueUnitOfMeasurement = default!;
         /// <summary>Width of the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Width"); else _explicitNullProperties?.Remove("Width"); } }
+        public string? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("Width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Width"); else _explicitNullProperties?.Remove("Width"); } }
         private string? _explicitNullValueWidth = default!;
 #nullable restore
 #else
-        public string Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Width"); else _explicitNullProperties?.Remove("Width"); } }
+        public string Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("Width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Width"); else _explicitNullProperties?.Remove("Width"); } }
         private string _explicitNullValueWidth = default!;
 #endif
         /// <summary>
@@ -86,7 +90,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "Height", n => { Height = n.GetStringValue(); } },
                 { "Length", n => { Length = n.GetStringValue(); } },
-                { "UnitOfMeasurement", n => { UnitOfMeasurement = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LtlDimensionsUnitOfMeasurement>(); } },
+                { "UnitOfMeasurement", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LtlDimensionsUnitOfMeasurement>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUnitOfMeasurement = default; _explicitNullProperties?.Remove("UnitOfMeasurement"); AdditionalData["UnitOfMeasurement"] = unknown; } else { UnitOfMeasurement = parsed; AdditionalData.Remove("UnitOfMeasurement"); } } },
                 { "Width", n => { Width = n.GetStringValue(); } },
             };
         }

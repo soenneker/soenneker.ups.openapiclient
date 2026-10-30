@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Segment") is { } nullNodeSegment && nullNodeSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Segment = null;
+            if (parseNode.GetChildNode("Segment") is null) { _explicitNullValueSegment = default!; _explicitNullProperties?.Remove("Segment"); }
+            else if (parseNode.GetChildNode("Segment") is { } nullNodeSegment && nullNodeSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Segment = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Walking directions, last 50 feet. **NOTE:** For versions &gt;= v3, this element will always be returned as an array. For requests using version = v1 and v2, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Segment { get => _explicitNullValueSegment; set { _explicitNullValueSegment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Segment"); else _explicitNullProperties?.Remove("Segment"); } }
+        public List<string>? Segment { get => _explicitNullValueSegment; set { _explicitNullValueSegment = value; AdditionalData?.Remove("Segment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Segment"); else _explicitNullProperties?.Remove("Segment"); } }
         private List<string>? _explicitNullValueSegment = default!;
 #nullable restore
 #else
-        public List<string> Segment { get => _explicitNullValueSegment; set { _explicitNullValueSegment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Segment"); else _explicitNullProperties?.Remove("Segment"); } }
+        public List<string> Segment { get => _explicitNullValueSegment; set { _explicitNullValueSegment = value; AdditionalData?.Remove("Segment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Segment"); else _explicitNullProperties?.Remove("Segment"); } }
         private List<string> _explicitNullValueSegment = default!;
 #endif
         /// <summary>

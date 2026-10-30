@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inquiryNumber") is { } nullNodeInquiryNumber && nullNodeInquiryNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InquiryNumber = null;
-            if (parseNode.GetChildNode("package") is { } nullNodePackage && nullNodePackage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Package = null;
-            if (parseNode.GetChildNode("userRelation") is { } nullNodeUserRelation && nullNodeUserRelation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserRelation = null;
-            if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
+            if (parseNode.GetChildNode("inquiryNumber") is null) { _explicitNullValueInquiryNumber = default!; _explicitNullProperties?.Remove("inquiryNumber"); }
+            else if (parseNode.GetChildNode("inquiryNumber") is { } nullNodeInquiryNumber && nullNodeInquiryNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InquiryNumber = null;
+            if (parseNode.GetChildNode("package") is null) { _explicitNullValuePackage = default!; _explicitNullProperties?.Remove("package"); }
+            else if (parseNode.GetChildNode("package") is { } nullNodePackage && nullNodePackage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Package = null;
+            if (parseNode.GetChildNode("userRelation") is null) { _explicitNullValueUserRelation = default!; _explicitNullProperties?.Remove("userRelation"); }
+            else if (parseNode.GetChildNode("userRelation") is { } nullNodeUserRelation && nullNodeUserRelation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserRelation = null;
+            if (parseNode.GetChildNode("warnings") is null) { _explicitNullValueWarnings = default!; _explicitNullProperties?.Remove("warnings"); }
+            else if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>inquiryNumber</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InquiryNumber { get => _explicitNullValueInquiryNumber; set { _explicitNullValueInquiryNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inquiryNumber"); else _explicitNullProperties?.Remove("inquiryNumber"); } }
+        public string? InquiryNumber { get => _explicitNullValueInquiryNumber; set { _explicitNullValueInquiryNumber = value; AdditionalData?.Remove("inquiryNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inquiryNumber"); else _explicitNullProperties?.Remove("inquiryNumber"); } }
         private string? _explicitNullValueInquiryNumber = default!;
 #nullable restore
 #else
-        public string InquiryNumber { get => _explicitNullValueInquiryNumber; set { _explicitNullValueInquiryNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inquiryNumber"); else _explicitNullProperties?.Remove("inquiryNumber"); } }
+        public string InquiryNumber { get => _explicitNullValueInquiryNumber; set { _explicitNullValueInquiryNumber = value; AdditionalData?.Remove("inquiryNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inquiryNumber"); else _explicitNullProperties?.Remove("inquiryNumber"); } }
         private string _explicitNullValueInquiryNumber = default!;
 #endif
         /// <summary>The package property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingPackage>? Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package"); else _explicitNullProperties?.Remove("package"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingPackage>? Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; AdditionalData?.Remove("package"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package"); else _explicitNullProperties?.Remove("package"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.TrackingPackage>? _explicitNullValuePackage = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingPackage> Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package"); else _explicitNullProperties?.Remove("package"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingPackage> Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; AdditionalData?.Remove("package"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package"); else _explicitNullProperties?.Remove("package"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.TrackingPackage> _explicitNullValuePackage = default!;
 #endif
         /// <summary>The relationship of the user to the package(s) in the shipment. No value means that the user has no relationship to the package. Note that this check is only done when the request contains the &apos;Username&apos; and package rights checking is performed. Valid values:&lt;br /&gt;&apos;MYC_HOME&apos; - My Choice for Home&lt;br /&gt;&apos;MYC_BUS_OUTBOUND&apos; - My Choice for Business Outbound&lt;br /&gt;&apos;MYC_BUS_INBOUND&apos; - My Choice for Business Inbound&lt;br /&gt;&apos;SHIPPER&apos; - Shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserRelation { get => _explicitNullValueUserRelation; set { _explicitNullValueUserRelation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userRelation"); else _explicitNullProperties?.Remove("userRelation"); } }
+        public List<string>? UserRelation { get => _explicitNullValueUserRelation; set { _explicitNullValueUserRelation = value; AdditionalData?.Remove("userRelation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userRelation"); else _explicitNullProperties?.Remove("userRelation"); } }
         private List<string>? _explicitNullValueUserRelation = default!;
 #nullable restore
 #else
-        public List<string> UserRelation { get => _explicitNullValueUserRelation; set { _explicitNullValueUserRelation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userRelation"); else _explicitNullProperties?.Remove("userRelation"); } }
+        public List<string> UserRelation { get => _explicitNullValueUserRelation; set { _explicitNullValueUserRelation = value; AdditionalData?.Remove("userRelation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userRelation"); else _explicitNullProperties?.Remove("userRelation"); } }
         private List<string> _explicitNullValueUserRelation = default!;
 #endif
         /// <summary>The warnings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingWarning>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingWarning>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.TrackingWarning>? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingWarning> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingWarning> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.TrackingWarning> _explicitNullValueWarnings = default!;
 #endif
         /// <summary>

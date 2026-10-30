@@ -18,89 +18,97 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("docDateTime") is { } nullNodeDocDateTime && nullNodeDocDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocDateTime = null;
-            if (parseNode.GetChildNode("docFlow") is { } nullNodeDocFlow && nullNodeDocFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocFlow = null;
-            if (parseNode.GetChildNode("docId") is { } nullNodeDocId && nullNodeDocId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocId = null;
-            if (parseNode.GetChildNode("docType") is { } nullNodeDocType && nullNodeDocType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocType = null;
-            if (parseNode.GetChildNode("docVer") is { } nullNodeDocVer && nullNodeDocVer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocVer = null;
-            if (parseNode.GetChildNode("orderDetails") is { } nullNodeOrderDetails && nullNodeOrderDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderDetails = null;
-            if (parseNode.GetChildNode("originalDocId") is { } nullNodeOriginalDocId && nullNodeOriginalDocId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalDocId = null;
-            if (parseNode.GetChildNode("sourceSystem") is { } nullNodeSourceSystem && nullNodeSourceSystem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceSystem = null;
+            if (parseNode.GetChildNode("docDateTime") is null) { _explicitNullValueDocDateTime = default!; _explicitNullProperties?.Remove("docDateTime"); }
+            else if (parseNode.GetChildNode("docDateTime") is { } nullNodeDocDateTime && nullNodeDocDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocDateTime = null;
+            if (parseNode.GetChildNode("docFlow") is null) { _explicitNullValueDocFlow = default!; _explicitNullProperties?.Remove("docFlow"); }
+            else if (parseNode.GetChildNode("docFlow") is { } nullNodeDocFlow && nullNodeDocFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocFlow = null;
+            if (parseNode.GetChildNode("docId") is null) { _explicitNullValueDocId = default!; _explicitNullProperties?.Remove("docId"); }
+            else if (parseNode.GetChildNode("docId") is { } nullNodeDocId && nullNodeDocId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocId = null;
+            if (parseNode.GetChildNode("docType") is null) { _explicitNullValueDocType = default!; _explicitNullProperties?.Remove("docType"); }
+            else if (parseNode.GetChildNode("docType") is { } nullNodeDocType && nullNodeDocType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocType = null;
+            if (parseNode.GetChildNode("docVer") is null) { _explicitNullValueDocVer = default!; _explicitNullProperties?.Remove("docVer"); }
+            else if (parseNode.GetChildNode("docVer") is { } nullNodeDocVer && nullNodeDocVer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocVer = null;
+            if (parseNode.GetChildNode("orderDetails") is null) { _explicitNullValueOrderDetails = default!; _explicitNullProperties?.Remove("orderDetails"); }
+            else if (parseNode.GetChildNode("orderDetails") is { } nullNodeOrderDetails && nullNodeOrderDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderDetails = null;
+            if (parseNode.GetChildNode("originalDocId") is null) { _explicitNullValueOriginalDocId = default!; _explicitNullProperties?.Remove("originalDocId"); }
+            else if (parseNode.GetChildNode("originalDocId") is { } nullNodeOriginalDocId && nullNodeOriginalDocId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalDocId = null;
+            if (parseNode.GetChildNode("sourceSystem") is null) { _explicitNullValueSourceSystem = default!; _explicitNullProperties?.Remove("sourceSystem"); }
+            else if (parseNode.GetChildNode("sourceSystem") is { } nullNodeSourceSystem && nullNodeSourceSystem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceSystem = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Document creation date and time</summary>
-        public DateTimeOffset? DocDateTime { get => _explicitNullValueDocDateTime; set { _explicitNullValueDocDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docDateTime"); else _explicitNullProperties?.Remove("docDateTime"); } }
+        public DateTimeOffset? DocDateTime { get => _explicitNullValueDocDateTime; set { _explicitNullValueDocDateTime = value; AdditionalData?.Remove("docDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docDateTime"); else _explicitNullProperties?.Remove("docDateTime"); } }
         private DateTimeOffset? _explicitNullValueDocDateTime = default!;
         /// <summary>Document flow direction</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocFlow { get => _explicitNullValueDocFlow; set { _explicitNullValueDocFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docFlow"); else _explicitNullProperties?.Remove("docFlow"); } }
+        public string? DocFlow { get => _explicitNullValueDocFlow; set { _explicitNullValueDocFlow = value; AdditionalData?.Remove("docFlow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docFlow"); else _explicitNullProperties?.Remove("docFlow"); } }
         private string? _explicitNullValueDocFlow = default!;
 #nullable restore
 #else
-        public string DocFlow { get => _explicitNullValueDocFlow; set { _explicitNullValueDocFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docFlow"); else _explicitNullProperties?.Remove("docFlow"); } }
+        public string DocFlow { get => _explicitNullValueDocFlow; set { _explicitNullValueDocFlow = value; AdditionalData?.Remove("docFlow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docFlow"); else _explicitNullProperties?.Remove("docFlow"); } }
         private string _explicitNullValueDocFlow = default!;
 #endif
         /// <summary>Unique document identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocId { get => _explicitNullValueDocId; set { _explicitNullValueDocId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docId"); else _explicitNullProperties?.Remove("docId"); } }
+        public string? DocId { get => _explicitNullValueDocId; set { _explicitNullValueDocId = value; AdditionalData?.Remove("docId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docId"); else _explicitNullProperties?.Remove("docId"); } }
         private string? _explicitNullValueDocId = default!;
 #nullable restore
 #else
-        public string DocId { get => _explicitNullValueDocId; set { _explicitNullValueDocId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docId"); else _explicitNullProperties?.Remove("docId"); } }
+        public string DocId { get => _explicitNullValueDocId; set { _explicitNullValueDocId = value; AdditionalData?.Remove("docId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docId"); else _explicitNullProperties?.Remove("docId"); } }
         private string _explicitNullValueDocId = default!;
 #endif
         /// <summary>Type of document</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocType { get => _explicitNullValueDocType; set { _explicitNullValueDocType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docType"); else _explicitNullProperties?.Remove("docType"); } }
+        public string? DocType { get => _explicitNullValueDocType; set { _explicitNullValueDocType = value; AdditionalData?.Remove("docType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docType"); else _explicitNullProperties?.Remove("docType"); } }
         private string? _explicitNullValueDocType = default!;
 #nullable restore
 #else
-        public string DocType { get => _explicitNullValueDocType; set { _explicitNullValueDocType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docType"); else _explicitNullProperties?.Remove("docType"); } }
+        public string DocType { get => _explicitNullValueDocType; set { _explicitNullValueDocType = value; AdditionalData?.Remove("docType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docType"); else _explicitNullProperties?.Remove("docType"); } }
         private string _explicitNullValueDocType = default!;
 #endif
         /// <summary>Document version</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocVer { get => _explicitNullValueDocVer; set { _explicitNullValueDocVer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docVer"); else _explicitNullProperties?.Remove("docVer"); } }
+        public string? DocVer { get => _explicitNullValueDocVer; set { _explicitNullValueDocVer = value; AdditionalData?.Remove("docVer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docVer"); else _explicitNullProperties?.Remove("docVer"); } }
         private string? _explicitNullValueDocVer = default!;
 #nullable restore
 #else
-        public string DocVer { get => _explicitNullValueDocVer; set { _explicitNullValueDocVer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docVer"); else _explicitNullProperties?.Remove("docVer"); } }
+        public string DocVer { get => _explicitNullValueDocVer; set { _explicitNullValueDocVer = value; AdditionalData?.Remove("docVer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docVer"); else _explicitNullProperties?.Remove("docVer"); } }
         private string _explicitNullValueDocVer = default!;
 #endif
         /// <summary>Array of order details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.OrderDetail>? OrderDetails { get => _explicitNullValueOrderDetails; set { _explicitNullValueOrderDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderDetails"); else _explicitNullProperties?.Remove("orderDetails"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.OrderDetail>? OrderDetails { get => _explicitNullValueOrderDetails; set { _explicitNullValueOrderDetails = value; AdditionalData?.Remove("orderDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderDetails"); else _explicitNullProperties?.Remove("orderDetails"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.OrderDetail>? _explicitNullValueOrderDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.OrderDetail> OrderDetails { get => _explicitNullValueOrderDetails; set { _explicitNullValueOrderDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderDetails"); else _explicitNullProperties?.Remove("orderDetails"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.OrderDetail> OrderDetails { get => _explicitNullValueOrderDetails; set { _explicitNullValueOrderDetails = value; AdditionalData?.Remove("orderDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderDetails"); else _explicitNullProperties?.Remove("orderDetails"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.OrderDetail> _explicitNullValueOrderDetails = default!;
 #endif
         /// <summary>Original document identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalDocId { get => _explicitNullValueOriginalDocId; set { _explicitNullValueOriginalDocId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalDocId"); else _explicitNullProperties?.Remove("originalDocId"); } }
+        public string? OriginalDocId { get => _explicitNullValueOriginalDocId; set { _explicitNullValueOriginalDocId = value; AdditionalData?.Remove("originalDocId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalDocId"); else _explicitNullProperties?.Remove("originalDocId"); } }
         private string? _explicitNullValueOriginalDocId = default!;
 #nullable restore
 #else
-        public string OriginalDocId { get => _explicitNullValueOriginalDocId; set { _explicitNullValueOriginalDocId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalDocId"); else _explicitNullProperties?.Remove("originalDocId"); } }
+        public string OriginalDocId { get => _explicitNullValueOriginalDocId; set { _explicitNullValueOriginalDocId = value; AdditionalData?.Remove("originalDocId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalDocId"); else _explicitNullProperties?.Remove("originalDocId"); } }
         private string _explicitNullValueOriginalDocId = default!;
 #endif
         /// <summary>Source system identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceSystem { get => _explicitNullValueSourceSystem; set { _explicitNullValueSourceSystem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceSystem"); else _explicitNullProperties?.Remove("sourceSystem"); } }
+        public string? SourceSystem { get => _explicitNullValueSourceSystem; set { _explicitNullValueSourceSystem = value; AdditionalData?.Remove("sourceSystem"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceSystem"); else _explicitNullProperties?.Remove("sourceSystem"); } }
         private string? _explicitNullValueSourceSystem = default!;
 #nullable restore
 #else
-        public string SourceSystem { get => _explicitNullValueSourceSystem; set { _explicitNullValueSourceSystem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceSystem"); else _explicitNullProperties?.Remove("sourceSystem"); } }
+        public string SourceSystem { get => _explicitNullValueSourceSystem; set { _explicitNullValueSourceSystem = value; AdditionalData?.Remove("sourceSystem"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceSystem"); else _explicitNullProperties?.Remove("sourceSystem"); } }
         private string _explicitNullValueSourceSystem = default!;
 #endif
         /// <summary>

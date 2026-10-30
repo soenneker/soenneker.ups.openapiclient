@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carrierCode") is { } nullNodeCarrierCode && nullNodeCarrierCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierCode = null;
-            if (parseNode.GetChildNode("carrierName") is { } nullNodeCarrierName && nullNodeCarrierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierName = null;
-            if (parseNode.GetChildNode("carrierType") is { } nullNodeCarrierType && nullNodeCarrierType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierType = null;
+            if (parseNode.GetChildNode("carrierCode") is null) { _explicitNullValueCarrierCode = default!; _explicitNullProperties?.Remove("carrierCode"); }
+            else if (parseNode.GetChildNode("carrierCode") is { } nullNodeCarrierCode && nullNodeCarrierCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierCode = null;
+            if (parseNode.GetChildNode("carrierName") is null) { _explicitNullValueCarrierName = default!; _explicitNullProperties?.Remove("carrierName"); }
+            else if (parseNode.GetChildNode("carrierName") is { } nullNodeCarrierName && nullNodeCarrierName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierName = null;
+            if (parseNode.GetChildNode("carrierType") is null) { _explicitNullValueCarrierType = default!; _explicitNullProperties?.Remove("carrierType"); }
+            else if (parseNode.GetChildNode("carrierType") is { } nullNodeCarrierType && nullNodeCarrierType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Carrier code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierCode { get => _explicitNullValueCarrierCode; set { _explicitNullValueCarrierCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierCode"); else _explicitNullProperties?.Remove("carrierCode"); } }
+        public string? CarrierCode { get => _explicitNullValueCarrierCode; set { _explicitNullValueCarrierCode = value; AdditionalData?.Remove("carrierCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierCode"); else _explicitNullProperties?.Remove("carrierCode"); } }
         private string? _explicitNullValueCarrierCode = default!;
 #nullable restore
 #else
-        public string CarrierCode { get => _explicitNullValueCarrierCode; set { _explicitNullValueCarrierCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierCode"); else _explicitNullProperties?.Remove("carrierCode"); } }
+        public string CarrierCode { get => _explicitNullValueCarrierCode; set { _explicitNullValueCarrierCode = value; AdditionalData?.Remove("carrierCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierCode"); else _explicitNullProperties?.Remove("carrierCode"); } }
         private string _explicitNullValueCarrierCode = default!;
 #endif
         /// <summary>Carrier name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierName"); else _explicitNullProperties?.Remove("carrierName"); } }
+        public string? CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; AdditionalData?.Remove("carrierName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierName"); else _explicitNullProperties?.Remove("carrierName"); } }
         private string? _explicitNullValueCarrierName = default!;
 #nullable restore
 #else
-        public string CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierName"); else _explicitNullProperties?.Remove("carrierName"); } }
+        public string CarrierName { get => _explicitNullValueCarrierName; set { _explicitNullValueCarrierName = value; AdditionalData?.Remove("carrierName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierName"); else _explicitNullProperties?.Remove("carrierName"); } }
         private string _explicitNullValueCarrierName = default!;
 #endif
         /// <summary>Carrier type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierType { get => _explicitNullValueCarrierType; set { _explicitNullValueCarrierType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierType"); else _explicitNullProperties?.Remove("carrierType"); } }
+        public string? CarrierType { get => _explicitNullValueCarrierType; set { _explicitNullValueCarrierType = value; AdditionalData?.Remove("carrierType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierType"); else _explicitNullProperties?.Remove("carrierType"); } }
         private string? _explicitNullValueCarrierType = default!;
 #nullable restore
 #else
-        public string CarrierType { get => _explicitNullValueCarrierType; set { _explicitNullValueCarrierType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierType"); else _explicitNullProperties?.Remove("carrierType"); } }
+        public string CarrierType { get => _explicitNullValueCarrierType; set { _explicitNullValueCarrierType = value; AdditionalData?.Remove("carrierType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierType"); else _explicitNullProperties?.Remove("carrierType"); } }
         private string _explicitNullValueCarrierType = default!;
 #endif
         /// <summary>

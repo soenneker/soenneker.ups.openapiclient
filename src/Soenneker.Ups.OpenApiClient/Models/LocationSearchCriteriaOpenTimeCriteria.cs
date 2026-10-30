@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DayOfWeekCode") is { } nullNodeDayOfWeekCode && nullNodeDayOfWeekCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekCode = null;
-            if (parseNode.GetChildNode("FromTime") is { } nullNodeFromTime && nullNodeFromTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromTime = null;
-            if (parseNode.GetChildNode("ToTime") is { } nullNodeToTime && nullNodeToTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToTime = null;
+            if (parseNode.GetChildNode("DayOfWeekCode") is null) { _explicitNullValueDayOfWeekCode = default!; _explicitNullProperties?.Remove("DayOfWeekCode"); }
+            else if (parseNode.GetChildNode("DayOfWeekCode") is { } nullNodeDayOfWeekCode && nullNodeDayOfWeekCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekCode = null;
+            if (parseNode.GetChildNode("FromTime") is null) { _explicitNullValueFromTime = default!; _explicitNullProperties?.Remove("FromTime"); }
+            else if (parseNode.GetChildNode("FromTime") is { } nullNodeFromTime && nullNodeFromTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromTime = null;
+            if (parseNode.GetChildNode("ToTime") is null) { _explicitNullValueToTime = default!; _explicitNullProperties?.Remove("ToTime"); }
+            else if (parseNode.GetChildNode("ToTime") is { } nullNodeToTime && nullNodeToTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Day Of week Code.Valid values:1-Sunday2-Monday3-Tuesday4-Wednesday5-Thursday6-Friday7-Saturday</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
+        public string? DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; AdditionalData?.Remove("DayOfWeekCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
         private string? _explicitNullValueDayOfWeekCode = default!;
 #nullable restore
 #else
-        public string DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
+        public string DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; AdditionalData?.Remove("DayOfWeekCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
         private string _explicitNullValueDayOfWeekCode = default!;
 #endif
         /// <summary>From time. Time Format HHMM.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromTime { get => _explicitNullValueFromTime; set { _explicitNullValueFromTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromTime"); else _explicitNullProperties?.Remove("FromTime"); } }
+        public string? FromTime { get => _explicitNullValueFromTime; set { _explicitNullValueFromTime = value; AdditionalData?.Remove("FromTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromTime"); else _explicitNullProperties?.Remove("FromTime"); } }
         private string? _explicitNullValueFromTime = default!;
 #nullable restore
 #else
-        public string FromTime { get => _explicitNullValueFromTime; set { _explicitNullValueFromTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromTime"); else _explicitNullProperties?.Remove("FromTime"); } }
+        public string FromTime { get => _explicitNullValueFromTime; set { _explicitNullValueFromTime = value; AdditionalData?.Remove("FromTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FromTime"); else _explicitNullProperties?.Remove("FromTime"); } }
         private string _explicitNullValueFromTime = default!;
 #endif
         /// <summary>To Time. Time Format HHMM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToTime { get => _explicitNullValueToTime; set { _explicitNullValueToTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToTime"); else _explicitNullProperties?.Remove("ToTime"); } }
+        public string? ToTime { get => _explicitNullValueToTime; set { _explicitNullValueToTime = value; AdditionalData?.Remove("ToTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToTime"); else _explicitNullProperties?.Remove("ToTime"); } }
         private string? _explicitNullValueToTime = default!;
 #nullable restore
 #else
-        public string ToTime { get => _explicitNullValueToTime; set { _explicitNullValueToTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToTime"); else _explicitNullProperties?.Remove("ToTime"); } }
+        public string ToTime { get => _explicitNullValueToTime; set { _explicitNullValueToTime = value; AdditionalData?.Remove("ToTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToTime"); else _explicitNullProperties?.Remove("ToTime"); } }
         private string _explicitNullValueToTime = default!;
 #endif
         /// <summary>

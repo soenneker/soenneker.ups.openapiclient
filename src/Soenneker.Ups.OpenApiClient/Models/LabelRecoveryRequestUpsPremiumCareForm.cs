@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PageSize") is { } nullNodePageSize && nullNodePageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageSize = null;
-            if (parseNode.GetChildNode("PrintType") is { } nullNodePrintType && nullNodePrintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintType = null;
+            if (parseNode.GetChildNode("PageSize") is null) { _explicitNullValuePageSize = default!; _explicitNullProperties?.Remove("PageSize"); }
+            else if (parseNode.GetChildNode("PageSize") is { } nullNodePageSize && nullNodePageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageSize = null;
+            if (parseNode.GetChildNode("PrintType") is null) { _explicitNullValuePrintType = default!; _explicitNullProperties?.Remove("PrintType"); }
+            else if (parseNode.GetChildNode("PrintType") is { } nullNodePrintType && nullNodePrintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Size of UPS Premium Care Form.  Valid values: 01 = A4 Size02 = Letter Size</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PageSize"); else _explicitNullProperties?.Remove("PageSize"); } }
+        public string? PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; AdditionalData?.Remove("PageSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PageSize"); else _explicitNullProperties?.Remove("PageSize"); } }
         private string? _explicitNullValuePageSize = default!;
 #nullable restore
 #else
-        public string PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PageSize"); else _explicitNullProperties?.Remove("PageSize"); } }
+        public string PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; AdditionalData?.Remove("PageSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PageSize"); else _explicitNullProperties?.Remove("PageSize"); } }
         private string _explicitNullValuePageSize = default!;
 #endif
         /// <summary>Format of UPS Premium Care Form.  Valid values: 01 = PNG02 = PDF</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrintType { get => _explicitNullValuePrintType; set { _explicitNullValuePrintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintType"); else _explicitNullProperties?.Remove("PrintType"); } }
+        public string? PrintType { get => _explicitNullValuePrintType; set { _explicitNullValuePrintType = value; AdditionalData?.Remove("PrintType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintType"); else _explicitNullProperties?.Remove("PrintType"); } }
         private string? _explicitNullValuePrintType = default!;
 #nullable restore
 #else
-        public string PrintType { get => _explicitNullValuePrintType; set { _explicitNullValuePrintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintType"); else _explicitNullProperties?.Remove("PrintType"); } }
+        public string PrintType { get => _explicitNullValuePrintType; set { _explicitNullValuePrintType = value; AdditionalData?.Remove("PrintType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintType"); else _explicitNullProperties?.Remove("PrintType"); } }
         private string _explicitNullValuePrintType = default!;
 #endif
         /// <summary>

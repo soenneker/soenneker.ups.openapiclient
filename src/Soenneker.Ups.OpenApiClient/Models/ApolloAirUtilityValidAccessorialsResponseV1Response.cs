@@ -19,34 +19,37 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accessorials") is { } nullNodeAccessorials && nullNodeAccessorials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accessorials = null;
-            if (parseNode.GetChildNode("nextAvailPUDate") is { } nullNodeNextAvailPUDate && nullNodeNextAvailPUDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextAvailPUDate = null;
-            if (parseNode.GetChildNode("paymentTerms") is { } nullNodePaymentTerms && nullNodePaymentTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentTerms = null;
+            if (parseNode.GetChildNode("accessorials") is null) { _explicitNullValueAccessorials = default!; _explicitNullProperties?.Remove("accessorials"); }
+            else if (parseNode.GetChildNode("accessorials") is { } nullNodeAccessorials && nullNodeAccessorials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accessorials = null;
+            if (parseNode.GetChildNode("nextAvailPUDate") is null) { _explicitNullValueNextAvailPUDate = default!; _explicitNullProperties?.Remove("nextAvailPUDate"); }
+            else if (parseNode.GetChildNode("nextAvailPUDate") is { } nullNodeNextAvailPUDate && nullNodeNextAvailPUDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextAvailPUDate = null;
+            if (parseNode.GetChildNode("paymentTerms") is null) { _explicitNullValuePaymentTerms = default!; _explicitNullProperties?.Remove("paymentTerms"); }
+            else if (parseNode.GetChildNode("paymentTerms") is { } nullNodePaymentTerms && nullNodePaymentTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentTerms = null;
         }
 
         /// <summary>List of valid accessorials.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1>? Accessorials { get => _explicitNullValueAccessorials; set { _explicitNullValueAccessorials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorials"); else _explicitNullProperties?.Remove("accessorials"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1>? Accessorials { get => _explicitNullValueAccessorials; set { _explicitNullValueAccessorials = value; AdditionalData?.Remove("accessorials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorials"); else _explicitNullProperties?.Remove("accessorials"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1>? _explicitNullValueAccessorials = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1> Accessorials { get => _explicitNullValueAccessorials; set { _explicitNullValueAccessorials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorials"); else _explicitNullProperties?.Remove("accessorials"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1> Accessorials { get => _explicitNullValueAccessorials; set { _explicitNullValueAccessorials = value; AdditionalData?.Remove("accessorials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorials"); else _explicitNullProperties?.Remove("accessorials"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialsResponseDetailsV1> _explicitNullValueAccessorials = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Next available pickup date</summary>
-        public Date? NextAvailPUDate { get => _explicitNullValueNextAvailPUDate; set { _explicitNullValueNextAvailPUDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextAvailPUDate"); else _explicitNullProperties?.Remove("nextAvailPUDate"); } }
+        public Date? NextAvailPUDate { get => _explicitNullValueNextAvailPUDate; set { _explicitNullValueNextAvailPUDate = value; AdditionalData?.Remove("nextAvailPUDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextAvailPUDate"); else _explicitNullProperties?.Remove("nextAvailPUDate"); } }
         private Date? _explicitNullValueNextAvailPUDate = default!;
         /// <summary>The paymentTerms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1>? PaymentTerms { get => _explicitNullValuePaymentTerms; set { _explicitNullValuePaymentTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentTerms"); else _explicitNullProperties?.Remove("paymentTerms"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1>? PaymentTerms { get => _explicitNullValuePaymentTerms; set { _explicitNullValuePaymentTerms = value; AdditionalData?.Remove("paymentTerms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentTerms"); else _explicitNullProperties?.Remove("paymentTerms"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1>? _explicitNullValuePaymentTerms = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1> PaymentTerms { get => _explicitNullValuePaymentTerms; set { _explicitNullValuePaymentTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentTerms"); else _explicitNullProperties?.Remove("paymentTerms"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1> PaymentTerms { get => _explicitNullValuePaymentTerms; set { _explicitNullValuePaymentTerms = value; AdditionalData?.Remove("paymentTerms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentTerms"); else _explicitNullProperties?.Remove("paymentTerms"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAccessorialPaymentTermResponseV1> _explicitNullValuePaymentTerms = default!;
 #endif
         /// <summary>

@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("epraCode") is { } nullNodeEpraCode && nullNodeEpraCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpraCode = null;
-            if (parseNode.GetChildNode("epraKiala") is { } nullNodeEpraKiala && nullNodeEpraKiala.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpraKiala = null;
-            if (parseNode.GetChildNode("epraMatch") is { } nullNodeEpraMatch && nullNodeEpraMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpraMatch = null;
-            if (parseNode.GetChildNode("epraRequired") is { } nullNodeEpraRequired && nullNodeEpraRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpraRequired = null;
+            if (parseNode.GetChildNode("epraCode") is null) { _explicitNullValueEpraCode = default!; _explicitNullProperties?.Remove("epraCode"); }
+            else if (parseNode.GetChildNode("epraCode") is { } nullNodeEpraCode && nullNodeEpraCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpraCode = null;
+            if (parseNode.GetChildNode("epraKiala") is null) { _explicitNullValueEpraKiala = default!; _explicitNullProperties?.Remove("epraKiala"); }
+            else if (parseNode.GetChildNode("epraKiala") is { } nullNodeEpraKiala && nullNodeEpraKiala.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpraKiala = null;
+            if (parseNode.GetChildNode("epraMatch") is null) { _explicitNullValueEpraMatch = default!; _explicitNullProperties?.Remove("epraMatch"); }
+            else if (parseNode.GetChildNode("epraMatch") is { } nullNodeEpraMatch && nullNodeEpraMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpraMatch = null;
+            if (parseNode.GetChildNode("epraRequired") is null) { _explicitNullValueEpraRequired = default!; _explicitNullProperties?.Remove("epraRequired"); }
+            else if (parseNode.GetChildNode("epraRequired") is { } nullNodeEpraRequired && nullNodeEpraRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpraRequired = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The epraCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EpraCode { get => _explicitNullValueEpraCode; set { _explicitNullValueEpraCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraCode"); else _explicitNullProperties?.Remove("epraCode"); } }
+        public string? EpraCode { get => _explicitNullValueEpraCode; set { _explicitNullValueEpraCode = value; AdditionalData?.Remove("epraCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraCode"); else _explicitNullProperties?.Remove("epraCode"); } }
         private string? _explicitNullValueEpraCode = default!;
 #nullable restore
 #else
-        public string EpraCode { get => _explicitNullValueEpraCode; set { _explicitNullValueEpraCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraCode"); else _explicitNullProperties?.Remove("epraCode"); } }
+        public string EpraCode { get => _explicitNullValueEpraCode; set { _explicitNullValueEpraCode = value; AdditionalData?.Remove("epraCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraCode"); else _explicitNullProperties?.Remove("epraCode"); } }
         private string _explicitNullValueEpraCode = default!;
 #endif
         /// <summary>The epraKiala property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EpraKiala { get => _explicitNullValueEpraKiala; set { _explicitNullValueEpraKiala = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraKiala"); else _explicitNullProperties?.Remove("epraKiala"); } }
+        public string? EpraKiala { get => _explicitNullValueEpraKiala; set { _explicitNullValueEpraKiala = value; AdditionalData?.Remove("epraKiala"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraKiala"); else _explicitNullProperties?.Remove("epraKiala"); } }
         private string? _explicitNullValueEpraKiala = default!;
 #nullable restore
 #else
-        public string EpraKiala { get => _explicitNullValueEpraKiala; set { _explicitNullValueEpraKiala = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraKiala"); else _explicitNullProperties?.Remove("epraKiala"); } }
+        public string EpraKiala { get => _explicitNullValueEpraKiala; set { _explicitNullValueEpraKiala = value; AdditionalData?.Remove("epraKiala"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraKiala"); else _explicitNullProperties?.Remove("epraKiala"); } }
         private string _explicitNullValueEpraKiala = default!;
 #endif
         /// <summary>The epraMatch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EpraMatch { get => _explicitNullValueEpraMatch; set { _explicitNullValueEpraMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraMatch"); else _explicitNullProperties?.Remove("epraMatch"); } }
+        public string? EpraMatch { get => _explicitNullValueEpraMatch; set { _explicitNullValueEpraMatch = value; AdditionalData?.Remove("epraMatch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraMatch"); else _explicitNullProperties?.Remove("epraMatch"); } }
         private string? _explicitNullValueEpraMatch = default!;
 #nullable restore
 #else
-        public string EpraMatch { get => _explicitNullValueEpraMatch; set { _explicitNullValueEpraMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraMatch"); else _explicitNullProperties?.Remove("epraMatch"); } }
+        public string EpraMatch { get => _explicitNullValueEpraMatch; set { _explicitNullValueEpraMatch = value; AdditionalData?.Remove("epraMatch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraMatch"); else _explicitNullProperties?.Remove("epraMatch"); } }
         private string _explicitNullValueEpraMatch = default!;
 #endif
         /// <summary>The epraRequired property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EpraRequired { get => _explicitNullValueEpraRequired; set { _explicitNullValueEpraRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraRequired"); else _explicitNullProperties?.Remove("epraRequired"); } }
+        public string? EpraRequired { get => _explicitNullValueEpraRequired; set { _explicitNullValueEpraRequired = value; AdditionalData?.Remove("epraRequired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraRequired"); else _explicitNullProperties?.Remove("epraRequired"); } }
         private string? _explicitNullValueEpraRequired = default!;
 #nullable restore
 #else
-        public string EpraRequired { get => _explicitNullValueEpraRequired; set { _explicitNullValueEpraRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraRequired"); else _explicitNullProperties?.Remove("epraRequired"); } }
+        public string EpraRequired { get => _explicitNullValueEpraRequired; set { _explicitNullValueEpraRequired = value; AdditionalData?.Remove("epraRequired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epraRequired"); else _explicitNullProperties?.Remove("epraRequired"); } }
         private string _explicitNullValueEpraRequired = default!;
 #endif
         /// <summary>

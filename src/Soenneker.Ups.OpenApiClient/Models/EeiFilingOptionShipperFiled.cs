@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
-            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("EEIShipmentReferenceNumber") is { } nullNodeEEIShipmentReferenceNumber && nullNodeEEIShipmentReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EEIShipmentReferenceNumber = null;
-            if (parseNode.GetChildNode("ExemptionLegend") is { } nullNodeExemptionLegend && nullNodeExemptionLegend.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExemptionLegend = null;
-            if (parseNode.GetChildNode("PreDepartureITNNumber") is { } nullNodePreDepartureITNNumber && nullNodePreDepartureITNNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreDepartureITNNumber = null;
+            if (parseNode.GetChildNode("Code") is null) { _explicitNullValueCode = default!; _explicitNullProperties?.Remove("Code"); }
+            else if (parseNode.GetChildNode("Code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("Description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("Description"); }
+            else if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("EEIShipmentReferenceNumber") is null) { _explicitNullValueEEIShipmentReferenceNumber = default!; _explicitNullProperties?.Remove("EEIShipmentReferenceNumber"); }
+            else if (parseNode.GetChildNode("EEIShipmentReferenceNumber") is { } nullNodeEEIShipmentReferenceNumber && nullNodeEEIShipmentReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EEIShipmentReferenceNumber = null;
+            if (parseNode.GetChildNode("ExemptionLegend") is null) { _explicitNullValueExemptionLegend = default!; _explicitNullProperties?.Remove("ExemptionLegend"); }
+            else if (parseNode.GetChildNode("ExemptionLegend") is { } nullNodeExemptionLegend && nullNodeExemptionLegend.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExemptionLegend = null;
+            if (parseNode.GetChildNode("PreDepartureITNNumber") is null) { _explicitNullValuePreDepartureITNNumber = default!; _explicitNullProperties?.Remove("PreDepartureITNNumber"); }
+            else if (parseNode.GetChildNode("PreDepartureITNNumber") is { } nullNodePreDepartureITNNumber && nullNodePreDepartureITNNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreDepartureITNNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates the EEI Shipper sub option.  Applicable for EEI form and is required. Valid value is: A- requires the ITN; B- requires the Exemption Legend; C- requires the post departure filing citation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("Code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
         private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("Code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
         private string _explicitNullValueCode = default!;
 #endif
         /// <summary>Description of ShipperFiled Code.  Applicable for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("Description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Shipment Reference Number for use during interaction with AES. Valid for EEI form for Shipper Filed option &apos;C&apos; and AES Direct Filed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EEIShipmentReferenceNumber { get => _explicitNullValueEEIShipmentReferenceNumber; set { _explicitNullValueEEIShipmentReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIShipmentReferenceNumber"); else _explicitNullProperties?.Remove("EEIShipmentReferenceNumber"); } }
+        public string? EEIShipmentReferenceNumber { get => _explicitNullValueEEIShipmentReferenceNumber; set { _explicitNullValueEEIShipmentReferenceNumber = value; AdditionalData?.Remove("EEIShipmentReferenceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIShipmentReferenceNumber"); else _explicitNullProperties?.Remove("EEIShipmentReferenceNumber"); } }
         private string? _explicitNullValueEEIShipmentReferenceNumber = default!;
 #nullable restore
 #else
-        public string EEIShipmentReferenceNumber { get => _explicitNullValueEEIShipmentReferenceNumber; set { _explicitNullValueEEIShipmentReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIShipmentReferenceNumber"); else _explicitNullProperties?.Remove("EEIShipmentReferenceNumber"); } }
+        public string EEIShipmentReferenceNumber { get => _explicitNullValueEEIShipmentReferenceNumber; set { _explicitNullValueEEIShipmentReferenceNumber = value; AdditionalData?.Remove("EEIShipmentReferenceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIShipmentReferenceNumber"); else _explicitNullProperties?.Remove("EEIShipmentReferenceNumber"); } }
         private string _explicitNullValueEEIShipmentReferenceNumber = default!;
 #endif
         /// <summary>Input for Shipper Filed option B. 30.2(d)(2), 30.26(a), 30.36, 30.37(a), 30.37(b), 30.37(c), 30.37(d), 30.37(e), 30.37(f), 30.37(h), 30.37(i), 30.30(j), 30.37(k), 30.37(i), 30.37(j), 30.37(k), 30.37(l), 30.37(m), 30.37(n), 30.37(o), 30.37(p), 30.37(q), 30.37(r), 30.37(s), 30.37(t), 30.37(u), 30.37(x), 30.37(y)(1), 30.37(y)(2), 30.37(y)(3), 30.37(y)(4), 30.37(y)(5), 30.37(y)(6), 30.39, 30.40(a), 30.40(b), 30.40(c), 30.40(d), 30.8(b)  Valid and Required for Shipper Filed option B. EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExemptionLegend { get => _explicitNullValueExemptionLegend; set { _explicitNullValueExemptionLegend = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExemptionLegend"); else _explicitNullProperties?.Remove("ExemptionLegend"); } }
+        public string? ExemptionLegend { get => _explicitNullValueExemptionLegend; set { _explicitNullValueExemptionLegend = value; AdditionalData?.Remove("ExemptionLegend"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExemptionLegend"); else _explicitNullProperties?.Remove("ExemptionLegend"); } }
         private string? _explicitNullValueExemptionLegend = default!;
 #nullable restore
 #else
-        public string ExemptionLegend { get => _explicitNullValueExemptionLegend; set { _explicitNullValueExemptionLegend = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExemptionLegend"); else _explicitNullProperties?.Remove("ExemptionLegend"); } }
+        public string ExemptionLegend { get => _explicitNullValueExemptionLegend; set { _explicitNullValueExemptionLegend = value; AdditionalData?.Remove("ExemptionLegend"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExemptionLegend"); else _explicitNullProperties?.Remove("ExemptionLegend"); } }
         private string _explicitNullValueExemptionLegend = default!;
 #endif
         /// <summary>Input for Shipper Filed option A and AES Direct. The format is available from AESDirect website.  Valid and Required for Shipper Filed option A. EEI form only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreDepartureITNNumber { get => _explicitNullValuePreDepartureITNNumber; set { _explicitNullValuePreDepartureITNNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreDepartureITNNumber"); else _explicitNullProperties?.Remove("PreDepartureITNNumber"); } }
+        public string? PreDepartureITNNumber { get => _explicitNullValuePreDepartureITNNumber; set { _explicitNullValuePreDepartureITNNumber = value; AdditionalData?.Remove("PreDepartureITNNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreDepartureITNNumber"); else _explicitNullProperties?.Remove("PreDepartureITNNumber"); } }
         private string? _explicitNullValuePreDepartureITNNumber = default!;
 #nullable restore
 #else
-        public string PreDepartureITNNumber { get => _explicitNullValuePreDepartureITNNumber; set { _explicitNullValuePreDepartureITNNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreDepartureITNNumber"); else _explicitNullProperties?.Remove("PreDepartureITNNumber"); } }
+        public string PreDepartureITNNumber { get => _explicitNullValuePreDepartureITNNumber; set { _explicitNullValuePreDepartureITNNumber = value; AdditionalData?.Remove("PreDepartureITNNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreDepartureITNNumber"); else _explicitNullProperties?.Remove("PreDepartureITNNumber"); } }
         private string _explicitNullValuePreDepartureITNNumber = default!;
 #endif
         /// <summary>

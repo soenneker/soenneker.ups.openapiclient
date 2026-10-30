@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
-            if (parseNode.GetChildNode("Weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("UnitOfMeasurement") is null) { _explicitNullValueUnitOfMeasurement = default!; _explicitNullProperties?.Remove("UnitOfMeasurement"); }
+            else if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
+            if (parseNode.GetChildNode("Weight") is null) { _explicitNullValueWeight = default!; _explicitNullProperties?.Remove("Weight"); }
+            else if (parseNode.GetChildNode("Weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for Unit of measurement for Dry Ice Weight.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceWeightUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceWeightUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; AdditionalData?.Remove("UnitOfMeasurement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceWeightUnitOfMeasurement? _explicitNullValueUnitOfMeasurement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceWeightUnitOfMeasurement UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceWeightUnitOfMeasurement UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; AdditionalData?.Remove("UnitOfMeasurement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceWeightUnitOfMeasurement _explicitNullValueUnitOfMeasurement = default!;
 #endif
         /// <summary>Dry Ice Weight.  Cannot be more than package weight. Should be more than 0.0. Valid characters are 0-9 and &quot;.&quot; (Decimal point). Limit to 1 digit after the decimal. The maximum length of the field is 5 including &quot;.&quot; and can hold up to 1 decimal place.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
         private string? _explicitNullValueWeight = default!;
 #nullable restore
 #else
-        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
         private string _explicitNullValueWeight = default!;
 #endif
         /// <summary>

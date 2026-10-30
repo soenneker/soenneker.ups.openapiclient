@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("consignee") is { } nullNodeConsignee && nullNodeConsignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consignee = null;
-            if (parseNode.GetChildNode("dropOffTime") is { } nullNodeDropOffTime && nullNodeDropOffTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropOffTime = null;
-            if (parseNode.GetChildNode("pickupDateTime") is { } nullNodePickupDateTime && nullNodePickupDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDateTime = null;
-            if (parseNode.GetChildNode("serviceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
-            if (parseNode.GetChildNode("shipper") is { } nullNodeShipper && nullNodeShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipper = null;
+            if (parseNode.GetChildNode("consignee") is null) { _explicitNullValueConsignee = default!; _explicitNullProperties?.Remove("consignee"); }
+            else if (parseNode.GetChildNode("consignee") is { } nullNodeConsignee && nullNodeConsignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consignee = null;
+            if (parseNode.GetChildNode("dropOffTime") is null) { _explicitNullValueDropOffTime = default!; _explicitNullProperties?.Remove("dropOffTime"); }
+            else if (parseNode.GetChildNode("dropOffTime") is { } nullNodeDropOffTime && nullNodeDropOffTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropOffTime = null;
+            if (parseNode.GetChildNode("pickupDateTime") is null) { _explicitNullValuePickupDateTime = default!; _explicitNullProperties?.Remove("pickupDateTime"); }
+            else if (parseNode.GetChildNode("pickupDateTime") is { } nullNodePickupDateTime && nullNodePickupDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDateTime = null;
+            if (parseNode.GetChildNode("serviceCode") is null) { _explicitNullValueServiceCode = default!; _explicitNullProperties?.Remove("serviceCode"); }
+            else if (parseNode.GetChildNode("serviceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("shipper") is null) { _explicitNullValueShipper = default!; _explicitNullProperties?.Remove("shipper"); }
+            else if (parseNode.GetChildNode("shipper") is { } nullNodeShipper && nullNodeShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipper = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,32 +35,32 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The consignee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? Consignee { get => _explicitNullValueConsignee; set { _explicitNullValueConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consignee"); else _explicitNullProperties?.Remove("consignee"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? Consignee { get => _explicitNullValueConsignee; set { _explicitNullValueConsignee = value; AdditionalData?.Remove("consignee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consignee"); else _explicitNullProperties?.Remove("consignee"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? _explicitNullValueConsignee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails Consignee { get => _explicitNullValueConsignee; set { _explicitNullValueConsignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consignee"); else _explicitNullProperties?.Remove("consignee"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails Consignee { get => _explicitNullValueConsignee; set { _explicitNullValueConsignee = value; AdditionalData?.Remove("consignee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consignee"); else _explicitNullProperties?.Remove("consignee"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails _explicitNullValueConsignee = default!;
 #endif
         /// <summary>The dropOffTime property</summary>
 #nullable enable
-        public string? DropOffTime { get => _explicitNullValueDropOffTime; set { _explicitNullValueDropOffTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dropOffTime"); else _explicitNullProperties?.Remove("dropOffTime"); } }
+        public string? DropOffTime { get => _explicitNullValueDropOffTime; set { _explicitNullValueDropOffTime = value; AdditionalData?.Remove("dropOffTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dropOffTime"); else _explicitNullProperties?.Remove("dropOffTime"); } }
         private string? _explicitNullValueDropOffTime = default!;
 #nullable restore
         /// <summary>Accepted format - yyyy-MM-dd, yyyy/MM/dd, MM-dd-yyyy, MM/dd/yyyy format.</summary>
-        public Date? PickupDateTime { get => _explicitNullValuePickupDateTime; set { _explicitNullValuePickupDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDateTime"); else _explicitNullProperties?.Remove("pickupDateTime"); } }
+        public Date? PickupDateTime { get => _explicitNullValuePickupDateTime; set { _explicitNullValuePickupDateTime = value; AdditionalData?.Remove("pickupDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDateTime"); else _explicitNullProperties?.Remove("pickupDateTime"); } }
         private Date? _explicitNullValuePickupDateTime = default!;
         /// <summary>The serviceCode property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("serviceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode? _explicitNullValueServiceCode = default!;
         /// <summary>The shipper property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; AdditionalData?.Remove("shipper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails? _explicitNullValueShipper = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; AdditionalData?.Remove("shipper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails _explicitNullValueShipper = default!;
 #endif
         /// <summary>
@@ -86,7 +91,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails.CreateFromDiscriminatorValue); } },
                 { "dropOffTime", n => { DropOffTime = n.GetStringValue(); } },
                 { "pickupDateTime", n => { PickupDateTime = n.GetDateValue(); } },
-                { "serviceCode", n => { ServiceCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode>(); } },
+                { "serviceCode", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirUtilityAccessorialsRequestV1ServiceCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueServiceCode = default; _explicitNullProperties?.Remove("serviceCode"); AdditionalData["serviceCode"] = unknown; } else { ServiceCode = parsed; AdditionalData.Remove("serviceCode"); } } },
                 { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails>(global::Soenneker.Ups.OpenApiClient.Models.ShipmentPartyDetails.CreateFromDiscriminatorValue); } },
             };
         }

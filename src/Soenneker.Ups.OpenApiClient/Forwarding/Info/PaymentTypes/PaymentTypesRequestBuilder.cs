@@ -78,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Info.PaymentTypes
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Info.PaymentTypes.PaymentTypesRequestBuilder.PaymentTypesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://www.onlinetools.ups.com/api/forwarding/v1", "/Forwarding/info/payment-types", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

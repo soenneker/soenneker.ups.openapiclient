@@ -19,53 +19,17 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1? DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2? DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3? DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4? DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5? DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6? DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 { get; set; }
-#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -76,6 +40,30 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOption();
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("WC".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1Value)
+            {
+                result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 = deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("SC".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2Value)
+            {
+                result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 = deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("FD".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3Value)
+            {
+                result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 = deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("AA".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4Value)
+            {
+                result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 = deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue4 && ("RS".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5Value)
+            {
+                result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 = deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue5 && ("AL".Equals(unionEnumValue5.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6Value)
+            {
+                result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 = deliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6Value;
+            }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
             if (result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 == null && result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 == null && result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 == null && result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 == null && result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 == null && result.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 == null) result.UnrecognizedValue = unionPayload;
@@ -87,30 +75,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 != null)
-            {
-                return DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 != null)
-            {
-                return DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 != null)
-            {
-                return DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 != null)
-            {
-                return DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 != null)
-            {
-                return DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 != null)
-            {
-                return DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6.GetFieldDeserializers();
-            }
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -125,33 +91,27 @@ return result;
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 != null)
             {
-                if (DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1);
             }
             else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 != null)
             {
-                if (DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2);
             }
             else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 != null)
             {
-                if (DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3);
             }
             else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 != null)
             {
-                if (DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4);
             }
             else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 != null)
             {
-                if (DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5);
             }
             else if(DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 != null)
             {
-                if (DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6>(null, DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6);
             }
         }
     }

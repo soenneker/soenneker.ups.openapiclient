@@ -18,23 +18,25 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
-            if (parseNode.GetChildNode("Weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("UnitOfMeasurement") is null) { _explicitNullValueUnitOfMeasurement = default!; _explicitNullProperties?.Remove("UnitOfMeasurement"); }
+            else if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
+            if (parseNode.GetChildNode("Weight") is null) { _explicitNullValueWeight = default!; _explicitNullProperties?.Remove("Weight"); }
+            else if (parseNode.GetChildNode("Weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Unit of measurement of the weight.Valid values are:- KGS = Kilograms- LBS =Pounds</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightTypeUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightTypeUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; AdditionalData?.Remove("UnitOfMeasurement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightTypeUnitOfMeasurement? _explicitNullValueUnitOfMeasurement = default!;
         /// <summary>Weight of the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
         private string? _explicitNullValueWeight = default!;
 #nullable restore
 #else
-        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
         private string _explicitNullValueWeight = default!;
 #endif
         /// <summary>
@@ -62,7 +64,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "UnitOfMeasurement", n => { UnitOfMeasurement = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightTypeUnitOfMeasurement>(); } },
+                { "UnitOfMeasurement", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LtlPackageWeightTypeUnitOfMeasurement>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUnitOfMeasurement = default; _explicitNullProperties?.Remove("UnitOfMeasurement"); AdditionalData["UnitOfMeasurement"] = unknown; } else { UnitOfMeasurement = parsed; AdditionalData.Remove("UnitOfMeasurement"); } } },
                 { "Weight", n => { Weight = n.GetStringValue(); } },
             };
         }

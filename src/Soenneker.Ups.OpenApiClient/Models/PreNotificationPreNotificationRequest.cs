@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
-            if (parseNode.GetChildNode("Shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("Request") is null) { _explicitNullValueRequest = default!; _explicitNullProperties?.Remove("Request"); }
+            else if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("Shipment") is null) { _explicitNullValueShipment = default!; _explicitNullProperties?.Remove("Shipment"); }
+            else if (parseNode.GetChildNode("Shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Request Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestRequest? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestRequest _explicitNullValueRequest = default!;
 #endif
         /// <summary>Shipment Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("Shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("Shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequestShipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>

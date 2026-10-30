@@ -18,28 +18,30 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AccountCountryCode") is { } nullNodeAccountCountryCode && nullNodeAccountCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountCountryCode = null;
-            if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("AccountCountryCode") is null) { _explicitNullValueAccountCountryCode = default!; _explicitNullProperties?.Remove("AccountCountryCode"); }
+            else if (parseNode.GetChildNode("AccountCountryCode") is { } nullNodeAccountCountryCode && nullNodeAccountCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountCountryCode = null;
+            if (parseNode.GetChildNode("AccountNumber") is null) { _explicitNullValueAccountNumber = default!; _explicitNullProperties?.Remove("AccountNumber"); }
+            else if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
         }
 
         /// <summary>Country code as defined by ISO-3166.Refer to Country or Territory Codes in the Appendix for valid values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountCountryCode { get => _explicitNullValueAccountCountryCode; set { _explicitNullValueAccountCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountCountryCode"); else _explicitNullProperties?.Remove("AccountCountryCode"); } }
+        public string? AccountCountryCode { get => _explicitNullValueAccountCountryCode; set { _explicitNullValueAccountCountryCode = value; AdditionalData?.Remove("AccountCountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountCountryCode"); else _explicitNullProperties?.Remove("AccountCountryCode"); } }
         private string? _explicitNullValueAccountCountryCode = default!;
 #nullable restore
 #else
-        public string AccountCountryCode { get => _explicitNullValueAccountCountryCode; set { _explicitNullValueAccountCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountCountryCode"); else _explicitNullProperties?.Remove("AccountCountryCode"); } }
+        public string AccountCountryCode { get => _explicitNullValueAccountCountryCode; set { _explicitNullValueAccountCountryCode = value; AdditionalData?.Remove("AccountCountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountCountryCode"); else _explicitNullProperties?.Remove("AccountCountryCode"); } }
         private string _explicitNullValueAccountCountryCode = default!;
 #endif
         /// <summary>UPS account number.  Shipper&apos;s (requester of the pickup) UPS account number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("AccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
         private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("AccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
         private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

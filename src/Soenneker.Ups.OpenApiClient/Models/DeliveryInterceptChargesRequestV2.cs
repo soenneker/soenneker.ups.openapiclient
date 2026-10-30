@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("clientIP") is { } nullNodeClientIP && nullNodeClientIP.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientIP = null;
-            if (parseNode.GetChildNode("ratingRequest") is { } nullNodeRatingRequest && nullNodeRatingRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatingRequest = null;
+            if (parseNode.GetChildNode("clientIP") is null) { _explicitNullValueClientIP = default!; _explicitNullProperties?.Remove("clientIP"); }
+            else if (parseNode.GetChildNode("clientIP") is { } nullNodeClientIP && nullNodeClientIP.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientIP = null;
+            if (parseNode.GetChildNode("ratingRequest") is null) { _explicitNullValueRatingRequest = default!; _explicitNullProperties?.Remove("ratingRequest"); }
+            else if (parseNode.GetChildNode("ratingRequest") is { } nullNodeRatingRequest && nullNodeRatingRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatingRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>IP address of the requesting device</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientIP { get => _explicitNullValueClientIP; set { _explicitNullValueClientIP = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientIP"); else _explicitNullProperties?.Remove("clientIP"); } }
+        public string? ClientIP { get => _explicitNullValueClientIP; set { _explicitNullValueClientIP = value; AdditionalData?.Remove("clientIP"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientIP"); else _explicitNullProperties?.Remove("clientIP"); } }
         private string? _explicitNullValueClientIP = default!;
 #nullable restore
 #else
-        public string ClientIP { get => _explicitNullValueClientIP; set { _explicitNullValueClientIP = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientIP"); else _explicitNullProperties?.Remove("clientIP"); } }
+        public string ClientIP { get => _explicitNullValueClientIP; set { _explicitNullValueClientIP = value; AdditionalData?.Remove("clientIP"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientIP"); else _explicitNullProperties?.Remove("clientIP"); } }
         private string _explicitNullValueClientIP = default!;
 #endif
         /// <summary>List of rating request data. If you want to find out the accessory and transportation charges of a &quot;redirect&quot; requestfor a specified Tracking number then this array list must contain one rating request. This array is unbounded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem>? RatingRequest { get => _explicitNullValueRatingRequest; set { _explicitNullValueRatingRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratingRequest"); else _explicitNullProperties?.Remove("ratingRequest"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem>? RatingRequest { get => _explicitNullValueRatingRequest; set { _explicitNullValueRatingRequest = value; AdditionalData?.Remove("ratingRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratingRequest"); else _explicitNullProperties?.Remove("ratingRequest"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem>? _explicitNullValueRatingRequest = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem> RatingRequest { get => _explicitNullValueRatingRequest; set { _explicitNullValueRatingRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratingRequest"); else _explicitNullProperties?.Remove("ratingRequest"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem> RatingRequest { get => _explicitNullValueRatingRequest; set { _explicitNullValueRatingRequest = value; AdditionalData?.Remove("ratingRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratingRequest"); else _explicitNullProperties?.Remove("ratingRequest"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItem> _explicitNullValueRatingRequest = default!;
 #endif
         /// <summary>

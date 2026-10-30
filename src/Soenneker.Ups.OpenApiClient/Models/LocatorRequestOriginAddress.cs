@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AddressKeyFormat") is { } nullNodeAddressKeyFormat && nullNodeAddressKeyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKeyFormat = null;
-            if (parseNode.GetChildNode("Geocode") is { } nullNodeGeocode && nullNodeGeocode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Geocode = null;
-            if (parseNode.GetChildNode("MaximumListSize") is { } nullNodeMaximumListSize && nullNodeMaximumListSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumListSize = null;
+            if (parseNode.GetChildNode("AddressKeyFormat") is null) { _explicitNullValueAddressKeyFormat = default!; _explicitNullProperties?.Remove("AddressKeyFormat"); }
+            else if (parseNode.GetChildNode("AddressKeyFormat") is { } nullNodeAddressKeyFormat && nullNodeAddressKeyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKeyFormat = null;
+            if (parseNode.GetChildNode("Geocode") is null) { _explicitNullValueGeocode = default!; _explicitNullProperties?.Remove("Geocode"); }
+            else if (parseNode.GetChildNode("Geocode") is { } nullNodeGeocode && nullNodeGeocode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Geocode = null;
+            if (parseNode.GetChildNode("MaximumListSize") is null) { _explicitNullValueMaximumListSize = default!; _explicitNullProperties?.Remove("MaximumListSize"); }
+            else if (parseNode.GetChildNode("MaximumListSize") is { } nullNodeMaximumListSize && nullNodeMaximumListSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumListSize = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains all of the basic information about the origin such as: Address Lines, City, State/Province, Postal Code and Country or Territory Code. The element CountryCode is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressAddressKeyFormat? AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressAddressKeyFormat? AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; AdditionalData?.Remove("AddressKeyFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.OriginAddressAddressKeyFormat? _explicitNullValueAddressKeyFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressAddressKeyFormat AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressAddressKeyFormat AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; AdditionalData?.Remove("AddressKeyFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.OriginAddressAddressKeyFormat _explicitNullValueAddressKeyFormat = default!;
 #endif
         /// <summary>Geocode is the latitude and longitude of the origin address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressGeocode? Geocode { get => _explicitNullValueGeocode; set { _explicitNullValueGeocode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Geocode"); else _explicitNullProperties?.Remove("Geocode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressGeocode? Geocode { get => _explicitNullValueGeocode; set { _explicitNullValueGeocode = value; AdditionalData?.Remove("Geocode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Geocode"); else _explicitNullProperties?.Remove("Geocode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.OriginAddressGeocode? _explicitNullValueGeocode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressGeocode Geocode { get => _explicitNullValueGeocode; set { _explicitNullValueGeocode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Geocode"); else _explicitNullProperties?.Remove("Geocode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.OriginAddressGeocode Geocode { get => _explicitNullValueGeocode; set { _explicitNullValueGeocode = value; AdditionalData?.Remove("Geocode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Geocode"); else _explicitNullProperties?.Remove("Geocode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.OriginAddressGeocode _explicitNullValueGeocode = default!;
 #endif
         /// <summary>If present, indicates the maximum number of locations the client wishes to receive in an address candidate response where the provided origin information is insufficient to accurately establish location. Valid values: 1-50, default 10</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaximumListSize { get => _explicitNullValueMaximumListSize; set { _explicitNullValueMaximumListSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumListSize"); else _explicitNullProperties?.Remove("MaximumListSize"); } }
+        public string? MaximumListSize { get => _explicitNullValueMaximumListSize; set { _explicitNullValueMaximumListSize = value; AdditionalData?.Remove("MaximumListSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumListSize"); else _explicitNullProperties?.Remove("MaximumListSize"); } }
         private string? _explicitNullValueMaximumListSize = default!;
 #nullable restore
 #else
-        public string MaximumListSize { get => _explicitNullValueMaximumListSize; set { _explicitNullValueMaximumListSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumListSize"); else _explicitNullProperties?.Remove("MaximumListSize"); } }
+        public string MaximumListSize { get => _explicitNullValueMaximumListSize; set { _explicitNullValueMaximumListSize = value; AdditionalData?.Remove("MaximumListSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumListSize"); else _explicitNullProperties?.Remove("MaximumListSize"); } }
         private string _explicitNullValueMaximumListSize = default!;
 #endif
         /// <summary>

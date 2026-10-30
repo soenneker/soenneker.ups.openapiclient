@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("RateResult") is { } nullNodeRateResult && nullNodeRateResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateResult = null;
-            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
-            if (parseNode.GetChildNode("WeekendServiceTerritory") is { } nullNodeWeekendServiceTerritory && nullNodeWeekendServiceTerritory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekendServiceTerritory = null;
-            if (parseNode.GetChildNode("WeekendServiceTerritoryIndicator") is { } nullNodeWeekendServiceTerritoryIndicator && nullNodeWeekendServiceTerritoryIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekendServiceTerritoryIndicator = null;
+            if (parseNode.GetChildNode("RateResult") is null) { _explicitNullValueRateResult = default!; _explicitNullProperties?.Remove("RateResult"); }
+            else if (parseNode.GetChildNode("RateResult") is { } nullNodeRateResult && nullNodeRateResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateResult = null;
+            if (parseNode.GetChildNode("Response") is null) { _explicitNullValueResponse = default!; _explicitNullProperties?.Remove("Response"); }
+            else if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("WeekendServiceTerritory") is null) { _explicitNullValueWeekendServiceTerritory = default!; _explicitNullProperties?.Remove("WeekendServiceTerritory"); }
+            else if (parseNode.GetChildNode("WeekendServiceTerritory") is { } nullNodeWeekendServiceTerritory && nullNodeWeekendServiceTerritory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekendServiceTerritory = null;
+            if (parseNode.GetChildNode("WeekendServiceTerritoryIndicator") is null) { _explicitNullValueWeekendServiceTerritoryIndicator = default!; _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); }
+            else if (parseNode.GetChildNode("WeekendServiceTerritoryIndicator") is { } nullNodeWeekendServiceTerritoryIndicator && nullNodeWeekendServiceTerritoryIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekendServiceTerritoryIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The result of rating an on-callpickup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult? RateResult { get => _explicitNullValueRateResult; set { _explicitNullValueRateResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateResult"); else _explicitNullProperties?.Remove("RateResult"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult? RateResult { get => _explicitNullValueRateResult; set { _explicitNullValueRateResult = value; AdditionalData?.Remove("RateResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateResult"); else _explicitNullProperties?.Remove("RateResult"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult? _explicitNullValueRateResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult RateResult { get => _explicitNullValueRateResult; set { _explicitNullValueRateResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateResult"); else _explicitNullProperties?.Remove("RateResult"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult RateResult { get => _explicitNullValueRateResult; set { _explicitNullValueRateResult = value; AdditionalData?.Remove("RateResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateResult"); else _explicitNullProperties?.Remove("RateResult"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseRateResult _explicitNullValueRateResult = default!;
 #endif
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>WeekendServiceTerritory Container.Returned if the  subversion greater or equal to 2007.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseWeekendServiceTerritory? WeekendServiceTerritory { get => _explicitNullValueWeekendServiceTerritory; set { _explicitNullValueWeekendServiceTerritory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritory"); else _explicitNullProperties?.Remove("WeekendServiceTerritory"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseWeekendServiceTerritory? WeekendServiceTerritory { get => _explicitNullValueWeekendServiceTerritory; set { _explicitNullValueWeekendServiceTerritory = value; AdditionalData?.Remove("WeekendServiceTerritory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritory"); else _explicitNullProperties?.Remove("WeekendServiceTerritory"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseWeekendServiceTerritory? _explicitNullValueWeekendServiceTerritory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseWeekendServiceTerritory WeekendServiceTerritory { get => _explicitNullValueWeekendServiceTerritory; set { _explicitNullValueWeekendServiceTerritory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritory"); else _explicitNullProperties?.Remove("WeekendServiceTerritory"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseWeekendServiceTerritory WeekendServiceTerritory { get => _explicitNullValueWeekendServiceTerritory; set { _explicitNullValueWeekendServiceTerritory = value; AdditionalData?.Remove("WeekendServiceTerritory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritory"); else _explicitNullProperties?.Remove("WeekendServiceTerritory"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponseWeekendServiceTerritory _explicitNullValueWeekendServiceTerritory = default!;
 #endif
         /// <summary>Indicates if the pickup address qualifies for WST (Weekend Service Territory). Returned if the pickup date is Saturday and subversion greater or equal to 1607. Valid Values:- Y = WST- N = Non-WST</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeekendServiceTerritoryIndicator { get => _explicitNullValueWeekendServiceTerritoryIndicator; set { _explicitNullValueWeekendServiceTerritoryIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritoryIndicator"); else _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); } }
+        public string? WeekendServiceTerritoryIndicator { get => _explicitNullValueWeekendServiceTerritoryIndicator; set { _explicitNullValueWeekendServiceTerritoryIndicator = value; AdditionalData?.Remove("WeekendServiceTerritoryIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritoryIndicator"); else _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); } }
         private string? _explicitNullValueWeekendServiceTerritoryIndicator = default!;
 #nullable restore
 #else
-        public string WeekendServiceTerritoryIndicator { get => _explicitNullValueWeekendServiceTerritoryIndicator; set { _explicitNullValueWeekendServiceTerritoryIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritoryIndicator"); else _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); } }
+        public string WeekendServiceTerritoryIndicator { get => _explicitNullValueWeekendServiceTerritoryIndicator; set { _explicitNullValueWeekendServiceTerritoryIndicator = value; AdditionalData?.Remove("WeekendServiceTerritoryIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekendServiceTerritoryIndicator"); else _explicitNullProperties?.Remove("WeekendServiceTerritoryIndicator"); } }
         private string _explicitNullValueWeekendServiceTerritoryIndicator = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("consigneeCharges") is { } nullNodeConsigneeCharges && nullNodeConsigneeCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsigneeCharges = null;
-            if (parseNode.GetChildNode("shipperCharges") is { } nullNodeShipperCharges && nullNodeShipperCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperCharges = null;
-            if (parseNode.GetChildNode("thirdPartyCharges") is { } nullNodeThirdPartyCharges && nullNodeThirdPartyCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdPartyCharges = null;
+            if (parseNode.GetChildNode("consigneeCharges") is null) { _explicitNullValueConsigneeCharges = default!; _explicitNullProperties?.Remove("consigneeCharges"); }
+            else if (parseNode.GetChildNode("consigneeCharges") is { } nullNodeConsigneeCharges && nullNodeConsigneeCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsigneeCharges = null;
+            if (parseNode.GetChildNode("shipperCharges") is null) { _explicitNullValueShipperCharges = default!; _explicitNullProperties?.Remove("shipperCharges"); }
+            else if (parseNode.GetChildNode("shipperCharges") is { } nullNodeShipperCharges && nullNodeShipperCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperCharges = null;
+            if (parseNode.GetChildNode("thirdPartyCharges") is null) { _explicitNullValueThirdPartyCharges = default!; _explicitNullProperties?.Remove("thirdPartyCharges"); }
+            else if (parseNode.GetChildNode("thirdPartyCharges") is { } nullNodeThirdPartyCharges && nullNodeThirdPartyCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdPartyCharges = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A collection of charges associated with this Order mapped to the consignee</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? ConsigneeCharges { get => _explicitNullValueConsigneeCharges; set { _explicitNullValueConsigneeCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consigneeCharges"); else _explicitNullProperties?.Remove("consigneeCharges"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? ConsigneeCharges { get => _explicitNullValueConsigneeCharges; set { _explicitNullValueConsigneeCharges = value; AdditionalData?.Remove("consigneeCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consigneeCharges"); else _explicitNullProperties?.Remove("consigneeCharges"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? _explicitNullValueConsigneeCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> ConsigneeCharges { get => _explicitNullValueConsigneeCharges; set { _explicitNullValueConsigneeCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consigneeCharges"); else _explicitNullProperties?.Remove("consigneeCharges"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> ConsigneeCharges { get => _explicitNullValueConsigneeCharges; set { _explicitNullValueConsigneeCharges = value; AdditionalData?.Remove("consigneeCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consigneeCharges"); else _explicitNullProperties?.Remove("consigneeCharges"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> _explicitNullValueConsigneeCharges = default!;
 #endif
         /// <summary>A collection of charges associated with this Order mapped to the shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? ShipperCharges { get => _explicitNullValueShipperCharges; set { _explicitNullValueShipperCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperCharges"); else _explicitNullProperties?.Remove("shipperCharges"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? ShipperCharges { get => _explicitNullValueShipperCharges; set { _explicitNullValueShipperCharges = value; AdditionalData?.Remove("shipperCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperCharges"); else _explicitNullProperties?.Remove("shipperCharges"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? _explicitNullValueShipperCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> ShipperCharges { get => _explicitNullValueShipperCharges; set { _explicitNullValueShipperCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperCharges"); else _explicitNullProperties?.Remove("shipperCharges"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> ShipperCharges { get => _explicitNullValueShipperCharges; set { _explicitNullValueShipperCharges = value; AdditionalData?.Remove("shipperCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperCharges"); else _explicitNullProperties?.Remove("shipperCharges"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> _explicitNullValueShipperCharges = default!;
 #endif
         /// <summary>A collection of charges associated with this Order mapped to the third party</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? ThirdPartyCharges { get => _explicitNullValueThirdPartyCharges; set { _explicitNullValueThirdPartyCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdPartyCharges"); else _explicitNullProperties?.Remove("thirdPartyCharges"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? ThirdPartyCharges { get => _explicitNullValueThirdPartyCharges; set { _explicitNullValueThirdPartyCharges = value; AdditionalData?.Remove("thirdPartyCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdPartyCharges"); else _explicitNullProperties?.Remove("thirdPartyCharges"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1>? _explicitNullValueThirdPartyCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> ThirdPartyCharges { get => _explicitNullValueThirdPartyCharges; set { _explicitNullValueThirdPartyCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdPartyCharges"); else _explicitNullProperties?.Remove("thirdPartyCharges"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> ThirdPartyCharges { get => _explicitNullValueThirdPartyCharges; set { _explicitNullValueThirdPartyCharges = value; AdditionalData?.Remove("thirdPartyCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdPartyCharges"); else _explicitNullProperties?.Remove("thirdPartyCharges"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloChargeV1> _explicitNullValueThirdPartyCharges = default!;
 #endif
         /// <summary>

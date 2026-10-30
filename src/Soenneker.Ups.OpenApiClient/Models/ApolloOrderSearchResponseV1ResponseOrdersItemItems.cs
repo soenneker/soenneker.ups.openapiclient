@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("item") is { } nullNodeItem && nullNodeItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Item = null;
-            if (parseNode.GetChildNode("totalPieceCount") is { } nullNodeTotalPieceCount && nullNodeTotalPieceCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalPieceCount = null;
-            if (parseNode.GetChildNode("totalWeight") is { } nullNodeTotalWeight && nullNodeTotalWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalWeight = null;
-            if (parseNode.GetChildNode("weightUnit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
+            if (parseNode.GetChildNode("item") is null) { _explicitNullValueItem = default!; _explicitNullProperties?.Remove("item"); }
+            else if (parseNode.GetChildNode("item") is { } nullNodeItem && nullNodeItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Item = null;
+            if (parseNode.GetChildNode("totalPieceCount") is null) { _explicitNullValueTotalPieceCount = default!; _explicitNullProperties?.Remove("totalPieceCount"); }
+            else if (parseNode.GetChildNode("totalPieceCount") is { } nullNodeTotalPieceCount && nullNodeTotalPieceCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalPieceCount = null;
+            if (parseNode.GetChildNode("totalWeight") is null) { _explicitNullValueTotalWeight = default!; _explicitNullProperties?.Remove("totalWeight"); }
+            else if (parseNode.GetChildNode("totalWeight") is { } nullNodeTotalWeight && nullNodeTotalWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalWeight = null;
+            if (parseNode.GetChildNode("weightUnit") is null) { _explicitNullValueWeightUnit = default!; _explicitNullProperties?.Remove("weightUnit"); }
+            else if (parseNode.GetChildNode("weightUnit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,21 +32,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The unbounded array of individual items in the Order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem>? Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem>? Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; AdditionalData?.Remove("item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem>? _explicitNullValueItem = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem> Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem> Item { get => _explicitNullValueItem; set { _explicitNullValueItem = value; AdditionalData?.Remove("item"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("item"); else _explicitNullProperties?.Remove("item"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem> _explicitNullValueItem = default!;
 #endif
         /// <summary>The total number of Pieces in the Order</summary>
-        public int? TotalPieceCount { get => _explicitNullValueTotalPieceCount; set { _explicitNullValueTotalPieceCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalPieceCount"); else _explicitNullProperties?.Remove("totalPieceCount"); } }
+        public int? TotalPieceCount { get => _explicitNullValueTotalPieceCount; set { _explicitNullValueTotalPieceCount = value; AdditionalData?.Remove("totalPieceCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalPieceCount"); else _explicitNullProperties?.Remove("totalPieceCount"); } }
         private int? _explicitNullValueTotalPieceCount = default!;
         /// <summary>The total weight of the Items in the Order</summary>
-        public int? TotalWeight { get => _explicitNullValueTotalWeight; set { _explicitNullValueTotalWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalWeight"); else _explicitNullProperties?.Remove("totalWeight"); } }
+        public int? TotalWeight { get => _explicitNullValueTotalWeight; set { _explicitNullValueTotalWeight = value; AdditionalData?.Remove("totalWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalWeight"); else _explicitNullProperties?.Remove("totalWeight"); } }
         private int? _explicitNullValueTotalWeight = default!;
         /// <summary>The units used to calculate weight</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.LbWeightUnit? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LbWeightUnit? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; AdditionalData?.Remove("weightUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LbWeightUnit? _explicitNullValueWeightUnit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItems"/> and sets the default values.
@@ -72,7 +76,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "item", n => { Item = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderSearchResponseV1ResponseOrdersItemItemsItemItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "totalPieceCount", n => { TotalPieceCount = n.GetIntValue(); } },
                 { "totalWeight", n => { TotalWeight = n.GetIntValue(); } },
-                { "weightUnit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LbWeightUnit>(); } },
+                { "weightUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LbWeightUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWeightUnit = default; _explicitNullProperties?.Remove("weightUnit"); AdditionalData["weightUnit"] = unknown; } else { WeightUnit = parsed; AdditionalData.Remove("weightUnit"); } } },
             };
         }
         /// <summary>

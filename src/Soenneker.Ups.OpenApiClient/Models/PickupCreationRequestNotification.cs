@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ConfirmationEmailAddress") is { } nullNodeConfirmationEmailAddress && nullNodeConfirmationEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmationEmailAddress = null;
-            if (parseNode.GetChildNode("UndeliverableEmailAddress") is { } nullNodeUndeliverableEmailAddress && nullNodeUndeliverableEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UndeliverableEmailAddress = null;
+            if (parseNode.GetChildNode("ConfirmationEmailAddress") is null) { _explicitNullValueConfirmationEmailAddress = default!; _explicitNullProperties?.Remove("ConfirmationEmailAddress"); }
+            else if (parseNode.GetChildNode("ConfirmationEmailAddress") is { } nullNodeConfirmationEmailAddress && nullNodeConfirmationEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfirmationEmailAddress = null;
+            if (parseNode.GetChildNode("UndeliverableEmailAddress") is null) { _explicitNullValueUndeliverableEmailAddress = default!; _explicitNullProperties?.Remove("UndeliverableEmailAddress"); }
+            else if (parseNode.GetChildNode("UndeliverableEmailAddress") is { } nullNodeUndeliverableEmailAddress && nullNodeUndeliverableEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UndeliverableEmailAddress = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Email address where the pickup notification is sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfirmationEmailAddress { get => _explicitNullValueConfirmationEmailAddress; set { _explicitNullValueConfirmationEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConfirmationEmailAddress"); else _explicitNullProperties?.Remove("ConfirmationEmailAddress"); } }
+        public string? ConfirmationEmailAddress { get => _explicitNullValueConfirmationEmailAddress; set { _explicitNullValueConfirmationEmailAddress = value; AdditionalData?.Remove("ConfirmationEmailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConfirmationEmailAddress"); else _explicitNullProperties?.Remove("ConfirmationEmailAddress"); } }
         private string? _explicitNullValueConfirmationEmailAddress = default!;
 #nullable restore
 #else
-        public string ConfirmationEmailAddress { get => _explicitNullValueConfirmationEmailAddress; set { _explicitNullValueConfirmationEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConfirmationEmailAddress"); else _explicitNullProperties?.Remove("ConfirmationEmailAddress"); } }
+        public string ConfirmationEmailAddress { get => _explicitNullValueConfirmationEmailAddress; set { _explicitNullValueConfirmationEmailAddress = value; AdditionalData?.Remove("ConfirmationEmailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConfirmationEmailAddress"); else _explicitNullProperties?.Remove("ConfirmationEmailAddress"); } }
         private string _explicitNullValueConfirmationEmailAddress = default!;
 #endif
         /// <summary>Email address for used exceptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UndeliverableEmailAddress { get => _explicitNullValueUndeliverableEmailAddress; set { _explicitNullValueUndeliverableEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEmailAddress"); else _explicitNullProperties?.Remove("UndeliverableEmailAddress"); } }
+        public string? UndeliverableEmailAddress { get => _explicitNullValueUndeliverableEmailAddress; set { _explicitNullValueUndeliverableEmailAddress = value; AdditionalData?.Remove("UndeliverableEmailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEmailAddress"); else _explicitNullProperties?.Remove("UndeliverableEmailAddress"); } }
         private string? _explicitNullValueUndeliverableEmailAddress = default!;
 #nullable restore
 #else
-        public string UndeliverableEmailAddress { get => _explicitNullValueUndeliverableEmailAddress; set { _explicitNullValueUndeliverableEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEmailAddress"); else _explicitNullProperties?.Remove("UndeliverableEmailAddress"); } }
+        public string UndeliverableEmailAddress { get => _explicitNullValueUndeliverableEmailAddress; set { _explicitNullValueUndeliverableEmailAddress = value; AdditionalData?.Remove("UndeliverableEmailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UndeliverableEmailAddress"); else _explicitNullProperties?.Remove("UndeliverableEmailAddress"); } }
         private string _explicitNullValueUndeliverableEmailAddress = default!;
 #endif
         /// <summary>

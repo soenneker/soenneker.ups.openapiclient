@@ -18,17 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AcceptanceAuditPreCheckResponse") is { } nullNodeAcceptanceAuditPreCheckResponse && nullNodeAcceptanceAuditPreCheckResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptanceAuditPreCheckResponse = null;
+            if (parseNode.GetChildNode("AcceptanceAuditPreCheckResponse") is null) { _explicitNullValueAcceptanceAuditPreCheckResponse = default!; _explicitNullProperties?.Remove("AcceptanceAuditPreCheckResponse"); }
+            else if (parseNode.GetChildNode("AcceptanceAuditPreCheckResponse") is { } nullNodeAcceptanceAuditPreCheckResponse && nullNodeAcceptanceAuditPreCheckResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptanceAuditPreCheckResponse = null;
         }
 
         /// <summary>Dangerous Goods Utility Response container for Acceptance Audit Pre-check.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse? AcceptanceAuditPreCheckResponse { get => _explicitNullValueAcceptanceAuditPreCheckResponse; set { _explicitNullValueAcceptanceAuditPreCheckResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AcceptanceAuditPreCheckResponse"); else _explicitNullProperties?.Remove("AcceptanceAuditPreCheckResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse? AcceptanceAuditPreCheckResponse { get => _explicitNullValueAcceptanceAuditPreCheckResponse; set { _explicitNullValueAcceptanceAuditPreCheckResponse = value; AdditionalData?.Remove("AcceptanceAuditPreCheckResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AcceptanceAuditPreCheckResponse"); else _explicitNullProperties?.Remove("AcceptanceAuditPreCheckResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse? _explicitNullValueAcceptanceAuditPreCheckResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse AcceptanceAuditPreCheckResponse { get => _explicitNullValueAcceptanceAuditPreCheckResponse; set { _explicitNullValueAcceptanceAuditPreCheckResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AcceptanceAuditPreCheckResponse"); else _explicitNullProperties?.Remove("AcceptanceAuditPreCheckResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse AcceptanceAuditPreCheckResponse { get => _explicitNullValueAcceptanceAuditPreCheckResponse; set { _explicitNullValueAcceptanceAuditPreCheckResponse = value; AdditionalData?.Remove("AcceptanceAuditPreCheckResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AcceptanceAuditPreCheckResponse"); else _explicitNullProperties?.Remove("AcceptanceAuditPreCheckResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponse _explicitNullValueAcceptanceAuditPreCheckResponse = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

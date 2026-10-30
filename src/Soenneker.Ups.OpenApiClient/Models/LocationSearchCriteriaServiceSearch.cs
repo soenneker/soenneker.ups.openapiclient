@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ServiceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
-            if (parseNode.GetChildNode("ServiceOptionCode") is { } nullNodeServiceOptionCode && nullNodeServiceOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceOptionCode = null;
-            if (parseNode.GetChildNode("Time") is { } nullNodeTime && nullNodeTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Time = null;
+            if (parseNode.GetChildNode("ServiceCode") is null) { _explicitNullValueServiceCode = default!; _explicitNullProperties?.Remove("ServiceCode"); }
+            else if (parseNode.GetChildNode("ServiceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("ServiceOptionCode") is null) { _explicitNullValueServiceOptionCode = default!; _explicitNullProperties?.Remove("ServiceOptionCode"); }
+            else if (parseNode.GetChildNode("ServiceOptionCode") is { } nullNodeServiceOptionCode && nullNodeServiceOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceOptionCode = null;
+            if (parseNode.GetChildNode("Time") is null) { _explicitNullValueTime = default!; _explicitNullProperties?.Remove("Time"); }
+            else if (parseNode.GetChildNode("Time") is { } nullNodeTime && nullNodeTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Time = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The ServiceCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode>? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode>? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("ServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode>? _explicitNullValueServiceCode = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode> ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode> ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("ServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceCode> _explicitNullValueServiceCode = default!;
 #endif
         /// <summary>The ServiceOptionCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode>? ServiceOptionCode { get => _explicitNullValueServiceOptionCode; set { _explicitNullValueServiceOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOptionCode"); else _explicitNullProperties?.Remove("ServiceOptionCode"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode>? ServiceOptionCode { get => _explicitNullValueServiceOptionCode; set { _explicitNullValueServiceOptionCode = value; AdditionalData?.Remove("ServiceOptionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOptionCode"); else _explicitNullProperties?.Remove("ServiceOptionCode"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode>? _explicitNullValueServiceOptionCode = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode> ServiceOptionCode { get => _explicitNullValueServiceOptionCode; set { _explicitNullValueServiceOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOptionCode"); else _explicitNullProperties?.Remove("ServiceOptionCode"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode> ServiceOptionCode { get => _explicitNullValueServiceOptionCode; set { _explicitNullValueServiceOptionCode = value; AdditionalData?.Remove("ServiceOptionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOptionCode"); else _explicitNullProperties?.Remove("ServiceOptionCode"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceSearchServiceOptionCode> _explicitNullValueServiceOptionCode = default!;
 #endif
         /// <summary>Scheduled Local Drop-off Time. Format: HHMM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Time"); else _explicitNullProperties?.Remove("Time"); } }
+        public string? Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; AdditionalData?.Remove("Time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Time"); else _explicitNullProperties?.Remove("Time"); } }
         private string? _explicitNullValueTime = default!;
 #nullable restore
 #else
-        public string Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Time"); else _explicitNullProperties?.Remove("Time"); } }
+        public string Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; AdditionalData?.Remove("Time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Time"); else _explicitNullProperties?.Remove("Time"); } }
         private string _explicitNullValueTime = default!;
 #endif
         /// <summary>

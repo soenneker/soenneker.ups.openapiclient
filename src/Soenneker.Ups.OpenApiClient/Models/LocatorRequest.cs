@@ -18,17 +18,28 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AllowAllConfidenceLevels") is { } nullNodeAllowAllConfidenceLevels && nullNodeAllowAllConfidenceLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowAllConfidenceLevels = null;
-            if (parseNode.GetChildNode("FreightIndicator") is { } nullNodeFreightIndicator && nullNodeFreightIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightIndicator = null;
-            if (parseNode.GetChildNode("LocationID") is { } nullNodeLocationID && nullNodeLocationID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationID = null;
-            if (parseNode.GetChildNode("LocationSearchCriteria") is { } nullNodeLocationSearchCriteria && nullNodeLocationSearchCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationSearchCriteria = null;
-            if (parseNode.GetChildNode("OriginAddress") is { } nullNodeOriginAddress && nullNodeOriginAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginAddress = null;
-            if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
-            if (parseNode.GetChildNode("SearchOptionCode") is { } nullNodeSearchOptionCode && nullNodeSearchOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchOptionCode = null;
-            if (parseNode.GetChildNode("ServiceGeoUnit") is { } nullNodeServiceGeoUnit && nullNodeServiceGeoUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceGeoUnit = null;
-            if (parseNode.GetChildNode("SortCriteria") is { } nullNodeSortCriteria && nullNodeSortCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortCriteria = null;
-            if (parseNode.GetChildNode("Translate") is { } nullNodeTranslate && nullNodeTranslate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Translate = null;
-            if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
+            if (parseNode.GetChildNode("AllowAllConfidenceLevels") is null) { _explicitNullValueAllowAllConfidenceLevels = default!; _explicitNullProperties?.Remove("AllowAllConfidenceLevels"); }
+            else if (parseNode.GetChildNode("AllowAllConfidenceLevels") is { } nullNodeAllowAllConfidenceLevels && nullNodeAllowAllConfidenceLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowAllConfidenceLevels = null;
+            if (parseNode.GetChildNode("FreightIndicator") is null) { _explicitNullValueFreightIndicator = default!; _explicitNullProperties?.Remove("FreightIndicator"); }
+            else if (parseNode.GetChildNode("FreightIndicator") is { } nullNodeFreightIndicator && nullNodeFreightIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightIndicator = null;
+            if (parseNode.GetChildNode("LocationID") is null) { _explicitNullValueLocationID = default!; _explicitNullProperties?.Remove("LocationID"); }
+            else if (parseNode.GetChildNode("LocationID") is { } nullNodeLocationID && nullNodeLocationID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationID = null;
+            if (parseNode.GetChildNode("LocationSearchCriteria") is null) { _explicitNullValueLocationSearchCriteria = default!; _explicitNullProperties?.Remove("LocationSearchCriteria"); }
+            else if (parseNode.GetChildNode("LocationSearchCriteria") is { } nullNodeLocationSearchCriteria && nullNodeLocationSearchCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationSearchCriteria = null;
+            if (parseNode.GetChildNode("OriginAddress") is null) { _explicitNullValueOriginAddress = default!; _explicitNullProperties?.Remove("OriginAddress"); }
+            else if (parseNode.GetChildNode("OriginAddress") is { } nullNodeOriginAddress && nullNodeOriginAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginAddress = null;
+            if (parseNode.GetChildNode("Request") is null) { _explicitNullValueRequest = default!; _explicitNullProperties?.Remove("Request"); }
+            else if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("SearchOptionCode") is null) { _explicitNullValueSearchOptionCode = default!; _explicitNullProperties?.Remove("SearchOptionCode"); }
+            else if (parseNode.GetChildNode("SearchOptionCode") is { } nullNodeSearchOptionCode && nullNodeSearchOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchOptionCode = null;
+            if (parseNode.GetChildNode("ServiceGeoUnit") is null) { _explicitNullValueServiceGeoUnit = default!; _explicitNullProperties?.Remove("ServiceGeoUnit"); }
+            else if (parseNode.GetChildNode("ServiceGeoUnit") is { } nullNodeServiceGeoUnit && nullNodeServiceGeoUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceGeoUnit = null;
+            if (parseNode.GetChildNode("SortCriteria") is null) { _explicitNullValueSortCriteria = default!; _explicitNullProperties?.Remove("SortCriteria"); }
+            else if (parseNode.GetChildNode("SortCriteria") is { } nullNodeSortCriteria && nullNodeSortCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortCriteria = null;
+            if (parseNode.GetChildNode("Translate") is null) { _explicitNullValueTranslate = default!; _explicitNullProperties?.Remove("Translate"); }
+            else if (parseNode.GetChildNode("Translate") is { } nullNodeTranslate && nullNodeTranslate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Translate = null;
+            if (parseNode.GetChildNode("UnitOfMeasurement") is null) { _explicitNullValueUnitOfMeasurement = default!; _explicitNullProperties?.Remove("UnitOfMeasurement"); }
+            else if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,111 +47,111 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicator to allow confidence level in search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllowAllConfidenceLevels { get => _explicitNullValueAllowAllConfidenceLevels; set { _explicitNullValueAllowAllConfidenceLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowAllConfidenceLevels"); else _explicitNullProperties?.Remove("AllowAllConfidenceLevels"); } }
+        public string? AllowAllConfidenceLevels { get => _explicitNullValueAllowAllConfidenceLevels; set { _explicitNullValueAllowAllConfidenceLevels = value; AdditionalData?.Remove("AllowAllConfidenceLevels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowAllConfidenceLevels"); else _explicitNullProperties?.Remove("AllowAllConfidenceLevels"); } }
         private string? _explicitNullValueAllowAllConfidenceLevels = default!;
 #nullable restore
 #else
-        public string AllowAllConfidenceLevels { get => _explicitNullValueAllowAllConfidenceLevels; set { _explicitNullValueAllowAllConfidenceLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowAllConfidenceLevels"); else _explicitNullProperties?.Remove("AllowAllConfidenceLevels"); } }
+        public string AllowAllConfidenceLevels { get => _explicitNullValueAllowAllConfidenceLevels; set { _explicitNullValueAllowAllConfidenceLevels = value; AdditionalData?.Remove("AllowAllConfidenceLevels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowAllConfidenceLevels"); else _explicitNullProperties?.Remove("AllowAllConfidenceLevels"); } }
         private string _explicitNullValueAllowAllConfidenceLevels = default!;
 #endif
         /// <summary>FreightIndicator. Required for Freight Location Search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreightIndicator { get => _explicitNullValueFreightIndicator; set { _explicitNullValueFreightIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightIndicator"); else _explicitNullProperties?.Remove("FreightIndicator"); } }
+        public string? FreightIndicator { get => _explicitNullValueFreightIndicator; set { _explicitNullValueFreightIndicator = value; AdditionalData?.Remove("FreightIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightIndicator"); else _explicitNullProperties?.Remove("FreightIndicator"); } }
         private string? _explicitNullValueFreightIndicator = default!;
 #nullable restore
 #else
-        public string FreightIndicator { get => _explicitNullValueFreightIndicator; set { _explicitNullValueFreightIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightIndicator"); else _explicitNullProperties?.Remove("FreightIndicator"); } }
+        public string FreightIndicator { get => _explicitNullValueFreightIndicator; set { _explicitNullValueFreightIndicator = value; AdditionalData?.Remove("FreightIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightIndicator"); else _explicitNullProperties?.Remove("FreightIndicator"); } }
         private string _explicitNullValueFreightIndicator = default!;
 #endif
         /// <summary>Location ID is the identification number of the UPS affiliated location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
+        public List<string>? LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; AdditionalData?.Remove("LocationID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
         private List<string>? _explicitNullValueLocationID = default!;
 #nullable restore
 #else
-        public List<string> LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
+        public List<string> LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; AdditionalData?.Remove("LocationID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
         private List<string> _explicitNullValueLocationID = default!;
 #endif
         /// <summary>The Location search criteria container allows the user to further define the basis to which they wish to receive the UPS locations. Only relevant when the user requests a Location search (request option 1).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria? LocationSearchCriteria { get => _explicitNullValueLocationSearchCriteria; set { _explicitNullValueLocationSearchCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationSearchCriteria"); else _explicitNullProperties?.Remove("LocationSearchCriteria"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria? LocationSearchCriteria { get => _explicitNullValueLocationSearchCriteria; set { _explicitNullValueLocationSearchCriteria = value; AdditionalData?.Remove("LocationSearchCriteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationSearchCriteria"); else _explicitNullProperties?.Remove("LocationSearchCriteria"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria? _explicitNullValueLocationSearchCriteria = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria LocationSearchCriteria { get => _explicitNullValueLocationSearchCriteria; set { _explicitNullValueLocationSearchCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationSearchCriteria"); else _explicitNullProperties?.Remove("LocationSearchCriteria"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria LocationSearchCriteria { get => _explicitNullValueLocationSearchCriteria; set { _explicitNullValueLocationSearchCriteria = value; AdditionalData?.Remove("LocationSearchCriteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationSearchCriteria"); else _explicitNullProperties?.Remove("LocationSearchCriteria"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestLocationSearchCriteria _explicitNullValueLocationSearchCriteria = default!;
 #endif
         /// <summary>Container for origin address information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress? OriginAddress { get => _explicitNullValueOriginAddress; set { _explicitNullValueOriginAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginAddress"); else _explicitNullProperties?.Remove("OriginAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress? OriginAddress { get => _explicitNullValueOriginAddress; set { _explicitNullValueOriginAddress = value; AdditionalData?.Remove("OriginAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginAddress"); else _explicitNullProperties?.Remove("OriginAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress? _explicitNullValueOriginAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress OriginAddress { get => _explicitNullValueOriginAddress; set { _explicitNullValueOriginAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginAddress"); else _explicitNullProperties?.Remove("OriginAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress OriginAddress { get => _explicitNullValueOriginAddress; set { _explicitNullValueOriginAddress = value; AdditionalData?.Remove("OriginAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginAddress"); else _explicitNullProperties?.Remove("OriginAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestOriginAddress _explicitNullValueOriginAddress = default!;
 #endif
         /// <summary>N/A</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestRequest _explicitNullValueRequest = default!;
 #endif
         /// <summary>Valid values: 01-Proximity Search Details02-Address Search Details03-Proximity Search Summary04-Address Search Summary05-Freight Will Call Search. Either OptionType 03 or 04 is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SearchOptionCode { get => _explicitNullValueSearchOptionCode; set { _explicitNullValueSearchOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchOptionCode"); else _explicitNullProperties?.Remove("SearchOptionCode"); } }
+        public string? SearchOptionCode { get => _explicitNullValueSearchOptionCode; set { _explicitNullValueSearchOptionCode = value; AdditionalData?.Remove("SearchOptionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchOptionCode"); else _explicitNullProperties?.Remove("SearchOptionCode"); } }
         private string? _explicitNullValueSearchOptionCode = default!;
 #nullable restore
 #else
-        public string SearchOptionCode { get => _explicitNullValueSearchOptionCode; set { _explicitNullValueSearchOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchOptionCode"); else _explicitNullProperties?.Remove("SearchOptionCode"); } }
+        public string SearchOptionCode { get => _explicitNullValueSearchOptionCode; set { _explicitNullValueSearchOptionCode = value; AdditionalData?.Remove("SearchOptionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchOptionCode"); else _explicitNullProperties?.Remove("SearchOptionCode"); } }
         private string _explicitNullValueSearchOptionCode = default!;
 #endif
         /// <summary>ServiceGeoUnit Container. Required to search for the freight facility information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit? ServiceGeoUnit { get => _explicitNullValueServiceGeoUnit; set { _explicitNullValueServiceGeoUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceGeoUnit"); else _explicitNullProperties?.Remove("ServiceGeoUnit"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit? ServiceGeoUnit { get => _explicitNullValueServiceGeoUnit; set { _explicitNullValueServiceGeoUnit = value; AdditionalData?.Remove("ServiceGeoUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceGeoUnit"); else _explicitNullProperties?.Remove("ServiceGeoUnit"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit? _explicitNullValueServiceGeoUnit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit ServiceGeoUnit { get => _explicitNullValueServiceGeoUnit; set { _explicitNullValueServiceGeoUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceGeoUnit"); else _explicitNullProperties?.Remove("ServiceGeoUnit"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit ServiceGeoUnit { get => _explicitNullValueServiceGeoUnit; set { _explicitNullValueServiceGeoUnit = value; AdditionalData?.Remove("ServiceGeoUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceGeoUnit"); else _explicitNullProperties?.Remove("ServiceGeoUnit"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestServiceGeoUnit _explicitNullValueServiceGeoUnit = default!;
 #endif
         /// <summary>Container for Sort Criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria? SortCriteria { get => _explicitNullValueSortCriteria; set { _explicitNullValueSortCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SortCriteria"); else _explicitNullProperties?.Remove("SortCriteria"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria? SortCriteria { get => _explicitNullValueSortCriteria; set { _explicitNullValueSortCriteria = value; AdditionalData?.Remove("SortCriteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SortCriteria"); else _explicitNullProperties?.Remove("SortCriteria"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria? _explicitNullValueSortCriteria = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria SortCriteria { get => _explicitNullValueSortCriteria; set { _explicitNullValueSortCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SortCriteria"); else _explicitNullProperties?.Remove("SortCriteria"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria SortCriteria { get => _explicitNullValueSortCriteria; set { _explicitNullValueSortCriteria = value; AdditionalData?.Remove("SortCriteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SortCriteria"); else _explicitNullProperties?.Remove("SortCriteria"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestSortCriteria _explicitNullValueSortCriteria = default!;
 #endif
         /// <summary>Contains the locale information for the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate? Translate { get => _explicitNullValueTranslate; set { _explicitNullValueTranslate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Translate"); else _explicitNullProperties?.Remove("Translate"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate? Translate { get => _explicitNullValueTranslate; set { _explicitNullValueTranslate = value; AdditionalData?.Remove("Translate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Translate"); else _explicitNullProperties?.Remove("Translate"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate? _explicitNullValueTranslate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate Translate { get => _explicitNullValueTranslate; set { _explicitNullValueTranslate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Translate"); else _explicitNullProperties?.Remove("Translate"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate Translate { get => _explicitNullValueTranslate; set { _explicitNullValueTranslate = value; AdditionalData?.Remove("Translate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Translate"); else _explicitNullProperties?.Remove("Translate"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestTranslate _explicitNullValueTranslate = default!;
 #endif
         /// <summary>Distance unit of measurement. This is required for location requests (request option 1).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; AdditionalData?.Remove("UnitOfMeasurement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement? _explicitNullValueUnitOfMeasurement = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; AdditionalData?.Remove("UnitOfMeasurement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequestUnitOfMeasurement _explicitNullValueUnitOfMeasurement = default!;
 #endif
         /// <summary>

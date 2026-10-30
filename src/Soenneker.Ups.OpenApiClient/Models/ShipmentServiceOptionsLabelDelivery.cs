@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("EMail") is { } nullNodeEMail && nullNodeEMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMail = null;
-            if (parseNode.GetChildNode("LabelLinksIndicator") is { } nullNodeLabelLinksIndicator && nullNodeLabelLinksIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelLinksIndicator = null;
+            if (parseNode.GetChildNode("EMail") is null) { _explicitNullValueEMail = default!; _explicitNullProperties?.Remove("EMail"); }
+            else if (parseNode.GetChildNode("EMail") is { } nullNodeEMail && nullNodeEMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMail = null;
+            if (parseNode.GetChildNode("LabelLinksIndicator") is null) { _explicitNullValueLabelLinksIndicator = default!; _explicitNullProperties?.Remove("LabelLinksIndicator"); }
+            else if (parseNode.GetChildNode("LabelLinksIndicator") is { } nullNodeLabelLinksIndicator && nullNodeLabelLinksIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelLinksIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for the email message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail? EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail? EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; AdditionalData?.Remove("EMail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail? _explicitNullValueEMail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; AdditionalData?.Remove("EMail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LabelDeliveryEMail _explicitNullValueEMail = default!;
 #endif
         /// <summary>Indicates the Label and Receipt URLs are to be returned in the XML response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LabelLinksIndicator { get => _explicitNullValueLabelLinksIndicator; set { _explicitNullValueLabelLinksIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinksIndicator"); else _explicitNullProperties?.Remove("LabelLinksIndicator"); } }
+        public string? LabelLinksIndicator { get => _explicitNullValueLabelLinksIndicator; set { _explicitNullValueLabelLinksIndicator = value; AdditionalData?.Remove("LabelLinksIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinksIndicator"); else _explicitNullProperties?.Remove("LabelLinksIndicator"); } }
         private string? _explicitNullValueLabelLinksIndicator = default!;
 #nullable restore
 #else
-        public string LabelLinksIndicator { get => _explicitNullValueLabelLinksIndicator; set { _explicitNullValueLabelLinksIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinksIndicator"); else _explicitNullProperties?.Remove("LabelLinksIndicator"); } }
+        public string LabelLinksIndicator { get => _explicitNullValueLabelLinksIndicator; set { _explicitNullValueLabelLinksIndicator = value; AdditionalData?.Remove("LabelLinksIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelLinksIndicator"); else _explicitNullProperties?.Remove("LabelLinksIndicator"); } }
         private string _explicitNullValueLabelLinksIndicator = default!;
 #endif
         /// <summary>

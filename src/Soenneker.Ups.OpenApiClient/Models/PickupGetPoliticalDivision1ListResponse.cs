@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PoliticalDivision1") is { } nullNodePoliticalDivision1 && nullNodePoliticalDivision1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalDivision1 = null;
-            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("PoliticalDivision1") is null) { _explicitNullValuePoliticalDivision1 = default!; _explicitNullProperties?.Remove("PoliticalDivision1"); }
+            else if (parseNode.GetChildNode("PoliticalDivision1") is { } nullNodePoliticalDivision1 && nullNodePoliticalDivision1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalDivision1 = null;
+            if (parseNode.GetChildNode("Response") is null) { _explicitNullValueResponse = default!; _explicitNullProperties?.Remove("Response"); }
+            else if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The Political Division 1/State Field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PoliticalDivision1 { get => _explicitNullValuePoliticalDivision1; set { _explicitNullValuePoliticalDivision1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision1"); else _explicitNullProperties?.Remove("PoliticalDivision1"); } }
+        public List<string>? PoliticalDivision1 { get => _explicitNullValuePoliticalDivision1; set { _explicitNullValuePoliticalDivision1 = value; AdditionalData?.Remove("PoliticalDivision1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision1"); else _explicitNullProperties?.Remove("PoliticalDivision1"); } }
         private List<string>? _explicitNullValuePoliticalDivision1 = default!;
 #nullable restore
 #else
-        public List<string> PoliticalDivision1 { get => _explicitNullValuePoliticalDivision1; set { _explicitNullValuePoliticalDivision1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision1"); else _explicitNullProperties?.Remove("PoliticalDivision1"); } }
+        public List<string> PoliticalDivision1 { get => _explicitNullValuePoliticalDivision1; set { _explicitNullValuePoliticalDivision1 = value; AdditionalData?.Remove("PoliticalDivision1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PoliticalDivision1"); else _explicitNullProperties?.Remove("PoliticalDivision1"); } }
         private List<string> _explicitNullValuePoliticalDivision1 = default!;
 #endif
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupGetPoliticalDivision1ListResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>

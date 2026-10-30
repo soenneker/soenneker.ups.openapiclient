@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("BusinessDaysInTransit") is { } nullNodeBusinessDaysInTransit && nullNodeBusinessDaysInTransit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessDaysInTransit = null;
-            if (parseNode.GetChildNode("DeliveryByTime") is { } nullNodeDeliveryByTime && nullNodeDeliveryByTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryByTime = null;
-            if (parseNode.GetChildNode("ScheduledDeliveryDate") is { } nullNodeScheduledDeliveryDate && nullNodeScheduledDeliveryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledDeliveryDate = null;
+            if (parseNode.GetChildNode("BusinessDaysInTransit") is null) { _explicitNullValueBusinessDaysInTransit = default!; _explicitNullProperties?.Remove("BusinessDaysInTransit"); }
+            else if (parseNode.GetChildNode("BusinessDaysInTransit") is { } nullNodeBusinessDaysInTransit && nullNodeBusinessDaysInTransit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessDaysInTransit = null;
+            if (parseNode.GetChildNode("DeliveryByTime") is null) { _explicitNullValueDeliveryByTime = default!; _explicitNullProperties?.Remove("DeliveryByTime"); }
+            else if (parseNode.GetChildNode("DeliveryByTime") is { } nullNodeDeliveryByTime && nullNodeDeliveryByTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryByTime = null;
+            if (parseNode.GetChildNode("ScheduledDeliveryDate") is null) { _explicitNullValueScheduledDeliveryDate = default!; _explicitNullProperties?.Remove("ScheduledDeliveryDate"); }
+            else if (parseNode.GetChildNode("ScheduledDeliveryDate") is { } nullNodeScheduledDeliveryDate && nullNodeScheduledDeliveryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledDeliveryDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The rated shipments guaranteed delivery date. Denotes UPS published guarantee times. (i.e. 3DaySelect = 3)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
+        public string? BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; AdditionalData?.Remove("BusinessDaysInTransit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
         private string? _explicitNullValueBusinessDaysInTransit = default!;
 #nullable restore
 #else
-        public string BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
+        public string BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; AdditionalData?.Remove("BusinessDaysInTransit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
         private string _explicitNullValueBusinessDaysInTransit = default!;
 #endif
         /// <summary>The rated shipments committed delivery time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeliveryByTime { get => _explicitNullValueDeliveryByTime; set { _explicitNullValueDeliveryByTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryByTime"); else _explicitNullProperties?.Remove("DeliveryByTime"); } }
+        public string? DeliveryByTime { get => _explicitNullValueDeliveryByTime; set { _explicitNullValueDeliveryByTime = value; AdditionalData?.Remove("DeliveryByTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryByTime"); else _explicitNullProperties?.Remove("DeliveryByTime"); } }
         private string? _explicitNullValueDeliveryByTime = default!;
 #nullable restore
 #else
-        public string DeliveryByTime { get => _explicitNullValueDeliveryByTime; set { _explicitNullValueDeliveryByTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryByTime"); else _explicitNullProperties?.Remove("DeliveryByTime"); } }
+        public string DeliveryByTime { get => _explicitNullValueDeliveryByTime; set { _explicitNullValueDeliveryByTime = value; AdditionalData?.Remove("DeliveryByTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeliveryByTime"); else _explicitNullProperties?.Remove("DeliveryByTime"); } }
         private string _explicitNullValueDeliveryByTime = default!;
 #endif
         /// <summary>The rated shipments scheduled delivery date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledDeliveryDate { get => _explicitNullValueScheduledDeliveryDate; set { _explicitNullValueScheduledDeliveryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduledDeliveryDate"); else _explicitNullProperties?.Remove("ScheduledDeliveryDate"); } }
+        public string? ScheduledDeliveryDate { get => _explicitNullValueScheduledDeliveryDate; set { _explicitNullValueScheduledDeliveryDate = value; AdditionalData?.Remove("ScheduledDeliveryDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduledDeliveryDate"); else _explicitNullProperties?.Remove("ScheduledDeliveryDate"); } }
         private string? _explicitNullValueScheduledDeliveryDate = default!;
 #nullable restore
 #else
-        public string ScheduledDeliveryDate { get => _explicitNullValueScheduledDeliveryDate; set { _explicitNullValueScheduledDeliveryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduledDeliveryDate"); else _explicitNullProperties?.Remove("ScheduledDeliveryDate"); } }
+        public string ScheduledDeliveryDate { get => _explicitNullValueScheduledDeliveryDate; set { _explicitNullValueScheduledDeliveryDate = value; AdditionalData?.Remove("ScheduledDeliveryDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScheduledDeliveryDate"); else _explicitNullProperties?.Remove("ScheduledDeliveryDate"); } }
         private string _explicitNullValueScheduledDeliveryDate = default!;
 #endif
         /// <summary>

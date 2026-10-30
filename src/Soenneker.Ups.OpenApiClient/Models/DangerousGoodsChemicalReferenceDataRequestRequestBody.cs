@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ChemicalReferenceDataRequest") is { } nullNodeChemicalReferenceDataRequest && nullNodeChemicalReferenceDataRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalReferenceDataRequest = null;
+            if (parseNode.GetChildNode("ChemicalReferenceDataRequest") is null) { _explicitNullValueChemicalReferenceDataRequest = default!; _explicitNullProperties?.Remove("ChemicalReferenceDataRequest"); }
+            else if (parseNode.GetChildNode("ChemicalReferenceDataRequest") is { } nullNodeChemicalReferenceDataRequest && nullNodeChemicalReferenceDataRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalReferenceDataRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Dangerous Goods Utility Request container for Chemical Reference Data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataRequest? ChemicalReferenceDataRequest { get => _explicitNullValueChemicalReferenceDataRequest; set { _explicitNullValueChemicalReferenceDataRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalReferenceDataRequest"); else _explicitNullProperties?.Remove("ChemicalReferenceDataRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataRequest? ChemicalReferenceDataRequest { get => _explicitNullValueChemicalReferenceDataRequest; set { _explicitNullValueChemicalReferenceDataRequest = value; AdditionalData?.Remove("ChemicalReferenceDataRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalReferenceDataRequest"); else _explicitNullProperties?.Remove("ChemicalReferenceDataRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataRequest? _explicitNullValueChemicalReferenceDataRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataRequest ChemicalReferenceDataRequest { get => _explicitNullValueChemicalReferenceDataRequest; set { _explicitNullValueChemicalReferenceDataRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalReferenceDataRequest"); else _explicitNullProperties?.Remove("ChemicalReferenceDataRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataRequest ChemicalReferenceDataRequest { get => _explicitNullValueChemicalReferenceDataRequest; set { _explicitNullValueChemicalReferenceDataRequest = value; AdditionalData?.Remove("ChemicalReferenceDataRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalReferenceDataRequest"); else _explicitNullProperties?.Remove("ChemicalReferenceDataRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsChemicalReferenceDataRequest _explicitNullValueChemicalReferenceDataRequest = default!;
 #endif
         /// <summary>

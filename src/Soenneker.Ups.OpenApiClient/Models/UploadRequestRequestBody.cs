@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("UploadRequest") is { } nullNodeUploadRequest && nullNodeUploadRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadRequest = null;
+            if (parseNode.GetChildNode("UploadRequest") is null) { _explicitNullValueUploadRequest = default!; _explicitNullProperties?.Remove("UploadRequest"); }
+            else if (parseNode.GetChildNode("UploadRequest") is { } nullNodeUploadRequest && nullNodeUploadRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Paperless Document API Request container for uploading User Created Forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadRequest? UploadRequest { get => _explicitNullValueUploadRequest; set { _explicitNullValueUploadRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UploadRequest"); else _explicitNullProperties?.Remove("UploadRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadRequest? UploadRequest { get => _explicitNullValueUploadRequest; set { _explicitNullValueUploadRequest = value; AdditionalData?.Remove("UploadRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UploadRequest"); else _explicitNullProperties?.Remove("UploadRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UploadRequest? _explicitNullValueUploadRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UploadRequest UploadRequest { get => _explicitNullValueUploadRequest; set { _explicitNullValueUploadRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UploadRequest"); else _explicitNullProperties?.Remove("UploadRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UploadRequest UploadRequest { get => _explicitNullValueUploadRequest; set { _explicitNullValueUploadRequest = value; AdditionalData?.Remove("UploadRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UploadRequest"); else _explicitNullProperties?.Remove("UploadRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UploadRequest _explicitNullValueUploadRequest = default!;
 #endif
         /// <summary>

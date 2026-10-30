@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ElementIdentifier") is { } nullNodeElementIdentifier && nullNodeElementIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElementIdentifier = null;
-            if (parseNode.GetChildNode("Level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
+            if (parseNode.GetChildNode("ElementIdentifier") is null) { _explicitNullValueElementIdentifier = default!; _explicitNullProperties?.Remove("ElementIdentifier"); }
+            else if (parseNode.GetChildNode("ElementIdentifier") is { } nullNodeElementIdentifier && nullNodeElementIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElementIdentifier = null;
+            if (parseNode.GetChildNode("Level") is null) { _explicitNullValueLevel = default!; _explicitNullProperties?.Remove("Level"); }
+            else if (parseNode.GetChildNode("Level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The ElementIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsElementLevelInformationElementIdentifier>? ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsElementLevelInformationElementIdentifier>? ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; AdditionalData?.Remove("ElementIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsElementLevelInformationElementIdentifier>? _explicitNullValueElementIdentifier = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsElementLevelInformationElementIdentifier> ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsElementLevelInformationElementIdentifier> ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; AdditionalData?.Remove("ElementIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsElementLevelInformationElementIdentifier> _explicitNullValueElementIdentifier = default!;
 #endif
         /// <summary>Define type of element in request.   Possible values: H for the header details levelS for the shipment levelP for the package levelC for the commodity level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
+        public string? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("Level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
         private string? _explicitNullValueLevel = default!;
 #nullable restore
 #else
-        public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
+        public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("Level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
         private string _explicitNullValueLevel = default!;
 #endif
         /// <summary>

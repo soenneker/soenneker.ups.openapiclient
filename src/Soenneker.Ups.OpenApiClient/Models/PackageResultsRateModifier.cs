@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("ModifierDesc") is { } nullNodeModifierDesc && nullNodeModifierDesc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifierDesc = null;
-            if (parseNode.GetChildNode("ModifierType") is { } nullNodeModifierType && nullNodeModifierType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifierType = null;
+            if (parseNode.GetChildNode("Amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("Amount"); }
+            else if (parseNode.GetChildNode("Amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("ModifierDesc") is null) { _explicitNullValueModifierDesc = default!; _explicitNullProperties?.Remove("ModifierDesc"); }
+            else if (parseNode.GetChildNode("ModifierDesc") is { } nullNodeModifierDesc && nullNodeModifierDesc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifierDesc = null;
+            if (parseNode.GetChildNode("ModifierType") is null) { _explicitNullValueModifierType = default!; _explicitNullProperties?.Remove("ModifierType"); }
+            else if (parseNode.GetChildNode("ModifierType") is { } nullNodeModifierType && nullNodeModifierType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifierType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Amount. Example: &quot;-1.00&quot;,&quot;0.25&quot;. It contains positive or negative values. Applies only if SubVersion is 2205 or greater.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
+        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("Amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
         private string? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
+        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("Amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
         private string _explicitNullValueAmount = default!;
 #endif
         /// <summary>Rate Modifier Description. Example: &quot;Origin Modifier&quot;. Applies only if SubVersion is 2205 or greater.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModifierDesc { get => _explicitNullValueModifierDesc; set { _explicitNullValueModifierDesc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModifierDesc"); else _explicitNullProperties?.Remove("ModifierDesc"); } }
+        public string? ModifierDesc { get => _explicitNullValueModifierDesc; set { _explicitNullValueModifierDesc = value; AdditionalData?.Remove("ModifierDesc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModifierDesc"); else _explicitNullProperties?.Remove("ModifierDesc"); } }
         private string? _explicitNullValueModifierDesc = default!;
 #nullable restore
 #else
-        public string ModifierDesc { get => _explicitNullValueModifierDesc; set { _explicitNullValueModifierDesc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModifierDesc"); else _explicitNullProperties?.Remove("ModifierDesc"); } }
+        public string ModifierDesc { get => _explicitNullValueModifierDesc; set { _explicitNullValueModifierDesc = value; AdditionalData?.Remove("ModifierDesc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModifierDesc"); else _explicitNullProperties?.Remove("ModifierDesc"); } }
         private string _explicitNullValueModifierDesc = default!;
 #endif
         /// <summary>Rate Modifier Type. Example: &quot;ORM&quot;. Applies only if SubVersion is 2205 or greater.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModifierType { get => _explicitNullValueModifierType; set { _explicitNullValueModifierType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModifierType"); else _explicitNullProperties?.Remove("ModifierType"); } }
+        public string? ModifierType { get => _explicitNullValueModifierType; set { _explicitNullValueModifierType = value; AdditionalData?.Remove("ModifierType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModifierType"); else _explicitNullProperties?.Remove("ModifierType"); } }
         private string? _explicitNullValueModifierType = default!;
 #nullable restore
 #else
-        public string ModifierType { get => _explicitNullValueModifierType; set { _explicitNullValueModifierType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModifierType"); else _explicitNullProperties?.Remove("ModifierType"); } }
+        public string ModifierType { get => _explicitNullValueModifierType; set { _explicitNullValueModifierType = value; AdditionalData?.Remove("ModifierType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModifierType"); else _explicitNullProperties?.Remove("ModifierType"); } }
         private string _explicitNullValueModifierType = default!;
 #endif
         /// <summary>

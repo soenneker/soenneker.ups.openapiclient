@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PromoAliasCode") is { } nullNodePromoAliasCode && nullNodePromoAliasCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoAliasCode = null;
-            if (parseNode.GetChildNode("PromoCode") is { } nullNodePromoCode && nullNodePromoCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoCode = null;
+            if (parseNode.GetChildNode("PromoAliasCode") is null) { _explicitNullValuePromoAliasCode = default!; _explicitNullProperties?.Remove("PromoAliasCode"); }
+            else if (parseNode.GetChildNode("PromoAliasCode") is { } nullNodePromoAliasCode && nullNodePromoAliasCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoAliasCode = null;
+            if (parseNode.GetChildNode("PromoCode") is null) { _explicitNullValuePromoCode = default!; _explicitNullProperties?.Remove("PromoCode"); }
+            else if (parseNode.GetChildNode("PromoCode") is { } nullNodePromoCode && nullNodePromoCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Promotion Alias code  Required if PromotionalDiscountInformation container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PromoAliasCode { get => _explicitNullValuePromoAliasCode; set { _explicitNullValuePromoAliasCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PromoAliasCode"); else _explicitNullProperties?.Remove("PromoAliasCode"); } }
+        public string? PromoAliasCode { get => _explicitNullValuePromoAliasCode; set { _explicitNullValuePromoAliasCode = value; AdditionalData?.Remove("PromoAliasCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PromoAliasCode"); else _explicitNullProperties?.Remove("PromoAliasCode"); } }
         private string? _explicitNullValuePromoAliasCode = default!;
 #nullable restore
 #else
-        public string PromoAliasCode { get => _explicitNullValuePromoAliasCode; set { _explicitNullValuePromoAliasCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PromoAliasCode"); else _explicitNullProperties?.Remove("PromoAliasCode"); } }
+        public string PromoAliasCode { get => _explicitNullValuePromoAliasCode; set { _explicitNullValuePromoAliasCode = value; AdditionalData?.Remove("PromoAliasCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PromoAliasCode"); else _explicitNullProperties?.Remove("PromoAliasCode"); } }
         private string _explicitNullValuePromoAliasCode = default!;
 #endif
         /// <summary>Promotion Code. A discount that is applied to the user.  Required if PromotionalDiscountInformation container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PromoCode { get => _explicitNullValuePromoCode; set { _explicitNullValuePromoCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PromoCode"); else _explicitNullProperties?.Remove("PromoCode"); } }
+        public string? PromoCode { get => _explicitNullValuePromoCode; set { _explicitNullValuePromoCode = value; AdditionalData?.Remove("PromoCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PromoCode"); else _explicitNullProperties?.Remove("PromoCode"); } }
         private string? _explicitNullValuePromoCode = default!;
 #nullable restore
 #else
-        public string PromoCode { get => _explicitNullValuePromoCode; set { _explicitNullValuePromoCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PromoCode"); else _explicitNullProperties?.Remove("PromoCode"); } }
+        public string PromoCode { get => _explicitNullValuePromoCode; set { _explicitNullValuePromoCode = value; AdditionalData?.Remove("PromoCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PromoCode"); else _explicitNullProperties?.Remove("PromoCode"); } }
         private string _explicitNullValuePromoCode = default!;
 #endif
         /// <summary>

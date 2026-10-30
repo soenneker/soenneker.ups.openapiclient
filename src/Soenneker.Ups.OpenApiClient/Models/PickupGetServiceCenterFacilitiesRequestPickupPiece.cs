@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ContainerCode") is { } nullNodeContainerCode && nullNodeContainerCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerCode = null;
-            if (parseNode.GetChildNode("ServiceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("ContainerCode") is null) { _explicitNullValueContainerCode = default!; _explicitNullProperties?.Remove("ContainerCode"); }
+            else if (parseNode.GetChildNode("ContainerCode") is { } nullNodeContainerCode && nullNodeContainerCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerCode = null;
+            if (parseNode.GetChildNode("ServiceCode") is null) { _explicitNullValueServiceCode = default!; _explicitNullProperties?.Remove("ServiceCode"); }
+            else if (parseNode.GetChildNode("ServiceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The container type03 = PALLET  Required for WWEF shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainerCode { get => _explicitNullValueContainerCode; set { _explicitNullValueContainerCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContainerCode"); else _explicitNullProperties?.Remove("ContainerCode"); } }
+        public string? ContainerCode { get => _explicitNullValueContainerCode; set { _explicitNullValueContainerCode = value; AdditionalData?.Remove("ContainerCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContainerCode"); else _explicitNullProperties?.Remove("ContainerCode"); } }
         private string? _explicitNullValueContainerCode = default!;
 #nullable restore
 #else
-        public string ContainerCode { get => _explicitNullValueContainerCode; set { _explicitNullValueContainerCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContainerCode"); else _explicitNullProperties?.Remove("ContainerCode"); } }
+        public string ContainerCode { get => _explicitNullValueContainerCode; set { _explicitNullValueContainerCode = value; AdditionalData?.Remove("ContainerCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContainerCode"); else _explicitNullProperties?.Remove("ContainerCode"); } }
         private string _explicitNullValueContainerCode = default!;
 #endif
         /// <summary>The service code.96 = WWEF  Required for WWEF shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
+        public string? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("ServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
         private string? _explicitNullValueServiceCode = default!;
 #nullable restore
 #else
-        public string ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
+        public string ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("ServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
         private string _explicitNullValueServiceCode = default!;
 #endif
         /// <summary>

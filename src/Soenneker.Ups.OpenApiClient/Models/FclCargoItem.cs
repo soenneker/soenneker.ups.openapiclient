@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("equipmentCode") is { } nullNodeEquipmentCode && nullNodeEquipmentCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EquipmentCode = null;
-            if (parseNode.GetChildNode("noOfContainers") is { } nullNodeNoOfContainers && nullNodeNoOfContainers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoOfContainers = null;
+            if (parseNode.GetChildNode("equipmentCode") is null) { _explicitNullValueEquipmentCode = default!; _explicitNullProperties?.Remove("equipmentCode"); }
+            else if (parseNode.GetChildNode("equipmentCode") is { } nullNodeEquipmentCode && nullNodeEquipmentCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EquipmentCode = null;
+            if (parseNode.GetChildNode("noOfContainers") is null) { _explicitNullValueNoOfContainers = default!; _explicitNullProperties?.Remove("noOfContainers"); }
+            else if (parseNode.GetChildNode("noOfContainers") is { } nullNodeNoOfContainers && nullNodeNoOfContainers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoOfContainers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Equipment code for the container (e.g., 40HC).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EquipmentCode { get => _explicitNullValueEquipmentCode; set { _explicitNullValueEquipmentCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("equipmentCode"); else _explicitNullProperties?.Remove("equipmentCode"); } }
+        public string? EquipmentCode { get => _explicitNullValueEquipmentCode; set { _explicitNullValueEquipmentCode = value; AdditionalData?.Remove("equipmentCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("equipmentCode"); else _explicitNullProperties?.Remove("equipmentCode"); } }
         private string? _explicitNullValueEquipmentCode = default!;
 #nullable restore
 #else
-        public string EquipmentCode { get => _explicitNullValueEquipmentCode; set { _explicitNullValueEquipmentCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("equipmentCode"); else _explicitNullProperties?.Remove("equipmentCode"); } }
+        public string EquipmentCode { get => _explicitNullValueEquipmentCode; set { _explicitNullValueEquipmentCode = value; AdditionalData?.Remove("equipmentCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("equipmentCode"); else _explicitNullProperties?.Remove("equipmentCode"); } }
         private string _explicitNullValueEquipmentCode = default!;
 #endif
         /// <summary>Number of containers for this equipment type.</summary>
-        public int? NoOfContainers { get => _explicitNullValueNoOfContainers; set { _explicitNullValueNoOfContainers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noOfContainers"); else _explicitNullProperties?.Remove("noOfContainers"); } }
+        public int? NoOfContainers { get => _explicitNullValueNoOfContainers; set { _explicitNullValueNoOfContainers = value; AdditionalData?.Remove("noOfContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noOfContainers"); else _explicitNullProperties?.Remove("noOfContainers"); } }
         private int? _explicitNullValueNoOfContainers = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem"/> and sets the default values.

@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("controlDetailDescription") is { } nullNodeControlDetailDescription && nullNodeControlDetailDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetailDescription = null;
-            if (parseNode.GetChildNode("controlDetailName") is { } nullNodeControlDetailName && nullNodeControlDetailName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetailName = null;
+            if (parseNode.GetChildNode("controlDetailDescription") is null) { _explicitNullValueControlDetailDescription = default!; _explicitNullProperties?.Remove("controlDetailDescription"); }
+            else if (parseNode.GetChildNode("controlDetailDescription") is { } nullNodeControlDetailDescription && nullNodeControlDetailDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetailDescription = null;
+            if (parseNode.GetChildNode("controlDetailName") is null) { _explicitNullValueControlDetailName = default!; _explicitNullProperties?.Remove("controlDetailName"); }
+            else if (parseNode.GetChildNode("controlDetailName") is { } nullNodeControlDetailName && nullNodeControlDetailName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetailName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A detailed description of the control measure, translated for the user as required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlDetailDescription { get => _explicitNullValueControlDetailDescription; set { _explicitNullValueControlDetailDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailDescription"); else _explicitNullProperties?.Remove("controlDetailDescription"); } }
+        public string? ControlDetailDescription { get => _explicitNullValueControlDetailDescription; set { _explicitNullValueControlDetailDescription = value; AdditionalData?.Remove("controlDetailDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailDescription"); else _explicitNullProperties?.Remove("controlDetailDescription"); } }
         private string? _explicitNullValueControlDetailDescription = default!;
 #nullable restore
 #else
-        public string ControlDetailDescription { get => _explicitNullValueControlDetailDescription; set { _explicitNullValueControlDetailDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailDescription"); else _explicitNullProperties?.Remove("controlDetailDescription"); } }
+        public string ControlDetailDescription { get => _explicitNullValueControlDetailDescription; set { _explicitNullValueControlDetailDescription = value; AdditionalData?.Remove("controlDetailDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailDescription"); else _explicitNullProperties?.Remove("controlDetailDescription"); } }
         private string _explicitNullValueControlDetailDescription = default!;
 #endif
         /// <summary>The formal name or title of the control measure. This property serves as the header for `ControlDetails`.  Where no specific control name is applicable, this field may be left empty (and consequently, no header will be displayed in the response). This property is translated to the user&apos;s language as required. **Note**: When the `controlTypeCode` is set to `DOC`, the `controlDetailName` is also the identifier for the corresponding DocuSign template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlDetailName { get => _explicitNullValueControlDetailName; set { _explicitNullValueControlDetailName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailName"); else _explicitNullProperties?.Remove("controlDetailName"); } }
+        public string? ControlDetailName { get => _explicitNullValueControlDetailName; set { _explicitNullValueControlDetailName = value; AdditionalData?.Remove("controlDetailName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailName"); else _explicitNullProperties?.Remove("controlDetailName"); } }
         private string? _explicitNullValueControlDetailName = default!;
 #nullable restore
 #else
-        public string ControlDetailName { get => _explicitNullValueControlDetailName; set { _explicitNullValueControlDetailName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailName"); else _explicitNullProperties?.Remove("controlDetailName"); } }
+        public string ControlDetailName { get => _explicitNullValueControlDetailName; set { _explicitNullValueControlDetailName = value; AdditionalData?.Remove("controlDetailName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetailName"); else _explicitNullProperties?.Remove("controlDetailName"); } }
         private string _explicitNullValueControlDetailName = default!;
 #endif
         /// <summary>

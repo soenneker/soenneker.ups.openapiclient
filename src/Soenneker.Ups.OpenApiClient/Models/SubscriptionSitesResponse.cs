@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
-            if (parseNode.GetChildNode("subscriptionResponse") is { } nullNodeSubscriptionResponse && nullNodeSubscriptionResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionResponse = null;
+            if (parseNode.GetChildNode("response") is null) { _explicitNullValueResponse = default!; _explicitNullProperties?.Remove("response"); }
+            else if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("subscriptionResponse") is null) { _explicitNullValueSubscriptionResponse = default!; _explicitNullProperties?.Remove("subscriptionResponse"); }
+            else if (parseNode.GetChildNode("subscriptionResponse") is { } nullNodeSubscriptionResponse && nullNodeSubscriptionResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Standard response envelope containing transaction reference information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>Subscription preferences including notification channels and subscribed pickup point identifiers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse? SubscriptionResponse { get => _explicitNullValueSubscriptionResponse; set { _explicitNullValueSubscriptionResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionResponse"); else _explicitNullProperties?.Remove("subscriptionResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse? SubscriptionResponse { get => _explicitNullValueSubscriptionResponse; set { _explicitNullValueSubscriptionResponse = value; AdditionalData?.Remove("subscriptionResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionResponse"); else _explicitNullProperties?.Remove("subscriptionResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse? _explicitNullValueSubscriptionResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse SubscriptionResponse { get => _explicitNullValueSubscriptionResponse; set { _explicitNullValueSubscriptionResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionResponse"); else _explicitNullProperties?.Remove("subscriptionResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse SubscriptionResponse { get => _explicitNullValueSubscriptionResponse; set { _explicitNullValueSubscriptionResponse = value; AdditionalData?.Remove("subscriptionResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionResponse"); else _explicitNullProperties?.Remove("subscriptionResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SubscriptionSitesResponseSubscriptionResponse _explicitNullValueSubscriptionResponse = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("SortType") is { } nullNodeSortType && nullNodeSortType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortType = null;
+            if (parseNode.GetChildNode("SortType") is null) { _explicitNullValueSortType = default!; _explicitNullProperties?.Remove("SortType"); }
+            else if (parseNode.GetChildNode("SortType") is { } nullNodeSortType && nullNodeSortType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>For different sort type. Valid values:01-Closest Location02-Deadline for Drop-off by Air/Express03-Deadline for Drop-off by Ground/Standard04-Latest Close Time05-Earliest Open Time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SortType { get => _explicitNullValueSortType; set { _explicitNullValueSortType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SortType"); else _explicitNullProperties?.Remove("SortType"); } }
+        public string? SortType { get => _explicitNullValueSortType; set { _explicitNullValueSortType = value; AdditionalData?.Remove("SortType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SortType"); else _explicitNullProperties?.Remove("SortType"); } }
         private string? _explicitNullValueSortType = default!;
 #nullable restore
 #else
-        public string SortType { get => _explicitNullValueSortType; set { _explicitNullValueSortType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SortType"); else _explicitNullProperties?.Remove("SortType"); } }
+        public string SortType { get => _explicitNullValueSortType; set { _explicitNullValueSortType = value; AdditionalData?.Remove("SortType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SortType"); else _explicitNullProperties?.Remove("SortType"); } }
         private string _explicitNullValueSortType = default!;
 #endif
         /// <summary>

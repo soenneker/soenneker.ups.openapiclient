@@ -18,13 +18,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carrierServiceCode") is { } nullNodeCarrierServiceCode && nullNodeCarrierServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierServiceCode = null;
-            if (parseNode.GetChildNode("carrierServiceDescription") is { } nullNodeCarrierServiceDescription && nullNodeCarrierServiceDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierServiceDescription = null;
-            if (parseNode.GetChildNode("handlingCode") is { } nullNodeHandlingCode && nullNodeHandlingCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingCode = null;
-            if (parseNode.GetChildNode("handlingDescription") is { } nullNodeHandlingDescription && nullNodeHandlingDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingDescription = null;
-            if (parseNode.GetChildNode("saturdayDeliveryFlag") is { } nullNodeSaturdayDeliveryFlag && nullNodeSaturdayDeliveryFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDeliveryFlag = null;
-            if (parseNode.GetChildNode("serviceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
-            if (parseNode.GetChildNode("serviceDescription") is { } nullNodeServiceDescription && nullNodeServiceDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDescription = null;
+            if (parseNode.GetChildNode("carrierServiceCode") is null) { _explicitNullValueCarrierServiceCode = default!; _explicitNullProperties?.Remove("carrierServiceCode"); }
+            else if (parseNode.GetChildNode("carrierServiceCode") is { } nullNodeCarrierServiceCode && nullNodeCarrierServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierServiceCode = null;
+            if (parseNode.GetChildNode("carrierServiceDescription") is null) { _explicitNullValueCarrierServiceDescription = default!; _explicitNullProperties?.Remove("carrierServiceDescription"); }
+            else if (parseNode.GetChildNode("carrierServiceDescription") is { } nullNodeCarrierServiceDescription && nullNodeCarrierServiceDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierServiceDescription = null;
+            if (parseNode.GetChildNode("handlingCode") is null) { _explicitNullValueHandlingCode = default!; _explicitNullProperties?.Remove("handlingCode"); }
+            else if (parseNode.GetChildNode("handlingCode") is { } nullNodeHandlingCode && nullNodeHandlingCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingCode = null;
+            if (parseNode.GetChildNode("handlingDescription") is null) { _explicitNullValueHandlingDescription = default!; _explicitNullProperties?.Remove("handlingDescription"); }
+            else if (parseNode.GetChildNode("handlingDescription") is { } nullNodeHandlingDescription && nullNodeHandlingDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingDescription = null;
+            if (parseNode.GetChildNode("saturdayDeliveryFlag") is null) { _explicitNullValueSaturdayDeliveryFlag = default!; _explicitNullProperties?.Remove("saturdayDeliveryFlag"); }
+            else if (parseNode.GetChildNode("saturdayDeliveryFlag") is { } nullNodeSaturdayDeliveryFlag && nullNodeSaturdayDeliveryFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDeliveryFlag = null;
+            if (parseNode.GetChildNode("serviceCode") is null) { _explicitNullValueServiceCode = default!; _explicitNullProperties?.Remove("serviceCode"); }
+            else if (parseNode.GetChildNode("serviceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("serviceDescription") is null) { _explicitNullValueServiceDescription = default!; _explicitNullProperties?.Remove("serviceDescription"); }
+            else if (parseNode.GetChildNode("serviceDescription") is { } nullNodeServiceDescription && nullNodeServiceDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDescription = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,64 +39,64 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Use this field to specify the carrier service level if different than service level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierServiceCode { get => _explicitNullValueCarrierServiceCode; set { _explicitNullValueCarrierServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierServiceCode"); else _explicitNullProperties?.Remove("carrierServiceCode"); } }
+        public string? CarrierServiceCode { get => _explicitNullValueCarrierServiceCode; set { _explicitNullValueCarrierServiceCode = value; AdditionalData?.Remove("carrierServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierServiceCode"); else _explicitNullProperties?.Remove("carrierServiceCode"); } }
         private string? _explicitNullValueCarrierServiceCode = default!;
 #nullable restore
 #else
-        public string CarrierServiceCode { get => _explicitNullValueCarrierServiceCode; set { _explicitNullValueCarrierServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierServiceCode"); else _explicitNullProperties?.Remove("carrierServiceCode"); } }
+        public string CarrierServiceCode { get => _explicitNullValueCarrierServiceCode; set { _explicitNullValueCarrierServiceCode = value; AdditionalData?.Remove("carrierServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierServiceCode"); else _explicitNullProperties?.Remove("carrierServiceCode"); } }
         private string _explicitNullValueCarrierServiceCode = default!;
 #endif
         /// <summary>Description for carrier service level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierServiceDescription { get => _explicitNullValueCarrierServiceDescription; set { _explicitNullValueCarrierServiceDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierServiceDescription"); else _explicitNullProperties?.Remove("carrierServiceDescription"); } }
+        public string? CarrierServiceDescription { get => _explicitNullValueCarrierServiceDescription; set { _explicitNullValueCarrierServiceDescription = value; AdditionalData?.Remove("carrierServiceDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierServiceDescription"); else _explicitNullProperties?.Remove("carrierServiceDescription"); } }
         private string? _explicitNullValueCarrierServiceDescription = default!;
 #nullable restore
 #else
-        public string CarrierServiceDescription { get => _explicitNullValueCarrierServiceDescription; set { _explicitNullValueCarrierServiceDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierServiceDescription"); else _explicitNullProperties?.Remove("carrierServiceDescription"); } }
+        public string CarrierServiceDescription { get => _explicitNullValueCarrierServiceDescription; set { _explicitNullValueCarrierServiceDescription = value; AdditionalData?.Remove("carrierServiceDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrierServiceDescription"); else _explicitNullProperties?.Remove("carrierServiceDescription"); } }
         private string _explicitNullValueCarrierServiceDescription = default!;
 #endif
         /// <summary>Shipment package handling instructions code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HandlingCode { get => _explicitNullValueHandlingCode; set { _explicitNullValueHandlingCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingCode"); else _explicitNullProperties?.Remove("handlingCode"); } }
+        public string? HandlingCode { get => _explicitNullValueHandlingCode; set { _explicitNullValueHandlingCode = value; AdditionalData?.Remove("handlingCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingCode"); else _explicitNullProperties?.Remove("handlingCode"); } }
         private string? _explicitNullValueHandlingCode = default!;
 #nullable restore
 #else
-        public string HandlingCode { get => _explicitNullValueHandlingCode; set { _explicitNullValueHandlingCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingCode"); else _explicitNullProperties?.Remove("handlingCode"); } }
+        public string HandlingCode { get => _explicitNullValueHandlingCode; set { _explicitNullValueHandlingCode = value; AdditionalData?.Remove("handlingCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingCode"); else _explicitNullProperties?.Remove("handlingCode"); } }
         private string _explicitNullValueHandlingCode = default!;
 #endif
         /// <summary>Shipment package handling instructions description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HandlingDescription { get => _explicitNullValueHandlingDescription; set { _explicitNullValueHandlingDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingDescription"); else _explicitNullProperties?.Remove("handlingDescription"); } }
+        public string? HandlingDescription { get => _explicitNullValueHandlingDescription; set { _explicitNullValueHandlingDescription = value; AdditionalData?.Remove("handlingDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingDescription"); else _explicitNullProperties?.Remove("handlingDescription"); } }
         private string? _explicitNullValueHandlingDescription = default!;
 #nullable restore
 #else
-        public string HandlingDescription { get => _explicitNullValueHandlingDescription; set { _explicitNullValueHandlingDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingDescription"); else _explicitNullProperties?.Remove("handlingDescription"); } }
+        public string HandlingDescription { get => _explicitNullValueHandlingDescription; set { _explicitNullValueHandlingDescription = value; AdditionalData?.Remove("handlingDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingDescription"); else _explicitNullProperties?.Remove("handlingDescription"); } }
         private string _explicitNullValueHandlingDescription = default!;
 #endif
         /// <summary>The saturdayDeliveryFlag property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSaturdayDeliveryFlag? SaturdayDeliveryFlag { get => _explicitNullValueSaturdayDeliveryFlag; set { _explicitNullValueSaturdayDeliveryFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturdayDeliveryFlag"); else _explicitNullProperties?.Remove("saturdayDeliveryFlag"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSaturdayDeliveryFlag? SaturdayDeliveryFlag { get => _explicitNullValueSaturdayDeliveryFlag; set { _explicitNullValueSaturdayDeliveryFlag = value; AdditionalData?.Remove("saturdayDeliveryFlag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturdayDeliveryFlag"); else _explicitNullProperties?.Remove("saturdayDeliveryFlag"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ServiceSaturdayDeliveryFlag? _explicitNullValueSaturdayDeliveryFlag = default!;
         /// <summary>Code of service level for the shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
+        public string? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("serviceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
         private string? _explicitNullValueServiceCode = default!;
 #nullable restore
 #else
-        public string ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
+        public string ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("serviceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
         private string _explicitNullValueServiceCode = default!;
 #endif
         /// <summary>Description for the level of service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceDescription { get => _explicitNullValueServiceDescription; set { _explicitNullValueServiceDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDescription"); else _explicitNullProperties?.Remove("serviceDescription"); } }
+        public string? ServiceDescription { get => _explicitNullValueServiceDescription; set { _explicitNullValueServiceDescription = value; AdditionalData?.Remove("serviceDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDescription"); else _explicitNullProperties?.Remove("serviceDescription"); } }
         private string? _explicitNullValueServiceDescription = default!;
 #nullable restore
 #else
-        public string ServiceDescription { get => _explicitNullValueServiceDescription; set { _explicitNullValueServiceDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDescription"); else _explicitNullProperties?.Remove("serviceDescription"); } }
+        public string ServiceDescription { get => _explicitNullValueServiceDescription; set { _explicitNullValueServiceDescription = value; AdditionalData?.Remove("serviceDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDescription"); else _explicitNullProperties?.Remove("serviceDescription"); } }
         private string _explicitNullValueServiceDescription = default!;
 #endif
         /// <summary>
@@ -121,7 +128,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "carrierServiceDescription", n => { CarrierServiceDescription = n.GetStringValue(); } },
                 { "handlingCode", n => { HandlingCode = n.GetStringValue(); } },
                 { "handlingDescription", n => { HandlingDescription = n.GetStringValue(); } },
-                { "saturdayDeliveryFlag", n => { SaturdayDeliveryFlag = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ServiceSaturdayDeliveryFlag>(); } },
+                { "saturdayDeliveryFlag", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ServiceSaturdayDeliveryFlag>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSaturdayDeliveryFlag = default; _explicitNullProperties?.Remove("saturdayDeliveryFlag"); AdditionalData["saturdayDeliveryFlag"] = unknown; } else { SaturdayDeliveryFlag = parsed; AdditionalData.Remove("saturdayDeliveryFlag"); } } },
                 { "serviceCode", n => { ServiceCode = n.GetStringValue(); } },
                 { "serviceDescription", n => { ServiceDescription = n.GetStringValue(); } },
             };

@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AllPackedInOneIndicator") is { } nullNodeAllPackedInOneIndicator && nullNodeAllPackedInOneIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllPackedInOneIndicator = null;
-            if (parseNode.GetChildNode("HazMatChemicalRecord") is { } nullNodeHazMatChemicalRecord && nullNodeHazMatChemicalRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazMatChemicalRecord = null;
-            if (parseNode.GetChildNode("OverPackedIndicator") is { } nullNodeOverPackedIndicator && nullNodeOverPackedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverPackedIndicator = null;
-            if (parseNode.GetChildNode("PackageIdentifier") is { } nullNodePackageIdentifier && nullNodePackageIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageIdentifier = null;
-            if (parseNode.GetChildNode("QValue") is { } nullNodeQValue && nullNodeQValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QValue = null;
+            if (parseNode.GetChildNode("AllPackedInOneIndicator") is null) { _explicitNullValueAllPackedInOneIndicator = default!; _explicitNullProperties?.Remove("AllPackedInOneIndicator"); }
+            else if (parseNode.GetChildNode("AllPackedInOneIndicator") is { } nullNodeAllPackedInOneIndicator && nullNodeAllPackedInOneIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllPackedInOneIndicator = null;
+            if (parseNode.GetChildNode("HazMatChemicalRecord") is null) { _explicitNullValueHazMatChemicalRecord = default!; _explicitNullProperties?.Remove("HazMatChemicalRecord"); }
+            else if (parseNode.GetChildNode("HazMatChemicalRecord") is { } nullNodeHazMatChemicalRecord && nullNodeHazMatChemicalRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazMatChemicalRecord = null;
+            if (parseNode.GetChildNode("OverPackedIndicator") is null) { _explicitNullValueOverPackedIndicator = default!; _explicitNullProperties?.Remove("OverPackedIndicator"); }
+            else if (parseNode.GetChildNode("OverPackedIndicator") is { } nullNodeOverPackedIndicator && nullNodeOverPackedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverPackedIndicator = null;
+            if (parseNode.GetChildNode("PackageIdentifier") is null) { _explicitNullValuePackageIdentifier = default!; _explicitNullProperties?.Remove("PackageIdentifier"); }
+            else if (parseNode.GetChildNode("PackageIdentifier") is { } nullNodePackageIdentifier && nullNodePackageIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageIdentifier = null;
+            if (parseNode.GetChildNode("QValue") is null) { _explicitNullValueQValue = default!; _explicitNullProperties?.Remove("QValue"); }
+            else if (parseNode.GetChildNode("QValue") is { } nullNodeQValue && nullNodeQValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Presence/Absence Indicator. Any value is ignored. Indicates the hazmat shipment/package is all packed in one.  Applies only if SubVersion is greater than or equal to 1701.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
+        public string? AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; AdditionalData?.Remove("AllPackedInOneIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
         private string? _explicitNullValueAllPackedInOneIndicator = default!;
 #nullable restore
 #else
-        public string AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
+        public string AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; AdditionalData?.Remove("AllPackedInOneIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
         private string _explicitNullValueAllPackedInOneIndicator = default!;
 #endif
         /// <summary>The HazMatChemicalRecord property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.HazMatHazMatChemicalRecord>? HazMatChemicalRecord { get => _explicitNullValueHazMatChemicalRecord; set { _explicitNullValueHazMatChemicalRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMatChemicalRecord"); else _explicitNullProperties?.Remove("HazMatChemicalRecord"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.HazMatHazMatChemicalRecord>? HazMatChemicalRecord { get => _explicitNullValueHazMatChemicalRecord; set { _explicitNullValueHazMatChemicalRecord = value; AdditionalData?.Remove("HazMatChemicalRecord"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMatChemicalRecord"); else _explicitNullProperties?.Remove("HazMatChemicalRecord"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.HazMatHazMatChemicalRecord>? _explicitNullValueHazMatChemicalRecord = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.HazMatHazMatChemicalRecord> HazMatChemicalRecord { get => _explicitNullValueHazMatChemicalRecord; set { _explicitNullValueHazMatChemicalRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMatChemicalRecord"); else _explicitNullProperties?.Remove("HazMatChemicalRecord"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.HazMatHazMatChemicalRecord> HazMatChemicalRecord { get => _explicitNullValueHazMatChemicalRecord; set { _explicitNullValueHazMatChemicalRecord = value; AdditionalData?.Remove("HazMatChemicalRecord"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazMatChemicalRecord"); else _explicitNullProperties?.Remove("HazMatChemicalRecord"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.HazMatHazMatChemicalRecord> _explicitNullValueHazMatChemicalRecord = default!;
 #endif
         /// <summary>Presence/Absence Indicator. Any value is ignored. Presence indicates that shipment is overpack.  Applies only if SubVersion is greater than or equal to 1701.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
+        public string? OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; AdditionalData?.Remove("OverPackedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
         private string? _explicitNullValueOverPackedIndicator = default!;
 #nullable restore
 #else
-        public string OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
+        public string OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; AdditionalData?.Remove("OverPackedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
         private string _explicitNullValueOverPackedIndicator = default!;
 #endif
         /// <summary>Identifies the package containing Dangerous Goods.  Required if SubVersion is greater than or equal to 1701.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageIdentifier { get => _explicitNullValuePackageIdentifier; set { _explicitNullValuePackageIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageIdentifier"); else _explicitNullProperties?.Remove("PackageIdentifier"); } }
+        public string? PackageIdentifier { get => _explicitNullValuePackageIdentifier; set { _explicitNullValuePackageIdentifier = value; AdditionalData?.Remove("PackageIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageIdentifier"); else _explicitNullProperties?.Remove("PackageIdentifier"); } }
         private string? _explicitNullValuePackageIdentifier = default!;
 #nullable restore
 #else
-        public string PackageIdentifier { get => _explicitNullValuePackageIdentifier; set { _explicitNullValuePackageIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageIdentifier"); else _explicitNullProperties?.Remove("PackageIdentifier"); } }
+        public string PackageIdentifier { get => _explicitNullValuePackageIdentifier; set { _explicitNullValuePackageIdentifier = value; AdditionalData?.Remove("PackageIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageIdentifier"); else _explicitNullProperties?.Remove("PackageIdentifier"); } }
         private string _explicitNullValuePackageIdentifier = default!;
 #endif
         /// <summary>QValue is required when a HazMat shipment specifies AllPackedInOneIndicator and the regulation set for that shipment is IATA.   Applies only if SubVersion is greater than or equal to 1701. Valid values are : 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
+        public string? QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; AdditionalData?.Remove("QValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
         private string? _explicitNullValueQValue = default!;
 #nullable restore
 #else
-        public string QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
+        public string QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; AdditionalData?.Remove("QValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
         private string _explicitNullValueQValue = default!;
 #endif
         /// <summary>

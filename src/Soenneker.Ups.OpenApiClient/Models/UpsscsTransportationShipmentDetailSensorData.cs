@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("gps") is { } nullNodeGps && nullNodeGps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gps = null;
-            if (parseNode.GetChildNode("humidityLevel") is { } nullNodeHumidityLevel && nullNodeHumidityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumidityLevel = null;
-            if (parseNode.GetChildNode("lightStrength") is { } nullNodeLightStrength && nullNodeLightStrength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LightStrength = null;
-            if (parseNode.GetChildNode("shockForce") is { } nullNodeShockForce && nullNodeShockForce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShockForce = null;
-            if (parseNode.GetChildNode("temperature") is { } nullNodeTemperature && nullNodeTemperature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Temperature = null;
+            if (parseNode.GetChildNode("gps") is null) { _explicitNullValueGps = default!; _explicitNullProperties?.Remove("gps"); }
+            else if (parseNode.GetChildNode("gps") is { } nullNodeGps && nullNodeGps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gps = null;
+            if (parseNode.GetChildNode("humidityLevel") is null) { _explicitNullValueHumidityLevel = default!; _explicitNullProperties?.Remove("humidityLevel"); }
+            else if (parseNode.GetChildNode("humidityLevel") is { } nullNodeHumidityLevel && nullNodeHumidityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumidityLevel = null;
+            if (parseNode.GetChildNode("lightStrength") is null) { _explicitNullValueLightStrength = default!; _explicitNullProperties?.Remove("lightStrength"); }
+            else if (parseNode.GetChildNode("lightStrength") is { } nullNodeLightStrength && nullNodeLightStrength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LightStrength = null;
+            if (parseNode.GetChildNode("shockForce") is null) { _explicitNullValueShockForce = default!; _explicitNullProperties?.Remove("shockForce"); }
+            else if (parseNode.GetChildNode("shockForce") is { } nullNodeShockForce && nullNodeShockForce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShockForce = null;
+            if (parseNode.GetChildNode("temperature") is null) { _explicitNullValueTemperature = default!; _explicitNullProperties?.Remove("temperature"); }
+            else if (parseNode.GetChildNode("temperature") is { } nullNodeTemperature && nullNodeTemperature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Temperature = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Use this field for shipment tracking</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataGps? Gps { get => _explicitNullValueGps; set { _explicitNullValueGps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gps"); else _explicitNullProperties?.Remove("gps"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataGps? Gps { get => _explicitNullValueGps; set { _explicitNullValueGps = value; AdditionalData?.Remove("gps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gps"); else _explicitNullProperties?.Remove("gps"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataGps? _explicitNullValueGps = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataGps Gps { get => _explicitNullValueGps; set { _explicitNullValueGps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gps"); else _explicitNullProperties?.Remove("gps"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataGps Gps { get => _explicitNullValueGps; set { _explicitNullValueGps = value; AdditionalData?.Remove("gps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gps"); else _explicitNullProperties?.Remove("gps"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataGps _explicitNullValueGps = default!;
 #endif
         /// <summary>Use this field to provide information about the shipment humidity conditions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataHumidityLevel? HumidityLevel { get => _explicitNullValueHumidityLevel; set { _explicitNullValueHumidityLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("humidityLevel"); else _explicitNullProperties?.Remove("humidityLevel"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataHumidityLevel? HumidityLevel { get => _explicitNullValueHumidityLevel; set { _explicitNullValueHumidityLevel = value; AdditionalData?.Remove("humidityLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("humidityLevel"); else _explicitNullProperties?.Remove("humidityLevel"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataHumidityLevel? _explicitNullValueHumidityLevel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataHumidityLevel HumidityLevel { get => _explicitNullValueHumidityLevel; set { _explicitNullValueHumidityLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("humidityLevel"); else _explicitNullProperties?.Remove("humidityLevel"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataHumidityLevel HumidityLevel { get => _explicitNullValueHumidityLevel; set { _explicitNullValueHumidityLevel = value; AdditionalData?.Remove("humidityLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("humidityLevel"); else _explicitNullProperties?.Remove("humidityLevel"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataHumidityLevel _explicitNullValueHumidityLevel = default!;
 #endif
         /// <summary>Light sensor data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataLightStrength? LightStrength { get => _explicitNullValueLightStrength; set { _explicitNullValueLightStrength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lightStrength"); else _explicitNullProperties?.Remove("lightStrength"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataLightStrength? LightStrength { get => _explicitNullValueLightStrength; set { _explicitNullValueLightStrength = value; AdditionalData?.Remove("lightStrength"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lightStrength"); else _explicitNullProperties?.Remove("lightStrength"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataLightStrength? _explicitNullValueLightStrength = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataLightStrength LightStrength { get => _explicitNullValueLightStrength; set { _explicitNullValueLightStrength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lightStrength"); else _explicitNullProperties?.Remove("lightStrength"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataLightStrength LightStrength { get => _explicitNullValueLightStrength; set { _explicitNullValueLightStrength = value; AdditionalData?.Remove("lightStrength"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lightStrength"); else _explicitNullProperties?.Remove("lightStrength"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataLightStrength _explicitNullValueLightStrength = default!;
 #endif
         /// <summary>Has shipment been dropped or otherwise exposed to an impact force that exceeds a predetermined level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce? ShockForce { get => _explicitNullValueShockForce; set { _explicitNullValueShockForce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shockForce"); else _explicitNullProperties?.Remove("shockForce"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce? ShockForce { get => _explicitNullValueShockForce; set { _explicitNullValueShockForce = value; AdditionalData?.Remove("shockForce"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shockForce"); else _explicitNullProperties?.Remove("shockForce"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce? _explicitNullValueShockForce = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce ShockForce { get => _explicitNullValueShockForce; set { _explicitNullValueShockForce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shockForce"); else _explicitNullProperties?.Remove("shockForce"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce ShockForce { get => _explicitNullValueShockForce; set { _explicitNullValueShockForce = value; AdditionalData?.Remove("shockForce"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shockForce"); else _explicitNullProperties?.Remove("shockForce"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataShockForce _explicitNullValueShockForce = default!;
 #endif
         /// <summary>Temperature information of the shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataTemperature? Temperature { get => _explicitNullValueTemperature; set { _explicitNullValueTemperature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperature"); else _explicitNullProperties?.Remove("temperature"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataTemperature? Temperature { get => _explicitNullValueTemperature; set { _explicitNullValueTemperature = value; AdditionalData?.Remove("temperature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperature"); else _explicitNullProperties?.Remove("temperature"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataTemperature? _explicitNullValueTemperature = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataTemperature Temperature { get => _explicitNullValueTemperature; set { _explicitNullValueTemperature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperature"); else _explicitNullProperties?.Remove("temperature"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SensorDataTemperature Temperature { get => _explicitNullValueTemperature; set { _explicitNullValueTemperature = value; AdditionalData?.Remove("temperature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperature"); else _explicitNullProperties?.Remove("temperature"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SensorDataTemperature _explicitNullValueTemperature = default!;
 #endif
         /// <summary>

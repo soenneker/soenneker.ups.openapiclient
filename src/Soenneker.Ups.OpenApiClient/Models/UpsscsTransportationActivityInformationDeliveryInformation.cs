@@ -18,25 +18,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actualDeliveryDateTime") is { } nullNodeActualDeliveryDateTime && nullNodeActualDeliveryDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualDeliveryDateTime = null;
-            if (parseNode.GetChildNode("actualDeliveryDateTimegmtOffset") is { } nullNodeActualDeliveryDateTimegmtOffset && nullNodeActualDeliveryDateTimegmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualDeliveryDateTimegmtOffset = null;
-            if (parseNode.GetChildNode("podSignatureImage") is { } nullNodePodSignatureImage && nullNodePodSignatureImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignatureImage = null;
-            if (parseNode.GetChildNode("podSignatureText") is { } nullNodePodSignatureText && nullNodePodSignatureText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignatureText = null;
-            if (parseNode.GetChildNode("podSignedBy") is { } nullNodePodSignedBy && nullNodePodSignedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignedBy = null;
-            if (parseNode.GetChildNode("podSignedOn") is { } nullNodePodSignedOn && nullNodePodSignedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignedOn = null;
+            if (parseNode.GetChildNode("actualDeliveryDateTime") is null) { _explicitNullValueActualDeliveryDateTime = default!; _explicitNullProperties?.Remove("actualDeliveryDateTime"); }
+            else if (parseNode.GetChildNode("actualDeliveryDateTime") is { } nullNodeActualDeliveryDateTime && nullNodeActualDeliveryDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualDeliveryDateTime = null;
+            if (parseNode.GetChildNode("actualDeliveryDateTimegmtOffset") is null) { _explicitNullValueActualDeliveryDateTimegmtOffset = default!; _explicitNullProperties?.Remove("actualDeliveryDateTimegmtOffset"); }
+            else if (parseNode.GetChildNode("actualDeliveryDateTimegmtOffset") is { } nullNodeActualDeliveryDateTimegmtOffset && nullNodeActualDeliveryDateTimegmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualDeliveryDateTimegmtOffset = null;
+            if (parseNode.GetChildNode("podSignatureImage") is null) { _explicitNullValuePodSignatureImage = default!; _explicitNullProperties?.Remove("podSignatureImage"); }
+            else if (parseNode.GetChildNode("podSignatureImage") is { } nullNodePodSignatureImage && nullNodePodSignatureImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignatureImage = null;
+            if (parseNode.GetChildNode("podSignatureText") is null) { _explicitNullValuePodSignatureText = default!; _explicitNullProperties?.Remove("podSignatureText"); }
+            else if (parseNode.GetChildNode("podSignatureText") is { } nullNodePodSignatureText && nullNodePodSignatureText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignatureText = null;
+            if (parseNode.GetChildNode("podSignedBy") is null) { _explicitNullValuePodSignedBy = default!; _explicitNullProperties?.Remove("podSignedBy"); }
+            else if (parseNode.GetChildNode("podSignedBy") is { } nullNodePodSignedBy && nullNodePodSignedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignedBy = null;
+            if (parseNode.GetChildNode("podSignedOn") is null) { _explicitNullValuePodSignedOn = default!; _explicitNullProperties?.Remove("podSignedOn"); }
+            else if (parseNode.GetChildNode("podSignedOn") is { } nullNodePodSignedOn && nullNodePodSignedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodSignedOn = null;
         }
 
         /// <summary>The actualDeliveryDateTime property</summary>
-        public DateTimeOffset? ActualDeliveryDateTime { get => _explicitNullValueActualDeliveryDateTime; set { _explicitNullValueActualDeliveryDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTime"); else _explicitNullProperties?.Remove("actualDeliveryDateTime"); } }
+        public DateTimeOffset? ActualDeliveryDateTime { get => _explicitNullValueActualDeliveryDateTime; set { _explicitNullValueActualDeliveryDateTime = value; AdditionalData?.Remove("actualDeliveryDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTime"); else _explicitNullProperties?.Remove("actualDeliveryDateTime"); } }
         private DateTimeOffset? _explicitNullValueActualDeliveryDateTime = default!;
         /// <summary>actual delivery datetime gmt offset</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActualDeliveryDateTimegmtOffset { get => _explicitNullValueActualDeliveryDateTimegmtOffset; set { _explicitNullValueActualDeliveryDateTimegmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTimegmtOffset"); else _explicitNullProperties?.Remove("actualDeliveryDateTimegmtOffset"); } }
+        public string? ActualDeliveryDateTimegmtOffset { get => _explicitNullValueActualDeliveryDateTimegmtOffset; set { _explicitNullValueActualDeliveryDateTimegmtOffset = value; AdditionalData?.Remove("actualDeliveryDateTimegmtOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTimegmtOffset"); else _explicitNullProperties?.Remove("actualDeliveryDateTimegmtOffset"); } }
         private string? _explicitNullValueActualDeliveryDateTimegmtOffset = default!;
 #nullable restore
 #else
-        public string ActualDeliveryDateTimegmtOffset { get => _explicitNullValueActualDeliveryDateTimegmtOffset; set { _explicitNullValueActualDeliveryDateTimegmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTimegmtOffset"); else _explicitNullProperties?.Remove("actualDeliveryDateTimegmtOffset"); } }
+        public string ActualDeliveryDateTimegmtOffset { get => _explicitNullValueActualDeliveryDateTimegmtOffset; set { _explicitNullValueActualDeliveryDateTimegmtOffset = value; AdditionalData?.Remove("actualDeliveryDateTimegmtOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualDeliveryDateTimegmtOffset"); else _explicitNullProperties?.Remove("actualDeliveryDateTimegmtOffset"); } }
         private string _explicitNullValueActualDeliveryDateTimegmtOffset = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -44,35 +50,35 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The podSignatureImage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PodSignatureImage { get => _explicitNullValuePodSignatureImage; set { _explicitNullValuePodSignatureImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureImage"); else _explicitNullProperties?.Remove("podSignatureImage"); } }
+        public string? PodSignatureImage { get => _explicitNullValuePodSignatureImage; set { _explicitNullValuePodSignatureImage = value; AdditionalData?.Remove("podSignatureImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureImage"); else _explicitNullProperties?.Remove("podSignatureImage"); } }
         private string? _explicitNullValuePodSignatureImage = default!;
 #nullable restore
 #else
-        public string PodSignatureImage { get => _explicitNullValuePodSignatureImage; set { _explicitNullValuePodSignatureImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureImage"); else _explicitNullProperties?.Remove("podSignatureImage"); } }
+        public string PodSignatureImage { get => _explicitNullValuePodSignatureImage; set { _explicitNullValuePodSignatureImage = value; AdditionalData?.Remove("podSignatureImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureImage"); else _explicitNullProperties?.Remove("podSignatureImage"); } }
         private string _explicitNullValuePodSignatureImage = default!;
 #endif
         /// <summary>The podSignatureText property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PodSignatureText { get => _explicitNullValuePodSignatureText; set { _explicitNullValuePodSignatureText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureText"); else _explicitNullProperties?.Remove("podSignatureText"); } }
+        public string? PodSignatureText { get => _explicitNullValuePodSignatureText; set { _explicitNullValuePodSignatureText = value; AdditionalData?.Remove("podSignatureText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureText"); else _explicitNullProperties?.Remove("podSignatureText"); } }
         private string? _explicitNullValuePodSignatureText = default!;
 #nullable restore
 #else
-        public string PodSignatureText { get => _explicitNullValuePodSignatureText; set { _explicitNullValuePodSignatureText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureText"); else _explicitNullProperties?.Remove("podSignatureText"); } }
+        public string PodSignatureText { get => _explicitNullValuePodSignatureText; set { _explicitNullValuePodSignatureText = value; AdditionalData?.Remove("podSignatureText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignatureText"); else _explicitNullProperties?.Remove("podSignatureText"); } }
         private string _explicitNullValuePodSignatureText = default!;
 #endif
         /// <summary>The podSignedBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PodSignedBy { get => _explicitNullValuePodSignedBy; set { _explicitNullValuePodSignedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignedBy"); else _explicitNullProperties?.Remove("podSignedBy"); } }
+        public string? PodSignedBy { get => _explicitNullValuePodSignedBy; set { _explicitNullValuePodSignedBy = value; AdditionalData?.Remove("podSignedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignedBy"); else _explicitNullProperties?.Remove("podSignedBy"); } }
         private string? _explicitNullValuePodSignedBy = default!;
 #nullable restore
 #else
-        public string PodSignedBy { get => _explicitNullValuePodSignedBy; set { _explicitNullValuePodSignedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignedBy"); else _explicitNullProperties?.Remove("podSignedBy"); } }
+        public string PodSignedBy { get => _explicitNullValuePodSignedBy; set { _explicitNullValuePodSignedBy = value; AdditionalData?.Remove("podSignedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignedBy"); else _explicitNullProperties?.Remove("podSignedBy"); } }
         private string _explicitNullValuePodSignedBy = default!;
 #endif
         /// <summary>The podSignedOn property</summary>
-        public DateTimeOffset? PodSignedOn { get => _explicitNullValuePodSignedOn; set { _explicitNullValuePodSignedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignedOn"); else _explicitNullProperties?.Remove("podSignedOn"); } }
+        public DateTimeOffset? PodSignedOn { get => _explicitNullValuePodSignedOn; set { _explicitNullValuePodSignedOn = value; AdditionalData?.Remove("podSignedOn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podSignedOn"); else _explicitNullProperties?.Remove("podSignedOn"); } }
         private DateTimeOffset? _explicitNullValuePodSignedOn = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationActivityInformationDeliveryInformation"/> and sets the default values.

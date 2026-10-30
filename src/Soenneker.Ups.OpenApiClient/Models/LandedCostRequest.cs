@@ -18,49 +18,54 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowPartialLandedCostResult") is { } nullNodeAllowPartialLandedCostResult && nullNodeAllowPartialLandedCostResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowPartialLandedCostResult = null;
-            if (parseNode.GetChildNode("alversion") is { } nullNodeAlversion && nullNodeAlversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alversion = null;
-            if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
-            if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
-            if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
+            if (parseNode.GetChildNode("allowPartialLandedCostResult") is null) { _explicitNullValueAllowPartialLandedCostResult = default!; _explicitNullProperties?.Remove("allowPartialLandedCostResult"); }
+            else if (parseNode.GetChildNode("allowPartialLandedCostResult") is { } nullNodeAllowPartialLandedCostResult && nullNodeAllowPartialLandedCostResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowPartialLandedCostResult = null;
+            if (parseNode.GetChildNode("alversion") is null) { _explicitNullValueAlversion = default!; _explicitNullProperties?.Remove("alversion"); }
+            else if (parseNode.GetChildNode("alversion") is { } nullNodeAlversion && nullNodeAlversion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alversion = null;
+            if (parseNode.GetChildNode("currencyCode") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("currencyCode"); }
+            else if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("shipment") is null) { _explicitNullValueShipment = default!; _explicitNullProperties?.Remove("shipment"); }
+            else if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("transID") is null) { _explicitNullValueTransID = default!; _explicitNullProperties?.Remove("transID"); }
+            else if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An optional flag to indicate that partial landed cost calculations are acceptable to be used by upstream systems.When set to *false*, the system will return an error when at least one commodity in the shipment is invalid (all or none), and no results  will be sent back for that request. When set to *true*, the system will return partial calculations when applicable.Valid values: true = Partial Landed Cost result will return. false = All or No result will return (default).</summary>
-        public bool? AllowPartialLandedCostResult { get => _explicitNullValueAllowPartialLandedCostResult; set { _explicitNullValueAllowPartialLandedCostResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowPartialLandedCostResult"); else _explicitNullProperties?.Remove("allowPartialLandedCostResult"); } }
+        public bool? AllowPartialLandedCostResult { get => _explicitNullValueAllowPartialLandedCostResult; set { _explicitNullValueAllowPartialLandedCostResult = value; AdditionalData?.Remove("allowPartialLandedCostResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowPartialLandedCostResult"); else _explicitNullProperties?.Remove("allowPartialLandedCostResult"); } }
         private bool? _explicitNullValueAllowPartialLandedCostResult = default!;
         /// <summary>Version number of the instance that processed this request. This must match the major number of the corresponding ICD version.</summary>
-        public int? Alversion { get => _explicitNullValueAlversion; set { _explicitNullValueAlversion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alversion"); else _explicitNullProperties?.Remove("alversion"); } }
+        public int? Alversion { get => _explicitNullValueAlversion; set { _explicitNullValueAlversion = value; AdditionalData?.Remove("alversion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alversion"); else _explicitNullProperties?.Remove("alversion"); } }
         private int? _explicitNullValueAlversion = default!;
         /// <summary>Specifies the currency of transaction or purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
         private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
         private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>Every Landed Cost request must be based on a shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LandedCostRequestShipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>Unique transaction ID for the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; AdditionalData?.Remove("transID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
         private string? _explicitNullValueTransID = default!;
 #nullable restore
 #else
-        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; AdditionalData?.Remove("transID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
         private string _explicitNullValueTransID = default!;
 #endif
         /// <summary>

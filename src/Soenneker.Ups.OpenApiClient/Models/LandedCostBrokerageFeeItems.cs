@@ -17,23 +17,25 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("chargeAmount") is { } nullNodeChargeAmount && nullNodeChargeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeAmount = null;
-            if (parseNode.GetChildNode("chargeName") is { } nullNodeChargeName && nullNodeChargeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeName = null;
+            if (parseNode.GetChildNode("chargeAmount") is null) { _explicitNullValueChargeAmount = default!; _explicitNullProperties?.Remove("chargeAmount"); }
+            else if (parseNode.GetChildNode("chargeAmount") is { } nullNodeChargeAmount && nullNodeChargeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeAmount = null;
+            if (parseNode.GetChildNode("chargeName") is null) { _explicitNullValueChargeName = default!; _explicitNullProperties?.Remove("chargeName"); }
+            else if (parseNode.GetChildNode("chargeName") is { } nullNodeChargeName && nullNodeChargeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Fee amount for the brokerage charges.</summary>
-        public double? ChargeAmount { get => _explicitNullValueChargeAmount; set { _explicitNullValueChargeAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeAmount"); else _explicitNullProperties?.Remove("chargeAmount"); } }
+        public double? ChargeAmount { get => _explicitNullValueChargeAmount; set { _explicitNullValueChargeAmount = value; AdditionalData?.Remove("chargeAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeAmount"); else _explicitNullProperties?.Remove("chargeAmount"); } }
         private double? _explicitNullValueChargeAmount = default!;
         /// <summary>Brokerage charge name for this shipment. Possible Values:1. Entry Preparation Fee 2. Disbursement Fee 3. Additional Line Fee</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChargeName { get => _explicitNullValueChargeName; set { _explicitNullValueChargeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeName"); else _explicitNullProperties?.Remove("chargeName"); } }
+        public string? ChargeName { get => _explicitNullValueChargeName; set { _explicitNullValueChargeName = value; AdditionalData?.Remove("chargeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeName"); else _explicitNullProperties?.Remove("chargeName"); } }
         private string? _explicitNullValueChargeName = default!;
 #nullable restore
 #else
-        public string ChargeName { get => _explicitNullValueChargeName; set { _explicitNullValueChargeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeName"); else _explicitNullProperties?.Remove("chargeName"); } }
+        public string ChargeName { get => _explicitNullValueChargeName; set { _explicitNullValueChargeName = value; AdditionalData?.Remove("chargeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeName"); else _explicitNullProperties?.Remove("chargeName"); } }
         private string _explicitNullValueChargeName = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("QuantumViewResponse") is { } nullNodeQuantumViewResponse && nullNodeQuantumViewResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuantumViewResponse = null;
+            if (parseNode.GetChildNode("QuantumViewResponse") is null) { _explicitNullValueQuantumViewResponse = default!; _explicitNullProperties?.Remove("QuantumViewResponse"); }
+            else if (parseNode.GetChildNode("QuantumViewResponse") is { } nullNodeQuantumViewResponse && nullNodeQuantumViewResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuantumViewResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for QuantumView response information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewResponse? QuantumViewResponse { get => _explicitNullValueQuantumViewResponse; set { _explicitNullValueQuantumViewResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QuantumViewResponse"); else _explicitNullProperties?.Remove("QuantumViewResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewResponse? QuantumViewResponse { get => _explicitNullValueQuantumViewResponse; set { _explicitNullValueQuantumViewResponse = value; AdditionalData?.Remove("QuantumViewResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QuantumViewResponse"); else _explicitNullProperties?.Remove("QuantumViewResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewResponse? _explicitNullValueQuantumViewResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewResponse QuantumViewResponse { get => _explicitNullValueQuantumViewResponse; set { _explicitNullValueQuantumViewResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QuantumViewResponse"); else _explicitNullProperties?.Remove("QuantumViewResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewResponse QuantumViewResponse { get => _explicitNullValueQuantumViewResponse; set { _explicitNullValueQuantumViewResponse = value; AdditionalData?.Remove("QuantumViewResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QuantumViewResponse"); else _explicitNullProperties?.Remove("QuantumViewResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewQuantumViewResponse _explicitNullValueQuantumViewResponse = default!;
 #endif
         /// <summary>

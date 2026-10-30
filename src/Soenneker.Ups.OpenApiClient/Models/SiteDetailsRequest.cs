@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inboundToken") is { } nullNodeInboundToken && nullNodeInboundToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundToken = null;
-            if (parseNode.GetChildNode("locationIdentifierCategoryCode") is { } nullNodeLocationIdentifierCategoryCode && nullNodeLocationIdentifierCategoryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationIdentifierCategoryCode = null;
+            if (parseNode.GetChildNode("inboundToken") is null) { _explicitNullValueInboundToken = default!; _explicitNullProperties?.Remove("inboundToken"); }
+            else if (parseNode.GetChildNode("inboundToken") is { } nullNodeInboundToken && nullNodeInboundToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundToken = null;
+            if (parseNode.GetChildNode("locationIdentifierCategoryCode") is null) { _explicitNullValueLocationIdentifierCategoryCode = default!; _explicitNullProperties?.Remove("locationIdentifierCategoryCode"); }
+            else if (parseNode.GetChildNode("locationIdentifierCategoryCode") is { } nullNodeLocationIdentifierCategoryCode && nullNodeLocationIdentifierCategoryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationIdentifierCategoryCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The inboundToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
+        public List<string>? InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; AdditionalData?.Remove("inboundToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
         private List<string>? _explicitNullValueInboundToken = default!;
 #nullable restore
 #else
-        public List<string> InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
+        public List<string> InboundToken { get => _explicitNullValueInboundToken; set { _explicitNullValueInboundToken = value; AdditionalData?.Remove("inboundToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundToken"); else _explicitNullProperties?.Remove("inboundToken"); } }
         private List<string> _explicitNullValueInboundToken = default!;
 #endif
         /// <summary>The locationIdentifierCategoryCode property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsRequestLocationIdentifierCategoryCode? LocationIdentifierCategoryCode { get => _explicitNullValueLocationIdentifierCategoryCode; set { _explicitNullValueLocationIdentifierCategoryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIdentifierCategoryCode"); else _explicitNullProperties?.Remove("locationIdentifierCategoryCode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsRequestLocationIdentifierCategoryCode? LocationIdentifierCategoryCode { get => _explicitNullValueLocationIdentifierCategoryCode; set { _explicitNullValueLocationIdentifierCategoryCode = value; AdditionalData?.Remove("locationIdentifierCategoryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIdentifierCategoryCode"); else _explicitNullProperties?.Remove("locationIdentifierCategoryCode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsRequestLocationIdentifierCategoryCode? _explicitNullValueLocationIdentifierCategoryCode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsRequest"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "inboundToken", n => { InboundToken = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "locationIdentifierCategoryCode", n => { LocationIdentifierCategoryCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsRequestLocationIdentifierCategoryCode>(); } },
+                { "locationIdentifierCategoryCode", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SiteDetailsRequestLocationIdentifierCategoryCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocationIdentifierCategoryCode = default; _explicitNullProperties?.Remove("locationIdentifierCategoryCode"); AdditionalData["locationIdentifierCategoryCode"] = unknown; } else { LocationIdentifierCategoryCode = parsed; AdditionalData.Remove("locationIdentifierCategoryCode"); } } },
             };
         }
         /// <summary>

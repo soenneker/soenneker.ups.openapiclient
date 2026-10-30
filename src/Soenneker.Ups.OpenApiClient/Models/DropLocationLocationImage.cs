@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("NonSecureURL") is { } nullNodeNonSecureURL && nullNodeNonSecureURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonSecureURL = null;
-            if (parseNode.GetChildNode("SecureURL") is { } nullNodeSecureURL && nullNodeSecureURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecureURL = null;
+            if (parseNode.GetChildNode("NonSecureURL") is null) { _explicitNullValueNonSecureURL = default!; _explicitNullProperties?.Remove("NonSecureURL"); }
+            else if (parseNode.GetChildNode("NonSecureURL") is { } nullNodeNonSecureURL && nullNodeNonSecureURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonSecureURL = null;
+            if (parseNode.GetChildNode("SecureURL") is null) { _explicitNullValueSecureURL = default!; _explicitNullProperties?.Remove("SecureURL"); }
+            else if (parseNode.GetChildNode("SecureURL") is { } nullNodeSecureURL && nullNodeSecureURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecureURL = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Non Secure URL for Location Image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NonSecureURL { get => _explicitNullValueNonSecureURL; set { _explicitNullValueNonSecureURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NonSecureURL"); else _explicitNullProperties?.Remove("NonSecureURL"); } }
+        public string? NonSecureURL { get => _explicitNullValueNonSecureURL; set { _explicitNullValueNonSecureURL = value; AdditionalData?.Remove("NonSecureURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NonSecureURL"); else _explicitNullProperties?.Remove("NonSecureURL"); } }
         private string? _explicitNullValueNonSecureURL = default!;
 #nullable restore
 #else
-        public string NonSecureURL { get => _explicitNullValueNonSecureURL; set { _explicitNullValueNonSecureURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NonSecureURL"); else _explicitNullProperties?.Remove("NonSecureURL"); } }
+        public string NonSecureURL { get => _explicitNullValueNonSecureURL; set { _explicitNullValueNonSecureURL = value; AdditionalData?.Remove("NonSecureURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NonSecureURL"); else _explicitNullProperties?.Remove("NonSecureURL"); } }
         private string _explicitNullValueNonSecureURL = default!;
 #endif
         /// <summary>Secure URL for Location Image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecureURL { get => _explicitNullValueSecureURL; set { _explicitNullValueSecureURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecureURL"); else _explicitNullProperties?.Remove("SecureURL"); } }
+        public string? SecureURL { get => _explicitNullValueSecureURL; set { _explicitNullValueSecureURL = value; AdditionalData?.Remove("SecureURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecureURL"); else _explicitNullProperties?.Remove("SecureURL"); } }
         private string? _explicitNullValueSecureURL = default!;
 #nullable restore
 #else
-        public string SecureURL { get => _explicitNullValueSecureURL; set { _explicitNullValueSecureURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecureURL"); else _explicitNullProperties?.Remove("SecureURL"); } }
+        public string SecureURL { get => _explicitNullValueSecureURL; set { _explicitNullValueSecureURL = value; AdditionalData?.Remove("SecureURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecureURL"); else _explicitNullProperties?.Remove("SecureURL"); } }
         private string _explicitNullValueSecureURL = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PushToImageRepositoryRequest") is { } nullNodePushToImageRepositoryRequest && nullNodePushToImageRepositoryRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushToImageRepositoryRequest = null;
+            if (parseNode.GetChildNode("PushToImageRepositoryRequest") is null) { _explicitNullValuePushToImageRepositoryRequest = default!; _explicitNullProperties?.Remove("PushToImageRepositoryRequest"); }
+            else if (parseNode.GetChildNode("PushToImageRepositoryRequest") is { } nullNodePushToImageRepositoryRequest && nullNodePushToImageRepositoryRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushToImageRepositoryRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Paperless Document API request container for push to Image Repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequest? PushToImageRepositoryRequest { get => _explicitNullValuePushToImageRepositoryRequest; set { _explicitNullValuePushToImageRepositoryRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PushToImageRepositoryRequest"); else _explicitNullProperties?.Remove("PushToImageRepositoryRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequest? PushToImageRepositoryRequest { get => _explicitNullValuePushToImageRepositoryRequest; set { _explicitNullValuePushToImageRepositoryRequest = value; AdditionalData?.Remove("PushToImageRepositoryRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PushToImageRepositoryRequest"); else _explicitNullProperties?.Remove("PushToImageRepositoryRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequest? _explicitNullValuePushToImageRepositoryRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequest PushToImageRepositoryRequest { get => _explicitNullValuePushToImageRepositoryRequest; set { _explicitNullValuePushToImageRepositoryRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PushToImageRepositoryRequest"); else _explicitNullProperties?.Remove("PushToImageRepositoryRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequest PushToImageRepositoryRequest { get => _explicitNullValuePushToImageRepositoryRequest; set { _explicitNullValuePushToImageRepositoryRequest = value; AdditionalData?.Remove("PushToImageRepositoryRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PushToImageRepositoryRequest"); else _explicitNullProperties?.Remove("PushToImageRepositoryRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PushToImageRepositoryRequest _explicitNullValuePushToImageRepositoryRequest = default!;
 #endif
         /// <summary>

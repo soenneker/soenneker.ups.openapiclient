@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("SatWST") is { } nullNodeSatWST && nullNodeSatWST.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SatWST = null;
-            if (parseNode.GetChildNode("SunWST") is { } nullNodeSunWST && nullNodeSunWST.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SunWST = null;
+            if (parseNode.GetChildNode("SatWST") is null) { _explicitNullValueSatWST = default!; _explicitNullProperties?.Remove("SatWST"); }
+            else if (parseNode.GetChildNode("SatWST") is { } nullNodeSatWST && nullNodeSatWST.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SatWST = null;
+            if (parseNode.GetChildNode("SunWST") is null) { _explicitNullValueSunWST = default!; _explicitNullProperties?.Remove("SunWST"); }
+            else if (parseNode.GetChildNode("SunWST") is { } nullNodeSunWST && nullNodeSunWST.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SunWST = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates if the pickup address qualifies for WST (Weekend Service Territory). Returned if the pickup date is Saturday and subversion greater or equal to 2007. Valid Values:- Y = Saturday WST- N = Non-Saturday WST</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SatWST { get => _explicitNullValueSatWST; set { _explicitNullValueSatWST = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SatWST"); else _explicitNullProperties?.Remove("SatWST"); } }
+        public string? SatWST { get => _explicitNullValueSatWST; set { _explicitNullValueSatWST = value; AdditionalData?.Remove("SatWST"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SatWST"); else _explicitNullProperties?.Remove("SatWST"); } }
         private string? _explicitNullValueSatWST = default!;
 #nullable restore
 #else
-        public string SatWST { get => _explicitNullValueSatWST; set { _explicitNullValueSatWST = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SatWST"); else _explicitNullProperties?.Remove("SatWST"); } }
+        public string SatWST { get => _explicitNullValueSatWST; set { _explicitNullValueSatWST = value; AdditionalData?.Remove("SatWST"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SatWST"); else _explicitNullProperties?.Remove("SatWST"); } }
         private string _explicitNullValueSatWST = default!;
 #endif
         /// <summary>Indicates if the pickup address qualifies for WST (Weekend Service Territory). Returned if the pickup date is Sunday and subversion greater or equal to 2007. Valid Values: - Y = Sunday WST - N = Non-Sunday WST</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SunWST { get => _explicitNullValueSunWST; set { _explicitNullValueSunWST = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SunWST"); else _explicitNullProperties?.Remove("SunWST"); } }
+        public string? SunWST { get => _explicitNullValueSunWST; set { _explicitNullValueSunWST = value; AdditionalData?.Remove("SunWST"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SunWST"); else _explicitNullProperties?.Remove("SunWST"); } }
         private string? _explicitNullValueSunWST = default!;
 #nullable restore
 #else
-        public string SunWST { get => _explicitNullValueSunWST; set { _explicitNullValueSunWST = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SunWST"); else _explicitNullProperties?.Remove("SunWST"); } }
+        public string SunWST { get => _explicitNullValueSunWST; set { _explicitNullValueSunWST = value; AdditionalData?.Remove("SunWST"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SunWST"); else _explicitNullProperties?.Remove("SunWST"); } }
         private string _explicitNullValueSunWST = default!;
 #endif
         /// <summary>

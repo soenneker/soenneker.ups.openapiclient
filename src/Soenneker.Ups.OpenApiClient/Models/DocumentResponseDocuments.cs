@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bol") is { } nullNodeBol && nullNodeBol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bol = null;
-            if (parseNode.GetChildNode("cbol") is { } nullNodeCbol && nullNodeCbol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cbol = null;
-            if (parseNode.GetChildNode("cci") is { } nullNodeCci && nullNodeCci.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cci = null;
-            if (parseNode.GetChildNode("pkgplt") is { } nullNodePkgplt && nullNodePkgplt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pkgplt = null;
-            if (parseNode.GetChildNode("plt") is { } nullNodePlt && nullNodePlt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plt = null;
+            if (parseNode.GetChildNode("bol") is null) { _explicitNullValueBol = default!; _explicitNullProperties?.Remove("bol"); }
+            else if (parseNode.GetChildNode("bol") is { } nullNodeBol && nullNodeBol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bol = null;
+            if (parseNode.GetChildNode("cbol") is null) { _explicitNullValueCbol = default!; _explicitNullProperties?.Remove("cbol"); }
+            else if (parseNode.GetChildNode("cbol") is { } nullNodeCbol && nullNodeCbol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cbol = null;
+            if (parseNode.GetChildNode("cci") is null) { _explicitNullValueCci = default!; _explicitNullProperties?.Remove("cci"); }
+            else if (parseNode.GetChildNode("cci") is { } nullNodeCci && nullNodeCci.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cci = null;
+            if (parseNode.GetChildNode("pkgplt") is null) { _explicitNullValuePkgplt = default!; _explicitNullProperties?.Remove("pkgplt"); }
+            else if (parseNode.GetChildNode("pkgplt") is { } nullNodePkgplt && nullNodePkgplt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pkgplt = null;
+            if (parseNode.GetChildNode("plt") is null) { _explicitNullValuePlt = default!; _explicitNullProperties?.Remove("plt"); }
+            else if (parseNode.GetChildNode("plt") is { } nullNodePlt && nullNodePlt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains the generated Bill of Lading (BOL) document. Document will be PDF format and base64 encoded. See base64-data-samples document for sample.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Bol { get => _explicitNullValueBol; set { _explicitNullValueBol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bol"); else _explicitNullProperties?.Remove("bol"); } }
+        public string? Bol { get => _explicitNullValueBol; set { _explicitNullValueBol = value; AdditionalData?.Remove("bol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bol"); else _explicitNullProperties?.Remove("bol"); } }
         private string? _explicitNullValueBol = default!;
 #nullable restore
 #else
-        public string Bol { get => _explicitNullValueBol; set { _explicitNullValueBol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bol"); else _explicitNullProperties?.Remove("bol"); } }
+        public string Bol { get => _explicitNullValueBol; set { _explicitNullValueBol = value; AdditionalData?.Remove("bol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bol"); else _explicitNullProperties?.Remove("bol"); } }
         private string _explicitNullValueBol = default!;
 #endif
         /// <summary>Contains the generated Consolidated Bill of Lading (CBOL) document. Document will be PDF format and base64 encoded. See base64-data-samples document for sample.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cbol { get => _explicitNullValueCbol; set { _explicitNullValueCbol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cbol"); else _explicitNullProperties?.Remove("cbol"); } }
+        public string? Cbol { get => _explicitNullValueCbol; set { _explicitNullValueCbol = value; AdditionalData?.Remove("cbol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cbol"); else _explicitNullProperties?.Remove("cbol"); } }
         private string? _explicitNullValueCbol = default!;
 #nullable restore
 #else
-        public string Cbol { get => _explicitNullValueCbol; set { _explicitNullValueCbol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cbol"); else _explicitNullProperties?.Remove("cbol"); } }
+        public string Cbol { get => _explicitNullValueCbol; set { _explicitNullValueCbol = value; AdditionalData?.Remove("cbol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cbol"); else _explicitNullProperties?.Remove("cbol"); } }
         private string _explicitNullValueCbol = default!;
 #endif
         /// <summary>Contains the generated Consolidated Commercial Invoice (CCI) document. Document will be PDF format and base64 encoded. See base64-data-samples document for sample.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cci { get => _explicitNullValueCci; set { _explicitNullValueCci = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cci"); else _explicitNullProperties?.Remove("cci"); } }
+        public string? Cci { get => _explicitNullValueCci; set { _explicitNullValueCci = value; AdditionalData?.Remove("cci"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cci"); else _explicitNullProperties?.Remove("cci"); } }
         private string? _explicitNullValueCci = default!;
 #nullable restore
 #else
-        public string Cci { get => _explicitNullValueCci; set { _explicitNullValueCci = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cci"); else _explicitNullProperties?.Remove("cci"); } }
+        public string Cci { get => _explicitNullValueCci; set { _explicitNullValueCci = value; AdditionalData?.Remove("cci"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cci"); else _explicitNullProperties?.Remove("cci"); } }
         private string _explicitNullValueCci = default!;
 #endif
         /// <summary>Contains the generated Packge Pallet Labels (PKGPLT) documents. Labels will contain format requested by client and be base64 encoded. See base64-data-samples document for sample.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Pkgplt { get => _explicitNullValuePkgplt; set { _explicitNullValuePkgplt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkgplt"); else _explicitNullProperties?.Remove("pkgplt"); } }
+        public List<string>? Pkgplt { get => _explicitNullValuePkgplt; set { _explicitNullValuePkgplt = value; AdditionalData?.Remove("pkgplt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkgplt"); else _explicitNullProperties?.Remove("pkgplt"); } }
         private List<string>? _explicitNullValuePkgplt = default!;
 #nullable restore
 #else
-        public List<string> Pkgplt { get => _explicitNullValuePkgplt; set { _explicitNullValuePkgplt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkgplt"); else _explicitNullProperties?.Remove("pkgplt"); } }
+        public List<string> Pkgplt { get => _explicitNullValuePkgplt; set { _explicitNullValuePkgplt = value; AdditionalData?.Remove("pkgplt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkgplt"); else _explicitNullProperties?.Remove("pkgplt"); } }
         private List<string> _explicitNullValuePkgplt = default!;
 #endif
         /// <summary>Contains the generated Pallet Label (PLT) documents. Labels will contain format requested by client and be base64 encoded. See base64-data-samples document for sample.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Plt { get => _explicitNullValuePlt; set { _explicitNullValuePlt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plt"); else _explicitNullProperties?.Remove("plt"); } }
+        public List<string>? Plt { get => _explicitNullValuePlt; set { _explicitNullValuePlt = value; AdditionalData?.Remove("plt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plt"); else _explicitNullProperties?.Remove("plt"); } }
         private List<string>? _explicitNullValuePlt = default!;
 #nullable restore
 #else
-        public List<string> Plt { get => _explicitNullValuePlt; set { _explicitNullValuePlt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plt"); else _explicitNullProperties?.Remove("plt"); } }
+        public List<string> Plt { get => _explicitNullValuePlt; set { _explicitNullValuePlt = value; AdditionalData?.Remove("plt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plt"); else _explicitNullProperties?.Remove("plt"); } }
         private List<string> _explicitNullValuePlt = default!;
 #endif
         /// <summary>

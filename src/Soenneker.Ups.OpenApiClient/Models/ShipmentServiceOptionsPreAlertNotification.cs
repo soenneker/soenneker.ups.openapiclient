@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("EMailMessage") is { } nullNodeEMailMessage && nullNodeEMailMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailMessage = null;
-            if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("TextMessage") is { } nullNodeTextMessage && nullNodeTextMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextMessage = null;
-            if (parseNode.GetChildNode("VoiceMessage") is { } nullNodeVoiceMessage && nullNodeVoiceMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceMessage = null;
+            if (parseNode.GetChildNode("EMailMessage") is null) { _explicitNullValueEMailMessage = default!; _explicitNullProperties?.Remove("EMailMessage"); }
+            else if (parseNode.GetChildNode("EMailMessage") is { } nullNodeEMailMessage && nullNodeEMailMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailMessage = null;
+            if (parseNode.GetChildNode("Locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("Locale"); }
+            else if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("TextMessage") is null) { _explicitNullValueTextMessage = default!; _explicitNullProperties?.Remove("TextMessage"); }
+            else if (parseNode.GetChildNode("TextMessage") is { } nullNodeTextMessage && nullNodeTextMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextMessage = null;
+            if (parseNode.GetChildNode("VoiceMessage") is null) { _explicitNullValueVoiceMessage = default!; _explicitNullProperties?.Remove("VoiceMessage"); }
+            else if (parseNode.GetChildNode("VoiceMessage") is { } nullNodeVoiceMessage && nullNodeVoiceMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceMessage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This container is used for Populating EMailMessage details for PreAlertNotification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationEMailMessage? EMailMessage { get => _explicitNullValueEMailMessage; set { _explicitNullValueEMailMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailMessage"); else _explicitNullProperties?.Remove("EMailMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationEMailMessage? EMailMessage { get => _explicitNullValueEMailMessage; set { _explicitNullValueEMailMessage = value; AdditionalData?.Remove("EMailMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailMessage"); else _explicitNullProperties?.Remove("EMailMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationEMailMessage? _explicitNullValueEMailMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationEMailMessage EMailMessage { get => _explicitNullValueEMailMessage; set { _explicitNullValueEMailMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailMessage"); else _explicitNullProperties?.Remove("EMailMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationEMailMessage EMailMessage { get => _explicitNullValueEMailMessage; set { _explicitNullValueEMailMessage = value; AdditionalData?.Remove("EMailMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailMessage"); else _explicitNullProperties?.Remove("EMailMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationEMailMessage _explicitNullValueEMailMessage = default!;
 #endif
         /// <summary>This container is used for providing Language and dialect details for PreAlertNotification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationLocale? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationLocale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationLocale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationLocale _explicitNullValueLocale = default!;
 #endif
         /// <summary>TextMessage container is used for specifying phone number for receiving text preAlertNotification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationTextMessage? TextMessage { get => _explicitNullValueTextMessage; set { _explicitNullValueTextMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextMessage"); else _explicitNullProperties?.Remove("TextMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationTextMessage? TextMessage { get => _explicitNullValueTextMessage; set { _explicitNullValueTextMessage = value; AdditionalData?.Remove("TextMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextMessage"); else _explicitNullProperties?.Remove("TextMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationTextMessage? _explicitNullValueTextMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationTextMessage TextMessage { get => _explicitNullValueTextMessage; set { _explicitNullValueTextMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextMessage"); else _explicitNullProperties?.Remove("TextMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationTextMessage TextMessage { get => _explicitNullValueTextMessage; set { _explicitNullValueTextMessage = value; AdditionalData?.Remove("TextMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextMessage"); else _explicitNullProperties?.Remove("TextMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationTextMessage _explicitNullValueTextMessage = default!;
 #endif
         /// <summary>VoiceMessage container is used for specifying phone number for receiving voice PreAlertNotification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationVoiceMessage? VoiceMessage { get => _explicitNullValueVoiceMessage; set { _explicitNullValueVoiceMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceMessage"); else _explicitNullProperties?.Remove("VoiceMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationVoiceMessage? VoiceMessage { get => _explicitNullValueVoiceMessage; set { _explicitNullValueVoiceMessage = value; AdditionalData?.Remove("VoiceMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceMessage"); else _explicitNullProperties?.Remove("VoiceMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationVoiceMessage? _explicitNullValueVoiceMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationVoiceMessage VoiceMessage { get => _explicitNullValueVoiceMessage; set { _explicitNullValueVoiceMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceMessage"); else _explicitNullProperties?.Remove("VoiceMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationVoiceMessage VoiceMessage { get => _explicitNullValueVoiceMessage; set { _explicitNullValueVoiceMessage = value; AdditionalData?.Remove("VoiceMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceMessage"); else _explicitNullProperties?.Remove("VoiceMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationVoiceMessage _explicitNullValueVoiceMessage = default!;
 #endif
         /// <summary>

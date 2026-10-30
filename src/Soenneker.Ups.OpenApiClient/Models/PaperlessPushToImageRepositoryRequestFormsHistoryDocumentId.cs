@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DocumentID") is { } nullNodeDocumentID && nullNodeDocumentID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentID = null;
+            if (parseNode.GetChildNode("DocumentID") is null) { _explicitNullValueDocumentID = default!; _explicitNullProperties?.Remove("DocumentID"); }
+            else if (parseNode.GetChildNode("DocumentID") is { } nullNodeDocumentID && nullNodeDocumentID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentID = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>DocumentID represents a document uploaded to Forms History.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DocumentID { get => _explicitNullValueDocumentID; set { _explicitNullValueDocumentID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DocumentID"); else _explicitNullProperties?.Remove("DocumentID"); } }
+        public List<string>? DocumentID { get => _explicitNullValueDocumentID; set { _explicitNullValueDocumentID = value; AdditionalData?.Remove("DocumentID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DocumentID"); else _explicitNullProperties?.Remove("DocumentID"); } }
         private List<string>? _explicitNullValueDocumentID = default!;
 #nullable restore
 #else
-        public List<string> DocumentID { get => _explicitNullValueDocumentID; set { _explicitNullValueDocumentID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DocumentID"); else _explicitNullProperties?.Remove("DocumentID"); } }
+        public List<string> DocumentID { get => _explicitNullValueDocumentID; set { _explicitNullValueDocumentID = value; AdditionalData?.Remove("DocumentID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DocumentID"); else _explicitNullProperties?.Remove("DocumentID"); } }
         private List<string> _explicitNullValueDocumentID = default!;
 #endif
         /// <summary>

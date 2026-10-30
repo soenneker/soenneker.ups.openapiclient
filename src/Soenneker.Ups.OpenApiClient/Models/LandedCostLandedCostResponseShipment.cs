@@ -18,128 +18,144 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("alVersion") is { } nullNodeAlVersion && nullNodeAlVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlVersion = null;
-            if (parseNode.GetChildNode("brokerageFeeItems") is { } nullNodeBrokerageFeeItems && nullNodeBrokerageFeeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrokerageFeeItems = null;
-            if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
-            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
-            if (parseNode.GetChildNode("grandTotal") is { } nullNodeGrandTotal && nullNodeGrandTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrandTotal = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("importCountryCode") is { } nullNodeImportCountryCode && nullNodeImportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportCountryCode = null;
-            if (parseNode.GetChildNode("perfStats") is { } nullNodePerfStats && nullNodePerfStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerfStats = null;
-            if (parseNode.GetChildNode("shipmentItems") is { } nullNodeShipmentItems && nullNodeShipmentItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentItems = null;
-            if (parseNode.GetChildNode("totalBrokerageFees") is { } nullNodeTotalBrokerageFees && nullNodeTotalBrokerageFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalBrokerageFees = null;
-            if (parseNode.GetChildNode("totalCommodityLevelTaxesAndFees") is { } nullNodeTotalCommodityLevelTaxesAndFees && nullNodeTotalCommodityLevelTaxesAndFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCommodityLevelTaxesAndFees = null;
-            if (parseNode.GetChildNode("totalDuties") is { } nullNodeTotalDuties && nullNodeTotalDuties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalDuties = null;
-            if (parseNode.GetChildNode("totalDutyAndTax") is { } nullNodeTotalDutyAndTax && nullNodeTotalDutyAndTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalDutyAndTax = null;
-            if (parseNode.GetChildNode("totalShipmentLevelTaxesAndFees") is { } nullNodeTotalShipmentLevelTaxesAndFees && nullNodeTotalShipmentLevelTaxesAndFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalShipmentLevelTaxesAndFees = null;
-            if (parseNode.GetChildNode("totalVAT") is { } nullNodeTotalVAT && nullNodeTotalVAT.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalVAT = null;
-            if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
+            if (parseNode.GetChildNode("alVersion") is null) { _explicitNullValueAlVersion = default!; _explicitNullProperties?.Remove("alVersion"); }
+            else if (parseNode.GetChildNode("alVersion") is { } nullNodeAlVersion && nullNodeAlVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlVersion = null;
+            if (parseNode.GetChildNode("brokerageFeeItems") is null) { _explicitNullValueBrokerageFeeItems = default!; _explicitNullProperties?.Remove("brokerageFeeItems"); }
+            else if (parseNode.GetChildNode("brokerageFeeItems") is { } nullNodeBrokerageFeeItems && nullNodeBrokerageFeeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrokerageFeeItems = null;
+            if (parseNode.GetChildNode("currencyCode") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("currencyCode"); }
+            else if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("errors") is null) { _explicitNullValueErrors = default!; _explicitNullProperties?.Remove("errors"); }
+            else if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("grandTotal") is null) { _explicitNullValueGrandTotal = default!; _explicitNullProperties?.Remove("grandTotal"); }
+            else if (parseNode.GetChildNode("grandTotal") is { } nullNodeGrandTotal && nullNodeGrandTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrandTotal = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("importCountryCode") is null) { _explicitNullValueImportCountryCode = default!; _explicitNullProperties?.Remove("importCountryCode"); }
+            else if (parseNode.GetChildNode("importCountryCode") is { } nullNodeImportCountryCode && nullNodeImportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportCountryCode = null;
+            if (parseNode.GetChildNode("perfStats") is null) { _explicitNullValuePerfStats = default!; _explicitNullProperties?.Remove("perfStats"); }
+            else if (parseNode.GetChildNode("perfStats") is { } nullNodePerfStats && nullNodePerfStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerfStats = null;
+            if (parseNode.GetChildNode("shipmentItems") is null) { _explicitNullValueShipmentItems = default!; _explicitNullProperties?.Remove("shipmentItems"); }
+            else if (parseNode.GetChildNode("shipmentItems") is { } nullNodeShipmentItems && nullNodeShipmentItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentItems = null;
+            if (parseNode.GetChildNode("totalBrokerageFees") is null) { _explicitNullValueTotalBrokerageFees = default!; _explicitNullProperties?.Remove("totalBrokerageFees"); }
+            else if (parseNode.GetChildNode("totalBrokerageFees") is { } nullNodeTotalBrokerageFees && nullNodeTotalBrokerageFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalBrokerageFees = null;
+            if (parseNode.GetChildNode("totalCommodityLevelTaxesAndFees") is null) { _explicitNullValueTotalCommodityLevelTaxesAndFees = default!; _explicitNullProperties?.Remove("totalCommodityLevelTaxesAndFees"); }
+            else if (parseNode.GetChildNode("totalCommodityLevelTaxesAndFees") is { } nullNodeTotalCommodityLevelTaxesAndFees && nullNodeTotalCommodityLevelTaxesAndFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCommodityLevelTaxesAndFees = null;
+            if (parseNode.GetChildNode("totalDuties") is null) { _explicitNullValueTotalDuties = default!; _explicitNullProperties?.Remove("totalDuties"); }
+            else if (parseNode.GetChildNode("totalDuties") is { } nullNodeTotalDuties && nullNodeTotalDuties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalDuties = null;
+            if (parseNode.GetChildNode("totalDutyAndTax") is null) { _explicitNullValueTotalDutyAndTax = default!; _explicitNullProperties?.Remove("totalDutyAndTax"); }
+            else if (parseNode.GetChildNode("totalDutyAndTax") is { } nullNodeTotalDutyAndTax && nullNodeTotalDutyAndTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalDutyAndTax = null;
+            if (parseNode.GetChildNode("totalShipmentLevelTaxesAndFees") is null) { _explicitNullValueTotalShipmentLevelTaxesAndFees = default!; _explicitNullProperties?.Remove("totalShipmentLevelTaxesAndFees"); }
+            else if (parseNode.GetChildNode("totalShipmentLevelTaxesAndFees") is { } nullNodeTotalShipmentLevelTaxesAndFees && nullNodeTotalShipmentLevelTaxesAndFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalShipmentLevelTaxesAndFees = null;
+            if (parseNode.GetChildNode("totalVAT") is null) { _explicitNullValueTotalVAT = default!; _explicitNullProperties?.Remove("totalVAT"); }
+            else if (parseNode.GetChildNode("totalVAT") is { } nullNodeTotalVAT && nullNodeTotalVAT.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalVAT = null;
+            if (parseNode.GetChildNode("transID") is null) { _explicitNullValueTransID = default!; _explicitNullProperties?.Remove("transID"); }
+            else if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Version number of the instance that processed this request. Default is 1.</summary>
-        public int? AlVersion { get => _explicitNullValueAlVersion; set { _explicitNullValueAlVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alVersion"); else _explicitNullProperties?.Remove("alVersion"); } }
+        public int? AlVersion { get => _explicitNullValueAlVersion; set { _explicitNullValueAlVersion = value; AdditionalData?.Remove("alVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alVersion"); else _explicitNullProperties?.Remove("alVersion"); } }
         private int? _explicitNullValueAlVersion = default!;
         /// <summary>An array of Brokerage fees.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostBrokerageFeeItems>? BrokerageFeeItems { get => _explicitNullValueBrokerageFeeItems; set { _explicitNullValueBrokerageFeeItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brokerageFeeItems"); else _explicitNullProperties?.Remove("brokerageFeeItems"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostBrokerageFeeItems>? BrokerageFeeItems { get => _explicitNullValueBrokerageFeeItems; set { _explicitNullValueBrokerageFeeItems = value; AdditionalData?.Remove("brokerageFeeItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brokerageFeeItems"); else _explicitNullProperties?.Remove("brokerageFeeItems"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostBrokerageFeeItems>? _explicitNullValueBrokerageFeeItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostBrokerageFeeItems> BrokerageFeeItems { get => _explicitNullValueBrokerageFeeItems; set { _explicitNullValueBrokerageFeeItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brokerageFeeItems"); else _explicitNullProperties?.Remove("brokerageFeeItems"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostBrokerageFeeItems> BrokerageFeeItems { get => _explicitNullValueBrokerageFeeItems; set { _explicitNullValueBrokerageFeeItems = value; AdditionalData?.Remove("brokerageFeeItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brokerageFeeItems"); else _explicitNullProperties?.Remove("brokerageFeeItems"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostBrokerageFeeItems> _explicitNullValueBrokerageFeeItems = default!;
 #endif
         /// <summary>Specifies the Currency Code set at the commodity level. This currency is applicable for all duty, tax, VAT, and fee at the shipment and commodity level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
         private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
         private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>Error code and description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrors? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrors? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrors? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrors Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrors Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LandedCostErrors _explicitNullValueErrors = default!;
 #endif
         /// <summary>Sum of totalDutyAndTax + totalBrokerageFees</summary>
-        public double? GrandTotal { get => _explicitNullValueGrandTotal; set { _explicitNullValueGrandTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grandTotal"); else _explicitNullProperties?.Remove("grandTotal"); } }
+        public double? GrandTotal { get => _explicitNullValueGrandTotal; set { _explicitNullValueGrandTotal = value; AdditionalData?.Remove("grandTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grandTotal"); else _explicitNullProperties?.Remove("grandTotal"); } }
         private double? _explicitNullValueGrandTotal = default!;
         /// <summary>Specifies the Shipment ID in the Landed Cost quote.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Specifies the Import/Ship-To/Destination/Final country of the shipment. Please check country list in the Appendices section.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
+        public string? ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; AdditionalData?.Remove("importCountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
         private string? _explicitNullValueImportCountryCode = default!;
 #nullable restore
 #else
-        public string ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
+        public string ImportCountryCode { get => _explicitNullValueImportCountryCode; set { _explicitNullValueImportCountryCode = value; AdditionalData?.Remove("importCountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importCountryCode"); else _explicitNullProperties?.Remove("importCountryCode"); } }
         private string _explicitNullValueImportCountryCode = default!;
 #endif
         /// <summary>See ALPerfStats</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats? PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats? PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; AdditionalData?.Remove("perfStats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats? _explicitNullValuePerfStats = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; AdditionalData?.Remove("perfStats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LandedCostLandedCostResponseShipmentPerfStats _explicitNullValuePerfStats = default!;
 #endif
         /// <summary>An array of Landed Cost for all valid commodities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostResponseShipmentItems>? ShipmentItems { get => _explicitNullValueShipmentItems; set { _explicitNullValueShipmentItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentItems"); else _explicitNullProperties?.Remove("shipmentItems"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostResponseShipmentItems>? ShipmentItems { get => _explicitNullValueShipmentItems; set { _explicitNullValueShipmentItems = value; AdditionalData?.Remove("shipmentItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentItems"); else _explicitNullProperties?.Remove("shipmentItems"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostResponseShipmentItems>? _explicitNullValueShipmentItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostResponseShipmentItems> ShipmentItems { get => _explicitNullValueShipmentItems; set { _explicitNullValueShipmentItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentItems"); else _explicitNullProperties?.Remove("shipmentItems"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostResponseShipmentItems> ShipmentItems { get => _explicitNullValueShipmentItems; set { _explicitNullValueShipmentItems = value; AdditionalData?.Remove("shipmentItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentItems"); else _explicitNullProperties?.Remove("shipmentItems"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.LandedCostResponseShipmentItems> _explicitNullValueShipmentItems = default!;
 #endif
         /// <summary>Grand total of all applicable Brokerage fees.</summary>
-        public double? TotalBrokerageFees { get => _explicitNullValueTotalBrokerageFees; set { _explicitNullValueTotalBrokerageFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalBrokerageFees"); else _explicitNullProperties?.Remove("totalBrokerageFees"); } }
+        public double? TotalBrokerageFees { get => _explicitNullValueTotalBrokerageFees; set { _explicitNullValueTotalBrokerageFees = value; AdditionalData?.Remove("totalBrokerageFees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalBrokerageFees"); else _explicitNullProperties?.Remove("totalBrokerageFees"); } }
         private double? _explicitNullValueTotalBrokerageFees = default!;
         /// <summary>Total tax and other fees at commodity level.</summary>
-        public double? TotalCommodityLevelTaxesAndFees { get => _explicitNullValueTotalCommodityLevelTaxesAndFees; set { _explicitNullValueTotalCommodityLevelTaxesAndFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCommodityLevelTaxesAndFees"); else _explicitNullProperties?.Remove("totalCommodityLevelTaxesAndFees"); } }
+        public double? TotalCommodityLevelTaxesAndFees { get => _explicitNullValueTotalCommodityLevelTaxesAndFees; set { _explicitNullValueTotalCommodityLevelTaxesAndFees = value; AdditionalData?.Remove("totalCommodityLevelTaxesAndFees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCommodityLevelTaxesAndFees"); else _explicitNullProperties?.Remove("totalCommodityLevelTaxesAndFees"); } }
         private double? _explicitNullValueTotalCommodityLevelTaxesAndFees = default!;
         /// <summary>Total duty amount of this shipment.</summary>
-        public double? TotalDuties { get => _explicitNullValueTotalDuties; set { _explicitNullValueTotalDuties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalDuties"); else _explicitNullProperties?.Remove("totalDuties"); } }
+        public double? TotalDuties { get => _explicitNullValueTotalDuties; set { _explicitNullValueTotalDuties = value; AdditionalData?.Remove("totalDuties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalDuties"); else _explicitNullProperties?.Remove("totalDuties"); } }
         private double? _explicitNullValueTotalDuties = default!;
         /// <summary>Grand total of the combined duty, VAT, tax, and other fees of all commodities in this shipment including shipment level taxes and fees.</summary>
-        public double? TotalDutyAndTax { get => _explicitNullValueTotalDutyAndTax; set { _explicitNullValueTotalDutyAndTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalDutyAndTax"); else _explicitNullProperties?.Remove("totalDutyAndTax"); } }
+        public double? TotalDutyAndTax { get => _explicitNullValueTotalDutyAndTax; set { _explicitNullValueTotalDutyAndTax = value; AdditionalData?.Remove("totalDutyAndTax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalDutyAndTax"); else _explicitNullProperties?.Remove("totalDutyAndTax"); } }
         private double? _explicitNullValueTotalDutyAndTax = default!;
         /// <summary>Total tax and other fees at shipment level.</summary>
-        public double? TotalShipmentLevelTaxesAndFees { get => _explicitNullValueTotalShipmentLevelTaxesAndFees; set { _explicitNullValueTotalShipmentLevelTaxesAndFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalShipmentLevelTaxesAndFees"); else _explicitNullProperties?.Remove("totalShipmentLevelTaxesAndFees"); } }
+        public double? TotalShipmentLevelTaxesAndFees { get => _explicitNullValueTotalShipmentLevelTaxesAndFees; set { _explicitNullValueTotalShipmentLevelTaxesAndFees = value; AdditionalData?.Remove("totalShipmentLevelTaxesAndFees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalShipmentLevelTaxesAndFees"); else _explicitNullProperties?.Remove("totalShipmentLevelTaxesAndFees"); } }
         private double? _explicitNullValueTotalShipmentLevelTaxesAndFees = default!;
         /// <summary>Total VAT of the shipment.</summary>
-        public double? TotalVAT { get => _explicitNullValueTotalVAT; set { _explicitNullValueTotalVAT = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalVAT"); else _explicitNullProperties?.Remove("totalVAT"); } }
+        public double? TotalVAT { get => _explicitNullValueTotalVAT; set { _explicitNullValueTotalVAT = value; AdditionalData?.Remove("totalVAT"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalVAT"); else _explicitNullProperties?.Remove("totalVAT"); } }
         private double? _explicitNullValueTotalVAT = default!;
         /// <summary>An identifier unique to the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; AdditionalData?.Remove("transID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
         private string? _explicitNullValueTransID = default!;
 #nullable restore
 #else
-        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; AdditionalData?.Remove("transID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
         private string _explicitNullValueTransID = default!;
 #endif
         /// <summary>

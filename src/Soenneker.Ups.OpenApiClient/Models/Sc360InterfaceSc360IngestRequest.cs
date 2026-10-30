@@ -18,23 +18,25 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("apiVersion") is { } nullNodeApiVersion && nullNodeApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiVersion = null;
-            if (parseNode.GetChildNode("request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("apiVersion") is null) { _explicitNullValueApiVersion = default!; _explicitNullProperties?.Remove("apiVersion"); }
+            else if (parseNode.GetChildNode("apiVersion") is { } nullNodeApiVersion && nullNodeApiVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiVersion = null;
+            if (parseNode.GetChildNode("request") is null) { _explicitNullValueRequest = default!; _explicitNullProperties?.Remove("request"); }
+            else if (parseNode.GetChildNode("request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The apiVersion property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.V10ApiVersion? ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiVersion"); else _explicitNullProperties?.Remove("apiVersion"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.V10ApiVersion? ApiVersion { get => _explicitNullValueApiVersion; set { _explicitNullValueApiVersion = value; AdditionalData?.Remove("apiVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiVersion"); else _explicitNullProperties?.Remove("apiVersion"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.V10ApiVersion? _explicitNullValueApiVersion = default!;
         /// <summary>Supply chain 360 interface</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Sc360Interface? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.Sc360Interface? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.Sc360Interface? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Sc360Interface Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.Sc360Interface Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.Sc360Interface _explicitNullValueRequest = default!;
 #endif
         /// <summary>
@@ -62,7 +64,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "apiVersion", n => { ApiVersion = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.V10ApiVersion>(); } },
+                { "apiVersion", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.V10ApiVersion>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApiVersion = default; _explicitNullProperties?.Remove("apiVersion"); AdditionalData["apiVersion"] = unknown; } else { ApiVersion = parsed; AdditionalData.Remove("apiVersion"); } } },
                 { "request", n => { Request = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Sc360Interface>(global::Soenneker.Ups.OpenApiClient.Models.Sc360Interface.CreateFromDiscriminatorValue); } },
             };
         }

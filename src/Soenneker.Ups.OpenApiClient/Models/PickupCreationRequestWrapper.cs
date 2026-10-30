@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PickupCreationRequest") is { } nullNodePickupCreationRequest && nullNodePickupCreationRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupCreationRequest = null;
+            if (parseNode.GetChildNode("PickupCreationRequest") is null) { _explicitNullValuePickupCreationRequest = default!; _explicitNullProperties?.Remove("PickupCreationRequest"); }
+            else if (parseNode.GetChildNode("PickupCreationRequest") is { } nullNodePickupCreationRequest && nullNodePickupCreationRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupCreationRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This request is for scheduling an on-call pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest? PickupCreationRequest { get => _explicitNullValuePickupCreationRequest; set { _explicitNullValuePickupCreationRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupCreationRequest"); else _explicitNullProperties?.Remove("PickupCreationRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest? PickupCreationRequest { get => _explicitNullValuePickupCreationRequest; set { _explicitNullValuePickupCreationRequest = value; AdditionalData?.Remove("PickupCreationRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupCreationRequest"); else _explicitNullProperties?.Remove("PickupCreationRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest? _explicitNullValuePickupCreationRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest PickupCreationRequest { get => _explicitNullValuePickupCreationRequest; set { _explicitNullValuePickupCreationRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupCreationRequest"); else _explicitNullProperties?.Remove("PickupCreationRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest PickupCreationRequest { get => _explicitNullValuePickupCreationRequest; set { _explicitNullValuePickupCreationRequest = value; AdditionalData?.Remove("PickupCreationRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupCreationRequest"); else _explicitNullProperties?.Remove("PickupCreationRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupCreationRequest _explicitNullValuePickupCreationRequest = default!;
 #endif
         /// <summary>

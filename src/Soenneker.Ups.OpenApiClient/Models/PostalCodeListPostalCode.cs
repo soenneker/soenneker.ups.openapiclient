@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PrimaryPostalCode") is { } nullNodePrimaryPostalCode && nullNodePrimaryPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryPostalCode = null;
-            if (parseNode.GetChildNode("SecondaryPostalCode") is { } nullNodeSecondaryPostalCode && nullNodeSecondaryPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryPostalCode = null;
+            if (parseNode.GetChildNode("PrimaryPostalCode") is null) { _explicitNullValuePrimaryPostalCode = default!; _explicitNullProperties?.Remove("PrimaryPostalCode"); }
+            else if (parseNode.GetChildNode("PrimaryPostalCode") is { } nullNodePrimaryPostalCode && nullNodePrimaryPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryPostalCode = null;
+            if (parseNode.GetChildNode("SecondaryPostalCode") is null) { _explicitNullValueSecondaryPostalCode = default!; _explicitNullProperties?.Remove("SecondaryPostalCode"); }
+            else if (parseNode.GetChildNode("SecondaryPostalCode") is { } nullNodeSecondaryPostalCode && nullNodeSecondaryPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryPostalCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Primary postal code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryPostalCode { get => _explicitNullValuePrimaryPostalCode; set { _explicitNullValuePrimaryPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryPostalCode"); else _explicitNullProperties?.Remove("PrimaryPostalCode"); } }
+        public string? PrimaryPostalCode { get => _explicitNullValuePrimaryPostalCode; set { _explicitNullValuePrimaryPostalCode = value; AdditionalData?.Remove("PrimaryPostalCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryPostalCode"); else _explicitNullProperties?.Remove("PrimaryPostalCode"); } }
         private string? _explicitNullValuePrimaryPostalCode = default!;
 #nullable restore
 #else
-        public string PrimaryPostalCode { get => _explicitNullValuePrimaryPostalCode; set { _explicitNullValuePrimaryPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryPostalCode"); else _explicitNullProperties?.Remove("PrimaryPostalCode"); } }
+        public string PrimaryPostalCode { get => _explicitNullValuePrimaryPostalCode; set { _explicitNullValuePrimaryPostalCode = value; AdditionalData?.Remove("PrimaryPostalCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimaryPostalCode"); else _explicitNullProperties?.Remove("PrimaryPostalCode"); } }
         private string _explicitNullValuePrimaryPostalCode = default!;
 #endif
         /// <summary>Secondary postal code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryPostalCode { get => _explicitNullValueSecondaryPostalCode; set { _explicitNullValueSecondaryPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecondaryPostalCode"); else _explicitNullProperties?.Remove("SecondaryPostalCode"); } }
+        public string? SecondaryPostalCode { get => _explicitNullValueSecondaryPostalCode; set { _explicitNullValueSecondaryPostalCode = value; AdditionalData?.Remove("SecondaryPostalCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecondaryPostalCode"); else _explicitNullProperties?.Remove("SecondaryPostalCode"); } }
         private string? _explicitNullValueSecondaryPostalCode = default!;
 #nullable restore
 #else
-        public string SecondaryPostalCode { get => _explicitNullValueSecondaryPostalCode; set { _explicitNullValueSecondaryPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecondaryPostalCode"); else _explicitNullProperties?.Remove("SecondaryPostalCode"); } }
+        public string SecondaryPostalCode { get => _explicitNullValueSecondaryPostalCode; set { _explicitNullValueSecondaryPostalCode = value; AdditionalData?.Remove("SecondaryPostalCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecondaryPostalCode"); else _explicitNullProperties?.Remove("SecondaryPostalCode"); } }
         private string _explicitNullValueSecondaryPostalCode = default!;
 #endif
         /// <summary>

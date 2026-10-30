@@ -18,18 +18,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AccountInfo") is { } nullNodeAccountInfo && nullNodeAccountInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountInfo = null;
-            if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("AccountInfo") is null) { _explicitNullValueAccountInfo = default!; _explicitNullProperties?.Remove("AccountInfo"); }
+            else if (parseNode.GetChildNode("AccountInfo") is { } nullNodeAccountInfo && nullNodeAccountInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountInfo = null;
+            if (parseNode.GetChildNode("Locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("Locale"); }
+            else if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
         }
 
         /// <summary>The UPS account information that you want to use for SmartPickupTrigger and NotificationIndicator</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestAccountInfo? AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestAccountInfo? AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; AdditionalData?.Remove("AccountInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestAccountInfo? _explicitNullValueAccountInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestAccountInfo AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestAccountInfo AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; AdditionalData?.Remove("AccountInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestAccountInfo _explicitNullValueAccountInfo = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,11 +39,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>To set locale information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestLocale? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestLocale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestLocale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoRequestV1ViewPickupInfoRequestLocale _explicitNullValueLocale = default!;
 #endif
         /// <summary>

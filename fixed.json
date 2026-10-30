@@ -1167,7 +1167,8 @@
             "description": "An identifier unique to the request. Length 32",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -1176,16 +1177,9 @@
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -1331,7 +1325,8 @@
             "description": "An identifier unique to the request. Length 32",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -1340,16 +1335,9 @@
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -1358,16 +1346,9 @@
             "description": "API version\n\nValid values:\n- v2\n\n\nAPI version\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v3"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v3",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -1553,7 +1534,8 @@
             "description": "An identifier unique to the request. Length 32",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -1562,16 +1544,9 @@
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -1717,7 +1692,8 @@
             "description": "An identifier unique to the request. Length 32",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -1726,16 +1702,9 @@
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -1744,16 +1713,9 @@
             "description": "API version\n\nValid values:\n- v2\n\n\nAPI version\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v3"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v3",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -28356,7 +28318,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -28364,16 +28327,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -28402,16 +28358,9 @@
             "description": "Version of API\n\nValid values:\n- v3\n\n\nVersion of API\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v3"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v3",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -28419,16 +28368,9 @@
             "in": "query",
             "description": "Locale of request",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "en_US"
-                },
-                {
-                  "type": "string",
-                  "default": "en_US"
-                }
-              ]
+              "type": "string",
+              "default": "en_US",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -29429,7 +29371,8 @@
             "description": "Shipper Number",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29437,7 +29380,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29445,16 +29389,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29463,16 +29400,9 @@
             "description": "Version of API\n\nValid values:\n- v2\n\n\nVersion of API\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -29647,7 +29577,8 @@
             "description": "Shipper Number",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29655,7 +29586,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29663,16 +29595,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29681,16 +29606,9 @@
             "description": "Version of API\n\nValid values:\n- v2\n\n\nVersion of API\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -29825,7 +29743,8 @@
             "description": "DocumentId representing uploaded document to Forms History. Only one DocumentID will be accepted for delete request.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29834,7 +29753,8 @@
             "description": "Your Shipper Number",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29842,7 +29762,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29850,16 +29771,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29868,16 +29782,9 @@
             "description": "Version of API\n\nValid values:\n- v2\n\n\nVersion of API\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -29980,7 +29887,8 @@
             "description": "Shipper Number",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29988,7 +29896,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -29996,16 +29905,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30014,16 +29916,9 @@
             "description": "Version of API\n\nValid values:\n- v2\n\n\nVersion of API\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -30198,7 +30093,8 @@
             "description": "Shipper Number",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30206,7 +30102,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30214,16 +30111,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30232,16 +30122,9 @@
             "description": "Version of API\n\nValid values:\n- v2\n\n\nVersion of API\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -30376,7 +30259,8 @@
             "description": "DocumentId representing uploaded document to Forms History. Only one DocumentID will be accepted for delete request.",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30385,7 +30269,8 @@
             "description": "Your Shipper Number",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30393,7 +30278,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30401,16 +30287,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30419,16 +30298,9 @@
             "description": "Version of API\n\nValid values:\n- v2\n\n\nVersion of API\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -30804,7 +30676,8 @@
             "in": "header",
             "description": "The pickup equest number (PRN) generated by \nUPS pickup system.\nRequired if CancelBy = prn.Length 26",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30812,7 +30685,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30820,16 +30694,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30838,7 +30705,8 @@
             "description": "Valid Values: 01 = AccountNumber, 02 = PRN",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30960,7 +30828,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -30968,16 +30837,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -32084,7 +31946,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -32092,16 +31955,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -32110,16 +31966,9 @@
             "description": "Version of API.\n\nValid values:\n- v2\n\n\nVersion of API.\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -32309,7 +32158,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -32317,16 +32167,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -32335,16 +32178,9 @@
             "description": "Version of API.\n\nValid values:\n- v2\n\n\nVersion of API.\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -33841,16 +33677,9 @@
             "description": "Version of API.\n\nValid values:\n- v3\n\n\nVersion of API.\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v3"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v3",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -33985,16 +33814,9 @@
             "description": "Version of API.\n\nValid values:\n- v3\n\n\nVersion of API.\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v3"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v3",
+              "x-client-inline-scalar": true
             }
           }
         ],
@@ -34128,7 +33950,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -34136,16 +33959,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -35946,7 +35762,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -35954,16 +35771,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -39076,7 +38886,8 @@
             "in": "header",
             "description": "An identifier unique to the request. Length 32",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -39084,16 +38895,9 @@
             "in": "header",
             "description": "An identifier of the client/source application that is making the request.Length 512",
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "testing"
-                },
-                {
-                  "type": "string",
-                  "default": "testing"
-                }
-              ]
+              "type": "string",
+              "default": "testing",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -39120,16 +38924,9 @@
             "description": "API Version\n\nValid values:\n- v3 (Valid only for Roadie Shipments)\n- v2409\n\n\nAPI Version.\n\nValid values:\n- v1\n",
             "required": true,
             "schema": {
-              "anyOf": [
-                {
-                  "type": "string",
-                  "default": "v2409"
-                },
-                {
-                  "type": "string",
-                  "default": "v1"
-                }
-              ]
+              "type": "string",
+              "default": "v2409",
+              "x-client-inline-scalar": true
             }
           },
           {
@@ -44339,16 +44136,7 @@
             "description": "Represents a subscription type that provides near real time updates on tracking status.",
             "required": true,
             "schema": {
-              "type": "string",
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/TypeOneOf1"
-                },
-                {
-                  "$ref": "#/components/schemas/TypeOneOf2"
-                }
-              ],
-              "description": "type of subscription being requested"
+              "$ref": "#/components/schemas/UpsTrackAlertReadyProcessSubscriptionTypeForTrackingNumberTypeParameter"
             }
           }
         ],
@@ -44546,16 +44334,7 @@
             "description": "Represents a subscription type that provides near real time updates on tracking status.",
             "required": true,
             "schema": {
-              "type": "string",
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/UpsTrackAlertTypeOneOf1"
-                },
-                {
-                  "$ref": "#/components/schemas/UpsTrackAlertTypeOneOf2"
-                }
-              ],
-              "description": "type of subscription being requested"
+              "$ref": "#/components/schemas/UpsTrackAlertProcessSubscriptionTypeForTrackingNumberTypeParameter"
             }
           }
         ],
@@ -44753,16 +44532,7 @@
             "description": "Represents a subscription type that provides near real time updates on tracking status.",
             "required": true,
             "schema": {
-              "type": "string",
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTypeOneOf1"
-                },
-                {
-                  "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTypeOneOf2"
-                }
-              ],
-              "description": "type of subscription being requested"
+              "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyProcessSubscriptionTypeForTrackingNumberTypeParameter"
             }
           }
         ],
@@ -44960,16 +44730,7 @@
             "description": "Represents a subscription type that provides near real time updates on tracking status.",
             "required": true,
             "schema": {
-              "type": "string",
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/UpsTrackAlertEnhancedTypeOneOf1"
-                },
-                {
-                  "$ref": "#/components/schemas/UpsTrackAlertEnhancedTypeOneOf2"
-                }
-              ],
-              "description": "type of subscription being requested"
+              "$ref": "#/components/schemas/UpsTrackAlertEnhancedProcessSubscriptionTypeForTrackingNumberTypeParameter"
             }
           }
         ],
@@ -47588,105 +47349,105 @@
         }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentType": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3"
-          }
+        "enum": [
+          "Import",
+          "Export",
+          "Both"
         ],
+        "type": "string",
         "description": "Indicates what direction of movement the fields pertain to."
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3"
-          }
+        "enum": [
+          "Y",
+          "N",
+          "C"
         ],
+        "type": "string",
         "description": "Returns the conditionality of the field"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator": {
+        "enum": [
+          "=",
+          "\u003E",
+          "\u003C",
+          "!="
+        ],
         "type": [
           "null",
           "string"
         ],
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf4"
-          }
-        ],
-        "description": "The operator used when evaluating the rule"
+        "description": "The operator used when evaluating the rule",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "=",
+              "name": "Equal"
+            },
+            {
+              "value": "\u003E",
+              "name": "GreaterThan"
+            },
+            {
+              "value": "\u003C",
+              "name": "LessThan"
+            },
+            {
+              "value": "!=",
+              "name": "ExclamationEqual"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperator": {
+        "enum": [
+          "=",
+          "\u003E",
+          "\u003C",
+          "!=",
+          "Contains"
+        ],
         "type": [
           "null",
           "string"
         ],
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf5"
-          }
-        ],
-        "description": "The operator used when evaluating the rule. For List type fields in a rule, only the \u0022Equals (=)\u0022 and \u0022Contains\u0022 operators are supported. For all other field types, all operators are supported except \u0022Contains\u0022."
+        "description": "The operator used when evaluating the rule. For List type fields in a rule, only the \u0022Equals (=)\u0022 and \u0022Contains\u0022 operators are supported. For all other field types, all operators are supported except \u0022Contains\u0022.",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperator",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "=",
+              "name": "Equal"
+            },
+            {
+              "value": "\u003E",
+              "name": "GreaterThan"
+            },
+            {
+              "value": "\u003C",
+              "name": "LessThan"
+            },
+            {
+              "value": "!=",
+              "name": "ExclamationEqual"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataType": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6"
-          },
-          {
-            "$ref": "#/components/schemas/CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7"
-          }
+        "enum": [
+          "Custom",
+          "List",
+          "Email",
+          "Text",
+          "Alphanumeric",
+          "Number",
+          "Date"
         ],
+        "type": "string",
         "description": "defines which type of values to look for"
       },
       "CustomDetailsPostFieldsRequestv2ProductsItem": {
@@ -48404,117 +48165,263 @@
         "example": "B2B"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf1": {
+        "title": "Fields for import movment",
+        "enum": [
+          "Import"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Fields for import movment"
+        "x-client-original-const": "Import"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf2": {
+        "title": "Fields for export movement",
+        "enum": [
+          "Export"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Fields for export movement"
+        "x-client-original-const": "Export"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemShipmentTypeOneOf3": {
+        "title": "Fields for both movements",
+        "enum": [
+          "Both"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Fields for both movements"
+        "x-client-original-const": "Both"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf1": {
+        "title": "Yes",
+        "enum": [
+          "Y"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Yes"
+        "x-client-original-const": "Y"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf2": {
+        "title": "No",
+        "enum": [
+          "N"
+        ],
         "type": "string",
-        "not": {},
-        "title": "No"
+        "x-client-original-const": "N"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequiredOneOf3": {
-        "type": "string",
-        "not": {},
         "title": "Conditional",
-        "description": "If returned there will be at least one requirement condition"
+        "enum": [
+          "C"
+        ],
+        "type": "string",
+        "description": "If returned there will be at least one requirement condition",
+        "x-client-original-const": "C"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf1": {
+        "title": "Equals",
+        "enum": [
+          "="
+        ],
         "type": "string",
-        "not": {},
-        "title": "Equals"
+        "x-client-original-const": "=",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "=",
+              "name": "Equal"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf2": {
+        "title": "Greater Than",
+        "enum": [
+          "\u003E"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Greater Than"
+        "x-client-original-const": "\u003E",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "\u003E",
+              "name": "GreaterThan"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf3": {
+        "title": "Less Than",
+        "enum": [
+          "\u003C"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Less Than"
+        "x-client-original-const": "\u003C",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "\u003C",
+              "name": "LessThan"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf4": {
+        "title": "Not Equal To",
+        "enum": [
+          "!="
+        ],
         "type": "string",
-        "not": {},
-        "title": "Not Equal To"
+        "x-client-original-const": "!=",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperatorOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "!=",
+              "name": "ExclamationEqual"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf1": {
+        "title": "Equals",
+        "enum": [
+          "="
+        ],
         "type": "string",
-        "not": {},
-        "title": "Equals"
+        "x-client-original-const": "=",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "=",
+              "name": "Equal"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf2": {
+        "title": "Greater Than",
+        "enum": [
+          "\u003E"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Greater Than"
+        "x-client-original-const": "\u003E",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "\u003E",
+              "name": "GreaterThan"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf3": {
+        "title": "Less Than",
+        "enum": [
+          "\u003C"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Less Than"
+        "x-client-original-const": "\u003C",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "\u003C",
+              "name": "LessThan"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf4": {
+        "title": "Not Equal To",
+        "enum": [
+          "!="
+        ],
         "type": "string",
-        "not": {},
-        "title": "Not Equal To"
+        "x-client-original-const": "!=",
+        "x-ms-enum": {
+          "name": "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "!=",
+              "name": "ExclamationEqual"
+            }
+          ]
+        }
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItemOperatorOneOf5": {
+        "title": "Contains",
+        "enum": [
+          "Contains"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Contains"
+        "x-client-original-const": "Contains"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "Custom",
-        "description": "user will be required to enter a custom regex pattern"
+        "enum": [
+          "Custom"
+        ],
+        "type": "string",
+        "description": "user will be required to enter a custom regex pattern",
+        "x-client-original-const": "Custom"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf2": {
-        "type": "string",
-        "not": {},
         "title": "List",
-        "description": "listValues will need to be populated with a list of possible values for the field"
+        "enum": [
+          "List"
+        ],
+        "type": "string",
+        "description": "listValues will need to be populated with a list of possible values for the field",
+        "x-client-original-const": "List"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf3": {
+        "title": "Email",
+        "enum": [
+          "Email"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Email"
+        "x-client-original-const": "Email"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf4": {
+        "title": "Text",
+        "enum": [
+          "Text"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Text"
+        "x-client-original-const": "Text"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf5": {
+        "title": "Alphanumeric",
+        "enum": [
+          "Alphanumeric"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Alphanumeric"
+        "x-client-original-const": "Alphanumeric"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf6": {
+        "title": "Number",
+        "enum": [
+          "Number"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Number"
+        "x-client-original-const": "Number"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidationDataTypeOneOf7": {
+        "title": "Date",
+        "enum": [
+          "Date"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Date"
+        "x-client-original-const": "Date"
       },
       "CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemFieldType": {
         "enum": [
@@ -52572,37 +52479,61 @@
         "description": "The request type of the intercept being performed"
       },
       "DeliveryInterceptRequestV2ReasonForReturn": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf6"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf7"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf8"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptRequestV2ReasonForReturnOneOf9"
-          }
+        "enum": [
+          "AM",
+          "AN",
+          "AQ",
+          "AR",
+          "AS",
+          "FA",
+          "KR",
+          "KS",
+          "KV"
         ],
-        "description": "Reason for return code. Required only for RS intercept type."
+        "type": "string",
+        "description": "Reason for return code. Required only for RS intercept type.",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturn",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AM",
+              "name": "Am"
+            },
+            {
+              "value": "AN",
+              "name": "An"
+            },
+            {
+              "value": "AQ",
+              "name": "Aq"
+            },
+            {
+              "value": "AR",
+              "name": "Ar"
+            },
+            {
+              "value": "AS",
+              "name": "AsValue"
+            },
+            {
+              "value": "FA",
+              "name": "Fa"
+            },
+            {
+              "value": "KR",
+              "name": "Kr"
+            },
+            {
+              "value": "KS",
+              "name": "Ks"
+            },
+            {
+              "value": "KV",
+              "name": "Kv"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2": {
         "required": [
@@ -52638,118 +52569,188 @@
         "type": "string",
         "anyOf": [
           {
-            "$ref": "#/components/schemas/DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2"
-          },
-          {
             "title": "Kilograms"
           }
         ],
         "description": "Package weight unit of measure"
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf5"
-          }
+        "enum": [
+          "NTC",
+          "NTA",
+          "TA",
+          "TE",
+          "TU"
         ],
-        "description": "Indicates if a tax disclaimer message should be displayed."
+        "type": "string",
+        "description": "Indicates if a tax disclaimer message should be displayed.",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "NTC",
+              "name": "Ntc"
+            },
+            {
+              "value": "NTA",
+              "name": "Nta"
+            },
+            {
+              "value": "TA",
+              "name": "Ta"
+            },
+            {
+              "value": "TE",
+              "name": "Te"
+            },
+            {
+              "value": "TU",
+              "name": "Tu"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf5"
-          }
+        "enum": [
+          "SDWC",
+          "RTS",
+          "WC",
+          "FD",
+          "RD"
         ],
-        "description": "The specific delivery change options eligibilty is being returned for"
+        "type": "string",
+        "description": "The specific delivery change options eligibilty is being returned for",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeature",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "SDWC",
+              "name": "Sdwc"
+            },
+            {
+              "value": "RTS",
+              "name": "Rts"
+            },
+            {
+              "value": "WC",
+              "name": "Wc"
+            },
+            {
+              "value": "FD",
+              "name": "Fd"
+            },
+            {
+              "value": "RD",
+              "name": "Rd"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf6"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf7"
-          }
+        "enum": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07"
         ],
-        "description": "Provides the number of the day of the week"
+        "type": "string",
+        "description": "Provides the number of the day of the week",
+        "x-ms-enum": {
+          "name": "Value3F312ACA35BE581D",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            },
+            {
+              "value": "03",
+              "name": "Value03"
+            },
+            {
+              "value": "04",
+              "name": "Value04"
+            },
+            {
+              "value": "05",
+              "name": "Value05"
+            },
+            {
+              "value": "06",
+              "name": "Value06"
+            },
+            {
+              "value": "07",
+              "name": "Value07"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemId": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf6"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf7"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf8"
-          },
-          {
-            "$ref": "#/components/schemas/DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf9"
-          }
+        "enum": [
+          "AM",
+          "AN",
+          "AQ",
+          "AR",
+          "AS",
+          "FA",
+          "KR",
+          "KS",
+          "KV"
         ],
-        "description": "Provides the reason code for RTS"
+        "type": "string",
+        "description": "Provides the reason code for RTS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemId",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AM",
+              "name": "Am"
+            },
+            {
+              "value": "AN",
+              "name": "An"
+            },
+            {
+              "value": "AQ",
+              "name": "Aq"
+            },
+            {
+              "value": "AR",
+              "name": "Ar"
+            },
+            {
+              "value": "AS",
+              "name": "AsValue"
+            },
+            {
+              "value": "FA",
+              "name": "Fa"
+            },
+            {
+              "value": "KR",
+              "name": "Kr"
+            },
+            {
+              "value": "KS",
+              "name": "Ks"
+            },
+            {
+              "value": "KV",
+              "name": "Kv"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesRequestV2RatingRequestItem": {
         "required": [
@@ -53431,261 +53432,885 @@
         "description": "A map containing warning codes and descriptions as key/value pairs"
       },
       "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1": {
+        "title": "WILL CALL",
+        "enum": [
+          "WC"
+        ],
         "type": "string",
-        "not": {},
-        "title": "WILL CALL"
+        "x-client-original-const": "WC",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "WC",
+              "name": "Wc"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2": {
+        "title": "SAME DAY WILL CALL",
+        "enum": [
+          "SC"
+        ],
         "type": "string",
-        "not": {},
-        "title": "SAME DAY WILL CALL"
+        "x-client-original-const": "SC",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "SC",
+              "name": "Sc"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3": {
+        "title": "FUTURE DELIVERY",
+        "enum": [
+          "FD"
+        ],
         "type": "string",
-        "not": {},
-        "title": "FUTURE DELIVERY"
+        "x-client-original-const": "FD",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "FD",
+              "name": "Fd"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4": {
+        "title": "ALTERNATE ADDRES",
+        "enum": [
+          "AA"
+        ],
         "type": "string",
-        "not": {},
-        "title": "ALTERNATE ADDRES"
+        "x-client-original-const": "AA",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AA",
+              "name": "Aa"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5": {
+        "title": "RETURN TO SENDER",
+        "enum": [
+          "RS"
+        ],
         "type": "string",
-        "not": {},
-        "title": "RETURN TO SENDER"
+        "x-client-original-const": "RS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf5",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "RS",
+              "name": "Rs"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6": {
+        "title": "ALL INTERCEPT",
+        "enum": [
+          "AL"
+        ],
         "type": "string",
-        "not": {},
-        "title": "ALL INTERCEPT"
+        "x-client-original-const": "AL",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOptionOneOf6",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AL",
+              "name": "Al"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2RequestTypeOneOf1": {
+        "title": "WILL CALL",
+        "enum": [
+          "WC"
+        ],
         "type": "string",
-        "not": {},
-        "title": "WILL CALL"
+        "x-client-original-const": "WC",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2RequestTypeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "WC",
+              "name": "Wc"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2RequestTypeOneOf2": {
+        "title": "SAME DAY WILL CALL",
+        "enum": [
+          "SC"
+        ],
         "type": "string",
-        "not": {},
-        "title": "SAME DAY WILL CALL"
+        "x-client-original-const": "SC",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2RequestTypeOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "SC",
+              "name": "Sc"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2RequestTypeOneOf3": {
+        "title": "FUTURE DELIVERY",
+        "enum": [
+          "FD"
+        ],
         "type": "string",
-        "not": {},
-        "title": "FUTURE DELIVERY"
+        "x-client-original-const": "FD",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2RequestTypeOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "FD",
+              "name": "Fd"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2RequestTypeOneOf4": {
+        "title": "ALTERNATE ADDRES",
+        "enum": [
+          "AA"
+        ],
         "type": "string",
-        "not": {},
-        "title": "ALTERNATE ADDRES"
+        "x-client-original-const": "AA",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2RequestTypeOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AA",
+              "name": "Aa"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2RequestTypeOneOf5": {
+        "title": "RETURN TO SENDER",
+        "enum": [
+          "RS"
+        ],
         "type": "string",
-        "not": {},
-        "title": "RETURN TO SENDER"
+        "x-client-original-const": "RS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2RequestTypeOneOf5",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "RS",
+              "name": "Rs"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "CANCELLED",
-        "description": "RECEIVER REFUSED, CANCELLED ORDER"
+        "enum": [
+          "AM"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, CANCELLED ORDER",
+        "x-client-original-const": "AM",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AM",
+              "name": "Am"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf2": {
-        "type": "string",
-        "not": {},
         "title": "DUPLICATE",
-        "description": "RECEIVER REFUSED, DUPLICATE ORDER"
+        "enum": [
+          "AN"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, DUPLICATE ORDER",
+        "x-client-original-const": "AN",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AN",
+              "name": "An"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf3": {
-        "type": "string",
-        "not": {},
         "title": "NO C.O.D.\u0027S",
-        "description": "RECEIVER REFUSED, NO C.O.D.\u0027S ACCEPTED"
+        "enum": [
+          "AQ"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, NO C.O.D.\u0027S ACCEPTED",
+        "x-client-original-const": "AQ",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AQ",
+              "name": "Aq"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf4": {
-        "type": "string",
-        "not": {},
         "title": "EXPENSIVE",
-        "description": "RECEIVER REFUSED, TOO EXPENSIVE"
+        "enum": [
+          "AR"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, TOO EXPENSIVE",
+        "x-client-original-const": "AR",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AR",
+              "name": "Ar"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf5": {
-        "type": "string",
-        "not": {},
         "title": "LATE",
-        "description": "RECEIVER REFUSED, SHIPPED TOO LATE"
+        "enum": [
+          "AS"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, SHIPPED TOO LATE",
+        "x-client-original-const": "AS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf5",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AS",
+              "name": "AsValue"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf6": {
-        "type": "string",
-        "not": {},
         "title": "BAD ADDRESS",
-        "description": "UNABLE TO RESOLVE INCORRECT ADDRESS"
+        "enum": [
+          "FA"
+        ],
+        "type": "string",
+        "description": "UNABLE TO RESOLVE INCORRECT ADDRESS",
+        "x-client-original-const": "FA",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf6",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "FA",
+              "name": "Fa"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf7": {
-        "type": "string",
-        "not": {},
         "title": "REFUSED",
-        "description": "RECEIVER DID NOT WANT, REFUSED DELIVERY"
+        "enum": [
+          "KR"
+        ],
+        "type": "string",
+        "description": "RECEIVER DID NOT WANT, REFUSED DELIVERY",
+        "x-client-original-const": "KR",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf7",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "KR",
+              "name": "Kr"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf8": {
-        "type": "string",
-        "not": {},
         "title": "NOT ORDERED",
-        "description": "RECEIVER DID NOT ORDER, REFUSED"
+        "enum": [
+          "KS"
+        ],
+        "type": "string",
+        "description": "RECEIVER DID NOT ORDER, REFUSED",
+        "x-client-original-const": "KS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf8",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "KS",
+              "name": "Ks"
+            }
+          ]
+        }
       },
       "DeliveryInterceptRequestV2ReasonForReturnOneOf9": {
-        "type": "string",
-        "not": {},
         "title": "OTHER",
-        "description": "OTHER NON-DELIVERY"
+        "enum": [
+          "KV"
+        ],
+        "type": "string",
+        "description": "OTHER NON-DELIVERY",
+        "x-client-original-const": "KV",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptRequestV2ReasonForReturnOneOf9",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "KV",
+              "name": "Kv"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1": {
+        "title": "Pounds",
+        "enum": [
+          "LBS"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Pounds"
+        "x-client-original-const": "LBS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "LBS",
+              "name": "Lbs"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2": {
+        "enum": [
+          "KGS"
+        ],
         "type": "string",
-        "not": {}
+        "x-client-original-const": "KGS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUomAnyOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "KGS",
+              "name": "Kgs"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf1": {
+        "title": "NO Tax calculation",
+        "enum": [
+          "NTC"
+        ],
         "type": "string",
-        "not": {},
-        "title": "NO Tax calculation"
+        "x-client-original-const": "NTC",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "NTC",
+              "name": "Ntc"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf2": {
+        "title": "NO Tax applicable",
+        "enum": [
+          "NTA"
+        ],
         "type": "string",
-        "not": {},
-        "title": "NO Tax applicable"
+        "x-client-original-const": "NTA",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "NTA",
+              "name": "Nta"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf3": {
+        "title": "Taxes applicable",
+        "enum": [
+          "TA"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Taxes applicable"
+        "x-client-original-const": "TA",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "TA",
+              "name": "Ta"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf4": {
+        "title": "Taxes Exempt",
+        "enum": [
+          "TE"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Taxes Exempt"
+        "x-client-original-const": "TE",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "TE",
+              "name": "Te"
+            }
+          ]
+        }
       },
       "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf5": {
+        "title": "Taxes Undetermined",
+        "enum": [
+          "TU"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Taxes Undetermined"
+        "x-client-original-const": "TU",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicatorOneOf5",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "TU",
+              "name": "Tu"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf1": {
+        "title": "Same Day Will Call",
+        "enum": [
+          "SDWC"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Same Day Will Call"
+        "x-client-original-const": "SDWC",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "SDWC",
+              "name": "Sdwc"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf2": {
+        "title": "Return To Sender",
+        "enum": [
+          "RTS"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Return To Sender"
+        "x-client-original-const": "RTS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "RTS",
+              "name": "Rts"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf3": {
+        "title": "Will Call",
+        "enum": [
+          "WC"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Will Call"
+        "x-client-original-const": "WC",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "WC",
+              "name": "Wc"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf4": {
+        "title": "Future Delivery",
+        "enum": [
+          "FD"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Future Delivery"
+        "x-client-original-const": "FD",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "FD",
+              "name": "Fd"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf5": {
+        "title": "Reschedule Delivery",
+        "enum": [
+          "RD"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Reschedule Delivery"
+        "x-client-original-const": "RD",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapInterceptFeatureOneOf5",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "RD",
+              "name": "Rd"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf1": {
+        "title": "Sunday",
+        "enum": [
+          "01"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Sunday"
+        "x-client-original-const": "01",
+        "x-ms-enum": {
+          "name": "Value2FDAA5CE7C17D680",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf2": {
+        "title": "Monday",
+        "enum": [
+          "02"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Monday"
+        "x-client-original-const": "02",
+        "x-ms-enum": {
+          "name": "Value033D9204B51BB3A0",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf3": {
+        "title": "Tuesday",
+        "enum": [
+          "03"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Tuesday"
+        "x-client-original-const": "03",
+        "x-ms-enum": {
+          "name": "Value561B23B2DF47B583",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "03",
+              "name": "Value03"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf4": {
+        "title": "Wednesday",
+        "enum": [
+          "04"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Wednesday"
+        "x-client-original-const": "04",
+        "x-ms-enum": {
+          "name": "Value72614DE83D1DD2F3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "04",
+              "name": "Value04"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf5": {
+        "title": "Thursday",
+        "enum": [
+          "05"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Thursday"
+        "x-client-original-const": "05",
+        "x-ms-enum": {
+          "name": "ValueD7DE6A597A9AA73C",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "05",
+              "name": "Value05"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf6": {
+        "title": "Friday",
+        "enum": [
+          "06"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Friday"
+        "x-client-original-const": "06",
+        "x-ms-enum": {
+          "name": "Value3DCF9F7DD76828FB",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "06",
+              "name": "Value06"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumberOneOf7": {
+        "title": "Saturday",
+        "enum": [
+          "07"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Saturday"
+        "x-client-original-const": "07",
+        "x-ms-enum": {
+          "name": "Value74B587DA4FD05D87",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "07",
+              "name": "Value07"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "CANCELLED",
-        "description": "RECEIVER REFUSED, CANCELLED ORDER"
+        "enum": [
+          "AM"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, CANCELLED ORDER",
+        "x-client-original-const": "AM",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AM",
+              "name": "Am"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf2": {
-        "type": "string",
-        "not": {},
         "title": "DUPLICATE",
-        "description": "RECEIVER REFUSED, DUPLICATE ORDER"
+        "enum": [
+          "AN"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, DUPLICATE ORDER",
+        "x-client-original-const": "AN",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AN",
+              "name": "An"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf3": {
-        "type": "string",
-        "not": {},
         "title": "NO C.O.D.\u0027S",
-        "description": "RECEIVER REFUSED, NO C.O.D.\u0027S ACCEPTED"
+        "enum": [
+          "AQ"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, NO C.O.D.\u0027S ACCEPTED",
+        "x-client-original-const": "AQ",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AQ",
+              "name": "Aq"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf4": {
-        "type": "string",
-        "not": {},
         "title": "EXPENSIVE",
-        "description": "RECEIVER REFUSED, TOO EXPENSIVE"
+        "enum": [
+          "AR"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, TOO EXPENSIVE",
+        "x-client-original-const": "AR",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AR",
+              "name": "Ar"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf5": {
-        "type": "string",
-        "not": {},
         "title": "LATE",
-        "description": "RECEIVER REFUSED, SHIPPED TOO LATE"
+        "enum": [
+          "AS"
+        ],
+        "type": "string",
+        "description": "RECEIVER REFUSED, SHIPPED TOO LATE",
+        "x-client-original-const": "AS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf5",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "AS",
+              "name": "AsValue"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf6": {
-        "type": "string",
-        "not": {},
         "title": "BAD ADDRESS",
-        "description": "UNABLE TO RESOLVE INCORRECT ADDRESS"
+        "enum": [
+          "FA"
+        ],
+        "type": "string",
+        "description": "UNABLE TO RESOLVE INCORRECT ADDRESS",
+        "x-client-original-const": "FA",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf6",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "FA",
+              "name": "Fa"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf7": {
-        "type": "string",
-        "not": {},
         "title": "REFUSED",
-        "description": "RECEIVER DID NOT WANT, REFUSED DELIVERY"
+        "enum": [
+          "KR"
+        ],
+        "type": "string",
+        "description": "RECEIVER DID NOT WANT, REFUSED DELIVERY",
+        "x-client-original-const": "KR",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf7",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "KR",
+              "name": "Kr"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf8": {
-        "type": "string",
-        "not": {},
         "title": "NOT ORDERED",
-        "description": "RECEIVER DID NOT ORDER, REFUSED"
+        "enum": [
+          "KS"
+        ],
+        "type": "string",
+        "description": "RECEIVER DID NOT ORDER, REFUSED",
+        "x-client-original-const": "KS",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf8",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "KS",
+              "name": "Ks"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf9": {
-        "type": "string",
-        "not": {},
         "title": "OTHER",
-        "description": "OTHER NON-DELIVERY"
+        "enum": [
+          "KV"
+        ],
+        "type": "string",
+        "description": "OTHER NON-DELIVERY",
+        "x-client-original-const": "KV",
+        "x-ms-enum": {
+          "name": "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueReasonOptionsForRtsItemIdOneOf9",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "KV",
+              "name": "Kv"
+            }
+          ]
+        }
       },
       "DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekText": {
         "enum": [
@@ -58203,19 +58828,31 @@
         ]
       },
       "ApolloAirFreightRateRequestV1ShipmentPaymentType": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3"
-          }
+        "enum": [
+          "PPD",
+          "COL",
+          "OTH/THD"
         ],
-        "description": "Payment type."
+        "type": "string",
+        "description": "Payment type.",
+        "x-ms-enum": {
+          "name": "ApolloAirFreightRateRequestV1ShipmentPaymentType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "PPD",
+              "name": "Ppd"
+            },
+            {
+              "value": "COL",
+              "name": "Col"
+            },
+            {
+              "value": "OTH/THD",
+              "name": "OthThd"
+            }
+          ]
+        }
       },
       "ApolloOrderRequestV1ThirdParty": {
         "anyOf": [
@@ -60982,19 +61619,58 @@
         }
       },
       "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1": {
+        "title": "Prepaid",
+        "enum": [
+          "PPD"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Prepaid"
+        "x-client-original-const": "PPD",
+        "x-ms-enum": {
+          "name": "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "PPD",
+              "name": "Ppd"
+            }
+          ]
+        }
       },
       "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2": {
+        "title": "Collect",
+        "enum": [
+          "COL"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Collect"
+        "x-client-original-const": "COL",
+        "x-ms-enum": {
+          "name": "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "COL",
+              "name": "Col"
+            }
+          ]
+        }
       },
       "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3": {
+        "title": "Third Party",
+        "enum": [
+          "OTH/THD"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Third Party"
+        "x-client-original-const": "OTH/THD",
+        "x-ms-enum": {
+          "name": "ApolloAirFreightRateRequestV1ShipmentPaymentTypeOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "OTH/THD",
+              "name": "OthThd"
+            }
+          ]
+        }
       },
       "PaymentTermTypeOneOf1": {
         "title": "Shipper",
@@ -101280,16 +101956,26 @@
         "description": "To set locale information"
       },
       "SmartPickupNotificationIndicatorV1": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupNotificationIndicatorV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupNotificationIndicatorV1OneOf2"
-          }
+        "enum": [
+          "01",
+          "02"
         ],
-        "description": "Notification opt-out - a CTA/link on the transactional PU alert that takes the User to a unique landing page\n(determined by whether the User/Email combo have a ups.com User ID or not) so that they can opt-out of receiving\nthese transactional alerts for this account. Required when Action is Add or Update.\n"
+        "type": "string",
+        "description": "Notification opt-out - a CTA/link on the transactional PU alert that takes the User to a unique landing page\n(determined by whether the User/Email combo have a ups.com User ID or not) so that they can opt-out of receiving\nthese transactional alerts for this account. Required when Action is Add or Update.\n",
+        "x-ms-enum": {
+          "name": "SmartPickupNotificationIndicatorV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupPendingStatusIndicatorV1": {
         "type": "string",
@@ -101372,52 +102058,86 @@
         }
       },
       "SmartPickupPickupPointV1": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf6"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf7"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf8"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf9"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf10"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf11"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf12"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf13"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf14"
-          }
+        "enum": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014"
         ],
-        "description": "Location of shipment pickup."
+        "type": "string",
+        "description": "Location of shipment pickup.",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "001",
+              "name": "Value001"
+            },
+            {
+              "value": "002",
+              "name": "Value002"
+            },
+            {
+              "value": "003",
+              "name": "Value003"
+            },
+            {
+              "value": "004",
+              "name": "Value004"
+            },
+            {
+              "value": "005",
+              "name": "Value005"
+            },
+            {
+              "value": "006",
+              "name": "Value006"
+            },
+            {
+              "value": "007",
+              "name": "Value007"
+            },
+            {
+              "value": "008",
+              "name": "Value008"
+            },
+            {
+              "value": "009",
+              "name": "Value009"
+            },
+            {
+              "value": "010",
+              "name": "Value010"
+            },
+            {
+              "value": "011",
+              "name": "Value011"
+            },
+            {
+              "value": "012",
+              "name": "Value012"
+            },
+            {
+              "value": "013",
+              "name": "Value013"
+            },
+            {
+              "value": "014",
+              "name": "Value014"
+            }
+          ]
+        }
       },
       "SmartPickupPickupTimeV1": {
         "required": [
@@ -101490,16 +102210,26 @@
         "example": "130000"
       },
       "SmartPickupTriggerV1": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupTriggerV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupTriggerV1OneOf2"
-          }
+        "enum": [
+          "01",
+          "02"
         ],
-        "description": "Smart pickup trigger when the PU event (PRN) for the Smart PU is moved from pending to scheduled. Required when Action is Add or Updtae."
+        "type": "string",
+        "description": "Smart pickup trigger when the PU event (PRN) for the Smart PU is moved from pending to scheduled. Required when Action is Add or Updtae.",
+        "x-ms-enum": {
+          "name": "SmartPickupTriggerV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupErrorResponseV1": {
         "required": [
@@ -101518,18 +102248,12 @@
         "description": "Response object for errors"
       },
       "SmartPickupRequestV1SmartPickupRequestAction": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupRequestV1SmartPickupRequestActionOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupRequestV1SmartPickupRequestActionOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupRequestV1SmartPickupRequestActionOneOf3"
-          }
+        "enum": [
+          "I",
+          "A",
+          "U"
         ],
+        "type": "string",
         "description": "Action indicator to decide the flow."
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponse": {
@@ -101555,16 +102279,26 @@
         ]
       },
       "SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptions": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2"
-          }
+        "enum": [
+          "01",
+          "02"
         ],
-        "description": "Weekend delivery options. Valid only for US."
+        "type": "string",
+        "description": "Weekend delivery options. Valid only for US.",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptions",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDay": {
         "type": "string",
@@ -101582,13 +102316,21 @@
         "description": ""
       },
       "SmartPickupCommonResponseV1ResponseStatusCode": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupCommonResponseV1ResponseStatusCodeOneOf1"
-          }
+        "enum": [
+          "1"
         ],
-        "description": "Identifies the success of the transaction."
+        "type": "string",
+        "description": "Identifies the success of the transaction.",
+        "x-ms-enum": {
+          "name": "SmartPickupCommonResponseV1ResponseStatusCode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "1",
+              "name": "Value1"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2": {
         "unevaluatedProperties": {
@@ -101651,27 +102393,48 @@
         ]
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2"
-          }
+        "enum": [
+          "02",
+          "08"
         ],
-        "description": "Type of Pickup. Note: Pickup changes are not allowed when PickupType code is 97."
+        "type": "string",
+        "description": "Type of Pickup. Note: Pickup changes are not allowed when PickupType code is 97.",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            },
+            {
+              "value": "08",
+              "name": "Value08"
+            }
+          ]
+        }
       },
       "UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCodeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCodeOneOf2"
-          }
+        "enum": [
+          "02",
+          "08"
         ],
-        "description": "Type of Pickup. Note: Pickup changes are not allowed when PickupType code is 97."
+        "type": "string",
+        "description": "Type of Pickup. Note: Pickup changes are not allowed when PickupType code is 97.",
+        "x-ms-enum": {
+          "name": "UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            },
+            {
+              "value": "08",
+              "name": "Value08"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2": {
         "unevaluatedProperties": {
@@ -101689,25 +102452,41 @@
         }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5"
-          }
+        "enum": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05"
         ],
-        "description": "Specific day pickup, maximum days are 4."
+        "type": "string",
+        "description": "Specific day pickup, maximum days are 4.",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            },
+            {
+              "value": "03",
+              "name": "Value03"
+            },
+            {
+              "value": "04",
+              "name": "Value04"
+            },
+            {
+              "value": "05",
+              "name": "Value05"
+            }
+          ]
+        }
       },
       "SmartPickupRequestV1SmartPickupRequest": {
         "required": [
@@ -102078,14 +102857,40 @@
         "description": "Placeholder schema for path example refs"
       },
       "SmartPickupNotificationIndicatorV1OneOf1": {
+        "enum": [
+          "01"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Opt-in"
+        "description": "Opt-in",
+        "x-client-original-const": "01",
+        "x-ms-enum": {
+          "name": "SmartPickupNotificationIndicatorV1OneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            }
+          ]
+        }
       },
       "SmartPickupNotificationIndicatorV1OneOf2": {
+        "enum": [
+          "02"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Opt-out"
+        "description": "Opt-out",
+        "x-client-original-const": "02",
+        "x-ms-enum": {
+          "name": "SmartPickupNotificationIndicatorV1OneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupPickupInfoV1WeekendServiceTerritoryIndicator": {
         "enum": [
@@ -102096,169 +102901,568 @@
         "description": "Indicates if the pickup address qualifies for WST (Weekend Service Territory) pickup. \nAvailable when PickupTypeCode is **02** and pickup address is WST area. \n"
       },
       "SmartPickupPickupPointV1OneOf1": {
+        "enum": [
+          "001"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Front Door"
+        "description": "Front Door",
+        "x-client-original-const": "001",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "001",
+              "name": "Value001"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf2": {
+        "enum": [
+          "002"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Mail Room"
+        "description": "Mail Room",
+        "x-client-original-const": "002",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "002",
+              "name": "Value002"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf3": {
+        "enum": [
+          "003"
+        ],
         "type": "string",
-        "not": {},
-        "description": "ThirdParty"
+        "description": "ThirdParty",
+        "x-client-original-const": "003",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "003",
+              "name": "Value003"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf4": {
+        "enum": [
+          "004"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Garage"
+        "description": "Garage",
+        "x-client-original-const": "004",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "004",
+              "name": "Value004"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf5": {
+        "enum": [
+          "005"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Office"
+        "description": "Office",
+        "x-client-original-const": "005",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf5",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "005",
+              "name": "Value005"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf6": {
+        "enum": [
+          "006"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Reception"
+        "description": "Reception",
+        "x-client-original-const": "006",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf6",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "006",
+              "name": "Value006"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf7": {
+        "enum": [
+          "007"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Upstairs"
+        "description": "Upstairs",
+        "x-client-original-const": "007",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf7",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "007",
+              "name": "Value007"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf8": {
+        "enum": [
+          "008"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Guard Room"
+        "description": "Guard Room",
+        "x-client-original-const": "008",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf8",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "008",
+              "name": "Value008"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf9": {
+        "enum": [
+          "009"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Shipping"
+        "description": "Shipping",
+        "x-client-original-const": "009",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf9",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "009",
+              "name": "Value009"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf10": {
+        "enum": [
+          "010"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Receiving"
+        "description": "Receiving",
+        "x-client-original-const": "010",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf10",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "010",
+              "name": "Value010"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf11": {
+        "enum": [
+          "011"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Back Door"
+        "description": "Back Door",
+        "x-client-original-const": "011",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf11",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "011",
+              "name": "Value011"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf12": {
+        "enum": [
+          "012"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Side Door"
+        "description": "Side Door",
+        "x-client-original-const": "012",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf12",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "012",
+              "name": "Value012"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf13": {
+        "enum": [
+          "013"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Downstairs"
+        "description": "Downstairs",
+        "x-client-original-const": "013",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf13",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "013",
+              "name": "Value013"
+            }
+          ]
+        }
       },
       "SmartPickupPickupPointV1OneOf14": {
+        "enum": [
+          "014"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Warehouse"
+        "description": "Warehouse",
+        "x-client-original-const": "014",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1OneOf14",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "014",
+              "name": "Value014"
+            }
+          ]
+        }
       },
       "SmartPickupTriggerV1OneOf1": {
+        "enum": [
+          "01"
+        ],
         "type": "string",
-        "not": {},
-        "description": "PLD Trigger"
+        "description": "PLD Trigger",
+        "x-client-original-const": "01",
+        "x-ms-enum": {
+          "name": "SmartPickupTriggerV1OneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            }
+          ]
+        }
       },
       "SmartPickupTriggerV1OneOf2": {
+        "enum": [
+          "02"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Manual Trigger"
+        "description": "Manual Trigger",
+        "x-client-original-const": "02",
+        "x-ms-enum": {
+          "name": "SmartPickupTriggerV1OneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupRequestV1SmartPickupRequestActionOneOf1": {
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Inquire"
+        "description": "Inquire",
+        "x-client-original-const": "I"
       },
       "SmartPickupRequestV1SmartPickupRequestActionOneOf2": {
+        "enum": [
+          "A"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Add"
+        "description": "Add",
+        "x-client-original-const": "A"
       },
       "SmartPickupRequestV1SmartPickupRequestActionOneOf3": {
+        "enum": [
+          "U"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Update"
+        "description": "Update",
+        "x-client-original-const": "U"
       },
       "SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1": {
+        "enum": [
+          "01"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Saturday Eligible Commercial (SEC)."
+        "description": "Saturday Eligible Commercial (SEC).",
+        "x-client-original-const": "01",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            }
+          ]
+        }
       },
       "SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2": {
+        "enum": [
+          "02"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Sunday Eligible Commcercial (SUEC)"
+        "description": "Sunday Eligible Commcercial (SUEC)",
+        "x-client-original-const": "02",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptionsOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1": {
+        "enum": [
+          "01"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Saturday"
+        "description": "Saturday",
+        "x-client-original-const": "01",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            }
+          ]
+        }
       },
       "SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2": {
+        "enum": [
+          "02"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Sunday"
+        "description": "Sunday",
+        "x-client-original-const": "02",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupCommonResponseV1ResponseStatusCodeOneOf1": {
+        "enum": [
+          "1"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Success"
+        "description": "Success",
+        "x-client-original-const": "1",
+        "x-ms-enum": {
+          "name": "SmartPickupCommonResponseV1ResponseStatusCodeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "1",
+              "name": "Value1"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1": {
+        "enum": [
+          "02"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Smart Pickup"
+        "description": "Smart Pickup",
+        "x-client-original-const": "02",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2": {
+        "enum": [
+          "08"
+        ],
         "type": "string",
-        "not": {},
-        "description": "No pickup plan"
+        "description": "No pickup plan",
+        "x-client-original-const": "08",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCodeOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "08",
+              "name": "Value08"
+            }
+          ]
+        }
       },
       "UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCodeOneOf1": {
+        "enum": [
+          "02"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Smart Pickup"
+        "description": "Smart Pickup",
+        "x-client-original-const": "02",
+        "x-ms-enum": {
+          "name": "UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCodeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCodeOneOf2": {
+        "enum": [
+          "08"
+        ],
         "type": "string",
-        "not": {},
-        "description": "No pickup plan"
+        "description": "No pickup plan",
+        "x-client-original-const": "08",
+        "x-ms-enum": {
+          "name": "UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCodeOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "08",
+              "name": "Value08"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1": {
+        "enum": [
+          "01"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Monday"
+        "description": "Monday",
+        "x-client-original-const": "01",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2": {
+        "enum": [
+          "02"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Tuesday"
+        "description": "Tuesday",
+        "x-client-original-const": "02",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3": {
+        "enum": [
+          "03"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Wednesday"
+        "description": "Wednesday",
+        "x-client-original-const": "03",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf3",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "03",
+              "name": "Value03"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4": {
+        "enum": [
+          "04"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Thursday"
+        "description": "Thursday",
+        "x-client-original-const": "04",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "04",
+              "name": "Value04"
+            }
+          ]
+        }
       },
       "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5": {
+        "enum": [
+          "05"
+        ],
         "type": "string",
-        "not": {},
-        "description": "Friday"
+        "description": "Friday",
+        "x-client-original-const": "05",
+        "x-ms-enum": {
+          "name": "ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDayOneOf5",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "05",
+              "name": "Value05"
+            }
+          ]
+        }
       },
       "TimeInTransitRequest": {
         "maximum": 1,
@@ -109883,45 +111087,35 @@
         }
       },
       "TrackingEventRequestActivityStatusType": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/TrackingEventRequestActivityStatusTypeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/TrackingEventRequestActivityStatusTypeOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/TrackingEventRequestActivityStatusTypeOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/TrackingEventRequestActivityStatusTypeOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/TrackingEventRequestActivityStatusTypeOneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/TrackingEventRequestActivityStatusTypeOneOf6"
-          }
+        "enum": [
+          "D",
+          "I",
+          "M",
+          "MV",
+          "U",
+          "X"
         ],
-        "description": "The current activity status type.\n"
+        "type": "string",
+        "description": "The current activity status type.\n",
+        "x-ms-enum": {
+          "name": "TrackingEventRequestActivityStatusType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MV",
+              "name": "Mv"
+            }
+          ]
+        }
       },
       "EventPreferencesItem": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/EventPreferencesItemOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/EventPreferencesItemOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/EventPreferencesItemOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/EventPreferencesItemOneOf4"
-          }
+        "enum": [
+          "D",
+          "I",
+          "M",
+          "X"
         ],
+        "type": "string",
         "description": "package activity identifier"
       },
       "TrackingEventRequestActivityLocation": {
@@ -110036,68 +111230,134 @@
         "description": "The account type used for package event identification."
       },
       "TrackingEventRequestActivityStatusTypeOneOf1": {
+        "title": "Delivery",
+        "enum": [
+          "D"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Delivery"
+        "x-client-original-const": "D"
       },
       "TrackingEventRequestActivityStatusTypeOneOf2": {
+        "title": "On the Way",
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "title": "On the Way"
+        "x-client-original-const": "I"
       },
       "TrackingEventRequestActivityStatusTypeOneOf3": {
+        "title": "Manifest",
+        "enum": [
+          "M"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest"
+        "x-client-original-const": "M"
       },
       "TrackingEventRequestActivityStatusTypeOneOf4": {
+        "title": "Manifest Void",
+        "enum": [
+          "MV"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest Void"
+        "x-client-original-const": "MV",
+        "x-ms-enum": {
+          "name": "TrackingEventRequestActivityStatusTypeOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MV",
+              "name": "Mv"
+            }
+          ]
+        }
       },
       "TrackingEventRequestActivityStatusTypeOneOf5": {
+        "title": "Updated Delivery Date or Time",
+        "enum": [
+          "U"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Updated Delivery Date or Time"
+        "x-client-original-const": "U"
       },
       "TrackingEventRequestActivityStatusTypeOneOf6": {
+        "title": "Package Exception",
+        "enum": [
+          "X"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Package Exception"
+        "x-client-original-const": "X"
       },
       "EventPreferencesItemOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "Delivery",
-        "description": "Includes updates and delivery photo"
+        "enum": [
+          "D"
+        ],
+        "type": "string",
+        "description": "Includes updates and delivery photo",
+        "x-client-original-const": "D"
       },
       "EventPreferencesItemOneOf2": {
+        "title": "In-Progress",
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "title": "In-Progress"
+        "x-client-original-const": "I"
       },
       "EventPreferencesItemOneOf3": {
+        "title": "Manifest",
+        "enum": [
+          "M"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest"
+        "x-client-original-const": "M"
       },
       "EventPreferencesItemOneOf4": {
-        "type": "string",
-        "not": {},
         "title": "Exception",
-        "description": "Includes updates"
+        "enum": [
+          "X"
+        ],
+        "type": "string",
+        "description": "Includes updates",
+        "x-client-original-const": "X"
       },
       "TypeOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "standard",
-        "description": "Returns standard event data to the webhook."
+        "enum": [
+          "standard"
+        ],
+        "type": "string",
+        "description": "Returns standard event data to the webhook.",
+        "x-client-original-const": "standard",
+        "x-ms-enum": {
+          "name": "TypeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            }
+          ]
+        }
       },
       "TypeOneOf2": {
-        "type": "string",
-        "not": {},
         "title": "enhanced",
-        "description": "Adds additional webhook details as requested through the request \u0027eventPreferences\u0027 code. Currently available for package subscription request only."
+        "enum": [
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "Adds additional webhook details as requested through the request \u0027eventPreferences\u0027 code. Currently available for package subscription request only.",
+        "x-client-original-const": "enhanced",
+        "x-ms-enum": {
+          "name": "TypeOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
       },
       "UpsTrackAlertPackageSubscriptionRequest": {
         "required": [
@@ -110454,45 +111714,35 @@
         }
       },
       "UpsTrackAlertTrackingEventRequestActivityStatusType": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf6"
-          }
+        "enum": [
+          "D",
+          "I",
+          "M",
+          "MV",
+          "U",
+          "X"
         ],
-        "description": "The current activity status type.\n"
+        "type": "string",
+        "description": "The current activity status type.\n",
+        "x-ms-enum": {
+          "name": "TrackingEventRequestActivityStatusType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MV",
+              "name": "Mv"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEventPreferencesItem": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEventPreferencesItemOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEventPreferencesItemOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEventPreferencesItemOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEventPreferencesItemOneOf4"
-          }
+        "enum": [
+          "D",
+          "I",
+          "M",
+          "X"
         ],
+        "type": "string",
         "description": "package activity identifier"
       },
       "UpsTrackAlertTrackingEventRequestActivityLocation": {
@@ -110599,68 +111849,134 @@
         "description": "Placeholder schema for path example refs"
       },
       "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf1": {
+        "title": "Delivery",
+        "enum": [
+          "D"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Delivery"
+        "x-client-original-const": "D"
       },
       "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf2": {
+        "title": "On the Way",
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "title": "On the Way"
+        "x-client-original-const": "I"
       },
       "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf3": {
+        "title": "Manifest",
+        "enum": [
+          "M"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest"
+        "x-client-original-const": "M"
       },
       "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf4": {
+        "title": "Manifest Void",
+        "enum": [
+          "MV"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest Void"
+        "x-client-original-const": "MV",
+        "x-ms-enum": {
+          "name": "TrackingEventRequestActivityStatusTypeOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MV",
+              "name": "Mv"
+            }
+          ]
+        }
       },
       "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf5": {
+        "title": "Updated Delivery Date or Time",
+        "enum": [
+          "U"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Updated Delivery Date or Time"
+        "x-client-original-const": "U"
       },
       "UpsTrackAlertTrackingEventRequestActivityStatusTypeOneOf6": {
+        "title": "Package Exception",
+        "enum": [
+          "X"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Package Exception"
+        "x-client-original-const": "X"
       },
       "UpsTrackAlertEventPreferencesItemOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "Delivery",
-        "description": "Includes updates and delivery photo"
+        "enum": [
+          "D"
+        ],
+        "type": "string",
+        "description": "Includes updates and delivery photo",
+        "x-client-original-const": "D"
       },
       "UpsTrackAlertEventPreferencesItemOneOf2": {
+        "title": "In-Progress",
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "title": "In-Progress"
+        "x-client-original-const": "I"
       },
       "UpsTrackAlertEventPreferencesItemOneOf3": {
+        "title": "Manifest",
+        "enum": [
+          "M"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest"
+        "x-client-original-const": "M"
       },
       "UpsTrackAlertEventPreferencesItemOneOf4": {
-        "type": "string",
-        "not": {},
         "title": "Exception",
-        "description": "Includes updates"
+        "enum": [
+          "X"
+        ],
+        "type": "string",
+        "description": "Includes updates",
+        "x-client-original-const": "X"
       },
       "UpsTrackAlertTypeOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "standard",
-        "description": "Returns standard event data to the webhook."
+        "enum": [
+          "standard"
+        ],
+        "type": "string",
+        "description": "Returns standard event data to the webhook.",
+        "x-client-original-const": "standard",
+        "x-ms-enum": {
+          "name": "TypeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            }
+          ]
+        }
       },
       "UpsTrackAlertTypeOneOf2": {
-        "type": "string",
-        "not": {},
         "title": "enhanced",
-        "description": "Adds additional webhook details as requested through the request \u0027eventPreferences\u0027 code. Currently available for package subscription request only."
+        "enum": [
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "Adds additional webhook details as requested through the request \u0027eventPreferences\u0027 code. Currently available for package subscription request only.",
+        "x-client-original-const": "enhanced",
+        "x-ms-enum": {
+          "name": "TypeOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEnhancedReadyAccountSubscriptionRequest": {
         "required": [
@@ -111130,45 +112446,35 @@
         }
       },
       "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusType": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf6"
-          }
+        "enum": [
+          "D",
+          "I",
+          "M",
+          "MV",
+          "U",
+          "X"
         ],
-        "description": "The current activity status type.\n"
+        "type": "string",
+        "description": "The current activity status type.\n",
+        "x-ms-enum": {
+          "name": "TrackingEventRequestActivityStatusType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MV",
+              "name": "Mv"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEnhancedReadyEventPreferencesItem": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf4"
-          }
+        "enum": [
+          "D",
+          "I",
+          "M",
+          "X"
         ],
+        "type": "string",
         "description": "package activity identifier"
       },
       "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityLocation": {
@@ -111282,68 +112588,134 @@
         "description": "The account type used for package event identification."
       },
       "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf1": {
+        "title": "Delivery",
+        "enum": [
+          "D"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Delivery"
+        "x-client-original-const": "D"
       },
       "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf2": {
+        "title": "On the Way",
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "title": "On the Way"
+        "x-client-original-const": "I"
       },
       "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf3": {
+        "title": "Manifest",
+        "enum": [
+          "M"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest"
+        "x-client-original-const": "M"
       },
       "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf4": {
+        "title": "Manifest Void",
+        "enum": [
+          "MV"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest Void"
+        "x-client-original-const": "MV",
+        "x-ms-enum": {
+          "name": "TrackingEventRequestActivityStatusTypeOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MV",
+              "name": "Mv"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf5": {
+        "title": "Updated Delivery Date or Time",
+        "enum": [
+          "U"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Updated Delivery Date or Time"
+        "x-client-original-const": "U"
       },
       "UpsTrackAlertEnhancedReadyTrackingEventRequestActivityStatusTypeOneOf6": {
+        "title": "Package Exception",
+        "enum": [
+          "X"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Package Exception"
+        "x-client-original-const": "X"
       },
       "UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "Delivery",
-        "description": "Includes updates and delivery photo"
+        "enum": [
+          "D"
+        ],
+        "type": "string",
+        "description": "Includes updates and delivery photo",
+        "x-client-original-const": "D"
       },
       "UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf2": {
+        "title": "In-Progress",
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "title": "In-Progress"
+        "x-client-original-const": "I"
       },
       "UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf3": {
+        "title": "Manifest",
+        "enum": [
+          "M"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest"
+        "x-client-original-const": "M"
       },
       "UpsTrackAlertEnhancedReadyEventPreferencesItemOneOf4": {
-        "type": "string",
-        "not": {},
         "title": "Exception",
-        "description": "Includes updates"
+        "enum": [
+          "X"
+        ],
+        "type": "string",
+        "description": "Includes updates",
+        "x-client-original-const": "X"
       },
       "UpsTrackAlertEnhancedReadyTypeOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "standard",
-        "description": "Returns standard event data to the webhook."
+        "enum": [
+          "standard"
+        ],
+        "type": "string",
+        "description": "Returns standard event data to the webhook.",
+        "x-client-original-const": "standard",
+        "x-ms-enum": {
+          "name": "TypeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEnhancedReadyTypeOneOf2": {
-        "type": "string",
-        "not": {},
         "title": "enhanced",
-        "description": "Adds additional webhook details as requested through the request \u0027eventPreferences\u0027 code. Currently available for package subscription request only."
+        "enum": [
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "Adds additional webhook details as requested through the request \u0027eventPreferences\u0027 code. Currently available for package subscription request only.",
+        "x-client-original-const": "enhanced",
+        "x-ms-enum": {
+          "name": "TypeOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEnhancedAccountSubscriptionRequest": {
         "required": [
@@ -111813,45 +113185,35 @@
         }
       },
       "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusType": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf6"
-          }
+        "enum": [
+          "D",
+          "I",
+          "M",
+          "MV",
+          "U",
+          "X"
         ],
-        "description": "The current activity status type.\n"
+        "type": "string",
+        "description": "The current activity status type.\n",
+        "x-ms-enum": {
+          "name": "TrackingEventRequestActivityStatusType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MV",
+              "name": "Mv"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEnhancedEventPreferencesItem": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedEventPreferencesItemOneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedEventPreferencesItemOneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedEventPreferencesItemOneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/UpsTrackAlertEnhancedEventPreferencesItemOneOf4"
-          }
+        "enum": [
+          "D",
+          "I",
+          "M",
+          "X"
         ],
+        "type": "string",
         "description": "package activity identifier"
       },
       "UpsTrackAlertEnhancedTrackingEventRequestActivityLocation": {
@@ -111965,68 +113327,134 @@
         "description": "The account type used for package event identification."
       },
       "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf1": {
+        "title": "Delivery",
+        "enum": [
+          "D"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Delivery"
+        "x-client-original-const": "D"
       },
       "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf2": {
+        "title": "On the Way",
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "title": "On the Way"
+        "x-client-original-const": "I"
       },
       "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf3": {
+        "title": "Manifest",
+        "enum": [
+          "M"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest"
+        "x-client-original-const": "M"
       },
       "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf4": {
+        "title": "Manifest Void",
+        "enum": [
+          "MV"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest Void"
+        "x-client-original-const": "MV",
+        "x-ms-enum": {
+          "name": "TrackingEventRequestActivityStatusTypeOneOf4",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "MV",
+              "name": "Mv"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf5": {
+        "title": "Updated Delivery Date or Time",
+        "enum": [
+          "U"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Updated Delivery Date or Time"
+        "x-client-original-const": "U"
       },
       "UpsTrackAlertEnhancedTrackingEventRequestActivityStatusTypeOneOf6": {
+        "title": "Package Exception",
+        "enum": [
+          "X"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Package Exception"
+        "x-client-original-const": "X"
       },
       "UpsTrackAlertEnhancedEventPreferencesItemOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "Delivery",
-        "description": "Includes updates and delivery photo"
+        "enum": [
+          "D"
+        ],
+        "type": "string",
+        "description": "Includes updates and delivery photo",
+        "x-client-original-const": "D"
       },
       "UpsTrackAlertEnhancedEventPreferencesItemOneOf2": {
+        "title": "In-Progress",
+        "enum": [
+          "I"
+        ],
         "type": "string",
-        "not": {},
-        "title": "In-Progress"
+        "x-client-original-const": "I"
       },
       "UpsTrackAlertEnhancedEventPreferencesItemOneOf3": {
+        "title": "Manifest",
+        "enum": [
+          "M"
+        ],
         "type": "string",
-        "not": {},
-        "title": "Manifest"
+        "x-client-original-const": "M"
       },
       "UpsTrackAlertEnhancedEventPreferencesItemOneOf4": {
-        "type": "string",
-        "not": {},
         "title": "Exception",
-        "description": "Includes updates"
+        "enum": [
+          "X"
+        ],
+        "type": "string",
+        "description": "Includes updates",
+        "x-client-original-const": "X"
       },
       "UpsTrackAlertEnhancedTypeOneOf1": {
-        "type": "string",
-        "not": {},
         "title": "standard",
-        "description": "Returns standard event data to the webhook."
+        "enum": [
+          "standard"
+        ],
+        "type": "string",
+        "description": "Returns standard event data to the webhook.",
+        "x-client-original-const": "standard",
+        "x-ms-enum": {
+          "name": "TypeOneOf1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            }
+          ]
+        }
       },
       "UpsTrackAlertEnhancedTypeOneOf2": {
-        "type": "string",
-        "not": {},
         "title": "enhanced",
-        "description": "Adds additional webhook details as requested through the request \u0027eventPreferences\u0027 code. Currently available for package subscription request only."
+        "enum": [
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "Adds additional webhook details as requested through the request \u0027eventPreferences\u0027 code. Currently available for package subscription request only.",
+        "x-client-original-const": "enhanced",
+        "x-ms-enum": {
+          "name": "TypeOneOf2",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
       },
       "PostRequest": {
         "required": [
@@ -115490,52 +116918,86 @@
         "description": "The Update Pickup Info response for a successful request."
       },
       "SmartPickupPickupInfoV1PickupPoint": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf6"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf7"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf8"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf9"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf10"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf11"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf12"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf13"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf14"
-          }
+        "enum": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014"
         ],
-        "description": "Location of shipment pickup."
+        "type": "string",
+        "description": "Location of shipment pickup.",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "001",
+              "name": "Value001"
+            },
+            {
+              "value": "002",
+              "name": "Value002"
+            },
+            {
+              "value": "003",
+              "name": "Value003"
+            },
+            {
+              "value": "004",
+              "name": "Value004"
+            },
+            {
+              "value": "005",
+              "name": "Value005"
+            },
+            {
+              "value": "006",
+              "name": "Value006"
+            },
+            {
+              "value": "007",
+              "name": "Value007"
+            },
+            {
+              "value": "008",
+              "name": "Value008"
+            },
+            {
+              "value": "009",
+              "name": "Value009"
+            },
+            {
+              "value": "010",
+              "name": "Value010"
+            },
+            {
+              "value": "011",
+              "name": "Value011"
+            },
+            {
+              "value": "012",
+              "name": "Value012"
+            },
+            {
+              "value": "013",
+              "name": "Value013"
+            },
+            {
+              "value": "014",
+              "name": "Value014"
+            }
+          ]
+        }
       },
       "SmartPickupPickupInfoV1PickUpTime": {
         "required": [
@@ -115721,28 +117183,48 @@
         "description": "The UPS account information that you want to use for SmartPickupTrigger and NotificationIndicator"
       },
       "SmartPickupRequestV1SmartPickupRequestSmartPickupTrigger": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupTriggerV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupTriggerV1OneOf2"
-          }
+        "enum": [
+          "01",
+          "02"
         ],
-        "description": "Smart pickup trigger when the PU event (PRN) for the Smart PU is moved from pending to scheduled. Required when Action is Add or Updtae."
+        "type": "string",
+        "description": "Smart pickup trigger when the PU event (PRN) for the Smart PU is moved from pending to scheduled. Required when Action is Add or Updtae.",
+        "x-ms-enum": {
+          "name": "SmartPickupTriggerV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupRequestV1SmartPickupRequestNotificationIndicator": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupNotificationIndicatorV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupNotificationIndicatorV1OneOf2"
-          }
+        "enum": [
+          "01",
+          "02"
         ],
-        "description": "Notification opt-out - a CTA/link on the transactional PU alert that takes the User to a unique landing page\n(determined by whether the User/Email combo have a ups.com User ID or not) so that they can opt-out of receiving\nthese transactional alerts for this account. Required when Action is Add or Update.\n"
+        "type": "string",
+        "description": "Notification opt-out - a CTA/link on the transactional PU alert that takes the User to a unique landing page\n(determined by whether the User/Email combo have a ups.com User ID or not) so that they can opt-out of receiving\nthese transactional alerts for this account. Required when Action is Add or Update.\n",
+        "x-ms-enum": {
+          "name": "SmartPickupNotificationIndicatorV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupResponseV1SmartPickupResponseResponse": {
         "required": [
@@ -115770,28 +117252,48 @@
         "description": "The generic response container"
       },
       "SmartPickupResponseV1SmartPickupResponseSmartPickupTrigger": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupTriggerV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupTriggerV1OneOf2"
-          }
+        "enum": [
+          "01",
+          "02"
         ],
-        "description": "Smart pickup trigger when the PU event (PRN) for the Smart PU is moved from pending to scheduled. Required when Action is Add or Updtae."
+        "type": "string",
+        "description": "Smart pickup trigger when the PU event (PRN) for the Smart PU is moved from pending to scheduled. Required when Action is Add or Updtae.",
+        "x-ms-enum": {
+          "name": "SmartPickupTriggerV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "SmartPickupResponseV1SmartPickupResponseNotificationIndicator": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupNotificationIndicatorV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupNotificationIndicatorV1OneOf2"
-          }
+        "enum": [
+          "01",
+          "02"
         ],
-        "description": "Notification opt-out - a CTA/link on the transactional PU alert that takes the User to a unique landing page\n(determined by whether the User/Email combo have a ups.com User ID or not) so that they can opt-out of receiving\nthese transactional alerts for this account. Required when Action is Add or Update.\n"
+        "type": "string",
+        "description": "Notification opt-out - a CTA/link on the transactional PU alert that takes the User to a unique landing page\n(determined by whether the User/Email combo have a ups.com User ID or not) so that they can opt-out of receiving\nthese transactional alerts for this account. Required when Action is Add or Update.\n",
+        "x-ms-enum": {
+          "name": "SmartPickupNotificationIndicatorV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "01",
+              "name": "Value01"
+            },
+            {
+              "value": "02",
+              "name": "Value02"
+            }
+          ]
+        }
       },
       "ViewPickupInfoRequestV1ViewPickupInfoRequestLocale": {
         "required": [
@@ -115847,52 +117349,86 @@
         "description": "The UPS account information that you want to use for SmartPickupTrigger and NotificationIndicator"
       },
       "SmartPickupPickupInfoV1WeekendPickupInformationPickupPoint": {
-        "type": "string",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf1"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf2"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf3"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf4"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf5"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf6"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf7"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf8"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf9"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf10"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf11"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf12"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf13"
-          },
-          {
-            "$ref": "#/components/schemas/SmartPickupPickupPointV1OneOf14"
-          }
+        "enum": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014"
         ],
-        "description": "Location of shipment pickup."
+        "type": "string",
+        "description": "Location of shipment pickup.",
+        "x-ms-enum": {
+          "name": "SmartPickupPickupPointV1",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "001",
+              "name": "Value001"
+            },
+            {
+              "value": "002",
+              "name": "Value002"
+            },
+            {
+              "value": "003",
+              "name": "Value003"
+            },
+            {
+              "value": "004",
+              "name": "Value004"
+            },
+            {
+              "value": "005",
+              "name": "Value005"
+            },
+            {
+              "value": "006",
+              "name": "Value006"
+            },
+            {
+              "value": "007",
+              "name": "Value007"
+            },
+            {
+              "value": "008",
+              "name": "Value008"
+            },
+            {
+              "value": "009",
+              "name": "Value009"
+            },
+            {
+              "value": "010",
+              "name": "Value010"
+            },
+            {
+              "value": "011",
+              "name": "Value011"
+            },
+            {
+              "value": "012",
+              "name": "Value012"
+            },
+            {
+              "value": "013",
+              "name": "Value013"
+            },
+            {
+              "value": "014",
+              "name": "Value014"
+            }
+          ]
+        }
       },
       "SmartPickupPickupInfoV1WeekendPickupInformationPickUpTime": {
         "required": [
@@ -118428,6 +119964,182 @@
           "object"
         ],
         "description": "List of shipments received in request with the status if they were processed successfully or not"
+      },
+      "TypeValue": {
+        "enum": [
+          "standard",
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "type of subscription being requested",
+        "x-ms-enum": {
+          "name": "Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            },
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
+      },
+      "UpsTrackAlertType": {
+        "enum": [
+          "standard",
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "type of subscription being requested",
+        "x-ms-enum": {
+          "name": "Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            },
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
+      },
+      "UpsTrackAlertEnhancedReadyType": {
+        "enum": [
+          "standard",
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "type of subscription being requested",
+        "x-ms-enum": {
+          "name": "Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            },
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
+      },
+      "UpsTrackAlertEnhancedType": {
+        "enum": [
+          "standard",
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "type of subscription being requested",
+        "x-ms-enum": {
+          "name": "Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            },
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
+      },
+      "UpsTrackAlertReadyProcessSubscriptionTypeForTrackingNumberTypeParameter": {
+        "enum": [
+          "standard",
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "type of subscription being requested",
+        "x-ms-enum": {
+          "name": "Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            },
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
+      },
+      "UpsTrackAlertProcessSubscriptionTypeForTrackingNumberTypeParameter": {
+        "enum": [
+          "standard",
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "type of subscription being requested",
+        "x-ms-enum": {
+          "name": "Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            },
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
+      },
+      "UpsTrackAlertEnhancedReadyProcessSubscriptionTypeForTrackingNumberTypeParameter": {
+        "enum": [
+          "standard",
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "type of subscription being requested",
+        "x-ms-enum": {
+          "name": "Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            },
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
+      },
+      "UpsTrackAlertEnhancedProcessSubscriptionTypeForTrackingNumberTypeParameter": {
+        "enum": [
+          "standard",
+          "enhanced"
+        ],
+        "type": "string",
+        "description": "type of subscription being requested",
+        "x-ms-enum": {
+          "name": "Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "standard",
+              "name": "Standard"
+            },
+            {
+              "value": "enhanced",
+              "name": "Enhanced"
+            }
+          ]
+        }
       }
     },
     "responses": {
@@ -119896,16 +121608,7 @@
         "description": "Represents a subscription type that provides near real time updates on tracking status.",
         "required": true,
         "schema": {
-          "type": "string",
-          "oneOf": [
-            {
-              "$ref": "#/components/schemas/TypeOneOf1"
-            },
-            {
-              "$ref": "#/components/schemas/TypeOneOf2"
-            }
-          ],
-          "description": "type of subscription being requested"
+          "$ref": "#/components/schemas/TypeValue"
         }
       },
       "UPSTrackAlert_shipper-account-number": {
@@ -119942,16 +121645,7 @@
         "description": "Represents a subscription type that provides near real time updates on tracking status.",
         "required": true,
         "schema": {
-          "type": "string",
-          "oneOf": [
-            {
-              "$ref": "#/components/schemas/UpsTrackAlertTypeOneOf1"
-            },
-            {
-              "$ref": "#/components/schemas/UpsTrackAlertTypeOneOf2"
-            }
-          ],
-          "description": "type of subscription being requested"
+          "$ref": "#/components/schemas/UpsTrackAlertType"
         }
       },
       "UPSTrackAlertEnhanced_Ready_shipper-account-number": {
@@ -119988,16 +121682,7 @@
         "description": "Represents a subscription type that provides near real time updates on tracking status.",
         "required": true,
         "schema": {
-          "type": "string",
-          "oneOf": [
-            {
-              "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTypeOneOf1"
-            },
-            {
-              "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyTypeOneOf2"
-            }
-          ],
-          "description": "type of subscription being requested"
+          "$ref": "#/components/schemas/UpsTrackAlertEnhancedReadyType"
         }
       },
       "UPSTrackAlertEnhanced_shipper-account-number": {
@@ -120034,16 +121719,7 @@
         "description": "Represents a subscription type that provides near real time updates on tracking status.",
         "required": true,
         "schema": {
-          "type": "string",
-          "oneOf": [
-            {
-              "$ref": "#/components/schemas/UpsTrackAlertEnhancedTypeOneOf1"
-            },
-            {
-              "$ref": "#/components/schemas/UpsTrackAlertEnhancedTypeOneOf2"
-            }
-          ],
-          "description": "type of subscription being requested"
+          "$ref": "#/components/schemas/UpsTrackAlertEnhancedType"
         }
       }
     },

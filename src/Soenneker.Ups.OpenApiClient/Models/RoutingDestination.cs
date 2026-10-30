@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("portCode") is { } nullNodePortCode && nullNodePortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortCode = null;
+            if (parseNode.GetChildNode("portCode") is null) { _explicitNullValuePortCode = default!; _explicitNullProperties?.Remove("portCode"); }
+            else if (parseNode.GetChildNode("portCode") is { } nullNodePortCode && nullNodePortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The portCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortCode { get => _explicitNullValuePortCode; set { _explicitNullValuePortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portCode"); else _explicitNullProperties?.Remove("portCode"); } }
+        public string? PortCode { get => _explicitNullValuePortCode; set { _explicitNullValuePortCode = value; AdditionalData?.Remove("portCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portCode"); else _explicitNullProperties?.Remove("portCode"); } }
         private string? _explicitNullValuePortCode = default!;
 #nullable restore
 #else
-        public string PortCode { get => _explicitNullValuePortCode; set { _explicitNullValuePortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portCode"); else _explicitNullProperties?.Remove("portCode"); } }
+        public string PortCode { get => _explicitNullValuePortCode; set { _explicitNullValuePortCode = value; AdditionalData?.Remove("portCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portCode"); else _explicitNullProperties?.Remove("portCode"); } }
         private string _explicitNullValuePortCode = default!;
 #endif
         /// <summary>

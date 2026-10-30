@@ -18,14 +18,22 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
-            if (parseNode.GetChildNode("AttentionName") is { } nullNodeAttentionName && nullNodeAttentionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttentionName = null;
-            if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
-            if (parseNode.GetChildNode("FaxNumber") is { } nullNodeFaxNumber && nullNodeFaxNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxNumber = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("PhoneNumber") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
-            if (parseNode.GetChildNode("ShipperNumber") is { } nullNodeShipperNumber && nullNodeShipperNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperNumber = null;
-            if (parseNode.GetChildNode("TaxIdentificationNumber") is { } nullNodeTaxIdentificationNumber && nullNodeTaxIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdentificationNumber = null;
+            if (parseNode.GetChildNode("Address") is null) { _explicitNullValueAddress = default!; _explicitNullProperties?.Remove("Address"); }
+            else if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("AttentionName") is null) { _explicitNullValueAttentionName = default!; _explicitNullProperties?.Remove("AttentionName"); }
+            else if (parseNode.GetChildNode("AttentionName") is { } nullNodeAttentionName && nullNodeAttentionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttentionName = null;
+            if (parseNode.GetChildNode("EMailAddress") is null) { _explicitNullValueEMailAddress = default!; _explicitNullProperties?.Remove("EMailAddress"); }
+            else if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
+            if (parseNode.GetChildNode("FaxNumber") is null) { _explicitNullValueFaxNumber = default!; _explicitNullProperties?.Remove("FaxNumber"); }
+            else if (parseNode.GetChildNode("FaxNumber") is { } nullNodeFaxNumber && nullNodeFaxNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxNumber = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("PhoneNumber") is null) { _explicitNullValuePhoneNumber = default!; _explicitNullProperties?.Remove("PhoneNumber"); }
+            else if (parseNode.GetChildNode("PhoneNumber") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("ShipperNumber") is null) { _explicitNullValueShipperNumber = default!; _explicitNullProperties?.Remove("ShipperNumber"); }
+            else if (parseNode.GetChildNode("ShipperNumber") is { } nullNodeShipperNumber && nullNodeShipperNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperNumber = null;
+            if (parseNode.GetChildNode("TaxIdentificationNumber") is null) { _explicitNullValueTaxIdentificationNumber = default!; _explicitNullProperties?.Remove("TaxIdentificationNumber"); }
+            else if (parseNode.GetChildNode("TaxIdentificationNumber") is { } nullNodeTaxIdentificationNumber && nullNodeTaxIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdentificationNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,81 +41,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Information that specifies a physical location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipperAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipperAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipperAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipperAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipperAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipperAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>Shipper&apos;s Attention Name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AttentionName { get => _explicitNullValueAttentionName; set { _explicitNullValueAttentionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttentionName"); else _explicitNullProperties?.Remove("AttentionName"); } }
+        public string? AttentionName { get => _explicitNullValueAttentionName; set { _explicitNullValueAttentionName = value; AdditionalData?.Remove("AttentionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttentionName"); else _explicitNullProperties?.Remove("AttentionName"); } }
         private string? _explicitNullValueAttentionName = default!;
 #nullable restore
 #else
-        public string AttentionName { get => _explicitNullValueAttentionName; set { _explicitNullValueAttentionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttentionName"); else _explicitNullProperties?.Remove("AttentionName"); } }
+        public string AttentionName { get => _explicitNullValueAttentionName; set { _explicitNullValueAttentionName = value; AdditionalData?.Remove("AttentionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttentionName"); else _explicitNullProperties?.Remove("AttentionName"); } }
         private string _explicitNullValueAttentionName = default!;
 #endif
         /// <summary>Shipper&apos;s designated contact eMail address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        public string? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; AdditionalData?.Remove("EMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
         private string? _explicitNullValueEMailAddress = default!;
 #nullable restore
 #else
-        public string EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        public string EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; AdditionalData?.Remove("EMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
         private string _explicitNullValueEMailAddress = default!;
 #endif
         /// <summary>Shipper&apos;s Fax Number. US Fax numbers must be 10 digits. No formatting is allowed. Required if origin and destination countries or territories are different.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FaxNumber { get => _explicitNullValueFaxNumber; set { _explicitNullValueFaxNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FaxNumber"); else _explicitNullProperties?.Remove("FaxNumber"); } }
+        public string? FaxNumber { get => _explicitNullValueFaxNumber; set { _explicitNullValueFaxNumber = value; AdditionalData?.Remove("FaxNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FaxNumber"); else _explicitNullProperties?.Remove("FaxNumber"); } }
         private string? _explicitNullValueFaxNumber = default!;
 #nullable restore
 #else
-        public string FaxNumber { get => _explicitNullValueFaxNumber; set { _explicitNullValueFaxNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FaxNumber"); else _explicitNullProperties?.Remove("FaxNumber"); } }
+        public string FaxNumber { get => _explicitNullValueFaxNumber; set { _explicitNullValueFaxNumber = value; AdditionalData?.Remove("FaxNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FaxNumber"); else _explicitNullProperties?.Remove("FaxNumber"); } }
         private string _explicitNullValueFaxNumber = default!;
 #endif
         /// <summary>Shipper&apos;s company name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Shipper&apos;s Phone Number. US Phone numbers must be 10 digits. No formatting is allowed. Required if origin and destination countries or territories are different.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhoneNumber"); else _explicitNullProperties?.Remove("PhoneNumber"); } }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("PhoneNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhoneNumber"); else _explicitNullProperties?.Remove("PhoneNumber"); } }
         private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhoneNumber"); else _explicitNullProperties?.Remove("PhoneNumber"); } }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("PhoneNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhoneNumber"); else _explicitNullProperties?.Remove("PhoneNumber"); } }
         private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>Shipper&apos;s six digit alphanumeric account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
+        public string? ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; AdditionalData?.Remove("ShipperNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
         private string? _explicitNullValueShipperNumber = default!;
 #nullable restore
 #else
-        public string ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
+        public string ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; AdditionalData?.Remove("ShipperNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
         private string _explicitNullValueShipperNumber = default!;
 #endif
         /// <summary>Shipper&apos;s Tax Identification Number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
+        public string? TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; AdditionalData?.Remove("TaxIdentificationNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
         private string? _explicitNullValueTaxIdentificationNumber = default!;
 #nullable restore
 #else
-        public string TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
+        public string TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; AdditionalData?.Remove("TaxIdentificationNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
         private string _explicitNullValueTaxIdentificationNumber = default!;
 #endif
         /// <summary>

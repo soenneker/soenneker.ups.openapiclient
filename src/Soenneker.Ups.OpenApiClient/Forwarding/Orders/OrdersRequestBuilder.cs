@@ -177,7 +177,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://www.onlinetools.ups.com/api/forwarding/v1", "/Forwarding/orders", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -197,7 +197,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Orders.OrdersRequestBuilder.OrdersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/Forwarding/orders?criteria={criteria}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/Forwarding/orders?criteria={criteria}", RequestAdapter.BaseUrl, "https://www.onlinetools.ups.com/api/forwarding/v1", "/Forwarding/orders", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -218,7 +218,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PATCH, "{+baseurl}/Forwarding/orders?shipper_account_number={shipper_account_number}{&language*,old_date*,order_number*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PATCH, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/Forwarding/orders?shipper_account_number={shipper_account_number}{&language*,old_date*,order_number*}", RequestAdapter.BaseUrl, "https://www.onlinetools.ups.com/api/forwarding/v1", "/Forwarding/orders", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -240,7 +240,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Orders
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://www.onlinetools.ups.com/api/forwarding/v1", "/Forwarding/orders", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

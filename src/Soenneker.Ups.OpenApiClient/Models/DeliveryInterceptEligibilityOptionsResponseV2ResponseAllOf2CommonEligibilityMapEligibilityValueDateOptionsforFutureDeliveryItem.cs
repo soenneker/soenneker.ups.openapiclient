@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
-            if (parseNode.GetChildNode("dayOfWeekNumber") is { } nullNodeDayOfWeekNumber && nullNodeDayOfWeekNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekNumber = null;
-            if (parseNode.GetChildNode("dayOfWeekText") is { } nullNodeDayOfWeekText && nullNodeDayOfWeekText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekText = null;
+            if (parseNode.GetChildNode("date") is null) { _explicitNullValueDate = default!; _explicitNullProperties?.Remove("date"); }
+            else if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
+            if (parseNode.GetChildNode("dayOfWeekNumber") is null) { _explicitNullValueDayOfWeekNumber = default!; _explicitNullProperties?.Remove("dayOfWeekNumber"); }
+            else if (parseNode.GetChildNode("dayOfWeekNumber") is { } nullNodeDayOfWeekNumber && nullNodeDayOfWeekNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekNumber = null;
+            if (parseNode.GetChildNode("dayOfWeekText") is null) { _explicitNullValueDayOfWeekText = default!; _explicitNullProperties?.Remove("dayOfWeekText"); }
+            else if (parseNode.GetChildNode("dayOfWeekText") is { } nullNodeDayOfWeekText && nullNodeDayOfWeekText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekText = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Provides the future dates available for delivery</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
         private string? _explicitNullValueDate = default!;
 #nullable restore
 #else
-        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
         private string _explicitNullValueDate = default!;
 #endif
         /// <summary>Provides the number of the day of the week</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber? DayOfWeekNumber { get => _explicitNullValueDayOfWeekNumber; set { _explicitNullValueDayOfWeekNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeekNumber"); else _explicitNullProperties?.Remove("dayOfWeekNumber"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber? DayOfWeekNumber { get => _explicitNullValueDayOfWeekNumber; set { _explicitNullValueDayOfWeekNumber = value; AdditionalData?.Remove("dayOfWeekNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeekNumber"); else _explicitNullProperties?.Remove("dayOfWeekNumber"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber? _explicitNullValueDayOfWeekNumber = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber DayOfWeekNumber { get => _explicitNullValueDayOfWeekNumber; set { _explicitNullValueDayOfWeekNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeekNumber"); else _explicitNullProperties?.Remove("dayOfWeekNumber"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber _explicitNullValueDayOfWeekNumber = default!;
-#endif
         /// <summary>Provides the day of the week</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekText? DayOfWeekText { get => _explicitNullValueDayOfWeekText; set { _explicitNullValueDayOfWeekText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeekText"); else _explicitNullProperties?.Remove("dayOfWeekText"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekText? DayOfWeekText { get => _explicitNullValueDayOfWeekText; set { _explicitNullValueDayOfWeekText = value; AdditionalData?.Remove("dayOfWeekText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeekText"); else _explicitNullProperties?.Remove("dayOfWeekText"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekText? _explicitNullValueDayOfWeekText = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItem"/> and sets the default values.
@@ -74,8 +70,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "date", n => { Date = n.GetStringValue(); } },
-                { "dayOfWeekNumber", n => { DayOfWeekNumber = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber.CreateFromDiscriminatorValue); } },
-                { "dayOfWeekText", n => { DayOfWeekText = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekText>(); } },
+                { "dayOfWeekNumber", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDayOfWeekNumber = default; _explicitNullProperties?.Remove("dayOfWeekNumber"); AdditionalData["dayOfWeekNumber"] = unknown; } else { DayOfWeekNumber = parsed; AdditionalData.Remove("dayOfWeekNumber"); } } },
+                { "dayOfWeekText", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekText>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDayOfWeekText = default; _explicitNullProperties?.Remove("dayOfWeekText"); AdditionalData["dayOfWeekText"] = unknown; } else { DayOfWeekText = parsed; AdditionalData.Remove("dayOfWeekText"); } } },
             };
         }
         /// <summary>
@@ -86,7 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("date", Date);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber>("dayOfWeekNumber", DayOfWeekNumber);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekNumber>("dayOfWeekNumber", DayOfWeekNumber);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityOptionsResponseV2ResponseAllOf2CommonEligibilityMapEligibilityValueDateOptionsforFutureDeliveryItemDayOfWeekText>("dayOfWeekText", DayOfWeekText);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

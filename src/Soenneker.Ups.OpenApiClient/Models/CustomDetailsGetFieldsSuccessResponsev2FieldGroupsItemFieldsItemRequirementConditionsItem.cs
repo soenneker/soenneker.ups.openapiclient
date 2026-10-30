@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fieldKey") is { } nullNodeFieldKey && nullNodeFieldKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKey = null;
-            if (parseNode.GetChildNode("logicalOperator") is { } nullNodeLogicalOperator && nullNodeLogicalOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogicalOperator = null;
-            if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("fieldKey") is null) { _explicitNullValueFieldKey = default!; _explicitNullProperties?.Remove("fieldKey"); }
+            else if (parseNode.GetChildNode("fieldKey") is { } nullNodeFieldKey && nullNodeFieldKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKey = null;
+            if (parseNode.GetChildNode("logicalOperator") is null) { _explicitNullValueLogicalOperator = default!; _explicitNullProperties?.Remove("logicalOperator"); }
+            else if (parseNode.GetChildNode("logicalOperator") is { } nullNodeLogicalOperator && nullNodeLogicalOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogicalOperator = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,34 +33,29 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The key for the field that this rule is evaluating</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
+        public string? FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; AdditionalData?.Remove("fieldKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
         private string? _explicitNullValueFieldKey = default!;
 #nullable restore
 #else
-        public string FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
+        public string FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; AdditionalData?.Remove("fieldKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
         private string _explicitNullValueFieldKey = default!;
 #endif
         /// <summary>Determines how the rules are joined when evaluating the condition if there are multiple rules.Required for all rules except the first.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemLogicalOperator? LogicalOperator { get => _explicitNullValueLogicalOperator; set { _explicitNullValueLogicalOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logicalOperator"); else _explicitNullProperties?.Remove("logicalOperator"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemLogicalOperator? LogicalOperator { get => _explicitNullValueLogicalOperator; set { _explicitNullValueLogicalOperator = value; AdditionalData?.Remove("logicalOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logicalOperator"); else _explicitNullProperties?.Remove("logicalOperator"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemLogicalOperator? _explicitNullValueLogicalOperator = default!;
         /// <summary>The operator used when evaluating the rule</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator? _explicitNullValueOperator = default!;
+        public string? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private string? _explicitNullValueOperator = default!;
 #nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator _explicitNullValueOperator = default!;
-#endif
         /// <summary>The value used when evaluating the rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string _explicitNullValueValue = default!;
 #endif
         /// <summary>
@@ -85,8 +84,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "fieldKey", n => { FieldKey = n.GetStringValue(); } },
-                { "logicalOperator", n => { LogicalOperator = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemLogicalOperator>(); } },
-                { "operator", n => { Operator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator.CreateFromDiscriminatorValue); } },
+                { "logicalOperator", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemLogicalOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLogicalOperator = default; _explicitNullProperties?.Remove("logicalOperator"); AdditionalData["logicalOperator"] = unknown; } else { LogicalOperator = parsed; AdditionalData.Remove("logicalOperator"); } } },
+                { "operator", n => { Operator = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -99,7 +98,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("fieldKey", FieldKey);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemLogicalOperator>("logicalOperator", LogicalOperator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItemOperator>("operator", Operator);
+            writer.WriteStringValue("operator", Operator);
             writer.WriteStringValue("value", Value);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

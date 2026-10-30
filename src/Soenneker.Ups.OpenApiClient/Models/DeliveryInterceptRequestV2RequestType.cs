@@ -19,45 +19,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1? DeliveryInterceptRequestV2RequestTypeOneOf1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1 DeliveryInterceptRequestV2RequestTypeOneOf1 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2? DeliveryInterceptRequestV2RequestTypeOneOf2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2 DeliveryInterceptRequestV2RequestTypeOneOf2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3? DeliveryInterceptRequestV2RequestTypeOneOf3 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3 DeliveryInterceptRequestV2RequestTypeOneOf3 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4? DeliveryInterceptRequestV2RequestTypeOneOf4 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4 DeliveryInterceptRequestV2RequestTypeOneOf4 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5? DeliveryInterceptRequestV2RequestTypeOneOf5 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5 DeliveryInterceptRequestV2RequestTypeOneOf5 { get; set; }
-#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -68,6 +38,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestType();
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("WC".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1 deliveryInterceptRequestV2RequestTypeOneOf1Value)
+            {
+                result.DeliveryInterceptRequestV2RequestTypeOneOf1 = deliveryInterceptRequestV2RequestTypeOneOf1Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("SC".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2 deliveryInterceptRequestV2RequestTypeOneOf2Value)
+            {
+                result.DeliveryInterceptRequestV2RequestTypeOneOf2 = deliveryInterceptRequestV2RequestTypeOneOf2Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue2 && ("FD".Equals(unionEnumValue2.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3 deliveryInterceptRequestV2RequestTypeOneOf3Value)
+            {
+                result.DeliveryInterceptRequestV2RequestTypeOneOf3 = deliveryInterceptRequestV2RequestTypeOneOf3Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue3 && ("AA".Equals(unionEnumValue3.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4 deliveryInterceptRequestV2RequestTypeOneOf4Value)
+            {
+                result.DeliveryInterceptRequestV2RequestTypeOneOf4 = deliveryInterceptRequestV2RequestTypeOneOf4Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue4 && ("RS".Equals(unionEnumValue4.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5>() is global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5 deliveryInterceptRequestV2RequestTypeOneOf5Value)
+            {
+                result.DeliveryInterceptRequestV2RequestTypeOneOf5 = deliveryInterceptRequestV2RequestTypeOneOf5Value;
+            }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
             if (result.DeliveryInterceptRequestV2RequestTypeOneOf1 == null && result.DeliveryInterceptRequestV2RequestTypeOneOf2 == null && result.DeliveryInterceptRequestV2RequestTypeOneOf3 == null && result.DeliveryInterceptRequestV2RequestTypeOneOf4 == null && result.DeliveryInterceptRequestV2RequestTypeOneOf5 == null) result.UnrecognizedValue = unionPayload;
@@ -79,26 +69,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(DeliveryInterceptRequestV2RequestTypeOneOf1 != null)
-            {
-                return DeliveryInterceptRequestV2RequestTypeOneOf1.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptRequestV2RequestTypeOneOf2 != null)
-            {
-                return DeliveryInterceptRequestV2RequestTypeOneOf2.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptRequestV2RequestTypeOneOf3 != null)
-            {
-                return DeliveryInterceptRequestV2RequestTypeOneOf3.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptRequestV2RequestTypeOneOf4 != null)
-            {
-                return DeliveryInterceptRequestV2RequestTypeOneOf4.GetFieldDeserializers();
-            }
-            else if(DeliveryInterceptRequestV2RequestTypeOneOf5 != null)
-            {
-                return DeliveryInterceptRequestV2RequestTypeOneOf5.GetFieldDeserializers();
-            }
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -113,28 +85,23 @@ return result;
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(DeliveryInterceptRequestV2RequestTypeOneOf1 != null)
             {
-                if (DeliveryInterceptRequestV2RequestTypeOneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1>(null, DeliveryInterceptRequestV2RequestTypeOneOf1);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf1>(null, DeliveryInterceptRequestV2RequestTypeOneOf1);
             }
             else if(DeliveryInterceptRequestV2RequestTypeOneOf2 != null)
             {
-                if (DeliveryInterceptRequestV2RequestTypeOneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2>(null, DeliveryInterceptRequestV2RequestTypeOneOf2);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf2>(null, DeliveryInterceptRequestV2RequestTypeOneOf2);
             }
             else if(DeliveryInterceptRequestV2RequestTypeOneOf3 != null)
             {
-                if (DeliveryInterceptRequestV2RequestTypeOneOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3>(null, DeliveryInterceptRequestV2RequestTypeOneOf3);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf3>(null, DeliveryInterceptRequestV2RequestTypeOneOf3);
             }
             else if(DeliveryInterceptRequestV2RequestTypeOneOf4 != null)
             {
-                if (DeliveryInterceptRequestV2RequestTypeOneOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4>(null, DeliveryInterceptRequestV2RequestTypeOneOf4);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf4>(null, DeliveryInterceptRequestV2RequestTypeOneOf4);
             }
             else if(DeliveryInterceptRequestV2RequestTypeOneOf5 != null)
             {
-                if (DeliveryInterceptRequestV2RequestTypeOneOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5>(null, DeliveryInterceptRequestV2RequestTypeOneOf5);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptRequestV2RequestTypeOneOf5>(null, DeliveryInterceptRequestV2RequestTypeOneOf5);
             }
         }
     }

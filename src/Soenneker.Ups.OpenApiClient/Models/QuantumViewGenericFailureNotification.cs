@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FailedEmailAddress") is { } nullNodeFailedEmailAddress && nullNodeFailedEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedEmailAddress = null;
-            if (parseNode.GetChildNode("FailureNotificationCode") is { } nullNodeFailureNotificationCode && nullNodeFailureNotificationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureNotificationCode = null;
+            if (parseNode.GetChildNode("FailedEmailAddress") is null) { _explicitNullValueFailedEmailAddress = default!; _explicitNullProperties?.Remove("FailedEmailAddress"); }
+            else if (parseNode.GetChildNode("FailedEmailAddress") is { } nullNodeFailedEmailAddress && nullNodeFailedEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedEmailAddress = null;
+            if (parseNode.GetChildNode("FailureNotificationCode") is null) { _explicitNullValueFailureNotificationCode = default!; _explicitNullProperties?.Remove("FailureNotificationCode"); }
+            else if (parseNode.GetChildNode("FailureNotificationCode") is { } nullNodeFailureNotificationCode && nullNodeFailureNotificationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureNotificationCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Email address that failed when an attempt was made to send email to the customer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailedEmailAddress { get => _explicitNullValueFailedEmailAddress; set { _explicitNullValueFailedEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedEmailAddress"); else _explicitNullProperties?.Remove("FailedEmailAddress"); } }
+        public string? FailedEmailAddress { get => _explicitNullValueFailedEmailAddress; set { _explicitNullValueFailedEmailAddress = value; AdditionalData?.Remove("FailedEmailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedEmailAddress"); else _explicitNullProperties?.Remove("FailedEmailAddress"); } }
         private string? _explicitNullValueFailedEmailAddress = default!;
 #nullable restore
 #else
-        public string FailedEmailAddress { get => _explicitNullValueFailedEmailAddress; set { _explicitNullValueFailedEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedEmailAddress"); else _explicitNullProperties?.Remove("FailedEmailAddress"); } }
+        public string FailedEmailAddress { get => _explicitNullValueFailedEmailAddress; set { _explicitNullValueFailedEmailAddress = value; AdditionalData?.Remove("FailedEmailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailedEmailAddress"); else _explicitNullProperties?.Remove("FailedEmailAddress"); } }
         private string _explicitNullValueFailedEmailAddress = default!;
 #endif
         /// <summary>Failure notification code information describing code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewFailureNotificationFailureNotificationCode? FailureNotificationCode { get => _explicitNullValueFailureNotificationCode; set { _explicitNullValueFailureNotificationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailureNotificationCode"); else _explicitNullProperties?.Remove("FailureNotificationCode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewFailureNotificationFailureNotificationCode? FailureNotificationCode { get => _explicitNullValueFailureNotificationCode; set { _explicitNullValueFailureNotificationCode = value; AdditionalData?.Remove("FailureNotificationCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailureNotificationCode"); else _explicitNullProperties?.Remove("FailureNotificationCode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewFailureNotificationFailureNotificationCode? _explicitNullValueFailureNotificationCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewFailureNotificationFailureNotificationCode FailureNotificationCode { get => _explicitNullValueFailureNotificationCode; set { _explicitNullValueFailureNotificationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailureNotificationCode"); else _explicitNullProperties?.Remove("FailureNotificationCode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewFailureNotificationFailureNotificationCode FailureNotificationCode { get => _explicitNullValueFailureNotificationCode; set { _explicitNullValueFailureNotificationCode = value; AdditionalData?.Remove("FailureNotificationCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailureNotificationCode"); else _explicitNullProperties?.Remove("FailureNotificationCode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewFailureNotificationFailureNotificationCode _explicitNullValueFailureNotificationCode = default!;
 #endif
         /// <summary>

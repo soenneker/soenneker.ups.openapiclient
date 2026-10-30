@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FreightClass") is { } nullNodeFreightClass && nullNodeFreightClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightClass = null;
-            if (parseNode.GetChildNode("NMFC") is { } nullNodeNMFC && nullNodeNMFC.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NMFC = null;
+            if (parseNode.GetChildNode("FreightClass") is null) { _explicitNullValueFreightClass = default!; _explicitNullProperties?.Remove("FreightClass"); }
+            else if (parseNode.GetChildNode("FreightClass") is { } nullNodeFreightClass && nullNodeFreightClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightClass = null;
+            if (parseNode.GetChildNode("NMFC") is null) { _explicitNullValueNMFC = default!; _explicitNullProperties?.Remove("NMFC"); }
+            else if (parseNode.GetChildNode("NMFC") is { } nullNodeNMFC && nullNodeNMFC.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NMFC = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Freight Classification. Freight class partially determines the freight rate for the article.  See Appendix of the Rating Ground Freight Web Services Developers Guide for list of Freight classes. For GFP Only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreightClass { get => _explicitNullValueFreightClass; set { _explicitNullValueFreightClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightClass"); else _explicitNullProperties?.Remove("FreightClass"); } }
+        public string? FreightClass { get => _explicitNullValueFreightClass; set { _explicitNullValueFreightClass = value; AdditionalData?.Remove("FreightClass"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightClass"); else _explicitNullProperties?.Remove("FreightClass"); } }
         private string? _explicitNullValueFreightClass = default!;
 #nullable restore
 #else
-        public string FreightClass { get => _explicitNullValueFreightClass; set { _explicitNullValueFreightClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightClass"); else _explicitNullProperties?.Remove("FreightClass"); } }
+        public string FreightClass { get => _explicitNullValueFreightClass; set { _explicitNullValueFreightClass = value; AdditionalData?.Remove("FreightClass"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightClass"); else _explicitNullProperties?.Remove("FreightClass"); } }
         private string _explicitNullValueFreightClass = default!;
 #endif
         /// <summary>NMFC Commodity container.  For GFP Only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc? NMFC { get => _explicitNullValueNMFC; set { _explicitNullValueNMFC = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NMFC"); else _explicitNullProperties?.Remove("NMFC"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc? NMFC { get => _explicitNullValueNMFC; set { _explicitNullValueNMFC = value; AdditionalData?.Remove("NMFC"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NMFC"); else _explicitNullProperties?.Remove("NMFC"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc? _explicitNullValueNMFC = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc NMFC { get => _explicitNullValueNMFC; set { _explicitNullValueNMFC = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NMFC"); else _explicitNullProperties?.Remove("NMFC"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc NMFC { get => _explicitNullValueNMFC; set { _explicitNullValueNMFC = value; AdditionalData?.Remove("NMFC"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NMFC"); else _explicitNullProperties?.Remove("NMFC"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CommodityNmfc _explicitNullValueNMFC = default!;
 #endif
         /// <summary>

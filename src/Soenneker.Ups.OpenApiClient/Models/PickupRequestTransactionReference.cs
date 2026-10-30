@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CustomerContext") is { } nullNodeCustomerContext && nullNodeCustomerContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerContext = null;
+            if (parseNode.GetChildNode("CustomerContext") is null) { _explicitNullValueCustomerContext = default!; _explicitNullProperties?.Remove("CustomerContext"); }
+            else if (parseNode.GetChildNode("CustomerContext") is { } nullNodeCustomerContext && nullNodeCustomerContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerContext = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The CustomerContext information that is echoed back during response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
+        public string? CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; AdditionalData?.Remove("CustomerContext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
         private string? _explicitNullValueCustomerContext = default!;
 #nullable restore
 #else
-        public string CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
+        public string CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; AdditionalData?.Remove("CustomerContext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
         private string _explicitNullValueCustomerContext = default!;
 #endif
         /// <summary>

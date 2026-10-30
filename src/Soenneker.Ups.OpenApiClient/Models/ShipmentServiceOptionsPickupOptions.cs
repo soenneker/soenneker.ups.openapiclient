@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("HoldForPickupIndicator") is { } nullNodeHoldForPickupIndicator && nullNodeHoldForPickupIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldForPickupIndicator = null;
-            if (parseNode.GetChildNode("LiftGateAtPickupIndicator") is { } nullNodeLiftGateAtPickupIndicator && nullNodeLiftGateAtPickupIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiftGateAtPickupIndicator = null;
+            if (parseNode.GetChildNode("HoldForPickupIndicator") is null) { _explicitNullValueHoldForPickupIndicator = default!; _explicitNullProperties?.Remove("HoldForPickupIndicator"); }
+            else if (parseNode.GetChildNode("HoldForPickupIndicator") is { } nullNodeHoldForPickupIndicator && nullNodeHoldForPickupIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldForPickupIndicator = null;
+            if (parseNode.GetChildNode("LiftGateAtPickupIndicator") is null) { _explicitNullValueLiftGateAtPickupIndicator = default!; _explicitNullProperties?.Remove("LiftGateAtPickupIndicator"); }
+            else if (parseNode.GetChildNode("LiftGateAtPickupIndicator") is { } nullNodeLiftGateAtPickupIndicator && nullNodeLiftGateAtPickupIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiftGateAtPickupIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The presence of the tag HoldForPickupIndicator indicates that the user opted to hold the shipment at UPS location for pickup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickupIndicator"); else _explicitNullProperties?.Remove("HoldForPickupIndicator"); } }
+        public string? HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; AdditionalData?.Remove("HoldForPickupIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickupIndicator"); else _explicitNullProperties?.Remove("HoldForPickupIndicator"); } }
         private string? _explicitNullValueHoldForPickupIndicator = default!;
 #nullable restore
 #else
-        public string HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickupIndicator"); else _explicitNullProperties?.Remove("HoldForPickupIndicator"); } }
+        public string HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; AdditionalData?.Remove("HoldForPickupIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickupIndicator"); else _explicitNullProperties?.Remove("HoldForPickupIndicator"); } }
         private string _explicitNullValueHoldForPickupIndicator = default!;
 #endif
         /// <summary>The presence of the tag LiftGatePickupRequiredIndicator indicates that the shipment requires a lift gate for pickup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LiftGateAtPickupIndicator { get => _explicitNullValueLiftGateAtPickupIndicator; set { _explicitNullValueLiftGateAtPickupIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LiftGateAtPickupIndicator"); else _explicitNullProperties?.Remove("LiftGateAtPickupIndicator"); } }
+        public string? LiftGateAtPickupIndicator { get => _explicitNullValueLiftGateAtPickupIndicator; set { _explicitNullValueLiftGateAtPickupIndicator = value; AdditionalData?.Remove("LiftGateAtPickupIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LiftGateAtPickupIndicator"); else _explicitNullProperties?.Remove("LiftGateAtPickupIndicator"); } }
         private string? _explicitNullValueLiftGateAtPickupIndicator = default!;
 #nullable restore
 #else
-        public string LiftGateAtPickupIndicator { get => _explicitNullValueLiftGateAtPickupIndicator; set { _explicitNullValueLiftGateAtPickupIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LiftGateAtPickupIndicator"); else _explicitNullProperties?.Remove("LiftGateAtPickupIndicator"); } }
+        public string LiftGateAtPickupIndicator { get => _explicitNullValueLiftGateAtPickupIndicator; set { _explicitNullValueLiftGateAtPickupIndicator = value; AdditionalData?.Remove("LiftGateAtPickupIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LiftGateAtPickupIndicator"); else _explicitNullProperties?.Remove("LiftGateAtPickupIndicator"); } }
         private string _explicitNullValueLiftGateAtPickupIndicator = default!;
 #endif
         /// <summary>

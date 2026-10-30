@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
+            if (parseNode.GetChildNode("EMailAddress") is null) { _explicitNullValueEMailAddress = default!; _explicitNullProperties?.Remove("EMailAddress"); }
+            else if (parseNode.GetChildNode("EMailAddress") is { } nullNodeEMailAddress && nullNodeEMailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMailAddress = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The destination eMail address for the Label Delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        public string? EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; AdditionalData?.Remove("EMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
         private string? _explicitNullValueEMailAddress = default!;
 #nullable restore
 #else
-        public string EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
+        public string EMailAddress { get => _explicitNullValueEMailAddress; set { _explicitNullValueEMailAddress = value; AdditionalData?.Remove("EMailAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMailAddress"); else _explicitNullProperties?.Remove("EMailAddress"); } }
         private string _explicitNullValueEMailAddress = default!;
 #endif
         /// <summary>

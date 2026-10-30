@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("HazmatIndicator") is { } nullNodeHazmatIndicator && nullNodeHazmatIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazmatIndicator = null;
-            if (parseNode.GetChildNode("PalletInformation") is { } nullNodePalletInformation && nullNodePalletInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletInformation = null;
+            if (parseNode.GetChildNode("HazmatIndicator") is null) { _explicitNullValueHazmatIndicator = default!; _explicitNullProperties?.Remove("HazmatIndicator"); }
+            else if (parseNode.GetChildNode("HazmatIndicator") is { } nullNodeHazmatIndicator && nullNodeHazmatIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazmatIndicator = null;
+            if (parseNode.GetChildNode("PalletInformation") is null) { _explicitNullValuePalletInformation = default!; _explicitNullProperties?.Remove("PalletInformation"); }
+            else if (parseNode.GetChildNode("PalletInformation") is { } nullNodePalletInformation && nullNodePalletInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletInformation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates hazardous materials</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HazmatIndicator { get => _explicitNullValueHazmatIndicator; set { _explicitNullValueHazmatIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazmatIndicator"); else _explicitNullProperties?.Remove("HazmatIndicator"); } }
+        public string? HazmatIndicator { get => _explicitNullValueHazmatIndicator; set { _explicitNullValueHazmatIndicator = value; AdditionalData?.Remove("HazmatIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazmatIndicator"); else _explicitNullProperties?.Remove("HazmatIndicator"); } }
         private string? _explicitNullValueHazmatIndicator = default!;
 #nullable restore
 #else
-        public string HazmatIndicator { get => _explicitNullValueHazmatIndicator; set { _explicitNullValueHazmatIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazmatIndicator"); else _explicitNullProperties?.Remove("HazmatIndicator"); } }
+        public string HazmatIndicator { get => _explicitNullValueHazmatIndicator; set { _explicitNullValueHazmatIndicator = value; AdditionalData?.Remove("HazmatIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazmatIndicator"); else _explicitNullProperties?.Remove("HazmatIndicator"); } }
         private string _explicitNullValueHazmatIndicator = default!;
 #endif
         /// <summary>Pallet Details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPalletInformation? PalletInformation { get => _explicitNullValuePalletInformation; set { _explicitNullValuePalletInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletInformation"); else _explicitNullProperties?.Remove("PalletInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPalletInformation? PalletInformation { get => _explicitNullValuePalletInformation; set { _explicitNullValuePalletInformation = value; AdditionalData?.Remove("PalletInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletInformation"); else _explicitNullProperties?.Remove("PalletInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPalletInformation? _explicitNullValuePalletInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPalletInformation PalletInformation { get => _explicitNullValuePalletInformation; set { _explicitNullValuePalletInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletInformation"); else _explicitNullProperties?.Remove("PalletInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPalletInformation PalletInformation { get => _explicitNullValuePalletInformation; set { _explicitNullValuePalletInformation = value; AdditionalData?.Remove("PalletInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletInformation"); else _explicitNullProperties?.Remove("PalletInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPalletInformation _explicitNullValuePalletInformation = default!;
 #endif
         /// <summary>

@@ -18,34 +18,62 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("BarCodeImage") is { } nullNodeBarCodeImage && nullNodeBarCodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BarCodeImage = null;
-            if (parseNode.GetChildNode("BillableWeightCalculationMethod") is { } nullNodeBillableWeightCalculationMethod && nullNodeBillableWeightCalculationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableWeightCalculationMethod = null;
-            if (parseNode.GetChildNode("BillingWeight") is { } nullNodeBillingWeight && nullNodeBillingWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingWeight = null;
-            if (parseNode.GetChildNode("BillOfLading") is { } nullNodeBillOfLading && nullNodeBillOfLading.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillOfLading = null;
-            if (parseNode.GetChildNode("CODTurnInPage") is { } nullNodeCODTurnInPage && nullNodeCODTurnInPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODTurnInPage = null;
-            if (parseNode.GetChildNode("ControlLogReceipt") is { } nullNodeControlLogReceipt && nullNodeControlLogReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlLogReceipt = null;
-            if (parseNode.GetChildNode("DGPaperImage") is { } nullNodeDGPaperImage && nullNodeDGPaperImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DGPaperImage = null;
-            if (parseNode.GetChildNode("Disclaimer") is { } nullNodeDisclaimer && nullNodeDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disclaimer = null;
-            if (parseNode.GetChildNode("Form") is { } nullNodeForm && nullNodeForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Form = null;
-            if (parseNode.GetChildNode("FRSShipmentData") is { } nullNodeFRSShipmentData && nullNodeFRSShipmentData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FRSShipmentData = null;
-            if (parseNode.GetChildNode("GCCN") is { } nullNodeGCCN && nullNodeGCCN.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GCCN = null;
-            if (parseNode.GetChildNode("HighValueReport") is { } nullNodeHighValueReport && nullNodeHighValueReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HighValueReport = null;
-            if (parseNode.GetChildNode("LabelURL") is { } nullNodeLabelURL && nullNodeLabelURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelURL = null;
-            if (parseNode.GetChildNode("LocalLanguageLabelURL") is { } nullNodeLocalLanguageLabelURL && nullNodeLocalLanguageLabelURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalLanguageLabelURL = null;
-            if (parseNode.GetChildNode("LocalLanguageReceiptURL") is { } nullNodeLocalLanguageReceiptURL && nullNodeLocalLanguageReceiptURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalLanguageReceiptURL = null;
-            if (parseNode.GetChildNode("MasterCartonID") is { } nullNodeMasterCartonID && nullNodeMasterCartonID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MasterCartonID = null;
-            if (parseNode.GetChildNode("Message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("MIDualReturnShipmentKey") is { } nullNodeMIDualReturnShipmentKey && nullNodeMIDualReturnShipmentKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MIDualReturnShipmentKey = null;
-            if (parseNode.GetChildNode("NegotiatedRateCharges") is { } nullNodeNegotiatedRateCharges && nullNodeNegotiatedRateCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NegotiatedRateCharges = null;
-            if (parseNode.GetChildNode("PackageResults") is { } nullNodePackageResults && nullNodePackageResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageResults = null;
-            if (parseNode.GetChildNode("PalletLabel") is { } nullNodePalletLabel && nullNodePalletLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletLabel = null;
-            if (parseNode.GetChildNode("RatingMethod") is { } nullNodeRatingMethod && nullNodeRatingMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatingMethod = null;
-            if (parseNode.GetChildNode("ReceiptURL") is { } nullNodeReceiptURL && nullNodeReceiptURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceiptURL = null;
-            if (parseNode.GetChildNode("RoarRatedIndicator") is { } nullNodeRoarRatedIndicator && nullNodeRoarRatedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoarRatedIndicator = null;
-            if (parseNode.GetChildNode("ShipmentCharges") is { } nullNodeShipmentCharges && nullNodeShipmentCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCharges = null;
-            if (parseNode.GetChildNode("ShipmentIdentificationNumber") is { } nullNodeShipmentIdentificationNumber && nullNodeShipmentIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentIdentificationNumber = null;
-            if (parseNode.GetChildNode("SubProNumber") is { } nullNodeSubProNumber && nullNodeSubProNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubProNumber = null;
-            if (parseNode.GetChildNode("USI") is { } nullNodeUSI && nullNodeUSI.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) USI = null;
+            if (parseNode.GetChildNode("BarCodeImage") is null) { _explicitNullValueBarCodeImage = default!; _explicitNullProperties?.Remove("BarCodeImage"); }
+            else if (parseNode.GetChildNode("BarCodeImage") is { } nullNodeBarCodeImage && nullNodeBarCodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BarCodeImage = null;
+            if (parseNode.GetChildNode("BillableWeightCalculationMethod") is null) { _explicitNullValueBillableWeightCalculationMethod = default!; _explicitNullProperties?.Remove("BillableWeightCalculationMethod"); }
+            else if (parseNode.GetChildNode("BillableWeightCalculationMethod") is { } nullNodeBillableWeightCalculationMethod && nullNodeBillableWeightCalculationMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableWeightCalculationMethod = null;
+            if (parseNode.GetChildNode("BillingWeight") is null) { _explicitNullValueBillingWeight = default!; _explicitNullProperties?.Remove("BillingWeight"); }
+            else if (parseNode.GetChildNode("BillingWeight") is { } nullNodeBillingWeight && nullNodeBillingWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingWeight = null;
+            if (parseNode.GetChildNode("BillOfLading") is null) { _explicitNullValueBillOfLading = default!; _explicitNullProperties?.Remove("BillOfLading"); }
+            else if (parseNode.GetChildNode("BillOfLading") is { } nullNodeBillOfLading && nullNodeBillOfLading.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillOfLading = null;
+            if (parseNode.GetChildNode("CODTurnInPage") is null) { _explicitNullValueCODTurnInPage = default!; _explicitNullProperties?.Remove("CODTurnInPage"); }
+            else if (parseNode.GetChildNode("CODTurnInPage") is { } nullNodeCODTurnInPage && nullNodeCODTurnInPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODTurnInPage = null;
+            if (parseNode.GetChildNode("ControlLogReceipt") is null) { _explicitNullValueControlLogReceipt = default!; _explicitNullProperties?.Remove("ControlLogReceipt"); }
+            else if (parseNode.GetChildNode("ControlLogReceipt") is { } nullNodeControlLogReceipt && nullNodeControlLogReceipt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlLogReceipt = null;
+            if (parseNode.GetChildNode("DGPaperImage") is null) { _explicitNullValueDGPaperImage = default!; _explicitNullProperties?.Remove("DGPaperImage"); }
+            else if (parseNode.GetChildNode("DGPaperImage") is { } nullNodeDGPaperImage && nullNodeDGPaperImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DGPaperImage = null;
+            if (parseNode.GetChildNode("Disclaimer") is null) { _explicitNullValueDisclaimer = default!; _explicitNullProperties?.Remove("Disclaimer"); }
+            else if (parseNode.GetChildNode("Disclaimer") is { } nullNodeDisclaimer && nullNodeDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disclaimer = null;
+            if (parseNode.GetChildNode("Form") is null) { _explicitNullValueForm = default!; _explicitNullProperties?.Remove("Form"); }
+            else if (parseNode.GetChildNode("Form") is { } nullNodeForm && nullNodeForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Form = null;
+            if (parseNode.GetChildNode("FRSShipmentData") is null) { _explicitNullValueFRSShipmentData = default!; _explicitNullProperties?.Remove("FRSShipmentData"); }
+            else if (parseNode.GetChildNode("FRSShipmentData") is { } nullNodeFRSShipmentData && nullNodeFRSShipmentData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FRSShipmentData = null;
+            if (parseNode.GetChildNode("GCCN") is null) { _explicitNullValueGCCN = default!; _explicitNullProperties?.Remove("GCCN"); }
+            else if (parseNode.GetChildNode("GCCN") is { } nullNodeGCCN && nullNodeGCCN.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GCCN = null;
+            if (parseNode.GetChildNode("HighValueReport") is null) { _explicitNullValueHighValueReport = default!; _explicitNullProperties?.Remove("HighValueReport"); }
+            else if (parseNode.GetChildNode("HighValueReport") is { } nullNodeHighValueReport && nullNodeHighValueReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HighValueReport = null;
+            if (parseNode.GetChildNode("LabelURL") is null) { _explicitNullValueLabelURL = default!; _explicitNullProperties?.Remove("LabelURL"); }
+            else if (parseNode.GetChildNode("LabelURL") is { } nullNodeLabelURL && nullNodeLabelURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelURL = null;
+            if (parseNode.GetChildNode("LocalLanguageLabelURL") is null) { _explicitNullValueLocalLanguageLabelURL = default!; _explicitNullProperties?.Remove("LocalLanguageLabelURL"); }
+            else if (parseNode.GetChildNode("LocalLanguageLabelURL") is { } nullNodeLocalLanguageLabelURL && nullNodeLocalLanguageLabelURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalLanguageLabelURL = null;
+            if (parseNode.GetChildNode("LocalLanguageReceiptURL") is null) { _explicitNullValueLocalLanguageReceiptURL = default!; _explicitNullProperties?.Remove("LocalLanguageReceiptURL"); }
+            else if (parseNode.GetChildNode("LocalLanguageReceiptURL") is { } nullNodeLocalLanguageReceiptURL && nullNodeLocalLanguageReceiptURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalLanguageReceiptURL = null;
+            if (parseNode.GetChildNode("MasterCartonID") is null) { _explicitNullValueMasterCartonID = default!; _explicitNullProperties?.Remove("MasterCartonID"); }
+            else if (parseNode.GetChildNode("MasterCartonID") is { } nullNodeMasterCartonID && nullNodeMasterCartonID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MasterCartonID = null;
+            if (parseNode.GetChildNode("Message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("Message"); }
+            else if (parseNode.GetChildNode("Message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("MIDualReturnShipmentKey") is null) { _explicitNullValueMIDualReturnShipmentKey = default!; _explicitNullProperties?.Remove("MIDualReturnShipmentKey"); }
+            else if (parseNode.GetChildNode("MIDualReturnShipmentKey") is { } nullNodeMIDualReturnShipmentKey && nullNodeMIDualReturnShipmentKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MIDualReturnShipmentKey = null;
+            if (parseNode.GetChildNode("NegotiatedRateCharges") is null) { _explicitNullValueNegotiatedRateCharges = default!; _explicitNullProperties?.Remove("NegotiatedRateCharges"); }
+            else if (parseNode.GetChildNode("NegotiatedRateCharges") is { } nullNodeNegotiatedRateCharges && nullNodeNegotiatedRateCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NegotiatedRateCharges = null;
+            if (parseNode.GetChildNode("PackageResults") is null) { _explicitNullValuePackageResults = default!; _explicitNullProperties?.Remove("PackageResults"); }
+            else if (parseNode.GetChildNode("PackageResults") is { } nullNodePackageResults && nullNodePackageResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageResults = null;
+            if (parseNode.GetChildNode("PalletLabel") is null) { _explicitNullValuePalletLabel = default!; _explicitNullProperties?.Remove("PalletLabel"); }
+            else if (parseNode.GetChildNode("PalletLabel") is { } nullNodePalletLabel && nullNodePalletLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletLabel = null;
+            if (parseNode.GetChildNode("RatingMethod") is null) { _explicitNullValueRatingMethod = default!; _explicitNullProperties?.Remove("RatingMethod"); }
+            else if (parseNode.GetChildNode("RatingMethod") is { } nullNodeRatingMethod && nullNodeRatingMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatingMethod = null;
+            if (parseNode.GetChildNode("ReceiptURL") is null) { _explicitNullValueReceiptURL = default!; _explicitNullProperties?.Remove("ReceiptURL"); }
+            else if (parseNode.GetChildNode("ReceiptURL") is { } nullNodeReceiptURL && nullNodeReceiptURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceiptURL = null;
+            if (parseNode.GetChildNode("RoarRatedIndicator") is null) { _explicitNullValueRoarRatedIndicator = default!; _explicitNullProperties?.Remove("RoarRatedIndicator"); }
+            else if (parseNode.GetChildNode("RoarRatedIndicator") is { } nullNodeRoarRatedIndicator && nullNodeRoarRatedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoarRatedIndicator = null;
+            if (parseNode.GetChildNode("ShipmentCharges") is null) { _explicitNullValueShipmentCharges = default!; _explicitNullProperties?.Remove("ShipmentCharges"); }
+            else if (parseNode.GetChildNode("ShipmentCharges") is { } nullNodeShipmentCharges && nullNodeShipmentCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCharges = null;
+            if (parseNode.GetChildNode("ShipmentIdentificationNumber") is null) { _explicitNullValueShipmentIdentificationNumber = default!; _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); }
+            else if (parseNode.GetChildNode("ShipmentIdentificationNumber") is { } nullNodeShipmentIdentificationNumber && nullNodeShipmentIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentIdentificationNumber = null;
+            if (parseNode.GetChildNode("SubProNumber") is null) { _explicitNullValueSubProNumber = default!; _explicitNullProperties?.Remove("SubProNumber"); }
+            else if (parseNode.GetChildNode("SubProNumber") is { } nullNodeSubProNumber && nullNodeSubProNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubProNumber = null;
+            if (parseNode.GetChildNode("USI") is null) { _explicitNullValueUSI = default!; _explicitNullProperties?.Remove("USI"); }
+            else if (parseNode.GetChildNode("USI") is { } nullNodeUSI && nullNodeUSI.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) USI = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -53,281 +81,281 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Bar Code Image will be returned as Base 64 encoded graphic image. Bar Code Image will be returned if BarCodeImageIndicator or BarCodeAndLabelIndicator is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BarCodeImage { get => _explicitNullValueBarCodeImage; set { _explicitNullValueBarCodeImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BarCodeImage"); else _explicitNullProperties?.Remove("BarCodeImage"); } }
+        public string? BarCodeImage { get => _explicitNullValueBarCodeImage; set { _explicitNullValueBarCodeImage = value; AdditionalData?.Remove("BarCodeImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BarCodeImage"); else _explicitNullProperties?.Remove("BarCodeImage"); } }
         private string? _explicitNullValueBarCodeImage = default!;
 #nullable restore
 #else
-        public string BarCodeImage { get => _explicitNullValueBarCodeImage; set { _explicitNullValueBarCodeImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BarCodeImage"); else _explicitNullProperties?.Remove("BarCodeImage"); } }
+        public string BarCodeImage { get => _explicitNullValueBarCodeImage; set { _explicitNullValueBarCodeImage = value; AdditionalData?.Remove("BarCodeImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BarCodeImage"); else _explicitNullProperties?.Remove("BarCodeImage"); } }
         private string _explicitNullValueBarCodeImage = default!;
 #endif
         /// <summary>BillableWeightCalculationMethod is to indicate whether the billable weight calculation method utilized was - the package level or shipment level. This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Valid values:01 = Shipment Billable Weight02 = Package Billable Weight</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillableWeightCalculationMethod { get => _explicitNullValueBillableWeightCalculationMethod; set { _explicitNullValueBillableWeightCalculationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillableWeightCalculationMethod"); else _explicitNullProperties?.Remove("BillableWeightCalculationMethod"); } }
+        public string? BillableWeightCalculationMethod { get => _explicitNullValueBillableWeightCalculationMethod; set { _explicitNullValueBillableWeightCalculationMethod = value; AdditionalData?.Remove("BillableWeightCalculationMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillableWeightCalculationMethod"); else _explicitNullProperties?.Remove("BillableWeightCalculationMethod"); } }
         private string? _explicitNullValueBillableWeightCalculationMethod = default!;
 #nullable restore
 #else
-        public string BillableWeightCalculationMethod { get => _explicitNullValueBillableWeightCalculationMethod; set { _explicitNullValueBillableWeightCalculationMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillableWeightCalculationMethod"); else _explicitNullProperties?.Remove("BillableWeightCalculationMethod"); } }
+        public string BillableWeightCalculationMethod { get => _explicitNullValueBillableWeightCalculationMethod; set { _explicitNullValueBillableWeightCalculationMethod = value; AdditionalData?.Remove("BillableWeightCalculationMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillableWeightCalculationMethod"); else _explicitNullProperties?.Remove("BillableWeightCalculationMethod"); } }
         private string _explicitNullValueBillableWeightCalculationMethod = default!;
 #endif
         /// <summary>Billing Weight container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight? BillingWeight { get => _explicitNullValueBillingWeight; set { _explicitNullValueBillingWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingWeight"); else _explicitNullProperties?.Remove("BillingWeight"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight? BillingWeight { get => _explicitNullValueBillingWeight; set { _explicitNullValueBillingWeight = value; AdditionalData?.Remove("BillingWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingWeight"); else _explicitNullProperties?.Remove("BillingWeight"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight? _explicitNullValueBillingWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight BillingWeight { get => _explicitNullValueBillingWeight; set { _explicitNullValueBillingWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingWeight"); else _explicitNullProperties?.Remove("BillingWeight"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight BillingWeight { get => _explicitNullValueBillingWeight; set { _explicitNullValueBillingWeight = value; AdditionalData?.Remove("BillingWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingWeight"); else _explicitNullProperties?.Remove("BillingWeight"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsBillingWeight _explicitNullValueBillingWeight = default!;
 #endif
         /// <summary>Base64-encoded image data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillOfLading { get => _explicitNullValueBillOfLading; set { _explicitNullValueBillOfLading = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillOfLading"); else _explicitNullProperties?.Remove("BillOfLading"); } }
+        public string? BillOfLading { get => _explicitNullValueBillOfLading; set { _explicitNullValueBillOfLading = value; AdditionalData?.Remove("BillOfLading"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillOfLading"); else _explicitNullProperties?.Remove("BillOfLading"); } }
         private string? _explicitNullValueBillOfLading = default!;
 #nullable restore
 #else
-        public string BillOfLading { get => _explicitNullValueBillOfLading; set { _explicitNullValueBillOfLading = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillOfLading"); else _explicitNullProperties?.Remove("BillOfLading"); } }
+        public string BillOfLading { get => _explicitNullValueBillOfLading; set { _explicitNullValueBillOfLading = value; AdditionalData?.Remove("BillOfLading"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillOfLading"); else _explicitNullProperties?.Remove("BillOfLading"); } }
         private string _explicitNullValueBillOfLading = default!;
 #endif
         /// <summary>The container of the COD Turn In Page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage? CODTurnInPage { get => _explicitNullValueCODTurnInPage; set { _explicitNullValueCODTurnInPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODTurnInPage"); else _explicitNullProperties?.Remove("CODTurnInPage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage? CODTurnInPage { get => _explicitNullValueCODTurnInPage; set { _explicitNullValueCODTurnInPage = value; AdditionalData?.Remove("CODTurnInPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODTurnInPage"); else _explicitNullProperties?.Remove("CODTurnInPage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage? _explicitNullValueCODTurnInPage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage CODTurnInPage { get => _explicitNullValueCODTurnInPage; set { _explicitNullValueCODTurnInPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODTurnInPage"); else _explicitNullProperties?.Remove("CODTurnInPage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage CODTurnInPage { get => _explicitNullValueCODTurnInPage; set { _explicitNullValueCODTurnInPage = value; AdditionalData?.Remove("CODTurnInPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODTurnInPage"); else _explicitNullProperties?.Remove("CODTurnInPage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsCodTurnInPage _explicitNullValueCODTurnInPage = default!;
 #endif
         /// <summary>Container for the High Value reports when forward shipments have declared value between $999 and $50,000 USD. \nTwo copies of high value report needs to be pointed out.**NOTE:** For versions &gt;= v2409, this element will always be returned as an array. For requests using versions &lt; v2409, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt>? ControlLogReceipt { get => _explicitNullValueControlLogReceipt; set { _explicitNullValueControlLogReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ControlLogReceipt"); else _explicitNullProperties?.Remove("ControlLogReceipt"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt>? ControlLogReceipt { get => _explicitNullValueControlLogReceipt; set { _explicitNullValueControlLogReceipt = value; AdditionalData?.Remove("ControlLogReceipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ControlLogReceipt"); else _explicitNullProperties?.Remove("ControlLogReceipt"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt>? _explicitNullValueControlLogReceipt = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt> ControlLogReceipt { get => _explicitNullValueControlLogReceipt; set { _explicitNullValueControlLogReceipt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ControlLogReceipt"); else _explicitNullProperties?.Remove("ControlLogReceipt"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt> ControlLogReceipt { get => _explicitNullValueControlLogReceipt; set { _explicitNullValueControlLogReceipt = value; AdditionalData?.Remove("ControlLogReceipt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ControlLogReceipt"); else _explicitNullProperties?.Remove("ControlLogReceipt"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsControlLogReceipt> _explicitNullValueControlLogReceipt = default!;
 #endif
         /// <summary>Dangerous Good Paper Image in pdf format. One multipage PDF document will be returned that will contain all required Dangrous Goods shipping paper copies for all Dangerous Goods packages. Only returned when DGSignatoryInfo is present.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DGPaperImage { get => _explicitNullValueDGPaperImage; set { _explicitNullValueDGPaperImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DGPaperImage"); else _explicitNullProperties?.Remove("DGPaperImage"); } }
+        public List<string>? DGPaperImage { get => _explicitNullValueDGPaperImage; set { _explicitNullValueDGPaperImage = value; AdditionalData?.Remove("DGPaperImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DGPaperImage"); else _explicitNullProperties?.Remove("DGPaperImage"); } }
         private List<string>? _explicitNullValueDGPaperImage = default!;
 #nullable restore
 #else
-        public List<string> DGPaperImage { get => _explicitNullValueDGPaperImage; set { _explicitNullValueDGPaperImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DGPaperImage"); else _explicitNullProperties?.Remove("DGPaperImage"); } }
+        public List<string> DGPaperImage { get => _explicitNullValueDGPaperImage; set { _explicitNullValueDGPaperImage = value; AdditionalData?.Remove("DGPaperImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DGPaperImage"); else _explicitNullProperties?.Remove("DGPaperImage"); } }
         private List<string> _explicitNullValueDGPaperImage = default!;
 #endif
         /// <summary>Disclaimer would be used to provide more information to shipper regarding the processed shipment. This would be used to notify shipper about possible taxes and duties that might have been added or might apply to the shipment. This field would be returned only if TaxInformationIndicator is present in a request.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer>? Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer>? Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; AdditionalData?.Remove("Disclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer>? _explicitNullValueDisclaimer = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer> Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer> Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; AdditionalData?.Remove("Disclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsDisclaimer> _explicitNullValueDisclaimer = default!;
 #endif
         /// <summary>Container tag for the International forms image.   Form is returned for following shipments -Forward shipments,Shipments with PRL ReturnService,Electronic Return Label or Electronic Import Control Label shipments with SubVersion greater than or equal to 1707.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm? Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm? Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; AdditionalData?.Remove("Form"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm? _explicitNullValueForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm Form { get => _explicitNullValueForm; set { _explicitNullValueForm = value; AdditionalData?.Remove("Form"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Form"); else _explicitNullProperties?.Remove("Form"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsForm _explicitNullValueForm = default!;
 #endif
         /// <summary>Ground Freight Pricing Shipment data container. Ground Freight Pricing shipment data is only guaranteed to be returned for Ground Freight Pricing shipments only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData? FRSShipmentData { get => _explicitNullValueFRSShipmentData; set { _explicitNullValueFRSShipmentData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FRSShipmentData"); else _explicitNullProperties?.Remove("FRSShipmentData"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData? FRSShipmentData { get => _explicitNullValueFRSShipmentData; set { _explicitNullValueFRSShipmentData = value; AdditionalData?.Remove("FRSShipmentData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FRSShipmentData"); else _explicitNullProperties?.Remove("FRSShipmentData"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData? _explicitNullValueFRSShipmentData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData FRSShipmentData { get => _explicitNullValueFRSShipmentData; set { _explicitNullValueFRSShipmentData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FRSShipmentData"); else _explicitNullProperties?.Remove("FRSShipmentData"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData FRSShipmentData { get => _explicitNullValueFRSShipmentData; set { _explicitNullValueFRSShipmentData = value; AdditionalData?.Remove("FRSShipmentData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FRSShipmentData"); else _explicitNullProperties?.Remove("FRSShipmentData"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsFrsShipmentData _explicitNullValueFRSShipmentData = default!;
 #endif
         /// <summary>Global Consolidation Carton Number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GCCN { get => _explicitNullValueGCCN; set { _explicitNullValueGCCN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GCCN"); else _explicitNullProperties?.Remove("GCCN"); } }
+        public string? GCCN { get => _explicitNullValueGCCN; set { _explicitNullValueGCCN = value; AdditionalData?.Remove("GCCN"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GCCN"); else _explicitNullProperties?.Remove("GCCN"); } }
         private string? _explicitNullValueGCCN = default!;
 #nullable restore
 #else
-        public string GCCN { get => _explicitNullValueGCCN; set { _explicitNullValueGCCN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GCCN"); else _explicitNullProperties?.Remove("GCCN"); } }
+        public string GCCN { get => _explicitNullValueGCCN; set { _explicitNullValueGCCN = value; AdditionalData?.Remove("GCCN"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GCCN"); else _explicitNullProperties?.Remove("GCCN"); } }
         private string _explicitNullValueGCCN = default!;
 #endif
         /// <summary>Container for the High Value Report generated for ImportControl or Return shipments with high package declared value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport? HighValueReport { get => _explicitNullValueHighValueReport; set { _explicitNullValueHighValueReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HighValueReport"); else _explicitNullProperties?.Remove("HighValueReport"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport? HighValueReport { get => _explicitNullValueHighValueReport; set { _explicitNullValueHighValueReport = value; AdditionalData?.Remove("HighValueReport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HighValueReport"); else _explicitNullProperties?.Remove("HighValueReport"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport? _explicitNullValueHighValueReport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport HighValueReport { get => _explicitNullValueHighValueReport; set { _explicitNullValueHighValueReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HighValueReport"); else _explicitNullProperties?.Remove("HighValueReport"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport HighValueReport { get => _explicitNullValueHighValueReport; set { _explicitNullValueHighValueReport = value; AdditionalData?.Remove("HighValueReport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HighValueReport"); else _explicitNullProperties?.Remove("HighValueReport"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsHighValueReport _explicitNullValueHighValueReport = default!;
 #endif
         /// <summary>URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. LabelURL is returned only if the LabelLinksIndicator is requested for following shipments:Print/Electronic ImportControl shipmentPrint/Electronic Return shipment. Forward shipment except for Mail Innovations Forward.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LabelURL { get => _explicitNullValueLabelURL; set { _explicitNullValueLabelURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelURL"); else _explicitNullProperties?.Remove("LabelURL"); } }
+        public string? LabelURL { get => _explicitNullValueLabelURL; set { _explicitNullValueLabelURL = value; AdditionalData?.Remove("LabelURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelURL"); else _explicitNullProperties?.Remove("LabelURL"); } }
         private string? _explicitNullValueLabelURL = default!;
 #nullable restore
 #else
-        public string LabelURL { get => _explicitNullValueLabelURL; set { _explicitNullValueLabelURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelURL"); else _explicitNullProperties?.Remove("LabelURL"); } }
+        public string LabelURL { get => _explicitNullValueLabelURL; set { _explicitNullValueLabelURL = value; AdditionalData?.Remove("LabelURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelURL"); else _explicitNullProperties?.Remove("LabelURL"); } }
         private string _explicitNullValueLabelURL = default!;
 #endif
         /// <summary>URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. LocalLanguageLabelURL is returned only if the LabelLinksIndicator is requested for following shipments:Print/Electronic ImportControl shipmentPrint/Electronic Return shipment. Forward shipment except for Mail Innovations Forward.  Not returned if LabelLinksIndicator is requested with Locale element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocalLanguageLabelURL { get => _explicitNullValueLocalLanguageLabelURL; set { _explicitNullValueLocalLanguageLabelURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalLanguageLabelURL"); else _explicitNullProperties?.Remove("LocalLanguageLabelURL"); } }
+        public string? LocalLanguageLabelURL { get => _explicitNullValueLocalLanguageLabelURL; set { _explicitNullValueLocalLanguageLabelURL = value; AdditionalData?.Remove("LocalLanguageLabelURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalLanguageLabelURL"); else _explicitNullProperties?.Remove("LocalLanguageLabelURL"); } }
         private string? _explicitNullValueLocalLanguageLabelURL = default!;
 #nullable restore
 #else
-        public string LocalLanguageLabelURL { get => _explicitNullValueLocalLanguageLabelURL; set { _explicitNullValueLocalLanguageLabelURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalLanguageLabelURL"); else _explicitNullProperties?.Remove("LocalLanguageLabelURL"); } }
+        public string LocalLanguageLabelURL { get => _explicitNullValueLocalLanguageLabelURL; set { _explicitNullValueLocalLanguageLabelURL = value; AdditionalData?.Remove("LocalLanguageLabelURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalLanguageLabelURL"); else _explicitNullProperties?.Remove("LocalLanguageLabelURL"); } }
         private string _explicitNullValueLocalLanguageLabelURL = default!;
 #endif
         /// <summary>URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. LocalLanguageReceiptURL is returned only if the LabelLinksIndicator is requested for following shipments:Print/Electronic ImportControl shipmentPrint/Electronic Return shipment.   Not returned if LabelLinksIndicator is requested with Locale element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocalLanguageReceiptURL { get => _explicitNullValueLocalLanguageReceiptURL; set { _explicitNullValueLocalLanguageReceiptURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalLanguageReceiptURL"); else _explicitNullProperties?.Remove("LocalLanguageReceiptURL"); } }
+        public string? LocalLanguageReceiptURL { get => _explicitNullValueLocalLanguageReceiptURL; set { _explicitNullValueLocalLanguageReceiptURL = value; AdditionalData?.Remove("LocalLanguageReceiptURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalLanguageReceiptURL"); else _explicitNullProperties?.Remove("LocalLanguageReceiptURL"); } }
         private string? _explicitNullValueLocalLanguageReceiptURL = default!;
 #nullable restore
 #else
-        public string LocalLanguageReceiptURL { get => _explicitNullValueLocalLanguageReceiptURL; set { _explicitNullValueLocalLanguageReceiptURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalLanguageReceiptURL"); else _explicitNullProperties?.Remove("LocalLanguageReceiptURL"); } }
+        public string LocalLanguageReceiptURL { get => _explicitNullValueLocalLanguageReceiptURL; set { _explicitNullValueLocalLanguageReceiptURL = value; AdditionalData?.Remove("LocalLanguageReceiptURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocalLanguageReceiptURL"); else _explicitNullProperties?.Remove("LocalLanguageReceiptURL"); } }
         private string _explicitNullValueLocalLanguageReceiptURL = default!;
 #endif
         /// <summary>Master Carton ID. MasterCartonID will be return if MasterCartonIndicator is present in request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MasterCartonID { get => _explicitNullValueMasterCartonID; set { _explicitNullValueMasterCartonID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterCartonID"); else _explicitNullProperties?.Remove("MasterCartonID"); } }
+        public string? MasterCartonID { get => _explicitNullValueMasterCartonID; set { _explicitNullValueMasterCartonID = value; AdditionalData?.Remove("MasterCartonID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterCartonID"); else _explicitNullProperties?.Remove("MasterCartonID"); } }
         private string? _explicitNullValueMasterCartonID = default!;
 #nullable restore
 #else
-        public string MasterCartonID { get => _explicitNullValueMasterCartonID; set { _explicitNullValueMasterCartonID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterCartonID"); else _explicitNullProperties?.Remove("MasterCartonID"); } }
+        public string MasterCartonID { get => _explicitNullValueMasterCartonID; set { _explicitNullValueMasterCartonID = value; AdditionalData?.Remove("MasterCartonID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MasterCartonID"); else _explicitNullProperties?.Remove("MasterCartonID"); } }
         private string _explicitNullValueMasterCartonID = default!;
 #endif
         /// <summary>A message indicating the status or result of the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Message"); else _explicitNullProperties?.Remove("Message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("Message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Message"); else _explicitNullProperties?.Remove("Message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Message"); else _explicitNullProperties?.Remove("Message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("Message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Message"); else _explicitNullProperties?.Remove("Message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>MIDualReturnShipmentKey is unique key required to process Mail Innovations Dual Return Shipment. The unique identifier (key) would be returned in response of first phase of Mail Innovations Dual Return Shipments. This unique identifier (key) would be part of request for second phase of Mail Innovations Dual Return Shipments and would be played back in response for second phase of Mail Innovations Dual Return Shipment.  If the shipment is a Package return shipment, the package tracking number will be concatenated with the system time (in the format YYYY-MM-DDHH.MM.SS.NNN) and followed by service code. If the shipment is an MI Returns shipment, the Mail Manifest ID (MMI) will be concatenated with the system time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MIDualReturnShipmentKey { get => _explicitNullValueMIDualReturnShipmentKey; set { _explicitNullValueMIDualReturnShipmentKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MIDualReturnShipmentKey"); else _explicitNullProperties?.Remove("MIDualReturnShipmentKey"); } }
+        public string? MIDualReturnShipmentKey { get => _explicitNullValueMIDualReturnShipmentKey; set { _explicitNullValueMIDualReturnShipmentKey = value; AdditionalData?.Remove("MIDualReturnShipmentKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MIDualReturnShipmentKey"); else _explicitNullProperties?.Remove("MIDualReturnShipmentKey"); } }
         private string? _explicitNullValueMIDualReturnShipmentKey = default!;
 #nullable restore
 #else
-        public string MIDualReturnShipmentKey { get => _explicitNullValueMIDualReturnShipmentKey; set { _explicitNullValueMIDualReturnShipmentKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MIDualReturnShipmentKey"); else _explicitNullProperties?.Remove("MIDualReturnShipmentKey"); } }
+        public string MIDualReturnShipmentKey { get => _explicitNullValueMIDualReturnShipmentKey; set { _explicitNullValueMIDualReturnShipmentKey = value; AdditionalData?.Remove("MIDualReturnShipmentKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MIDualReturnShipmentKey"); else _explicitNullProperties?.Remove("MIDualReturnShipmentKey"); } }
         private string _explicitNullValueMIDualReturnShipmentKey = default!;
 #endif
         /// <summary>Negotiated Rates Charge Container.  For tiered rates and promotional discounts, if a particular shipment based on zone, origin, destination or even shipment size doesn&apos;t qualify for the existing discount then no negotiated rates container will be returned. Published rates will be the applicable rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges? NegotiatedRateCharges { get => _explicitNullValueNegotiatedRateCharges; set { _explicitNullValueNegotiatedRateCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedRateCharges"); else _explicitNullProperties?.Remove("NegotiatedRateCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges? NegotiatedRateCharges { get => _explicitNullValueNegotiatedRateCharges; set { _explicitNullValueNegotiatedRateCharges = value; AdditionalData?.Remove("NegotiatedRateCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedRateCharges"); else _explicitNullProperties?.Remove("NegotiatedRateCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges? _explicitNullValueNegotiatedRateCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges NegotiatedRateCharges { get => _explicitNullValueNegotiatedRateCharges; set { _explicitNullValueNegotiatedRateCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedRateCharges"); else _explicitNullProperties?.Remove("NegotiatedRateCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges NegotiatedRateCharges { get => _explicitNullValueNegotiatedRateCharges; set { _explicitNullValueNegotiatedRateCharges = value; AdditionalData?.Remove("NegotiatedRateCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedRateCharges"); else _explicitNullProperties?.Remove("NegotiatedRateCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsNegotiatedRateCharges _explicitNullValueNegotiatedRateCharges = default!;
 #endif
         /// <summary>Returned Package Information.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults>? PackageResults { get => _explicitNullValuePackageResults; set { _explicitNullValuePackageResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageResults"); else _explicitNullProperties?.Remove("PackageResults"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults>? PackageResults { get => _explicitNullValuePackageResults; set { _explicitNullValuePackageResults = value; AdditionalData?.Remove("PackageResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageResults"); else _explicitNullProperties?.Remove("PackageResults"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults>? _explicitNullValuePackageResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults> PackageResults { get => _explicitNullValuePackageResults; set { _explicitNullValuePackageResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageResults"); else _explicitNullProperties?.Remove("PackageResults"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults> PackageResults { get => _explicitNullValuePackageResults; set { _explicitNullValuePackageResults = value; AdditionalData?.Remove("PackageResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageResults"); else _explicitNullProperties?.Remove("PackageResults"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPackageResults> _explicitNullValuePackageResults = default!;
 #endif
         /// <summary>The PalletLabel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPalletLabel? PalletLabel { get => _explicitNullValuePalletLabel; set { _explicitNullValuePalletLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletLabel"); else _explicitNullProperties?.Remove("PalletLabel"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPalletLabel? PalletLabel { get => _explicitNullValuePalletLabel; set { _explicitNullValuePalletLabel = value; AdditionalData?.Remove("PalletLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletLabel"); else _explicitNullProperties?.Remove("PalletLabel"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPalletLabel? _explicitNullValuePalletLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPalletLabel PalletLabel { get => _explicitNullValuePalletLabel; set { _explicitNullValuePalletLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletLabel"); else _explicitNullProperties?.Remove("PalletLabel"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPalletLabel PalletLabel { get => _explicitNullValuePalletLabel; set { _explicitNullValuePalletLabel = value; AdditionalData?.Remove("PalletLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletLabel"); else _explicitNullProperties?.Remove("PalletLabel"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsPalletLabel _explicitNullValuePalletLabel = default!;
 #endif
         /// <summary>RatingMethod is to indicate whether the Shipment was rated as shipment level or package level. This information will be returned only if RatingMethodRequestedIndicator is present in the request.  Valid values:01 = Shipment level02 = Package level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RatingMethod { get => _explicitNullValueRatingMethod; set { _explicitNullValueRatingMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RatingMethod"); else _explicitNullProperties?.Remove("RatingMethod"); } }
+        public string? RatingMethod { get => _explicitNullValueRatingMethod; set { _explicitNullValueRatingMethod = value; AdditionalData?.Remove("RatingMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RatingMethod"); else _explicitNullProperties?.Remove("RatingMethod"); } }
         private string? _explicitNullValueRatingMethod = default!;
 #nullable restore
 #else
-        public string RatingMethod { get => _explicitNullValueRatingMethod; set { _explicitNullValueRatingMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RatingMethod"); else _explicitNullProperties?.Remove("RatingMethod"); } }
+        public string RatingMethod { get => _explicitNullValueRatingMethod; set { _explicitNullValueRatingMethod = value; AdditionalData?.Remove("RatingMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RatingMethod"); else _explicitNullProperties?.Remove("RatingMethod"); } }
         private string _explicitNullValueRatingMethod = default!;
 #endif
         /// <summary>URL will point to a page wherein label, receipt and other documents, if applicable, such as HighValueReport, CustomsInvoice and ImportControl instructions can be requested. ReceiptURL is returned only if the LabelLinksIndicator is requested for following shipments:Print/Electronic ImportControl shipmentPrint/Electronic Return shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReceiptURL { get => _explicitNullValueReceiptURL; set { _explicitNullValueReceiptURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceiptURL"); else _explicitNullProperties?.Remove("ReceiptURL"); } }
+        public string? ReceiptURL { get => _explicitNullValueReceiptURL; set { _explicitNullValueReceiptURL = value; AdditionalData?.Remove("ReceiptURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceiptURL"); else _explicitNullProperties?.Remove("ReceiptURL"); } }
         private string? _explicitNullValueReceiptURL = default!;
 #nullable restore
 #else
-        public string ReceiptURL { get => _explicitNullValueReceiptURL; set { _explicitNullValueReceiptURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceiptURL"); else _explicitNullProperties?.Remove("ReceiptURL"); } }
+        public string ReceiptURL { get => _explicitNullValueReceiptURL; set { _explicitNullValueReceiptURL = value; AdditionalData?.Remove("ReceiptURL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceiptURL"); else _explicitNullProperties?.Remove("ReceiptURL"); } }
         private string _explicitNullValueReceiptURL = default!;
 #endif
         /// <summary>Informational only</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoarRatedIndicator { get => _explicitNullValueRoarRatedIndicator; set { _explicitNullValueRoarRatedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoarRatedIndicator"); else _explicitNullProperties?.Remove("RoarRatedIndicator"); } }
+        public string? RoarRatedIndicator { get => _explicitNullValueRoarRatedIndicator; set { _explicitNullValueRoarRatedIndicator = value; AdditionalData?.Remove("RoarRatedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoarRatedIndicator"); else _explicitNullProperties?.Remove("RoarRatedIndicator"); } }
         private string? _explicitNullValueRoarRatedIndicator = default!;
 #nullable restore
 #else
-        public string RoarRatedIndicator { get => _explicitNullValueRoarRatedIndicator; set { _explicitNullValueRoarRatedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoarRatedIndicator"); else _explicitNullProperties?.Remove("RoarRatedIndicator"); } }
+        public string RoarRatedIndicator { get => _explicitNullValueRoarRatedIndicator; set { _explicitNullValueRoarRatedIndicator = value; AdditionalData?.Remove("RoarRatedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoarRatedIndicator"); else _explicitNullProperties?.Remove("RoarRatedIndicator"); } }
         private string _explicitNullValueRoarRatedIndicator = default!;
 #endif
         /// <summary>Shipment charges Container. Shipment charges info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsShipmentCharges? ShipmentCharges { get => _explicitNullValueShipmentCharges; set { _explicitNullValueShipmentCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentCharges"); else _explicitNullProperties?.Remove("ShipmentCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsShipmentCharges? ShipmentCharges { get => _explicitNullValueShipmentCharges; set { _explicitNullValueShipmentCharges = value; AdditionalData?.Remove("ShipmentCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentCharges"); else _explicitNullProperties?.Remove("ShipmentCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsShipmentCharges? _explicitNullValueShipmentCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsShipmentCharges ShipmentCharges { get => _explicitNullValueShipmentCharges; set { _explicitNullValueShipmentCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentCharges"); else _explicitNullProperties?.Remove("ShipmentCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsShipmentCharges ShipmentCharges { get => _explicitNullValueShipmentCharges; set { _explicitNullValueShipmentCharges = value; AdditionalData?.Remove("ShipmentCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentCharges"); else _explicitNullProperties?.Remove("ShipmentCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentResultsShipmentCharges _explicitNullValueShipmentCharges = default!;
 #endif
         /// <summary>Returned UPS shipment ID number.1Z Number of the first package in the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentIdentificationNumber { get => _explicitNullValueShipmentIdentificationNumber; set { _explicitNullValueShipmentIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentIdentificationNumber"); else _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); } }
+        public string? ShipmentIdentificationNumber { get => _explicitNullValueShipmentIdentificationNumber; set { _explicitNullValueShipmentIdentificationNumber = value; AdditionalData?.Remove("ShipmentIdentificationNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentIdentificationNumber"); else _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); } }
         private string? _explicitNullValueShipmentIdentificationNumber = default!;
 #nullable restore
 #else
-        public string ShipmentIdentificationNumber { get => _explicitNullValueShipmentIdentificationNumber; set { _explicitNullValueShipmentIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentIdentificationNumber"); else _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); } }
+        public string ShipmentIdentificationNumber { get => _explicitNullValueShipmentIdentificationNumber; set { _explicitNullValueShipmentIdentificationNumber = value; AdditionalData?.Remove("ShipmentIdentificationNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentIdentificationNumber"); else _explicitNullProperties?.Remove("ShipmentIdentificationNumber"); } }
         private string _explicitNullValueShipmentIdentificationNumber = default!;
 #endif
         /// <summary>The sub PRO number associated with the LTL shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubProNumber { get => _explicitNullValueSubProNumber; set { _explicitNullValueSubProNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubProNumber"); else _explicitNullProperties?.Remove("SubProNumber"); } }
+        public string? SubProNumber { get => _explicitNullValueSubProNumber; set { _explicitNullValueSubProNumber = value; AdditionalData?.Remove("SubProNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubProNumber"); else _explicitNullProperties?.Remove("SubProNumber"); } }
         private string? _explicitNullValueSubProNumber = default!;
 #nullable restore
 #else
-        public string SubProNumber { get => _explicitNullValueSubProNumber; set { _explicitNullValueSubProNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubProNumber"); else _explicitNullProperties?.Remove("SubProNumber"); } }
+        public string SubProNumber { get => _explicitNullValueSubProNumber; set { _explicitNullValueSubProNumber = value; AdditionalData?.Remove("SubProNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubProNumber"); else _explicitNullProperties?.Remove("SubProNumber"); } }
         private string _explicitNullValueSubProNumber = default!;
 #endif
         /// <summary>The unique shipment identifier (USI) is used to create Master, LTL and Child shipments. Used for Freight shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? USI { get => _explicitNullValueUSI; set { _explicitNullValueUSI = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USI"); else _explicitNullProperties?.Remove("USI"); } }
+        public string? USI { get => _explicitNullValueUSI; set { _explicitNullValueUSI = value; AdditionalData?.Remove("USI"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USI"); else _explicitNullProperties?.Remove("USI"); } }
         private string? _explicitNullValueUSI = default!;
 #nullable restore
 #else
-        public string USI { get => _explicitNullValueUSI; set { _explicitNullValueUSI = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USI"); else _explicitNullProperties?.Remove("USI"); } }
+        public string USI { get => _explicitNullValueUSI; set { _explicitNullValueUSI = value; AdditionalData?.Remove("USI"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("USI"); else _explicitNullProperties?.Remove("USI"); } }
         private string _explicitNullValueUSI = default!;
 #endif
         /// <summary>

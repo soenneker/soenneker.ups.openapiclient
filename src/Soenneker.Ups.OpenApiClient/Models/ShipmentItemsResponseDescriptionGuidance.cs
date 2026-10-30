@@ -18,45 +18,49 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("isMatched") is { } nullNodeIsMatched && nullNodeIsMatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMatched = null;
-            if (parseNode.GetChildNode("matchedKeyword") is { } nullNodeMatchedKeyword && nullNodeMatchedKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedKeyword = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("sourceListName") is { } nullNodeSourceListName && nullNodeSourceListName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceListName = null;
+            if (parseNode.GetChildNode("isMatched") is null) { _explicitNullValueIsMatched = default!; _explicitNullProperties?.Remove("isMatched"); }
+            else if (parseNode.GetChildNode("isMatched") is { } nullNodeIsMatched && nullNodeIsMatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMatched = null;
+            if (parseNode.GetChildNode("matchedKeyword") is null) { _explicitNullValueMatchedKeyword = default!; _explicitNullProperties?.Remove("matchedKeyword"); }
+            else if (parseNode.GetChildNode("matchedKeyword") is { } nullNodeMatchedKeyword && nullNodeMatchedKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchedKeyword = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("sourceListName") is null) { _explicitNullValueSourceListName = default!; _explicitNullProperties?.Remove("sourceListName"); }
+            else if (parseNode.GetChildNode("sourceListName") is { } nullNodeSourceListName && nullNodeSourceListName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceListName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the description guidance service has matched a keyword from the shipment description</summary>
-        public bool? IsMatched { get => _explicitNullValueIsMatched; set { _explicitNullValueIsMatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMatched"); else _explicitNullProperties?.Remove("isMatched"); } }
+        public bool? IsMatched { get => _explicitNullValueIsMatched; set { _explicitNullValueIsMatched = value; AdditionalData?.Remove("isMatched"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMatched"); else _explicitNullProperties?.Remove("isMatched"); } }
         private bool? _explicitNullValueIsMatched = default!;
         /// <summary>The keyword(s) from the shipment description that matched the system criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MatchedKeyword { get => _explicitNullValueMatchedKeyword; set { _explicitNullValueMatchedKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchedKeyword"); else _explicitNullProperties?.Remove("matchedKeyword"); } }
+        public string? MatchedKeyword { get => _explicitNullValueMatchedKeyword; set { _explicitNullValueMatchedKeyword = value; AdditionalData?.Remove("matchedKeyword"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchedKeyword"); else _explicitNullProperties?.Remove("matchedKeyword"); } }
         private string? _explicitNullValueMatchedKeyword = default!;
 #nullable restore
 #else
-        public string MatchedKeyword { get => _explicitNullValueMatchedKeyword; set { _explicitNullValueMatchedKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchedKeyword"); else _explicitNullProperties?.Remove("matchedKeyword"); } }
+        public string MatchedKeyword { get => _explicitNullValueMatchedKeyword; set { _explicitNullValueMatchedKeyword = value; AdditionalData?.Remove("matchedKeyword"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchedKeyword"); else _explicitNullProperties?.Remove("matchedKeyword"); } }
         private string _explicitNullValueMatchedKeyword = default!;
 #endif
         /// <summary>A message with guidance on how to improve the shipment description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>A list of terminology used to describe items from a particular regional source</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceListName { get => _explicitNullValueSourceListName; set { _explicitNullValueSourceListName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceListName"); else _explicitNullProperties?.Remove("sourceListName"); } }
+        public string? SourceListName { get => _explicitNullValueSourceListName; set { _explicitNullValueSourceListName = value; AdditionalData?.Remove("sourceListName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceListName"); else _explicitNullProperties?.Remove("sourceListName"); } }
         private string? _explicitNullValueSourceListName = default!;
 #nullable restore
 #else
-        public string SourceListName { get => _explicitNullValueSourceListName; set { _explicitNullValueSourceListName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceListName"); else _explicitNullProperties?.Remove("sourceListName"); } }
+        public string SourceListName { get => _explicitNullValueSourceListName; set { _explicitNullValueSourceListName = value; AdditionalData?.Remove("sourceListName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceListName"); else _explicitNullProperties?.Remove("sourceListName"); } }
         private string _explicitNullValueSourceListName = default!;
 #endif
         /// <summary>

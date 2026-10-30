@@ -19,20 +19,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("closeHour") is { } nullNodeCloseHour && nullNodeCloseHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseHour = null;
-            if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
-            if (parseNode.GetChildNode("dayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
-            if (parseNode.GetChildNode("howServicedDisplayCode") is { } nullNodeHowServicedDisplayCode && nullNodeHowServicedDisplayCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HowServicedDisplayCode = null;
-            if (parseNode.GetChildNode("howServicedDisplayText") is { } nullNodeHowServicedDisplayText && nullNodeHowServicedDisplayText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HowServicedDisplayText = null;
-            if (parseNode.GetChildNode("pickupOption") is { } nullNodePickupOption && nullNodePickupOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupOption = null;
-            if (parseNode.GetChildNode("pickupRequestOrderAction") is { } nullNodePickupRequestOrderAction && nullNodePickupRequestOrderAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupRequestOrderAction = null;
-            if (parseNode.GetChildNode("pickupRequestOrderType") is { } nullNodePickupRequestOrderType && nullNodePickupRequestOrderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupRequestOrderType = null;
-            if (parseNode.GetChildNode("pickupRequestStatus") is { } nullNodePickupRequestStatus && nullNodePickupRequestStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupRequestStatus = null;
-            if (parseNode.GetChildNode("pickupStatusDisplayCode") is { } nullNodePickupStatusDisplayCode && nullNodePickupStatusDisplayCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupStatusDisplayCode = null;
-            if (parseNode.GetChildNode("pickupStatusDisplayText") is { } nullNodePickupStatusDisplayText && nullNodePickupStatusDisplayText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupStatusDisplayText = null;
-            if (parseNode.GetChildNode("scheduledPickupTime") is { } nullNodeScheduledPickupTime && nullNodeScheduledPickupTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledPickupTime = null;
-            if (parseNode.GetChildNode("timeZoneNameFull") is { } nullNodeTimeZoneNameFull && nullNodeTimeZoneNameFull.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZoneNameFull = null;
-            if (parseNode.GetChildNode("timeZoneNameShort") is { } nullNodeTimeZoneNameShort && nullNodeTimeZoneNameShort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZoneNameShort = null;
+            if (parseNode.GetChildNode("closeHour") is null) { _explicitNullValueCloseHour = default!; _explicitNullProperties?.Remove("closeHour"); }
+            else if (parseNode.GetChildNode("closeHour") is { } nullNodeCloseHour && nullNodeCloseHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseHour = null;
+            if (parseNode.GetChildNode("date") is null) { _explicitNullValueDate = default!; _explicitNullProperties?.Remove("date"); }
+            else if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
+            if (parseNode.GetChildNode("dayOfWeek") is null) { _explicitNullValueDayOfWeek = default!; _explicitNullProperties?.Remove("dayOfWeek"); }
+            else if (parseNode.GetChildNode("dayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
+            if (parseNode.GetChildNode("howServicedDisplayCode") is null) { _explicitNullValueHowServicedDisplayCode = default!; _explicitNullProperties?.Remove("howServicedDisplayCode"); }
+            else if (parseNode.GetChildNode("howServicedDisplayCode") is { } nullNodeHowServicedDisplayCode && nullNodeHowServicedDisplayCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HowServicedDisplayCode = null;
+            if (parseNode.GetChildNode("howServicedDisplayText") is null) { _explicitNullValueHowServicedDisplayText = default!; _explicitNullProperties?.Remove("howServicedDisplayText"); }
+            else if (parseNode.GetChildNode("howServicedDisplayText") is { } nullNodeHowServicedDisplayText && nullNodeHowServicedDisplayText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HowServicedDisplayText = null;
+            if (parseNode.GetChildNode("pickupOption") is null) { _explicitNullValuePickupOption = default!; _explicitNullProperties?.Remove("pickupOption"); }
+            else if (parseNode.GetChildNode("pickupOption") is { } nullNodePickupOption && nullNodePickupOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupOption = null;
+            if (parseNode.GetChildNode("pickupRequestOrderAction") is null) { _explicitNullValuePickupRequestOrderAction = default!; _explicitNullProperties?.Remove("pickupRequestOrderAction"); }
+            else if (parseNode.GetChildNode("pickupRequestOrderAction") is { } nullNodePickupRequestOrderAction && nullNodePickupRequestOrderAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupRequestOrderAction = null;
+            if (parseNode.GetChildNode("pickupRequestOrderType") is null) { _explicitNullValuePickupRequestOrderType = default!; _explicitNullProperties?.Remove("pickupRequestOrderType"); }
+            else if (parseNode.GetChildNode("pickupRequestOrderType") is { } nullNodePickupRequestOrderType && nullNodePickupRequestOrderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupRequestOrderType = null;
+            if (parseNode.GetChildNode("pickupRequestStatus") is null) { _explicitNullValuePickupRequestStatus = default!; _explicitNullProperties?.Remove("pickupRequestStatus"); }
+            else if (parseNode.GetChildNode("pickupRequestStatus") is { } nullNodePickupRequestStatus && nullNodePickupRequestStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupRequestStatus = null;
+            if (parseNode.GetChildNode("pickupStatusDisplayCode") is null) { _explicitNullValuePickupStatusDisplayCode = default!; _explicitNullProperties?.Remove("pickupStatusDisplayCode"); }
+            else if (parseNode.GetChildNode("pickupStatusDisplayCode") is { } nullNodePickupStatusDisplayCode && nullNodePickupStatusDisplayCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupStatusDisplayCode = null;
+            if (parseNode.GetChildNode("pickupStatusDisplayText") is null) { _explicitNullValuePickupStatusDisplayText = default!; _explicitNullProperties?.Remove("pickupStatusDisplayText"); }
+            else if (parseNode.GetChildNode("pickupStatusDisplayText") is { } nullNodePickupStatusDisplayText && nullNodePickupStatusDisplayText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupStatusDisplayText = null;
+            if (parseNode.GetChildNode("scheduledPickupTime") is null) { _explicitNullValueScheduledPickupTime = default!; _explicitNullProperties?.Remove("scheduledPickupTime"); }
+            else if (parseNode.GetChildNode("scheduledPickupTime") is { } nullNodeScheduledPickupTime && nullNodeScheduledPickupTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledPickupTime = null;
+            if (parseNode.GetChildNode("timeZoneNameFull") is null) { _explicitNullValueTimeZoneNameFull = default!; _explicitNullProperties?.Remove("timeZoneNameFull"); }
+            else if (parseNode.GetChildNode("timeZoneNameFull") is { } nullNodeTimeZoneNameFull && nullNodeTimeZoneNameFull.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZoneNameFull = null;
+            if (parseNode.GetChildNode("timeZoneNameShort") is null) { _explicitNullValueTimeZoneNameShort = default!; _explicitNullProperties?.Remove("timeZoneNameShort"); }
+            else if (parseNode.GetChildNode("timeZoneNameShort") is { } nullNodeTimeZoneNameShort && nullNodeTimeZoneNameShort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeZoneNameShort = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -40,134 +54,134 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The closeHour property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CloseHour { get => _explicitNullValueCloseHour; set { _explicitNullValueCloseHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeHour"); else _explicitNullProperties?.Remove("closeHour"); } }
+        public string? CloseHour { get => _explicitNullValueCloseHour; set { _explicitNullValueCloseHour = value; AdditionalData?.Remove("closeHour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeHour"); else _explicitNullProperties?.Remove("closeHour"); } }
         private string? _explicitNullValueCloseHour = default!;
 #nullable restore
 #else
-        public string CloseHour { get => _explicitNullValueCloseHour; set { _explicitNullValueCloseHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeHour"); else _explicitNullProperties?.Remove("closeHour"); } }
+        public string CloseHour { get => _explicitNullValueCloseHour; set { _explicitNullValueCloseHour = value; AdditionalData?.Remove("closeHour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeHour"); else _explicitNullProperties?.Remove("closeHour"); } }
         private string _explicitNullValueCloseHour = default!;
 #endif
         /// <summary>The date property</summary>
-        public Date? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        public Date? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
         private Date? _explicitNullValueDate = default!;
         /// <summary>The dayOfWeek property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
+        public string? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("dayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
         private string? _explicitNullValueDayOfWeek = default!;
 #nullable restore
 #else
-        public string DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
+        public string DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("dayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
         private string _explicitNullValueDayOfWeek = default!;
 #endif
         /// <summary>The howServicedDisplayCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HowServicedDisplayCode { get => _explicitNullValueHowServicedDisplayCode; set { _explicitNullValueHowServicedDisplayCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("howServicedDisplayCode"); else _explicitNullProperties?.Remove("howServicedDisplayCode"); } }
+        public string? HowServicedDisplayCode { get => _explicitNullValueHowServicedDisplayCode; set { _explicitNullValueHowServicedDisplayCode = value; AdditionalData?.Remove("howServicedDisplayCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("howServicedDisplayCode"); else _explicitNullProperties?.Remove("howServicedDisplayCode"); } }
         private string? _explicitNullValueHowServicedDisplayCode = default!;
 #nullable restore
 #else
-        public string HowServicedDisplayCode { get => _explicitNullValueHowServicedDisplayCode; set { _explicitNullValueHowServicedDisplayCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("howServicedDisplayCode"); else _explicitNullProperties?.Remove("howServicedDisplayCode"); } }
+        public string HowServicedDisplayCode { get => _explicitNullValueHowServicedDisplayCode; set { _explicitNullValueHowServicedDisplayCode = value; AdditionalData?.Remove("howServicedDisplayCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("howServicedDisplayCode"); else _explicitNullProperties?.Remove("howServicedDisplayCode"); } }
         private string _explicitNullValueHowServicedDisplayCode = default!;
 #endif
         /// <summary>The howServicedDisplayText property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HowServicedDisplayText { get => _explicitNullValueHowServicedDisplayText; set { _explicitNullValueHowServicedDisplayText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("howServicedDisplayText"); else _explicitNullProperties?.Remove("howServicedDisplayText"); } }
+        public string? HowServicedDisplayText { get => _explicitNullValueHowServicedDisplayText; set { _explicitNullValueHowServicedDisplayText = value; AdditionalData?.Remove("howServicedDisplayText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("howServicedDisplayText"); else _explicitNullProperties?.Remove("howServicedDisplayText"); } }
         private string? _explicitNullValueHowServicedDisplayText = default!;
 #nullable restore
 #else
-        public string HowServicedDisplayText { get => _explicitNullValueHowServicedDisplayText; set { _explicitNullValueHowServicedDisplayText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("howServicedDisplayText"); else _explicitNullProperties?.Remove("howServicedDisplayText"); } }
+        public string HowServicedDisplayText { get => _explicitNullValueHowServicedDisplayText; set { _explicitNullValueHowServicedDisplayText = value; AdditionalData?.Remove("howServicedDisplayText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("howServicedDisplayText"); else _explicitNullProperties?.Remove("howServicedDisplayText"); } }
         private string _explicitNullValueHowServicedDisplayText = default!;
 #endif
         /// <summary>The pickupOption property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupOption { get => _explicitNullValuePickupOption; set { _explicitNullValuePickupOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupOption"); else _explicitNullProperties?.Remove("pickupOption"); } }
+        public string? PickupOption { get => _explicitNullValuePickupOption; set { _explicitNullValuePickupOption = value; AdditionalData?.Remove("pickupOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupOption"); else _explicitNullProperties?.Remove("pickupOption"); } }
         private string? _explicitNullValuePickupOption = default!;
 #nullable restore
 #else
-        public string PickupOption { get => _explicitNullValuePickupOption; set { _explicitNullValuePickupOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupOption"); else _explicitNullProperties?.Remove("pickupOption"); } }
+        public string PickupOption { get => _explicitNullValuePickupOption; set { _explicitNullValuePickupOption = value; AdditionalData?.Remove("pickupOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupOption"); else _explicitNullProperties?.Remove("pickupOption"); } }
         private string _explicitNullValuePickupOption = default!;
 #endif
         /// <summary>The pickupRequestOrderAction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupRequestOrderAction { get => _explicitNullValuePickupRequestOrderAction; set { _explicitNullValuePickupRequestOrderAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestOrderAction"); else _explicitNullProperties?.Remove("pickupRequestOrderAction"); } }
+        public string? PickupRequestOrderAction { get => _explicitNullValuePickupRequestOrderAction; set { _explicitNullValuePickupRequestOrderAction = value; AdditionalData?.Remove("pickupRequestOrderAction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestOrderAction"); else _explicitNullProperties?.Remove("pickupRequestOrderAction"); } }
         private string? _explicitNullValuePickupRequestOrderAction = default!;
 #nullable restore
 #else
-        public string PickupRequestOrderAction { get => _explicitNullValuePickupRequestOrderAction; set { _explicitNullValuePickupRequestOrderAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestOrderAction"); else _explicitNullProperties?.Remove("pickupRequestOrderAction"); } }
+        public string PickupRequestOrderAction { get => _explicitNullValuePickupRequestOrderAction; set { _explicitNullValuePickupRequestOrderAction = value; AdditionalData?.Remove("pickupRequestOrderAction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestOrderAction"); else _explicitNullProperties?.Remove("pickupRequestOrderAction"); } }
         private string _explicitNullValuePickupRequestOrderAction = default!;
 #endif
         /// <summary>The pickupRequestOrderType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupRequestOrderType { get => _explicitNullValuePickupRequestOrderType; set { _explicitNullValuePickupRequestOrderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestOrderType"); else _explicitNullProperties?.Remove("pickupRequestOrderType"); } }
+        public string? PickupRequestOrderType { get => _explicitNullValuePickupRequestOrderType; set { _explicitNullValuePickupRequestOrderType = value; AdditionalData?.Remove("pickupRequestOrderType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestOrderType"); else _explicitNullProperties?.Remove("pickupRequestOrderType"); } }
         private string? _explicitNullValuePickupRequestOrderType = default!;
 #nullable restore
 #else
-        public string PickupRequestOrderType { get => _explicitNullValuePickupRequestOrderType; set { _explicitNullValuePickupRequestOrderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestOrderType"); else _explicitNullProperties?.Remove("pickupRequestOrderType"); } }
+        public string PickupRequestOrderType { get => _explicitNullValuePickupRequestOrderType; set { _explicitNullValuePickupRequestOrderType = value; AdditionalData?.Remove("pickupRequestOrderType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestOrderType"); else _explicitNullProperties?.Remove("pickupRequestOrderType"); } }
         private string _explicitNullValuePickupRequestOrderType = default!;
 #endif
         /// <summary>The pickupRequestStatus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupRequestStatus { get => _explicitNullValuePickupRequestStatus; set { _explicitNullValuePickupRequestStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestStatus"); else _explicitNullProperties?.Remove("pickupRequestStatus"); } }
+        public string? PickupRequestStatus { get => _explicitNullValuePickupRequestStatus; set { _explicitNullValuePickupRequestStatus = value; AdditionalData?.Remove("pickupRequestStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestStatus"); else _explicitNullProperties?.Remove("pickupRequestStatus"); } }
         private string? _explicitNullValuePickupRequestStatus = default!;
 #nullable restore
 #else
-        public string PickupRequestStatus { get => _explicitNullValuePickupRequestStatus; set { _explicitNullValuePickupRequestStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestStatus"); else _explicitNullProperties?.Remove("pickupRequestStatus"); } }
+        public string PickupRequestStatus { get => _explicitNullValuePickupRequestStatus; set { _explicitNullValuePickupRequestStatus = value; AdditionalData?.Remove("pickupRequestStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupRequestStatus"); else _explicitNullProperties?.Remove("pickupRequestStatus"); } }
         private string _explicitNullValuePickupRequestStatus = default!;
 #endif
         /// <summary>The pickupStatusDisplayCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupStatusDisplayCode { get => _explicitNullValuePickupStatusDisplayCode; set { _explicitNullValuePickupStatusDisplayCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupStatusDisplayCode"); else _explicitNullProperties?.Remove("pickupStatusDisplayCode"); } }
+        public string? PickupStatusDisplayCode { get => _explicitNullValuePickupStatusDisplayCode; set { _explicitNullValuePickupStatusDisplayCode = value; AdditionalData?.Remove("pickupStatusDisplayCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupStatusDisplayCode"); else _explicitNullProperties?.Remove("pickupStatusDisplayCode"); } }
         private string? _explicitNullValuePickupStatusDisplayCode = default!;
 #nullable restore
 #else
-        public string PickupStatusDisplayCode { get => _explicitNullValuePickupStatusDisplayCode; set { _explicitNullValuePickupStatusDisplayCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupStatusDisplayCode"); else _explicitNullProperties?.Remove("pickupStatusDisplayCode"); } }
+        public string PickupStatusDisplayCode { get => _explicitNullValuePickupStatusDisplayCode; set { _explicitNullValuePickupStatusDisplayCode = value; AdditionalData?.Remove("pickupStatusDisplayCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupStatusDisplayCode"); else _explicitNullProperties?.Remove("pickupStatusDisplayCode"); } }
         private string _explicitNullValuePickupStatusDisplayCode = default!;
 #endif
         /// <summary>The pickupStatusDisplayText property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupStatusDisplayText { get => _explicitNullValuePickupStatusDisplayText; set { _explicitNullValuePickupStatusDisplayText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupStatusDisplayText"); else _explicitNullProperties?.Remove("pickupStatusDisplayText"); } }
+        public string? PickupStatusDisplayText { get => _explicitNullValuePickupStatusDisplayText; set { _explicitNullValuePickupStatusDisplayText = value; AdditionalData?.Remove("pickupStatusDisplayText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupStatusDisplayText"); else _explicitNullProperties?.Remove("pickupStatusDisplayText"); } }
         private string? _explicitNullValuePickupStatusDisplayText = default!;
 #nullable restore
 #else
-        public string PickupStatusDisplayText { get => _explicitNullValuePickupStatusDisplayText; set { _explicitNullValuePickupStatusDisplayText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupStatusDisplayText"); else _explicitNullProperties?.Remove("pickupStatusDisplayText"); } }
+        public string PickupStatusDisplayText { get => _explicitNullValuePickupStatusDisplayText; set { _explicitNullValuePickupStatusDisplayText = value; AdditionalData?.Remove("pickupStatusDisplayText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupStatusDisplayText"); else _explicitNullProperties?.Remove("pickupStatusDisplayText"); } }
         private string _explicitNullValuePickupStatusDisplayText = default!;
 #endif
         /// <summary>The scheduledPickupTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledPickupTime { get => _explicitNullValueScheduledPickupTime; set { _explicitNullValueScheduledPickupTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledPickupTime"); else _explicitNullProperties?.Remove("scheduledPickupTime"); } }
+        public string? ScheduledPickupTime { get => _explicitNullValueScheduledPickupTime; set { _explicitNullValueScheduledPickupTime = value; AdditionalData?.Remove("scheduledPickupTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledPickupTime"); else _explicitNullProperties?.Remove("scheduledPickupTime"); } }
         private string? _explicitNullValueScheduledPickupTime = default!;
 #nullable restore
 #else
-        public string ScheduledPickupTime { get => _explicitNullValueScheduledPickupTime; set { _explicitNullValueScheduledPickupTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledPickupTime"); else _explicitNullProperties?.Remove("scheduledPickupTime"); } }
+        public string ScheduledPickupTime { get => _explicitNullValueScheduledPickupTime; set { _explicitNullValueScheduledPickupTime = value; AdditionalData?.Remove("scheduledPickupTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledPickupTime"); else _explicitNullProperties?.Remove("scheduledPickupTime"); } }
         private string _explicitNullValueScheduledPickupTime = default!;
 #endif
         /// <summary>The timeZoneNameFull property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeZoneNameFull { get => _explicitNullValueTimeZoneNameFull; set { _explicitNullValueTimeZoneNameFull = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneNameFull"); else _explicitNullProperties?.Remove("timeZoneNameFull"); } }
+        public string? TimeZoneNameFull { get => _explicitNullValueTimeZoneNameFull; set { _explicitNullValueTimeZoneNameFull = value; AdditionalData?.Remove("timeZoneNameFull"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneNameFull"); else _explicitNullProperties?.Remove("timeZoneNameFull"); } }
         private string? _explicitNullValueTimeZoneNameFull = default!;
 #nullable restore
 #else
-        public string TimeZoneNameFull { get => _explicitNullValueTimeZoneNameFull; set { _explicitNullValueTimeZoneNameFull = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneNameFull"); else _explicitNullProperties?.Remove("timeZoneNameFull"); } }
+        public string TimeZoneNameFull { get => _explicitNullValueTimeZoneNameFull; set { _explicitNullValueTimeZoneNameFull = value; AdditionalData?.Remove("timeZoneNameFull"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneNameFull"); else _explicitNullProperties?.Remove("timeZoneNameFull"); } }
         private string _explicitNullValueTimeZoneNameFull = default!;
 #endif
         /// <summary>The timeZoneNameShort property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeZoneNameShort { get => _explicitNullValueTimeZoneNameShort; set { _explicitNullValueTimeZoneNameShort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneNameShort"); else _explicitNullProperties?.Remove("timeZoneNameShort"); } }
+        public string? TimeZoneNameShort { get => _explicitNullValueTimeZoneNameShort; set { _explicitNullValueTimeZoneNameShort = value; AdditionalData?.Remove("timeZoneNameShort"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneNameShort"); else _explicitNullProperties?.Remove("timeZoneNameShort"); } }
         private string? _explicitNullValueTimeZoneNameShort = default!;
 #nullable restore
 #else
-        public string TimeZoneNameShort { get => _explicitNullValueTimeZoneNameShort; set { _explicitNullValueTimeZoneNameShort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneNameShort"); else _explicitNullProperties?.Remove("timeZoneNameShort"); } }
+        public string TimeZoneNameShort { get => _explicitNullValueTimeZoneNameShort; set { _explicitNullValueTimeZoneNameShort = value; AdditionalData?.Remove("timeZoneNameShort"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeZoneNameShort"); else _explicitNullProperties?.Remove("timeZoneNameShort"); } }
         private string _explicitNullValueTimeZoneNameShort = default!;
 #endif
         /// <summary>

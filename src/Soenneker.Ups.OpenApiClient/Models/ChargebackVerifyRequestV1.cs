@@ -17,15 +17,24 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billingContact") is { } nullNodeBillingContact && nullNodeBillingContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingContact = null;
-            if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
-            if (parseNode.GetChildNode("orderCreatedAt") is { } nullNodeOrderCreatedAt && nullNodeOrderCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderCreatedAt = null;
-            if (parseNode.GetChildNode("orderId") is { } nullNodeOrderId && nullNodeOrderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderId = null;
-            if (parseNode.GetChildNode("orderValue") is { } nullNodeOrderValue && nullNodeOrderValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderValue = null;
-            if (parseNode.GetChildNode("paymentInformation") is { } nullNodePaymentInformation && nullNodePaymentInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentInformation = null;
-            if (parseNode.GetChildNode("products") is { } nullNodeProducts && nullNodeProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Products = null;
-            if (parseNode.GetChildNode("shippingContact") is { } nullNodeShippingContact && nullNodeShippingContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingContact = null;
-            if (parseNode.GetChildNode("userInformation") is { } nullNodeUserInformation && nullNodeUserInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserInformation = null;
+            if (parseNode.GetChildNode("billingContact") is null) { _explicitNullValueBillingContact = default!; _explicitNullProperties?.Remove("billingContact"); }
+            else if (parseNode.GetChildNode("billingContact") is { } nullNodeBillingContact && nullNodeBillingContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingContact = null;
+            if (parseNode.GetChildNode("currencyCode") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("currencyCode"); }
+            else if (parseNode.GetChildNode("currencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("orderCreatedAt") is null) { _explicitNullValueOrderCreatedAt = default!; _explicitNullProperties?.Remove("orderCreatedAt"); }
+            else if (parseNode.GetChildNode("orderCreatedAt") is { } nullNodeOrderCreatedAt && nullNodeOrderCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderCreatedAt = null;
+            if (parseNode.GetChildNode("orderId") is null) { _explicitNullValueOrderId = default!; _explicitNullProperties?.Remove("orderId"); }
+            else if (parseNode.GetChildNode("orderId") is { } nullNodeOrderId && nullNodeOrderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderId = null;
+            if (parseNode.GetChildNode("orderValue") is null) { _explicitNullValueOrderValue = default!; _explicitNullProperties?.Remove("orderValue"); }
+            else if (parseNode.GetChildNode("orderValue") is { } nullNodeOrderValue && nullNodeOrderValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderValue = null;
+            if (parseNode.GetChildNode("paymentInformation") is null) { _explicitNullValuePaymentInformation = default!; _explicitNullProperties?.Remove("paymentInformation"); }
+            else if (parseNode.GetChildNode("paymentInformation") is { } nullNodePaymentInformation && nullNodePaymentInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentInformation = null;
+            if (parseNode.GetChildNode("products") is null) { _explicitNullValueProducts = default!; _explicitNullProperties?.Remove("products"); }
+            else if (parseNode.GetChildNode("products") is { } nullNodeProducts && nullNodeProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Products = null;
+            if (parseNode.GetChildNode("shippingContact") is null) { _explicitNullValueShippingContact = default!; _explicitNullProperties?.Remove("shippingContact"); }
+            else if (parseNode.GetChildNode("shippingContact") is { } nullNodeShippingContact && nullNodeShippingContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingContact = null;
+            if (parseNode.GetChildNode("userInformation") is null) { _explicitNullValueUserInformation = default!; _explicitNullProperties?.Remove("userInformation"); }
+            else if (parseNode.GetChildNode("userInformation") is { } nullNodeUserInformation && nullNodeUserInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserInformation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,77 +42,77 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contact information structure used for billing and shipping</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1BillingContact? BillingContact { get => _explicitNullValueBillingContact; set { _explicitNullValueBillingContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingContact"); else _explicitNullProperties?.Remove("billingContact"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1BillingContact? BillingContact { get => _explicitNullValueBillingContact; set { _explicitNullValueBillingContact = value; AdditionalData?.Remove("billingContact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingContact"); else _explicitNullProperties?.Remove("billingContact"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1BillingContact? _explicitNullValueBillingContact = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1BillingContact BillingContact { get => _explicitNullValueBillingContact; set { _explicitNullValueBillingContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingContact"); else _explicitNullProperties?.Remove("billingContact"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1BillingContact BillingContact { get => _explicitNullValueBillingContact; set { _explicitNullValueBillingContact = value; AdditionalData?.Remove("billingContact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingContact"); else _explicitNullProperties?.Remove("billingContact"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1BillingContact _explicitNullValueBillingContact = default!;
 #endif
         /// <summary>The &lt;a href=&quot;https://www.iso.org/iso-4217-currency-codes.html&quot; target=&quot;_blank&quot;&gt;ISO 4217&lt;/a&gt; currency</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
         private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("currencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currencyCode"); else _explicitNullProperties?.Remove("currencyCode"); } }
         private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>The &lt;a href=&quot;https://www.rfc-editor.org/rfc/rfc3339#section-5.6&quot; target=&quot;_blank&quot;&gt;RFC 3339&lt;/a&gt; date and time</summary>
-        public DateTimeOffset? OrderCreatedAt { get => _explicitNullValueOrderCreatedAt; set { _explicitNullValueOrderCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderCreatedAt"); else _explicitNullProperties?.Remove("orderCreatedAt"); } }
+        public DateTimeOffset? OrderCreatedAt { get => _explicitNullValueOrderCreatedAt; set { _explicitNullValueOrderCreatedAt = value; AdditionalData?.Remove("orderCreatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderCreatedAt"); else _explicitNullProperties?.Remove("orderCreatedAt"); } }
         private DateTimeOffset? _explicitNullValueOrderCreatedAt = default!;
         /// <summary>Unique order identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderId"); else _explicitNullProperties?.Remove("orderId"); } }
+        public string? OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; AdditionalData?.Remove("orderId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderId"); else _explicitNullProperties?.Remove("orderId"); } }
         private string? _explicitNullValueOrderId = default!;
 #nullable restore
 #else
-        public string OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderId"); else _explicitNullProperties?.Remove("orderId"); } }
+        public string OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; AdditionalData?.Remove("orderId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderId"); else _explicitNullProperties?.Remove("orderId"); } }
         private string _explicitNullValueOrderId = default!;
 #endif
         /// <summary>Total order value</summary>
-        public float? OrderValue { get => _explicitNullValueOrderValue; set { _explicitNullValueOrderValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderValue"); else _explicitNullProperties?.Remove("orderValue"); } }
+        public float? OrderValue { get => _explicitNullValueOrderValue; set { _explicitNullValueOrderValue = value; AdditionalData?.Remove("orderValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderValue"); else _explicitNullProperties?.Remove("orderValue"); } }
         private float? _explicitNullValueOrderValue = default!;
         /// <summary>Payment details, nullable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation? PaymentInformation { get => _explicitNullValuePaymentInformation; set { _explicitNullValuePaymentInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentInformation"); else _explicitNullProperties?.Remove("paymentInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation? PaymentInformation { get => _explicitNullValuePaymentInformation; set { _explicitNullValuePaymentInformation = value; AdditionalData?.Remove("paymentInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentInformation"); else _explicitNullProperties?.Remove("paymentInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation? _explicitNullValuePaymentInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation PaymentInformation { get => _explicitNullValuePaymentInformation; set { _explicitNullValuePaymentInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentInformation"); else _explicitNullProperties?.Remove("paymentInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation PaymentInformation { get => _explicitNullValuePaymentInformation; set { _explicitNullValuePaymentInformation = value; AdditionalData?.Remove("paymentInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentInformation"); else _explicitNullProperties?.Remove("paymentInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1PaymentInformation _explicitNullValuePaymentInformation = default!;
 #endif
         /// <summary>List of products in the order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ProductsItem>? Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ProductsItem>? Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; AdditionalData?.Remove("products"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ProductsItem>? _explicitNullValueProducts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ProductsItem> Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ProductsItem> Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; AdditionalData?.Remove("products"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ProductsItem> _explicitNullValueProducts = default!;
 #endif
         /// <summary>Contact information structure used for billing and shipping</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ShippingContact? ShippingContact { get => _explicitNullValueShippingContact; set { _explicitNullValueShippingContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingContact"); else _explicitNullProperties?.Remove("shippingContact"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ShippingContact? ShippingContact { get => _explicitNullValueShippingContact; set { _explicitNullValueShippingContact = value; AdditionalData?.Remove("shippingContact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingContact"); else _explicitNullProperties?.Remove("shippingContact"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ShippingContact? _explicitNullValueShippingContact = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ShippingContact ShippingContact { get => _explicitNullValueShippingContact; set { _explicitNullValueShippingContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingContact"); else _explicitNullProperties?.Remove("shippingContact"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ShippingContact ShippingContact { get => _explicitNullValueShippingContact; set { _explicitNullValueShippingContact = value; AdditionalData?.Remove("shippingContact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingContact"); else _explicitNullProperties?.Remove("shippingContact"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1ShippingContact _explicitNullValueShippingContact = default!;
 #endif
         /// <summary>The userInformation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation? UserInformation { get => _explicitNullValueUserInformation; set { _explicitNullValueUserInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInformation"); else _explicitNullProperties?.Remove("userInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation? UserInformation { get => _explicitNullValueUserInformation; set { _explicitNullValueUserInformation = value; AdditionalData?.Remove("userInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInformation"); else _explicitNullProperties?.Remove("userInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation? _explicitNullValueUserInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation UserInformation { get => _explicitNullValueUserInformation; set { _explicitNullValueUserInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInformation"); else _explicitNullProperties?.Remove("userInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation UserInformation { get => _explicitNullValueUserInformation; set { _explicitNullValueUserInformation = value; AdditionalData?.Remove("userInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInformation"); else _explicitNullProperties?.Remove("userInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyRequestV1UserInformation _explicitNullValueUserInformation = default!;
 #endif
         /// <summary>

@@ -138,7 +138,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Quotes
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.Forwarding.Quotes.QuotesRequestBuilder.QuotesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/Forwarding/quotes?quote_id={quote_id}&request_type={request_type}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/Forwarding/quotes?quote_id={quote_id}&request_type={request_type}", RequestAdapter.BaseUrl, "https://www.onlinetools.ups.com/api/forwarding/v1", "/Forwarding/quotes", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -159,7 +159,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Quotes
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PATCH, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PATCH, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://www.onlinetools.ups.com/api/forwarding/v1", "/Forwarding/quotes", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -181,7 +181,7 @@ namespace Soenneker.Ups.OpenApiClient.Forwarding.Quotes
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://www.onlinetools.ups.com/api/forwarding/v1", "/Forwarding/quotes", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

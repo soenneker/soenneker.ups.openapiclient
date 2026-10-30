@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("SecurePINType") is { } nullNodeSecurePINType && nullNodeSecurePINType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurePINType = null;
+            if (parseNode.GetChildNode("SecurePINType") is null) { _explicitNullValueSecurePINType = default!; _explicitNullProperties?.Remove("SecurePINType"); }
+            else if (parseNode.GetChildNode("SecurePINType") is { } nullNodeSecurePINType && nullNodeSecurePINType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurePINType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Specifies the type of Secure PIN. Valid value is 2, which represents VDS (Shipper Generated PIN). This field is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecurePINType { get => _explicitNullValueSecurePINType; set { _explicitNullValueSecurePINType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurePINType"); else _explicitNullProperties?.Remove("SecurePINType"); } }
+        public string? SecurePINType { get => _explicitNullValueSecurePINType; set { _explicitNullValueSecurePINType = value; AdditionalData?.Remove("SecurePINType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurePINType"); else _explicitNullProperties?.Remove("SecurePINType"); } }
         private string? _explicitNullValueSecurePINType = default!;
 #nullable restore
 #else
-        public string SecurePINType { get => _explicitNullValueSecurePINType; set { _explicitNullValueSecurePINType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurePINType"); else _explicitNullProperties?.Remove("SecurePINType"); } }
+        public string SecurePINType { get => _explicitNullValueSecurePINType; set { _explicitNullValueSecurePINType = value; AdditionalData?.Remove("SecurePINType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurePINType"); else _explicitNullProperties?.Remove("SecurePINType"); } }
         private string _explicitNullValueSecurePINType = default!;
 #endif
         /// <summary>

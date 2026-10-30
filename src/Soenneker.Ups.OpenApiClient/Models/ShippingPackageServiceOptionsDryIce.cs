@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DryIceWeight") is { } nullNodeDryIceWeight && nullNodeDryIceWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DryIceWeight = null;
-            if (parseNode.GetChildNode("MedicalUseIndicator") is { } nullNodeMedicalUseIndicator && nullNodeMedicalUseIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MedicalUseIndicator = null;
-            if (parseNode.GetChildNode("RegulationSet") is { } nullNodeRegulationSet && nullNodeRegulationSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSet = null;
+            if (parseNode.GetChildNode("DryIceWeight") is null) { _explicitNullValueDryIceWeight = default!; _explicitNullProperties?.Remove("DryIceWeight"); }
+            else if (parseNode.GetChildNode("DryIceWeight") is { } nullNodeDryIceWeight && nullNodeDryIceWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DryIceWeight = null;
+            if (parseNode.GetChildNode("MedicalUseIndicator") is null) { _explicitNullValueMedicalUseIndicator = default!; _explicitNullProperties?.Remove("MedicalUseIndicator"); }
+            else if (parseNode.GetChildNode("MedicalUseIndicator") is { } nullNodeMedicalUseIndicator && nullNodeMedicalUseIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MedicalUseIndicator = null;
+            if (parseNode.GetChildNode("RegulationSet") is null) { _explicitNullValueRegulationSet = default!; _explicitNullProperties?.Remove("RegulationSet"); }
+            else if (parseNode.GetChildNode("RegulationSet") is { } nullNodeRegulationSet && nullNodeRegulationSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSet = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for Dry Ice weight.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceDryIceWeight? DryIceWeight { get => _explicitNullValueDryIceWeight; set { _explicitNullValueDryIceWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DryIceWeight"); else _explicitNullProperties?.Remove("DryIceWeight"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceDryIceWeight? DryIceWeight { get => _explicitNullValueDryIceWeight; set { _explicitNullValueDryIceWeight = value; AdditionalData?.Remove("DryIceWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DryIceWeight"); else _explicitNullProperties?.Remove("DryIceWeight"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceDryIceWeight? _explicitNullValueDryIceWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceDryIceWeight DryIceWeight { get => _explicitNullValueDryIceWeight; set { _explicitNullValueDryIceWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DryIceWeight"); else _explicitNullProperties?.Remove("DryIceWeight"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceDryIceWeight DryIceWeight { get => _explicitNullValueDryIceWeight; set { _explicitNullValueDryIceWeight = value; AdditionalData?.Remove("DryIceWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DryIceWeight"); else _explicitNullProperties?.Remove("DryIceWeight"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShippingDryIceDryIceWeight _explicitNullValueDryIceWeight = default!;
 #endif
         /// <summary>Presence/Absence Indicator. Any value inside is ignored. Relevant only in CFR regulation set. If present it is used to designate the dry Ice is for any medical use and rates are adjusted for DryIce weight more than 2.5 Kgs or 5.7 Lbs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MedicalUseIndicator { get => _explicitNullValueMedicalUseIndicator; set { _explicitNullValueMedicalUseIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MedicalUseIndicator"); else _explicitNullProperties?.Remove("MedicalUseIndicator"); } }
+        public string? MedicalUseIndicator { get => _explicitNullValueMedicalUseIndicator; set { _explicitNullValueMedicalUseIndicator = value; AdditionalData?.Remove("MedicalUseIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MedicalUseIndicator"); else _explicitNullProperties?.Remove("MedicalUseIndicator"); } }
         private string? _explicitNullValueMedicalUseIndicator = default!;
 #nullable restore
 #else
-        public string MedicalUseIndicator { get => _explicitNullValueMedicalUseIndicator; set { _explicitNullValueMedicalUseIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MedicalUseIndicator"); else _explicitNullProperties?.Remove("MedicalUseIndicator"); } }
+        public string MedicalUseIndicator { get => _explicitNullValueMedicalUseIndicator; set { _explicitNullValueMedicalUseIndicator = value; AdditionalData?.Remove("MedicalUseIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MedicalUseIndicator"); else _explicitNullProperties?.Remove("MedicalUseIndicator"); } }
         private string _explicitNullValueMedicalUseIndicator = default!;
 #endif
         /// <summary>Regulation set for dryIce Shipment. Valid values: CFR = HazMat regulated by US Dept. of Transportation within the U.S. or ground shipments to Canada, IATA = Worldwide Air movement, ADR = For EU‑domestic, Standard Service shipments containing non‑hazmat dry ice, the regulation set must be ADR. The following values are valid:IATA, CFR, ADR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
+        public string? RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; AdditionalData?.Remove("RegulationSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
         private string? _explicitNullValueRegulationSet = default!;
 #nullable restore
 #else
-        public string RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
+        public string RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; AdditionalData?.Remove("RegulationSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
         private string _explicitNullValueRegulationSet = default!;
 #endif
         /// <summary>

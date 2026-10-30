@@ -18,43 +18,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("gmtDateTime") is { } nullNodeGmtDateTime && nullNodeGmtDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtDateTime = null;
-            if (parseNode.GetChildNode("gmtOffset") is { } nullNodeGmtOffset && nullNodeGmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtOffset = null;
-            if (parseNode.GetChildNode("localDateTime") is { } nullNodeLocalDateTime && nullNodeLocalDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalDateTime = null;
-            if (parseNode.GetChildNode("temperatureInfo") is { } nullNodeTemperatureInfo && nullNodeTemperatureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemperatureInfo = null;
-            if (parseNode.GetChildNode("temperatureUOM") is { } nullNodeTemperatureUOM && nullNodeTemperatureUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemperatureUOM = null;
+            if (parseNode.GetChildNode("gmtDateTime") is null) { _explicitNullValueGmtDateTime = default!; _explicitNullProperties?.Remove("gmtDateTime"); }
+            else if (parseNode.GetChildNode("gmtDateTime") is { } nullNodeGmtDateTime && nullNodeGmtDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtDateTime = null;
+            if (parseNode.GetChildNode("gmtOffset") is null) { _explicitNullValueGmtOffset = default!; _explicitNullProperties?.Remove("gmtOffset"); }
+            else if (parseNode.GetChildNode("gmtOffset") is { } nullNodeGmtOffset && nullNodeGmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtOffset = null;
+            if (parseNode.GetChildNode("localDateTime") is null) { _explicitNullValueLocalDateTime = default!; _explicitNullProperties?.Remove("localDateTime"); }
+            else if (parseNode.GetChildNode("localDateTime") is { } nullNodeLocalDateTime && nullNodeLocalDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalDateTime = null;
+            if (parseNode.GetChildNode("temperatureInfo") is null) { _explicitNullValueTemperatureInfo = default!; _explicitNullProperties?.Remove("temperatureInfo"); }
+            else if (parseNode.GetChildNode("temperatureInfo") is { } nullNodeTemperatureInfo && nullNodeTemperatureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemperatureInfo = null;
+            if (parseNode.GetChildNode("temperatureUOM") is null) { _explicitNullValueTemperatureUOM = default!; _explicitNullProperties?.Remove("temperatureUOM"); }
+            else if (parseNode.GetChildNode("temperatureUOM") is { } nullNodeTemperatureUOM && nullNodeTemperatureUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemperatureUOM = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The gmtDateTime property</summary>
-        public DateTimeOffset? GmtDateTime { get => _explicitNullValueGmtDateTime; set { _explicitNullValueGmtDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtDateTime"); else _explicitNullProperties?.Remove("gmtDateTime"); } }
+        public DateTimeOffset? GmtDateTime { get => _explicitNullValueGmtDateTime; set { _explicitNullValueGmtDateTime = value; AdditionalData?.Remove("gmtDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtDateTime"); else _explicitNullProperties?.Remove("gmtDateTime"); } }
         private DateTimeOffset? _explicitNullValueGmtDateTime = default!;
         /// <summary>The gmtOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
+        public string? GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; AdditionalData?.Remove("gmtOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
         private string? _explicitNullValueGmtOffset = default!;
 #nullable restore
 #else
-        public string GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
+        public string GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; AdditionalData?.Remove("gmtOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
         private string _explicitNullValueGmtOffset = default!;
 #endif
         /// <summary>The localDateTime property</summary>
-        public DateTimeOffset? LocalDateTime { get => _explicitNullValueLocalDateTime; set { _explicitNullValueLocalDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localDateTime"); else _explicitNullProperties?.Remove("localDateTime"); } }
+        public DateTimeOffset? LocalDateTime { get => _explicitNullValueLocalDateTime; set { _explicitNullValueLocalDateTime = value; AdditionalData?.Remove("localDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localDateTime"); else _explicitNullProperties?.Remove("localDateTime"); } }
         private DateTimeOffset? _explicitNullValueLocalDateTime = default!;
         /// <summary>Temperature value of the container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemperatureInfo { get => _explicitNullValueTemperatureInfo; set { _explicitNullValueTemperatureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperatureInfo"); else _explicitNullProperties?.Remove("temperatureInfo"); } }
+        public string? TemperatureInfo { get => _explicitNullValueTemperatureInfo; set { _explicitNullValueTemperatureInfo = value; AdditionalData?.Remove("temperatureInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperatureInfo"); else _explicitNullProperties?.Remove("temperatureInfo"); } }
         private string? _explicitNullValueTemperatureInfo = default!;
 #nullable restore
 #else
-        public string TemperatureInfo { get => _explicitNullValueTemperatureInfo; set { _explicitNullValueTemperatureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperatureInfo"); else _explicitNullProperties?.Remove("temperatureInfo"); } }
+        public string TemperatureInfo { get => _explicitNullValueTemperatureInfo; set { _explicitNullValueTemperatureInfo = value; AdditionalData?.Remove("temperatureInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperatureInfo"); else _explicitNullProperties?.Remove("temperatureInfo"); } }
         private string _explicitNullValueTemperatureInfo = default!;
 #endif
         /// <summary>Temperature unit of measurement</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.TemperatureTemperatureUom? TemperatureUOM { get => _explicitNullValueTemperatureUOM; set { _explicitNullValueTemperatureUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperatureUOM"); else _explicitNullProperties?.Remove("temperatureUOM"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TemperatureTemperatureUom? TemperatureUOM { get => _explicitNullValueTemperatureUOM; set { _explicitNullValueTemperatureUOM = value; AdditionalData?.Remove("temperatureUOM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperatureUOM"); else _explicitNullProperties?.Remove("temperatureUOM"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TemperatureTemperatureUom? _explicitNullValueTemperatureUOM = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SensorDataTemperature"/> and sets the default values.
@@ -85,7 +90,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "gmtOffset", n => { GmtOffset = n.GetStringValue(); } },
                 { "localDateTime", n => { LocalDateTime = n.GetDateTimeOffsetValue(); } },
                 { "temperatureInfo", n => { TemperatureInfo = n.GetStringValue(); } },
-                { "temperatureUOM", n => { TemperatureUOM = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TemperatureTemperatureUom>(); } },
+                { "temperatureUOM", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.TemperatureTemperatureUom>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTemperatureUOM = default; _explicitNullProperties?.Remove("temperatureUOM"); AdditionalData["temperatureUOM"] = unknown; } else { TemperatureUOM = parsed; AdditionalData.Remove("temperatureUOM"); } } },
             };
         }
         /// <summary>

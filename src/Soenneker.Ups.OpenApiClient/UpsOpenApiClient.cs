@@ -294,6 +294,9 @@ namespace Soenneker.Ups.OpenApiClient
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
         public UpsOpenApiClient(IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}", new Dictionary<string, object>())
         {
+            // Preserve declared operation service roots.
+            if (string.IsNullOrEmpty(RequestAdapter.BaseUrl)) RequestAdapter.BaseUrl = "https://wwwcie.ups.com/api";
+            PathParameters["baseurl"] = RequestAdapter.BaseUrl;
             ApiClientBuilder.RegisterDefaultSerializer<JsonSerializationWriterFactory>();
             ApiClientBuilder.RegisterDefaultSerializer<TextSerializationWriterFactory>();
             ApiClientBuilder.RegisterDefaultSerializer<FormSerializationWriterFactory>();

@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Bookmark") is { } nullNodeBookmark && nullNodeBookmark.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bookmark = null;
-            if (parseNode.GetChildNode("LocationID") is { } nullNodeLocationID && nullNodeLocationID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationID = null;
-            if (parseNode.GetChildNode("ReceivingAddressName") is { } nullNodeReceivingAddressName && nullNodeReceivingAddressName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivingAddressName = null;
+            if (parseNode.GetChildNode("Bookmark") is null) { _explicitNullValueBookmark = default!; _explicitNullProperties?.Remove("Bookmark"); }
+            else if (parseNode.GetChildNode("Bookmark") is { } nullNodeBookmark && nullNodeBookmark.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bookmark = null;
+            if (parseNode.GetChildNode("LocationID") is null) { _explicitNullValueLocationID = default!; _explicitNullProperties?.Remove("LocationID"); }
+            else if (parseNode.GetChildNode("LocationID") is { } nullNodeLocationID && nullNodeLocationID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationID = null;
+            if (parseNode.GetChildNode("ReceivingAddressName") is null) { _explicitNullValueReceivingAddressName = default!; _explicitNullProperties?.Remove("ReceivingAddressName"); }
+            else if (parseNode.GetChildNode("ReceivingAddressName") is { } nullNodeReceivingAddressName && nullNodeReceivingAddressName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivingAddressName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Bookmark of the package is shifted to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Bookmark { get => _explicitNullValueBookmark; set { _explicitNullValueBookmark = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bookmark"); else _explicitNullProperties?.Remove("Bookmark"); } }
+        public string? Bookmark { get => _explicitNullValueBookmark; set { _explicitNullValueBookmark = value; AdditionalData?.Remove("Bookmark"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bookmark"); else _explicitNullProperties?.Remove("Bookmark"); } }
         private string? _explicitNullValueBookmark = default!;
 #nullable restore
 #else
-        public string Bookmark { get => _explicitNullValueBookmark; set { _explicitNullValueBookmark = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bookmark"); else _explicitNullProperties?.Remove("Bookmark"); } }
+        public string Bookmark { get => _explicitNullValueBookmark; set { _explicitNullValueBookmark = value; AdditionalData?.Remove("Bookmark"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Bookmark"); else _explicitNullProperties?.Remove("Bookmark"); } }
         private string _explicitNullValueBookmark = default!;
 #endif
         /// <summary>Location name that the package is shipped to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
+        public string? LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; AdditionalData?.Remove("LocationID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
         private string? _explicitNullValueLocationID = default!;
 #nullable restore
 #else
-        public string LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
+        public string LocationID { get => _explicitNullValueLocationID; set { _explicitNullValueLocationID = value; AdditionalData?.Remove("LocationID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocationID"); else _explicitNullProperties?.Remove("LocationID"); } }
         private string _explicitNullValueLocationID = default!;
 #endif
         /// <summary>Alias of the location where the package is received.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReceivingAddressName { get => _explicitNullValueReceivingAddressName; set { _explicitNullValueReceivingAddressName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceivingAddressName"); else _explicitNullProperties?.Remove("ReceivingAddressName"); } }
+        public string? ReceivingAddressName { get => _explicitNullValueReceivingAddressName; set { _explicitNullValueReceivingAddressName = value; AdditionalData?.Remove("ReceivingAddressName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceivingAddressName"); else _explicitNullProperties?.Remove("ReceivingAddressName"); } }
         private string? _explicitNullValueReceivingAddressName = default!;
 #nullable restore
 #else
-        public string ReceivingAddressName { get => _explicitNullValueReceivingAddressName; set { _explicitNullValueReceivingAddressName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceivingAddressName"); else _explicitNullProperties?.Remove("ReceivingAddressName"); } }
+        public string ReceivingAddressName { get => _explicitNullValueReceivingAddressName; set { _explicitNullValueReceivingAddressName = value; AdditionalData?.Remove("ReceivingAddressName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReceivingAddressName"); else _explicitNullProperties?.Remove("ReceivingAddressName"); } }
         private string _explicitNullValueReceivingAddressName = default!;
 #endif
         /// <summary>

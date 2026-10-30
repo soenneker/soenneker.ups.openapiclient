@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Density") is { } nullNodeDensity && nullNodeDensity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Density = null;
-            if (parseNode.GetChildNode("TotalCubicFeet") is { } nullNodeTotalCubicFeet && nullNodeTotalCubicFeet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCubicFeet = null;
+            if (parseNode.GetChildNode("Density") is null) { _explicitNullValueDensity = default!; _explicitNullProperties?.Remove("Density"); }
+            else if (parseNode.GetChildNode("Density") is { } nullNodeDensity && nullNodeDensity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Density = null;
+            if (parseNode.GetChildNode("TotalCubicFeet") is null) { _explicitNullValueTotalCubicFeet = default!; _explicitNullProperties?.Remove("TotalCubicFeet"); }
+            else if (parseNode.GetChildNode("TotalCubicFeet") is { } nullNodeTotalCubicFeet && nullNodeTotalCubicFeet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCubicFeet = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Density is returned if the Shipper is eligible for Density based rate. Valid values:0 to 999.9</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Density { get => _explicitNullValueDensity; set { _explicitNullValueDensity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Density"); else _explicitNullProperties?.Remove("Density"); } }
+        public string? Density { get => _explicitNullValueDensity; set { _explicitNullValueDensity = value; AdditionalData?.Remove("Density"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Density"); else _explicitNullProperties?.Remove("Density"); } }
         private string? _explicitNullValueDensity = default!;
 #nullable restore
 #else
-        public string Density { get => _explicitNullValueDensity; set { _explicitNullValueDensity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Density"); else _explicitNullProperties?.Remove("Density"); } }
+        public string Density { get => _explicitNullValueDensity; set { _explicitNullValueDensity = value; AdditionalData?.Remove("Density"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Density"); else _explicitNullProperties?.Remove("Density"); } }
         private string _explicitNullValueDensity = default!;
 #endif
         /// <summary>TotalCubic feet is returned if the Shipper is eligible for Density based rate. Valid values:0 to 99999.999</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalCubicFeet { get => _explicitNullValueTotalCubicFeet; set { _explicitNullValueTotalCubicFeet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCubicFeet"); else _explicitNullProperties?.Remove("TotalCubicFeet"); } }
+        public string? TotalCubicFeet { get => _explicitNullValueTotalCubicFeet; set { _explicitNullValueTotalCubicFeet = value; AdditionalData?.Remove("TotalCubicFeet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCubicFeet"); else _explicitNullProperties?.Remove("TotalCubicFeet"); } }
         private string? _explicitNullValueTotalCubicFeet = default!;
 #nullable restore
 #else
-        public string TotalCubicFeet { get => _explicitNullValueTotalCubicFeet; set { _explicitNullValueTotalCubicFeet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCubicFeet"); else _explicitNullProperties?.Remove("TotalCubicFeet"); } }
+        public string TotalCubicFeet { get => _explicitNullValueTotalCubicFeet; set { _explicitNullValueTotalCubicFeet = value; AdditionalData?.Remove("TotalCubicFeet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCubicFeet"); else _explicitNullProperties?.Remove("TotalCubicFeet"); } }
         private string _explicitNullValueTotalCubicFeet = default!;
 #endif
         /// <summary>

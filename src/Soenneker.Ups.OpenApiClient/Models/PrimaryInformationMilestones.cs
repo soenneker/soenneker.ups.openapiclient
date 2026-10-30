@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shipmentMilestones") is { } nullNodeShipmentMilestones && nullNodeShipmentMilestones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentMilestones = null;
+            if (parseNode.GetChildNode("shipmentMilestones") is null) { _explicitNullValueShipmentMilestones = default!; _explicitNullProperties?.Remove("shipmentMilestones"); }
+            else if (parseNode.GetChildNode("shipmentMilestones") is { } nullNodeShipmentMilestones && nullNodeShipmentMilestones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentMilestones = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>List of milestones achieved during the shipment journey.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentMilestone>? ShipmentMilestones { get => _explicitNullValueShipmentMilestones; set { _explicitNullValueShipmentMilestones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentMilestones"); else _explicitNullProperties?.Remove("shipmentMilestones"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentMilestone>? ShipmentMilestones { get => _explicitNullValueShipmentMilestones; set { _explicitNullValueShipmentMilestones = value; AdditionalData?.Remove("shipmentMilestones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentMilestones"); else _explicitNullProperties?.Remove("shipmentMilestones"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentMilestone>? _explicitNullValueShipmentMilestones = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentMilestone> ShipmentMilestones { get => _explicitNullValueShipmentMilestones; set { _explicitNullValueShipmentMilestones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentMilestones"); else _explicitNullProperties?.Remove("shipmentMilestones"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentMilestone> ShipmentMilestones { get => _explicitNullValueShipmentMilestones; set { _explicitNullValueShipmentMilestones = value; AdditionalData?.Remove("shipmentMilestones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentMilestones"); else _explicitNullProperties?.Remove("shipmentMilestones"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShipmentMilestone> _explicitNullValueShipmentMilestones = default!;
 #endif
         /// <summary>

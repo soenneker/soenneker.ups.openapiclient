@@ -17,134 +17,141 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowedValueCount") is { } nullNodeAllowedValueCount && nullNodeAllowedValueCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedValueCount = null;
-            if (parseNode.GetChildNode("displayConditions") is { } nullNodeDisplayConditions && nullNodeDisplayConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayConditions = null;
-            if (parseNode.GetChildNode("fieldType") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
-            if (parseNode.GetChildNode("includeOnInvoice") is { } nullNodeIncludeOnInvoice && nullNodeIncludeOnInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeOnInvoice = null;
-            if (parseNode.GetChildNode("isRequired") is { } nullNodeIsRequired && nullNodeIsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequired = null;
-            if (parseNode.GetChildNode("keyAlias") is { } nullNodeKeyAlias && nullNodeKeyAlias.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyAlias = null;
-            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
-            if (parseNode.GetChildNode("level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
-            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
-            if (parseNode.GetChildNode("regulationSections") is { } nullNodeRegulationSections && nullNodeRegulationSections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSections = null;
-            if (parseNode.GetChildNode("requirementConditions") is { } nullNodeRequirementConditions && nullNodeRequirementConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirementConditions = null;
-            if (parseNode.GetChildNode("sectionKey") is { } nullNodeSectionKey && nullNodeSectionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionKey = null;
-            if (parseNode.GetChildNode("tooltip") is { } nullNodeTooltip && nullNodeTooltip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tooltip = null;
-            if (parseNode.GetChildNode("validation") is { } nullNodeValidation && nullNodeValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Validation = null;
+            if (parseNode.GetChildNode("allowedValueCount") is null) { _explicitNullValueAllowedValueCount = default!; _explicitNullProperties?.Remove("allowedValueCount"); }
+            else if (parseNode.GetChildNode("allowedValueCount") is { } nullNodeAllowedValueCount && nullNodeAllowedValueCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedValueCount = null;
+            if (parseNode.GetChildNode("displayConditions") is null) { _explicitNullValueDisplayConditions = default!; _explicitNullProperties?.Remove("displayConditions"); }
+            else if (parseNode.GetChildNode("displayConditions") is { } nullNodeDisplayConditions && nullNodeDisplayConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayConditions = null;
+            if (parseNode.GetChildNode("fieldType") is null) { _explicitNullValueFieldType = default!; _explicitNullProperties?.Remove("fieldType"); }
+            else if (parseNode.GetChildNode("fieldType") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
+            if (parseNode.GetChildNode("includeOnInvoice") is null) { _explicitNullValueIncludeOnInvoice = default!; _explicitNullProperties?.Remove("includeOnInvoice"); }
+            else if (parseNode.GetChildNode("includeOnInvoice") is { } nullNodeIncludeOnInvoice && nullNodeIncludeOnInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeOnInvoice = null;
+            if (parseNode.GetChildNode("isRequired") is null) { _explicitNullValueIsRequired = default!; _explicitNullProperties?.Remove("isRequired"); }
+            else if (parseNode.GetChildNode("isRequired") is { } nullNodeIsRequired && nullNodeIsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequired = null;
+            if (parseNode.GetChildNode("keyAlias") is null) { _explicitNullValueKeyAlias = default!; _explicitNullProperties?.Remove("keyAlias"); }
+            else if (parseNode.GetChildNode("keyAlias") is { } nullNodeKeyAlias && nullNodeKeyAlias.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyAlias = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("level") is null) { _explicitNullValueLevel = default!; _explicitNullProperties?.Remove("level"); }
+            else if (parseNode.GetChildNode("level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
+            if (parseNode.GetChildNode("order") is null) { _explicitNullValueOrder = default!; _explicitNullProperties?.Remove("order"); }
+            else if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("regulationSections") is null) { _explicitNullValueRegulationSections = default!; _explicitNullProperties?.Remove("regulationSections"); }
+            else if (parseNode.GetChildNode("regulationSections") is { } nullNodeRegulationSections && nullNodeRegulationSections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSections = null;
+            if (parseNode.GetChildNode("requirementConditions") is null) { _explicitNullValueRequirementConditions = default!; _explicitNullProperties?.Remove("requirementConditions"); }
+            else if (parseNode.GetChildNode("requirementConditions") is { } nullNodeRequirementConditions && nullNodeRequirementConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirementConditions = null;
+            if (parseNode.GetChildNode("sectionKey") is null) { _explicitNullValueSectionKey = default!; _explicitNullProperties?.Remove("sectionKey"); }
+            else if (parseNode.GetChildNode("sectionKey") is { } nullNodeSectionKey && nullNodeSectionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionKey = null;
+            if (parseNode.GetChildNode("tooltip") is null) { _explicitNullValueTooltip = default!; _explicitNullProperties?.Remove("tooltip"); }
+            else if (parseNode.GetChildNode("tooltip") is { } nullNodeTooltip && nullNodeTooltip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tooltip = null;
+            if (parseNode.GetChildNode("validation") is null) { _explicitNullValueValidation = default!; _explicitNullProperties?.Remove("validation"); }
+            else if (parseNode.GetChildNode("validation") is { } nullNodeValidation && nullNodeValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Validation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of occurnces allowed for this field</summary>
-        public int? AllowedValueCount { get => _explicitNullValueAllowedValueCount; set { _explicitNullValueAllowedValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedValueCount"); else _explicitNullProperties?.Remove("allowedValueCount"); } }
+        public int? AllowedValueCount { get => _explicitNullValueAllowedValueCount; set { _explicitNullValueAllowedValueCount = value; AdditionalData?.Remove("allowedValueCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedValueCount"); else _explicitNullProperties?.Remove("allowedValueCount"); } }
         private int? _explicitNullValueAllowedValueCount = default!;
         /// <summary>Unbounded array of rules.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem>? DisplayConditions { get => _explicitNullValueDisplayConditions; set { _explicitNullValueDisplayConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayConditions"); else _explicitNullProperties?.Remove("displayConditions"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem>? DisplayConditions { get => _explicitNullValueDisplayConditions; set { _explicitNullValueDisplayConditions = value; AdditionalData?.Remove("displayConditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayConditions"); else _explicitNullProperties?.Remove("displayConditions"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem>? _explicitNullValueDisplayConditions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem> DisplayConditions { get => _explicitNullValueDisplayConditions; set { _explicitNullValueDisplayConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayConditions"); else _explicitNullProperties?.Remove("displayConditions"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem> DisplayConditions { get => _explicitNullValueDisplayConditions; set { _explicitNullValueDisplayConditions = value; AdditionalData?.Remove("displayConditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayConditions"); else _explicitNullProperties?.Remove("displayConditions"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem> _explicitNullValueDisplayConditions = default!;
 #endif
         /// <summary>The type of the field, based on available html form inputs</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldType"); else _explicitNullProperties?.Remove("fieldType"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; AdditionalData?.Remove("fieldType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldType"); else _explicitNullProperties?.Remove("fieldType"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemFieldType? _explicitNullValueFieldType = default!;
         /// <summary>Whether a field should appear on the commercial invoice.</summary>
-        public bool? IncludeOnInvoice { get => _explicitNullValueIncludeOnInvoice; set { _explicitNullValueIncludeOnInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeOnInvoice"); else _explicitNullProperties?.Remove("includeOnInvoice"); } }
+        public bool? IncludeOnInvoice { get => _explicitNullValueIncludeOnInvoice; set { _explicitNullValueIncludeOnInvoice = value; AdditionalData?.Remove("includeOnInvoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeOnInvoice"); else _explicitNullProperties?.Remove("includeOnInvoice"); } }
         private bool? _explicitNullValueIncludeOnInvoice = default!;
         /// <summary>Returns the conditionality of the field</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired? IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired? IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; AdditionalData?.Remove("isRequired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired? _explicitNullValueIsRequired = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired _explicitNullValueIsRequired = default!;
-#endif
         /// <summary>Alias used to identify the field when mapping to downstream systems.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? KeyAlias { get => _explicitNullValueKeyAlias; set { _explicitNullValueKeyAlias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyAlias"); else _explicitNullProperties?.Remove("keyAlias"); } }
+        public string? KeyAlias { get => _explicitNullValueKeyAlias; set { _explicitNullValueKeyAlias = value; AdditionalData?.Remove("keyAlias"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyAlias"); else _explicitNullProperties?.Remove("keyAlias"); } }
         private string? _explicitNullValueKeyAlias = default!;
 #nullable restore
 #else
-        public string KeyAlias { get => _explicitNullValueKeyAlias; set { _explicitNullValueKeyAlias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyAlias"); else _explicitNullProperties?.Remove("keyAlias"); } }
+        public string KeyAlias { get => _explicitNullValueKeyAlias; set { _explicitNullValueKeyAlias = value; AdditionalData?.Remove("keyAlias"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyAlias"); else _explicitNullProperties?.Remove("keyAlias"); } }
         private string _explicitNullValueKeyAlias = default!;
 #endif
         /// <summary>Human-readable name of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>Indicates whether the field applies at the shipment or product level.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemLevel? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemLevel? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemLevel? _explicitNullValueLevel = default!;
         /// <summary>Display order for the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public string? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private string? _explicitNullValueOrder = default!;
 #nullable restore
 #else
-        public string Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public string Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private string _explicitNullValueOrder = default!;
 #endif
         /// <summary>Unbounded list of regulationSection definitions for this Regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? RegulationSections { get => _explicitNullValueRegulationSections; set { _explicitNullValueRegulationSections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulationSections"); else _explicitNullProperties?.Remove("regulationSections"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? RegulationSections { get => _explicitNullValueRegulationSections; set { _explicitNullValueRegulationSections = value; AdditionalData?.Remove("regulationSections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulationSections"); else _explicitNullProperties?.Remove("regulationSections"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? _explicitNullValueRegulationSections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> RegulationSections { get => _explicitNullValueRegulationSections; set { _explicitNullValueRegulationSections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulationSections"); else _explicitNullProperties?.Remove("regulationSections"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> RegulationSections { get => _explicitNullValueRegulationSections; set { _explicitNullValueRegulationSections = value; AdditionalData?.Remove("regulationSections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulationSections"); else _explicitNullProperties?.Remove("regulationSections"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> _explicitNullValueRegulationSections = default!;
 #endif
         /// <summary>Unbounded array of rules. Conditionally required when is &apos;isRequired&apos; flag is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItem>? RequirementConditions { get => _explicitNullValueRequirementConditions; set { _explicitNullValueRequirementConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirementConditions"); else _explicitNullProperties?.Remove("requirementConditions"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItem>? RequirementConditions { get => _explicitNullValueRequirementConditions; set { _explicitNullValueRequirementConditions = value; AdditionalData?.Remove("requirementConditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirementConditions"); else _explicitNullProperties?.Remove("requirementConditions"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItem>? _explicitNullValueRequirementConditions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItem> RequirementConditions { get => _explicitNullValueRequirementConditions; set { _explicitNullValueRequirementConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirementConditions"); else _explicitNullProperties?.Remove("requirementConditions"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItem> RequirementConditions { get => _explicitNullValueRequirementConditions; set { _explicitNullValueRequirementConditions = value; AdditionalData?.Remove("requirementConditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirementConditions"); else _explicitNullProperties?.Remove("requirementConditions"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItem> _explicitNullValueRequirementConditions = default!;
 #endif
         /// <summary>Identifier for the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SectionKey { get => _explicitNullValueSectionKey; set { _explicitNullValueSectionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionKey"); else _explicitNullProperties?.Remove("sectionKey"); } }
+        public string? SectionKey { get => _explicitNullValueSectionKey; set { _explicitNullValueSectionKey = value; AdditionalData?.Remove("sectionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionKey"); else _explicitNullProperties?.Remove("sectionKey"); } }
         private string? _explicitNullValueSectionKey = default!;
 #nullable restore
 #else
-        public string SectionKey { get => _explicitNullValueSectionKey; set { _explicitNullValueSectionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionKey"); else _explicitNullProperties?.Remove("sectionKey"); } }
+        public string SectionKey { get => _explicitNullValueSectionKey; set { _explicitNullValueSectionKey = value; AdditionalData?.Remove("sectionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionKey"); else _explicitNullProperties?.Remove("sectionKey"); } }
         private string _explicitNullValueSectionKey = default!;
 #endif
         /// <summary>Tooltip text explaining the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tooltip { get => _explicitNullValueTooltip; set { _explicitNullValueTooltip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tooltip"); else _explicitNullProperties?.Remove("tooltip"); } }
+        public string? Tooltip { get => _explicitNullValueTooltip; set { _explicitNullValueTooltip = value; AdditionalData?.Remove("tooltip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tooltip"); else _explicitNullProperties?.Remove("tooltip"); } }
         private string? _explicitNullValueTooltip = default!;
 #nullable restore
 #else
-        public string Tooltip { get => _explicitNullValueTooltip; set { _explicitNullValueTooltip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tooltip"); else _explicitNullProperties?.Remove("tooltip"); } }
+        public string Tooltip { get => _explicitNullValueTooltip; set { _explicitNullValueTooltip = value; AdditionalData?.Remove("tooltip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tooltip"); else _explicitNullProperties?.Remove("tooltip"); } }
         private string _explicitNullValueTooltip = default!;
 #endif
         /// <summary>rule validation object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidation? Validation { get => _explicitNullValueValidation; set { _explicitNullValueValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation"); else _explicitNullProperties?.Remove("validation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidation? Validation { get => _explicitNullValueValidation; set { _explicitNullValueValidation = value; AdditionalData?.Remove("validation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation"); else _explicitNullProperties?.Remove("validation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidation? _explicitNullValueValidation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidation Validation { get => _explicitNullValueValidation; set { _explicitNullValueValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation"); else _explicitNullProperties?.Remove("validation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidation Validation { get => _explicitNullValueValidation; set { _explicitNullValueValidation = value; AdditionalData?.Remove("validation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation"); else _explicitNullProperties?.Remove("validation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemValidation _explicitNullValueValidation = default!;
 #endif
         /// <summary>
@@ -176,12 +183,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "allowedValueCount", n => { AllowedValueCount = n.GetIntValue(); } },
                 { "displayConditions", n => { DisplayConditions = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "fieldType", n => { FieldType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemFieldType>(); } },
+                { "fieldType", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemFieldType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFieldType = default; _explicitNullProperties?.Remove("fieldType"); AdditionalData["fieldType"] = unknown; } else { FieldType = parsed; AdditionalData.Remove("fieldType"); } } },
                 { "includeOnInvoice", n => { IncludeOnInvoice = n.GetBoolValue(); } },
-                { "isRequired", n => { IsRequired = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired.CreateFromDiscriminatorValue); } },
+                { "isRequired", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIsRequired = default; _explicitNullProperties?.Remove("isRequired"); AdditionalData["isRequired"] = unknown; } else { IsRequired = parsed; AdditionalData.Remove("isRequired"); } } },
                 { "keyAlias", n => { KeyAlias = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "level", n => { Level = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemLevel>(); } },
+                { "level", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLevel = default; _explicitNullProperties?.Remove("level"); AdditionalData["level"] = unknown; } else { Level = parsed; AdditionalData.Remove("level"); } } },
                 { "order", n => { Order = n.GetStringValue(); } },
                 { "regulationSections", n => { RegulationSections = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "requirementConditions", n => { RequirementConditions = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItem>(global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemRequirementConditionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -201,7 +208,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemDisplayConditionsItem>("displayConditions", DisplayConditions);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemFieldType>("fieldType", FieldType);
             writer.WriteBoolValue("includeOnInvoice", IncludeOnInvoice);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired>("isRequired", IsRequired);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemIsRequired>("isRequired", IsRequired);
             writer.WriteStringValue("keyAlias", KeyAlias);
             writer.WriteStringValue("label", Label);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItemFieldsItemLevel>("level", Level);

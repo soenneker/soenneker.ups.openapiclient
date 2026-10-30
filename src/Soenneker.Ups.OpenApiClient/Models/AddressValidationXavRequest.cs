@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AddressKeyFormat") is { } nullNodeAddressKeyFormat && nullNodeAddressKeyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKeyFormat = null;
+            if (parseNode.GetChildNode("AddressKeyFormat") is null) { _explicitNullValueAddressKeyFormat = default!; _explicitNullProperties?.Remove("AddressKeyFormat"); }
+            else if (parseNode.GetChildNode("AddressKeyFormat") is { } nullNodeAddressKeyFormat && nullNodeAddressKeyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKeyFormat = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>AddressKeyFormat container.The Key format is based on addressing standards jointly developed by the Postal Service and mailing industry.  The information provided in the Address Key container will be returned in the same format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequestAddressKeyFormat? AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequestAddressKeyFormat? AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; AdditionalData?.Remove("AddressKeyFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequestAddressKeyFormat? _explicitNullValueAddressKeyFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequestAddressKeyFormat AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequestAddressKeyFormat AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; AdditionalData?.Remove("AddressKeyFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequestAddressKeyFormat _explicitNullValueAddressKeyFormat = default!;
 #endif
         /// <summary>

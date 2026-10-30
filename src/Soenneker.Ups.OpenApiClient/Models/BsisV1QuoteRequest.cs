@@ -17,12 +17,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buyerCurrencyCode") is { } nullNodeBuyerCurrencyCode && nullNodeBuyerCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerCurrencyCode = null;
-            if (parseNode.GetChildNode("referenceNumber") is { } nullNodeReferenceNumber && nullNodeReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceNumber = null;
-            if (parseNode.GetChildNode("serviceLevelCode") is { } nullNodeServiceLevelCode && nullNodeServiceLevelCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceLevelCode = null;
-            if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
-            if (parseNode.GetChildNode("shipperAccountNumber") is { } nullNodeShipperAccountNumber && nullNodeShipperAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccountNumber = null;
-            if (parseNode.GetChildNode("shipperCurrencyCode") is { } nullNodeShipperCurrencyCode && nullNodeShipperCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperCurrencyCode = null;
+            if (parseNode.GetChildNode("buyerCurrencyCode") is null) { _explicitNullValueBuyerCurrencyCode = default!; _explicitNullProperties?.Remove("buyerCurrencyCode"); }
+            else if (parseNode.GetChildNode("buyerCurrencyCode") is { } nullNodeBuyerCurrencyCode && nullNodeBuyerCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuyerCurrencyCode = null;
+            if (parseNode.GetChildNode("referenceNumber") is null) { _explicitNullValueReferenceNumber = default!; _explicitNullProperties?.Remove("referenceNumber"); }
+            else if (parseNode.GetChildNode("referenceNumber") is { } nullNodeReferenceNumber && nullNodeReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceNumber = null;
+            if (parseNode.GetChildNode("serviceLevelCode") is null) { _explicitNullValueServiceLevelCode = default!; _explicitNullProperties?.Remove("serviceLevelCode"); }
+            else if (parseNode.GetChildNode("serviceLevelCode") is { } nullNodeServiceLevelCode && nullNodeServiceLevelCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceLevelCode = null;
+            if (parseNode.GetChildNode("shipment") is null) { _explicitNullValueShipment = default!; _explicitNullProperties?.Remove("shipment"); }
+            else if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("shipperAccountNumber") is null) { _explicitNullValueShipperAccountNumber = default!; _explicitNullProperties?.Remove("shipperAccountNumber"); }
+            else if (parseNode.GetChildNode("shipperAccountNumber") is { } nullNodeShipperAccountNumber && nullNodeShipperAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccountNumber = null;
+            if (parseNode.GetChildNode("shipperCurrencyCode") is null) { _explicitNullValueShipperCurrencyCode = default!; _explicitNullProperties?.Remove("shipperCurrencyCode"); }
+            else if (parseNode.GetChildNode("shipperCurrencyCode") is { } nullNodeShipperCurrencyCode && nullNodeShipperCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperCurrencyCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,54 +36,54 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Buyer&apos;s currency code adhering to ISO 4217 standard.Click &lt;a href=&quot;https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt; for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerCurrencyCode { get => _explicitNullValueBuyerCurrencyCode; set { _explicitNullValueBuyerCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerCurrencyCode"); else _explicitNullProperties?.Remove("buyerCurrencyCode"); } }
+        public string? BuyerCurrencyCode { get => _explicitNullValueBuyerCurrencyCode; set { _explicitNullValueBuyerCurrencyCode = value; AdditionalData?.Remove("buyerCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerCurrencyCode"); else _explicitNullProperties?.Remove("buyerCurrencyCode"); } }
         private string? _explicitNullValueBuyerCurrencyCode = default!;
 #nullable restore
 #else
-        public string BuyerCurrencyCode { get => _explicitNullValueBuyerCurrencyCode; set { _explicitNullValueBuyerCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerCurrencyCode"); else _explicitNullProperties?.Remove("buyerCurrencyCode"); } }
+        public string BuyerCurrencyCode { get => _explicitNullValueBuyerCurrencyCode; set { _explicitNullValueBuyerCurrencyCode = value; AdditionalData?.Remove("buyerCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buyerCurrencyCode"); else _explicitNullProperties?.Remove("buyerCurrencyCode"); } }
         private string _explicitNullValueBuyerCurrencyCode = default!;
 #endif
         /// <summary>A unique identifier used by clients for internal tracking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceNumber"); else _explicitNullProperties?.Remove("referenceNumber"); } }
+        public string? ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; AdditionalData?.Remove("referenceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceNumber"); else _explicitNullProperties?.Remove("referenceNumber"); } }
         private string? _explicitNullValueReferenceNumber = default!;
 #nullable restore
 #else
-        public string ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceNumber"); else _explicitNullProperties?.Remove("referenceNumber"); } }
+        public string ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; AdditionalData?.Remove("referenceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceNumber"); else _explicitNullProperties?.Remove("referenceNumber"); } }
         private string _explicitNullValueReferenceNumber = default!;
 #endif
         /// <summary>The code for the UPS Service associated with the shipment.Click &lt;a href=&quot;https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt; for more information.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteRequestServiceLevelCode? ServiceLevelCode { get => _explicitNullValueServiceLevelCode; set { _explicitNullValueServiceLevelCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceLevelCode"); else _explicitNullProperties?.Remove("serviceLevelCode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteRequestServiceLevelCode? ServiceLevelCode { get => _explicitNullValueServiceLevelCode; set { _explicitNullValueServiceLevelCode = value; AdditionalData?.Remove("serviceLevelCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceLevelCode"); else _explicitNullProperties?.Remove("serviceLevelCode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteRequestServiceLevelCode? _explicitNullValueServiceLevelCode = default!;
         /// <summary>The shipment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1Shipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1Shipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.BsisV1Shipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1Shipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.BsisV1Shipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.BsisV1Shipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>The Shipper&apos;s UPS Account Number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        public string? ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; AdditionalData?.Remove("shipperAccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
         private string? _explicitNullValueShipperAccountNumber = default!;
 #nullable restore
 #else
-        public string ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
+        public string ShipperAccountNumber { get => _explicitNullValueShipperAccountNumber; set { _explicitNullValueShipperAccountNumber = value; AdditionalData?.Remove("shipperAccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperAccountNumber"); else _explicitNullProperties?.Remove("shipperAccountNumber"); } }
         private string _explicitNullValueShipperAccountNumber = default!;
 #endif
         /// <summary>Shipper&apos;s currency code adhering to ISO 4217 standard.Click &lt;a href=&quot;https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt; for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperCurrencyCode { get => _explicitNullValueShipperCurrencyCode; set { _explicitNullValueShipperCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperCurrencyCode"); else _explicitNullProperties?.Remove("shipperCurrencyCode"); } }
+        public string? ShipperCurrencyCode { get => _explicitNullValueShipperCurrencyCode; set { _explicitNullValueShipperCurrencyCode = value; AdditionalData?.Remove("shipperCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperCurrencyCode"); else _explicitNullProperties?.Remove("shipperCurrencyCode"); } }
         private string? _explicitNullValueShipperCurrencyCode = default!;
 #nullable restore
 #else
-        public string ShipperCurrencyCode { get => _explicitNullValueShipperCurrencyCode; set { _explicitNullValueShipperCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperCurrencyCode"); else _explicitNullProperties?.Remove("shipperCurrencyCode"); } }
+        public string ShipperCurrencyCode { get => _explicitNullValueShipperCurrencyCode; set { _explicitNullValueShipperCurrencyCode = value; AdditionalData?.Remove("shipperCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperCurrencyCode"); else _explicitNullProperties?.Remove("shipperCurrencyCode"); } }
         private string _explicitNullValueShipperCurrencyCode = default!;
 #endif
         /// <summary>
@@ -107,7 +113,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "buyerCurrencyCode", n => { BuyerCurrencyCode = n.GetStringValue(); } },
                 { "referenceNumber", n => { ReferenceNumber = n.GetStringValue(); } },
-                { "serviceLevelCode", n => { ServiceLevelCode = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteRequestServiceLevelCode>(); } },
+                { "serviceLevelCode", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.BsisV1QuoteRequestServiceLevelCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueServiceLevelCode = default; _explicitNullProperties?.Remove("serviceLevelCode"); AdditionalData["serviceLevelCode"] = unknown; } else { ServiceLevelCode = parsed; AdditionalData.Remove("serviceLevelCode"); } } },
                 { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BsisV1Shipment>(global::Soenneker.Ups.OpenApiClient.Models.BsisV1Shipment.CreateFromDiscriminatorValue); } },
                 { "shipperAccountNumber", n => { ShipperAccountNumber = n.GetStringValue(); } },
                 { "shipperCurrencyCode", n => { ShipperCurrencyCode = n.GetStringValue(); } },

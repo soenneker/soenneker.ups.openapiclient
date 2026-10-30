@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
-            if (parseNode.GetChildNode("ResponseStatusCode") is { } nullNodeResponseStatusCode && nullNodeResponseStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseStatusCode = null;
-            if (parseNode.GetChildNode("ResponseStatusDescription") is { } nullNodeResponseStatusDescription && nullNodeResponseStatusDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseStatusDescription = null;
-            if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
+            if (parseNode.GetChildNode("Error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("Error"); }
+            else if (parseNode.GetChildNode("Error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("ResponseStatusCode") is null) { _explicitNullValueResponseStatusCode = default!; _explicitNullProperties?.Remove("ResponseStatusCode"); }
+            else if (parseNode.GetChildNode("ResponseStatusCode") is { } nullNodeResponseStatusCode && nullNodeResponseStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseStatusCode = null;
+            if (parseNode.GetChildNode("ResponseStatusDescription") is null) { _explicitNullValueResponseStatusDescription = default!; _explicitNullProperties?.Remove("ResponseStatusDescription"); }
+            else if (parseNode.GetChildNode("ResponseStatusDescription") is { } nullNodeResponseStatusDescription && nullNodeResponseStatusDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseStatusDescription = null;
+            if (parseNode.GetChildNode("TransactionReference") is null) { _explicitNullValueTransactionReference = default!; _explicitNullProperties?.Remove("TransactionReference"); }
+            else if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>If an error is encountered during the interchange, the Response contains an error. If the error is present, then the ErrorSeverity and ErrorCodes are required.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseError>? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error"); else _explicitNullProperties?.Remove("Error"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseError>? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("Error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error"); else _explicitNullProperties?.Remove("Error"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseError>? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseError> Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error"); else _explicitNullProperties?.Remove("Error"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseError> Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("Error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error"); else _explicitNullProperties?.Remove("Error"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseError> _explicitNullValueError = default!;
 #endif
         /// <summary>Identifies the success or failure of the interchange. 1 = Success, 0 = Failure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResponseStatusCode { get => _explicitNullValueResponseStatusCode; set { _explicitNullValueResponseStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatusCode"); else _explicitNullProperties?.Remove("ResponseStatusCode"); } }
+        public string? ResponseStatusCode { get => _explicitNullValueResponseStatusCode; set { _explicitNullValueResponseStatusCode = value; AdditionalData?.Remove("ResponseStatusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatusCode"); else _explicitNullProperties?.Remove("ResponseStatusCode"); } }
         private string? _explicitNullValueResponseStatusCode = default!;
 #nullable restore
 #else
-        public string ResponseStatusCode { get => _explicitNullValueResponseStatusCode; set { _explicitNullValueResponseStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatusCode"); else _explicitNullProperties?.Remove("ResponseStatusCode"); } }
+        public string ResponseStatusCode { get => _explicitNullValueResponseStatusCode; set { _explicitNullValueResponseStatusCode = value; AdditionalData?.Remove("ResponseStatusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatusCode"); else _explicitNullProperties?.Remove("ResponseStatusCode"); } }
         private string _explicitNullValueResponseStatusCode = default!;
 #endif
         /// <summary>&apos;Success&apos; or &apos;Failure&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResponseStatusDescription { get => _explicitNullValueResponseStatusDescription; set { _explicitNullValueResponseStatusDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatusDescription"); else _explicitNullProperties?.Remove("ResponseStatusDescription"); } }
+        public string? ResponseStatusDescription { get => _explicitNullValueResponseStatusDescription; set { _explicitNullValueResponseStatusDescription = value; AdditionalData?.Remove("ResponseStatusDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatusDescription"); else _explicitNullProperties?.Remove("ResponseStatusDescription"); } }
         private string? _explicitNullValueResponseStatusDescription = default!;
 #nullable restore
 #else
-        public string ResponseStatusDescription { get => _explicitNullValueResponseStatusDescription; set { _explicitNullValueResponseStatusDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatusDescription"); else _explicitNullProperties?.Remove("ResponseStatusDescription"); } }
+        public string ResponseStatusDescription { get => _explicitNullValueResponseStatusDescription; set { _explicitNullValueResponseStatusDescription = value; AdditionalData?.Remove("ResponseStatusDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatusDescription"); else _explicitNullProperties?.Remove("ResponseStatusDescription"); } }
         private string _explicitNullValueResponseStatusDescription = default!;
 #endif
         /// <summary>Container for customer provided data and the XPCI Version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; AdditionalData?.Remove("TransactionReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseTransactionReference? _explicitNullValueTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; AdditionalData?.Remove("TransactionReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewReadyResponseTransactionReference _explicitNullValueTransactionReference = default!;
 #endif
         /// <summary>

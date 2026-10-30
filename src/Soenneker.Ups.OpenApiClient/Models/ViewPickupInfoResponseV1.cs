@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ViewPickupInfoResponse") is { } nullNodeViewPickupInfoResponse && nullNodeViewPickupInfoResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewPickupInfoResponse = null;
+            if (parseNode.GetChildNode("ViewPickupInfoResponse") is null) { _explicitNullValueViewPickupInfoResponse = default!; _explicitNullProperties?.Remove("ViewPickupInfoResponse"); }
+            else if (parseNode.GetChildNode("ViewPickupInfoResponse") is { } nullNodeViewPickupInfoResponse && nullNodeViewPickupInfoResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewPickupInfoResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The ViewPickupInfoResponse property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponse? ViewPickupInfoResponse { get => _explicitNullValueViewPickupInfoResponse; set { _explicitNullValueViewPickupInfoResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ViewPickupInfoResponse"); else _explicitNullProperties?.Remove("ViewPickupInfoResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponse? ViewPickupInfoResponse { get => _explicitNullValueViewPickupInfoResponse; set { _explicitNullValueViewPickupInfoResponse = value; AdditionalData?.Remove("ViewPickupInfoResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ViewPickupInfoResponse"); else _explicitNullProperties?.Remove("ViewPickupInfoResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponse? _explicitNullValueViewPickupInfoResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponse ViewPickupInfoResponse { get => _explicitNullValueViewPickupInfoResponse; set { _explicitNullValueViewPickupInfoResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ViewPickupInfoResponse"); else _explicitNullProperties?.Remove("ViewPickupInfoResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponse ViewPickupInfoResponse { get => _explicitNullValueViewPickupInfoResponse; set { _explicitNullValueViewPickupInfoResponse = value; AdditionalData?.Remove("ViewPickupInfoResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ViewPickupInfoResponse"); else _explicitNullProperties?.Remove("ViewPickupInfoResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponse _explicitNullValueViewPickupInfoResponse = default!;
 #endif
         /// <summary>

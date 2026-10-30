@@ -17,105 +17,117 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billableWeight") is { } nullNodeBillableWeight && nullNodeBillableWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableWeight = null;
-            if (parseNode.GetChildNode("charges") is { } nullNodeCharges && nullNodeCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charges = null;
-            if (parseNode.GetChildNode("contractRate") is { } nullNodeContractRate && nullNodeContractRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContractRate = null;
-            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
-            if (parseNode.GetChildNode("deliveryTime") is { } nullNodeDeliveryTime && nullNodeDeliveryTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryTime = null;
-            if (parseNode.GetChildNode("dimensionalWeight") is { } nullNodeDimensionalWeight && nullNodeDimensionalWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DimensionalWeight = null;
-            if (parseNode.GetChildNode("guaranteedDelivery") is { } nullNodeGuaranteedDelivery && nullNodeGuaranteedDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuaranteedDelivery = null;
-            if (parseNode.GetChildNode("holdAtAirportTime") is { } nullNodeHoldAtAirportTime && nullNodeHoldAtAirportTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldAtAirportTime = null;
-            if (parseNode.GetChildNode("minimumBillableWeightApplied") is { } nullNodeMinimumBillableWeightApplied && nullNodeMinimumBillableWeightApplied.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumBillableWeightApplied = null;
-            if (parseNode.GetChildNode("serviceType") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
-            if (parseNode.GetChildNode("totalCharge") is { } nullNodeTotalCharge && nullNodeTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCharge = null;
-            if (parseNode.GetChildNode("weightUnit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
+            if (parseNode.GetChildNode("billableWeight") is null) { _explicitNullValueBillableWeight = default!; _explicitNullProperties?.Remove("billableWeight"); }
+            else if (parseNode.GetChildNode("billableWeight") is { } nullNodeBillableWeight && nullNodeBillableWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillableWeight = null;
+            if (parseNode.GetChildNode("charges") is null) { _explicitNullValueCharges = default!; _explicitNullProperties?.Remove("charges"); }
+            else if (parseNode.GetChildNode("charges") is { } nullNodeCharges && nullNodeCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charges = null;
+            if (parseNode.GetChildNode("contractRate") is null) { _explicitNullValueContractRate = default!; _explicitNullProperties?.Remove("contractRate"); }
+            else if (parseNode.GetChildNode("contractRate") is { } nullNodeContractRate && nullNodeContractRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContractRate = null;
+            if (parseNode.GetChildNode("currency") is null) { _explicitNullValueCurrency = default!; _explicitNullProperties?.Remove("currency"); }
+            else if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("deliveryTime") is null) { _explicitNullValueDeliveryTime = default!; _explicitNullProperties?.Remove("deliveryTime"); }
+            else if (parseNode.GetChildNode("deliveryTime") is { } nullNodeDeliveryTime && nullNodeDeliveryTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryTime = null;
+            if (parseNode.GetChildNode("dimensionalWeight") is null) { _explicitNullValueDimensionalWeight = default!; _explicitNullProperties?.Remove("dimensionalWeight"); }
+            else if (parseNode.GetChildNode("dimensionalWeight") is { } nullNodeDimensionalWeight && nullNodeDimensionalWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DimensionalWeight = null;
+            if (parseNode.GetChildNode("guaranteedDelivery") is null) { _explicitNullValueGuaranteedDelivery = default!; _explicitNullProperties?.Remove("guaranteedDelivery"); }
+            else if (parseNode.GetChildNode("guaranteedDelivery") is { } nullNodeGuaranteedDelivery && nullNodeGuaranteedDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuaranteedDelivery = null;
+            if (parseNode.GetChildNode("holdAtAirportTime") is null) { _explicitNullValueHoldAtAirportTime = default!; _explicitNullProperties?.Remove("holdAtAirportTime"); }
+            else if (parseNode.GetChildNode("holdAtAirportTime") is { } nullNodeHoldAtAirportTime && nullNodeHoldAtAirportTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldAtAirportTime = null;
+            if (parseNode.GetChildNode("minimumBillableWeightApplied") is null) { _explicitNullValueMinimumBillableWeightApplied = default!; _explicitNullProperties?.Remove("minimumBillableWeightApplied"); }
+            else if (parseNode.GetChildNode("minimumBillableWeightApplied") is { } nullNodeMinimumBillableWeightApplied && nullNodeMinimumBillableWeightApplied.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumBillableWeightApplied = null;
+            if (parseNode.GetChildNode("serviceType") is null) { _explicitNullValueServiceType = default!; _explicitNullProperties?.Remove("serviceType"); }
+            else if (parseNode.GetChildNode("serviceType") is { } nullNodeServiceType && nullNodeServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceType = null;
+            if (parseNode.GetChildNode("totalCharge") is null) { _explicitNullValueTotalCharge = default!; _explicitNullProperties?.Remove("totalCharge"); }
+            else if (parseNode.GetChildNode("totalCharge") is { } nullNodeTotalCharge && nullNodeTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCharge = null;
+            if (parseNode.GetChildNode("weightUnit") is null) { _explicitNullValueWeightUnit = default!; _explicitNullProperties?.Remove("weightUnit"); }
+            else if (parseNode.GetChildNode("weightUnit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billable weight.</summary>
-        public decimal? BillableWeight { get => _explicitNullValueBillableWeight; set { _explicitNullValueBillableWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billableWeight"); else _explicitNullProperties?.Remove("billableWeight"); } }
+        public decimal? BillableWeight { get => _explicitNullValueBillableWeight; set { _explicitNullValueBillableWeight = value; AdditionalData?.Remove("billableWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billableWeight"); else _explicitNullProperties?.Remove("billableWeight"); } }
         private decimal? _explicitNullValueBillableWeight = default!;
         /// <summary>The charges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Charges>? Charges { get => _explicitNullValueCharges; set { _explicitNullValueCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges"); else _explicitNullProperties?.Remove("charges"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.Charges>? Charges { get => _explicitNullValueCharges; set { _explicitNullValueCharges = value; AdditionalData?.Remove("charges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges"); else _explicitNullProperties?.Remove("charges"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.Charges>? _explicitNullValueCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Charges> Charges { get => _explicitNullValueCharges; set { _explicitNullValueCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges"); else _explicitNullProperties?.Remove("charges"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.Charges> Charges { get => _explicitNullValueCharges; set { _explicitNullValueCharges = value; AdditionalData?.Remove("charges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges"); else _explicitNullProperties?.Remove("charges"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.Charges> _explicitNullValueCharges = default!;
 #endif
         /// <summary>Indicates if the contract rate applies.</summary>
-        public bool? ContractRate { get => _explicitNullValueContractRate; set { _explicitNullValueContractRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contractRate"); else _explicitNullProperties?.Remove("contractRate"); } }
+        public bool? ContractRate { get => _explicitNullValueContractRate; set { _explicitNullValueContractRate = value; AdditionalData?.Remove("contractRate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contractRate"); else _explicitNullProperties?.Remove("contractRate"); } }
         private bool? _explicitNullValueContractRate = default!;
         /// <summary>The currency type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>The estimated delivery time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeliveryTime { get => _explicitNullValueDeliveryTime; set { _explicitNullValueDeliveryTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryTime"); else _explicitNullProperties?.Remove("deliveryTime"); } }
+        public string? DeliveryTime { get => _explicitNullValueDeliveryTime; set { _explicitNullValueDeliveryTime = value; AdditionalData?.Remove("deliveryTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryTime"); else _explicitNullProperties?.Remove("deliveryTime"); } }
         private string? _explicitNullValueDeliveryTime = default!;
 #nullable restore
 #else
-        public string DeliveryTime { get => _explicitNullValueDeliveryTime; set { _explicitNullValueDeliveryTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryTime"); else _explicitNullProperties?.Remove("deliveryTime"); } }
+        public string DeliveryTime { get => _explicitNullValueDeliveryTime; set { _explicitNullValueDeliveryTime = value; AdditionalData?.Remove("deliveryTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryTime"); else _explicitNullProperties?.Remove("deliveryTime"); } }
         private string _explicitNullValueDeliveryTime = default!;
 #endif
         /// <summary>The dimensional weight.</summary>
-        public decimal? DimensionalWeight { get => _explicitNullValueDimensionalWeight; set { _explicitNullValueDimensionalWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensionalWeight"); else _explicitNullProperties?.Remove("dimensionalWeight"); } }
+        public decimal? DimensionalWeight { get => _explicitNullValueDimensionalWeight; set { _explicitNullValueDimensionalWeight = value; AdditionalData?.Remove("dimensionalWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimensionalWeight"); else _explicitNullProperties?.Remove("dimensionalWeight"); } }
         private decimal? _explicitNullValueDimensionalWeight = default!;
         /// <summary>Indicates if delivery is guaranteed.</summary>
-        public bool? GuaranteedDelivery { get => _explicitNullValueGuaranteedDelivery; set { _explicitNullValueGuaranteedDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteedDelivery"); else _explicitNullProperties?.Remove("guaranteedDelivery"); } }
+        public bool? GuaranteedDelivery { get => _explicitNullValueGuaranteedDelivery; set { _explicitNullValueGuaranteedDelivery = value; AdditionalData?.Remove("guaranteedDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guaranteedDelivery"); else _explicitNullProperties?.Remove("guaranteedDelivery"); } }
         private bool? _explicitNullValueGuaranteedDelivery = default!;
         /// <summary>The hold at airport time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HoldAtAirportTime { get => _explicitNullValueHoldAtAirportTime; set { _explicitNullValueHoldAtAirportTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holdAtAirportTime"); else _explicitNullProperties?.Remove("holdAtAirportTime"); } }
+        public string? HoldAtAirportTime { get => _explicitNullValueHoldAtAirportTime; set { _explicitNullValueHoldAtAirportTime = value; AdditionalData?.Remove("holdAtAirportTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holdAtAirportTime"); else _explicitNullProperties?.Remove("holdAtAirportTime"); } }
         private string? _explicitNullValueHoldAtAirportTime = default!;
 #nullable restore
 #else
-        public string HoldAtAirportTime { get => _explicitNullValueHoldAtAirportTime; set { _explicitNullValueHoldAtAirportTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holdAtAirportTime"); else _explicitNullProperties?.Remove("holdAtAirportTime"); } }
+        public string HoldAtAirportTime { get => _explicitNullValueHoldAtAirportTime; set { _explicitNullValueHoldAtAirportTime = value; AdditionalData?.Remove("holdAtAirportTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holdAtAirportTime"); else _explicitNullProperties?.Remove("holdAtAirportTime"); } }
         private string _explicitNullValueHoldAtAirportTime = default!;
 #endif
         /// <summary>Indicates if the minimum billable weight was applied.</summary>
-        public bool? MinimumBillableWeightApplied { get => _explicitNullValueMinimumBillableWeightApplied; set { _explicitNullValueMinimumBillableWeightApplied = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimumBillableWeightApplied"); else _explicitNullProperties?.Remove("minimumBillableWeightApplied"); } }
+        public bool? MinimumBillableWeightApplied { get => _explicitNullValueMinimumBillableWeightApplied; set { _explicitNullValueMinimumBillableWeightApplied = value; AdditionalData?.Remove("minimumBillableWeightApplied"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimumBillableWeightApplied"); else _explicitNullProperties?.Remove("minimumBillableWeightApplied"); } }
         private bool? _explicitNullValueMinimumBillableWeightApplied = default!;
         /// <summary>The type of service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
+        public string? ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; AdditionalData?.Remove("serviceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
         private string? _explicitNullValueServiceType = default!;
 #nullable restore
 #else
-        public string ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
+        public string ServiceType { get => _explicitNullValueServiceType; set { _explicitNullValueServiceType = value; AdditionalData?.Remove("serviceType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceType"); else _explicitNullProperties?.Remove("serviceType"); } }
         private string _explicitNullValueServiceType = default!;
 #endif
         /// <summary>Total charge for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge? TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge? TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; AdditionalData?.Remove("totalCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge? _explicitNullValueTotalCharge = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; AdditionalData?.Remove("totalCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateDetailTotalCharge _explicitNullValueTotalCharge = default!;
 #endif
         /// <summary>The Weight unit used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
+        public string? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; AdditionalData?.Remove("weightUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
         private string? _explicitNullValueWeightUnit = default!;
 #nullable restore
 #else
-        public string WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
+        public string WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; AdditionalData?.Remove("weightUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
         private string _explicitNullValueWeightUnit = default!;
 #endif
         /// <summary>

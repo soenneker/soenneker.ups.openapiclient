@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("XAVRequest") is { } nullNodeXAVRequest && nullNodeXAVRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XAVRequest = null;
+            if (parseNode.GetChildNode("XAVRequest") is null) { _explicitNullValueXAVRequest = default!; _explicitNullProperties?.Remove("XAVRequest"); }
+            else if (parseNode.GetChildNode("XAVRequest") is { } nullNodeXAVRequest && nullNodeXAVRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XAVRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The XAVRequest property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequest? XAVRequest { get => _explicitNullValueXAVRequest; set { _explicitNullValueXAVRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XAVRequest"); else _explicitNullProperties?.Remove("XAVRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequest? XAVRequest { get => _explicitNullValueXAVRequest; set { _explicitNullValueXAVRequest = value; AdditionalData?.Remove("XAVRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XAVRequest"); else _explicitNullProperties?.Remove("XAVRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequest? _explicitNullValueXAVRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequest XAVRequest { get => _explicitNullValueXAVRequest; set { _explicitNullValueXAVRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XAVRequest"); else _explicitNullProperties?.Remove("XAVRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequest XAVRequest { get => _explicitNullValueXAVRequest; set { _explicitNullValueXAVRequest = value; AdditionalData?.Remove("XAVRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XAVRequest"); else _explicitNullProperties?.Remove("XAVRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavRequest _explicitNullValueXAVRequest = default!;
 #endif
         /// <summary>

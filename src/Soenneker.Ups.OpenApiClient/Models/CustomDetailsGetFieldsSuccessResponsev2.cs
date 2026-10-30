@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("commodityCodes") is { } nullNodeCommodityCodes && nullNodeCommodityCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCodes = null;
-            if (parseNode.GetChildNode("fieldGroups") is { } nullNodeFieldGroups && nullNodeFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldGroups = null;
+            if (parseNode.GetChildNode("commodityCodes") is null) { _explicitNullValueCommodityCodes = default!; _explicitNullProperties?.Remove("commodityCodes"); }
+            else if (parseNode.GetChildNode("commodityCodes") is { } nullNodeCommodityCodes && nullNodeCommodityCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityCodes = null;
+            if (parseNode.GetChildNode("fieldGroups") is null) { _explicitNullValueFieldGroups = default!; _explicitNullProperties?.Remove("fieldGroups"); }
+            else if (parseNode.GetChildNode("fieldGroups") is { } nullNodeFieldGroups && nullNodeFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldGroups = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of commodity codes and their associated compliance Regulations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItem>? CommodityCodes { get => _explicitNullValueCommodityCodes; set { _explicitNullValueCommodityCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCodes"); else _explicitNullProperties?.Remove("commodityCodes"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItem>? CommodityCodes { get => _explicitNullValueCommodityCodes; set { _explicitNullValueCommodityCodes = value; AdditionalData?.Remove("commodityCodes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCodes"); else _explicitNullProperties?.Remove("commodityCodes"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItem>? _explicitNullValueCommodityCodes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItem> CommodityCodes { get => _explicitNullValueCommodityCodes; set { _explicitNullValueCommodityCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCodes"); else _explicitNullProperties?.Remove("commodityCodes"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItem> CommodityCodes { get => _explicitNullValueCommodityCodes; set { _explicitNullValueCommodityCodes = value; AdditionalData?.Remove("commodityCodes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityCodes"); else _explicitNullProperties?.Remove("commodityCodes"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2CommodityCodesItem> _explicitNullValueCommodityCodes = default!;
 #endif
         /// <summary>Unbounded list of field group definitions grouped by country, shipment type, and Regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItem>? FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldGroups"); else _explicitNullProperties?.Remove("fieldGroups"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItem>? FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; AdditionalData?.Remove("fieldGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldGroups"); else _explicitNullProperties?.Remove("fieldGroups"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItem>? _explicitNullValueFieldGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItem> FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldGroups"); else _explicitNullProperties?.Remove("fieldGroups"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItem> FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; AdditionalData?.Remove("fieldGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldGroups"); else _explicitNullProperties?.Remove("fieldGroups"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsGetFieldsSuccessResponsev2FieldGroupsItem> _explicitNullValueFieldGroups = default!;
 #endif
         /// <summary>

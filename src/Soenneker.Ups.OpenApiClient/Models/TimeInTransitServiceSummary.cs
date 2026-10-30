@@ -18,14 +18,22 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Disclaimer") is { } nullNodeDisclaimer && nullNodeDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disclaimer = null;
-            if (parseNode.GetChildNode("EstimatedArrival") is { } nullNodeEstimatedArrival && nullNodeEstimatedArrival.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedArrival = null;
-            if (parseNode.GetChildNode("GuaranteedIndicator") is { } nullNodeGuaranteedIndicator && nullNodeGuaranteedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuaranteedIndicator = null;
-            if (parseNode.GetChildNode("SaturdayDelivery") is { } nullNodeSaturdayDelivery && nullNodeSaturdayDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDelivery = null;
-            if (parseNode.GetChildNode("SaturdayDeliveryDisclaimer") is { } nullNodeSaturdayDeliveryDisclaimer && nullNodeSaturdayDeliveryDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDeliveryDisclaimer = null;
-            if (parseNode.GetChildNode("Service") is { } nullNodeService && nullNodeService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Service = null;
-            if (parseNode.GetChildNode("SundayDelivery") is { } nullNodeSundayDelivery && nullNodeSundayDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SundayDelivery = null;
-            if (parseNode.GetChildNode("SundayDeliveryDisclaimer") is { } nullNodeSundayDeliveryDisclaimer && nullNodeSundayDeliveryDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SundayDeliveryDisclaimer = null;
+            if (parseNode.GetChildNode("Disclaimer") is null) { _explicitNullValueDisclaimer = default!; _explicitNullProperties?.Remove("Disclaimer"); }
+            else if (parseNode.GetChildNode("Disclaimer") is { } nullNodeDisclaimer && nullNodeDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disclaimer = null;
+            if (parseNode.GetChildNode("EstimatedArrival") is null) { _explicitNullValueEstimatedArrival = default!; _explicitNullProperties?.Remove("EstimatedArrival"); }
+            else if (parseNode.GetChildNode("EstimatedArrival") is { } nullNodeEstimatedArrival && nullNodeEstimatedArrival.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedArrival = null;
+            if (parseNode.GetChildNode("GuaranteedIndicator") is null) { _explicitNullValueGuaranteedIndicator = default!; _explicitNullProperties?.Remove("GuaranteedIndicator"); }
+            else if (parseNode.GetChildNode("GuaranteedIndicator") is { } nullNodeGuaranteedIndicator && nullNodeGuaranteedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GuaranteedIndicator = null;
+            if (parseNode.GetChildNode("SaturdayDelivery") is null) { _explicitNullValueSaturdayDelivery = default!; _explicitNullProperties?.Remove("SaturdayDelivery"); }
+            else if (parseNode.GetChildNode("SaturdayDelivery") is { } nullNodeSaturdayDelivery && nullNodeSaturdayDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDelivery = null;
+            if (parseNode.GetChildNode("SaturdayDeliveryDisclaimer") is null) { _explicitNullValueSaturdayDeliveryDisclaimer = default!; _explicitNullProperties?.Remove("SaturdayDeliveryDisclaimer"); }
+            else if (parseNode.GetChildNode("SaturdayDeliveryDisclaimer") is { } nullNodeSaturdayDeliveryDisclaimer && nullNodeSaturdayDeliveryDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDeliveryDisclaimer = null;
+            if (parseNode.GetChildNode("Service") is null) { _explicitNullValueService = default!; _explicitNullProperties?.Remove("Service"); }
+            else if (parseNode.GetChildNode("Service") is { } nullNodeService && nullNodeService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Service = null;
+            if (parseNode.GetChildNode("SundayDelivery") is null) { _explicitNullValueSundayDelivery = default!; _explicitNullProperties?.Remove("SundayDelivery"); }
+            else if (parseNode.GetChildNode("SundayDelivery") is { } nullNodeSundayDelivery && nullNodeSundayDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SundayDelivery = null;
+            if (parseNode.GetChildNode("SundayDeliveryDisclaimer") is null) { _explicitNullValueSundayDeliveryDisclaimer = default!; _explicitNullProperties?.Remove("SundayDeliveryDisclaimer"); }
+            else if (parseNode.GetChildNode("SundayDeliveryDisclaimer") is { } nullNodeSundayDeliveryDisclaimer && nullNodeSundayDeliveryDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SundayDeliveryDisclaimer = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,81 +41,81 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The Disclaimer is provided based upon the origin and destination country or territory codes provided in the request document. The disclaimer is returned as a conditional statement to the validity of the service being guaranteed. The possible disclaimers that can be returned are available in the Service Guaranteed Disclaimers table.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
+        public string? Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; AdditionalData?.Remove("Disclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
         private string? _explicitNullValueDisclaimer = default!;
 #nullable restore
 #else
-        public string Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
+        public string Disclaimer { get => _explicitNullValueDisclaimer; set { _explicitNullValueDisclaimer = value; AdditionalData?.Remove("Disclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Disclaimer"); else _explicitNullProperties?.Remove("Disclaimer"); } }
         private string _explicitNullValueDisclaimer = default!;
 #endif
         /// <summary>Container for the Time-In-Transit arrival information by service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryEstimatedArrival? EstimatedArrival { get => _explicitNullValueEstimatedArrival; set { _explicitNullValueEstimatedArrival = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EstimatedArrival"); else _explicitNullProperties?.Remove("EstimatedArrival"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryEstimatedArrival? EstimatedArrival { get => _explicitNullValueEstimatedArrival; set { _explicitNullValueEstimatedArrival = value; AdditionalData?.Remove("EstimatedArrival"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EstimatedArrival"); else _explicitNullProperties?.Remove("EstimatedArrival"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryEstimatedArrival? _explicitNullValueEstimatedArrival = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryEstimatedArrival EstimatedArrival { get => _explicitNullValueEstimatedArrival; set { _explicitNullValueEstimatedArrival = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EstimatedArrival"); else _explicitNullProperties?.Remove("EstimatedArrival"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryEstimatedArrival EstimatedArrival { get => _explicitNullValueEstimatedArrival; set { _explicitNullValueEstimatedArrival = value; AdditionalData?.Remove("EstimatedArrival"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EstimatedArrival"); else _explicitNullProperties?.Remove("EstimatedArrival"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryEstimatedArrival _explicitNullValueEstimatedArrival = default!;
 #endif
         /// <summary>Empty Tag. Indicates whether the service will be guaranteed or not.  Required for International Requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GuaranteedIndicator { get => _explicitNullValueGuaranteedIndicator; set { _explicitNullValueGuaranteedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GuaranteedIndicator"); else _explicitNullProperties?.Remove("GuaranteedIndicator"); } }
+        public string? GuaranteedIndicator { get => _explicitNullValueGuaranteedIndicator; set { _explicitNullValueGuaranteedIndicator = value; AdditionalData?.Remove("GuaranteedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GuaranteedIndicator"); else _explicitNullProperties?.Remove("GuaranteedIndicator"); } }
         private string? _explicitNullValueGuaranteedIndicator = default!;
 #nullable restore
 #else
-        public string GuaranteedIndicator { get => _explicitNullValueGuaranteedIndicator; set { _explicitNullValueGuaranteedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GuaranteedIndicator"); else _explicitNullProperties?.Remove("GuaranteedIndicator"); } }
+        public string GuaranteedIndicator { get => _explicitNullValueGuaranteedIndicator; set { _explicitNullValueGuaranteedIndicator = value; AdditionalData?.Remove("GuaranteedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GuaranteedIndicator"); else _explicitNullProperties?.Remove("GuaranteedIndicator"); } }
         private string _explicitNullValueGuaranteedIndicator = default!;
 #endif
         /// <summary>Saturday delivery information for a service. Values are1 - Saturday Delivery Available with additional charges 0 - Saturday Delivery not available or no additional charge, please check Delivery Date to confirm if the Delivery will be SaturdayPlease see Saturday Delivery business rules section for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
+        public string? SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; AdditionalData?.Remove("SaturdayDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
         private string? _explicitNullValueSaturdayDelivery = default!;
 #nullable restore
 #else
-        public string SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
+        public string SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; AdditionalData?.Remove("SaturdayDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDelivery"); else _explicitNullProperties?.Remove("SaturdayDelivery"); } }
         private string _explicitNullValueSaturdayDelivery = default!;
 #endif
         /// <summary>Saturday delivery disclaimer message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaturdayDeliveryDisclaimer { get => _explicitNullValueSaturdayDeliveryDisclaimer; set { _explicitNullValueSaturdayDeliveryDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDeliveryDisclaimer"); else _explicitNullProperties?.Remove("SaturdayDeliveryDisclaimer"); } }
+        public string? SaturdayDeliveryDisclaimer { get => _explicitNullValueSaturdayDeliveryDisclaimer; set { _explicitNullValueSaturdayDeliveryDisclaimer = value; AdditionalData?.Remove("SaturdayDeliveryDisclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDeliveryDisclaimer"); else _explicitNullProperties?.Remove("SaturdayDeliveryDisclaimer"); } }
         private string? _explicitNullValueSaturdayDeliveryDisclaimer = default!;
 #nullable restore
 #else
-        public string SaturdayDeliveryDisclaimer { get => _explicitNullValueSaturdayDeliveryDisclaimer; set { _explicitNullValueSaturdayDeliveryDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDeliveryDisclaimer"); else _explicitNullProperties?.Remove("SaturdayDeliveryDisclaimer"); } }
+        public string SaturdayDeliveryDisclaimer { get => _explicitNullValueSaturdayDeliveryDisclaimer; set { _explicitNullValueSaturdayDeliveryDisclaimer = value; AdditionalData?.Remove("SaturdayDeliveryDisclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SaturdayDeliveryDisclaimer"); else _explicitNullProperties?.Remove("SaturdayDeliveryDisclaimer"); } }
         private string _explicitNullValueSaturdayDeliveryDisclaimer = default!;
 #endif
         /// <summary>Container for the the UPS service selected for a shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryService? Service { get => _explicitNullValueService; set { _explicitNullValueService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryService? Service { get => _explicitNullValueService; set { _explicitNullValueService = value; AdditionalData?.Remove("Service"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryService? _explicitNullValueService = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryService Service { get => _explicitNullValueService; set { _explicitNullValueService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryService Service { get => _explicitNullValueService; set { _explicitNullValueService = value; AdditionalData?.Remove("Service"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ServiceSummaryService _explicitNullValueService = default!;
 #endif
         /// <summary>Sunday delivery information for a service. Values are1 - Sunday Delivery Available with additional charges 0 - Sunday Delivery not available or no additional charge, please check Delivery Date to confirm if the Delivery will be SundayPlease see Saturday Delivery business rules section for more information.  Applies only if SubVersion is greater than or equal to 2007</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SundayDelivery { get => _explicitNullValueSundayDelivery; set { _explicitNullValueSundayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayDelivery"); else _explicitNullProperties?.Remove("SundayDelivery"); } }
+        public string? SundayDelivery { get => _explicitNullValueSundayDelivery; set { _explicitNullValueSundayDelivery = value; AdditionalData?.Remove("SundayDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayDelivery"); else _explicitNullProperties?.Remove("SundayDelivery"); } }
         private string? _explicitNullValueSundayDelivery = default!;
 #nullable restore
 #else
-        public string SundayDelivery { get => _explicitNullValueSundayDelivery; set { _explicitNullValueSundayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayDelivery"); else _explicitNullProperties?.Remove("SundayDelivery"); } }
+        public string SundayDelivery { get => _explicitNullValueSundayDelivery; set { _explicitNullValueSundayDelivery = value; AdditionalData?.Remove("SundayDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayDelivery"); else _explicitNullProperties?.Remove("SundayDelivery"); } }
         private string _explicitNullValueSundayDelivery = default!;
 #endif
         /// <summary>Sunday delivery disclaimer message.  Applies only if SubVersion is greater than or equal to 2007</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SundayDeliveryDisclaimer { get => _explicitNullValueSundayDeliveryDisclaimer; set { _explicitNullValueSundayDeliveryDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayDeliveryDisclaimer"); else _explicitNullProperties?.Remove("SundayDeliveryDisclaimer"); } }
+        public string? SundayDeliveryDisclaimer { get => _explicitNullValueSundayDeliveryDisclaimer; set { _explicitNullValueSundayDeliveryDisclaimer = value; AdditionalData?.Remove("SundayDeliveryDisclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayDeliveryDisclaimer"); else _explicitNullProperties?.Remove("SundayDeliveryDisclaimer"); } }
         private string? _explicitNullValueSundayDeliveryDisclaimer = default!;
 #nullable restore
 #else
-        public string SundayDeliveryDisclaimer { get => _explicitNullValueSundayDeliveryDisclaimer; set { _explicitNullValueSundayDeliveryDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayDeliveryDisclaimer"); else _explicitNullProperties?.Remove("SundayDeliveryDisclaimer"); } }
+        public string SundayDeliveryDisclaimer { get => _explicitNullValueSundayDeliveryDisclaimer; set { _explicitNullValueSundayDeliveryDisclaimer = value; AdditionalData?.Remove("SundayDeliveryDisclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayDeliveryDisclaimer"); else _explicitNullProperties?.Remove("SundayDeliveryDisclaimer"); } }
         private string _explicitNullValueSundayDeliveryDisclaimer = default!;
 #endif
         /// <summary>

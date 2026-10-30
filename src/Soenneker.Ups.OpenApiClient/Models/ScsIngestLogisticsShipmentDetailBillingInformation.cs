@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("billingTermCode") is { } nullNodeBillingTermCode && nullNodeBillingTermCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingTermCode = null;
-            if (parseNode.GetChildNode("billingTermDescription") is { } nullNodeBillingTermDescription && nullNodeBillingTermDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingTermDescription = null;
+            if (parseNode.GetChildNode("billingTermCode") is null) { _explicitNullValueBillingTermCode = default!; _explicitNullProperties?.Remove("billingTermCode"); }
+            else if (parseNode.GetChildNode("billingTermCode") is { } nullNodeBillingTermCode && nullNodeBillingTermCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingTermCode = null;
+            if (parseNode.GetChildNode("billingTermDescription") is null) { _explicitNullValueBillingTermDescription = default!; _explicitNullProperties?.Remove("billingTermDescription"); }
+            else if (parseNode.GetChildNode("billingTermDescription") is { } nullNodeBillingTermDescription && nullNodeBillingTermDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingTermDescription = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Billing term code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingTermCode { get => _explicitNullValueBillingTermCode; set { _explicitNullValueBillingTermCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermCode"); else _explicitNullProperties?.Remove("billingTermCode"); } }
+        public string? BillingTermCode { get => _explicitNullValueBillingTermCode; set { _explicitNullValueBillingTermCode = value; AdditionalData?.Remove("billingTermCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermCode"); else _explicitNullProperties?.Remove("billingTermCode"); } }
         private string? _explicitNullValueBillingTermCode = default!;
 #nullable restore
 #else
-        public string BillingTermCode { get => _explicitNullValueBillingTermCode; set { _explicitNullValueBillingTermCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermCode"); else _explicitNullProperties?.Remove("billingTermCode"); } }
+        public string BillingTermCode { get => _explicitNullValueBillingTermCode; set { _explicitNullValueBillingTermCode = value; AdditionalData?.Remove("billingTermCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermCode"); else _explicitNullProperties?.Remove("billingTermCode"); } }
         private string _explicitNullValueBillingTermCode = default!;
 #endif
         /// <summary>Billing term description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingTermDescription { get => _explicitNullValueBillingTermDescription; set { _explicitNullValueBillingTermDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermDescription"); else _explicitNullProperties?.Remove("billingTermDescription"); } }
+        public string? BillingTermDescription { get => _explicitNullValueBillingTermDescription; set { _explicitNullValueBillingTermDescription = value; AdditionalData?.Remove("billingTermDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermDescription"); else _explicitNullProperties?.Remove("billingTermDescription"); } }
         private string? _explicitNullValueBillingTermDescription = default!;
 #nullable restore
 #else
-        public string BillingTermDescription { get => _explicitNullValueBillingTermDescription; set { _explicitNullValueBillingTermDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermDescription"); else _explicitNullProperties?.Remove("billingTermDescription"); } }
+        public string BillingTermDescription { get => _explicitNullValueBillingTermDescription; set { _explicitNullValueBillingTermDescription = value; AdditionalData?.Remove("billingTermDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingTermDescription"); else _explicitNullProperties?.Remove("billingTermDescription"); } }
         private string _explicitNullValueBillingTermDescription = default!;
 #endif
         /// <summary>

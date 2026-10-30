@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FRSShipmentIndicator") is { } nullNodeFRSShipmentIndicator && nullNodeFRSShipmentIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FRSShipmentIndicator = null;
-            if (parseNode.GetChildNode("NegotiatedRatesIndicator") is { } nullNodeNegotiatedRatesIndicator && nullNodeNegotiatedRatesIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NegotiatedRatesIndicator = null;
-            if (parseNode.GetChildNode("RateChartIndicator") is { } nullNodeRateChartIndicator && nullNodeRateChartIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateChartIndicator = null;
-            if (parseNode.GetChildNode("TPFCNegotiatedRatesIndicator") is { } nullNodeTPFCNegotiatedRatesIndicator && nullNodeTPFCNegotiatedRatesIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TPFCNegotiatedRatesIndicator = null;
-            if (parseNode.GetChildNode("UserLevelDiscountIndicator") is { } nullNodeUserLevelDiscountIndicator && nullNodeUserLevelDiscountIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLevelDiscountIndicator = null;
+            if (parseNode.GetChildNode("FRSShipmentIndicator") is null) { _explicitNullValueFRSShipmentIndicator = default!; _explicitNullProperties?.Remove("FRSShipmentIndicator"); }
+            else if (parseNode.GetChildNode("FRSShipmentIndicator") is { } nullNodeFRSShipmentIndicator && nullNodeFRSShipmentIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FRSShipmentIndicator = null;
+            if (parseNode.GetChildNode("NegotiatedRatesIndicator") is null) { _explicitNullValueNegotiatedRatesIndicator = default!; _explicitNullProperties?.Remove("NegotiatedRatesIndicator"); }
+            else if (parseNode.GetChildNode("NegotiatedRatesIndicator") is { } nullNodeNegotiatedRatesIndicator && nullNodeNegotiatedRatesIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NegotiatedRatesIndicator = null;
+            if (parseNode.GetChildNode("RateChartIndicator") is null) { _explicitNullValueRateChartIndicator = default!; _explicitNullProperties?.Remove("RateChartIndicator"); }
+            else if (parseNode.GetChildNode("RateChartIndicator") is { } nullNodeRateChartIndicator && nullNodeRateChartIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateChartIndicator = null;
+            if (parseNode.GetChildNode("TPFCNegotiatedRatesIndicator") is null) { _explicitNullValueTPFCNegotiatedRatesIndicator = default!; _explicitNullProperties?.Remove("TPFCNegotiatedRatesIndicator"); }
+            else if (parseNode.GetChildNode("TPFCNegotiatedRatesIndicator") is { } nullNodeTPFCNegotiatedRatesIndicator && nullNodeTPFCNegotiatedRatesIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TPFCNegotiatedRatesIndicator = null;
+            if (parseNode.GetChildNode("UserLevelDiscountIndicator") is null) { _explicitNullValueUserLevelDiscountIndicator = default!; _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); }
+            else if (parseNode.GetChildNode("UserLevelDiscountIndicator") is { } nullNodeUserLevelDiscountIndicator && nullNodeUserLevelDiscountIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLevelDiscountIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>FRS Indicator. The indicator is required to obtain rates for UPS Ground Freight Pricing (GFP).  The account number must be enabled for GFP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FRSShipmentIndicator { get => _explicitNullValueFRSShipmentIndicator; set { _explicitNullValueFRSShipmentIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FRSShipmentIndicator"); else _explicitNullProperties?.Remove("FRSShipmentIndicator"); } }
+        public string? FRSShipmentIndicator { get => _explicitNullValueFRSShipmentIndicator; set { _explicitNullValueFRSShipmentIndicator = value; AdditionalData?.Remove("FRSShipmentIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FRSShipmentIndicator"); else _explicitNullProperties?.Remove("FRSShipmentIndicator"); } }
         private string? _explicitNullValueFRSShipmentIndicator = default!;
 #nullable restore
 #else
-        public string FRSShipmentIndicator { get => _explicitNullValueFRSShipmentIndicator; set { _explicitNullValueFRSShipmentIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FRSShipmentIndicator"); else _explicitNullProperties?.Remove("FRSShipmentIndicator"); } }
+        public string FRSShipmentIndicator { get => _explicitNullValueFRSShipmentIndicator; set { _explicitNullValueFRSShipmentIndicator = value; AdditionalData?.Remove("FRSShipmentIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FRSShipmentIndicator"); else _explicitNullProperties?.Remove("FRSShipmentIndicator"); } }
         private string _explicitNullValueFRSShipmentIndicator = default!;
 #endif
         /// <summary>NegotiatedRatesIndicator -  Required to display two types of discounts: 1) Bids or Account Based Rates2) Web/Promotional Discounts BidsAccount Based Rates: If the indicator is present, the Shipper is authorized, and the Rating API XML Request is configured to return Negotiated Rates, then Negotiated Rates should be returned in the response. Web/Promotional Discounts: If the indicator is present, the Shipper is authorized for Web/Promotional Discounts then Negotiated Rates should be returned in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NegotiatedRatesIndicator { get => _explicitNullValueNegotiatedRatesIndicator; set { _explicitNullValueNegotiatedRatesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedRatesIndicator"); else _explicitNullProperties?.Remove("NegotiatedRatesIndicator"); } }
+        public string? NegotiatedRatesIndicator { get => _explicitNullValueNegotiatedRatesIndicator; set { _explicitNullValueNegotiatedRatesIndicator = value; AdditionalData?.Remove("NegotiatedRatesIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedRatesIndicator"); else _explicitNullProperties?.Remove("NegotiatedRatesIndicator"); } }
         private string? _explicitNullValueNegotiatedRatesIndicator = default!;
 #nullable restore
 #else
-        public string NegotiatedRatesIndicator { get => _explicitNullValueNegotiatedRatesIndicator; set { _explicitNullValueNegotiatedRatesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedRatesIndicator"); else _explicitNullProperties?.Remove("NegotiatedRatesIndicator"); } }
+        public string NegotiatedRatesIndicator { get => _explicitNullValueNegotiatedRatesIndicator; set { _explicitNullValueNegotiatedRatesIndicator = value; AdditionalData?.Remove("NegotiatedRatesIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NegotiatedRatesIndicator"); else _explicitNullProperties?.Remove("NegotiatedRatesIndicator"); } }
         private string _explicitNullValueNegotiatedRatesIndicator = default!;
 #endif
         /// <summary>RateChartIndicator -  If present in a request, the response will contain a RateChart element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RateChartIndicator { get => _explicitNullValueRateChartIndicator; set { _explicitNullValueRateChartIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateChartIndicator"); else _explicitNullProperties?.Remove("RateChartIndicator"); } }
+        public string? RateChartIndicator { get => _explicitNullValueRateChartIndicator; set { _explicitNullValueRateChartIndicator = value; AdditionalData?.Remove("RateChartIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateChartIndicator"); else _explicitNullProperties?.Remove("RateChartIndicator"); } }
         private string? _explicitNullValueRateChartIndicator = default!;
 #nullable restore
 #else
-        public string RateChartIndicator { get => _explicitNullValueRateChartIndicator; set { _explicitNullValueRateChartIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateChartIndicator"); else _explicitNullProperties?.Remove("RateChartIndicator"); } }
+        public string RateChartIndicator { get => _explicitNullValueRateChartIndicator; set { _explicitNullValueRateChartIndicator = value; AdditionalData?.Remove("RateChartIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateChartIndicator"); else _explicitNullProperties?.Remove("RateChartIndicator"); } }
         private string _explicitNullValueRateChartIndicator = default!;
 #endif
         /// <summary>This indicator applies for a third party (3P) / Freight collect (FC) shipment only. For 3P/FC shipment if the shipper wishes to request for the negotiated rates of the third party then this indicator should be included in the request. If authorized the 3P/FC negotiated rates will be applied to the shipment and rates will be returned in response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TPFCNegotiatedRatesIndicator { get => _explicitNullValueTPFCNegotiatedRatesIndicator; set { _explicitNullValueTPFCNegotiatedRatesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TPFCNegotiatedRatesIndicator"); else _explicitNullProperties?.Remove("TPFCNegotiatedRatesIndicator"); } }
+        public string? TPFCNegotiatedRatesIndicator { get => _explicitNullValueTPFCNegotiatedRatesIndicator; set { _explicitNullValueTPFCNegotiatedRatesIndicator = value; AdditionalData?.Remove("TPFCNegotiatedRatesIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TPFCNegotiatedRatesIndicator"); else _explicitNullProperties?.Remove("TPFCNegotiatedRatesIndicator"); } }
         private string? _explicitNullValueTPFCNegotiatedRatesIndicator = default!;
 #nullable restore
 #else
-        public string TPFCNegotiatedRatesIndicator { get => _explicitNullValueTPFCNegotiatedRatesIndicator; set { _explicitNullValueTPFCNegotiatedRatesIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TPFCNegotiatedRatesIndicator"); else _explicitNullProperties?.Remove("TPFCNegotiatedRatesIndicator"); } }
+        public string TPFCNegotiatedRatesIndicator { get => _explicitNullValueTPFCNegotiatedRatesIndicator; set { _explicitNullValueTPFCNegotiatedRatesIndicator = value; AdditionalData?.Remove("TPFCNegotiatedRatesIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TPFCNegotiatedRatesIndicator"); else _explicitNullProperties?.Remove("TPFCNegotiatedRatesIndicator"); } }
         private string _explicitNullValueTPFCNegotiatedRatesIndicator = default!;
 #endif
         /// <summary>UserLevelDiscountIndicator - required to obtain rates for User Level Promotions.  This is required to obtain User Level Discounts. There must also be no ShipperNumber in the Shipper container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserLevelDiscountIndicator { get => _explicitNullValueUserLevelDiscountIndicator; set { _explicitNullValueUserLevelDiscountIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserLevelDiscountIndicator"); else _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); } }
+        public string? UserLevelDiscountIndicator { get => _explicitNullValueUserLevelDiscountIndicator; set { _explicitNullValueUserLevelDiscountIndicator = value; AdditionalData?.Remove("UserLevelDiscountIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserLevelDiscountIndicator"); else _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); } }
         private string? _explicitNullValueUserLevelDiscountIndicator = default!;
 #nullable restore
 #else
-        public string UserLevelDiscountIndicator { get => _explicitNullValueUserLevelDiscountIndicator; set { _explicitNullValueUserLevelDiscountIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserLevelDiscountIndicator"); else _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); } }
+        public string UserLevelDiscountIndicator { get => _explicitNullValueUserLevelDiscountIndicator; set { _explicitNullValueUserLevelDiscountIndicator = value; AdditionalData?.Remove("UserLevelDiscountIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserLevelDiscountIndicator"); else _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); } }
         private string _explicitNullValueUserLevelDiscountIndicator = default!;
 #endif
         /// <summary>

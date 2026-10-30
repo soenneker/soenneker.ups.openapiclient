@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DayOfWeekCode") is { } nullNodeDayOfWeekCode && nullNodeDayOfWeekCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekCode = null;
-            if (parseNode.GetChildNode("FacilityAddress") is { } nullNodeFacilityAddress && nullNodeFacilityAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacilityAddress = null;
-            if (parseNode.GetChildNode("FormatPostalCode") is { } nullNodeFormatPostalCode && nullNodeFormatPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormatPostalCode = null;
-            if (parseNode.GetChildNode("FreightWillCallRequestType") is { } nullNodeFreightWillCallRequestType && nullNodeFreightWillCallRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightWillCallRequestType = null;
-            if (parseNode.GetChildNode("OriginOrDestination") is { } nullNodeOriginOrDestination && nullNodeOriginOrDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginOrDestination = null;
+            if (parseNode.GetChildNode("DayOfWeekCode") is null) { _explicitNullValueDayOfWeekCode = default!; _explicitNullProperties?.Remove("DayOfWeekCode"); }
+            else if (parseNode.GetChildNode("DayOfWeekCode") is { } nullNodeDayOfWeekCode && nullNodeDayOfWeekCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeekCode = null;
+            if (parseNode.GetChildNode("FacilityAddress") is null) { _explicitNullValueFacilityAddress = default!; _explicitNullProperties?.Remove("FacilityAddress"); }
+            else if (parseNode.GetChildNode("FacilityAddress") is { } nullNodeFacilityAddress && nullNodeFacilityAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacilityAddress = null;
+            if (parseNode.GetChildNode("FormatPostalCode") is null) { _explicitNullValueFormatPostalCode = default!; _explicitNullProperties?.Remove("FormatPostalCode"); }
+            else if (parseNode.GetChildNode("FormatPostalCode") is { } nullNodeFormatPostalCode && nullNodeFormatPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormatPostalCode = null;
+            if (parseNode.GetChildNode("FreightWillCallRequestType") is null) { _explicitNullValueFreightWillCallRequestType = default!; _explicitNullProperties?.Remove("FreightWillCallRequestType"); }
+            else if (parseNode.GetChildNode("FreightWillCallRequestType") is { } nullNodeFreightWillCallRequestType && nullNodeFreightWillCallRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightWillCallRequestType = null;
+            if (parseNode.GetChildNode("OriginOrDestination") is null) { _explicitNullValueOriginOrDestination = default!; _explicitNullProperties?.Remove("OriginOrDestination"); }
+            else if (parseNode.GetChildNode("OriginOrDestination") is { } nullNodeOriginOrDestination && nullNodeOriginOrDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginOrDestination = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Day Of week Code. Valid Values are 1 to 7. 1-Sunday2-Monday 3-Tuesday 4-Wednesday5-Thursday6-Friday7-Saturday.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
+        public string? DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; AdditionalData?.Remove("DayOfWeekCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
         private string? _explicitNullValueDayOfWeekCode = default!;
 #nullable restore
 #else
-        public string DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
+        public string DayOfWeekCode { get => _explicitNullValueDayOfWeekCode; set { _explicitNullValueDayOfWeekCode = value; AdditionalData?.Remove("DayOfWeekCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeekCode"); else _explicitNullProperties?.Remove("DayOfWeekCode"); } }
         private string _explicitNullValueDayOfWeekCode = default!;
 #endif
         /// <summary>The FacilityAddress property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.FreightWillCallSearchFacilityAddress>? FacilityAddress { get => _explicitNullValueFacilityAddress; set { _explicitNullValueFacilityAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacilityAddress"); else _explicitNullProperties?.Remove("FacilityAddress"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.FreightWillCallSearchFacilityAddress>? FacilityAddress { get => _explicitNullValueFacilityAddress; set { _explicitNullValueFacilityAddress = value; AdditionalData?.Remove("FacilityAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacilityAddress"); else _explicitNullProperties?.Remove("FacilityAddress"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.FreightWillCallSearchFacilityAddress>? _explicitNullValueFacilityAddress = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.FreightWillCallSearchFacilityAddress> FacilityAddress { get => _explicitNullValueFacilityAddress; set { _explicitNullValueFacilityAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacilityAddress"); else _explicitNullProperties?.Remove("FacilityAddress"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.FreightWillCallSearchFacilityAddress> FacilityAddress { get => _explicitNullValueFacilityAddress; set { _explicitNullValueFacilityAddress = value; AdditionalData?.Remove("FacilityAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FacilityAddress"); else _explicitNullProperties?.Remove("FacilityAddress"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.FreightWillCallSearchFacilityAddress> _explicitNullValueFacilityAddress = default!;
 #endif
         /// <summary>FormatPostalCode would be required in the request when FreightWillCallRequestType is 1. Valid values are:NFR-No format requestedFR-format requestedFS-format and searchNVR-No validation requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FormatPostalCode { get => _explicitNullValueFormatPostalCode; set { _explicitNullValueFormatPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormatPostalCode"); else _explicitNullProperties?.Remove("FormatPostalCode"); } }
+        public string? FormatPostalCode { get => _explicitNullValueFormatPostalCode; set { _explicitNullValueFormatPostalCode = value; AdditionalData?.Remove("FormatPostalCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormatPostalCode"); else _explicitNullProperties?.Remove("FormatPostalCode"); } }
         private string? _explicitNullValueFormatPostalCode = default!;
 #nullable restore
 #else
-        public string FormatPostalCode { get => _explicitNullValueFormatPostalCode; set { _explicitNullValueFormatPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormatPostalCode"); else _explicitNullProperties?.Remove("FormatPostalCode"); } }
+        public string FormatPostalCode { get => _explicitNullValueFormatPostalCode; set { _explicitNullValueFormatPostalCode = value; AdditionalData?.Remove("FormatPostalCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormatPostalCode"); else _explicitNullProperties?.Remove("FormatPostalCode"); } }
         private string _explicitNullValueFormatPostalCode = default!;
 #endif
         /// <summary>Valid values are: 1 - Postal Code2 - Delivery SLIC3 - Delivery City/State.1: Freight Will Call Search based on Postal Code, this search is valid for Postal code countries. 2: Freight Will Call Search based on SLIC. 3: Freight Will Call Search based on City and/or State. This Search is valid for non-postal code Countries</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreightWillCallRequestType { get => _explicitNullValueFreightWillCallRequestType; set { _explicitNullValueFreightWillCallRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightWillCallRequestType"); else _explicitNullProperties?.Remove("FreightWillCallRequestType"); } }
+        public string? FreightWillCallRequestType { get => _explicitNullValueFreightWillCallRequestType; set { _explicitNullValueFreightWillCallRequestType = value; AdditionalData?.Remove("FreightWillCallRequestType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightWillCallRequestType"); else _explicitNullProperties?.Remove("FreightWillCallRequestType"); } }
         private string? _explicitNullValueFreightWillCallRequestType = default!;
 #nullable restore
 #else
-        public string FreightWillCallRequestType { get => _explicitNullValueFreightWillCallRequestType; set { _explicitNullValueFreightWillCallRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightWillCallRequestType"); else _explicitNullProperties?.Remove("FreightWillCallRequestType"); } }
+        public string FreightWillCallRequestType { get => _explicitNullValueFreightWillCallRequestType; set { _explicitNullValueFreightWillCallRequestType = value; AdditionalData?.Remove("FreightWillCallRequestType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightWillCallRequestType"); else _explicitNullProperties?.Remove("FreightWillCallRequestType"); } }
         private string _explicitNullValueFreightWillCallRequestType = default!;
 #endif
         /// <summary>OriginOrDestination is required for FreightWillCallRequestType 1 and type 3 . Valid values:01-Origin facilities02-Destination facilities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginOrDestination { get => _explicitNullValueOriginOrDestination; set { _explicitNullValueOriginOrDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginOrDestination"); else _explicitNullProperties?.Remove("OriginOrDestination"); } }
+        public string? OriginOrDestination { get => _explicitNullValueOriginOrDestination; set { _explicitNullValueOriginOrDestination = value; AdditionalData?.Remove("OriginOrDestination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginOrDestination"); else _explicitNullProperties?.Remove("OriginOrDestination"); } }
         private string? _explicitNullValueOriginOrDestination = default!;
 #nullable restore
 #else
-        public string OriginOrDestination { get => _explicitNullValueOriginOrDestination; set { _explicitNullValueOriginOrDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginOrDestination"); else _explicitNullProperties?.Remove("OriginOrDestination"); } }
+        public string OriginOrDestination { get => _explicitNullValueOriginOrDestination; set { _explicitNullValueOriginOrDestination = value; AdditionalData?.Remove("OriginOrDestination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginOrDestination"); else _explicitNullProperties?.Remove("OriginOrDestination"); } }
         private string _explicitNullValueOriginOrDestination = default!;
 #endif
         /// <summary>

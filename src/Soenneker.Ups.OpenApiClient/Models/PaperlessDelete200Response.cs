@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DeleteResponse") is { } nullNodeDeleteResponse && nullNodeDeleteResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteResponse = null;
+            if (parseNode.GetChildNode("DeleteResponse") is null) { _explicitNullValueDeleteResponse = default!; _explicitNullProperties?.Remove("DeleteResponse"); }
+            else if (parseNode.GetChildNode("DeleteResponse") is { } nullNodeDeleteResponse && nullNodeDeleteResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Paperless Document API response container for delete request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessDeleteResponse? DeleteResponse { get => _explicitNullValueDeleteResponse; set { _explicitNullValueDeleteResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeleteResponse"); else _explicitNullProperties?.Remove("DeleteResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessDeleteResponse? DeleteResponse { get => _explicitNullValueDeleteResponse; set { _explicitNullValueDeleteResponse = value; AdditionalData?.Remove("DeleteResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeleteResponse"); else _explicitNullProperties?.Remove("DeleteResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PaperlessDeleteResponse? _explicitNullValueDeleteResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessDeleteResponse DeleteResponse { get => _explicitNullValueDeleteResponse; set { _explicitNullValueDeleteResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeleteResponse"); else _explicitNullProperties?.Remove("DeleteResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessDeleteResponse DeleteResponse { get => _explicitNullValueDeleteResponse; set { _explicitNullValueDeleteResponse = value; AdditionalData?.Remove("DeleteResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeleteResponse"); else _explicitNullProperties?.Remove("DeleteResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PaperlessDeleteResponse _explicitNullValueDeleteResponse = default!;
 #endif
         /// <summary>

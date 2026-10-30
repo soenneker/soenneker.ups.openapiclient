@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("HandlingUnits") is { } nullNodeHandlingUnits && nullNodeHandlingUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingUnits = null;
-            if (parseNode.GetChildNode("NumberOfIdenticalUnits") is { } nullNodeNumberOfIdenticalUnits && nullNodeNumberOfIdenticalUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfIdenticalUnits = null;
-            if (parseNode.GetChildNode("ReferenceNumber") is { } nullNodeReferenceNumber && nullNodeReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceNumber = null;
+            if (parseNode.GetChildNode("HandlingUnits") is null) { _explicitNullValueHandlingUnits = default!; _explicitNullProperties?.Remove("HandlingUnits"); }
+            else if (parseNode.GetChildNode("HandlingUnits") is { } nullNodeHandlingUnits && nullNodeHandlingUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingUnits = null;
+            if (parseNode.GetChildNode("NumberOfIdenticalUnits") is null) { _explicitNullValueNumberOfIdenticalUnits = default!; _explicitNullProperties?.Remove("NumberOfIdenticalUnits"); }
+            else if (parseNode.GetChildNode("NumberOfIdenticalUnits") is { } nullNodeNumberOfIdenticalUnits && nullNodeNumberOfIdenticalUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfIdenticalUnits = null;
+            if (parseNode.GetChildNode("ReferenceNumber") is null) { _explicitNullValueReferenceNumber = default!; _explicitNullProperties?.Remove("ReferenceNumber"); }
+            else if (parseNode.GetChildNode("ReferenceNumber") is { } nullNodeReferenceNumber && nullNodeReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Used to provide information about the handling units in the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits? HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingUnits"); else _explicitNullProperties?.Remove("HandlingUnits"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits? HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; AdditionalData?.Remove("HandlingUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingUnits"); else _explicitNullProperties?.Remove("HandlingUnits"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits? _explicitNullValueHandlingUnits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingUnits"); else _explicitNullProperties?.Remove("HandlingUnits"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; AdditionalData?.Remove("HandlingUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingUnits"); else _explicitNullProperties?.Remove("HandlingUnits"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnits _explicitNullValueHandlingUnits = default!;
 #endif
         /// <summary>Number of identical units in the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumberOfIdenticalUnits { get => _explicitNullValueNumberOfIdenticalUnits; set { _explicitNullValueNumberOfIdenticalUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberOfIdenticalUnits"); else _explicitNullProperties?.Remove("NumberOfIdenticalUnits"); } }
+        public string? NumberOfIdenticalUnits { get => _explicitNullValueNumberOfIdenticalUnits; set { _explicitNullValueNumberOfIdenticalUnits = value; AdditionalData?.Remove("NumberOfIdenticalUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberOfIdenticalUnits"); else _explicitNullProperties?.Remove("NumberOfIdenticalUnits"); } }
         private string? _explicitNullValueNumberOfIdenticalUnits = default!;
 #nullable restore
 #else
-        public string NumberOfIdenticalUnits { get => _explicitNullValueNumberOfIdenticalUnits; set { _explicitNullValueNumberOfIdenticalUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberOfIdenticalUnits"); else _explicitNullProperties?.Remove("NumberOfIdenticalUnits"); } }
+        public string NumberOfIdenticalUnits { get => _explicitNullValueNumberOfIdenticalUnits; set { _explicitNullValueNumberOfIdenticalUnits = value; AdditionalData?.Remove("NumberOfIdenticalUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumberOfIdenticalUnits"); else _explicitNullProperties?.Remove("NumberOfIdenticalUnits"); } }
         private string _explicitNullValueNumberOfIdenticalUnits = default!;
 #endif
         /// <summary>LTL Reference number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlReferenceNumber? ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceNumber"); else _explicitNullProperties?.Remove("ReferenceNumber"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlReferenceNumber? ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; AdditionalData?.Remove("ReferenceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceNumber"); else _explicitNullProperties?.Remove("ReferenceNumber"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LtlReferenceNumber? _explicitNullValueReferenceNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LtlReferenceNumber ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceNumber"); else _explicitNullProperties?.Remove("ReferenceNumber"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LtlReferenceNumber ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; AdditionalData?.Remove("ReferenceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReferenceNumber"); else _explicitNullProperties?.Remove("ReferenceNumber"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LtlReferenceNumber _explicitNullValueReferenceNumber = default!;
 #endif
         /// <summary>

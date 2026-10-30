@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ProgramIdentifier") is { } nullNodeProgramIdentifier && nullNodeProgramIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProgramIdentifier = null;
-            if (parseNode.GetChildNode("SubAttribute") is { } nullNodeSubAttribute && nullNodeSubAttribute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubAttribute = null;
-            if (parseNode.GetChildNode("Text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
-            if (parseNode.GetChildNode("UniqueIdentifier") is { } nullNodeUniqueIdentifier && nullNodeUniqueIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueIdentifier = null;
+            if (parseNode.GetChildNode("ProgramIdentifier") is null) { _explicitNullValueProgramIdentifier = default!; _explicitNullProperties?.Remove("ProgramIdentifier"); }
+            else if (parseNode.GetChildNode("ProgramIdentifier") is { } nullNodeProgramIdentifier && nullNodeProgramIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProgramIdentifier = null;
+            if (parseNode.GetChildNode("SubAttribute") is null) { _explicitNullValueSubAttribute = default!; _explicitNullProperties?.Remove("SubAttribute"); }
+            else if (parseNode.GetChildNode("SubAttribute") is { } nullNodeSubAttribute && nullNodeSubAttribute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubAttribute = null;
+            if (parseNode.GetChildNode("Text") is null) { _explicitNullValueText = default!; _explicitNullProperties?.Remove("Text"); }
+            else if (parseNode.GetChildNode("Text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("UniqueIdentifier") is null) { _explicitNullValueUniqueIdentifier = default!; _explicitNullProperties?.Remove("UniqueIdentifier"); }
+            else if (parseNode.GetChildNode("UniqueIdentifier") is { } nullNodeUniqueIdentifier && nullNodeUniqueIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniqueIdentifier = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>An indicator to identify the healthcare program. Default value is 000.Valid values:- 000 = No Program- 001 = Home Health / Direct to Patient- 002 = Tissues, Organs, and Lab Specimens- 003 = Investigative Drug Substance and Drug Product- 004 = Specialty Drug Product and API- 006 = Implantable Medical devices- 007 = Medical Diagnostics Equipment- 008 = Non-Sterile Pharmaceutical Drug Product and Substance- 009 = Medical Inst. &amp; Supplies- 010 = Animal Health Non-Drug- 011 = Consumer Health Perishable- 012 = Consumer Health Non Perishable- 013 = Non-Complex- 099 = UNCLASSIFIED</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProgramIdentifier { get => _explicitNullValueProgramIdentifier; set { _explicitNullValueProgramIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProgramIdentifier"); else _explicitNullProperties?.Remove("ProgramIdentifier"); } }
+        public string? ProgramIdentifier { get => _explicitNullValueProgramIdentifier; set { _explicitNullValueProgramIdentifier = value; AdditionalData?.Remove("ProgramIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProgramIdentifier"); else _explicitNullProperties?.Remove("ProgramIdentifier"); } }
         private string? _explicitNullValueProgramIdentifier = default!;
 #nullable restore
 #else
-        public string ProgramIdentifier { get => _explicitNullValueProgramIdentifier; set { _explicitNullValueProgramIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProgramIdentifier"); else _explicitNullProperties?.Remove("ProgramIdentifier"); } }
+        public string ProgramIdentifier { get => _explicitNullValueProgramIdentifier; set { _explicitNullValueProgramIdentifier = value; AdditionalData?.Remove("ProgramIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProgramIdentifier"); else _explicitNullProperties?.Remove("ProgramIdentifier"); } }
         private string _explicitNullValueProgramIdentifier = default!;
 #endif
         /// <summary>Description of Program.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubAttribute { get => _explicitNullValueSubAttribute; set { _explicitNullValueSubAttribute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubAttribute"); else _explicitNullProperties?.Remove("SubAttribute"); } }
+        public string? SubAttribute { get => _explicitNullValueSubAttribute; set { _explicitNullValueSubAttribute = value; AdditionalData?.Remove("SubAttribute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubAttribute"); else _explicitNullProperties?.Remove("SubAttribute"); } }
         private string? _explicitNullValueSubAttribute = default!;
 #nullable restore
 #else
-        public string SubAttribute { get => _explicitNullValueSubAttribute; set { _explicitNullValueSubAttribute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubAttribute"); else _explicitNullProperties?.Remove("SubAttribute"); } }
+        public string SubAttribute { get => _explicitNullValueSubAttribute; set { _explicitNullValueSubAttribute = value; AdditionalData?.Remove("SubAttribute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubAttribute"); else _explicitNullProperties?.Remove("SubAttribute"); } }
         private string _explicitNullValueSubAttribute = default!;
 #endif
         /// <summary>Field for future use.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Text"); else _explicitNullProperties?.Remove("Text"); } }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("Text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Text"); else _explicitNullProperties?.Remove("Text"); } }
         private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Text"); else _explicitNullProperties?.Remove("Text"); } }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("Text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Text"); else _explicitNullProperties?.Remove("Text"); } }
         private string _explicitNullValueText = default!;
 #endif
         /// <summary>Unique Patient Identifier/Provider Identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueIdentifier { get => _explicitNullValueUniqueIdentifier; set { _explicitNullValueUniqueIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueIdentifier"); else _explicitNullProperties?.Remove("UniqueIdentifier"); } }
+        public string? UniqueIdentifier { get => _explicitNullValueUniqueIdentifier; set { _explicitNullValueUniqueIdentifier = value; AdditionalData?.Remove("UniqueIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueIdentifier"); else _explicitNullProperties?.Remove("UniqueIdentifier"); } }
         private string? _explicitNullValueUniqueIdentifier = default!;
 #nullable restore
 #else
-        public string UniqueIdentifier { get => _explicitNullValueUniqueIdentifier; set { _explicitNullValueUniqueIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueIdentifier"); else _explicitNullProperties?.Remove("UniqueIdentifier"); } }
+        public string UniqueIdentifier { get => _explicitNullValueUniqueIdentifier; set { _explicitNullValueUniqueIdentifier = value; AdditionalData?.Remove("UniqueIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UniqueIdentifier"); else _explicitNullProperties?.Remove("UniqueIdentifier"); } }
         private string _explicitNullValueUniqueIdentifier = default!;
 #endif
         /// <summary>

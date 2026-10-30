@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
-            if (parseNode.GetChildNode("PickUpDetails") is { } nullNodePickUpDetails && nullNodePickUpDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpDetails = null;
+            if (parseNode.GetChildNode("DayOfWeek") is null) { _explicitNullValueDayOfWeek = default!; _explicitNullProperties?.Remove("DayOfWeek"); }
+            else if (parseNode.GetChildNode("DayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
+            if (parseNode.GetChildNode("PickUpDetails") is null) { _explicitNullValuePickUpDetails = default!; _explicitNullProperties?.Remove("PickUpDetails"); }
+            else if (parseNode.GetChildNode("PickUpDetails") is { } nullNodePickUpDetails && nullNodePickUpDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Day of the week for scheduled pickup. Valid values are:- 1 - Sunday- 2 - Monday- 3 - Tuesday- 4 - Wednesday- 5 - Thursday- 6 - Friday- 7 - Saturday.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
+        public string? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("DayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
         private string? _explicitNullValueDayOfWeek = default!;
 #nullable restore
 #else
-        public string DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
+        public string DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("DayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
         private string _explicitNullValueDayOfWeek = default!;
 #endif
         /// <summary>Container to hold information regarding pickup time and pickup availability indicator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesPickUpPickUpDetails? PickUpDetails { get => _explicitNullValuePickUpDetails; set { _explicitNullValuePickUpDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDetails"); else _explicitNullProperties?.Remove("PickUpDetails"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesPickUpPickUpDetails? PickUpDetails { get => _explicitNullValuePickUpDetails; set { _explicitNullValuePickUpDetails = value; AdditionalData?.Remove("PickUpDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDetails"); else _explicitNullProperties?.Remove("PickUpDetails"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesPickUpPickUpDetails? _explicitNullValuePickUpDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesPickUpPickUpDetails PickUpDetails { get => _explicitNullValuePickUpDetails; set { _explicitNullValuePickUpDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDetails"); else _explicitNullProperties?.Remove("PickUpDetails"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesPickUpPickUpDetails PickUpDetails { get => _explicitNullValuePickUpDetails; set { _explicitNullValuePickUpDetails = value; AdditionalData?.Remove("PickUpDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDetails"); else _explicitNullProperties?.Remove("PickUpDetails"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AvailableLocationAttributesPickUpPickUpDetails _explicitNullValuePickUpDetails = default!;
 #endif
         /// <summary>

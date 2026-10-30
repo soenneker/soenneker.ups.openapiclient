@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ShipmentRequest") is { } nullNodeShipmentRequest && nullNodeShipmentRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentRequest = null;
+            if (parseNode.GetChildNode("ShipmentRequest") is null) { _explicitNullValueShipmentRequest = default!; _explicitNullProperties?.Remove("ShipmentRequest"); }
+            else if (parseNode.GetChildNode("ShipmentRequest") is { } nullNodeShipmentRequest && nullNodeShipmentRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Shipment Request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest? ShipmentRequest { get => _explicitNullValueShipmentRequest; set { _explicitNullValueShipmentRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentRequest"); else _explicitNullProperties?.Remove("ShipmentRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest? ShipmentRequest { get => _explicitNullValueShipmentRequest; set { _explicitNullValueShipmentRequest = value; AdditionalData?.Remove("ShipmentRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentRequest"); else _explicitNullProperties?.Remove("ShipmentRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest? _explicitNullValueShipmentRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest ShipmentRequest { get => _explicitNullValueShipmentRequest; set { _explicitNullValueShipmentRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentRequest"); else _explicitNullProperties?.Remove("ShipmentRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest ShipmentRequest { get => _explicitNullValueShipmentRequest; set { _explicitNullValueShipmentRequest = value; AdditionalData?.Remove("ShipmentRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentRequest"); else _explicitNullProperties?.Remove("ShipmentRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequest _explicitNullValueShipmentRequest = default!;
 #endif
         /// <summary>

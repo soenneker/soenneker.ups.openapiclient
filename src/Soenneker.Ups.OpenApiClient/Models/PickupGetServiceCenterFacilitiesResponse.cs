@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
-            if (parseNode.GetChildNode("ServiceCenterLocation") is { } nullNodeServiceCenterLocation && nullNodeServiceCenterLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCenterLocation = null;
+            if (parseNode.GetChildNode("Response") is null) { _explicitNullValueResponse = default!; _explicitNullProperties?.Remove("Response"); }
+            else if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("ServiceCenterLocation") is null) { _explicitNullValueServiceCenterLocation = default!; _explicitNullProperties?.Remove("ServiceCenterLocation"); }
+            else if (parseNode.GetChildNode("ServiceCenterLocation") is { } nullNodeServiceCenterLocation && nullNodeServiceCenterLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCenterLocation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>Locations of the nearest Service Center for Dropoff and Pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation? ServiceCenterLocation { get => _explicitNullValueServiceCenterLocation; set { _explicitNullValueServiceCenterLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCenterLocation"); else _explicitNullProperties?.Remove("ServiceCenterLocation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation? ServiceCenterLocation { get => _explicitNullValueServiceCenterLocation; set { _explicitNullValueServiceCenterLocation = value; AdditionalData?.Remove("ServiceCenterLocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCenterLocation"); else _explicitNullProperties?.Remove("ServiceCenterLocation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation? _explicitNullValueServiceCenterLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation ServiceCenterLocation { get => _explicitNullValueServiceCenterLocation; set { _explicitNullValueServiceCenterLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCenterLocation"); else _explicitNullProperties?.Remove("ServiceCenterLocation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation ServiceCenterLocation { get => _explicitNullValueServiceCenterLocation; set { _explicitNullValueServiceCenterLocation = value; AdditionalData?.Remove("ServiceCenterLocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCenterLocation"); else _explicitNullProperties?.Remove("ServiceCenterLocation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupGetServiceCenterFacilitiesResponseServiceCenterLocation _explicitNullValueServiceCenterLocation = default!;
 #endif
         /// <summary>

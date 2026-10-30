@@ -18,12 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("additionalProperties") is { } nullNodeAdditionalProperties && nullNodeAdditionalProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalProperties = null;
-            if (parseNode.GetChildNode("gcTotal") is { } nullNodeGcTotal && nullNodeGcTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcTotal = null;
-            if (parseNode.GetChildNode("quoteCreationTimestamp") is { } nullNodeQuoteCreationTimestamp && nullNodeQuoteCreationTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteCreationTimestamp = null;
-            if (parseNode.GetChildNode("quoteExpirationDate") is { } nullNodeQuoteExpirationDate && nullNodeQuoteExpirationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteExpirationDate = null;
-            if (parseNode.GetChildNode("quoteId") is { } nullNodeQuoteId && nullNodeQuoteId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteId = null;
-            if (parseNode.GetChildNode("referenceNumber") is { } nullNodeReferenceNumber && nullNodeReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceNumber = null;
+            if (parseNode.GetChildNode("additionalProperties") is null) { _explicitNullValueAdditionalProperties = default!; _explicitNullProperties?.Remove("additionalProperties"); }
+            else if (parseNode.GetChildNode("additionalProperties") is { } nullNodeAdditionalProperties && nullNodeAdditionalProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalProperties = null;
+            if (parseNode.GetChildNode("gcTotal") is null) { _explicitNullValueGcTotal = default!; _explicitNullProperties?.Remove("gcTotal"); }
+            else if (parseNode.GetChildNode("gcTotal") is { } nullNodeGcTotal && nullNodeGcTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcTotal = null;
+            if (parseNode.GetChildNode("quoteCreationTimestamp") is null) { _explicitNullValueQuoteCreationTimestamp = default!; _explicitNullProperties?.Remove("quoteCreationTimestamp"); }
+            else if (parseNode.GetChildNode("quoteCreationTimestamp") is { } nullNodeQuoteCreationTimestamp && nullNodeQuoteCreationTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteCreationTimestamp = null;
+            if (parseNode.GetChildNode("quoteExpirationDate") is null) { _explicitNullValueQuoteExpirationDate = default!; _explicitNullProperties?.Remove("quoteExpirationDate"); }
+            else if (parseNode.GetChildNode("quoteExpirationDate") is { } nullNodeQuoteExpirationDate && nullNodeQuoteExpirationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteExpirationDate = null;
+            if (parseNode.GetChildNode("quoteId") is null) { _explicitNullValueQuoteId = default!; _explicitNullProperties?.Remove("quoteId"); }
+            else if (parseNode.GetChildNode("quoteId") is { } nullNodeQuoteId && nullNodeQuoteId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteId = null;
+            if (parseNode.GetChildNode("referenceNumber") is null) { _explicitNullValueReferenceNumber = default!; _explicitNullProperties?.Remove("referenceNumber"); }
+            else if (parseNode.GetChildNode("referenceNumber") is { } nullNodeReferenceNumber && nullNodeReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,54 +37,54 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The additionalProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AdditionalProperties { get => _explicitNullValueAdditionalProperties; set { _explicitNullValueAdditionalProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalProperties"); else _explicitNullProperties?.Remove("additionalProperties"); } }
+        public UntypedNode? AdditionalProperties { get => _explicitNullValueAdditionalProperties; set { _explicitNullValueAdditionalProperties = value; AdditionalData?.Remove("additionalProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalProperties"); else _explicitNullProperties?.Remove("additionalProperties"); } }
         private UntypedNode? _explicitNullValueAdditionalProperties = default!;
 #nullable restore
 #else
-        public UntypedNode AdditionalProperties { get => _explicitNullValueAdditionalProperties; set { _explicitNullValueAdditionalProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalProperties"); else _explicitNullProperties?.Remove("additionalProperties"); } }
+        public UntypedNode AdditionalProperties { get => _explicitNullValueAdditionalProperties; set { _explicitNullValueAdditionalProperties = value; AdditionalData?.Remove("additionalProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalProperties"); else _explicitNullProperties?.Remove("additionalProperties"); } }
         private UntypedNode _explicitNullValueAdditionalProperties = default!;
 #endif
         /// <summary>array for buyer and billing Global checkout total items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse>? GcTotal { get => _explicitNullValueGcTotal; set { _explicitNullValueGcTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcTotal"); else _explicitNullProperties?.Remove("gcTotal"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse>? GcTotal { get => _explicitNullValueGcTotal; set { _explicitNullValueGcTotal = value; AdditionalData?.Remove("gcTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcTotal"); else _explicitNullProperties?.Remove("gcTotal"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse>? _explicitNullValueGcTotal = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse> GcTotal { get => _explicitNullValueGcTotal; set { _explicitNullValueGcTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcTotal"); else _explicitNullProperties?.Remove("gcTotal"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse> GcTotal { get => _explicitNullValueGcTotal; set { _explicitNullValueGcTotal = value; AdditionalData?.Remove("gcTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcTotal"); else _explicitNullProperties?.Remove("gcTotal"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse> _explicitNullValueGcTotal = default!;
 #endif
         /// <summary>Timestamp for quote generation(UTC).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QuoteCreationTimestamp { get => _explicitNullValueQuoteCreationTimestamp; set { _explicitNullValueQuoteCreationTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteCreationTimestamp"); else _explicitNullProperties?.Remove("quoteCreationTimestamp"); } }
+        public string? QuoteCreationTimestamp { get => _explicitNullValueQuoteCreationTimestamp; set { _explicitNullValueQuoteCreationTimestamp = value; AdditionalData?.Remove("quoteCreationTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteCreationTimestamp"); else _explicitNullProperties?.Remove("quoteCreationTimestamp"); } }
         private string? _explicitNullValueQuoteCreationTimestamp = default!;
 #nullable restore
 #else
-        public string QuoteCreationTimestamp { get => _explicitNullValueQuoteCreationTimestamp; set { _explicitNullValueQuoteCreationTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteCreationTimestamp"); else _explicitNullProperties?.Remove("quoteCreationTimestamp"); } }
+        public string QuoteCreationTimestamp { get => _explicitNullValueQuoteCreationTimestamp; set { _explicitNullValueQuoteCreationTimestamp = value; AdditionalData?.Remove("quoteCreationTimestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteCreationTimestamp"); else _explicitNullProperties?.Remove("quoteCreationTimestamp"); } }
         private string _explicitNullValueQuoteCreationTimestamp = default!;
 #endif
         /// <summary>Date after which the quote is no longer valid. yyyy-mm-dd format.</summary>
-        public Date? QuoteExpirationDate { get => _explicitNullValueQuoteExpirationDate; set { _explicitNullValueQuoteExpirationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteExpirationDate"); else _explicitNullProperties?.Remove("quoteExpirationDate"); } }
+        public Date? QuoteExpirationDate { get => _explicitNullValueQuoteExpirationDate; set { _explicitNullValueQuoteExpirationDate = value; AdditionalData?.Remove("quoteExpirationDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteExpirationDate"); else _explicitNullProperties?.Remove("quoteExpirationDate"); } }
         private Date? _explicitNullValueQuoteExpirationDate = default!;
         /// <summary>unique quote id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QuoteId { get => _explicitNullValueQuoteId; set { _explicitNullValueQuoteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteId"); else _explicitNullProperties?.Remove("quoteId"); } }
+        public string? QuoteId { get => _explicitNullValueQuoteId; set { _explicitNullValueQuoteId = value; AdditionalData?.Remove("quoteId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteId"); else _explicitNullProperties?.Remove("quoteId"); } }
         private string? _explicitNullValueQuoteId = default!;
 #nullable restore
 #else
-        public string QuoteId { get => _explicitNullValueQuoteId; set { _explicitNullValueQuoteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteId"); else _explicitNullProperties?.Remove("quoteId"); } }
+        public string QuoteId { get => _explicitNullValueQuoteId; set { _explicitNullValueQuoteId = value; AdditionalData?.Remove("quoteId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteId"); else _explicitNullProperties?.Remove("quoteId"); } }
         private string _explicitNullValueQuoteId = default!;
 #endif
         /// <summary>A reference for customer internal tracking from the request .</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceNumber"); else _explicitNullProperties?.Remove("referenceNumber"); } }
+        public string? ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; AdditionalData?.Remove("referenceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceNumber"); else _explicitNullProperties?.Remove("referenceNumber"); } }
         private string? _explicitNullValueReferenceNumber = default!;
 #nullable restore
 #else
-        public string ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceNumber"); else _explicitNullProperties?.Remove("referenceNumber"); } }
+        public string ReferenceNumber { get => _explicitNullValueReferenceNumber; set { _explicitNullValueReferenceNumber = value; AdditionalData?.Remove("referenceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceNumber"); else _explicitNullProperties?.Remove("referenceNumber"); } }
         private string _explicitNullValueReferenceNumber = default!;
 #endif
         /// <summary>

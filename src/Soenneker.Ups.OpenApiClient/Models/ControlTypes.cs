@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("controlDetails") is { } nullNodeControlDetails && nullNodeControlDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetails = null;
-            if (parseNode.GetChildNode("controlType") is { } nullNodeControlType && nullNodeControlType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlType = null;
-            if (parseNode.GetChildNode("controlTypeCode") is { } nullNodeControlTypeCode && nullNodeControlTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlTypeCode = null;
-            if (parseNode.GetChildNode("controlTypeMessage") is { } nullNodeControlTypeMessage && nullNodeControlTypeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlTypeMessage = null;
-            if (parseNode.GetChildNode("isRequired") is { } nullNodeIsRequired && nullNodeIsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequired = null;
+            if (parseNode.GetChildNode("controlDetails") is null) { _explicitNullValueControlDetails = default!; _explicitNullProperties?.Remove("controlDetails"); }
+            else if (parseNode.GetChildNode("controlDetails") is { } nullNodeControlDetails && nullNodeControlDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlDetails = null;
+            if (parseNode.GetChildNode("controlType") is null) { _explicitNullValueControlType = default!; _explicitNullProperties?.Remove("controlType"); }
+            else if (parseNode.GetChildNode("controlType") is { } nullNodeControlType && nullNodeControlType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlType = null;
+            if (parseNode.GetChildNode("controlTypeCode") is null) { _explicitNullValueControlTypeCode = default!; _explicitNullProperties?.Remove("controlTypeCode"); }
+            else if (parseNode.GetChildNode("controlTypeCode") is { } nullNodeControlTypeCode && nullNodeControlTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlTypeCode = null;
+            if (parseNode.GetChildNode("controlTypeMessage") is null) { _explicitNullValueControlTypeMessage = default!; _explicitNullProperties?.Remove("controlTypeMessage"); }
+            else if (parseNode.GetChildNode("controlTypeMessage") is { } nullNodeControlTypeMessage && nullNodeControlTypeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlTypeMessage = null;
+            if (parseNode.GetChildNode("isRequired") is null) { _explicitNullValueIsRequired = default!; _explicitNullProperties?.Remove("isRequired"); }
+            else if (parseNode.GetChildNode("isRequired") is { } nullNodeIsRequired && nullNodeIsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequired = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,45 +35,45 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>An array that contains a list of control types and codes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails>? ControlDetails { get => _explicitNullValueControlDetails; set { _explicitNullValueControlDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetails"); else _explicitNullProperties?.Remove("controlDetails"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails>? ControlDetails { get => _explicitNullValueControlDetails; set { _explicitNullValueControlDetails = value; AdditionalData?.Remove("controlDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetails"); else _explicitNullProperties?.Remove("controlDetails"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails>? _explicitNullValueControlDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails> ControlDetails { get => _explicitNullValueControlDetails; set { _explicitNullValueControlDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetails"); else _explicitNullProperties?.Remove("controlDetails"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails> ControlDetails { get => _explicitNullValueControlDetails; set { _explicitNullValueControlDetails = value; AdditionalData?.Remove("controlDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlDetails"); else _explicitNullProperties?.Remove("controlDetails"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails> _explicitNullValueControlDetails = default!;
 #endif
         /// <summary>The category of customs control applicable to the shipment. This property is translated to the user&apos;s language as required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlType { get => _explicitNullValueControlType; set { _explicitNullValueControlType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlType"); else _explicitNullProperties?.Remove("controlType"); } }
+        public string? ControlType { get => _explicitNullValueControlType; set { _explicitNullValueControlType = value; AdditionalData?.Remove("controlType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlType"); else _explicitNullProperties?.Remove("controlType"); } }
         private string? _explicitNullValueControlType = default!;
 #nullable restore
 #else
-        public string ControlType { get => _explicitNullValueControlType; set { _explicitNullValueControlType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlType"); else _explicitNullProperties?.Remove("controlType"); } }
+        public string ControlType { get => _explicitNullValueControlType; set { _explicitNullValueControlType = value; AdditionalData?.Remove("controlType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlType"); else _explicitNullProperties?.Remove("controlType"); } }
         private string _explicitNullValueControlType = default!;
 #endif
         /// <summary>A unique code that distinctly identifies each control type. This code is not translated and is used for specific system-logic related to the control type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlTypeCode { get => _explicitNullValueControlTypeCode; set { _explicitNullValueControlTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeCode"); else _explicitNullProperties?.Remove("controlTypeCode"); } }
+        public string? ControlTypeCode { get => _explicitNullValueControlTypeCode; set { _explicitNullValueControlTypeCode = value; AdditionalData?.Remove("controlTypeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeCode"); else _explicitNullProperties?.Remove("controlTypeCode"); } }
         private string? _explicitNullValueControlTypeCode = default!;
 #nullable restore
 #else
-        public string ControlTypeCode { get => _explicitNullValueControlTypeCode; set { _explicitNullValueControlTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeCode"); else _explicitNullProperties?.Remove("controlTypeCode"); } }
+        public string ControlTypeCode { get => _explicitNullValueControlTypeCode; set { _explicitNullValueControlTypeCode = value; AdditionalData?.Remove("controlTypeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeCode"); else _explicitNullProperties?.Remove("controlTypeCode"); } }
         private string _explicitNullValueControlTypeCode = default!;
 #endif
         /// <summary>Additional guidance or instructions based on the specific control type condition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ControlTypeMessage { get => _explicitNullValueControlTypeMessage; set { _explicitNullValueControlTypeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeMessage"); else _explicitNullProperties?.Remove("controlTypeMessage"); } }
+        public string? ControlTypeMessage { get => _explicitNullValueControlTypeMessage; set { _explicitNullValueControlTypeMessage = value; AdditionalData?.Remove("controlTypeMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeMessage"); else _explicitNullProperties?.Remove("controlTypeMessage"); } }
         private string? _explicitNullValueControlTypeMessage = default!;
 #nullable restore
 #else
-        public string ControlTypeMessage { get => _explicitNullValueControlTypeMessage; set { _explicitNullValueControlTypeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeMessage"); else _explicitNullProperties?.Remove("controlTypeMessage"); } }
+        public string ControlTypeMessage { get => _explicitNullValueControlTypeMessage; set { _explicitNullValueControlTypeMessage = value; AdditionalData?.Remove("controlTypeMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypeMessage"); else _explicitNullProperties?.Remove("controlTypeMessage"); } }
         private string _explicitNullValueControlTypeMessage = default!;
 #endif
         /// <summary>Whether shipment compliance with a specific control type is required</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired? IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired? IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; AdditionalData?.Remove("isRequired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired? _explicitNullValueIsRequired = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ControlTypes"/> and sets the default values.
@@ -99,7 +104,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "controlType", n => { ControlType = n.GetStringValue(); } },
                 { "controlTypeCode", n => { ControlTypeCode = n.GetStringValue(); } },
                 { "controlTypeMessage", n => { ControlTypeMessage = n.GetStringValue(); } },
-                { "isRequired", n => { IsRequired = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired>(); } },
+                { "isRequired", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ControlTypesIsRequired>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIsRequired = default; _explicitNullProperties?.Remove("isRequired"); AdditionalData["isRequired"] = unknown; } else { IsRequired = parsed; AdditionalData.Remove("isRequired"); } } },
             };
         }
         /// <summary>

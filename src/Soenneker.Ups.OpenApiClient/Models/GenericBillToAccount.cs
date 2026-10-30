@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
-            if (parseNode.GetChildNode("Option") is { } nullNodeOption && nullNodeOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Option = null;
+            if (parseNode.GetChildNode("Number") is null) { _explicitNullValueNumber = default!; _explicitNullProperties?.Remove("Number"); }
+            else if (parseNode.GetChildNode("Number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
+            if (parseNode.GetChildNode("Option") is null) { _explicitNullValueOption = default!; _explicitNullProperties?.Remove("Option"); }
+            else if (parseNode.GetChildNode("Option") is { } nullNodeOption && nullNodeOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Option = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The UPS Account number to which the shipping charges were billed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
+        public string? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("Number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
         private string? _explicitNullValueNumber = default!;
 #nullable restore
 #else
-        public string Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
+        public string Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("Number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
         private string _explicitNullValueNumber = default!;
 #endif
         /// <summary>Indicates how shipping charges for the package were billed. Valid Values: 01, 02, 03, 04, 99 Value Definitions: 01 Shipper02 Consignee Billing 03 Third Party04 Freight Collect99 International Bill Option</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Option { get => _explicitNullValueOption; set { _explicitNullValueOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Option"); else _explicitNullProperties?.Remove("Option"); } }
+        public string? Option { get => _explicitNullValueOption; set { _explicitNullValueOption = value; AdditionalData?.Remove("Option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Option"); else _explicitNullProperties?.Remove("Option"); } }
         private string? _explicitNullValueOption = default!;
 #nullable restore
 #else
-        public string Option { get => _explicitNullValueOption; set { _explicitNullValueOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Option"); else _explicitNullProperties?.Remove("Option"); } }
+        public string Option { get => _explicitNullValueOption; set { _explicitNullValueOption = value; AdditionalData?.Remove("Option"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Option"); else _explicitNullProperties?.Remove("Option"); } }
         private string _explicitNullValueOption = default!;
 #endif
         /// <summary>

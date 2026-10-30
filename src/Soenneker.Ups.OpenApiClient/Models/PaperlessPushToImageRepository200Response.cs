@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PushToImageRepositoryResponse") is { } nullNodePushToImageRepositoryResponse && nullNodePushToImageRepositoryResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushToImageRepositoryResponse = null;
+            if (parseNode.GetChildNode("PushToImageRepositoryResponse") is null) { _explicitNullValuePushToImageRepositoryResponse = default!; _explicitNullProperties?.Remove("PushToImageRepositoryResponse"); }
+            else if (parseNode.GetChildNode("PushToImageRepositoryResponse") is { } nullNodePushToImageRepositoryResponse && nullNodePushToImageRepositoryResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushToImageRepositoryResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Paperless Document API response container for Push To Image Repository request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessPushToImageRepositoryResponse? PushToImageRepositoryResponse { get => _explicitNullValuePushToImageRepositoryResponse; set { _explicitNullValuePushToImageRepositoryResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PushToImageRepositoryResponse"); else _explicitNullProperties?.Remove("PushToImageRepositoryResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessPushToImageRepositoryResponse? PushToImageRepositoryResponse { get => _explicitNullValuePushToImageRepositoryResponse; set { _explicitNullValuePushToImageRepositoryResponse = value; AdditionalData?.Remove("PushToImageRepositoryResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PushToImageRepositoryResponse"); else _explicitNullProperties?.Remove("PushToImageRepositoryResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PaperlessPushToImageRepositoryResponse? _explicitNullValuePushToImageRepositoryResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessPushToImageRepositoryResponse PushToImageRepositoryResponse { get => _explicitNullValuePushToImageRepositoryResponse; set { _explicitNullValuePushToImageRepositoryResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PushToImageRepositoryResponse"); else _explicitNullProperties?.Remove("PushToImageRepositoryResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PaperlessPushToImageRepositoryResponse PushToImageRepositoryResponse { get => _explicitNullValuePushToImageRepositoryResponse; set { _explicitNullValuePushToImageRepositoryResponse = value; AdditionalData?.Remove("PushToImageRepositoryResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PushToImageRepositoryResponse"); else _explicitNullProperties?.Remove("PushToImageRepositoryResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PaperlessPushToImageRepositoryResponse _explicitNullValuePushToImageRepositoryResponse = default!;
 #endif
         /// <summary>

@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fromAddress") is { } nullNodeFromAddress && nullNodeFromAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromAddress = null;
-            if (parseNode.GetChildNode("redirectAddress") is { } nullNodeRedirectAddress && nullNodeRedirectAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectAddress = null;
-            if (parseNode.GetChildNode("toAddress") is { } nullNodeToAddress && nullNodeToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToAddress = null;
-            if (parseNode.GetChildNode("trackInfo") is { } nullNodeTrackInfo && nullNodeTrackInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackInfo = null;
+            if (parseNode.GetChildNode("fromAddress") is null) { _explicitNullValueFromAddress = default!; _explicitNullProperties?.Remove("fromAddress"); }
+            else if (parseNode.GetChildNode("fromAddress") is { } nullNodeFromAddress && nullNodeFromAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromAddress = null;
+            if (parseNode.GetChildNode("redirectAddress") is null) { _explicitNullValueRedirectAddress = default!; _explicitNullProperties?.Remove("redirectAddress"); }
+            else if (parseNode.GetChildNode("redirectAddress") is { } nullNodeRedirectAddress && nullNodeRedirectAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectAddress = null;
+            if (parseNode.GetChildNode("toAddress") is null) { _explicitNullValueToAddress = default!; _explicitNullProperties?.Remove("toAddress"); }
+            else if (parseNode.GetChildNode("toAddress") is { } nullNodeToAddress && nullNodeToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToAddress = null;
+            if (parseNode.GetChildNode("trackInfo") is null) { _explicitNullValueTrackInfo = default!; _explicitNullProperties?.Remove("trackInfo"); }
+            else if (parseNode.GetChildNode("trackInfo") is { } nullNodeTrackInfo && nullNodeTrackInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The fromAddress property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemFromAddress? FromAddress { get => _explicitNullValueFromAddress; set { _explicitNullValueFromAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromAddress"); else _explicitNullProperties?.Remove("fromAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemFromAddress? FromAddress { get => _explicitNullValueFromAddress; set { _explicitNullValueFromAddress = value; AdditionalData?.Remove("fromAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromAddress"); else _explicitNullProperties?.Remove("fromAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemFromAddress? _explicitNullValueFromAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemFromAddress FromAddress { get => _explicitNullValueFromAddress; set { _explicitNullValueFromAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromAddress"); else _explicitNullProperties?.Remove("fromAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemFromAddress FromAddress { get => _explicitNullValueFromAddress; set { _explicitNullValueFromAddress = value; AdditionalData?.Remove("fromAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromAddress"); else _explicitNullProperties?.Remove("fromAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemFromAddress _explicitNullValueFromAddress = default!;
 #endif
         /// <summary>The redirectAddress property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress? RedirectAddress { get => _explicitNullValueRedirectAddress; set { _explicitNullValueRedirectAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAddress"); else _explicitNullProperties?.Remove("redirectAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress? RedirectAddress { get => _explicitNullValueRedirectAddress; set { _explicitNullValueRedirectAddress = value; AdditionalData?.Remove("redirectAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAddress"); else _explicitNullProperties?.Remove("redirectAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress? _explicitNullValueRedirectAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress RedirectAddress { get => _explicitNullValueRedirectAddress; set { _explicitNullValueRedirectAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAddress"); else _explicitNullProperties?.Remove("redirectAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress RedirectAddress { get => _explicitNullValueRedirectAddress; set { _explicitNullValueRedirectAddress = value; AdditionalData?.Remove("redirectAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAddress"); else _explicitNullProperties?.Remove("redirectAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemRedirectAddress _explicitNullValueRedirectAddress = default!;
 #endif
         /// <summary>The toAddress property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemToAddress? ToAddress { get => _explicitNullValueToAddress; set { _explicitNullValueToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toAddress"); else _explicitNullProperties?.Remove("toAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemToAddress? ToAddress { get => _explicitNullValueToAddress; set { _explicitNullValueToAddress = value; AdditionalData?.Remove("toAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toAddress"); else _explicitNullProperties?.Remove("toAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemToAddress? _explicitNullValueToAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemToAddress ToAddress { get => _explicitNullValueToAddress; set { _explicitNullValueToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toAddress"); else _explicitNullProperties?.Remove("toAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemToAddress ToAddress { get => _explicitNullValueToAddress; set { _explicitNullValueToAddress = value; AdditionalData?.Remove("toAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toAddress"); else _explicitNullProperties?.Remove("toAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemToAddress _explicitNullValueToAddress = default!;
 #endif
         /// <summary>The trackInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfo? TrackInfo { get => _explicitNullValueTrackInfo; set { _explicitNullValueTrackInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackInfo"); else _explicitNullProperties?.Remove("trackInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfo? TrackInfo { get => _explicitNullValueTrackInfo; set { _explicitNullValueTrackInfo = value; AdditionalData?.Remove("trackInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackInfo"); else _explicitNullProperties?.Remove("trackInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfo? _explicitNullValueTrackInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfo TrackInfo { get => _explicitNullValueTrackInfo; set { _explicitNullValueTrackInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackInfo"); else _explicitNullProperties?.Remove("trackInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfo TrackInfo { get => _explicitNullValueTrackInfo; set { _explicitNullValueTrackInfo = value; AdditionalData?.Remove("trackInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackInfo"); else _explicitNullProperties?.Remove("trackInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfo _explicitNullValueTrackInfo = default!;
 #endif
         /// <summary>

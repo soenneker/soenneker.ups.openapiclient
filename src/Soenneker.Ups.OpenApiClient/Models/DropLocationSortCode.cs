@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FreightSortFacilityCode") is { } nullNodeFreightSortFacilityCode && nullNodeFreightSortFacilityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightSortFacilityCode = null;
-            if (parseNode.GetChildNode("HubSortCode") is { } nullNodeHubSortCode && nullNodeHubSortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubSortCode = null;
+            if (parseNode.GetChildNode("FreightSortFacilityCode") is null) { _explicitNullValueFreightSortFacilityCode = default!; _explicitNullProperties?.Remove("FreightSortFacilityCode"); }
+            else if (parseNode.GetChildNode("FreightSortFacilityCode") is { } nullNodeFreightSortFacilityCode && nullNodeFreightSortFacilityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightSortFacilityCode = null;
+            if (parseNode.GetChildNode("HubSortCode") is null) { _explicitNullValueHubSortCode = default!; _explicitNullProperties?.Remove("HubSortCode"); }
+            else if (parseNode.GetChildNode("HubSortCode") is { } nullNodeHubSortCode && nullNodeHubSortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubSortCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Holds the value of the facility location code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreightSortFacilityCode { get => _explicitNullValueFreightSortFacilityCode; set { _explicitNullValueFreightSortFacilityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightSortFacilityCode"); else _explicitNullProperties?.Remove("FreightSortFacilityCode"); } }
+        public string? FreightSortFacilityCode { get => _explicitNullValueFreightSortFacilityCode; set { _explicitNullValueFreightSortFacilityCode = value; AdditionalData?.Remove("FreightSortFacilityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightSortFacilityCode"); else _explicitNullProperties?.Remove("FreightSortFacilityCode"); } }
         private string? _explicitNullValueFreightSortFacilityCode = default!;
 #nullable restore
 #else
-        public string FreightSortFacilityCode { get => _explicitNullValueFreightSortFacilityCode; set { _explicitNullValueFreightSortFacilityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightSortFacilityCode"); else _explicitNullProperties?.Remove("FreightSortFacilityCode"); } }
+        public string FreightSortFacilityCode { get => _explicitNullValueFreightSortFacilityCode; set { _explicitNullValueFreightSortFacilityCode = value; AdditionalData?.Remove("FreightSortFacilityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightSortFacilityCode"); else _explicitNullProperties?.Remove("FreightSortFacilityCode"); } }
         private string _explicitNullValueFreightSortFacilityCode = default!;
 #endif
         /// <summary>Holds the value of the hub sort code or airport code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HubSortCode { get => _explicitNullValueHubSortCode; set { _explicitNullValueHubSortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HubSortCode"); else _explicitNullProperties?.Remove("HubSortCode"); } }
+        public string? HubSortCode { get => _explicitNullValueHubSortCode; set { _explicitNullValueHubSortCode = value; AdditionalData?.Remove("HubSortCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HubSortCode"); else _explicitNullProperties?.Remove("HubSortCode"); } }
         private string? _explicitNullValueHubSortCode = default!;
 #nullable restore
 #else
-        public string HubSortCode { get => _explicitNullValueHubSortCode; set { _explicitNullValueHubSortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HubSortCode"); else _explicitNullProperties?.Remove("HubSortCode"); } }
+        public string HubSortCode { get => _explicitNullValueHubSortCode; set { _explicitNullValueHubSortCode = value; AdditionalData?.Remove("HubSortCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HubSortCode"); else _explicitNullProperties?.Remove("HubSortCode"); } }
         private string _explicitNullValueHubSortCode = default!;
 #endif
         /// <summary>

@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CustomerClassification") is { } nullNodeCustomerClassification && nullNodeCustomerClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerClassification = null;
-            if (parseNode.GetChildNode("PickupType") is { } nullNodePickupType && nullNodePickupType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupType = null;
-            if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
-            if (parseNode.GetChildNode("Shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("CustomerClassification") is null) { _explicitNullValueCustomerClassification = default!; _explicitNullProperties?.Remove("CustomerClassification"); }
+            else if (parseNode.GetChildNode("CustomerClassification") is { } nullNodeCustomerClassification && nullNodeCustomerClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerClassification = null;
+            if (parseNode.GetChildNode("PickupType") is null) { _explicitNullValuePickupType = default!; _explicitNullProperties?.Remove("PickupType"); }
+            else if (parseNode.GetChildNode("PickupType") is { } nullNodePickupType && nullNodePickupType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupType = null;
+            if (parseNode.GetChildNode("Request") is null) { _explicitNullValueRequest = default!; _explicitNullProperties?.Remove("Request"); }
+            else if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("Shipment") is null) { _explicitNullValueShipment = default!; _explicitNullProperties?.Remove("Shipment"); }
+            else if (parseNode.GetChildNode("Shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Customer classification container. Valid if ShipFrom country or territory  is &quot;US&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification? CustomerClassification { get => _explicitNullValueCustomerClassification; set { _explicitNullValueCustomerClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerClassification"); else _explicitNullProperties?.Remove("CustomerClassification"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification? CustomerClassification { get => _explicitNullValueCustomerClassification; set { _explicitNullValueCustomerClassification = value; AdditionalData?.Remove("CustomerClassification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerClassification"); else _explicitNullProperties?.Remove("CustomerClassification"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification? _explicitNullValueCustomerClassification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification CustomerClassification { get => _explicitNullValueCustomerClassification; set { _explicitNullValueCustomerClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerClassification"); else _explicitNullProperties?.Remove("CustomerClassification"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification CustomerClassification { get => _explicitNullValueCustomerClassification; set { _explicitNullValueCustomerClassification = value; AdditionalData?.Remove("CustomerClassification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerClassification"); else _explicitNullProperties?.Remove("CustomerClassification"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequestCustomerClassification _explicitNullValueCustomerClassification = default!;
 #endif
         /// <summary>Pickup Type container tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType? PickupType { get => _explicitNullValuePickupType; set { _explicitNullValuePickupType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupType"); else _explicitNullProperties?.Remove("PickupType"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType? PickupType { get => _explicitNullValuePickupType; set { _explicitNullValuePickupType = value; AdditionalData?.Remove("PickupType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupType"); else _explicitNullProperties?.Remove("PickupType"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType? _explicitNullValuePickupType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType PickupType { get => _explicitNullValuePickupType; set { _explicitNullValuePickupType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupType"); else _explicitNullProperties?.Remove("PickupType"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType PickupType { get => _explicitNullValuePickupType; set { _explicitNullValuePickupType = value; AdditionalData?.Remove("PickupType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupType"); else _explicitNullProperties?.Remove("PickupType"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequestPickupType _explicitNullValuePickupType = default!;
 #endif
         /// <summary>Request container.  N/A</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequestRequest _explicitNullValueRequest = default!;
 #endif
         /// <summary>Container for Shipment Information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("Shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("Shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Shipment"); else _explicitNullProperties?.Remove("Shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequestShipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>

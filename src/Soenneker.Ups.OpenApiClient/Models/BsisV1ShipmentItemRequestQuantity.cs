@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("unitOfMeasure") is { } nullNodeUnitOfMeasure && nullNodeUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasure = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("unitOfMeasure") is null) { _explicitNullValueUnitOfMeasure = default!; _explicitNullProperties?.Remove("unitOfMeasure"); }
+            else if (parseNode.GetChildNode("unitOfMeasure") is { } nullNodeUnitOfMeasure && nullNodeUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasure = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Item count Unit Of MeasureClick &lt;a href=&quot;https://developer.ups.com/api/reference/globalcheckout/appendix?loc=en_US&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt; for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitOfMeasure"); else _explicitNullProperties?.Remove("unitOfMeasure"); } }
+        public string? UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; AdditionalData?.Remove("unitOfMeasure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitOfMeasure"); else _explicitNullProperties?.Remove("unitOfMeasure"); } }
         private string? _explicitNullValueUnitOfMeasure = default!;
 #nullable restore
 #else
-        public string UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitOfMeasure"); else _explicitNullProperties?.Remove("unitOfMeasure"); } }
+        public string UnitOfMeasure { get => _explicitNullValueUnitOfMeasure; set { _explicitNullValueUnitOfMeasure = value; AdditionalData?.Remove("unitOfMeasure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitOfMeasure"); else _explicitNullProperties?.Remove("unitOfMeasure"); } }
         private string _explicitNullValueUnitOfMeasure = default!;
 #endif
         /// <summary>Item count.</summary>
-        public int? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public int? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private int? _explicitNullValueValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.BsisV1ShipmentItemRequestQuantity"/> and sets the default values.

@@ -18,21 +18,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PickUpDay") is { } nullNodePickUpDay && nullNodePickUpDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpDay = null;
+            if (parseNode.GetChildNode("PickUpDay") is null) { _explicitNullValuePickUpDay = default!; _explicitNullProperties?.Remove("PickUpDay"); }
+            else if (parseNode.GetChildNode("PickUpDay") is { } nullNodePickUpDay && nullNodePickUpDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpDay = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specific day pickup, maximum days are 4.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay? PickUpDay { get => _explicitNullValuePickUpDay; set { _explicitNullValuePickUpDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDay"); else _explicitNullProperties?.Remove("PickUpDay"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay? PickUpDay { get => _explicitNullValuePickUpDay; set { _explicitNullValuePickUpDay = value; AdditionalData?.Remove("PickUpDay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDay"); else _explicitNullProperties?.Remove("PickUpDay"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay? _explicitNullValuePickUpDay = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay PickUpDay { get => _explicitNullValuePickUpDay; set { _explicitNullValuePickUpDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpDay"); else _explicitNullProperties?.Remove("PickUpDay"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay _explicitNullValuePickUpDay = default!;
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDate"/> and sets the default values.
         /// </summary>
@@ -58,7 +52,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "PickUpDay", n => { PickUpDay = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay.CreateFromDiscriminatorValue); } },
+                { "PickUpDay", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePickUpDay = default; _explicitNullProperties?.Remove("PickUpDay"); AdditionalData["PickUpDay"] = unknown; } else { PickUpDay = parsed; AdditionalData.Remove("PickUpDay"); } } },
             };
         }
         /// <summary>
@@ -68,7 +62,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay>("PickUpDay", PickUpDay);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfoAllOf2PickUpDatePickUpDay>("PickUpDay", PickUpDay);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

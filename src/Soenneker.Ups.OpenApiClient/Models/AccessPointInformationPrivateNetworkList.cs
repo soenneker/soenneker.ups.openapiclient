@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PrivateNetwork") is { } nullNodePrivateNetwork && nullNodePrivateNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateNetwork = null;
+            if (parseNode.GetChildNode("PrivateNetwork") is null) { _explicitNullValuePrivateNetwork = default!; _explicitNullProperties?.Remove("PrivateNetwork"); }
+            else if (parseNode.GetChildNode("PrivateNetwork") is { } nullNodePrivateNetwork && nullNodePrivateNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateNetwork = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to hold the private network details.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PrivateNetworkListPrivateNetwork>? PrivateNetwork { get => _explicitNullValuePrivateNetwork; set { _explicitNullValuePrivateNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrivateNetwork"); else _explicitNullProperties?.Remove("PrivateNetwork"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PrivateNetworkListPrivateNetwork>? PrivateNetwork { get => _explicitNullValuePrivateNetwork; set { _explicitNullValuePrivateNetwork = value; AdditionalData?.Remove("PrivateNetwork"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrivateNetwork"); else _explicitNullProperties?.Remove("PrivateNetwork"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.PrivateNetworkListPrivateNetwork>? _explicitNullValuePrivateNetwork = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.PrivateNetworkListPrivateNetwork> PrivateNetwork { get => _explicitNullValuePrivateNetwork; set { _explicitNullValuePrivateNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrivateNetwork"); else _explicitNullProperties?.Remove("PrivateNetwork"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.PrivateNetworkListPrivateNetwork> PrivateNetwork { get => _explicitNullValuePrivateNetwork; set { _explicitNullValuePrivateNetwork = value; AdditionalData?.Remove("PrivateNetwork"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrivateNetwork"); else _explicitNullProperties?.Remove("PrivateNetwork"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.PrivateNetworkListPrivateNetwork> _explicitNullValuePrivateNetwork = default!;
 #endif
         /// <summary>

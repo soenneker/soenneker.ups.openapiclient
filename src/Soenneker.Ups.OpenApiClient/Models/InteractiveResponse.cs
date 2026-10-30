@@ -17,71 +17,78 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actualHts") is { } nullNodeActualHts && nullNodeActualHts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualHts = null;
-            if (parseNode.GetChildNode("confidence") is { } nullNodeConfidence && nullNodeConfidence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confidence = null;
-            if (parseNode.GetChildNode("newProductDescription") is { } nullNodeNewProductDescription && nullNodeNewProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewProductDescription = null;
-            if (parseNode.GetChildNode("noMoreQuestions") is { } nullNodeNoMoreQuestions && nullNodeNoMoreQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoMoreQuestions = null;
-            if (parseNode.GetChildNode("questions") is { } nullNodeQuestions && nullNodeQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Questions = null;
-            if (parseNode.GetChildNode("session") is { } nullNodeSession && nullNodeSession.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Session = null;
-            if (parseNode.GetChildNode("suggestedHts") is { } nullNodeSuggestedHts && nullNodeSuggestedHts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedHts = null;
+            if (parseNode.GetChildNode("actualHts") is null) { _explicitNullValueActualHts = default!; _explicitNullProperties?.Remove("actualHts"); }
+            else if (parseNode.GetChildNode("actualHts") is { } nullNodeActualHts && nullNodeActualHts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualHts = null;
+            if (parseNode.GetChildNode("confidence") is null) { _explicitNullValueConfidence = default!; _explicitNullProperties?.Remove("confidence"); }
+            else if (parseNode.GetChildNode("confidence") is { } nullNodeConfidence && nullNodeConfidence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confidence = null;
+            if (parseNode.GetChildNode("newProductDescription") is null) { _explicitNullValueNewProductDescription = default!; _explicitNullProperties?.Remove("newProductDescription"); }
+            else if (parseNode.GetChildNode("newProductDescription") is { } nullNodeNewProductDescription && nullNodeNewProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewProductDescription = null;
+            if (parseNode.GetChildNode("noMoreQuestions") is null) { _explicitNullValueNoMoreQuestions = default!; _explicitNullProperties?.Remove("noMoreQuestions"); }
+            else if (parseNode.GetChildNode("noMoreQuestions") is { } nullNodeNoMoreQuestions && nullNodeNoMoreQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoMoreQuestions = null;
+            if (parseNode.GetChildNode("questions") is null) { _explicitNullValueQuestions = default!; _explicitNullProperties?.Remove("questions"); }
+            else if (parseNode.GetChildNode("questions") is { } nullNodeQuestions && nullNodeQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Questions = null;
+            if (parseNode.GetChildNode("session") is null) { _explicitNullValueSession = default!; _explicitNullProperties?.Remove("session"); }
+            else if (parseNode.GetChildNode("session") is { } nullNodeSession && nullNodeSession.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Session = null;
+            if (parseNode.GetChildNode("suggestedHts") is null) { _explicitNullValueSuggestedHts = default!; _explicitNullProperties?.Remove("suggestedHts"); }
+            else if (parseNode.GetChildNode("suggestedHts") is { } nullNodeSuggestedHts && nullNodeSuggestedHts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedHts = null;
         }
 
         /// <summary>The Harmonized Tariff Schedule (HTS) code representing the currently provided &quot;newProductDescription&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActualHts { get => _explicitNullValueActualHts; set { _explicitNullValueActualHts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualHts"); else _explicitNullProperties?.Remove("actualHts"); } }
+        public string? ActualHts { get => _explicitNullValueActualHts; set { _explicitNullValueActualHts = value; AdditionalData?.Remove("actualHts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualHts"); else _explicitNullProperties?.Remove("actualHts"); } }
         private string? _explicitNullValueActualHts = default!;
 #nullable restore
 #else
-        public string ActualHts { get => _explicitNullValueActualHts; set { _explicitNullValueActualHts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualHts"); else _explicitNullProperties?.Remove("actualHts"); } }
+        public string ActualHts { get => _explicitNullValueActualHts; set { _explicitNullValueActualHts = value; AdditionalData?.Remove("actualHts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualHts"); else _explicitNullProperties?.Remove("actualHts"); } }
         private string _explicitNullValueActualHts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A value between 0.00 and 1.00 representing the APIs likeliness for a suggestedHts to be the final HTS code. A value of 1.00 can also be interpreted as 100% confidence.</summary>
-        public double? Confidence { get => _explicitNullValueConfidence; set { _explicitNullValueConfidence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidence"); else _explicitNullProperties?.Remove("confidence"); } }
+        public double? Confidence { get => _explicitNullValueConfidence; set { _explicitNullValueConfidence = value; AdditionalData?.Remove("confidence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidence"); else _explicitNullProperties?.Remove("confidence"); } }
         private double? _explicitNullValueConfidence = default!;
         /// <summary>An enhanced description generated for the product after processing product details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewProductDescription { get => _explicitNullValueNewProductDescription; set { _explicitNullValueNewProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newProductDescription"); else _explicitNullProperties?.Remove("newProductDescription"); } }
+        public string? NewProductDescription { get => _explicitNullValueNewProductDescription; set { _explicitNullValueNewProductDescription = value; AdditionalData?.Remove("newProductDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newProductDescription"); else _explicitNullProperties?.Remove("newProductDescription"); } }
         private string? _explicitNullValueNewProductDescription = default!;
 #nullable restore
 #else
-        public string NewProductDescription { get => _explicitNullValueNewProductDescription; set { _explicitNullValueNewProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newProductDescription"); else _explicitNullProperties?.Remove("newProductDescription"); } }
+        public string NewProductDescription { get => _explicitNullValueNewProductDescription; set { _explicitNullValueNewProductDescription = value; AdditionalData?.Remove("newProductDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newProductDescription"); else _explicitNullProperties?.Remove("newProductDescription"); } }
         private string _explicitNullValueNewProductDescription = default!;
 #endif
         /// <summary>This field will be marked as true when the API doesn&apos;t have any more questions to ask the user. In this case, the questions list will be empty and the most complete &quot;actualHts&quot; is provided.</summary>
-        public bool? NoMoreQuestions { get => _explicitNullValueNoMoreQuestions; set { _explicitNullValueNoMoreQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noMoreQuestions"); else _explicitNullProperties?.Remove("noMoreQuestions"); } }
+        public bool? NoMoreQuestions { get => _explicitNullValueNoMoreQuestions; set { _explicitNullValueNoMoreQuestions = value; AdditionalData?.Remove("noMoreQuestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noMoreQuestions"); else _explicitNullProperties?.Remove("noMoreQuestions"); } }
         private bool? _explicitNullValueNoMoreQuestions = default!;
         /// <summary>The questions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Question>? Questions { get => _explicitNullValueQuestions; set { _explicitNullValueQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questions"); else _explicitNullProperties?.Remove("questions"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.Question>? Questions { get => _explicitNullValueQuestions; set { _explicitNullValueQuestions = value; AdditionalData?.Remove("questions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questions"); else _explicitNullProperties?.Remove("questions"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.Question>? _explicitNullValueQuestions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Question> Questions { get => _explicitNullValueQuestions; set { _explicitNullValueQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questions"); else _explicitNullProperties?.Remove("questions"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.Question> Questions { get => _explicitNullValueQuestions; set { _explicitNullValueQuestions = value; AdditionalData?.Remove("questions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questions"); else _explicitNullProperties?.Remove("questions"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.Question> _explicitNullValueQuestions = default!;
 #endif
         /// <summary>An object representing the user&apos;s session, a series of questions and selected answers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession? Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession? Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; AdditionalData?.Remove("session"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession? _explicitNullValueSession = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; AdditionalData?.Remove("session"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InteractiveResponseSession _explicitNullValueSession = default!;
 #endif
         /// <summary>The API&apos;s prediction for what the final Harmonized Tariff Schedule (HTS) code might be based on the current point of the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuggestedHts { get => _explicitNullValueSuggestedHts; set { _explicitNullValueSuggestedHts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestedHts"); else _explicitNullProperties?.Remove("suggestedHts"); } }
+        public string? SuggestedHts { get => _explicitNullValueSuggestedHts; set { _explicitNullValueSuggestedHts = value; AdditionalData?.Remove("suggestedHts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestedHts"); else _explicitNullProperties?.Remove("suggestedHts"); } }
         private string? _explicitNullValueSuggestedHts = default!;
 #nullable restore
 #else
-        public string SuggestedHts { get => _explicitNullValueSuggestedHts; set { _explicitNullValueSuggestedHts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestedHts"); else _explicitNullProperties?.Remove("suggestedHts"); } }
+        public string SuggestedHts { get => _explicitNullValueSuggestedHts; set { _explicitNullValueSuggestedHts = value; AdditionalData?.Remove("suggestedHts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestedHts"); else _explicitNullProperties?.Remove("suggestedHts"); } }
         private string _explicitNullValueSuggestedHts = default!;
 #endif
         /// <summary>

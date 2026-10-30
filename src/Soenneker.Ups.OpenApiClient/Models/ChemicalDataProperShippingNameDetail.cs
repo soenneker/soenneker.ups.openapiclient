@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ProperShippingName") is { } nullNodeProperShippingName && nullNodeProperShippingName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProperShippingName = null;
+            if (parseNode.GetChildNode("ProperShippingName") is null) { _explicitNullValueProperShippingName = default!; _explicitNullProperties?.Remove("ProperShippingName"); }
+            else if (parseNode.GetChildNode("ProperShippingName") is { } nullNodeProperShippingName && nullNodeProperShippingName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProperShippingName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The Proper Shipping Name assigned by ADR, CFR or IATA.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ProperShippingName { get => _explicitNullValueProperShippingName; set { _explicitNullValueProperShippingName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingName"); else _explicitNullProperties?.Remove("ProperShippingName"); } }
+        public UntypedNode? ProperShippingName { get => _explicitNullValueProperShippingName; set { _explicitNullValueProperShippingName = value; AdditionalData?.Remove("ProperShippingName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingName"); else _explicitNullProperties?.Remove("ProperShippingName"); } }
         private UntypedNode? _explicitNullValueProperShippingName = default!;
 #nullable restore
 #else
-        public UntypedNode ProperShippingName { get => _explicitNullValueProperShippingName; set { _explicitNullValueProperShippingName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingName"); else _explicitNullProperties?.Remove("ProperShippingName"); } }
+        public UntypedNode ProperShippingName { get => _explicitNullValueProperShippingName; set { _explicitNullValueProperShippingName = value; AdditionalData?.Remove("ProperShippingName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingName"); else _explicitNullProperties?.Remove("ProperShippingName"); } }
         private UntypedNode _explicitNullValueProperShippingName = default!;
 #endif
         /// <summary>

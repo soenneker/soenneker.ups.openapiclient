@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shipmentSummary") is { } nullNodeShipmentSummary && nullNodeShipmentSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentSummary = null;
+            if (parseNode.GetChildNode("shipmentSummary") is null) { _explicitNullValueShipmentSummary = default!; _explicitNullProperties?.Remove("shipmentSummary"); }
+            else if (parseNode.GetChildNode("shipmentSummary") is { } nullNodeShipmentSummary && nullNodeShipmentSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentSummary = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The shipmentSummary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary? ShipmentSummary { get => _explicitNullValueShipmentSummary; set { _explicitNullValueShipmentSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentSummary"); else _explicitNullProperties?.Remove("shipmentSummary"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary? ShipmentSummary { get => _explicitNullValueShipmentSummary; set { _explicitNullValueShipmentSummary = value; AdditionalData?.Remove("shipmentSummary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentSummary"); else _explicitNullProperties?.Remove("shipmentSummary"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary? _explicitNullValueShipmentSummary = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary ShipmentSummary { get => _explicitNullValueShipmentSummary; set { _explicitNullValueShipmentSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentSummary"); else _explicitNullProperties?.Remove("shipmentSummary"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary ShipmentSummary { get => _explicitNullValueShipmentSummary; set { _explicitNullValueShipmentSummary = value; AdditionalData?.Remove("shipmentSummary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentSummary"); else _explicitNullProperties?.Remove("shipmentSummary"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipmentSummary _explicitNullValueShipmentSummary = default!;
 #endif
         /// <summary>

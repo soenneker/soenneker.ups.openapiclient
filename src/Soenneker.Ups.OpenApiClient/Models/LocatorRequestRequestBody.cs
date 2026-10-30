@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LocatorRequest") is { } nullNodeLocatorRequest && nullNodeLocatorRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocatorRequest = null;
+            if (parseNode.GetChildNode("LocatorRequest") is null) { _explicitNullValueLocatorRequest = default!; _explicitNullProperties?.Remove("LocatorRequest"); }
+            else if (parseNode.GetChildNode("LocatorRequest") is { } nullNodeLocatorRequest && nullNodeLocatorRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocatorRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>N/A</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest? LocatorRequest { get => _explicitNullValueLocatorRequest; set { _explicitNullValueLocatorRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocatorRequest"); else _explicitNullProperties?.Remove("LocatorRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest? LocatorRequest { get => _explicitNullValueLocatorRequest; set { _explicitNullValueLocatorRequest = value; AdditionalData?.Remove("LocatorRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocatorRequest"); else _explicitNullProperties?.Remove("LocatorRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest? _explicitNullValueLocatorRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest LocatorRequest { get => _explicitNullValueLocatorRequest; set { _explicitNullValueLocatorRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocatorRequest"); else _explicitNullProperties?.Remove("LocatorRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest LocatorRequest { get => _explicitNullValueLocatorRequest; set { _explicitNullValueLocatorRequest = value; AdditionalData?.Remove("LocatorRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocatorRequest"); else _explicitNullProperties?.Remove("LocatorRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorRequest _explicitNullValueLocatorRequest = default!;
 #endif
         /// <summary>

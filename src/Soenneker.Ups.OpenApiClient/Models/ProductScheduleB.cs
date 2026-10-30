@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
-            if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
+            if (parseNode.GetChildNode("Number") is null) { _explicitNullValueNumber = default!; _explicitNullProperties?.Remove("Number"); }
+            else if (parseNode.GetChildNode("Number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
+            if (parseNode.GetChildNode("Quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("Quantity"); }
+            else if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("UnitOfMeasurement") is null) { _explicitNullValueUnitOfMeasurement = default!; _explicitNullProperties?.Remove("UnitOfMeasurement"); }
+            else if (parseNode.GetChildNode("UnitOfMeasurement") is { } nullNodeUnitOfMeasurement && nullNodeUnitOfMeasurement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitOfMeasurement = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A unique 10-digit commodity classification code for the item being exported. (To classify a commodity access the following Web page: http://www.census.gov/foreign-trade/schedules/b/#search).  Applies to EEI forms only. Has to be 10 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
+        public string? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("Number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
         private string? _explicitNullValueNumber = default!;
 #nullable restore
 #else
-        public string Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
+        public string Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("Number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Number"); else _explicitNullProperties?.Remove("Number"); } }
         private string _explicitNullValueNumber = default!;
 #endif
         /// <summary>The count of how many Schedule B units of the current good are in the shipment (EEI only). For example, if the Schedule B unit of measure is dozens and eight dozen, is being shipped, indicate 8 in this field.  Applies to EEI forms only. Conditionally required for EEI forms if ScheduleB UnitOfMeasurement is not X. Should be Numeric. Valid characters are 0 -9.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        public List<string>? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("Quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
         private List<string>? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public List<string> Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        public List<string> Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("Quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
         private List<string> _explicitNullValueQuantity = default!;
 #endif
         /// <summary>The UnitOfMeasurement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ScheduleBUnitOfMeasurement>? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ScheduleBUnitOfMeasurement>? UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; AdditionalData?.Remove("UnitOfMeasurement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ScheduleBUnitOfMeasurement>? _explicitNullValueUnitOfMeasurement = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ScheduleBUnitOfMeasurement> UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ScheduleBUnitOfMeasurement> UnitOfMeasurement { get => _explicitNullValueUnitOfMeasurement; set { _explicitNullValueUnitOfMeasurement = value; AdditionalData?.Remove("UnitOfMeasurement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitOfMeasurement"); else _explicitNullProperties?.Remove("UnitOfMeasurement"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ScheduleBUnitOfMeasurement> _explicitNullValueUnitOfMeasurement = default!;
 #endif
         /// <summary>

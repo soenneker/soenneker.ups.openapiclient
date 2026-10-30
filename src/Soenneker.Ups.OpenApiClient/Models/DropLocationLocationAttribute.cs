@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("OptionCode") is { } nullNodeOptionCode && nullNodeOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionCode = null;
-            if (parseNode.GetChildNode("OptionType") is { } nullNodeOptionType && nullNodeOptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionType = null;
+            if (parseNode.GetChildNode("OptionCode") is null) { _explicitNullValueOptionCode = default!; _explicitNullProperties?.Remove("OptionCode"); }
+            else if (parseNode.GetChildNode("OptionCode") is { } nullNodeOptionCode && nullNodeOptionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionCode = null;
+            if (parseNode.GetChildNode("OptionType") is null) { _explicitNullValueOptionType = default!; _explicitNullProperties?.Remove("OptionType"); }
+            else if (parseNode.GetChildNode("OptionType") is { } nullNodeOptionType && nullNodeOptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Option code is a container that contains the information of a particular type of Location or retail location or additional service or program type that the drop location contains.If the OptionType is Location or Retail Location Type there will be one code since each location has only one location type or retail location type.If the Option type is additional services or program types there can be one or more option codes.**NOTE:** For versions &gt;= v3, this element will always be returned as an array. For requests using version = v1 and v2, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionCode>? OptionCode { get => _explicitNullValueOptionCode; set { _explicitNullValueOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionCode"); else _explicitNullProperties?.Remove("OptionCode"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionCode>? OptionCode { get => _explicitNullValueOptionCode; set { _explicitNullValueOptionCode = value; AdditionalData?.Remove("OptionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionCode"); else _explicitNullProperties?.Remove("OptionCode"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionCode>? _explicitNullValueOptionCode = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionCode> OptionCode { get => _explicitNullValueOptionCode; set { _explicitNullValueOptionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionCode"); else _explicitNullProperties?.Remove("OptionCode"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionCode> OptionCode { get => _explicitNullValueOptionCode; set { _explicitNullValueOptionCode = value; AdditionalData?.Remove("OptionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionCode"); else _explicitNullProperties?.Remove("OptionCode"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionCode> _explicitNullValueOptionCode = default!;
 #endif
         /// <summary>The OptionType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionType? OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionType"); else _explicitNullProperties?.Remove("OptionType"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionType? OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; AdditionalData?.Remove("OptionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionType"); else _explicitNullProperties?.Remove("OptionType"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionType? _explicitNullValueOptionType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionType OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionType"); else _explicitNullProperties?.Remove("OptionType"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionType OptionType { get => _explicitNullValueOptionType; set { _explicitNullValueOptionType = value; AdditionalData?.Remove("OptionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptionType"); else _explicitNullProperties?.Remove("OptionType"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocationAttributeOptionType _explicitNullValueOptionType = default!;
 #endif
         /// <summary>

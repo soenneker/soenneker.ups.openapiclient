@@ -95,7 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Ups.OpenApiClient.TradeDirect.MasterShipments.Item.WithUsiNumberItemRequestBuilder.WithUsiNumberItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://onlinetools.ups.com/api/ship/tradedirect/v1", "/TradeDirect/master-shipments/{usiNumber}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

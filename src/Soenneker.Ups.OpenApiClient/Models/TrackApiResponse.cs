@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("trackResponse") is { } nullNodeTrackResponse && nullNodeTrackResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackResponse = null;
+            if (parseNode.GetChildNode("trackResponse") is null) { _explicitNullValueTrackResponse = default!; _explicitNullProperties?.Remove("trackResponse"); }
+            else if (parseNode.GetChildNode("trackResponse") is { } nullNodeTrackResponse && nullNodeTrackResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The trackResponse property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TrackResponse? TrackResponse { get => _explicitNullValueTrackResponse; set { _explicitNullValueTrackResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackResponse"); else _explicitNullProperties?.Remove("trackResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackResponse? TrackResponse { get => _explicitNullValueTrackResponse; set { _explicitNullValueTrackResponse = value; AdditionalData?.Remove("trackResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackResponse"); else _explicitNullProperties?.Remove("trackResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TrackResponse? _explicitNullValueTrackResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TrackResponse TrackResponse { get => _explicitNullValueTrackResponse; set { _explicitNullValueTrackResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackResponse"); else _explicitNullProperties?.Remove("trackResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackResponse TrackResponse { get => _explicitNullValueTrackResponse; set { _explicitNullValueTrackResponse = value; AdditionalData?.Remove("trackResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackResponse"); else _explicitNullProperties?.Remove("trackResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TrackResponse _explicitNullValueTrackResponse = default!;
 #endif
         /// <summary>

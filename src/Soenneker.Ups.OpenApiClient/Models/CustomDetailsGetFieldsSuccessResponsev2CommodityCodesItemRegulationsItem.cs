@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("regulation") is { } nullNodeRegulation && nullNodeRegulation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regulation = null;
-            if (parseNode.GetChildNode("regulationSections") is { } nullNodeRegulationSections && nullNodeRegulationSections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSections = null;
+            if (parseNode.GetChildNode("regulation") is null) { _explicitNullValueRegulation = default!; _explicitNullProperties?.Remove("regulation"); }
+            else if (parseNode.GetChildNode("regulation") is { } nullNodeRegulation && nullNodeRegulation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regulation = null;
+            if (parseNode.GetChildNode("regulationSections") is null) { _explicitNullValueRegulationSections = default!; _explicitNullProperties?.Remove("regulationSections"); }
+            else if (parseNode.GetChildNode("regulationSections") is { } nullNodeRegulationSections && nullNodeRegulationSections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSections = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Identifier for the compliance Regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Regulation { get => _explicitNullValueRegulation; set { _explicitNullValueRegulation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulation"); else _explicitNullProperties?.Remove("regulation"); } }
+        public string? Regulation { get => _explicitNullValueRegulation; set { _explicitNullValueRegulation = value; AdditionalData?.Remove("regulation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulation"); else _explicitNullProperties?.Remove("regulation"); } }
         private string? _explicitNullValueRegulation = default!;
 #nullable restore
 #else
-        public string Regulation { get => _explicitNullValueRegulation; set { _explicitNullValueRegulation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulation"); else _explicitNullProperties?.Remove("regulation"); } }
+        public string Regulation { get => _explicitNullValueRegulation; set { _explicitNullValueRegulation = value; AdditionalData?.Remove("regulation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulation"); else _explicitNullProperties?.Remove("regulation"); } }
         private string _explicitNullValueRegulation = default!;
 #endif
         /// <summary>Unbounded list of regulationSection definitions for this Regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? RegulationSections { get => _explicitNullValueRegulationSections; set { _explicitNullValueRegulationSections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulationSections"); else _explicitNullProperties?.Remove("regulationSections"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? RegulationSections { get => _explicitNullValueRegulationSections; set { _explicitNullValueRegulationSections = value; AdditionalData?.Remove("regulationSections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulationSections"); else _explicitNullProperties?.Remove("regulationSections"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item>? _explicitNullValueRegulationSections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> RegulationSections { get => _explicitNullValueRegulationSections; set { _explicitNullValueRegulationSections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulationSections"); else _explicitNullProperties?.Remove("regulationSections"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> RegulationSections { get => _explicitNullValueRegulationSections; set { _explicitNullValueRegulationSections = value; AdditionalData?.Remove("regulationSections"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regulationSections"); else _explicitNullProperties?.Remove("regulationSections"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsRegulationSectionv2Item> _explicitNullValueRegulationSections = default!;
 #endif
         /// <summary>

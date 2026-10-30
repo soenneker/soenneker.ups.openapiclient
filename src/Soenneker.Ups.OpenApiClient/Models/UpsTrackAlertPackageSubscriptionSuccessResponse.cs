@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("invalidTrackingNumbers") is { } nullNodeInvalidTrackingNumbers && nullNodeInvalidTrackingNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidTrackingNumbers = null;
-            if (parseNode.GetChildNode("validTrackingNumbers") is { } nullNodeValidTrackingNumbers && nullNodeValidTrackingNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidTrackingNumbers = null;
+            if (parseNode.GetChildNode("invalidTrackingNumbers") is null) { _explicitNullValueInvalidTrackingNumbers = default!; _explicitNullProperties?.Remove("invalidTrackingNumbers"); }
+            else if (parseNode.GetChildNode("invalidTrackingNumbers") is { } nullNodeInvalidTrackingNumbers && nullNodeInvalidTrackingNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidTrackingNumbers = null;
+            if (parseNode.GetChildNode("validTrackingNumbers") is null) { _explicitNullValueValidTrackingNumbers = default!; _explicitNullProperties?.Remove("validTrackingNumbers"); }
+            else if (parseNode.GetChildNode("validTrackingNumbers") is { } nullNodeValidTrackingNumbers && nullNodeValidTrackingNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidTrackingNumbers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>List of tracking numbers associated with errors preventing subscription creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InvalidTrackingNumbers { get => _explicitNullValueInvalidTrackingNumbers; set { _explicitNullValueInvalidTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidTrackingNumbers"); else _explicitNullProperties?.Remove("invalidTrackingNumbers"); } }
+        public List<string>? InvalidTrackingNumbers { get => _explicitNullValueInvalidTrackingNumbers; set { _explicitNullValueInvalidTrackingNumbers = value; AdditionalData?.Remove("invalidTrackingNumbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidTrackingNumbers"); else _explicitNullProperties?.Remove("invalidTrackingNumbers"); } }
         private List<string>? _explicitNullValueInvalidTrackingNumbers = default!;
 #nullable restore
 #else
-        public List<string> InvalidTrackingNumbers { get => _explicitNullValueInvalidTrackingNumbers; set { _explicitNullValueInvalidTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidTrackingNumbers"); else _explicitNullProperties?.Remove("invalidTrackingNumbers"); } }
+        public List<string> InvalidTrackingNumbers { get => _explicitNullValueInvalidTrackingNumbers; set { _explicitNullValueInvalidTrackingNumbers = value; AdditionalData?.Remove("invalidTrackingNumbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidTrackingNumbers"); else _explicitNullProperties?.Remove("invalidTrackingNumbers"); } }
         private List<string> _explicitNullValueInvalidTrackingNumbers = default!;
 #endif
         /// <summary>Unbounded list of tracking numbers with successful subscription created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ValidTrackingNumbers { get => _explicitNullValueValidTrackingNumbers; set { _explicitNullValueValidTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validTrackingNumbers"); else _explicitNullProperties?.Remove("validTrackingNumbers"); } }
+        public List<string>? ValidTrackingNumbers { get => _explicitNullValueValidTrackingNumbers; set { _explicitNullValueValidTrackingNumbers = value; AdditionalData?.Remove("validTrackingNumbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validTrackingNumbers"); else _explicitNullProperties?.Remove("validTrackingNumbers"); } }
         private List<string>? _explicitNullValueValidTrackingNumbers = default!;
 #nullable restore
 #else
-        public List<string> ValidTrackingNumbers { get => _explicitNullValueValidTrackingNumbers; set { _explicitNullValueValidTrackingNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validTrackingNumbers"); else _explicitNullProperties?.Remove("validTrackingNumbers"); } }
+        public List<string> ValidTrackingNumbers { get => _explicitNullValueValidTrackingNumbers; set { _explicitNullValueValidTrackingNumbers = value; AdditionalData?.Remove("validTrackingNumbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validTrackingNumbers"); else _explicitNullProperties?.Remove("validTrackingNumbers"); } }
         private List<string> _explicitNullValueValidTrackingNumbers = default!;
 #endif
         /// <summary>

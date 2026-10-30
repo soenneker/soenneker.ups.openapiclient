@@ -17,9 +17,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ChemicalDetail") is { } nullNodeChemicalDetail && nullNodeChemicalDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalDetail = null;
-            if (parseNode.GetChildNode("PackageQuantityLimitDetail") is { } nullNodePackageQuantityLimitDetail && nullNodePackageQuantityLimitDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageQuantityLimitDetail = null;
-            if (parseNode.GetChildNode("ProperShippingNameDetail") is { } nullNodeProperShippingNameDetail && nullNodeProperShippingNameDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProperShippingNameDetail = null;
+            if (parseNode.GetChildNode("ChemicalDetail") is null) { _explicitNullValueChemicalDetail = default!; _explicitNullProperties?.Remove("ChemicalDetail"); }
+            else if (parseNode.GetChildNode("ChemicalDetail") is { } nullNodeChemicalDetail && nullNodeChemicalDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalDetail = null;
+            if (parseNode.GetChildNode("PackageQuantityLimitDetail") is null) { _explicitNullValuePackageQuantityLimitDetail = default!; _explicitNullProperties?.Remove("PackageQuantityLimitDetail"); }
+            else if (parseNode.GetChildNode("PackageQuantityLimitDetail") is { } nullNodePackageQuantityLimitDetail && nullNodePackageQuantityLimitDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageQuantityLimitDetail = null;
+            if (parseNode.GetChildNode("ProperShippingNameDetail") is null) { _explicitNullValueProperShippingNameDetail = default!; _explicitNullProperties?.Remove("ProperShippingNameDetail"); }
+            else if (parseNode.GetChildNode("ProperShippingNameDetail") is { } nullNodeProperShippingNameDetail && nullNodeProperShippingNameDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProperShippingNameDetail = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to hold Chemical details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataChemicalDetail? ChemicalDetail { get => _explicitNullValueChemicalDetail; set { _explicitNullValueChemicalDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalDetail"); else _explicitNullProperties?.Remove("ChemicalDetail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataChemicalDetail? ChemicalDetail { get => _explicitNullValueChemicalDetail; set { _explicitNullValueChemicalDetail = value; AdditionalData?.Remove("ChemicalDetail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalDetail"); else _explicitNullProperties?.Remove("ChemicalDetail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataChemicalDetail? _explicitNullValueChemicalDetail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataChemicalDetail ChemicalDetail { get => _explicitNullValueChemicalDetail; set { _explicitNullValueChemicalDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalDetail"); else _explicitNullProperties?.Remove("ChemicalDetail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataChemicalDetail ChemicalDetail { get => _explicitNullValueChemicalDetail; set { _explicitNullValueChemicalDetail = value; AdditionalData?.Remove("ChemicalDetail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalDetail"); else _explicitNullProperties?.Remove("ChemicalDetail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataChemicalDetail _explicitNullValueChemicalDetail = default!;
 #endif
         /// <summary>Container to hold Package Quantity Limit Detail information.  It will be returned if applies for a given chemical record.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataPackageQuantityLimitDetail>? PackageQuantityLimitDetail { get => _explicitNullValuePackageQuantityLimitDetail; set { _explicitNullValuePackageQuantityLimitDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitDetail"); else _explicitNullProperties?.Remove("PackageQuantityLimitDetail"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataPackageQuantityLimitDetail>? PackageQuantityLimitDetail { get => _explicitNullValuePackageQuantityLimitDetail; set { _explicitNullValuePackageQuantityLimitDetail = value; AdditionalData?.Remove("PackageQuantityLimitDetail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitDetail"); else _explicitNullProperties?.Remove("PackageQuantityLimitDetail"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataPackageQuantityLimitDetail>? _explicitNullValuePackageQuantityLimitDetail = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataPackageQuantityLimitDetail> PackageQuantityLimitDetail { get => _explicitNullValuePackageQuantityLimitDetail; set { _explicitNullValuePackageQuantityLimitDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitDetail"); else _explicitNullProperties?.Remove("PackageQuantityLimitDetail"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataPackageQuantityLimitDetail> PackageQuantityLimitDetail { get => _explicitNullValuePackageQuantityLimitDetail; set { _explicitNullValuePackageQuantityLimitDetail = value; AdditionalData?.Remove("PackageQuantityLimitDetail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitDetail"); else _explicitNullProperties?.Remove("PackageQuantityLimitDetail"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataPackageQuantityLimitDetail> _explicitNullValuePackageQuantityLimitDetail = default!;
 #endif
         /// <summary>Container to hold Proper Shipping Name Detail information.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetail? ProperShippingNameDetail { get => _explicitNullValueProperShippingNameDetail; set { _explicitNullValueProperShippingNameDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingNameDetail"); else _explicitNullProperties?.Remove("ProperShippingNameDetail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetail? ProperShippingNameDetail { get => _explicitNullValueProperShippingNameDetail; set { _explicitNullValueProperShippingNameDetail = value; AdditionalData?.Remove("ProperShippingNameDetail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingNameDetail"); else _explicitNullProperties?.Remove("ProperShippingNameDetail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetail? _explicitNullValueProperShippingNameDetail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetail ProperShippingNameDetail { get => _explicitNullValueProperShippingNameDetail; set { _explicitNullValueProperShippingNameDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingNameDetail"); else _explicitNullProperties?.Remove("ProperShippingNameDetail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetail ProperShippingNameDetail { get => _explicitNullValueProperShippingNameDetail; set { _explicitNullValueProperShippingNameDetail = value; AdditionalData?.Remove("ProperShippingNameDetail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingNameDetail"); else _explicitNullProperties?.Remove("ProperShippingNameDetail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChemicalDataProperShippingNameDetail _explicitNullValueProperShippingNameDetail = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("transactionref") is { } nullNodeTransactionref && nullNodeTransactionref.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transactionref = null;
+            if (parseNode.GetChildNode("transactionref") is null) { _explicitNullValueTransactionref = default!; _explicitNullProperties?.Remove("transactionref"); }
+            else if (parseNode.GetChildNode("transactionref") is { } nullNodeTransactionref && nullNodeTransactionref.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transactionref = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Transaction reference details used to correlate API requests and responses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelopeTransactionref? Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelopeTransactionref? Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; AdditionalData?.Remove("transactionref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelopeTransactionref? _explicitNullValueTransactionref = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelopeTransactionref Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelopeTransactionref Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; AdditionalData?.Remove("transactionref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.OrderResponseEnvelopeTransactionref _explicitNullValueTransactionref = default!;
 #endif
         /// <summary>

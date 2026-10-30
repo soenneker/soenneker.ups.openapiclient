@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AddressClassification") is { } nullNodeAddressClassification && nullNodeAddressClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressClassification = null;
-            if (parseNode.GetChildNode("AddressKeyFormat") is { } nullNodeAddressKeyFormat && nullNodeAddressKeyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKeyFormat = null;
+            if (parseNode.GetChildNode("AddressClassification") is null) { _explicitNullValueAddressClassification = default!; _explicitNullProperties?.Remove("AddressClassification"); }
+            else if (parseNode.GetChildNode("AddressClassification") is { } nullNodeAddressClassification && nullNodeAddressClassification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressClassification = null;
+            if (parseNode.GetChildNode("AddressKeyFormat") is null) { _explicitNullValueAddressKeyFormat = default!; _explicitNullProperties?.Remove("AddressKeyFormat"); }
+            else if (parseNode.GetChildNode("AddressKeyFormat") is { } nullNodeAddressKeyFormat && nullNodeAddressKeyFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressKeyFormat = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>AddressClassification Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressClassification? AddressClassification { get => _explicitNullValueAddressClassification; set { _explicitNullValueAddressClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressClassification"); else _explicitNullProperties?.Remove("AddressClassification"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressClassification? AddressClassification { get => _explicitNullValueAddressClassification; set { _explicitNullValueAddressClassification = value; AdditionalData?.Remove("AddressClassification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressClassification"); else _explicitNullProperties?.Remove("AddressClassification"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressClassification? _explicitNullValueAddressClassification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressClassification AddressClassification { get => _explicitNullValueAddressClassification; set { _explicitNullValueAddressClassification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressClassification"); else _explicitNullProperties?.Remove("AddressClassification"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressClassification AddressClassification { get => _explicitNullValueAddressClassification; set { _explicitNullValueAddressClassification = value; AdditionalData?.Remove("AddressClassification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressClassification"); else _explicitNullProperties?.Remove("AddressClassification"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressClassification _explicitNullValueAddressClassification = default!;
 #endif
         /// <summary>AddressKeyFormat Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressKeyFormat? AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressKeyFormat? AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; AdditionalData?.Remove("AddressKeyFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressKeyFormat? _explicitNullValueAddressKeyFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressKeyFormat AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressKeyFormat AddressKeyFormat { get => _explicitNullValueAddressKeyFormat; set { _explicitNullValueAddressKeyFormat = value; AdditionalData?.Remove("AddressKeyFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressKeyFormat"); else _explicitNullProperties?.Remove("AddressKeyFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CandidateAddressKeyFormat _explicitNullValueAddressKeyFormat = default!;
 #endif
         /// <summary>

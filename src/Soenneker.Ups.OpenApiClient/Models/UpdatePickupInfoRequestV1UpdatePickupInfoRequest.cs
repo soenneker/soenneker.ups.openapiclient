@@ -17,21 +17,26 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AccountInfo") is { } nullNodeAccountInfo && nullNodeAccountInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountInfo = null;
-            if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
-            if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("PickUpInfo") is { } nullNodePickUpInfo && nullNodePickUpInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpInfo = null;
-            if (parseNode.GetChildNode("PickUpTypeCode") is { } nullNodePickUpTypeCode && nullNodePickUpTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpTypeCode = null;
+            if (parseNode.GetChildNode("AccountInfo") is null) { _explicitNullValueAccountInfo = default!; _explicitNullProperties?.Remove("AccountInfo"); }
+            else if (parseNode.GetChildNode("AccountInfo") is { } nullNodeAccountInfo && nullNodeAccountInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountInfo = null;
+            if (parseNode.GetChildNode("Address") is null) { _explicitNullValueAddress = default!; _explicitNullProperties?.Remove("Address"); }
+            else if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("Locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("Locale"); }
+            else if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("PickUpInfo") is null) { _explicitNullValuePickUpInfo = default!; _explicitNullProperties?.Remove("PickUpInfo"); }
+            else if (parseNode.GetChildNode("PickUpInfo") is { } nullNodePickUpInfo && nullNodePickUpInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpInfo = null;
+            if (parseNode.GetChildNode("PickUpTypeCode") is null) { _explicitNullValuePickUpTypeCode = default!; _explicitNullProperties?.Remove("PickUpTypeCode"); }
+            else if (parseNode.GetChildNode("PickUpTypeCode") is { } nullNodePickUpTypeCode && nullNodePickUpTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpTypeCode = null;
         }
 
         /// <summary>The UPS account information that you want to use for SmartPickupTrigger and NotificationIndicator</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo? AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo? AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; AdditionalData?.Remove("AccountInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo? _explicitNullValueAccountInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo AccountInfo { get => _explicitNullValueAccountInfo; set { _explicitNullValueAccountInfo = value; AdditionalData?.Remove("AccountInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountInfo"); else _explicitNullProperties?.Remove("AccountInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2AccountInfo _explicitNullValueAccountInfo = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,43 +44,36 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>To obtain the pickup address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address _explicitNullValueAddress = default!;
 #endif
         /// <summary>To set locale information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale _explicitNullValueLocale = default!;
 #endif
         /// <summary>PickUpInfo Contains PickUp Location information.  Available when PickupTypeCode is **02**.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo? PickUpInfo { get => _explicitNullValuePickUpInfo; set { _explicitNullValuePickUpInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpInfo"); else _explicitNullProperties?.Remove("PickUpInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo? PickUpInfo { get => _explicitNullValuePickUpInfo; set { _explicitNullValuePickUpInfo = value; AdditionalData?.Remove("PickUpInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpInfo"); else _explicitNullProperties?.Remove("PickUpInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo? _explicitNullValuePickUpInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo PickUpInfo { get => _explicitNullValuePickUpInfo; set { _explicitNullValuePickUpInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpInfo"); else _explicitNullProperties?.Remove("PickUpInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo PickUpInfo { get => _explicitNullValuePickUpInfo; set { _explicitNullValuePickUpInfo = value; AdditionalData?.Remove("PickUpInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpInfo"); else _explicitNullProperties?.Remove("PickUpInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo _explicitNullValuePickUpInfo = default!;
 #endif
         /// <summary>Type of Pickup. Note: Pickup changes are not allowed when PickupType code is 97.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode? PickUpTypeCode { get => _explicitNullValuePickUpTypeCode; set { _explicitNullValuePickUpTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTypeCode"); else _explicitNullProperties?.Remove("PickUpTypeCode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode? PickUpTypeCode { get => _explicitNullValuePickUpTypeCode; set { _explicitNullValuePickUpTypeCode = value; AdditionalData?.Remove("PickUpTypeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTypeCode"); else _explicitNullProperties?.Remove("PickUpTypeCode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode? _explicitNullValuePickUpTypeCode = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode PickUpTypeCode { get => _explicitNullValuePickUpTypeCode; set { _explicitNullValuePickUpTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTypeCode"); else _explicitNullProperties?.Remove("PickUpTypeCode"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode _explicitNullValuePickUpTypeCode = default!;
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequest"/> and sets the default values.
         /// </summary>
@@ -105,7 +103,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "Address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address.CreateFromDiscriminatorValue); } },
                 { "Locale", n => { Locale = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale.CreateFromDiscriminatorValue); } },
                 { "PickUpInfo", n => { PickUpInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo.CreateFromDiscriminatorValue); } },
-                { "PickUpTypeCode", n => { PickUpTypeCode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode>(global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode.CreateFromDiscriminatorValue); } },
+                { "PickUpTypeCode", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePickUpTypeCode = default; _explicitNullProperties?.Remove("PickUpTypeCode"); AdditionalData["PickUpTypeCode"] = unknown; } else { PickUpTypeCode = parsed; AdditionalData.Remove("PickUpTypeCode"); } } },
             };
         }
         /// <summary>
@@ -119,7 +117,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupAddressV1Address>("Address", Address);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2Locale>("Locale", Locale);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpInfo>("PickUpInfo", PickUpInfo);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode>("PickUpTypeCode", PickUpTypeCode);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.UpdatePickupInfoRequestV1UpdatePickupInfoRequestAllOf2PickUpTypeCode>("PickUpTypeCode", PickUpTypeCode);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

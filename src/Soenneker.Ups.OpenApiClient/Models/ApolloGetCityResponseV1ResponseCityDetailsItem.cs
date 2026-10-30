@@ -17,12 +17,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cityName") is { } nullNodeCityName && nullNodeCityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CityName = null;
-            if (parseNode.GetChildNode("majorAirportCity") is { } nullNodeMajorAirportCity && nullNodeMajorAirportCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MajorAirportCity = null;
-            if (parseNode.GetChildNode("sortCode") is { } nullNodeSortCode && nullNodeSortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortCode = null;
-            if (parseNode.GetChildNode("standardService") is { } nullNodeStandardService && nullNodeStandardService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardService = null;
-            if (parseNode.GetChildNode("stateProvinceCode") is { } nullNodeStateProvinceCode && nullNodeStateProvinceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateProvinceCode = null;
-            if (parseNode.GetChildNode("tariffDestination") is { } nullNodeTariffDestination && nullNodeTariffDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TariffDestination = null;
+            if (parseNode.GetChildNode("cityName") is null) { _explicitNullValueCityName = default!; _explicitNullProperties?.Remove("cityName"); }
+            else if (parseNode.GetChildNode("cityName") is { } nullNodeCityName && nullNodeCityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CityName = null;
+            if (parseNode.GetChildNode("majorAirportCity") is null) { _explicitNullValueMajorAirportCity = default!; _explicitNullProperties?.Remove("majorAirportCity"); }
+            else if (parseNode.GetChildNode("majorAirportCity") is { } nullNodeMajorAirportCity && nullNodeMajorAirportCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MajorAirportCity = null;
+            if (parseNode.GetChildNode("sortCode") is null) { _explicitNullValueSortCode = default!; _explicitNullProperties?.Remove("sortCode"); }
+            else if (parseNode.GetChildNode("sortCode") is { } nullNodeSortCode && nullNodeSortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortCode = null;
+            if (parseNode.GetChildNode("standardService") is null) { _explicitNullValueStandardService = default!; _explicitNullProperties?.Remove("standardService"); }
+            else if (parseNode.GetChildNode("standardService") is { } nullNodeStandardService && nullNodeStandardService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardService = null;
+            if (parseNode.GetChildNode("stateProvinceCode") is null) { _explicitNullValueStateProvinceCode = default!; _explicitNullProperties?.Remove("stateProvinceCode"); }
+            else if (parseNode.GetChildNode("stateProvinceCode") is { } nullNodeStateProvinceCode && nullNodeStateProvinceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateProvinceCode = null;
+            if (parseNode.GetChildNode("tariffDestination") is null) { _explicitNullValueTariffDestination = default!; _explicitNullProperties?.Remove("tariffDestination"); }
+            else if (parseNode.GetChildNode("tariffDestination") is { } nullNodeTariffDestination && nullNodeTariffDestination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TariffDestination = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The name of the city</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CityName { get => _explicitNullValueCityName; set { _explicitNullValueCityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cityName"); else _explicitNullProperties?.Remove("cityName"); } }
+        public string? CityName { get => _explicitNullValueCityName; set { _explicitNullValueCityName = value; AdditionalData?.Remove("cityName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cityName"); else _explicitNullProperties?.Remove("cityName"); } }
         private string? _explicitNullValueCityName = default!;
 #nullable restore
 #else
-        public string CityName { get => _explicitNullValueCityName; set { _explicitNullValueCityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cityName"); else _explicitNullProperties?.Remove("cityName"); } }
+        public string CityName { get => _explicitNullValueCityName; set { _explicitNullValueCityName = value; AdditionalData?.Remove("cityName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cityName"); else _explicitNullProperties?.Remove("cityName"); } }
         private string _explicitNullValueCityName = default!;
 #endif
         /// <summary>The nearest city with a major airport</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MajorAirportCity { get => _explicitNullValueMajorAirportCity; set { _explicitNullValueMajorAirportCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("majorAirportCity"); else _explicitNullProperties?.Remove("majorAirportCity"); } }
+        public string? MajorAirportCity { get => _explicitNullValueMajorAirportCity; set { _explicitNullValueMajorAirportCity = value; AdditionalData?.Remove("majorAirportCity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("majorAirportCity"); else _explicitNullProperties?.Remove("majorAirportCity"); } }
         private string? _explicitNullValueMajorAirportCity = default!;
 #nullable restore
 #else
-        public string MajorAirportCity { get => _explicitNullValueMajorAirportCity; set { _explicitNullValueMajorAirportCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("majorAirportCity"); else _explicitNullProperties?.Remove("majorAirportCity"); } }
+        public string MajorAirportCity { get => _explicitNullValueMajorAirportCity; set { _explicitNullValueMajorAirportCity = value; AdditionalData?.Remove("majorAirportCity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("majorAirportCity"); else _explicitNullProperties?.Remove("majorAirportCity"); } }
         private string _explicitNullValueMajorAirportCity = default!;
 #endif
         /// <summary>A value which helps the Ops team to route the package</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SortCode { get => _explicitNullValueSortCode; set { _explicitNullValueSortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sortCode"); else _explicitNullProperties?.Remove("sortCode"); } }
+        public string? SortCode { get => _explicitNullValueSortCode; set { _explicitNullValueSortCode = value; AdditionalData?.Remove("sortCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sortCode"); else _explicitNullProperties?.Remove("sortCode"); } }
         private string? _explicitNullValueSortCode = default!;
 #nullable restore
 #else
-        public string SortCode { get => _explicitNullValueSortCode; set { _explicitNullValueSortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sortCode"); else _explicitNullProperties?.Remove("sortCode"); } }
+        public string SortCode { get => _explicitNullValueSortCode; set { _explicitNullValueSortCode = value; AdditionalData?.Remove("sortCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sortCode"); else _explicitNullProperties?.Remove("sortCode"); } }
         private string _explicitNullValueSortCode = default!;
 #endif
         /// <summary>The standard service offered in this city</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StandardService { get => _explicitNullValueStandardService; set { _explicitNullValueStandardService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardService"); else _explicitNullProperties?.Remove("standardService"); } }
+        public string? StandardService { get => _explicitNullValueStandardService; set { _explicitNullValueStandardService = value; AdditionalData?.Remove("standardService"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardService"); else _explicitNullProperties?.Remove("standardService"); } }
         private string? _explicitNullValueStandardService = default!;
 #nullable restore
 #else
-        public string StandardService { get => _explicitNullValueStandardService; set { _explicitNullValueStandardService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardService"); else _explicitNullProperties?.Remove("standardService"); } }
+        public string StandardService { get => _explicitNullValueStandardService; set { _explicitNullValueStandardService = value; AdditionalData?.Remove("standardService"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardService"); else _explicitNullProperties?.Remove("standardService"); } }
         private string _explicitNullValueStandardService = default!;
 #endif
         /// <summary>The State/Province to which the city belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StateProvinceCode { get => _explicitNullValueStateProvinceCode; set { _explicitNullValueStateProvinceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stateProvinceCode"); else _explicitNullProperties?.Remove("stateProvinceCode"); } }
+        public string? StateProvinceCode { get => _explicitNullValueStateProvinceCode; set { _explicitNullValueStateProvinceCode = value; AdditionalData?.Remove("stateProvinceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stateProvinceCode"); else _explicitNullProperties?.Remove("stateProvinceCode"); } }
         private string? _explicitNullValueStateProvinceCode = default!;
 #nullable restore
 #else
-        public string StateProvinceCode { get => _explicitNullValueStateProvinceCode; set { _explicitNullValueStateProvinceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stateProvinceCode"); else _explicitNullProperties?.Remove("stateProvinceCode"); } }
+        public string StateProvinceCode { get => _explicitNullValueStateProvinceCode; set { _explicitNullValueStateProvinceCode = value; AdditionalData?.Remove("stateProvinceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stateProvinceCode"); else _explicitNullProperties?.Remove("stateProvinceCode"); } }
         private string _explicitNullValueStateProvinceCode = default!;
 #endif
         /// <summary>The destination used for billing purpose</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TariffDestination { get => _explicitNullValueTariffDestination; set { _explicitNullValueTariffDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tariffDestination"); else _explicitNullProperties?.Remove("tariffDestination"); } }
+        public string? TariffDestination { get => _explicitNullValueTariffDestination; set { _explicitNullValueTariffDestination = value; AdditionalData?.Remove("tariffDestination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tariffDestination"); else _explicitNullProperties?.Remove("tariffDestination"); } }
         private string? _explicitNullValueTariffDestination = default!;
 #nullable restore
 #else
-        public string TariffDestination { get => _explicitNullValueTariffDestination; set { _explicitNullValueTariffDestination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tariffDestination"); else _explicitNullProperties?.Remove("tariffDestination"); } }
+        public string TariffDestination { get => _explicitNullValueTariffDestination; set { _explicitNullValueTariffDestination = value; AdditionalData?.Remove("tariffDestination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tariffDestination"); else _explicitNullProperties?.Remove("tariffDestination"); } }
         private string _explicitNullValueTariffDestination = default!;
 #endif
         /// <summary>

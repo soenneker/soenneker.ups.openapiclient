@@ -17,13 +17,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cargoItems") is { } nullNodeCargoItems && nullNodeCargoItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CargoItems = null;
-            if (parseNode.GetChildNode("commodityName") is { } nullNodeCommodityName && nullNodeCommodityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityName = null;
-            if (parseNode.GetChildNode("customsValue") is { } nullNodeCustomsValue && nullNodeCustomsValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomsValue = null;
-            if (parseNode.GetChildNode("customsValueCurrency") is { } nullNodeCustomsValueCurrency && nullNodeCustomsValueCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomsValueCurrency = null;
-            if (parseNode.GetChildNode("fclCargoItems") is { } nullNodeFclCargoItems && nullNodeFclCargoItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FclCargoItems = null;
-            if (parseNode.GetChildNode("insuredValue") is { } nullNodeInsuredValue && nullNodeInsuredValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsuredValue = null;
-            if (parseNode.GetChildNode("insuredValueCurrency") is { } nullNodeInsuredValueCurrency && nullNodeInsuredValueCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsuredValueCurrency = null;
+            if (parseNode.GetChildNode("cargoItems") is null) { _explicitNullValueCargoItems = default!; _explicitNullProperties?.Remove("cargoItems"); }
+            else if (parseNode.GetChildNode("cargoItems") is { } nullNodeCargoItems && nullNodeCargoItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CargoItems = null;
+            if (parseNode.GetChildNode("commodityName") is null) { _explicitNullValueCommodityName = default!; _explicitNullProperties?.Remove("commodityName"); }
+            else if (parseNode.GetChildNode("commodityName") is { } nullNodeCommodityName && nullNodeCommodityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityName = null;
+            if (parseNode.GetChildNode("customsValue") is null) { _explicitNullValueCustomsValue = default!; _explicitNullProperties?.Remove("customsValue"); }
+            else if (parseNode.GetChildNode("customsValue") is { } nullNodeCustomsValue && nullNodeCustomsValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomsValue = null;
+            if (parseNode.GetChildNode("customsValueCurrency") is null) { _explicitNullValueCustomsValueCurrency = default!; _explicitNullProperties?.Remove("customsValueCurrency"); }
+            else if (parseNode.GetChildNode("customsValueCurrency") is { } nullNodeCustomsValueCurrency && nullNodeCustomsValueCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomsValueCurrency = null;
+            if (parseNode.GetChildNode("fclCargoItems") is null) { _explicitNullValueFclCargoItems = default!; _explicitNullProperties?.Remove("fclCargoItems"); }
+            else if (parseNode.GetChildNode("fclCargoItems") is { } nullNodeFclCargoItems && nullNodeFclCargoItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FclCargoItems = null;
+            if (parseNode.GetChildNode("insuredValue") is null) { _explicitNullValueInsuredValue = default!; _explicitNullProperties?.Remove("insuredValue"); }
+            else if (parseNode.GetChildNode("insuredValue") is { } nullNodeInsuredValue && nullNodeInsuredValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsuredValue = null;
+            if (parseNode.GetChildNode("insuredValueCurrency") is null) { _explicitNullValueInsuredValueCurrency = default!; _explicitNullProperties?.Remove("insuredValueCurrency"); }
+            else if (parseNode.GetChildNode("insuredValueCurrency") is { } nullNodeInsuredValueCurrency && nullNodeInsuredValueCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsuredValueCurrency = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,57 +38,57 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Collection of Less-than-Container Load (LCL) cargo items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LclCargoItemV1>? CargoItems { get => _explicitNullValueCargoItems; set { _explicitNullValueCargoItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cargoItems"); else _explicitNullProperties?.Remove("cargoItems"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LclCargoItemV1>? CargoItems { get => _explicitNullValueCargoItems; set { _explicitNullValueCargoItems = value; AdditionalData?.Remove("cargoItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cargoItems"); else _explicitNullProperties?.Remove("cargoItems"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.LclCargoItemV1>? _explicitNullValueCargoItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.LclCargoItemV1> CargoItems { get => _explicitNullValueCargoItems; set { _explicitNullValueCargoItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cargoItems"); else _explicitNullProperties?.Remove("cargoItems"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.LclCargoItemV1> CargoItems { get => _explicitNullValueCargoItems; set { _explicitNullValueCargoItems = value; AdditionalData?.Remove("cargoItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cargoItems"); else _explicitNullProperties?.Remove("cargoItems"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.LclCargoItemV1> _explicitNullValueCargoItems = default!;
 #endif
         /// <summary>Name of the commodity being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityName { get => _explicitNullValueCommodityName; set { _explicitNullValueCommodityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityName"); else _explicitNullProperties?.Remove("commodityName"); } }
+        public string? CommodityName { get => _explicitNullValueCommodityName; set { _explicitNullValueCommodityName = value; AdditionalData?.Remove("commodityName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityName"); else _explicitNullProperties?.Remove("commodityName"); } }
         private string? _explicitNullValueCommodityName = default!;
 #nullable restore
 #else
-        public string CommodityName { get => _explicitNullValueCommodityName; set { _explicitNullValueCommodityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityName"); else _explicitNullProperties?.Remove("commodityName"); } }
+        public string CommodityName { get => _explicitNullValueCommodityName; set { _explicitNullValueCommodityName = value; AdditionalData?.Remove("commodityName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commodityName"); else _explicitNullProperties?.Remove("commodityName"); } }
         private string _explicitNullValueCommodityName = default!;
 #endif
         /// <summary>Customs value of the item.</summary>
-        public double? CustomsValue { get => _explicitNullValueCustomsValue; set { _explicitNullValueCustomsValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customsValue"); else _explicitNullProperties?.Remove("customsValue"); } }
+        public double? CustomsValue { get => _explicitNullValueCustomsValue; set { _explicitNullValueCustomsValue = value; AdditionalData?.Remove("customsValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customsValue"); else _explicitNullProperties?.Remove("customsValue"); } }
         private double? _explicitNullValueCustomsValue = default!;
         /// <summary>Currency code associated with the customs value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomsValueCurrency { get => _explicitNullValueCustomsValueCurrency; set { _explicitNullValueCustomsValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customsValueCurrency"); else _explicitNullProperties?.Remove("customsValueCurrency"); } }
+        public string? CustomsValueCurrency { get => _explicitNullValueCustomsValueCurrency; set { _explicitNullValueCustomsValueCurrency = value; AdditionalData?.Remove("customsValueCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customsValueCurrency"); else _explicitNullProperties?.Remove("customsValueCurrency"); } }
         private string? _explicitNullValueCustomsValueCurrency = default!;
 #nullable restore
 #else
-        public string CustomsValueCurrency { get => _explicitNullValueCustomsValueCurrency; set { _explicitNullValueCustomsValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customsValueCurrency"); else _explicitNullProperties?.Remove("customsValueCurrency"); } }
+        public string CustomsValueCurrency { get => _explicitNullValueCustomsValueCurrency; set { _explicitNullValueCustomsValueCurrency = value; AdditionalData?.Remove("customsValueCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customsValueCurrency"); else _explicitNullProperties?.Remove("customsValueCurrency"); } }
         private string _explicitNullValueCustomsValueCurrency = default!;
 #endif
         /// <summary>Collection of Full Container Load (FCL) cargo items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem>? FclCargoItems { get => _explicitNullValueFclCargoItems; set { _explicitNullValueFclCargoItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fclCargoItems"); else _explicitNullProperties?.Remove("fclCargoItems"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem>? FclCargoItems { get => _explicitNullValueFclCargoItems; set { _explicitNullValueFclCargoItems = value; AdditionalData?.Remove("fclCargoItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fclCargoItems"); else _explicitNullProperties?.Remove("fclCargoItems"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem>? _explicitNullValueFclCargoItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem> FclCargoItems { get => _explicitNullValueFclCargoItems; set { _explicitNullValueFclCargoItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fclCargoItems"); else _explicitNullProperties?.Remove("fclCargoItems"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem> FclCargoItems { get => _explicitNullValueFclCargoItems; set { _explicitNullValueFclCargoItems = value; AdditionalData?.Remove("fclCargoItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fclCargoItems"); else _explicitNullProperties?.Remove("fclCargoItems"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.FclCargoItem> _explicitNullValueFclCargoItems = default!;
 #endif
         /// <summary>Insured value of the item.</summary>
-        public double? InsuredValue { get => _explicitNullValueInsuredValue; set { _explicitNullValueInsuredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insuredValue"); else _explicitNullProperties?.Remove("insuredValue"); } }
+        public double? InsuredValue { get => _explicitNullValueInsuredValue; set { _explicitNullValueInsuredValue = value; AdditionalData?.Remove("insuredValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insuredValue"); else _explicitNullProperties?.Remove("insuredValue"); } }
         private double? _explicitNullValueInsuredValue = default!;
         /// <summary>Currency code associated with the insured value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InsuredValueCurrency { get => _explicitNullValueInsuredValueCurrency; set { _explicitNullValueInsuredValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insuredValueCurrency"); else _explicitNullProperties?.Remove("insuredValueCurrency"); } }
+        public string? InsuredValueCurrency { get => _explicitNullValueInsuredValueCurrency; set { _explicitNullValueInsuredValueCurrency = value; AdditionalData?.Remove("insuredValueCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insuredValueCurrency"); else _explicitNullProperties?.Remove("insuredValueCurrency"); } }
         private string? _explicitNullValueInsuredValueCurrency = default!;
 #nullable restore
 #else
-        public string InsuredValueCurrency { get => _explicitNullValueInsuredValueCurrency; set { _explicitNullValueInsuredValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insuredValueCurrency"); else _explicitNullProperties?.Remove("insuredValueCurrency"); } }
+        public string InsuredValueCurrency { get => _explicitNullValueInsuredValueCurrency; set { _explicitNullValueInsuredValueCurrency = value; AdditionalData?.Remove("insuredValueCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insuredValueCurrency"); else _explicitNullProperties?.Remove("insuredValueCurrency"); } }
         private string _explicitNullValueInsuredValueCurrency = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("POA") is { } nullNodePOA && nullNodePOA.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) POA = null;
+            if (parseNode.GetChildNode("POA") is null) { _explicitNullValuePOA = default!; _explicitNullProperties?.Remove("POA"); }
+            else if (parseNode.GetChildNode("POA") is { } nullNodePOA && nullNodePOA.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) POA = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for POA.  Applicable for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsFiledPoa? POA { get => _explicitNullValuePOA; set { _explicitNullValuePOA = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("POA"); else _explicitNullProperties?.Remove("POA"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsFiledPoa? POA { get => _explicitNullValuePOA; set { _explicitNullValuePOA = value; AdditionalData?.Remove("POA"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("POA"); else _explicitNullProperties?.Remove("POA"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpsFiledPoa? _explicitNullValuePOA = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsFiledPoa POA { get => _explicitNullValuePOA; set { _explicitNullValuePOA = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("POA"); else _explicitNullProperties?.Remove("POA"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsFiledPoa POA { get => _explicitNullValuePOA; set { _explicitNullValuePOA = value; AdditionalData?.Remove("POA"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("POA"); else _explicitNullProperties?.Remove("POA"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpsFiledPoa _explicitNullValuePOA = default!;
 #endif
         /// <summary>

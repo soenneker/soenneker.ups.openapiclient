@@ -17,13 +17,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ClosedIndicator") is { } nullNodeClosedIndicator && nullNodeClosedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedIndicator = null;
-            if (parseNode.GetChildNode("CloseHours") is { } nullNodeCloseHours && nullNodeCloseHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseHours = null;
-            if (parseNode.GetChildNode("Day") is { } nullNodeDay && nullNodeDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Day = null;
-            if (parseNode.GetChildNode("LatestDropOffHours") is { } nullNodeLatestDropOffHours && nullNodeLatestDropOffHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestDropOffHours = null;
-            if (parseNode.GetChildNode("Open24HoursIndicator") is { } nullNodeOpen24HoursIndicator && nullNodeOpen24HoursIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Open24HoursIndicator = null;
-            if (parseNode.GetChildNode("OpenHours") is { } nullNodeOpenHours && nullNodeOpenHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenHours = null;
-            if (parseNode.GetChildNode("PrepHours") is { } nullNodePrepHours && nullNodePrepHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepHours = null;
+            if (parseNode.GetChildNode("ClosedIndicator") is null) { _explicitNullValueClosedIndicator = default!; _explicitNullProperties?.Remove("ClosedIndicator"); }
+            else if (parseNode.GetChildNode("ClosedIndicator") is { } nullNodeClosedIndicator && nullNodeClosedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedIndicator = null;
+            if (parseNode.GetChildNode("CloseHours") is null) { _explicitNullValueCloseHours = default!; _explicitNullProperties?.Remove("CloseHours"); }
+            else if (parseNode.GetChildNode("CloseHours") is { } nullNodeCloseHours && nullNodeCloseHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseHours = null;
+            if (parseNode.GetChildNode("Day") is null) { _explicitNullValueDay = default!; _explicitNullProperties?.Remove("Day"); }
+            else if (parseNode.GetChildNode("Day") is { } nullNodeDay && nullNodeDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Day = null;
+            if (parseNode.GetChildNode("LatestDropOffHours") is null) { _explicitNullValueLatestDropOffHours = default!; _explicitNullProperties?.Remove("LatestDropOffHours"); }
+            else if (parseNode.GetChildNode("LatestDropOffHours") is { } nullNodeLatestDropOffHours && nullNodeLatestDropOffHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestDropOffHours = null;
+            if (parseNode.GetChildNode("Open24HoursIndicator") is null) { _explicitNullValueOpen24HoursIndicator = default!; _explicitNullProperties?.Remove("Open24HoursIndicator"); }
+            else if (parseNode.GetChildNode("Open24HoursIndicator") is { } nullNodeOpen24HoursIndicator && nullNodeOpen24HoursIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Open24HoursIndicator = null;
+            if (parseNode.GetChildNode("OpenHours") is null) { _explicitNullValueOpenHours = default!; _explicitNullProperties?.Remove("OpenHours"); }
+            else if (parseNode.GetChildNode("OpenHours") is { } nullNodeOpenHours && nullNodeOpenHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenHours = null;
+            if (parseNode.GetChildNode("PrepHours") is null) { _explicitNullValuePrepHours = default!; _explicitNullProperties?.Remove("PrepHours"); }
+            else if (parseNode.GetChildNode("PrepHours") is { } nullNodePrepHours && nullNodePrepHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepHours = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,71 +38,71 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Presence absence Indicator. Indicator present means location is closed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClosedIndicator { get => _explicitNullValueClosedIndicator; set { _explicitNullValueClosedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClosedIndicator"); else _explicitNullProperties?.Remove("ClosedIndicator"); } }
+        public string? ClosedIndicator { get => _explicitNullValueClosedIndicator; set { _explicitNullValueClosedIndicator = value; AdditionalData?.Remove("ClosedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClosedIndicator"); else _explicitNullProperties?.Remove("ClosedIndicator"); } }
         private string? _explicitNullValueClosedIndicator = default!;
 #nullable restore
 #else
-        public string ClosedIndicator { get => _explicitNullValueClosedIndicator; set { _explicitNullValueClosedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClosedIndicator"); else _explicitNullProperties?.Remove("ClosedIndicator"); } }
+        public string ClosedIndicator { get => _explicitNullValueClosedIndicator; set { _explicitNullValueClosedIndicator = value; AdditionalData?.Remove("ClosedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClosedIndicator"); else _explicitNullProperties?.Remove("ClosedIndicator"); } }
         private string _explicitNullValueClosedIndicator = default!;
 #endif
         /// <summary>Close time of a location in military format (HHMM) e.g. 930, 1700, 1845 etc. with exception for midnight. For midnight the time will be returned as 0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CloseHours { get => _explicitNullValueCloseHours; set { _explicitNullValueCloseHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseHours"); else _explicitNullProperties?.Remove("CloseHours"); } }
+        public string? CloseHours { get => _explicitNullValueCloseHours; set { _explicitNullValueCloseHours = value; AdditionalData?.Remove("CloseHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseHours"); else _explicitNullProperties?.Remove("CloseHours"); } }
         private string? _explicitNullValueCloseHours = default!;
 #nullable restore
 #else
-        public string CloseHours { get => _explicitNullValueCloseHours; set { _explicitNullValueCloseHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseHours"); else _explicitNullProperties?.Remove("CloseHours"); } }
+        public string CloseHours { get => _explicitNullValueCloseHours; set { _explicitNullValueCloseHours = value; AdditionalData?.Remove("CloseHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseHours"); else _explicitNullProperties?.Remove("CloseHours"); } }
         private string _explicitNullValueCloseHours = default!;
 #endif
         /// <summary>Day of week. Valid values: 1-Sunday2-Monday3-Tuesday4-Wednesday5-Thursday6-Friday7-Saturday.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Day"); else _explicitNullProperties?.Remove("Day"); } }
+        public string? Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; AdditionalData?.Remove("Day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Day"); else _explicitNullProperties?.Remove("Day"); } }
         private string? _explicitNullValueDay = default!;
 #nullable restore
 #else
-        public string Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Day"); else _explicitNullProperties?.Remove("Day"); } }
+        public string Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; AdditionalData?.Remove("Day"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Day"); else _explicitNullProperties?.Remove("Day"); } }
         private string _explicitNullValueDay = default!;
 #endif
         /// <summary>LatestDropOffHours for Hour Type 50. Latest Drop Off time of a location in military format (HHMM) e.g. 930, 1700, 1845 etc. with exception for midnight. For midnight the time will be returned as 0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LatestDropOffHours { get => _explicitNullValueLatestDropOffHours; set { _explicitNullValueLatestDropOffHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestDropOffHours"); else _explicitNullProperties?.Remove("LatestDropOffHours"); } }
+        public string? LatestDropOffHours { get => _explicitNullValueLatestDropOffHours; set { _explicitNullValueLatestDropOffHours = value; AdditionalData?.Remove("LatestDropOffHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestDropOffHours"); else _explicitNullProperties?.Remove("LatestDropOffHours"); } }
         private string? _explicitNullValueLatestDropOffHours = default!;
 #nullable restore
 #else
-        public string LatestDropOffHours { get => _explicitNullValueLatestDropOffHours; set { _explicitNullValueLatestDropOffHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestDropOffHours"); else _explicitNullProperties?.Remove("LatestDropOffHours"); } }
+        public string LatestDropOffHours { get => _explicitNullValueLatestDropOffHours; set { _explicitNullValueLatestDropOffHours = value; AdditionalData?.Remove("LatestDropOffHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestDropOffHours"); else _explicitNullProperties?.Remove("LatestDropOffHours"); } }
         private string _explicitNullValueLatestDropOffHours = default!;
 #endif
         /// <summary>Presence/ Absence Indicator. Presence denotes  for the given day, if the location is open 24 hours. Absence denotes the location is not open for 24 hours on the given day.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Open24HoursIndicator { get => _explicitNullValueOpen24HoursIndicator; set { _explicitNullValueOpen24HoursIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Open24HoursIndicator"); else _explicitNullProperties?.Remove("Open24HoursIndicator"); } }
+        public string? Open24HoursIndicator { get => _explicitNullValueOpen24HoursIndicator; set { _explicitNullValueOpen24HoursIndicator = value; AdditionalData?.Remove("Open24HoursIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Open24HoursIndicator"); else _explicitNullProperties?.Remove("Open24HoursIndicator"); } }
         private string? _explicitNullValueOpen24HoursIndicator = default!;
 #nullable restore
 #else
-        public string Open24HoursIndicator { get => _explicitNullValueOpen24HoursIndicator; set { _explicitNullValueOpen24HoursIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Open24HoursIndicator"); else _explicitNullProperties?.Remove("Open24HoursIndicator"); } }
+        public string Open24HoursIndicator { get => _explicitNullValueOpen24HoursIndicator; set { _explicitNullValueOpen24HoursIndicator = value; AdditionalData?.Remove("Open24HoursIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Open24HoursIndicator"); else _explicitNullProperties?.Remove("Open24HoursIndicator"); } }
         private string _explicitNullValueOpen24HoursIndicator = default!;
 #endif
         /// <summary>Open time of a location in military format (HHMM) e.g. 930, 1700, 1845 etc. with exception for midnight. For midnight the time will be returned as 0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OpenHours { get => _explicitNullValueOpenHours; set { _explicitNullValueOpenHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OpenHours"); else _explicitNullProperties?.Remove("OpenHours"); } }
+        public string? OpenHours { get => _explicitNullValueOpenHours; set { _explicitNullValueOpenHours = value; AdditionalData?.Remove("OpenHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OpenHours"); else _explicitNullProperties?.Remove("OpenHours"); } }
         private string? _explicitNullValueOpenHours = default!;
 #nullable restore
 #else
-        public string OpenHours { get => _explicitNullValueOpenHours; set { _explicitNullValueOpenHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OpenHours"); else _explicitNullProperties?.Remove("OpenHours"); } }
+        public string OpenHours { get => _explicitNullValueOpenHours; set { _explicitNullValueOpenHours = value; AdditionalData?.Remove("OpenHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OpenHours"); else _explicitNullProperties?.Remove("OpenHours"); } }
         private string _explicitNullValueOpenHours = default!;
 #endif
         /// <summary>PrepHours for Hour Type 51. Prep Hours of a location in military format (HHMM) e.g. 930, 1700, 1845 etc. with exception for midnight. For midnight the time will be returned as 0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrepHours { get => _explicitNullValuePrepHours; set { _explicitNullValuePrepHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrepHours"); else _explicitNullProperties?.Remove("PrepHours"); } }
+        public string? PrepHours { get => _explicitNullValuePrepHours; set { _explicitNullValuePrepHours = value; AdditionalData?.Remove("PrepHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrepHours"); else _explicitNullProperties?.Remove("PrepHours"); } }
         private string? _explicitNullValuePrepHours = default!;
 #nullable restore
 #else
-        public string PrepHours { get => _explicitNullValuePrepHours; set { _explicitNullValuePrepHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrepHours"); else _explicitNullProperties?.Remove("PrepHours"); } }
+        public string PrepHours { get => _explicitNullValuePrepHours; set { _explicitNullValuePrepHours = value; AdditionalData?.Remove("PrepHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrepHours"); else _explicitNullProperties?.Remove("PrepHours"); } }
         private string _explicitNullValuePrepHours = default!;
 #endif
         /// <summary>

@@ -18,12 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CardAddress") is { } nullNodeCardAddress && nullNodeCardAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardAddress = null;
-            if (parseNode.GetChildNode("CardHolderName") is { } nullNodeCardHolderName && nullNodeCardHolderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardHolderName = null;
-            if (parseNode.GetChildNode("CardNumber") is { } nullNodeCardNumber && nullNodeCardNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardNumber = null;
-            if (parseNode.GetChildNode("CardType") is { } nullNodeCardType && nullNodeCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardType = null;
-            if (parseNode.GetChildNode("ExpirationDate") is { } nullNodeExpirationDate && nullNodeExpirationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationDate = null;
-            if (parseNode.GetChildNode("SecurityCode") is { } nullNodeSecurityCode && nullNodeSecurityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityCode = null;
+            if (parseNode.GetChildNode("CardAddress") is null) { _explicitNullValueCardAddress = default!; _explicitNullProperties?.Remove("CardAddress"); }
+            else if (parseNode.GetChildNode("CardAddress") is { } nullNodeCardAddress && nullNodeCardAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardAddress = null;
+            if (parseNode.GetChildNode("CardHolderName") is null) { _explicitNullValueCardHolderName = default!; _explicitNullProperties?.Remove("CardHolderName"); }
+            else if (parseNode.GetChildNode("CardHolderName") is { } nullNodeCardHolderName && nullNodeCardHolderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardHolderName = null;
+            if (parseNode.GetChildNode("CardNumber") is null) { _explicitNullValueCardNumber = default!; _explicitNullProperties?.Remove("CardNumber"); }
+            else if (parseNode.GetChildNode("CardNumber") is { } nullNodeCardNumber && nullNodeCardNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardNumber = null;
+            if (parseNode.GetChildNode("CardType") is null) { _explicitNullValueCardType = default!; _explicitNullProperties?.Remove("CardType"); }
+            else if (parseNode.GetChildNode("CardType") is { } nullNodeCardType && nullNodeCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardType = null;
+            if (parseNode.GetChildNode("ExpirationDate") is null) { _explicitNullValueExpirationDate = default!; _explicitNullProperties?.Remove("ExpirationDate"); }
+            else if (parseNode.GetChildNode("ExpirationDate") is { } nullNodeExpirationDate && nullNodeExpirationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationDate = null;
+            if (parseNode.GetChildNode("SecurityCode") is null) { _explicitNullValueSecurityCode = default!; _explicitNullProperties?.Remove("SecurityCode"); }
+            else if (parseNode.GetChildNode("SecurityCode") is { } nullNodeSecurityCode && nullNodeSecurityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,61 +37,61 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to hold the Charge card address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargeCardCardAddress? CardAddress { get => _explicitNullValueCardAddress; set { _explicitNullValueCardAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardAddress"); else _explicitNullProperties?.Remove("CardAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargeCardCardAddress? CardAddress { get => _explicitNullValueCardAddress; set { _explicitNullValueCardAddress = value; AdditionalData?.Remove("CardAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardAddress"); else _explicitNullProperties?.Remove("CardAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargeCardCardAddress? _explicitNullValueCardAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargeCardCardAddress CardAddress { get => _explicitNullValueCardAddress; set { _explicitNullValueCardAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardAddress"); else _explicitNullProperties?.Remove("CardAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargeCardCardAddress CardAddress { get => _explicitNullValueCardAddress; set { _explicitNullValueCardAddress = value; AdditionalData?.Remove("CardAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardAddress"); else _explicitNullProperties?.Remove("CardAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargeCardCardAddress _explicitNullValueCardAddress = default!;
 #endif
         /// <summary>Charge card holder name. If the name is not provided, defaults to &quot;No Name Provided&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CardHolderName { get => _explicitNullValueCardHolderName; set { _explicitNullValueCardHolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardHolderName"); else _explicitNullProperties?.Remove("CardHolderName"); } }
+        public string? CardHolderName { get => _explicitNullValueCardHolderName; set { _explicitNullValueCardHolderName = value; AdditionalData?.Remove("CardHolderName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardHolderName"); else _explicitNullProperties?.Remove("CardHolderName"); } }
         private string? _explicitNullValueCardHolderName = default!;
 #nullable restore
 #else
-        public string CardHolderName { get => _explicitNullValueCardHolderName; set { _explicitNullValueCardHolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardHolderName"); else _explicitNullProperties?.Remove("CardHolderName"); } }
+        public string CardHolderName { get => _explicitNullValueCardHolderName; set { _explicitNullValueCardHolderName = value; AdditionalData?.Remove("CardHolderName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardHolderName"); else _explicitNullProperties?.Remove("CardHolderName"); } }
         private string _explicitNullValueCardHolderName = default!;
 #endif
         /// <summary>Charge card number.  For Privileged clients, this element must be tokenized card number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CardNumber { get => _explicitNullValueCardNumber; set { _explicitNullValueCardNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardNumber"); else _explicitNullProperties?.Remove("CardNumber"); } }
+        public string? CardNumber { get => _explicitNullValueCardNumber; set { _explicitNullValueCardNumber = value; AdditionalData?.Remove("CardNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardNumber"); else _explicitNullProperties?.Remove("CardNumber"); } }
         private string? _explicitNullValueCardNumber = default!;
 #nullable restore
 #else
-        public string CardNumber { get => _explicitNullValueCardNumber; set { _explicitNullValueCardNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardNumber"); else _explicitNullProperties?.Remove("CardNumber"); } }
+        public string CardNumber { get => _explicitNullValueCardNumber; set { _explicitNullValueCardNumber = value; AdditionalData?.Remove("CardNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardNumber"); else _explicitNullProperties?.Remove("CardNumber"); } }
         private string _explicitNullValueCardNumber = default!;
 #endif
         /// <summary>Charge card type. Valid values:- 01 = American Express- 03 = Discover- 04 = Mastercard- 06 = VISA  Discover card Pickup country US only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CardType { get => _explicitNullValueCardType; set { _explicitNullValueCardType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardType"); else _explicitNullProperties?.Remove("CardType"); } }
+        public string? CardType { get => _explicitNullValueCardType; set { _explicitNullValueCardType = value; AdditionalData?.Remove("CardType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardType"); else _explicitNullProperties?.Remove("CardType"); } }
         private string? _explicitNullValueCardType = default!;
 #nullable restore
 #else
-        public string CardType { get => _explicitNullValueCardType; set { _explicitNullValueCardType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardType"); else _explicitNullProperties?.Remove("CardType"); } }
+        public string CardType { get => _explicitNullValueCardType; set { _explicitNullValueCardType = value; AdditionalData?.Remove("CardType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CardType"); else _explicitNullProperties?.Remove("CardType"); } }
         private string _explicitNullValueCardType = default!;
 #endif
         /// <summary>Credit card expiration date.Format: yyyyMMyyyy = 4 digit year, valid value current year - 10 years.MM = 2 digit month, valid values 01-12</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExpirationDate"); else _explicitNullProperties?.Remove("ExpirationDate"); } }
+        public string? ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; AdditionalData?.Remove("ExpirationDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExpirationDate"); else _explicitNullProperties?.Remove("ExpirationDate"); } }
         private string? _explicitNullValueExpirationDate = default!;
 #nullable restore
 #else
-        public string ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExpirationDate"); else _explicitNullProperties?.Remove("ExpirationDate"); } }
+        public string ExpirationDate { get => _explicitNullValueExpirationDate; set { _explicitNullValueExpirationDate = value; AdditionalData?.Remove("ExpirationDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExpirationDate"); else _explicitNullProperties?.Remove("ExpirationDate"); } }
         private string _explicitNullValueExpirationDate = default!;
 #endif
         /// <summary>Three or four digits that can be found either on top of credit card number or on the back of credit card. Number of digits varies for different type of credit card.  Valid values are 3 or 4 digits.Security code is required if credit card information is provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecurityCode { get => _explicitNullValueSecurityCode; set { _explicitNullValueSecurityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurityCode"); else _explicitNullProperties?.Remove("SecurityCode"); } }
+        public string? SecurityCode { get => _explicitNullValueSecurityCode; set { _explicitNullValueSecurityCode = value; AdditionalData?.Remove("SecurityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurityCode"); else _explicitNullProperties?.Remove("SecurityCode"); } }
         private string? _explicitNullValueSecurityCode = default!;
 #nullable restore
 #else
-        public string SecurityCode { get => _explicitNullValueSecurityCode; set { _explicitNullValueSecurityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurityCode"); else _explicitNullProperties?.Remove("SecurityCode"); } }
+        public string SecurityCode { get => _explicitNullValueSecurityCode; set { _explicitNullValueSecurityCode = value; AdditionalData?.Remove("SecurityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurityCode"); else _explicitNullProperties?.Remove("SecurityCode"); } }
         private string _explicitNullValueSecurityCode = default!;
 #endif
         /// <summary>

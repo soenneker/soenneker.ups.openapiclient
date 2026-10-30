@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PalletLabel") is { } nullNodePalletLabel && nullNodePalletLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletLabel = null;
+            if (parseNode.GetChildNode("PalletLabel") is null) { _explicitNullValuePalletLabel = default!; _explicitNullProperties?.Remove("PalletLabel"); }
+            else if (parseNode.GetChildNode("PalletLabel") is { } nullNodePalletLabel && nullNodePalletLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PalletLabel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Base64-encoded graphic image of Pallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PalletLabel { get => _explicitNullValuePalletLabel; set { _explicitNullValuePalletLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletLabel"); else _explicitNullProperties?.Remove("PalletLabel"); } }
+        public string? PalletLabel { get => _explicitNullValuePalletLabel; set { _explicitNullValuePalletLabel = value; AdditionalData?.Remove("PalletLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletLabel"); else _explicitNullProperties?.Remove("PalletLabel"); } }
         private string? _explicitNullValuePalletLabel = default!;
 #nullable restore
 #else
-        public string PalletLabel { get => _explicitNullValuePalletLabel; set { _explicitNullValuePalletLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletLabel"); else _explicitNullProperties?.Remove("PalletLabel"); } }
+        public string PalletLabel { get => _explicitNullValuePalletLabel; set { _explicitNullValuePalletLabel = value; AdditionalData?.Remove("PalletLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PalletLabel"); else _explicitNullProperties?.Remove("PalletLabel"); } }
         private string _explicitNullValuePalletLabel = default!;
 #endif
         /// <summary>

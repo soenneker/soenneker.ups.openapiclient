@@ -17,11 +17,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ADRPoints") is { } nullNodeADRPoints && nullNodeADRPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ADRPoints = null;
-            if (parseNode.GetChildNode("ADRUnits") is { } nullNodeADRUnits && nullNodeADRUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ADRUnits = null;
-            if (parseNode.GetChildNode("ChemicalRecordIdentifier") is { } nullNodeChemicalRecordIdentifier && nullNodeChemicalRecordIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalRecordIdentifier = null;
-            if (parseNode.GetChildNode("TransportCategory") is { } nullNodeTransportCategory && nullNodeTransportCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportCategory = null;
-            if (parseNode.GetChildNode("TunnelRestrictionCode") is { } nullNodeTunnelRestrictionCode && nullNodeTunnelRestrictionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TunnelRestrictionCode = null;
+            if (parseNode.GetChildNode("ADRPoints") is null) { _explicitNullValueADRPoints = default!; _explicitNullProperties?.Remove("ADRPoints"); }
+            else if (parseNode.GetChildNode("ADRPoints") is { } nullNodeADRPoints && nullNodeADRPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ADRPoints = null;
+            if (parseNode.GetChildNode("ADRUnits") is null) { _explicitNullValueADRUnits = default!; _explicitNullProperties?.Remove("ADRUnits"); }
+            else if (parseNode.GetChildNode("ADRUnits") is { } nullNodeADRUnits && nullNodeADRUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ADRUnits = null;
+            if (parseNode.GetChildNode("ChemicalRecordIdentifier") is null) { _explicitNullValueChemicalRecordIdentifier = default!; _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); }
+            else if (parseNode.GetChildNode("ChemicalRecordIdentifier") is { } nullNodeChemicalRecordIdentifier && nullNodeChemicalRecordIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalRecordIdentifier = null;
+            if (parseNode.GetChildNode("TransportCategory") is null) { _explicitNullValueTransportCategory = default!; _explicitNullProperties?.Remove("TransportCategory"); }
+            else if (parseNode.GetChildNode("TransportCategory") is { } nullNodeTransportCategory && nullNodeTransportCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportCategory = null;
+            if (parseNode.GetChildNode("TunnelRestrictionCode") is null) { _explicitNullValueTunnelRestrictionCode = default!; _explicitNullProperties?.Remove("TunnelRestrictionCode"); }
+            else if (parseNode.GetChildNode("TunnelRestrictionCode") is { } nullNodeTunnelRestrictionCode && nullNodeTunnelRestrictionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TunnelRestrictionCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Total points for the chemical records.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ADRPoints { get => _explicitNullValueADRPoints; set { _explicitNullValueADRPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ADRPoints"); else _explicitNullProperties?.Remove("ADRPoints"); } }
+        public string? ADRPoints { get => _explicitNullValueADRPoints; set { _explicitNullValueADRPoints = value; AdditionalData?.Remove("ADRPoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ADRPoints"); else _explicitNullProperties?.Remove("ADRPoints"); } }
         private string? _explicitNullValueADRPoints = default!;
 #nullable restore
 #else
-        public string ADRPoints { get => _explicitNullValueADRPoints; set { _explicitNullValueADRPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ADRPoints"); else _explicitNullProperties?.Remove("ADRPoints"); } }
+        public string ADRPoints { get => _explicitNullValueADRPoints; set { _explicitNullValueADRPoints = value; AdditionalData?.Remove("ADRPoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ADRPoints"); else _explicitNullProperties?.Remove("ADRPoints"); } }
         private string _explicitNullValueADRPoints = default!;
 #endif
         /// <summary>Number of ADR Units (Liters/Kg)Format: 9999.99</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ADRUnits { get => _explicitNullValueADRUnits; set { _explicitNullValueADRUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ADRUnits"); else _explicitNullProperties?.Remove("ADRUnits"); } }
+        public string? ADRUnits { get => _explicitNullValueADRUnits; set { _explicitNullValueADRUnits = value; AdditionalData?.Remove("ADRUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ADRUnits"); else _explicitNullProperties?.Remove("ADRUnits"); } }
         private string? _explicitNullValueADRUnits = default!;
 #nullable restore
 #else
-        public string ADRUnits { get => _explicitNullValueADRUnits; set { _explicitNullValueADRUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ADRUnits"); else _explicitNullProperties?.Remove("ADRUnits"); } }
+        public string ADRUnits { get => _explicitNullValueADRUnits; set { _explicitNullValueADRUnits = value; AdditionalData?.Remove("ADRUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ADRUnits"); else _explicitNullProperties?.Remove("ADRUnits"); } }
         private string _explicitNullValueADRUnits = default!;
 #endif
         /// <summary>Identifies the Chemical Record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChemicalRecordIdentifier { get => _explicitNullValueChemicalRecordIdentifier; set { _explicitNullValueChemicalRecordIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordIdentifier"); else _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); } }
+        public string? ChemicalRecordIdentifier { get => _explicitNullValueChemicalRecordIdentifier; set { _explicitNullValueChemicalRecordIdentifier = value; AdditionalData?.Remove("ChemicalRecordIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordIdentifier"); else _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); } }
         private string? _explicitNullValueChemicalRecordIdentifier = default!;
 #nullable restore
 #else
-        public string ChemicalRecordIdentifier { get => _explicitNullValueChemicalRecordIdentifier; set { _explicitNullValueChemicalRecordIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordIdentifier"); else _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); } }
+        public string ChemicalRecordIdentifier { get => _explicitNullValueChemicalRecordIdentifier; set { _explicitNullValueChemicalRecordIdentifier = value; AdditionalData?.Remove("ChemicalRecordIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordIdentifier"); else _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); } }
         private string _explicitNullValueChemicalRecordIdentifier = default!;
 #endif
         /// <summary>Transport Category.  Valid values: 0 to 4</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
+        public string? TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; AdditionalData?.Remove("TransportCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
         private string? _explicitNullValueTransportCategory = default!;
 #nullable restore
 #else
-        public string TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
+        public string TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; AdditionalData?.Remove("TransportCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
         private string _explicitNullValueTransportCategory = default!;
 #endif
         /// <summary>Defines what is restricted to pass through a tunnel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
+        public string? TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; AdditionalData?.Remove("TunnelRestrictionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
         private string? _explicitNullValueTunnelRestrictionCode = default!;
 #nullable restore
 #else
-        public string TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
+        public string TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; AdditionalData?.Remove("TunnelRestrictionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
         private string _explicitNullValueTunnelRestrictionCode = default!;
 #endif
         /// <summary>

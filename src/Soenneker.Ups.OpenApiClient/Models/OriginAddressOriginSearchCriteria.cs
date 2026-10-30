@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DistanceUnitOfMeasure") is { } nullNodeDistanceUnitOfMeasure && nullNodeDistanceUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DistanceUnitOfMeasure = null;
-            if (parseNode.GetChildNode("MaximumLocation") is { } nullNodeMaximumLocation && nullNodeMaximumLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumLocation = null;
-            if (parseNode.GetChildNode("SearchRadius") is { } nullNodeSearchRadius && nullNodeSearchRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchRadius = null;
+            if (parseNode.GetChildNode("DistanceUnitOfMeasure") is null) { _explicitNullValueDistanceUnitOfMeasure = default!; _explicitNullProperties?.Remove("DistanceUnitOfMeasure"); }
+            else if (parseNode.GetChildNode("DistanceUnitOfMeasure") is { } nullNodeDistanceUnitOfMeasure && nullNodeDistanceUnitOfMeasure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DistanceUnitOfMeasure = null;
+            if (parseNode.GetChildNode("MaximumLocation") is null) { _explicitNullValueMaximumLocation = default!; _explicitNullProperties?.Remove("MaximumLocation"); }
+            else if (parseNode.GetChildNode("MaximumLocation") is { } nullNodeMaximumLocation && nullNodeMaximumLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumLocation = null;
+            if (parseNode.GetChildNode("SearchRadius") is null) { _explicitNullValueSearchRadius = default!; _explicitNullProperties?.Remove("SearchRadius"); }
+            else if (parseNode.GetChildNode("SearchRadius") is { } nullNodeSearchRadius && nullNodeSearchRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchRadius = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unit of Measure  Required if ProximitySearchIndicator is present. Example: MI or KM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DistanceUnitOfMeasure { get => _explicitNullValueDistanceUnitOfMeasure; set { _explicitNullValueDistanceUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DistanceUnitOfMeasure"); else _explicitNullProperties?.Remove("DistanceUnitOfMeasure"); } }
+        public string? DistanceUnitOfMeasure { get => _explicitNullValueDistanceUnitOfMeasure; set { _explicitNullValueDistanceUnitOfMeasure = value; AdditionalData?.Remove("DistanceUnitOfMeasure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DistanceUnitOfMeasure"); else _explicitNullProperties?.Remove("DistanceUnitOfMeasure"); } }
         private string? _explicitNullValueDistanceUnitOfMeasure = default!;
 #nullable restore
 #else
-        public string DistanceUnitOfMeasure { get => _explicitNullValueDistanceUnitOfMeasure; set { _explicitNullValueDistanceUnitOfMeasure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DistanceUnitOfMeasure"); else _explicitNullProperties?.Remove("DistanceUnitOfMeasure"); } }
+        public string DistanceUnitOfMeasure { get => _explicitNullValueDistanceUnitOfMeasure; set { _explicitNullValueDistanceUnitOfMeasure = value; AdditionalData?.Remove("DistanceUnitOfMeasure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DistanceUnitOfMeasure"); else _explicitNullProperties?.Remove("DistanceUnitOfMeasure"); } }
         private string _explicitNullValueDistanceUnitOfMeasure = default!;
 #endif
         /// <summary>Maximum Number of locations. Valied values:- 1 to 100Default: 100</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaximumLocation { get => _explicitNullValueMaximumLocation; set { _explicitNullValueMaximumLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumLocation"); else _explicitNullProperties?.Remove("MaximumLocation"); } }
+        public string? MaximumLocation { get => _explicitNullValueMaximumLocation; set { _explicitNullValueMaximumLocation = value; AdditionalData?.Remove("MaximumLocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumLocation"); else _explicitNullProperties?.Remove("MaximumLocation"); } }
         private string? _explicitNullValueMaximumLocation = default!;
 #nullable restore
 #else
-        public string MaximumLocation { get => _explicitNullValueMaximumLocation; set { _explicitNullValueMaximumLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumLocation"); else _explicitNullProperties?.Remove("MaximumLocation"); } }
+        public string MaximumLocation { get => _explicitNullValueMaximumLocation; set { _explicitNullValueMaximumLocation = value; AdditionalData?.Remove("MaximumLocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaximumLocation"); else _explicitNullProperties?.Remove("MaximumLocation"); } }
         private string _explicitNullValueMaximumLocation = default!;
 #endif
         /// <summary>Search Request range. Valied values:- 1 to 200Default: 200</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SearchRadius { get => _explicitNullValueSearchRadius; set { _explicitNullValueSearchRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchRadius"); else _explicitNullProperties?.Remove("SearchRadius"); } }
+        public string? SearchRadius { get => _explicitNullValueSearchRadius; set { _explicitNullValueSearchRadius = value; AdditionalData?.Remove("SearchRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchRadius"); else _explicitNullProperties?.Remove("SearchRadius"); } }
         private string? _explicitNullValueSearchRadius = default!;
 #nullable restore
 #else
-        public string SearchRadius { get => _explicitNullValueSearchRadius; set { _explicitNullValueSearchRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchRadius"); else _explicitNullProperties?.Remove("SearchRadius"); } }
+        public string SearchRadius { get => _explicitNullValueSearchRadius; set { _explicitNullValueSearchRadius = value; AdditionalData?.Remove("SearchRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchRadius"); else _explicitNullProperties?.Remove("SearchRadius"); } }
         private string _explicitNullValueSearchRadius = default!;
 #endif
         /// <summary>

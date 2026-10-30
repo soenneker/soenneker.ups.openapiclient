@@ -18,45 +18,49 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("isNonPostalCodeCountry") is { } nullNodeIsNonPostalCodeCountry && nullNodeIsNonPostalCodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNonPostalCodeCountry = null;
-            if (parseNode.GetChildNode("photo") is { } nullNodePhoto && nullNodePhoto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Photo = null;
-            if (parseNode.GetChildNode("photoCaptureInd") is { } nullNodePhotoCaptureInd && nullNodePhotoCaptureInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhotoCaptureInd = null;
-            if (parseNode.GetChildNode("photoDispositionCode") is { } nullNodePhotoDispositionCode && nullNodePhotoDispositionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhotoDispositionCode = null;
+            if (parseNode.GetChildNode("isNonPostalCodeCountry") is null) { _explicitNullValueIsNonPostalCodeCountry = default!; _explicitNullProperties?.Remove("isNonPostalCodeCountry"); }
+            else if (parseNode.GetChildNode("isNonPostalCodeCountry") is { } nullNodeIsNonPostalCodeCountry && nullNodeIsNonPostalCodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNonPostalCodeCountry = null;
+            if (parseNode.GetChildNode("photo") is null) { _explicitNullValuePhoto = default!; _explicitNullProperties?.Remove("photo"); }
+            else if (parseNode.GetChildNode("photo") is { } nullNodePhoto && nullNodePhoto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Photo = null;
+            if (parseNode.GetChildNode("photoCaptureInd") is null) { _explicitNullValuePhotoCaptureInd = default!; _explicitNullProperties?.Remove("photoCaptureInd"); }
+            else if (parseNode.GetChildNode("photoCaptureInd") is { } nullNodePhotoCaptureInd && nullNodePhotoCaptureInd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhotoCaptureInd = null;
+            if (parseNode.GetChildNode("photoDispositionCode") is null) { _explicitNullValuePhotoDispositionCode = default!; _explicitNullProperties?.Remove("photoDispositionCode"); }
+            else if (parseNode.GetChildNode("photoDispositionCode") is { } nullNodePhotoDispositionCode && nullNodePhotoDispositionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhotoDispositionCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The indication if the country does not use postal code. Valid values: &apos;true&apos; this country does not use postal code. &apos;false&apos; this country uses postal code</summary>
-        public bool? IsNonPostalCodeCountry { get => _explicitNullValueIsNonPostalCodeCountry; set { _explicitNullValueIsNonPostalCodeCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isNonPostalCodeCountry"); else _explicitNullProperties?.Remove("isNonPostalCodeCountry"); } }
+        public bool? IsNonPostalCodeCountry { get => _explicitNullValueIsNonPostalCodeCountry; set { _explicitNullValueIsNonPostalCodeCountry = value; AdditionalData?.Remove("isNonPostalCodeCountry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isNonPostalCodeCountry"); else _explicitNullProperties?.Remove("isNonPostalCodeCountry"); } }
         private bool? _explicitNullValueIsNonPostalCodeCountry = default!;
         /// <summary>The photo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Photo { get => _explicitNullValuePhoto; set { _explicitNullValuePhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photo"); else _explicitNullProperties?.Remove("photo"); } }
+        public string? Photo { get => _explicitNullValuePhoto; set { _explicitNullValuePhoto = value; AdditionalData?.Remove("photo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photo"); else _explicitNullProperties?.Remove("photo"); } }
         private string? _explicitNullValuePhoto = default!;
 #nullable restore
 #else
-        public string Photo { get => _explicitNullValuePhoto; set { _explicitNullValuePhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photo"); else _explicitNullProperties?.Remove("photo"); } }
+        public string Photo { get => _explicitNullValuePhoto; set { _explicitNullValuePhoto = value; AdditionalData?.Remove("photo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photo"); else _explicitNullProperties?.Remove("photo"); } }
         private string _explicitNullValuePhoto = default!;
 #endif
         /// <summary>The photo capture indicator. Valid values: &apos;Y&apos; the photo is an photo capture. &apos;N&apos; the photo is not a capture</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhotoCaptureInd { get => _explicitNullValuePhotoCaptureInd; set { _explicitNullValuePhotoCaptureInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoCaptureInd"); else _explicitNullProperties?.Remove("photoCaptureInd"); } }
+        public string? PhotoCaptureInd { get => _explicitNullValuePhotoCaptureInd; set { _explicitNullValuePhotoCaptureInd = value; AdditionalData?.Remove("photoCaptureInd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoCaptureInd"); else _explicitNullProperties?.Remove("photoCaptureInd"); } }
         private string? _explicitNullValuePhotoCaptureInd = default!;
 #nullable restore
 #else
-        public string PhotoCaptureInd { get => _explicitNullValuePhotoCaptureInd; set { _explicitNullValuePhotoCaptureInd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoCaptureInd"); else _explicitNullProperties?.Remove("photoCaptureInd"); } }
+        public string PhotoCaptureInd { get => _explicitNullValuePhotoCaptureInd; set { _explicitNullValuePhotoCaptureInd = value; AdditionalData?.Remove("photoCaptureInd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoCaptureInd"); else _explicitNullProperties?.Remove("photoCaptureInd"); } }
         private string _explicitNullValuePhotoCaptureInd = default!;
 #endif
         /// <summary>The photo disposition code. Valid values: &apos;V&apos; the photo is viewable. &apos;N&apos; the photo is not viewable. &apos;U&apos; the photo is not stored</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhotoDispositionCode { get => _explicitNullValuePhotoDispositionCode; set { _explicitNullValuePhotoDispositionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoDispositionCode"); else _explicitNullProperties?.Remove("photoDispositionCode"); } }
+        public string? PhotoDispositionCode { get => _explicitNullValuePhotoDispositionCode; set { _explicitNullValuePhotoDispositionCode = value; AdditionalData?.Remove("photoDispositionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoDispositionCode"); else _explicitNullProperties?.Remove("photoDispositionCode"); } }
         private string? _explicitNullValuePhotoDispositionCode = default!;
 #nullable restore
 #else
-        public string PhotoDispositionCode { get => _explicitNullValuePhotoDispositionCode; set { _explicitNullValuePhotoDispositionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoDispositionCode"); else _explicitNullProperties?.Remove("photoDispositionCode"); } }
+        public string PhotoDispositionCode { get => _explicitNullValuePhotoDispositionCode; set { _explicitNullValuePhotoDispositionCode = value; AdditionalData?.Remove("photoDispositionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("photoDispositionCode"); else _explicitNullProperties?.Remove("photoDispositionCode"); } }
         private string _explicitNullValuePhotoDispositionCode = default!;
 #endif
         /// <summary>

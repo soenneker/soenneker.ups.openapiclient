@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("displayText") is { } nullNodeDisplayText && nullNodeDisplayText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayText = null;
-            if (parseNode.GetChildNode("internalValue") is { } nullNodeInternalValue && nullNodeInternalValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternalValue = null;
+            if (parseNode.GetChildNode("displayText") is null) { _explicitNullValueDisplayText = default!; _explicitNullProperties?.Remove("displayText"); }
+            else if (parseNode.GetChildNode("displayText") is { } nullNodeDisplayText && nullNodeDisplayText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayText = null;
+            if (parseNode.GetChildNode("internalValue") is null) { _explicitNullValueInternalValue = default!; _explicitNullProperties?.Remove("internalValue"); }
+            else if (parseNode.GetChildNode("internalValue") is { } nullNodeInternalValue && nullNodeInternalValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternalValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Value to display in the dropdown for consumers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayText { get => _explicitNullValueDisplayText; set { _explicitNullValueDisplayText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayText"); else _explicitNullProperties?.Remove("displayText"); } }
+        public string? DisplayText { get => _explicitNullValueDisplayText; set { _explicitNullValueDisplayText = value; AdditionalData?.Remove("displayText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayText"); else _explicitNullProperties?.Remove("displayText"); } }
         private string? _explicitNullValueDisplayText = default!;
 #nullable restore
 #else
-        public string DisplayText { get => _explicitNullValueDisplayText; set { _explicitNullValueDisplayText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayText"); else _explicitNullProperties?.Remove("displayText"); } }
+        public string DisplayText { get => _explicitNullValueDisplayText; set { _explicitNullValueDisplayText = value; AdditionalData?.Remove("displayText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayText"); else _explicitNullProperties?.Remove("displayText"); } }
         private string _explicitNullValueDisplayText = default!;
 #endif
         /// <summary>Internal value for each dropdown item that is hidden to consumers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InternalValue { get => _explicitNullValueInternalValue; set { _explicitNullValueInternalValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalValue"); else _explicitNullProperties?.Remove("internalValue"); } }
+        public string? InternalValue { get => _explicitNullValueInternalValue; set { _explicitNullValueInternalValue = value; AdditionalData?.Remove("internalValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalValue"); else _explicitNullProperties?.Remove("internalValue"); } }
         private string? _explicitNullValueInternalValue = default!;
 #nullable restore
 #else
-        public string InternalValue { get => _explicitNullValueInternalValue; set { _explicitNullValueInternalValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalValue"); else _explicitNullProperties?.Remove("internalValue"); } }
+        public string InternalValue { get => _explicitNullValueInternalValue; set { _explicitNullValueInternalValue = value; AdditionalData?.Remove("internalValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalValue"); else _explicitNullProperties?.Remove("internalValue"); } }
         private string _explicitNullValueInternalValue = default!;
 #endif
         /// <summary>

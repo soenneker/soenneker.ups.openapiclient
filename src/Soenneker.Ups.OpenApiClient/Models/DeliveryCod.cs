@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CODAmount") is { } nullNodeCODAmount && nullNodeCODAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODAmount = null;
+            if (parseNode.GetChildNode("CODAmount") is null) { _explicitNullValueCODAmount = default!; _explicitNullProperties?.Remove("CODAmount"); }
+            else if (parseNode.GetChildNode("CODAmount") is { } nullNodeCODAmount && nullNodeCODAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODAmount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The amount of the COD that is to be collected for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount? CODAmount { get => _explicitNullValueCODAmount; set { _explicitNullValueCODAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODAmount"); else _explicitNullProperties?.Remove("CODAmount"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount? CODAmount { get => _explicitNullValueCODAmount; set { _explicitNullValueCODAmount = value; AdditionalData?.Remove("CODAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODAmount"); else _explicitNullProperties?.Remove("CODAmount"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount? _explicitNullValueCODAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount CODAmount { get => _explicitNullValueCODAmount; set { _explicitNullValueCODAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODAmount"); else _explicitNullProperties?.Remove("CODAmount"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount CODAmount { get => _explicitNullValueCODAmount; set { _explicitNullValueCODAmount = value; AdditionalData?.Remove("CODAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODAmount"); else _explicitNullProperties?.Remove("CODAmount"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount _explicitNullValueCODAmount = default!;
 #endif
         /// <summary>

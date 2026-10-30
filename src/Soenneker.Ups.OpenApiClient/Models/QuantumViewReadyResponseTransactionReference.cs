@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CustomerContext") is { } nullNodeCustomerContext && nullNodeCustomerContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerContext = null;
-            if (parseNode.GetChildNode("ToolVersion") is { } nullNodeToolVersion && nullNodeToolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToolVersion = null;
-            if (parseNode.GetChildNode("XpciVersion") is { } nullNodeXpciVersion && nullNodeXpciVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XpciVersion = null;
+            if (parseNode.GetChildNode("CustomerContext") is null) { _explicitNullValueCustomerContext = default!; _explicitNullProperties?.Remove("CustomerContext"); }
+            else if (parseNode.GetChildNode("CustomerContext") is { } nullNodeCustomerContext && nullNodeCustomerContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerContext = null;
+            if (parseNode.GetChildNode("ToolVersion") is null) { _explicitNullValueToolVersion = default!; _explicitNullProperties?.Remove("ToolVersion"); }
+            else if (parseNode.GetChildNode("ToolVersion") is { } nullNodeToolVersion && nullNodeToolVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToolVersion = null;
+            if (parseNode.GetChildNode("XpciVersion") is null) { _explicitNullValueXpciVersion = default!; _explicitNullProperties?.Remove("XpciVersion"); }
+            else if (parseNode.GetChildNode("XpciVersion") is { } nullNodeXpciVersion && nullNodeXpciVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XpciVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The CustomerContext Information which will be echoed during response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
+        public string? CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; AdditionalData?.Remove("CustomerContext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
         private string? _explicitNullValueCustomerContext = default!;
 #nullable restore
 #else
-        public string CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
+        public string CustomerContext { get => _explicitNullValueCustomerContext; set { _explicitNullValueCustomerContext = value; AdditionalData?.Remove("CustomerContext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerContext"); else _explicitNullProperties?.Remove("CustomerContext"); } }
         private string _explicitNullValueCustomerContext = default!;
 #endif
         /// <summary>Current tool version. Valid value: 1.0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToolVersion { get => _explicitNullValueToolVersion; set { _explicitNullValueToolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToolVersion"); else _explicitNullProperties?.Remove("ToolVersion"); } }
+        public string? ToolVersion { get => _explicitNullValueToolVersion; set { _explicitNullValueToolVersion = value; AdditionalData?.Remove("ToolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToolVersion"); else _explicitNullProperties?.Remove("ToolVersion"); } }
         private string? _explicitNullValueToolVersion = default!;
 #nullable restore
 #else
-        public string ToolVersion { get => _explicitNullValueToolVersion; set { _explicitNullValueToolVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToolVersion"); else _explicitNullProperties?.Remove("ToolVersion"); } }
+        public string ToolVersion { get => _explicitNullValueToolVersion; set { _explicitNullValueToolVersion = value; AdditionalData?.Remove("ToolVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ToolVersion"); else _explicitNullProperties?.Remove("ToolVersion"); } }
         private string _explicitNullValueToolVersion = default!;
 #endif
         /// <summary>XPCI version. Current version: 1.0007</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? XpciVersion { get => _explicitNullValueXpciVersion; set { _explicitNullValueXpciVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XpciVersion"); else _explicitNullProperties?.Remove("XpciVersion"); } }
+        public string? XpciVersion { get => _explicitNullValueXpciVersion; set { _explicitNullValueXpciVersion = value; AdditionalData?.Remove("XpciVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XpciVersion"); else _explicitNullProperties?.Remove("XpciVersion"); } }
         private string? _explicitNullValueXpciVersion = default!;
 #nullable restore
 #else
-        public string XpciVersion { get => _explicitNullValueXpciVersion; set { _explicitNullValueXpciVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XpciVersion"); else _explicitNullProperties?.Remove("XpciVersion"); } }
+        public string XpciVersion { get => _explicitNullValueXpciVersion; set { _explicitNullValueXpciVersion = value; AdditionalData?.Remove("XpciVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("XpciVersion"); else _explicitNullProperties?.Remove("XpciVersion"); } }
         private string _explicitNullValueXpciVersion = default!;
 #endif
         /// <summary>

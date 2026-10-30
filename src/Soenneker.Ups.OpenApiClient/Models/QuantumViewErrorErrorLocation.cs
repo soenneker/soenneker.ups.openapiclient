@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ErrorLocationAttributeName") is { } nullNodeErrorLocationAttributeName && nullNodeErrorLocationAttributeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorLocationAttributeName = null;
-            if (parseNode.GetChildNode("ErrorLocationElementName") is { } nullNodeErrorLocationElementName && nullNodeErrorLocationElementName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorLocationElementName = null;
+            if (parseNode.GetChildNode("ErrorLocationAttributeName") is null) { _explicitNullValueErrorLocationAttributeName = default!; _explicitNullProperties?.Remove("ErrorLocationAttributeName"); }
+            else if (parseNode.GetChildNode("ErrorLocationAttributeName") is { } nullNodeErrorLocationAttributeName && nullNodeErrorLocationAttributeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorLocationAttributeName = null;
+            if (parseNode.GetChildNode("ErrorLocationElementName") is null) { _explicitNullValueErrorLocationElementName = default!; _explicitNullProperties?.Remove("ErrorLocationElementName"); }
+            else if (parseNode.GetChildNode("ErrorLocationElementName") is { } nullNodeErrorLocationElementName && nullNodeErrorLocationElementName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorLocationElementName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The name of the attribute in error. This is the name of the attribute contained by the Error Location element.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorLocationAttributeName { get => _explicitNullValueErrorLocationAttributeName; set { _explicitNullValueErrorLocationAttributeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationAttributeName"); else _explicitNullProperties?.Remove("ErrorLocationAttributeName"); } }
+        public string? ErrorLocationAttributeName { get => _explicitNullValueErrorLocationAttributeName; set { _explicitNullValueErrorLocationAttributeName = value; AdditionalData?.Remove("ErrorLocationAttributeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationAttributeName"); else _explicitNullProperties?.Remove("ErrorLocationAttributeName"); } }
         private string? _explicitNullValueErrorLocationAttributeName = default!;
 #nullable restore
 #else
-        public string ErrorLocationAttributeName { get => _explicitNullValueErrorLocationAttributeName; set { _explicitNullValueErrorLocationAttributeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationAttributeName"); else _explicitNullProperties?.Remove("ErrorLocationAttributeName"); } }
+        public string ErrorLocationAttributeName { get => _explicitNullValueErrorLocationAttributeName; set { _explicitNullValueErrorLocationAttributeName = value; AdditionalData?.Remove("ErrorLocationAttributeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationAttributeName"); else _explicitNullProperties?.Remove("ErrorLocationAttributeName"); } }
         private string _explicitNullValueErrorLocationAttributeName = default!;
 #endif
         /// <summary>The Xpath name of the element in error. This is a valid Xpath pointing to an element in the request document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorLocationElementName { get => _explicitNullValueErrorLocationElementName; set { _explicitNullValueErrorLocationElementName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationElementName"); else _explicitNullProperties?.Remove("ErrorLocationElementName"); } }
+        public string? ErrorLocationElementName { get => _explicitNullValueErrorLocationElementName; set { _explicitNullValueErrorLocationElementName = value; AdditionalData?.Remove("ErrorLocationElementName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationElementName"); else _explicitNullProperties?.Remove("ErrorLocationElementName"); } }
         private string? _explicitNullValueErrorLocationElementName = default!;
 #nullable restore
 #else
-        public string ErrorLocationElementName { get => _explicitNullValueErrorLocationElementName; set { _explicitNullValueErrorLocationElementName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationElementName"); else _explicitNullProperties?.Remove("ErrorLocationElementName"); } }
+        public string ErrorLocationElementName { get => _explicitNullValueErrorLocationElementName; set { _explicitNullValueErrorLocationElementName = value; AdditionalData?.Remove("ErrorLocationElementName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorLocationElementName"); else _explicitNullProperties?.Remove("ErrorLocationElementName"); } }
         private string _explicitNullValueErrorLocationElementName = default!;
 #endif
         /// <summary>

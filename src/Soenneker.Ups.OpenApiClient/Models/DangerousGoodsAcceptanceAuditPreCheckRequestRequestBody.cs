@@ -18,17 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AcceptanceAuditPreCheckRequest") is { } nullNodeAcceptanceAuditPreCheckRequest && nullNodeAcceptanceAuditPreCheckRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptanceAuditPreCheckRequest = null;
+            if (parseNode.GetChildNode("AcceptanceAuditPreCheckRequest") is null) { _explicitNullValueAcceptanceAuditPreCheckRequest = default!; _explicitNullProperties?.Remove("AcceptanceAuditPreCheckRequest"); }
+            else if (parseNode.GetChildNode("AcceptanceAuditPreCheckRequest") is { } nullNodeAcceptanceAuditPreCheckRequest && nullNodeAcceptanceAuditPreCheckRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptanceAuditPreCheckRequest = null;
         }
 
         /// <summary>Dangerous Goods Utility Request container for Acceptance Audit Pre-check.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequest? AcceptanceAuditPreCheckRequest { get => _explicitNullValueAcceptanceAuditPreCheckRequest; set { _explicitNullValueAcceptanceAuditPreCheckRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AcceptanceAuditPreCheckRequest"); else _explicitNullProperties?.Remove("AcceptanceAuditPreCheckRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequest? AcceptanceAuditPreCheckRequest { get => _explicitNullValueAcceptanceAuditPreCheckRequest; set { _explicitNullValueAcceptanceAuditPreCheckRequest = value; AdditionalData?.Remove("AcceptanceAuditPreCheckRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AcceptanceAuditPreCheckRequest"); else _explicitNullProperties?.Remove("AcceptanceAuditPreCheckRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequest? _explicitNullValueAcceptanceAuditPreCheckRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequest AcceptanceAuditPreCheckRequest { get => _explicitNullValueAcceptanceAuditPreCheckRequest; set { _explicitNullValueAcceptanceAuditPreCheckRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AcceptanceAuditPreCheckRequest"); else _explicitNullProperties?.Remove("AcceptanceAuditPreCheckRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequest AcceptanceAuditPreCheckRequest { get => _explicitNullValueAcceptanceAuditPreCheckRequest; set { _explicitNullValueAcceptanceAuditPreCheckRequest = value; AdditionalData?.Remove("AcceptanceAuditPreCheckRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AcceptanceAuditPreCheckRequest"); else _explicitNullProperties?.Remove("AcceptanceAuditPreCheckRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsAcceptanceAuditPreCheckRequest _explicitNullValueAcceptanceAuditPreCheckRequest = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

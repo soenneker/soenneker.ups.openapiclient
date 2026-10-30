@@ -18,12 +18,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("Place") is { } nullNodePlace && nullNodePlace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Place = null;
-            if (parseNode.GetChildNode("ShipperDeclaration") is { } nullNodeShipperDeclaration && nullNodeShipperDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperDeclaration = null;
-            if (parseNode.GetChildNode("Title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
-            if (parseNode.GetChildNode("UploadOnlyIndicator") is { } nullNodeUploadOnlyIndicator && nullNodeUploadOnlyIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadOnlyIndicator = null;
+            if (parseNode.GetChildNode("Date") is null) { _explicitNullValueDate = default!; _explicitNullProperties?.Remove("Date"); }
+            else if (parseNode.GetChildNode("Date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("Place") is null) { _explicitNullValuePlace = default!; _explicitNullProperties?.Remove("Place"); }
+            else if (parseNode.GetChildNode("Place") is { } nullNodePlace && nullNodePlace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Place = null;
+            if (parseNode.GetChildNode("ShipperDeclaration") is null) { _explicitNullValueShipperDeclaration = default!; _explicitNullProperties?.Remove("ShipperDeclaration"); }
+            else if (parseNode.GetChildNode("ShipperDeclaration") is { } nullNodeShipperDeclaration && nullNodeShipperDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperDeclaration = null;
+            if (parseNode.GetChildNode("Title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("Title"); }
+            else if (parseNode.GetChildNode("Title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("UploadOnlyIndicator") is null) { _explicitNullValueUploadOnlyIndicator = default!; _explicitNullProperties?.Remove("UploadOnlyIndicator"); }
+            else if (parseNode.GetChildNode("UploadOnlyIndicator") is { } nullNodeUploadOnlyIndicator && nullNodeUploadOnlyIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadOnlyIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,61 +37,61 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Date of signing the declaration form.  Valid format is YYYYMMDD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Date"); else _explicitNullProperties?.Remove("Date"); } }
+        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("Date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Date"); else _explicitNullProperties?.Remove("Date"); } }
         private string? _explicitNullValueDate = default!;
 #nullable restore
 #else
-        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Date"); else _explicitNullProperties?.Remove("Date"); } }
+        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; AdditionalData?.Remove("Date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Date"); else _explicitNullProperties?.Remove("Date"); } }
         private string _explicitNullValueDate = default!;
 #endif
         /// <summary>Name of the person signing the declaration. Note: The name of person or department he/she is employed with, are both acceptable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The city of the Signatory.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Place { get => _explicitNullValuePlace; set { _explicitNullValuePlace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Place"); else _explicitNullProperties?.Remove("Place"); } }
+        public string? Place { get => _explicitNullValuePlace; set { _explicitNullValuePlace = value; AdditionalData?.Remove("Place"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Place"); else _explicitNullProperties?.Remove("Place"); } }
         private string? _explicitNullValuePlace = default!;
 #nullable restore
 #else
-        public string Place { get => _explicitNullValuePlace; set { _explicitNullValuePlace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Place"); else _explicitNullProperties?.Remove("Place"); } }
+        public string Place { get => _explicitNullValuePlace; set { _explicitNullValuePlace = value; AdditionalData?.Remove("Place"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Place"); else _explicitNullProperties?.Remove("Place"); } }
         private string _explicitNullValuePlace = default!;
 #endif
         /// <summary>Valid values:01 = Shipment level02 = Package level                                             Valid only for the Shipper Declaration paper. If missing or invalid DGPaperImage will be returned at package level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperDeclaration { get => _explicitNullValueShipperDeclaration; set { _explicitNullValueShipperDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperDeclaration"); else _explicitNullProperties?.Remove("ShipperDeclaration"); } }
+        public string? ShipperDeclaration { get => _explicitNullValueShipperDeclaration; set { _explicitNullValueShipperDeclaration = value; AdditionalData?.Remove("ShipperDeclaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperDeclaration"); else _explicitNullProperties?.Remove("ShipperDeclaration"); } }
         private string? _explicitNullValueShipperDeclaration = default!;
 #nullable restore
 #else
-        public string ShipperDeclaration { get => _explicitNullValueShipperDeclaration; set { _explicitNullValueShipperDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperDeclaration"); else _explicitNullProperties?.Remove("ShipperDeclaration"); } }
+        public string ShipperDeclaration { get => _explicitNullValueShipperDeclaration; set { _explicitNullValueShipperDeclaration = value; AdditionalData?.Remove("ShipperDeclaration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperDeclaration"); else _explicitNullProperties?.Remove("ShipperDeclaration"); } }
         private string _explicitNullValueShipperDeclaration = default!;
 #endif
         /// <summary>Title of the person signing the declaration.Note: The title of the person or department he/she is employed with, are both acceptable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Title"); else _explicitNullProperties?.Remove("Title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("Title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Title"); else _explicitNullProperties?.Remove("Title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Title"); else _explicitNullProperties?.Remove("Title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("Title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Title"); else _explicitNullProperties?.Remove("Title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>Dangerous Goods Paper Upload Only Indicator. DG Paper will not be returned in response if UploadOnlyIndicator present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadOnlyIndicator { get => _explicitNullValueUploadOnlyIndicator; set { _explicitNullValueUploadOnlyIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UploadOnlyIndicator"); else _explicitNullProperties?.Remove("UploadOnlyIndicator"); } }
+        public string? UploadOnlyIndicator { get => _explicitNullValueUploadOnlyIndicator; set { _explicitNullValueUploadOnlyIndicator = value; AdditionalData?.Remove("UploadOnlyIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UploadOnlyIndicator"); else _explicitNullProperties?.Remove("UploadOnlyIndicator"); } }
         private string? _explicitNullValueUploadOnlyIndicator = default!;
 #nullable restore
 #else
-        public string UploadOnlyIndicator { get => _explicitNullValueUploadOnlyIndicator; set { _explicitNullValueUploadOnlyIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UploadOnlyIndicator"); else _explicitNullProperties?.Remove("UploadOnlyIndicator"); } }
+        public string UploadOnlyIndicator { get => _explicitNullValueUploadOnlyIndicator; set { _explicitNullValueUploadOnlyIndicator = value; AdditionalData?.Remove("UploadOnlyIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UploadOnlyIndicator"); else _explicitNullProperties?.Remove("UploadOnlyIndicator"); } }
         private string _explicitNullValueUploadOnlyIndicator = default!;
 #endif
         /// <summary>

@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AllPackedInOneIndicator") is { } nullNodeAllPackedInOneIndicator && nullNodeAllPackedInOneIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllPackedInOneIndicator = null;
-            if (parseNode.GetChildNode("OuterPackagingType") is { } nullNodeOuterPackagingType && nullNodeOuterPackagingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OuterPackagingType = null;
-            if (parseNode.GetChildNode("OverPackedIndicator") is { } nullNodeOverPackedIndicator && nullNodeOverPackedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverPackedIndicator = null;
-            if (parseNode.GetChildNode("QValue") is { } nullNodeQValue && nullNodeQValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QValue = null;
+            if (parseNode.GetChildNode("AllPackedInOneIndicator") is null) { _explicitNullValueAllPackedInOneIndicator = default!; _explicitNullProperties?.Remove("AllPackedInOneIndicator"); }
+            else if (parseNode.GetChildNode("AllPackedInOneIndicator") is { } nullNodeAllPackedInOneIndicator && nullNodeAllPackedInOneIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllPackedInOneIndicator = null;
+            if (parseNode.GetChildNode("OuterPackagingType") is null) { _explicitNullValueOuterPackagingType = default!; _explicitNullProperties?.Remove("OuterPackagingType"); }
+            else if (parseNode.GetChildNode("OuterPackagingType") is { } nullNodeOuterPackagingType && nullNodeOuterPackagingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OuterPackagingType = null;
+            if (parseNode.GetChildNode("OverPackedIndicator") is null) { _explicitNullValueOverPackedIndicator = default!; _explicitNullProperties?.Remove("OverPackedIndicator"); }
+            else if (parseNode.GetChildNode("OverPackedIndicator") is { } nullNodeOverPackedIndicator && nullNodeOverPackedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverPackedIndicator = null;
+            if (parseNode.GetChildNode("QValue") is null) { _explicitNullValueQValue = default!; _explicitNullProperties?.Remove("QValue"); }
+            else if (parseNode.GetChildNode("QValue") is { } nullNodeQValue && nullNodeQValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Presence/Absence Indicator. Any value is ignored. Presence indicates if multiple, different hazmat/chemicals are contained within one box in a package  When number of Hazmat containers in a package is more than one, either AllPackedInOneIndicator or OverPackedIndicator is needed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
+        public string? AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; AdditionalData?.Remove("AllPackedInOneIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
         private string? _explicitNullValueAllPackedInOneIndicator = default!;
 #nullable restore
 #else
-        public string AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
+        public string AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; AdditionalData?.Remove("AllPackedInOneIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
         private string _explicitNullValueAllPackedInOneIndicator = default!;
 #endif
         /// <summary>This field is used for the Outer Hazmat packaging type.  Ex. FIBERBOARD BOX, WOOD(EN) BOX, PLASTIC JERRICAN, METAL BOX, STEEL DRUM, OTHER, PLASTIC BOX, PLASTIC DRUM, STYROFOAM BOX, CYLINDERS, ENVIROTAINER, PLYWOOD BOX, ALUMINUM DRUM, ALUMINUM CYLINDERS, PLASTIC PAIL, PLYWOOD DRUM, FIBER DRUM, STEEL JERRICAN, ALUMINUM JERRICAN, STEEL BOX, CARTON, ALUMINUM BOX</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OuterPackagingType { get => _explicitNullValueOuterPackagingType; set { _explicitNullValueOuterPackagingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OuterPackagingType"); else _explicitNullProperties?.Remove("OuterPackagingType"); } }
+        public string? OuterPackagingType { get => _explicitNullValueOuterPackagingType; set { _explicitNullValueOuterPackagingType = value; AdditionalData?.Remove("OuterPackagingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OuterPackagingType"); else _explicitNullProperties?.Remove("OuterPackagingType"); } }
         private string? _explicitNullValueOuterPackagingType = default!;
 #nullable restore
 #else
-        public string OuterPackagingType { get => _explicitNullValueOuterPackagingType; set { _explicitNullValueOuterPackagingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OuterPackagingType"); else _explicitNullProperties?.Remove("OuterPackagingType"); } }
+        public string OuterPackagingType { get => _explicitNullValueOuterPackagingType; set { _explicitNullValueOuterPackagingType = value; AdditionalData?.Remove("OuterPackagingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OuterPackagingType"); else _explicitNullProperties?.Remove("OuterPackagingType"); } }
         private string _explicitNullValueOuterPackagingType = default!;
 #endif
         /// <summary>Presence/Absence Indicator. Any value is ignored. Presence indicates that one or more hazmat/chemicals are in separate boxes in a package.  When number of Hazmat containers in a package is more than one, either AllPackedInOneIndicator or OverPackedIndicator is needed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
+        public string? OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; AdditionalData?.Remove("OverPackedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
         private string? _explicitNullValueOverPackedIndicator = default!;
 #nullable restore
 #else
-        public string OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
+        public string OverPackedIndicator { get => _explicitNullValueOverPackedIndicator; set { _explicitNullValueOverPackedIndicator = value; AdditionalData?.Remove("OverPackedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverPackedIndicator"); else _explicitNullProperties?.Remove("OverPackedIndicator"); } }
         private string _explicitNullValueOverPackedIndicator = default!;
 #endif
         /// <summary>When a HazMat shipment specifies AllPackedInOneIndicator and the regulation set for that shipment is IATA, Ship API must require the shipment to specify a Q-Value with exactly one of the following values: 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1.0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
+        public string? QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; AdditionalData?.Remove("QValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
         private string? _explicitNullValueQValue = default!;
 #nullable restore
 #else
-        public string QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
+        public string QValue { get => _explicitNullValueQValue; set { _explicitNullValueQValue = value; AdditionalData?.Remove("QValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QValue"); else _explicitNullProperties?.Remove("QValue"); } }
         private string _explicitNullValueQValue = default!;
 #endif
         /// <summary>

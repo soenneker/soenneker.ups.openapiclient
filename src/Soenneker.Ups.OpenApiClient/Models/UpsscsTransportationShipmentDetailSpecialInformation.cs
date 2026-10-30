@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("hazmatCategoryCode") is { } nullNodeHazmatCategoryCode && nullNodeHazmatCategoryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazmatCategoryCode = null;
-            if (parseNode.GetChildNode("hazmatCategoryDescription") is { } nullNodeHazmatCategoryDescription && nullNodeHazmatCategoryDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazmatCategoryDescription = null;
-            if (parseNode.GetChildNode("hazmatFlag") is { } nullNodeHazmatFlag && nullNodeHazmatFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazmatFlag = null;
+            if (parseNode.GetChildNode("hazmatCategoryCode") is null) { _explicitNullValueHazmatCategoryCode = default!; _explicitNullProperties?.Remove("hazmatCategoryCode"); }
+            else if (parseNode.GetChildNode("hazmatCategoryCode") is { } nullNodeHazmatCategoryCode && nullNodeHazmatCategoryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazmatCategoryCode = null;
+            if (parseNode.GetChildNode("hazmatCategoryDescription") is null) { _explicitNullValueHazmatCategoryDescription = default!; _explicitNullProperties?.Remove("hazmatCategoryDescription"); }
+            else if (parseNode.GetChildNode("hazmatCategoryDescription") is { } nullNodeHazmatCategoryDescription && nullNodeHazmatCategoryDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazmatCategoryDescription = null;
+            if (parseNode.GetChildNode("hazmatFlag") is null) { _explicitNullValueHazmatFlag = default!; _explicitNullProperties?.Remove("hazmatFlag"); }
+            else if (parseNode.GetChildNode("hazmatFlag") is { } nullNodeHazmatFlag && nullNodeHazmatFlag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazmatFlag = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Hazardous material category code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HazmatCategoryCode { get => _explicitNullValueHazmatCategoryCode; set { _explicitNullValueHazmatCategoryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatCategoryCode"); else _explicitNullProperties?.Remove("hazmatCategoryCode"); } }
+        public string? HazmatCategoryCode { get => _explicitNullValueHazmatCategoryCode; set { _explicitNullValueHazmatCategoryCode = value; AdditionalData?.Remove("hazmatCategoryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatCategoryCode"); else _explicitNullProperties?.Remove("hazmatCategoryCode"); } }
         private string? _explicitNullValueHazmatCategoryCode = default!;
 #nullable restore
 #else
-        public string HazmatCategoryCode { get => _explicitNullValueHazmatCategoryCode; set { _explicitNullValueHazmatCategoryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatCategoryCode"); else _explicitNullProperties?.Remove("hazmatCategoryCode"); } }
+        public string HazmatCategoryCode { get => _explicitNullValueHazmatCategoryCode; set { _explicitNullValueHazmatCategoryCode = value; AdditionalData?.Remove("hazmatCategoryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatCategoryCode"); else _explicitNullProperties?.Remove("hazmatCategoryCode"); } }
         private string _explicitNullValueHazmatCategoryCode = default!;
 #endif
         /// <summary>Hazardous material category description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HazmatCategoryDescription { get => _explicitNullValueHazmatCategoryDescription; set { _explicitNullValueHazmatCategoryDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatCategoryDescription"); else _explicitNullProperties?.Remove("hazmatCategoryDescription"); } }
+        public string? HazmatCategoryDescription { get => _explicitNullValueHazmatCategoryDescription; set { _explicitNullValueHazmatCategoryDescription = value; AdditionalData?.Remove("hazmatCategoryDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatCategoryDescription"); else _explicitNullProperties?.Remove("hazmatCategoryDescription"); } }
         private string? _explicitNullValueHazmatCategoryDescription = default!;
 #nullable restore
 #else
-        public string HazmatCategoryDescription { get => _explicitNullValueHazmatCategoryDescription; set { _explicitNullValueHazmatCategoryDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatCategoryDescription"); else _explicitNullProperties?.Remove("hazmatCategoryDescription"); } }
+        public string HazmatCategoryDescription { get => _explicitNullValueHazmatCategoryDescription; set { _explicitNullValueHazmatCategoryDescription = value; AdditionalData?.Remove("hazmatCategoryDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatCategoryDescription"); else _explicitNullProperties?.Remove("hazmatCategoryDescription"); } }
         private string _explicitNullValueHazmatCategoryDescription = default!;
 #endif
         /// <summary>The hazmatFlag property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.SpecialInformationHazmatFlag? HazmatFlag { get => _explicitNullValueHazmatFlag; set { _explicitNullValueHazmatFlag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatFlag"); else _explicitNullProperties?.Remove("hazmatFlag"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SpecialInformationHazmatFlag? HazmatFlag { get => _explicitNullValueHazmatFlag; set { _explicitNullValueHazmatFlag = value; AdditionalData?.Remove("hazmatFlag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hazmatFlag"); else _explicitNullProperties?.Remove("hazmatFlag"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SpecialInformationHazmatFlag? _explicitNullValueHazmatFlag = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.UpsscsTransportationShipmentDetailSpecialInformation"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             {
                 { "hazmatCategoryCode", n => { HazmatCategoryCode = n.GetStringValue(); } },
                 { "hazmatCategoryDescription", n => { HazmatCategoryDescription = n.GetStringValue(); } },
-                { "hazmatFlag", n => { HazmatFlag = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SpecialInformationHazmatFlag>(); } },
+                { "hazmatFlag", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SpecialInformationHazmatFlag>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHazmatFlag = default; _explicitNullProperties?.Remove("hazmatFlag"); AdditionalData["hazmatFlag"] = unknown; } else { HazmatFlag = parsed; AdditionalData.Remove("hazmatFlag"); } } },
             };
         }
         /// <summary>

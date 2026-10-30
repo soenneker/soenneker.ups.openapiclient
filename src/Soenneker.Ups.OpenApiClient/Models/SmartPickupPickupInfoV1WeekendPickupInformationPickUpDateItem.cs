@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("WeekEndPickUpDay") is { } nullNodeWeekEndPickUpDay && nullNodeWeekEndPickUpDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekEndPickUpDay = null;
+            if (parseNode.GetChildNode("WeekEndPickUpDay") is null) { _explicitNullValueWeekEndPickUpDay = default!; _explicitNullProperties?.Remove("WeekEndPickUpDay"); }
+            else if (parseNode.GetChildNode("WeekEndPickUpDay") is { } nullNodeWeekEndPickUpDay && nullNodeWeekEndPickUpDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekEndPickUpDay = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The WeekEndPickUpDay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDay? WeekEndPickUpDay { get => _explicitNullValueWeekEndPickUpDay; set { _explicitNullValueWeekEndPickUpDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekEndPickUpDay"); else _explicitNullProperties?.Remove("WeekEndPickUpDay"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDay? WeekEndPickUpDay { get => _explicitNullValueWeekEndPickUpDay; set { _explicitNullValueWeekEndPickUpDay = value; AdditionalData?.Remove("WeekEndPickUpDay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekEndPickUpDay"); else _explicitNullProperties?.Remove("WeekEndPickUpDay"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDay? _explicitNullValueWeekEndPickUpDay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDay WeekEndPickUpDay { get => _explicitNullValueWeekEndPickUpDay; set { _explicitNullValueWeekEndPickUpDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekEndPickUpDay"); else _explicitNullProperties?.Remove("WeekEndPickUpDay"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDay WeekEndPickUpDay { get => _explicitNullValueWeekEndPickUpDay; set { _explicitNullValueWeekEndPickUpDay = value; AdditionalData?.Remove("WeekEndPickUpDay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekEndPickUpDay"); else _explicitNullProperties?.Remove("WeekEndPickUpDay"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDay _explicitNullValueWeekEndPickUpDay = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ElementIdentifier") is { } nullNodeElementIdentifier && nullNodeElementIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElementIdentifier = null;
-            if (parseNode.GetChildNode("Level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
+            if (parseNode.GetChildNode("ElementIdentifier") is null) { _explicitNullValueElementIdentifier = default!; _explicitNullProperties?.Remove("ElementIdentifier"); }
+            else if (parseNode.GetChildNode("ElementIdentifier") is { } nullNodeElementIdentifier && nullNodeElementIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElementIdentifier = null;
+            if (parseNode.GetChildNode("Level") is null) { _explicitNullValueLevel = default!; _explicitNullProperties?.Remove("Level"); }
+            else if (parseNode.GetChildNode("Level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains more information about the type of element. Returned if Level is &apos;P&apos; or &apos;C&apos;.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier>? ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier>? ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; AdditionalData?.Remove("ElementIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier>? _explicitNullValueElementIdentifier = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier> ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier> ElementIdentifier { get => _explicitNullValueElementIdentifier; set { _explicitNullValueElementIdentifier = value; AdditionalData?.Remove("ElementIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ElementIdentifier"); else _explicitNullProperties?.Remove("ElementIdentifier"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.RatingElementLevelInformationElementIdentifier> _explicitNullValueElementIdentifier = default!;
 #endif
         /// <summary>Define type of element in request. Possible values are -- &apos;H&apos; for the header details level,- &apos;S&apos; for the shipment level,- &apos;P&apos; for the package level,- &apos;C&apos; for the commodity level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
+        public string? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("Level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
         private string? _explicitNullValueLevel = default!;
 #nullable restore
 #else
-        public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
+        public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("Level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Level"); else _explicitNullProperties?.Remove("Level"); } }
         private string _explicitNullValueLevel = default!;
 #endif
         /// <summary>

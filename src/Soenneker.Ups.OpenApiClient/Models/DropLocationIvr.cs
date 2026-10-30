@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PhraseID") is { } nullNodePhraseID && nullNodePhraseID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhraseID = null;
-            if (parseNode.GetChildNode("TextToSpeechIndicator") is { } nullNodeTextToSpeechIndicator && nullNodeTextToSpeechIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextToSpeechIndicator = null;
+            if (parseNode.GetChildNode("PhraseID") is null) { _explicitNullValuePhraseID = default!; _explicitNullProperties?.Remove("PhraseID"); }
+            else if (parseNode.GetChildNode("PhraseID") is { } nullNodePhraseID && nullNodePhraseID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhraseID = null;
+            if (parseNode.GetChildNode("TextToSpeechIndicator") is null) { _explicitNullValueTextToSpeechIndicator = default!; _explicitNullProperties?.Remove("TextToSpeechIndicator"); }
+            else if (parseNode.GetChildNode("TextToSpeechIndicator") is { } nullNodeTextToSpeechIndicator && nullNodeTextToSpeechIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextToSpeechIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains the name of the IVR file that relates to this drop location. The file is an audio recording of information related to the location.ONLY FOR IVR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhraseID { get => _explicitNullValuePhraseID; set { _explicitNullValuePhraseID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhraseID"); else _explicitNullProperties?.Remove("PhraseID"); } }
+        public string? PhraseID { get => _explicitNullValuePhraseID; set { _explicitNullValuePhraseID = value; AdditionalData?.Remove("PhraseID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhraseID"); else _explicitNullProperties?.Remove("PhraseID"); } }
         private string? _explicitNullValuePhraseID = default!;
 #nullable restore
 #else
-        public string PhraseID { get => _explicitNullValuePhraseID; set { _explicitNullValuePhraseID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhraseID"); else _explicitNullProperties?.Remove("PhraseID"); } }
+        public string PhraseID { get => _explicitNullValuePhraseID; set { _explicitNullValuePhraseID = value; AdditionalData?.Remove("PhraseID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PhraseID"); else _explicitNullProperties?.Remove("PhraseID"); } }
         private string _explicitNullValuePhraseID = default!;
 #endif
         /// <summary>Indicates to the response recipient that the information has changed, and a new audio file should be produced. ONLY FOR IVR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextToSpeechIndicator { get => _explicitNullValueTextToSpeechIndicator; set { _explicitNullValueTextToSpeechIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextToSpeechIndicator"); else _explicitNullProperties?.Remove("TextToSpeechIndicator"); } }
+        public string? TextToSpeechIndicator { get => _explicitNullValueTextToSpeechIndicator; set { _explicitNullValueTextToSpeechIndicator = value; AdditionalData?.Remove("TextToSpeechIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextToSpeechIndicator"); else _explicitNullProperties?.Remove("TextToSpeechIndicator"); } }
         private string? _explicitNullValueTextToSpeechIndicator = default!;
 #nullable restore
 #else
-        public string TextToSpeechIndicator { get => _explicitNullValueTextToSpeechIndicator; set { _explicitNullValueTextToSpeechIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextToSpeechIndicator"); else _explicitNullProperties?.Remove("TextToSpeechIndicator"); } }
+        public string TextToSpeechIndicator { get => _explicitNullValueTextToSpeechIndicator; set { _explicitNullValueTextToSpeechIndicator = value; AdditionalData?.Remove("TextToSpeechIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextToSpeechIndicator"); else _explicitNullProperties?.Remove("TextToSpeechIndicator"); } }
         private string _explicitNullValueTextToSpeechIndicator = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ConsigneeType") is { } nullNodeConsigneeType && nullNodeConsigneeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsigneeType = null;
-            if (parseNode.GetChildNode("VendorCollectIDNumber") is { } nullNodeVendorCollectIDNumber && nullNodeVendorCollectIDNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorCollectIDNumber = null;
-            if (parseNode.GetChildNode("VendorCollectIDTypeCode") is { } nullNodeVendorCollectIDTypeCode && nullNodeVendorCollectIDTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorCollectIDTypeCode = null;
+            if (parseNode.GetChildNode("ConsigneeType") is null) { _explicitNullValueConsigneeType = default!; _explicitNullProperties?.Remove("ConsigneeType"); }
+            else if (parseNode.GetChildNode("ConsigneeType") is { } nullNodeConsigneeType && nullNodeConsigneeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConsigneeType = null;
+            if (parseNode.GetChildNode("VendorCollectIDNumber") is null) { _explicitNullValueVendorCollectIDNumber = default!; _explicitNullProperties?.Remove("VendorCollectIDNumber"); }
+            else if (parseNode.GetChildNode("VendorCollectIDNumber") is { } nullNodeVendorCollectIDNumber && nullNodeVendorCollectIDNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorCollectIDNumber = null;
+            if (parseNode.GetChildNode("VendorCollectIDTypeCode") is null) { _explicitNullValueVendorCollectIDTypeCode = default!; _explicitNullProperties?.Remove("VendorCollectIDTypeCode"); }
+            else if (parseNode.GetChildNode("VendorCollectIDTypeCode") is { } nullNodeVendorCollectIDTypeCode && nullNodeVendorCollectIDTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VendorCollectIDTypeCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Consignee Type. 01 = Business  02 = Consumer NA = Not Applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConsigneeType { get => _explicitNullValueConsigneeType; set { _explicitNullValueConsigneeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeType"); else _explicitNullProperties?.Remove("ConsigneeType"); } }
+        public string? ConsigneeType { get => _explicitNullValueConsigneeType; set { _explicitNullValueConsigneeType = value; AdditionalData?.Remove("ConsigneeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeType"); else _explicitNullProperties?.Remove("ConsigneeType"); } }
         private string? _explicitNullValueConsigneeType = default!;
 #nullable restore
 #else
-        public string ConsigneeType { get => _explicitNullValueConsigneeType; set { _explicitNullValueConsigneeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeType"); else _explicitNullProperties?.Remove("ConsigneeType"); } }
+        public string ConsigneeType { get => _explicitNullValueConsigneeType; set { _explicitNullValueConsigneeType = value; AdditionalData?.Remove("ConsigneeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConsigneeType"); else _explicitNullProperties?.Remove("ConsigneeType"); } }
         private string _explicitNullValueConsigneeType = default!;
 #endif
         /// <summary>Shipper&apos;s VAT Tax collection registration number to be entered by Shipper at time of shipment creation. Presence of this number as part of the shipment information implies the shipper has collected/paid the required VAT tax (outside of UPS/UPS systems). Vendor Colect ID Number will be printed on commercial invoice if present.Sample Values:   &apos;IMDEU1234567&apos; (IOSS #),  &apos;VOEC1234567&apos; (VOEC #),  &apos;GB1234567&apos; (HMRC #)Required if the shipment is subject to Vendor Collect ID collection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VendorCollectIDNumber { get => _explicitNullValueVendorCollectIDNumber; set { _explicitNullValueVendorCollectIDNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDNumber"); else _explicitNullProperties?.Remove("VendorCollectIDNumber"); } }
+        public string? VendorCollectIDNumber { get => _explicitNullValueVendorCollectIDNumber; set { _explicitNullValueVendorCollectIDNumber = value; AdditionalData?.Remove("VendorCollectIDNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDNumber"); else _explicitNullProperties?.Remove("VendorCollectIDNumber"); } }
         private string? _explicitNullValueVendorCollectIDNumber = default!;
 #nullable restore
 #else
-        public string VendorCollectIDNumber { get => _explicitNullValueVendorCollectIDNumber; set { _explicitNullValueVendorCollectIDNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDNumber"); else _explicitNullProperties?.Remove("VendorCollectIDNumber"); } }
+        public string VendorCollectIDNumber { get => _explicitNullValueVendorCollectIDNumber; set { _explicitNullValueVendorCollectIDNumber = value; AdditionalData?.Remove("VendorCollectIDNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDNumber"); else _explicitNullProperties?.Remove("VendorCollectIDNumber"); } }
         private string _explicitNullValueVendorCollectIDNumber = default!;
 #endif
         /// <summary>Code that identifies the type of Vendor Collect ID Number. Valid Values- 0000 = Unknown/Other- 0356 = IOSS Registration Number- 0357 = VOEC Registration Number- 0358 = Deprecated- 0359 = PVA Registration Number- 1051 = Singapore GST Registration Number- 1052 = ARN Registration Number- 1053 = IRD Registration Number- 1054 = Malaysia Low Value Goods Sales Tax Registration NumberVendor Collect ID Number type code will be printed on commercial invoice if present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VendorCollectIDTypeCode { get => _explicitNullValueVendorCollectIDTypeCode; set { _explicitNullValueVendorCollectIDTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDTypeCode"); else _explicitNullProperties?.Remove("VendorCollectIDTypeCode"); } }
+        public string? VendorCollectIDTypeCode { get => _explicitNullValueVendorCollectIDTypeCode; set { _explicitNullValueVendorCollectIDTypeCode = value; AdditionalData?.Remove("VendorCollectIDTypeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDTypeCode"); else _explicitNullProperties?.Remove("VendorCollectIDTypeCode"); } }
         private string? _explicitNullValueVendorCollectIDTypeCode = default!;
 #nullable restore
 #else
-        public string VendorCollectIDTypeCode { get => _explicitNullValueVendorCollectIDTypeCode; set { _explicitNullValueVendorCollectIDTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDTypeCode"); else _explicitNullProperties?.Remove("VendorCollectIDTypeCode"); } }
+        public string VendorCollectIDTypeCode { get => _explicitNullValueVendorCollectIDTypeCode; set { _explicitNullValueVendorCollectIDTypeCode = value; AdditionalData?.Remove("VendorCollectIDTypeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VendorCollectIDTypeCode"); else _explicitNullProperties?.Remove("VendorCollectIDTypeCode"); } }
         private string _explicitNullValueVendorCollectIDTypeCode = default!;
 #endif
         /// <summary>

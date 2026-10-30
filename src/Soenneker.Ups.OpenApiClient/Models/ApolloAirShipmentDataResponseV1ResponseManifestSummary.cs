@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currentPickupTotals") is { } nullNodeCurrentPickupTotals && nullNodeCurrentPickupTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPickupTotals = null;
-            if (parseNode.GetChildNode("dailyPickupTotals") is { } nullNodeDailyPickupTotals && nullNodeDailyPickupTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyPickupTotals = null;
-            if (parseNode.GetChildNode("services") is { } nullNodeServices && nullNodeServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Services = null;
-            if (parseNode.GetChildNode("serviceTotal") is { } nullNodeServiceTotal && nullNodeServiceTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceTotal = null;
+            if (parseNode.GetChildNode("currentPickupTotals") is null) { _explicitNullValueCurrentPickupTotals = default!; _explicitNullProperties?.Remove("currentPickupTotals"); }
+            else if (parseNode.GetChildNode("currentPickupTotals") is { } nullNodeCurrentPickupTotals && nullNodeCurrentPickupTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPickupTotals = null;
+            if (parseNode.GetChildNode("dailyPickupTotals") is null) { _explicitNullValueDailyPickupTotals = default!; _explicitNullProperties?.Remove("dailyPickupTotals"); }
+            else if (parseNode.GetChildNode("dailyPickupTotals") is { } nullNodeDailyPickupTotals && nullNodeDailyPickupTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyPickupTotals = null;
+            if (parseNode.GetChildNode("services") is null) { _explicitNullValueServices = default!; _explicitNullProperties?.Remove("services"); }
+            else if (parseNode.GetChildNode("services") is { } nullNodeServices && nullNodeServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Services = null;
+            if (parseNode.GetChildNode("serviceTotal") is null) { _explicitNullValueServiceTotal = default!; _explicitNullProperties?.Remove("serviceTotal"); }
+            else if (parseNode.GetChildNode("serviceTotal") is { } nullNodeServiceTotal && nullNodeServiceTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceTotal = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The currentPickupTotals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1? CurrentPickupTotals { get => _explicitNullValueCurrentPickupTotals; set { _explicitNullValueCurrentPickupTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPickupTotals"); else _explicitNullProperties?.Remove("currentPickupTotals"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1? CurrentPickupTotals { get => _explicitNullValueCurrentPickupTotals; set { _explicitNullValueCurrentPickupTotals = value; AdditionalData?.Remove("currentPickupTotals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPickupTotals"); else _explicitNullProperties?.Remove("currentPickupTotals"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1? _explicitNullValueCurrentPickupTotals = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1 CurrentPickupTotals { get => _explicitNullValueCurrentPickupTotals; set { _explicitNullValueCurrentPickupTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPickupTotals"); else _explicitNullProperties?.Remove("currentPickupTotals"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1 CurrentPickupTotals { get => _explicitNullValueCurrentPickupTotals; set { _explicitNullValueCurrentPickupTotals = value; AdditionalData?.Remove("currentPickupTotals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPickupTotals"); else _explicitNullProperties?.Remove("currentPickupTotals"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1 _explicitNullValueCurrentPickupTotals = default!;
 #endif
         /// <summary>The dailyPickupTotals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1? DailyPickupTotals { get => _explicitNullValueDailyPickupTotals; set { _explicitNullValueDailyPickupTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyPickupTotals"); else _explicitNullProperties?.Remove("dailyPickupTotals"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1? DailyPickupTotals { get => _explicitNullValueDailyPickupTotals; set { _explicitNullValueDailyPickupTotals = value; AdditionalData?.Remove("dailyPickupTotals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyPickupTotals"); else _explicitNullProperties?.Remove("dailyPickupTotals"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1? _explicitNullValueDailyPickupTotals = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1 DailyPickupTotals { get => _explicitNullValueDailyPickupTotals; set { _explicitNullValueDailyPickupTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyPickupTotals"); else _explicitNullProperties?.Remove("dailyPickupTotals"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1 DailyPickupTotals { get => _explicitNullValueDailyPickupTotals; set { _explicitNullValueDailyPickupTotals = value; AdditionalData?.Remove("dailyPickupTotals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dailyPickupTotals"); else _explicitNullProperties?.Remove("dailyPickupTotals"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloPickupTotalV1 _explicitNullValueDailyPickupTotals = default!;
 #endif
         /// <summary>The services used by the shipments and associated details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem>? Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem>? Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; AdditionalData?.Remove("services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem>? _explicitNullValueServices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem> Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem> Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; AdditionalData?.Remove("services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServicesItem> _explicitNullValueServices = default!;
 #endif
         /// <summary>The total for all services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal? ServiceTotal { get => _explicitNullValueServiceTotal; set { _explicitNullValueServiceTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceTotal"); else _explicitNullProperties?.Remove("serviceTotal"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal? ServiceTotal { get => _explicitNullValueServiceTotal; set { _explicitNullValueServiceTotal = value; AdditionalData?.Remove("serviceTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceTotal"); else _explicitNullProperties?.Remove("serviceTotal"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal? _explicitNullValueServiceTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal ServiceTotal { get => _explicitNullValueServiceTotal; set { _explicitNullValueServiceTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceTotal"); else _explicitNullProperties?.Remove("serviceTotal"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal ServiceTotal { get => _explicitNullValueServiceTotal; set { _explicitNullValueServiceTotal = value; AdditionalData?.Remove("serviceTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceTotal"); else _explicitNullProperties?.Remove("serviceTotal"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifestSummaryServiceTotal _explicitNullValueServiceTotal = default!;
 #endif
         /// <summary>

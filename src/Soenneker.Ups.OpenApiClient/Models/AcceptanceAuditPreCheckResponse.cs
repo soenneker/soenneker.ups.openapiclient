@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PackageResults") is { } nullNodePackageResults && nullNodePackageResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageResults = null;
-            if (parseNode.GetChildNode("RegulationSet") is { } nullNodeRegulationSet && nullNodeRegulationSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSet = null;
-            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
-            if (parseNode.GetChildNode("Service") is { } nullNodeService && nullNodeService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Service = null;
-            if (parseNode.GetChildNode("ShipperNumber") is { } nullNodeShipperNumber && nullNodeShipperNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperNumber = null;
+            if (parseNode.GetChildNode("PackageResults") is null) { _explicitNullValuePackageResults = default!; _explicitNullProperties?.Remove("PackageResults"); }
+            else if (parseNode.GetChildNode("PackageResults") is { } nullNodePackageResults && nullNodePackageResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageResults = null;
+            if (parseNode.GetChildNode("RegulationSet") is null) { _explicitNullValueRegulationSet = default!; _explicitNullProperties?.Remove("RegulationSet"); }
+            else if (parseNode.GetChildNode("RegulationSet") is { } nullNodeRegulationSet && nullNodeRegulationSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegulationSet = null;
+            if (parseNode.GetChildNode("Response") is null) { _explicitNullValueResponse = default!; _explicitNullProperties?.Remove("Response"); }
+            else if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("Service") is null) { _explicitNullValueService = default!; _explicitNullProperties?.Remove("Service"); }
+            else if (parseNode.GetChildNode("Service") is { } nullNodeService && nullNodeService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Service = null;
+            if (parseNode.GetChildNode("ShipperNumber") is null) { _explicitNullValueShipperNumber = default!; _explicitNullProperties?.Remove("ShipperNumber"); }
+            else if (parseNode.GetChildNode("ShipperNumber") is { } nullNodeShipperNumber && nullNodeShipperNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Package Results container.**NOTE:** For versions &gt;= v2, this element will always be returned as an array. For requests using version = v1, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults>? PackageResults { get => _explicitNullValuePackageResults; set { _explicitNullValuePackageResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageResults"); else _explicitNullProperties?.Remove("PackageResults"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults>? PackageResults { get => _explicitNullValuePackageResults; set { _explicitNullValuePackageResults = value; AdditionalData?.Remove("PackageResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageResults"); else _explicitNullProperties?.Remove("PackageResults"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults>? _explicitNullValuePackageResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults> PackageResults { get => _explicitNullValuePackageResults; set { _explicitNullValuePackageResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageResults"); else _explicitNullProperties?.Remove("PackageResults"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults> PackageResults { get => _explicitNullValuePackageResults; set { _explicitNullValuePackageResults = value; AdditionalData?.Remove("PackageResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageResults"); else _explicitNullProperties?.Remove("PackageResults"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponsePackageResults> _explicitNullValuePackageResults = default!;
 #endif
         /// <summary>The Regulatory set associated with every regulated shipment. This is same Regulation set present in the request that is played back in response.  Valid values:ADR49CFRIATATDG</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
+        public string? RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; AdditionalData?.Remove("RegulationSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
         private string? _explicitNullValueRegulationSet = default!;
 #nullable restore
 #else
-        public string RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
+        public string RegulationSet { get => _explicitNullValueRegulationSet; set { _explicitNullValueRegulationSet = value; AdditionalData?.Remove("RegulationSet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegulationSet"); else _explicitNullProperties?.Remove("RegulationSet"); } }
         private string _explicitNullValueRegulationSet = default!;
 #endif
         /// <summary>Contains Dangerous Goods Utility Acceptance Audit Pre-check response components.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>UPS service type. This is same UPS Service present in the request that is played back in response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService? Service { get => _explicitNullValueService; set { _explicitNullValueService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService? Service { get => _explicitNullValueService; set { _explicitNullValueService = value; AdditionalData?.Remove("Service"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService? _explicitNullValueService = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService Service { get => _explicitNullValueService; set { _explicitNullValueService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService Service { get => _explicitNullValueService; set { _explicitNullValueService = value; AdditionalData?.Remove("Service"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Service"); else _explicitNullProperties?.Remove("Service"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AcceptanceAuditPreCheckResponseService _explicitNullValueService = default!;
 #endif
         /// <summary>Shipper&apos;s six digit account number. This is same account number present in the request that is played back in response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
+        public string? ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; AdditionalData?.Remove("ShipperNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
         private string? _explicitNullValueShipperNumber = default!;
 #nullable restore
 #else
-        public string ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
+        public string ShipperNumber { get => _explicitNullValueShipperNumber; set { _explicitNullValueShipperNumber = value; AdditionalData?.Remove("ShipperNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperNumber"); else _explicitNullProperties?.Remove("ShipperNumber"); } }
         private string _explicitNullValueShipperNumber = default!;
 #endif
         /// <summary>

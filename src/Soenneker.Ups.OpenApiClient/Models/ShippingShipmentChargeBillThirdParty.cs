@@ -18,20 +18,24 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
-            if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
-            if (parseNode.GetChildNode("CertifiedElectronicMail") is { } nullNodeCertifiedElectronicMail && nullNodeCertifiedElectronicMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertifiedElectronicMail = null;
-            if (parseNode.GetChildNode("InterchangeSystemCode") is { } nullNodeInterchangeSystemCode && nullNodeInterchangeSystemCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterchangeSystemCode = null;
+            if (parseNode.GetChildNode("AccountNumber") is null) { _explicitNullValueAccountNumber = default!; _explicitNullProperties?.Remove("AccountNumber"); }
+            else if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("Address") is null) { _explicitNullValueAddress = default!; _explicitNullProperties?.Remove("Address"); }
+            else if (parseNode.GetChildNode("Address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("CertifiedElectronicMail") is null) { _explicitNullValueCertifiedElectronicMail = default!; _explicitNullProperties?.Remove("CertifiedElectronicMail"); }
+            else if (parseNode.GetChildNode("CertifiedElectronicMail") is { } nullNodeCertifiedElectronicMail && nullNodeCertifiedElectronicMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertifiedElectronicMail = null;
+            if (parseNode.GetChildNode("InterchangeSystemCode") is null) { _explicitNullValueInterchangeSystemCode = default!; _explicitNullProperties?.Remove("InterchangeSystemCode"); }
+            else if (parseNode.GetChildNode("InterchangeSystemCode") is { } nullNodeInterchangeSystemCode && nullNodeInterchangeSystemCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterchangeSystemCode = null;
         }
 
         /// <summary>The UPS account number of the third party shipper.  The account must be a valid UPS account number that is active. For US, PR and CA accounts, the account must be either a daily pickup account, an occasional account, or a customer B.I.N account, or a drop shipper account. All other accounts must be either a daily pickup account, an occasional account, a drop shipper account, or a non-shipping account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("AccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
         private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("AccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
         private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,31 +43,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for additional information for the third party UPS accounts address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingBillThirdPartyAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingBillThirdPartyAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShippingBillThirdPartyAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingBillThirdPartyAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShippingBillThirdPartyAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("Address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Address"); else _explicitNullProperties?.Remove("Address"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShippingBillThirdPartyAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>Posta Elettronica Certificata (PEC) which is the recipient code for the customers certified electronic mail value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CertifiedElectronicMail { get => _explicitNullValueCertifiedElectronicMail; set { _explicitNullValueCertifiedElectronicMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertifiedElectronicMail"); else _explicitNullProperties?.Remove("CertifiedElectronicMail"); } }
+        public string? CertifiedElectronicMail { get => _explicitNullValueCertifiedElectronicMail; set { _explicitNullValueCertifiedElectronicMail = value; AdditionalData?.Remove("CertifiedElectronicMail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertifiedElectronicMail"); else _explicitNullProperties?.Remove("CertifiedElectronicMail"); } }
         private string? _explicitNullValueCertifiedElectronicMail = default!;
 #nullable restore
 #else
-        public string CertifiedElectronicMail { get => _explicitNullValueCertifiedElectronicMail; set { _explicitNullValueCertifiedElectronicMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertifiedElectronicMail"); else _explicitNullProperties?.Remove("CertifiedElectronicMail"); } }
+        public string CertifiedElectronicMail { get => _explicitNullValueCertifiedElectronicMail; set { _explicitNullValueCertifiedElectronicMail = value; AdditionalData?.Remove("CertifiedElectronicMail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertifiedElectronicMail"); else _explicitNullProperties?.Remove("CertifiedElectronicMail"); } }
         private string _explicitNullValueCertifiedElectronicMail = default!;
 #endif
         /// <summary>Sistema Di Interscambio(SDI) which is the recipient code for the customer&apos;s interchange value or Interchange System Code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InterchangeSystemCode { get => _explicitNullValueInterchangeSystemCode; set { _explicitNullValueInterchangeSystemCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InterchangeSystemCode"); else _explicitNullProperties?.Remove("InterchangeSystemCode"); } }
+        public string? InterchangeSystemCode { get => _explicitNullValueInterchangeSystemCode; set { _explicitNullValueInterchangeSystemCode = value; AdditionalData?.Remove("InterchangeSystemCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InterchangeSystemCode"); else _explicitNullProperties?.Remove("InterchangeSystemCode"); } }
         private string? _explicitNullValueInterchangeSystemCode = default!;
 #nullable restore
 #else
-        public string InterchangeSystemCode { get => _explicitNullValueInterchangeSystemCode; set { _explicitNullValueInterchangeSystemCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InterchangeSystemCode"); else _explicitNullProperties?.Remove("InterchangeSystemCode"); } }
+        public string InterchangeSystemCode { get => _explicitNullValueInterchangeSystemCode; set { _explicitNullValueInterchangeSystemCode = value; AdditionalData?.Remove("InterchangeSystemCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InterchangeSystemCode"); else _explicitNullProperties?.Remove("InterchangeSystemCode"); } }
         private string _explicitNullValueInterchangeSystemCode = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PackageNumber") is { } nullNodePackageNumber && nullNodePackageNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageNumber = null;
-            if (parseNode.GetChildNode("ProductAmount") is { } nullNodeProductAmount && nullNodeProductAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductAmount = null;
-            if (parseNode.GetChildNode("ProductNote") is { } nullNodeProductNote && nullNodeProductNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductNote = null;
+            if (parseNode.GetChildNode("PackageNumber") is null) { _explicitNullValuePackageNumber = default!; _explicitNullProperties?.Remove("PackageNumber"); }
+            else if (parseNode.GetChildNode("PackageNumber") is { } nullNodePackageNumber && nullNodePackageNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageNumber = null;
+            if (parseNode.GetChildNode("ProductAmount") is null) { _explicitNullValueProductAmount = default!; _explicitNullProperties?.Remove("ProductAmount"); }
+            else if (parseNode.GetChildNode("ProductAmount") is { } nullNodeProductAmount && nullNodeProductAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductAmount = null;
+            if (parseNode.GetChildNode("ProductNote") is null) { _explicitNullValueProductNote = default!; _explicitNullProperties?.Remove("ProductNote"); }
+            else if (parseNode.GetChildNode("ProductNote") is { } nullNodeProductNote && nullNodeProductNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductNote = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Package number the product should be allocated to ont he packing list.  Required for packaging list and Air Freight Packing list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageNumber { get => _explicitNullValuePackageNumber; set { _explicitNullValuePackageNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageNumber"); else _explicitNullProperties?.Remove("PackageNumber"); } }
+        public string? PackageNumber { get => _explicitNullValuePackageNumber; set { _explicitNullValuePackageNumber = value; AdditionalData?.Remove("PackageNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageNumber"); else _explicitNullProperties?.Remove("PackageNumber"); } }
         private string? _explicitNullValuePackageNumber = default!;
 #nullable restore
 #else
-        public string PackageNumber { get => _explicitNullValuePackageNumber; set { _explicitNullValuePackageNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageNumber"); else _explicitNullProperties?.Remove("PackageNumber"); } }
+        public string PackageNumber { get => _explicitNullValuePackageNumber; set { _explicitNullValuePackageNumber = value; AdditionalData?.Remove("PackageNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageNumber"); else _explicitNullProperties?.Remove("PackageNumber"); } }
         private string _explicitNullValuePackageNumber = default!;
 #endif
         /// <summary>Amount of Product associated with a package.  Required for packaging list and Air Freight Packing list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductAmount { get => _explicitNullValueProductAmount; set { _explicitNullValueProductAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductAmount"); else _explicitNullProperties?.Remove("ProductAmount"); } }
+        public string? ProductAmount { get => _explicitNullValueProductAmount; set { _explicitNullValueProductAmount = value; AdditionalData?.Remove("ProductAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductAmount"); else _explicitNullProperties?.Remove("ProductAmount"); } }
         private string? _explicitNullValueProductAmount = default!;
 #nullable restore
 #else
-        public string ProductAmount { get => _explicitNullValueProductAmount; set { _explicitNullValueProductAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductAmount"); else _explicitNullProperties?.Remove("ProductAmount"); } }
+        public string ProductAmount { get => _explicitNullValueProductAmount; set { _explicitNullValueProductAmount = value; AdditionalData?.Remove("ProductAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductAmount"); else _explicitNullProperties?.Remove("ProductAmount"); } }
         private string _explicitNullValueProductAmount = default!;
 #endif
         /// <summary>Product Note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductNote { get => _explicitNullValueProductNote; set { _explicitNullValueProductNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductNote"); else _explicitNullProperties?.Remove("ProductNote"); } }
+        public string? ProductNote { get => _explicitNullValueProductNote; set { _explicitNullValueProductNote = value; AdditionalData?.Remove("ProductNote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductNote"); else _explicitNullProperties?.Remove("ProductNote"); } }
         private string? _explicitNullValueProductNote = default!;
 #nullable restore
 #else
-        public string ProductNote { get => _explicitNullValueProductNote; set { _explicitNullValueProductNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductNote"); else _explicitNullProperties?.Remove("ProductNote"); } }
+        public string ProductNote { get => _explicitNullValueProductNote; set { _explicitNullValueProductNote = value; AdditionalData?.Remove("ProductNote"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProductNote"); else _explicitNullProperties?.Remove("ProductNote"); } }
         private string _explicitNullValueProductNote = default!;
 #endif
         /// <summary>

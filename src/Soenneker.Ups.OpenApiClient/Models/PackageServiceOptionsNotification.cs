@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("EMail") is { } nullNodeEMail && nullNodeEMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMail = null;
-            if (parseNode.GetChildNode("NotificationCode") is { } nullNodeNotificationCode && nullNodeNotificationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationCode = null;
+            if (parseNode.GetChildNode("EMail") is null) { _explicitNullValueEMail = default!; _explicitNullProperties?.Remove("EMail"); }
+            else if (parseNode.GetChildNode("EMail") is { } nullNodeEMail && nullNodeEMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMail = null;
+            if (parseNode.GetChildNode("NotificationCode") is null) { _explicitNullValueNotificationCode = default!; _explicitNullProperties?.Remove("NotificationCode"); }
+            else if (parseNode.GetChildNode("NotificationCode") is { } nullNodeNotificationCode && nullNodeNotificationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for the e-mail message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotificationEMail? EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotificationEMail? EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; AdditionalData?.Remove("EMail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotificationEMail? _explicitNullValueEMail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotificationEMail EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotificationEMail EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; AdditionalData?.Remove("EMail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PackageServiceOptionsNotificationEMail _explicitNullValueEMail = default!;
 #endif
         /// <summary>Notification Code.  Valid values:3 - Receiver Return Notification6 - QV Email Notification7 - QV Exception Notification8 - QV Delivery Notification For Mail Innovations forward shipments, QV Email Notifications are allowed for First Class, Priority Mail, and Expedited Mail Innovation services.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationCode { get => _explicitNullValueNotificationCode; set { _explicitNullValueNotificationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationCode"); else _explicitNullProperties?.Remove("NotificationCode"); } }
+        public string? NotificationCode { get => _explicitNullValueNotificationCode; set { _explicitNullValueNotificationCode = value; AdditionalData?.Remove("NotificationCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationCode"); else _explicitNullProperties?.Remove("NotificationCode"); } }
         private string? _explicitNullValueNotificationCode = default!;
 #nullable restore
 #else
-        public string NotificationCode { get => _explicitNullValueNotificationCode; set { _explicitNullValueNotificationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationCode"); else _explicitNullProperties?.Remove("NotificationCode"); } }
+        public string NotificationCode { get => _explicitNullValueNotificationCode; set { _explicitNullValueNotificationCode = value; AdditionalData?.Remove("NotificationCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationCode"); else _explicitNullProperties?.Remove("NotificationCode"); } }
         private string _explicitNullValueNotificationCode = default!;
 #endif
         /// <summary>

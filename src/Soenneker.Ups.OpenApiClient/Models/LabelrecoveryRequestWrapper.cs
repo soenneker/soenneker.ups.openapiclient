@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LabelRecoveryRequest") is { } nullNodeLabelRecoveryRequest && nullNodeLabelRecoveryRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelRecoveryRequest = null;
+            if (parseNode.GetChildNode("LabelRecoveryRequest") is null) { _explicitNullValueLabelRecoveryRequest = default!; _explicitNullProperties?.Remove("LabelRecoveryRequest"); }
+            else if (parseNode.GetChildNode("LabelRecoveryRequest") is { } nullNodeLabelRecoveryRequest && nullNodeLabelRecoveryRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelRecoveryRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Request for obtaining the Label for the return shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest? LabelRecoveryRequest { get => _explicitNullValueLabelRecoveryRequest; set { _explicitNullValueLabelRecoveryRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelRecoveryRequest"); else _explicitNullProperties?.Remove("LabelRecoveryRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest? LabelRecoveryRequest { get => _explicitNullValueLabelRecoveryRequest; set { _explicitNullValueLabelRecoveryRequest = value; AdditionalData?.Remove("LabelRecoveryRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelRecoveryRequest"); else _explicitNullProperties?.Remove("LabelRecoveryRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest? _explicitNullValueLabelRecoveryRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest LabelRecoveryRequest { get => _explicitNullValueLabelRecoveryRequest; set { _explicitNullValueLabelRecoveryRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelRecoveryRequest"); else _explicitNullProperties?.Remove("LabelRecoveryRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest LabelRecoveryRequest { get => _explicitNullValueLabelRecoveryRequest; set { _explicitNullValueLabelRecoveryRequest = value; AdditionalData?.Remove("LabelRecoveryRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LabelRecoveryRequest"); else _explicitNullProperties?.Remove("LabelRecoveryRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LabelRecoveryRequest _explicitNullValueLabelRecoveryRequest = default!;
 #endif
         /// <summary>

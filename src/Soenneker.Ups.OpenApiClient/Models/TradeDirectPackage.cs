@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("handlingUnits") is { } nullNodeHandlingUnits && nullNodeHandlingUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingUnits = null;
-            if (parseNode.GetChildNode("numberOfIdenticalUnits") is { } nullNodeNumberOfIdenticalUnits && nullNodeNumberOfIdenticalUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfIdenticalUnits = null;
+            if (parseNode.GetChildNode("handlingUnits") is null) { _explicitNullValueHandlingUnits = default!; _explicitNullProperties?.Remove("handlingUnits"); }
+            else if (parseNode.GetChildNode("handlingUnits") is { } nullNodeHandlingUnits && nullNodeHandlingUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingUnits = null;
+            if (parseNode.GetChildNode("numberOfIdenticalUnits") is null) { _explicitNullValueNumberOfIdenticalUnits = default!; _explicitNullProperties?.Remove("numberOfIdenticalUnits"); }
+            else if (parseNode.GetChildNode("numberOfIdenticalUnits") is { } nullNodeNumberOfIdenticalUnits && nullNodeNumberOfIdenticalUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfIdenticalUnits = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Used to provide information about the handling units in the package/ltl.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits? HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingUnits"); else _explicitNullProperties?.Remove("handlingUnits"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits? HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; AdditionalData?.Remove("handlingUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingUnits"); else _explicitNullProperties?.Remove("handlingUnits"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits? _explicitNullValueHandlingUnits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingUnits"); else _explicitNullProperties?.Remove("handlingUnits"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits HandlingUnits { get => _explicitNullValueHandlingUnits; set { _explicitNullValueHandlingUnits = value; AdditionalData?.Remove("handlingUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handlingUnits"); else _explicitNullProperties?.Remove("handlingUnits"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackageHandlingUnits _explicitNullValueHandlingUnits = default!;
 #endif
         /// <summary>Number of identical units in the package/ltl.</summary>
-        public int? NumberOfIdenticalUnits { get => _explicitNullValueNumberOfIdenticalUnits; set { _explicitNullValueNumberOfIdenticalUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberOfIdenticalUnits"); else _explicitNullProperties?.Remove("numberOfIdenticalUnits"); } }
+        public int? NumberOfIdenticalUnits { get => _explicitNullValueNumberOfIdenticalUnits; set { _explicitNullValueNumberOfIdenticalUnits = value; AdditionalData?.Remove("numberOfIdenticalUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberOfIdenticalUnits"); else _explicitNullProperties?.Remove("numberOfIdenticalUnits"); } }
         private int? _explicitNullValueNumberOfIdenticalUnits = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.TradeDirectPackage"/> and sets the default values.

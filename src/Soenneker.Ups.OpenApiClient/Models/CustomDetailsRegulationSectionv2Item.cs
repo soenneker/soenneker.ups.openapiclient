@@ -17,8 +17,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sectionKey") is { } nullNodeSectionKey && nullNodeSectionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionKey = null;
-            if (parseNode.GetChildNode("sectionName") is { } nullNodeSectionName && nullNodeSectionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionName = null;
+            if (parseNode.GetChildNode("sectionKey") is null) { _explicitNullValueSectionKey = default!; _explicitNullProperties?.Remove("sectionKey"); }
+            else if (parseNode.GetChildNode("sectionKey") is { } nullNodeSectionKey && nullNodeSectionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionKey = null;
+            if (parseNode.GetChildNode("sectionName") is null) { _explicitNullValueSectionName = default!; _explicitNullProperties?.Remove("sectionName"); }
+            else if (parseNode.GetChildNode("sectionName") is { } nullNodeSectionName && nullNodeSectionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Identifier for the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SectionKey { get => _explicitNullValueSectionKey; set { _explicitNullValueSectionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionKey"); else _explicitNullProperties?.Remove("sectionKey"); } }
+        public string? SectionKey { get => _explicitNullValueSectionKey; set { _explicitNullValueSectionKey = value; AdditionalData?.Remove("sectionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionKey"); else _explicitNullProperties?.Remove("sectionKey"); } }
         private string? _explicitNullValueSectionKey = default!;
 #nullable restore
 #else
-        public string SectionKey { get => _explicitNullValueSectionKey; set { _explicitNullValueSectionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionKey"); else _explicitNullProperties?.Remove("sectionKey"); } }
+        public string SectionKey { get => _explicitNullValueSectionKey; set { _explicitNullValueSectionKey = value; AdditionalData?.Remove("sectionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionKey"); else _explicitNullProperties?.Remove("sectionKey"); } }
         private string _explicitNullValueSectionKey = default!;
 #endif
         /// <summary>Human-readable regulationSection label. Conditionally required when sectionKey is not present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SectionName { get => _explicitNullValueSectionName; set { _explicitNullValueSectionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionName"); else _explicitNullProperties?.Remove("sectionName"); } }
+        public string? SectionName { get => _explicitNullValueSectionName; set { _explicitNullValueSectionName = value; AdditionalData?.Remove("sectionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionName"); else _explicitNullProperties?.Remove("sectionName"); } }
         private string? _explicitNullValueSectionName = default!;
 #nullable restore
 #else
-        public string SectionName { get => _explicitNullValueSectionName; set { _explicitNullValueSectionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionName"); else _explicitNullProperties?.Remove("sectionName"); } }
+        public string SectionName { get => _explicitNullValueSectionName; set { _explicitNullValueSectionName = value; AdditionalData?.Remove("sectionName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionName"); else _explicitNullProperties?.Remove("sectionName"); } }
         private string _explicitNullValueSectionName = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("primaryInformation") is { } nullNodePrimaryInformation && nullNodePrimaryInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryInformation = null;
+            if (parseNode.GetChildNode("primaryInformation") is null) { _explicitNullValuePrimaryInformation = default!; _explicitNullProperties?.Remove("primaryInformation"); }
+            else if (parseNode.GetChildNode("primaryInformation") is { } nullNodePrimaryInformation && nullNodePrimaryInformation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryInformation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Primary information and detailed tracking data for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation? PrimaryInformation { get => _explicitNullValuePrimaryInformation; set { _explicitNullValuePrimaryInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryInformation"); else _explicitNullProperties?.Remove("primaryInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation? PrimaryInformation { get => _explicitNullValuePrimaryInformation; set { _explicitNullValuePrimaryInformation = value; AdditionalData?.Remove("primaryInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryInformation"); else _explicitNullProperties?.Remove("primaryInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation? _explicitNullValuePrimaryInformation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation PrimaryInformation { get => _explicitNullValuePrimaryInformation; set { _explicitNullValuePrimaryInformation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryInformation"); else _explicitNullProperties?.Remove("primaryInformation"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation PrimaryInformation { get => _explicitNullValuePrimaryInformation; set { _explicitNullValuePrimaryInformation = value; AdditionalData?.Remove("primaryInformation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryInformation"); else _explicitNullProperties?.Remove("primaryInformation"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloFullTrackingDetailsResponseV1ResponsePrimaryInformation _explicitNullValuePrimaryInformation = default!;
 #endif
         /// <summary>

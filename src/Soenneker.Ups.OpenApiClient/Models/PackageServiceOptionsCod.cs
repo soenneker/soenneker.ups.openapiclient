@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CODAmount") is { } nullNodeCODAmount && nullNodeCODAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODAmount = null;
-            if (parseNode.GetChildNode("CODCode") is { } nullNodeCODCode && nullNodeCODCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODCode = null;
+            if (parseNode.GetChildNode("CODAmount") is null) { _explicitNullValueCODAmount = default!; _explicitNullProperties?.Remove("CODAmount"); }
+            else if (parseNode.GetChildNode("CODAmount") is { } nullNodeCODAmount && nullNodeCODAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODAmount = null;
+            if (parseNode.GetChildNode("CODCode") is null) { _explicitNullValueCODCode = default!; _explicitNullProperties?.Remove("CODCode"); }
+            else if (parseNode.GetChildNode("CODCode") is { } nullNodeCODCode && nullNodeCODCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CODCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The amount of the COD that is to be collected for the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount? CODAmount { get => _explicitNullValueCODAmount; set { _explicitNullValueCODAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODAmount"); else _explicitNullProperties?.Remove("CODAmount"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount? CODAmount { get => _explicitNullValueCODAmount; set { _explicitNullValueCODAmount = value; AdditionalData?.Remove("CODAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODAmount"); else _explicitNullProperties?.Remove("CODAmount"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount? _explicitNullValueCODAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount CODAmount { get => _explicitNullValueCODAmount; set { _explicitNullValueCODAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODAmount"); else _explicitNullProperties?.Remove("CODAmount"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount CODAmount { get => _explicitNullValueCODAmount; set { _explicitNullValueCODAmount = value; AdditionalData?.Remove("CODAmount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODAmount"); else _explicitNullProperties?.Remove("CODAmount"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.CodCodAmount _explicitNullValueCODAmount = default!;
 #endif
         /// <summary>The code associated with the type of COD. Valid values:1 - Regular COD2 - Express COD3 - Tagless COD</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CODCode { get => _explicitNullValueCODCode; set { _explicitNullValueCODCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODCode"); else _explicitNullProperties?.Remove("CODCode"); } }
+        public string? CODCode { get => _explicitNullValueCODCode; set { _explicitNullValueCODCode = value; AdditionalData?.Remove("CODCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODCode"); else _explicitNullProperties?.Remove("CODCode"); } }
         private string? _explicitNullValueCODCode = default!;
 #nullable restore
 #else
-        public string CODCode { get => _explicitNullValueCODCode; set { _explicitNullValueCODCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODCode"); else _explicitNullProperties?.Remove("CODCode"); } }
+        public string CODCode { get => _explicitNullValueCODCode; set { _explicitNullValueCODCode = value; AdditionalData?.Remove("CODCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CODCode"); else _explicitNullProperties?.Remove("CODCode"); } }
         private string _explicitNullValueCODCode = default!;
 #endif
         /// <summary>

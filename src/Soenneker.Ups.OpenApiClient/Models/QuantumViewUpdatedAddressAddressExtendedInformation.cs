@@ -17,9 +17,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("High") is { } nullNodeHigh && nullNodeHigh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) High = null;
-            if (parseNode.GetChildNode("Low") is { } nullNodeLow && nullNodeLow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Low = null;
-            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("High") is null) { _explicitNullValueHigh = default!; _explicitNullProperties?.Remove("High"); }
+            else if (parseNode.GetChildNode("High") is { } nullNodeHigh && nullNodeHigh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) High = null;
+            if (parseNode.GetChildNode("Low") is null) { _explicitNullValueLow = default!; _explicitNullProperties?.Remove("Low"); }
+            else if (parseNode.GetChildNode("Low") is { } nullNodeLow && nullNodeLow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Low = null;
+            if (parseNode.GetChildNode("Type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("Type"); }
+            else if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The higher limit associated with the extended address type. It will be returned if there is any update due to exception.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? High { get => _explicitNullValueHigh; set { _explicitNullValueHigh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("High"); else _explicitNullProperties?.Remove("High"); } }
+        public string? High { get => _explicitNullValueHigh; set { _explicitNullValueHigh = value; AdditionalData?.Remove("High"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("High"); else _explicitNullProperties?.Remove("High"); } }
         private string? _explicitNullValueHigh = default!;
 #nullable restore
 #else
-        public string High { get => _explicitNullValueHigh; set { _explicitNullValueHigh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("High"); else _explicitNullProperties?.Remove("High"); } }
+        public string High { get => _explicitNullValueHigh; set { _explicitNullValueHigh = value; AdditionalData?.Remove("High"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("High"); else _explicitNullProperties?.Remove("High"); } }
         private string _explicitNullValueHigh = default!;
 #endif
         /// <summary>The lower limit associated with the extended address type. It will be returned if there is any update due to exception.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Low { get => _explicitNullValueLow; set { _explicitNullValueLow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Low"); else _explicitNullProperties?.Remove("Low"); } }
+        public string? Low { get => _explicitNullValueLow; set { _explicitNullValueLow = value; AdditionalData?.Remove("Low"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Low"); else _explicitNullProperties?.Remove("Low"); } }
         private string? _explicitNullValueLow = default!;
 #nullable restore
 #else
-        public string Low { get => _explicitNullValueLow; set { _explicitNullValueLow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Low"); else _explicitNullProperties?.Remove("Low"); } }
+        public string Low { get => _explicitNullValueLow; set { _explicitNullValueLow = value; AdditionalData?.Remove("Low"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Low"); else _explicitNullProperties?.Remove("Low"); } }
         private string _explicitNullValueLow = default!;
 #endif
         /// <summary>Allows for secondary address information such as s suite or apartment. It will be returned if there is any update due to exception.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>

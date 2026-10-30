@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LocatorResponse") is { } nullNodeLocatorResponse && nullNodeLocatorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocatorResponse = null;
+            if (parseNode.GetChildNode("LocatorResponse") is null) { _explicitNullValueLocatorResponse = default!; _explicitNullProperties?.Remove("LocatorResponse"); }
+            else if (parseNode.GetChildNode("LocatorResponse") is { } nullNodeLocatorResponse && nullNodeLocatorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocatorResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for LocatorResponse.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse? LocatorResponse { get => _explicitNullValueLocatorResponse; set { _explicitNullValueLocatorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocatorResponse"); else _explicitNullProperties?.Remove("LocatorResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse? LocatorResponse { get => _explicitNullValueLocatorResponse; set { _explicitNullValueLocatorResponse = value; AdditionalData?.Remove("LocatorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocatorResponse"); else _explicitNullProperties?.Remove("LocatorResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse? _explicitNullValueLocatorResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse LocatorResponse { get => _explicitNullValueLocatorResponse; set { _explicitNullValueLocatorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocatorResponse"); else _explicitNullProperties?.Remove("LocatorResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse LocatorResponse { get => _explicitNullValueLocatorResponse; set { _explicitNullValueLocatorResponse = value; AdditionalData?.Remove("LocatorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LocatorResponse"); else _explicitNullProperties?.Remove("LocatorResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LocatorResponse _explicitNullValueLocatorResponse = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("perfStats") is { } nullNodePerfStats && nullNodePerfStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerfStats = null;
-            if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
-            if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
+            if (parseNode.GetChildNode("perfStats") is null) { _explicitNullValuePerfStats = default!; _explicitNullProperties?.Remove("perfStats"); }
+            else if (parseNode.GetChildNode("perfStats") is { } nullNodePerfStats && nullNodePerfStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerfStats = null;
+            if (parseNode.GetChildNode("shipment") is null) { _explicitNullValueShipment = default!; _explicitNullProperties?.Remove("shipment"); }
+            else if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("transID") is null) { _explicitNullValueTransID = default!; _explicitNullProperties?.Remove("transID"); }
+            else if (parseNode.GetChildNode("transID") is { } nullNodeTransID && nullNodeTransID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransID = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The perfStats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; AdditionalData?.Remove("perfStats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats? _explicitNullValuePerfStats = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats PerfStats { get => _explicitNullValuePerfStats; set { _explicitNullValuePerfStats = value; AdditionalData?.Remove("perfStats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("perfStats"); else _explicitNullProperties?.Remove("perfStats"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AlPerfStats _explicitNullValuePerfStats = default!;
 #endif
         /// <summary>This object contains metadata about the shipment and includes the response objects for each of the three operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ExportAssureResponseShipment _explicitNullValueShipment = default!;
 #endif
         /// <summary>The unique, reference identifier that correlates an API request with its response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        public string? TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; AdditionalData?.Remove("transID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
         private string? _explicitNullValueTransID = default!;
 #nullable restore
 #else
-        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
+        public string TransID { get => _explicitNullValueTransID; set { _explicitNullValueTransID = value; AdditionalData?.Remove("transID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transID"); else _explicitNullProperties?.Remove("transID"); } }
         private string _explicitNullValueTransID = default!;
 #endif
         /// <summary>

@@ -18,28 +18,40 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
-            if (parseNode.GetChildNode("manifest") is { } nullNodeManifest && nullNodeManifest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Manifest = null;
-            if (parseNode.GetChildNode("manifestFormat") is { } nullNodeManifestFormat && nullNodeManifestFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestFormat = null;
-            if (parseNode.GetChildNode("manifestNumber") is { } nullNodeManifestNumber && nullNodeManifestNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestNumber = null;
-            if (parseNode.GetChildNode("manifestPDF") is { } nullNodeManifestPDF && nullNodeManifestPDF.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestPDF = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("pickupDate") is { } nullNodePickupDate && nullNodePickupDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDate = null;
-            if (parseNode.GetChildNode("pieceCount") is { } nullNodePieceCount && nullNodePieceCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PieceCount = null;
-            if (parseNode.GetChildNode("shipmentCount") is { } nullNodeShipmentCount && nullNodeShipmentCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCount = null;
-            if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
-            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
-            if (parseNode.GetChildNode("weightUnit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
+            if (parseNode.GetChildNode("account") is null) { _explicitNullValueAccount = default!; _explicitNullProperties?.Remove("account"); }
+            else if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
+            if (parseNode.GetChildNode("manifest") is null) { _explicitNullValueManifest = default!; _explicitNullProperties?.Remove("manifest"); }
+            else if (parseNode.GetChildNode("manifest") is { } nullNodeManifest && nullNodeManifest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Manifest = null;
+            if (parseNode.GetChildNode("manifestFormat") is null) { _explicitNullValueManifestFormat = default!; _explicitNullProperties?.Remove("manifestFormat"); }
+            else if (parseNode.GetChildNode("manifestFormat") is { } nullNodeManifestFormat && nullNodeManifestFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestFormat = null;
+            if (parseNode.GetChildNode("manifestNumber") is null) { _explicitNullValueManifestNumber = default!; _explicitNullProperties?.Remove("manifestNumber"); }
+            else if (parseNode.GetChildNode("manifestNumber") is { } nullNodeManifestNumber && nullNodeManifestNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestNumber = null;
+            if (parseNode.GetChildNode("manifestPDF") is null) { _explicitNullValueManifestPDF = default!; _explicitNullProperties?.Remove("manifestPDF"); }
+            else if (parseNode.GetChildNode("manifestPDF") is { } nullNodeManifestPDF && nullNodeManifestPDF.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestPDF = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("pickupDate") is null) { _explicitNullValuePickupDate = default!; _explicitNullProperties?.Remove("pickupDate"); }
+            else if (parseNode.GetChildNode("pickupDate") is { } nullNodePickupDate && nullNodePickupDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDate = null;
+            if (parseNode.GetChildNode("pieceCount") is null) { _explicitNullValuePieceCount = default!; _explicitNullProperties?.Remove("pieceCount"); }
+            else if (parseNode.GetChildNode("pieceCount") is { } nullNodePieceCount && nullNodePieceCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PieceCount = null;
+            if (parseNode.GetChildNode("shipmentCount") is null) { _explicitNullValueShipmentCount = default!; _explicitNullProperties?.Remove("shipmentCount"); }
+            else if (parseNode.GetChildNode("shipmentCount") is { } nullNodeShipmentCount && nullNodeShipmentCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentCount = null;
+            if (parseNode.GetChildNode("warnings") is null) { _explicitNullValueWarnings = default!; _explicitNullProperties?.Remove("warnings"); }
+            else if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
+            if (parseNode.GetChildNode("weight") is null) { _explicitNullValueWeight = default!; _explicitNullProperties?.Remove("weight"); }
+            else if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("weightUnit") is null) { _explicitNullValueWeightUnit = default!; _explicitNullProperties?.Remove("weightUnit"); }
+            else if (parseNode.GetChildNode("weightUnit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
         }
 
         /// <summary>The UPS Freight Account Number that identifies the Shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public string? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private string? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public string Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public string Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private string _explicitNullValueAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -47,83 +59,83 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The manifest data that is returned if the format chosen is data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest? Manifest { get => _explicitNullValueManifest; set { _explicitNullValueManifest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifest"); else _explicitNullProperties?.Remove("manifest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest? Manifest { get => _explicitNullValueManifest; set { _explicitNullValueManifest = value; AdditionalData?.Remove("manifest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifest"); else _explicitNullProperties?.Remove("manifest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest? _explicitNullValueManifest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest Manifest { get => _explicitNullValueManifest; set { _explicitNullValueManifest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifest"); else _explicitNullProperties?.Remove("manifest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest Manifest { get => _explicitNullValueManifest; set { _explicitNullValueManifest = value; AdditionalData?.Remove("manifest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifest"); else _explicitNullProperties?.Remove("manifest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipmentDataResponseV1ResponseManifest _explicitNullValueManifest = default!;
 #endif
         /// <summary>The output format of the manifest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ManifestFormat { get => _explicitNullValueManifestFormat; set { _explicitNullValueManifestFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestFormat"); else _explicitNullProperties?.Remove("manifestFormat"); } }
+        public string? ManifestFormat { get => _explicitNullValueManifestFormat; set { _explicitNullValueManifestFormat = value; AdditionalData?.Remove("manifestFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestFormat"); else _explicitNullProperties?.Remove("manifestFormat"); } }
         private string? _explicitNullValueManifestFormat = default!;
 #nullable restore
 #else
-        public string ManifestFormat { get => _explicitNullValueManifestFormat; set { _explicitNullValueManifestFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestFormat"); else _explicitNullProperties?.Remove("manifestFormat"); } }
+        public string ManifestFormat { get => _explicitNullValueManifestFormat; set { _explicitNullValueManifestFormat = value; AdditionalData?.Remove("manifestFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestFormat"); else _explicitNullProperties?.Remove("manifestFormat"); } }
         private string _explicitNullValueManifestFormat = default!;
 #endif
         /// <summary>The unique number to identify the manifest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestNumber"); else _explicitNullProperties?.Remove("manifestNumber"); } }
+        public string? ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; AdditionalData?.Remove("manifestNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestNumber"); else _explicitNullProperties?.Remove("manifestNumber"); } }
         private string? _explicitNullValueManifestNumber = default!;
 #nullable restore
 #else
-        public string ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestNumber"); else _explicitNullProperties?.Remove("manifestNumber"); } }
+        public string ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; AdditionalData?.Remove("manifestNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestNumber"); else _explicitNullProperties?.Remove("manifestNumber"); } }
         private string _explicitNullValueManifestNumber = default!;
 #endif
         /// <summary>The base64 string representing the byte array of the generated PDF</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? ManifestPDF { get => _explicitNullValueManifestPDF; set { _explicitNullValueManifestPDF = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestPDF"); else _explicitNullProperties?.Remove("manifestPDF"); } }
+        public byte[]? ManifestPDF { get => _explicitNullValueManifestPDF; set { _explicitNullValueManifestPDF = value; AdditionalData?.Remove("manifestPDF"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestPDF"); else _explicitNullProperties?.Remove("manifestPDF"); } }
         private byte[]? _explicitNullValueManifestPDF = default!;
 #nullable restore
 #else
-        public byte[] ManifestPDF { get => _explicitNullValueManifestPDF; set { _explicitNullValueManifestPDF = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestPDF"); else _explicitNullProperties?.Remove("manifestPDF"); } }
+        public byte[] ManifestPDF { get => _explicitNullValueManifestPDF; set { _explicitNullValueManifestPDF = value; AdditionalData?.Remove("manifestPDF"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifestPDF"); else _explicitNullProperties?.Remove("manifestPDF"); } }
         private byte[] _explicitNullValueManifestPDF = default!;
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The pickupDate property</summary>
-        public Date? PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDate"); else _explicitNullProperties?.Remove("pickupDate"); } }
+        public Date? PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; AdditionalData?.Remove("pickupDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDate"); else _explicitNullProperties?.Remove("pickupDate"); } }
         private Date? _explicitNullValuePickupDate = default!;
         /// <summary>The count of all pieces in all the shipments submitted</summary>
-        public int? PieceCount { get => _explicitNullValuePieceCount; set { _explicitNullValuePieceCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pieceCount"); else _explicitNullProperties?.Remove("pieceCount"); } }
+        public int? PieceCount { get => _explicitNullValuePieceCount; set { _explicitNullValuePieceCount = value; AdditionalData?.Remove("pieceCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pieceCount"); else _explicitNullProperties?.Remove("pieceCount"); } }
         private int? _explicitNullValuePieceCount = default!;
         /// <summary>The count of all Shipments that are submitted for processing</summary>
-        public int? ShipmentCount { get => _explicitNullValueShipmentCount; set { _explicitNullValueShipmentCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentCount"); else _explicitNullProperties?.Remove("shipmentCount"); } }
+        public int? ShipmentCount { get => _explicitNullValueShipmentCount; set { _explicitNullValueShipmentCount = value; AdditionalData?.Remove("shipmentCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentCount"); else _explicitNullProperties?.Remove("shipmentCount"); } }
         private int? _explicitNullValueShipmentCount = default!;
         /// <summary>Unbounded array containing one or more warning objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item>? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloWarningArrayV1Item> _explicitNullValueWarnings = default!;
 #endif
         /// <summary>The total weight of all the shipments</summary>
-        public float? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        public float? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
         private float? _explicitNullValueWeight = default!;
         /// <summary>The unit used to measure the weight</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
+        public string? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; AdditionalData?.Remove("weightUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
         private string? _explicitNullValueWeightUnit = default!;
 #nullable restore
 #else
-        public string WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
+        public string WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; AdditionalData?.Remove("weightUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weightUnit"); else _explicitNullProperties?.Remove("weightUnit"); } }
         private string _explicitNullValueWeightUnit = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("RateRequest") is { } nullNodeRateRequest && nullNodeRateRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateRequest = null;
+            if (parseNode.GetChildNode("RateRequest") is null) { _explicitNullValueRateRequest = default!; _explicitNullProperties?.Remove("RateRequest"); }
+            else if (parseNode.GetChildNode("RateRequest") is { } nullNodeRateRequest && nullNodeRateRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Rate Request container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest? RateRequest { get => _explicitNullValueRateRequest; set { _explicitNullValueRateRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateRequest"); else _explicitNullProperties?.Remove("RateRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest? RateRequest { get => _explicitNullValueRateRequest; set { _explicitNullValueRateRequest = value; AdditionalData?.Remove("RateRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateRequest"); else _explicitNullProperties?.Remove("RateRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequest? _explicitNullValueRateRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest RateRequest { get => _explicitNullValueRateRequest; set { _explicitNullValueRateRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateRequest"); else _explicitNullProperties?.Remove("RateRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.RateRequest RateRequest { get => _explicitNullValueRateRequest; set { _explicitNullValueRateRequest = value; AdditionalData?.Remove("RateRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateRequest"); else _explicitNullProperties?.Remove("RateRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.RateRequest _explicitNullValueRateRequest = default!;
 #endif
         /// <summary>

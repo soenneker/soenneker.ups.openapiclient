@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LanguageForUPSPremiumCare") is { } nullNodeLanguageForUPSPremiumCare && nullNodeLanguageForUPSPremiumCare.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LanguageForUPSPremiumCare = null;
-            if (parseNode.GetChildNode("NumOfCopies") is { } nullNodeNumOfCopies && nullNodeNumOfCopies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumOfCopies = null;
-            if (parseNode.GetChildNode("PageSize") is { } nullNodePageSize && nullNodePageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageSize = null;
-            if (parseNode.GetChildNode("PrintType") is { } nullNodePrintType && nullNodePrintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintType = null;
-            if (parseNode.GetChildNode("ShipmentDate") is { } nullNodeShipmentDate && nullNodeShipmentDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentDate = null;
+            if (parseNode.GetChildNode("LanguageForUPSPremiumCare") is null) { _explicitNullValueLanguageForUPSPremiumCare = default!; _explicitNullProperties?.Remove("LanguageForUPSPremiumCare"); }
+            else if (parseNode.GetChildNode("LanguageForUPSPremiumCare") is { } nullNodeLanguageForUPSPremiumCare && nullNodeLanguageForUPSPremiumCare.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LanguageForUPSPremiumCare = null;
+            if (parseNode.GetChildNode("NumOfCopies") is null) { _explicitNullValueNumOfCopies = default!; _explicitNullProperties?.Remove("NumOfCopies"); }
+            else if (parseNode.GetChildNode("NumOfCopies") is { } nullNodeNumOfCopies && nullNodeNumOfCopies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumOfCopies = null;
+            if (parseNode.GetChildNode("PageSize") is null) { _explicitNullValuePageSize = default!; _explicitNullProperties?.Remove("PageSize"); }
+            else if (parseNode.GetChildNode("PageSize") is { } nullNodePageSize && nullNodePageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageSize = null;
+            if (parseNode.GetChildNode("PrintType") is null) { _explicitNullValuePrintType = default!; _explicitNullProperties?.Remove("PrintType"); }
+            else if (parseNode.GetChildNode("PrintType") is { } nullNodePrintType && nullNodePrintType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintType = null;
+            if (parseNode.GetChildNode("ShipmentDate") is null) { _explicitNullValueShipmentDate = default!; _explicitNullProperties?.Remove("ShipmentDate"); }
+            else if (parseNode.GetChildNode("ShipmentDate") is { } nullNodeShipmentDate && nullNodeShipmentDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to hold languages in which UPS Premium Care Form is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsPremiumCareFormLanguageForUpsPremiumCare? LanguageForUPSPremiumCare { get => _explicitNullValueLanguageForUPSPremiumCare; set { _explicitNullValueLanguageForUPSPremiumCare = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageForUPSPremiumCare"); else _explicitNullProperties?.Remove("LanguageForUPSPremiumCare"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsPremiumCareFormLanguageForUpsPremiumCare? LanguageForUPSPremiumCare { get => _explicitNullValueLanguageForUPSPremiumCare; set { _explicitNullValueLanguageForUPSPremiumCare = value; AdditionalData?.Remove("LanguageForUPSPremiumCare"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageForUPSPremiumCare"); else _explicitNullProperties?.Remove("LanguageForUPSPremiumCare"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpsPremiumCareFormLanguageForUpsPremiumCare? _explicitNullValueLanguageForUPSPremiumCare = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.UpsPremiumCareFormLanguageForUpsPremiumCare LanguageForUPSPremiumCare { get => _explicitNullValueLanguageForUPSPremiumCare; set { _explicitNullValueLanguageForUPSPremiumCare = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageForUPSPremiumCare"); else _explicitNullProperties?.Remove("LanguageForUPSPremiumCare"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.UpsPremiumCareFormLanguageForUpsPremiumCare LanguageForUPSPremiumCare { get => _explicitNullValueLanguageForUPSPremiumCare; set { _explicitNullValueLanguageForUPSPremiumCare = value; AdditionalData?.Remove("LanguageForUPSPremiumCare"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LanguageForUPSPremiumCare"); else _explicitNullProperties?.Remove("LanguageForUPSPremiumCare"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.UpsPremiumCareFormLanguageForUpsPremiumCare _explicitNullValueLanguageForUPSPremiumCare = default!;
 #endif
         /// <summary>Number of Copies of UPS Premium Care Form.  Valid value is 02.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumOfCopies { get => _explicitNullValueNumOfCopies; set { _explicitNullValueNumOfCopies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumOfCopies"); else _explicitNullProperties?.Remove("NumOfCopies"); } }
+        public string? NumOfCopies { get => _explicitNullValueNumOfCopies; set { _explicitNullValueNumOfCopies = value; AdditionalData?.Remove("NumOfCopies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumOfCopies"); else _explicitNullProperties?.Remove("NumOfCopies"); } }
         private string? _explicitNullValueNumOfCopies = default!;
 #nullable restore
 #else
-        public string NumOfCopies { get => _explicitNullValueNumOfCopies; set { _explicitNullValueNumOfCopies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumOfCopies"); else _explicitNullProperties?.Remove("NumOfCopies"); } }
+        public string NumOfCopies { get => _explicitNullValueNumOfCopies; set { _explicitNullValueNumOfCopies = value; AdditionalData?.Remove("NumOfCopies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NumOfCopies"); else _explicitNullProperties?.Remove("NumOfCopies"); } }
         private string _explicitNullValueNumOfCopies = default!;
 #endif
         /// <summary>Size of UPS Premium Care Form.  Valid values: 01 = A4 Size02 = Letter Size</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PageSize"); else _explicitNullProperties?.Remove("PageSize"); } }
+        public string? PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; AdditionalData?.Remove("PageSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PageSize"); else _explicitNullProperties?.Remove("PageSize"); } }
         private string? _explicitNullValuePageSize = default!;
 #nullable restore
 #else
-        public string PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PageSize"); else _explicitNullProperties?.Remove("PageSize"); } }
+        public string PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; AdditionalData?.Remove("PageSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PageSize"); else _explicitNullProperties?.Remove("PageSize"); } }
         private string _explicitNullValuePageSize = default!;
 #endif
         /// <summary>Format of UPS Premium Care Form.  Valid values: 01 = PNG02 = PDF</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrintType { get => _explicitNullValuePrintType; set { _explicitNullValuePrintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintType"); else _explicitNullProperties?.Remove("PrintType"); } }
+        public string? PrintType { get => _explicitNullValuePrintType; set { _explicitNullValuePrintType = value; AdditionalData?.Remove("PrintType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintType"); else _explicitNullProperties?.Remove("PrintType"); } }
         private string? _explicitNullValuePrintType = default!;
 #nullable restore
 #else
-        public string PrintType { get => _explicitNullValuePrintType; set { _explicitNullValuePrintType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintType"); else _explicitNullProperties?.Remove("PrintType"); } }
+        public string PrintType { get => _explicitNullValuePrintType; set { _explicitNullValuePrintType = value; AdditionalData?.Remove("PrintType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrintType"); else _explicitNullProperties?.Remove("PrintType"); } }
         private string _explicitNullValuePrintType = default!;
 #endif
         /// <summary>Shipment Date associated with UPS Premium Care Shipment.   Valid Format: yyyyMMdd</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentDate { get => _explicitNullValueShipmentDate; set { _explicitNullValueShipmentDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentDate"); else _explicitNullProperties?.Remove("ShipmentDate"); } }
+        public string? ShipmentDate { get => _explicitNullValueShipmentDate; set { _explicitNullValueShipmentDate = value; AdditionalData?.Remove("ShipmentDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentDate"); else _explicitNullProperties?.Remove("ShipmentDate"); } }
         private string? _explicitNullValueShipmentDate = default!;
 #nullable restore
 #else
-        public string ShipmentDate { get => _explicitNullValueShipmentDate; set { _explicitNullValueShipmentDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentDate"); else _explicitNullProperties?.Remove("ShipmentDate"); } }
+        public string ShipmentDate { get => _explicitNullValueShipmentDate; set { _explicitNullValueShipmentDate = value; AdditionalData?.Remove("ShipmentDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipmentDate"); else _explicitNullProperties?.Remove("ShipmentDate"); } }
         private string _explicitNullValueShipmentDate = default!;
 #endif
         /// <summary>

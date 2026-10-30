@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PackageQuantityLimitTypeCode") is { } nullNodePackageQuantityLimitTypeCode && nullNodePackageQuantityLimitTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageQuantityLimitTypeCode = null;
-            if (parseNode.GetChildNode("PackagingInstructionCode") is { } nullNodePackagingInstructionCode && nullNodePackagingInstructionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingInstructionCode = null;
-            if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("UOM") is { } nullNodeUOM && nullNodeUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UOM = null;
+            if (parseNode.GetChildNode("PackageQuantityLimitTypeCode") is null) { _explicitNullValuePackageQuantityLimitTypeCode = default!; _explicitNullProperties?.Remove("PackageQuantityLimitTypeCode"); }
+            else if (parseNode.GetChildNode("PackageQuantityLimitTypeCode") is { } nullNodePackageQuantityLimitTypeCode && nullNodePackageQuantityLimitTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageQuantityLimitTypeCode = null;
+            if (parseNode.GetChildNode("PackagingInstructionCode") is null) { _explicitNullValuePackagingInstructionCode = default!; _explicitNullProperties?.Remove("PackagingInstructionCode"); }
+            else if (parseNode.GetChildNode("PackagingInstructionCode") is { } nullNodePackagingInstructionCode && nullNodePackagingInstructionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingInstructionCode = null;
+            if (parseNode.GetChildNode("Quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("Quantity"); }
+            else if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("UOM") is null) { _explicitNullValueUOM = default!; _explicitNullProperties?.Remove("UOM"); }
+            else if (parseNode.GetChildNode("UOM") is { } nullNodeUOM && nullNodeUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UOM = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The type of package quantity limit.   It will be returned if applies for a given chemical record.Valid values:CAO - Cargo Aircraft OnlyLTD QTY - Limited QuantityGND - GroundPAX - Passenger AircraftCOMAT CAO - Company Material CAOCOMAT LTD - Company Material LTDCOMAT PAX - Company Material PAX</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageQuantityLimitTypeCode { get => _explicitNullValuePackageQuantityLimitTypeCode; set { _explicitNullValuePackageQuantityLimitTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitTypeCode"); else _explicitNullProperties?.Remove("PackageQuantityLimitTypeCode"); } }
+        public string? PackageQuantityLimitTypeCode { get => _explicitNullValuePackageQuantityLimitTypeCode; set { _explicitNullValuePackageQuantityLimitTypeCode = value; AdditionalData?.Remove("PackageQuantityLimitTypeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitTypeCode"); else _explicitNullProperties?.Remove("PackageQuantityLimitTypeCode"); } }
         private string? _explicitNullValuePackageQuantityLimitTypeCode = default!;
 #nullable restore
 #else
-        public string PackageQuantityLimitTypeCode { get => _explicitNullValuePackageQuantityLimitTypeCode; set { _explicitNullValuePackageQuantityLimitTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitTypeCode"); else _explicitNullProperties?.Remove("PackageQuantityLimitTypeCode"); } }
+        public string PackageQuantityLimitTypeCode { get => _explicitNullValuePackageQuantityLimitTypeCode; set { _explicitNullValuePackageQuantityLimitTypeCode = value; AdditionalData?.Remove("PackageQuantityLimitTypeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageQuantityLimitTypeCode"); else _explicitNullProperties?.Remove("PackageQuantityLimitTypeCode"); } }
         private string _explicitNullValuePackageQuantityLimitTypeCode = default!;
 #endif
         /// <summary>The packing instructions related to the chemical record.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
+        public string? PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; AdditionalData?.Remove("PackagingInstructionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
         private string? _explicitNullValuePackagingInstructionCode = default!;
 #nullable restore
 #else
-        public string PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
+        public string PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; AdditionalData?.Remove("PackagingInstructionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
         private string _explicitNullValuePackagingInstructionCode = default!;
 #endif
         /// <summary>The numerical value of the mass capacity of the regulated good.  It will be returned if applies for a given chemical record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("Quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
         private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("Quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
         private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>The unit of measure used for the mass capacity of the regulated good.  It will be returned if applies for a given chemical record. Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
+        public string? UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; AdditionalData?.Remove("UOM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
         private string? _explicitNullValueUOM = default!;
 #nullable restore
 #else
-        public string UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
+        public string UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; AdditionalData?.Remove("UOM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
         private string _explicitNullValueUOM = default!;
 #endif
         /// <summary>

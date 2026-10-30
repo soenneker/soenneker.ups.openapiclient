@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CloseTime") is { } nullNodeCloseTime && nullNodeCloseTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseTime = null;
-            if (parseNode.GetChildNode("PickupDate") is { } nullNodePickupDate && nullNodePickupDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDate = null;
-            if (parseNode.GetChildNode("ReadyTime") is { } nullNodeReadyTime && nullNodeReadyTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadyTime = null;
+            if (parseNode.GetChildNode("CloseTime") is null) { _explicitNullValueCloseTime = default!; _explicitNullProperties?.Remove("CloseTime"); }
+            else if (parseNode.GetChildNode("CloseTime") is { } nullNodeCloseTime && nullNodeCloseTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseTime = null;
+            if (parseNode.GetChildNode("PickupDate") is null) { _explicitNullValuePickupDate = default!; _explicitNullProperties?.Remove("PickupDate"); }
+            else if (parseNode.GetChildNode("PickupDate") is { } nullNodePickupDate && nullNodePickupDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDate = null;
+            if (parseNode.GetChildNode("ReadyTime") is null) { _explicitNullValueReadyTime = default!; _explicitNullProperties?.Remove("ReadyTime"); }
+            else if (parseNode.GetChildNode("ReadyTime") is { } nullNodeReadyTime && nullNodeReadyTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadyTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Pickup location&apos;s local close time.- User provided Close Time must be later than the Earliest Allowed Customer Close Time.- Earliest Allowed Customer Close Time is defined by UPS pickup operation system.- CloseTime minus ReadyTime must be greater than the LeadTime.- LeadTime is determined by UPS pickup operation system. LeadTime is the minimum amount of time UPS requires between customer&apos;s request for a pickup and driver arriving at the location for the pickup.Format: HHmm- Hour: 0-23- Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CloseTime { get => _explicitNullValueCloseTime; set { _explicitNullValueCloseTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseTime"); else _explicitNullProperties?.Remove("CloseTime"); } }
+        public string? CloseTime { get => _explicitNullValueCloseTime; set { _explicitNullValueCloseTime = value; AdditionalData?.Remove("CloseTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseTime"); else _explicitNullProperties?.Remove("CloseTime"); } }
         private string? _explicitNullValueCloseTime = default!;
 #nullable restore
 #else
-        public string CloseTime { get => _explicitNullValueCloseTime; set { _explicitNullValueCloseTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseTime"); else _explicitNullProperties?.Remove("CloseTime"); } }
+        public string CloseTime { get => _explicitNullValueCloseTime; set { _explicitNullValueCloseTime = value; AdditionalData?.Remove("CloseTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CloseTime"); else _explicitNullProperties?.Remove("CloseTime"); } }
         private string _explicitNullValueCloseTime = default!;
 #endif
         /// <summary>Local pickup date of the location. Format: yyyyMMdd- yyyy = Year Appliable- MM = 01–12- dd = 01–31</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDate"); else _explicitNullProperties?.Remove("PickupDate"); } }
+        public string? PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; AdditionalData?.Remove("PickupDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDate"); else _explicitNullProperties?.Remove("PickupDate"); } }
         private string? _explicitNullValuePickupDate = default!;
 #nullable restore
 #else
-        public string PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDate"); else _explicitNullProperties?.Remove("PickupDate"); } }
+        public string PickupDate { get => _explicitNullValuePickupDate; set { _explicitNullValuePickupDate = value; AdditionalData?.Remove("PickupDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDate"); else _explicitNullProperties?.Remove("PickupDate"); } }
         private string _explicitNullValuePickupDate = default!;
 #endif
         /// <summary>Pickup location&apos;s local ready time. ReadyTime means the time when your shipment(s) can be ready for UPS to pick up. - User provided ReadyTime must be earlier than CallByTime. - CallByTime is determined by UPS pickup operation system. CallByTime is the Latest time a Customer can call UPS or self-serve on UPS.com and complete a Pickup Request and UPS can still make the Pickup service request. - If ReadyTime is earlier than current local time, UPS uses the current local time as the ReadyTime.  Format: HHmmHour: 0-23Minute: 0-59</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReadyTime { get => _explicitNullValueReadyTime; set { _explicitNullValueReadyTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReadyTime"); else _explicitNullProperties?.Remove("ReadyTime"); } }
+        public string? ReadyTime { get => _explicitNullValueReadyTime; set { _explicitNullValueReadyTime = value; AdditionalData?.Remove("ReadyTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReadyTime"); else _explicitNullProperties?.Remove("ReadyTime"); } }
         private string? _explicitNullValueReadyTime = default!;
 #nullable restore
 #else
-        public string ReadyTime { get => _explicitNullValueReadyTime; set { _explicitNullValueReadyTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReadyTime"); else _explicitNullProperties?.Remove("ReadyTime"); } }
+        public string ReadyTime { get => _explicitNullValueReadyTime; set { _explicitNullValueReadyTime = value; AdditionalData?.Remove("ReadyTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReadyTime"); else _explicitNullProperties?.Remove("ReadyTime"); } }
         private string _explicitNullValueReadyTime = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("MerchantAccountNumber") is { } nullNodeMerchantAccountNumber && nullNodeMerchantAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountNumber = null;
+            if (parseNode.GetChildNode("MerchantAccountNumber") is null) { _explicitNullValueMerchantAccountNumber = default!; _explicitNullProperties?.Remove("MerchantAccountNumber"); }
+            else if (parseNode.GetChildNode("MerchantAccountNumber") is { } nullNodeMerchantAccountNumber && nullNodeMerchantAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Account number to be used for a private network access point search where a UPS access point candidate list is obtained in search by address or geocode search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MerchantAccountNumber { get => _explicitNullValueMerchantAccountNumber; set { _explicitNullValueMerchantAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MerchantAccountNumber"); else _explicitNullProperties?.Remove("MerchantAccountNumber"); } }
+        public List<string>? MerchantAccountNumber { get => _explicitNullValueMerchantAccountNumber; set { _explicitNullValueMerchantAccountNumber = value; AdditionalData?.Remove("MerchantAccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MerchantAccountNumber"); else _explicitNullProperties?.Remove("MerchantAccountNumber"); } }
         private List<string>? _explicitNullValueMerchantAccountNumber = default!;
 #nullable restore
 #else
-        public List<string> MerchantAccountNumber { get => _explicitNullValueMerchantAccountNumber; set { _explicitNullValueMerchantAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MerchantAccountNumber"); else _explicitNullProperties?.Remove("MerchantAccountNumber"); } }
+        public List<string> MerchantAccountNumber { get => _explicitNullValueMerchantAccountNumber; set { _explicitNullValueMerchantAccountNumber = value; AdditionalData?.Remove("MerchantAccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MerchantAccountNumber"); else _explicitNullProperties?.Remove("MerchantAccountNumber"); } }
         private List<string> _explicitNullValueMerchantAccountNumber = default!;
 #endif
         /// <summary>

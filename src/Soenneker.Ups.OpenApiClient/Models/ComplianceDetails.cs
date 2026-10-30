@@ -18,23 +18,25 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("categoryType") is { } nullNodeCategoryType && nullNodeCategoryType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryType = null;
-            if (parseNode.GetChildNode("controlTypes") is { } nullNodeControlTypes && nullNodeControlTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlTypes = null;
+            if (parseNode.GetChildNode("categoryType") is null) { _explicitNullValueCategoryType = default!; _explicitNullProperties?.Remove("categoryType"); }
+            else if (parseNode.GetChildNode("categoryType") is { } nullNodeCategoryType && nullNodeCategoryType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryType = null;
+            if (parseNode.GetChildNode("controlTypes") is null) { _explicitNullValueControlTypes = default!; _explicitNullProperties?.Remove("controlTypes"); }
+            else if (parseNode.GetChildNode("controlTypes") is { } nullNodeControlTypes && nullNodeControlTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ControlTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the compliance assessment regards imports or exports</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType? CategoryType { get => _explicitNullValueCategoryType; set { _explicitNullValueCategoryType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryType"); else _explicitNullProperties?.Remove("categoryType"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType? CategoryType { get => _explicitNullValueCategoryType; set { _explicitNullValueCategoryType = value; AdditionalData?.Remove("categoryType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryType"); else _explicitNullProperties?.Remove("categoryType"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType? _explicitNullValueCategoryType = default!;
         /// <summary>The controlTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes>? ControlTypes { get => _explicitNullValueControlTypes; set { _explicitNullValueControlTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypes"); else _explicitNullProperties?.Remove("controlTypes"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes>? ControlTypes { get => _explicitNullValueControlTypes; set { _explicitNullValueControlTypes = value; AdditionalData?.Remove("controlTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypes"); else _explicitNullProperties?.Remove("controlTypes"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes>? _explicitNullValueControlTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes> ControlTypes { get => _explicitNullValueControlTypes; set { _explicitNullValueControlTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypes"); else _explicitNullProperties?.Remove("controlTypes"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes> ControlTypes { get => _explicitNullValueControlTypes; set { _explicitNullValueControlTypes = value; AdditionalData?.Remove("controlTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controlTypes"); else _explicitNullProperties?.Remove("controlTypes"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes> _explicitNullValueControlTypes = default!;
 #endif
         /// <summary>
@@ -62,7 +64,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "categoryType", n => { CategoryType = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType>(); } },
+                { "categoryType", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ComplianceDetailsCategoryType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategoryType = default; _explicitNullProperties?.Remove("categoryType"); AdditionalData["categoryType"] = unknown; } else { CategoryType = parsed; AdditionalData.Remove("categoryType"); } } },
                 { "controlTypes", n => { ControlTypes = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ControlTypes>(global::Soenneker.Ups.OpenApiClient.Models.ControlTypes.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }

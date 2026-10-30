@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("countryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
-            if (parseNode.GetChildNode("eventPreferences") is { } nullNodeEventPreferences && nullNodeEventPreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventPreferences = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("trackingNumberList") is { } nullNodeTrackingNumberList && nullNodeTrackingNumberList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumberList = null;
+            if (parseNode.GetChildNode("countryCode") is null) { _explicitNullValueCountryCode = default!; _explicitNullProperties?.Remove("countryCode"); }
+            else if (parseNode.GetChildNode("countryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("eventPreferences") is null) { _explicitNullValueEventPreferences = default!; _explicitNullProperties?.Remove("eventPreferences"); }
+            else if (parseNode.GetChildNode("eventPreferences") is { } nullNodeEventPreferences && nullNodeEventPreferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventPreferences = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("trackingNumberList") is null) { _explicitNullValueTrackingNumberList = default!; _explicitNullProperties?.Remove("trackingNumberList"); }
+            else if (parseNode.GetChildNode("trackingNumberList") is { } nullNodeTrackingNumberList && nullNodeTrackingNumberList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumberList = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The physical address &lt;a href=&quot;https://www.iso.org/iso-3166-country-codes.html&quot; target=&quot;_blank&quot;&gt;ISO 3166&lt;/a&gt; country or territory code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("countryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
         private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("countryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
         private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>Represents scan/event preferences for the subscription endpoint. If no value is provided in this arraythen all activity types will be sent. (This field is only for enhanced users)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EventPreferences { get => _explicitNullValueEventPreferences; set { _explicitNullValueEventPreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventPreferences"); else _explicitNullProperties?.Remove("eventPreferences"); } }
-        private List<string>? _explicitNullValueEventPreferences = default!;
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyEventPreferencesItem?>? EventPreferences { get => _explicitNullValueEventPreferences; set { _explicitNullValueEventPreferences = value; AdditionalData?.Remove("eventPreferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventPreferences"); else _explicitNullProperties?.Remove("eventPreferences"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyEventPreferencesItem?>? _explicitNullValueEventPreferences = default!;
 #nullable restore
 #else
-        public List<string> EventPreferences { get => _explicitNullValueEventPreferences; set { _explicitNullValueEventPreferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventPreferences"); else _explicitNullProperties?.Remove("eventPreferences"); } }
-        private List<string> _explicitNullValueEventPreferences = default!;
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyEventPreferencesItem?> EventPreferences { get => _explicitNullValueEventPreferences; set { _explicitNullValueEventPreferences = value; AdditionalData?.Remove("eventPreferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventPreferences"); else _explicitNullProperties?.Remove("eventPreferences"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyEventPreferencesItem?> _explicitNullValueEventPreferences = default!;
 #endif
         /// <summary>Locale setting is composed of ISO 639 language code and ISO 3166 country code, separated by an underscore. Currently only English (en_US) is supported, but this field is extensible for future locales.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>Represents list of tracking numbers in request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TrackingNumberList { get => _explicitNullValueTrackingNumberList; set { _explicitNullValueTrackingNumberList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumberList"); else _explicitNullProperties?.Remove("trackingNumberList"); } }
+        public List<string>? TrackingNumberList { get => _explicitNullValueTrackingNumberList; set { _explicitNullValueTrackingNumberList = value; AdditionalData?.Remove("trackingNumberList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumberList"); else _explicitNullProperties?.Remove("trackingNumberList"); } }
         private List<string>? _explicitNullValueTrackingNumberList = default!;
 #nullable restore
 #else
-        public List<string> TrackingNumberList { get => _explicitNullValueTrackingNumberList; set { _explicitNullValueTrackingNumberList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumberList"); else _explicitNullProperties?.Remove("trackingNumberList"); } }
+        public List<string> TrackingNumberList { get => _explicitNullValueTrackingNumberList; set { _explicitNullValueTrackingNumberList = value; AdditionalData?.Remove("trackingNumberList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumberList"); else _explicitNullProperties?.Remove("trackingNumberList"); } }
         private List<string> _explicitNullValueTrackingNumberList = default!;
 #endif
         /// <summary>
@@ -91,7 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
-                { "eventPreferences", n => { EventPreferences = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "eventPreferences", n => { EventPreferences = n.GetCollectionOfEnumValues<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyEventPreferencesItem>()?.AsList(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "trackingNumberList", n => { TrackingNumberList = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -104,7 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("countryCode", CountryCode);
-            writer.WriteCollectionOfPrimitiveValues<string>("eventPreferences", EventPreferences);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Ups.OpenApiClient.Models.UpsTrackAlertEnhancedReadyEventPreferencesItem>("eventPreferences", EventPreferences);
             writer.WriteStringValue("locale", Locale);
             writer.WriteCollectionOfPrimitiveValues<string>("trackingNumberList", TrackingNumberList);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

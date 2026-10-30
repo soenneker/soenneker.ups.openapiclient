@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PackageLevelResults") is { } nullNodePackageLevelResults && nullNodePackageLevelResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageLevelResults = null;
-            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
-            if (parseNode.GetChildNode("SummaryResult") is { } nullNodeSummaryResult && nullNodeSummaryResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SummaryResult = null;
+            if (parseNode.GetChildNode("PackageLevelResults") is null) { _explicitNullValuePackageLevelResults = default!; _explicitNullProperties?.Remove("PackageLevelResults"); }
+            else if (parseNode.GetChildNode("PackageLevelResults") is { } nullNodePackageLevelResults && nullNodePackageLevelResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageLevelResults = null;
+            if (parseNode.GetChildNode("Response") is null) { _explicitNullValueResponse = default!; _explicitNullProperties?.Remove("Response"); }
+            else if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("SummaryResult") is null) { _explicitNullValueSummaryResult = default!; _explicitNullProperties?.Remove("SummaryResult"); }
+            else if (parseNode.GetChildNode("SummaryResult") is { } nullNodeSummaryResult && nullNodeSummaryResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SummaryResult = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Contains the Package Level Results.**NOTE:** For versions &gt;= v2403, this element will always be returned as an array. For requests using versions &lt; v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults>? PackageLevelResults { get => _explicitNullValuePackageLevelResults; set { _explicitNullValuePackageLevelResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageLevelResults"); else _explicitNullProperties?.Remove("PackageLevelResults"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults>? PackageLevelResults { get => _explicitNullValuePackageLevelResults; set { _explicitNullValuePackageLevelResults = value; AdditionalData?.Remove("PackageLevelResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageLevelResults"); else _explicitNullProperties?.Remove("PackageLevelResults"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults>? _explicitNullValuePackageLevelResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults> PackageLevelResults { get => _explicitNullValuePackageLevelResults; set { _explicitNullValuePackageLevelResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageLevelResults"); else _explicitNullProperties?.Remove("PackageLevelResults"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults> PackageLevelResults { get => _explicitNullValuePackageLevelResults; set { _explicitNullValuePackageLevelResults = value; AdditionalData?.Remove("PackageLevelResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackageLevelResults"); else _explicitNullProperties?.Remove("PackageLevelResults"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponsePackageLevelResults> _explicitNullValuePackageLevelResults = default!;
 #endif
         /// <summary>Response Container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseResponse _explicitNullValueResponse = default!;
 #endif
         /// <summary>Container for the Summary Result</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult? SummaryResult { get => _explicitNullValueSummaryResult; set { _explicitNullValueSummaryResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SummaryResult"); else _explicitNullProperties?.Remove("SummaryResult"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult? SummaryResult { get => _explicitNullValueSummaryResult; set { _explicitNullValueSummaryResult = value; AdditionalData?.Remove("SummaryResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SummaryResult"); else _explicitNullProperties?.Remove("SummaryResult"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult? _explicitNullValueSummaryResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult SummaryResult { get => _explicitNullValueSummaryResult; set { _explicitNullValueSummaryResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SummaryResult"); else _explicitNullProperties?.Remove("SummaryResult"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult SummaryResult { get => _explicitNullValueSummaryResult; set { _explicitNullValueSummaryResult = value; AdditionalData?.Remove("SummaryResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SummaryResult"); else _explicitNullProperties?.Remove("SummaryResult"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.VoidShipmentResponseSummaryResult _explicitNullValueSummaryResult = default!;
 #endif
         /// <summary>

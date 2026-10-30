@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pickupByDate") is { } nullNodePickupByDate && nullNodePickupByDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupByDate = null;
+            if (parseNode.GetChildNode("pickupByDate") is null) { _explicitNullValuePickupByDate = default!; _explicitNullProperties?.Remove("pickupByDate"); }
+            else if (parseNode.GetChildNode("pickupByDate") is { } nullNodePickupByDate && nullNodePickupByDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupByDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The pickupByDate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickupByDate { get => _explicitNullValuePickupByDate; set { _explicitNullValuePickupByDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupByDate"); else _explicitNullProperties?.Remove("pickupByDate"); } }
+        public string? PickupByDate { get => _explicitNullValuePickupByDate; set { _explicitNullValuePickupByDate = value; AdditionalData?.Remove("pickupByDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupByDate"); else _explicitNullProperties?.Remove("pickupByDate"); } }
         private string? _explicitNullValuePickupByDate = default!;
 #nullable restore
 #else
-        public string PickupByDate { get => _explicitNullValuePickupByDate; set { _explicitNullValuePickupByDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupByDate"); else _explicitNullProperties?.Remove("pickupByDate"); } }
+        public string PickupByDate { get => _explicitNullValuePickupByDate; set { _explicitNullValuePickupByDate = value; AdditionalData?.Remove("pickupByDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupByDate"); else _explicitNullProperties?.Remove("pickupByDate"); } }
         private string _explicitNullValuePickupByDate = default!;
 #endif
         /// <summary>

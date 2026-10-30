@@ -17,9 +17,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("isForkliftable") is { } nullNodeIsForkliftable && nullNodeIsForkliftable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsForkliftable = null;
-            if (parseNode.GetChildNode("isStackable") is { } nullNodeIsStackable && nullNodeIsStackable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsStackable = null;
-            if (parseNode.GetChildNode("isTiltable") is { } nullNodeIsTiltable && nullNodeIsTiltable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTiltable = null;
+            if (parseNode.GetChildNode("isForkliftable") is null) { _explicitNullValueIsForkliftable = default!; _explicitNullProperties?.Remove("isForkliftable"); }
+            else if (parseNode.GetChildNode("isForkliftable") is { } nullNodeIsForkliftable && nullNodeIsForkliftable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsForkliftable = null;
+            if (parseNode.GetChildNode("isStackable") is null) { _explicitNullValueIsStackable = default!; _explicitNullProperties?.Remove("isStackable"); }
+            else if (parseNode.GetChildNode("isStackable") is { } nullNodeIsStackable && nullNodeIsStackable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsStackable = null;
+            if (parseNode.GetChildNode("isTiltable") is null) { _explicitNullValueIsTiltable = default!; _explicitNullProperties?.Remove("isTiltable"); }
+            else if (parseNode.GetChildNode("isTiltable") is { } nullNodeIsTiltable && nullNodeIsTiltable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTiltable = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The isForkliftable property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsForkliftable { get => _explicitNullValueIsForkliftable; set { _explicitNullValueIsForkliftable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isForkliftable"); else _explicitNullProperties?.Remove("isForkliftable"); } }
+        public string? IsForkliftable { get => _explicitNullValueIsForkliftable; set { _explicitNullValueIsForkliftable = value; AdditionalData?.Remove("isForkliftable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isForkliftable"); else _explicitNullProperties?.Remove("isForkliftable"); } }
         private string? _explicitNullValueIsForkliftable = default!;
 #nullable restore
 #else
-        public string IsForkliftable { get => _explicitNullValueIsForkliftable; set { _explicitNullValueIsForkliftable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isForkliftable"); else _explicitNullProperties?.Remove("isForkliftable"); } }
+        public string IsForkliftable { get => _explicitNullValueIsForkliftable; set { _explicitNullValueIsForkliftable = value; AdditionalData?.Remove("isForkliftable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isForkliftable"); else _explicitNullProperties?.Remove("isForkliftable"); } }
         private string _explicitNullValueIsForkliftable = default!;
 #endif
         /// <summary>The isStackable property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsStackable { get => _explicitNullValueIsStackable; set { _explicitNullValueIsStackable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isStackable"); else _explicitNullProperties?.Remove("isStackable"); } }
+        public string? IsStackable { get => _explicitNullValueIsStackable; set { _explicitNullValueIsStackable = value; AdditionalData?.Remove("isStackable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isStackable"); else _explicitNullProperties?.Remove("isStackable"); } }
         private string? _explicitNullValueIsStackable = default!;
 #nullable restore
 #else
-        public string IsStackable { get => _explicitNullValueIsStackable; set { _explicitNullValueIsStackable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isStackable"); else _explicitNullProperties?.Remove("isStackable"); } }
+        public string IsStackable { get => _explicitNullValueIsStackable; set { _explicitNullValueIsStackable = value; AdditionalData?.Remove("isStackable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isStackable"); else _explicitNullProperties?.Remove("isStackable"); } }
         private string _explicitNullValueIsStackable = default!;
 #endif
         /// <summary>The isTiltable property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsTiltable { get => _explicitNullValueIsTiltable; set { _explicitNullValueIsTiltable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isTiltable"); else _explicitNullProperties?.Remove("isTiltable"); } }
+        public string? IsTiltable { get => _explicitNullValueIsTiltable; set { _explicitNullValueIsTiltable = value; AdditionalData?.Remove("isTiltable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isTiltable"); else _explicitNullProperties?.Remove("isTiltable"); } }
         private string? _explicitNullValueIsTiltable = default!;
 #nullable restore
 #else
-        public string IsTiltable { get => _explicitNullValueIsTiltable; set { _explicitNullValueIsTiltable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isTiltable"); else _explicitNullProperties?.Remove("isTiltable"); } }
+        public string IsTiltable { get => _explicitNullValueIsTiltable; set { _explicitNullValueIsTiltable = value; AdditionalData?.Remove("isTiltable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isTiltable"); else _explicitNullProperties?.Remove("isTiltable"); } }
         private string _explicitNullValueIsTiltable = default!;
 #endif
         /// <summary>

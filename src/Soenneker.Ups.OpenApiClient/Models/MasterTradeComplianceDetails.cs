@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Comments") is { } nullNodeComments && nullNodeComments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comments = null;
-            if (parseNode.GetChildNode("DeclarationStatement") is { } nullNodeDeclarationStatement && nullNodeDeclarationStatement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclarationStatement = null;
-            if (parseNode.GetChildNode("ReasonForExport") is { } nullNodeReasonForExport && nullNodeReasonForExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonForExport = null;
-            if (parseNode.GetChildNode("TermsOfShipment") is { } nullNodeTermsOfShipment && nullNodeTermsOfShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfShipment = null;
+            if (parseNode.GetChildNode("Comments") is null) { _explicitNullValueComments = default!; _explicitNullProperties?.Remove("Comments"); }
+            else if (parseNode.GetChildNode("Comments") is { } nullNodeComments && nullNodeComments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comments = null;
+            if (parseNode.GetChildNode("DeclarationStatement") is null) { _explicitNullValueDeclarationStatement = default!; _explicitNullProperties?.Remove("DeclarationStatement"); }
+            else if (parseNode.GetChildNode("DeclarationStatement") is { } nullNodeDeclarationStatement && nullNodeDeclarationStatement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclarationStatement = null;
+            if (parseNode.GetChildNode("ReasonForExport") is null) { _explicitNullValueReasonForExport = default!; _explicitNullProperties?.Remove("ReasonForExport"); }
+            else if (parseNode.GetChildNode("ReasonForExport") is { } nullNodeReasonForExport && nullNodeReasonForExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonForExport = null;
+            if (parseNode.GetChildNode("TermsOfShipment") is null) { _explicitNullValueTermsOfShipment = default!; _explicitNullProperties?.Remove("TermsOfShipment"); }
+            else if (parseNode.GetChildNode("TermsOfShipment") is { } nullNodeTermsOfShipment && nullNodeTermsOfShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfShipment = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,28 +33,28 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Additional comments to be included on the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comments"); else _explicitNullProperties?.Remove("Comments"); } }
+        public string? Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; AdditionalData?.Remove("Comments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comments"); else _explicitNullProperties?.Remove("Comments"); } }
         private string? _explicitNullValueComments = default!;
 #nullable restore
 #else
-        public string Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comments"); else _explicitNullProperties?.Remove("Comments"); } }
+        public string Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; AdditionalData?.Remove("Comments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comments"); else _explicitNullProperties?.Remove("Comments"); } }
         private string _explicitNullValueComments = default!;
 #endif
         /// <summary>The type of declaration statement. Can be invoice or USMCA. Valid values:- Invoice =Invoice declaration- USMCA = USMCA declaration</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsDeclarationStatement? DeclarationStatement { get => _explicitNullValueDeclarationStatement; set { _explicitNullValueDeclarationStatement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeclarationStatement"); else _explicitNullProperties?.Remove("DeclarationStatement"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsDeclarationStatement? DeclarationStatement { get => _explicitNullValueDeclarationStatement; set { _explicitNullValueDeclarationStatement = value; AdditionalData?.Remove("DeclarationStatement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeclarationStatement"); else _explicitNullProperties?.Remove("DeclarationStatement"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsDeclarationStatement? _explicitNullValueDeclarationStatement = default!;
         /// <summary>The reason for export to go on the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonForExport { get => _explicitNullValueReasonForExport; set { _explicitNullValueReasonForExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReasonForExport"); else _explicitNullProperties?.Remove("ReasonForExport"); } }
+        public string? ReasonForExport { get => _explicitNullValueReasonForExport; set { _explicitNullValueReasonForExport = value; AdditionalData?.Remove("ReasonForExport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReasonForExport"); else _explicitNullProperties?.Remove("ReasonForExport"); } }
         private string? _explicitNullValueReasonForExport = default!;
 #nullable restore
 #else
-        public string ReasonForExport { get => _explicitNullValueReasonForExport; set { _explicitNullValueReasonForExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReasonForExport"); else _explicitNullProperties?.Remove("ReasonForExport"); } }
+        public string ReasonForExport { get => _explicitNullValueReasonForExport; set { _explicitNullValueReasonForExport = value; AdditionalData?.Remove("ReasonForExport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReasonForExport"); else _explicitNullProperties?.Remove("ReasonForExport"); } }
         private string _explicitNullValueReasonForExport = default!;
 #endif
         /// <summary>The terms of sale for the invoice. Valid values:- CFR =Cost and Freight- CIF =Cost Insurance and Freight- CIP =Carriage and Insurance Paid- CPT =Carriage Paid To- DAF =Delivered at Frontier- DAP =Delivered at Place- DAT =Delivered at Terminal- DDP =Delivery Duty Paid- DDU =Delivery Duty Unpaid- DEQ =Delivered Ex Quay- DES =Delivered Ex Ship- EXW =Ex Works- FAS =Free Alongside Ship- FCA =Free Carrier- FOB =Free On Board  </summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsTermsOfShipment? TermsOfShipment { get => _explicitNullValueTermsOfShipment; set { _explicitNullValueTermsOfShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TermsOfShipment"); else _explicitNullProperties?.Remove("TermsOfShipment"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsTermsOfShipment? TermsOfShipment { get => _explicitNullValueTermsOfShipment; set { _explicitNullValueTermsOfShipment = value; AdditionalData?.Remove("TermsOfShipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TermsOfShipment"); else _explicitNullProperties?.Remove("TermsOfShipment"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsTermsOfShipment? _explicitNullValueTermsOfShipment = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetails"/> and sets the default values.
@@ -78,9 +82,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Comments", n => { Comments = n.GetStringValue(); } },
-                { "DeclarationStatement", n => { DeclarationStatement = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsDeclarationStatement>(); } },
+                { "DeclarationStatement", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsDeclarationStatement>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDeclarationStatement = default; _explicitNullProperties?.Remove("DeclarationStatement"); AdditionalData["DeclarationStatement"] = unknown; } else { DeclarationStatement = parsed; AdditionalData.Remove("DeclarationStatement"); } } },
                 { "ReasonForExport", n => { ReasonForExport = n.GetStringValue(); } },
-                { "TermsOfShipment", n => { TermsOfShipment = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsTermsOfShipment>(); } },
+                { "TermsOfShipment", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.MasterTradeComplianceDetailsTermsOfShipment>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTermsOfShipment = default; _explicitNullProperties?.Remove("TermsOfShipment"); AdditionalData["TermsOfShipment"] = unknown; } else { TermsOfShipment = parsed; AdditionalData.Remove("TermsOfShipment"); } } },
             };
         }
         /// <summary>

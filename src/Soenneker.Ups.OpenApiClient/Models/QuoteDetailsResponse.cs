@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("quoteSummary") is { } nullNodeQuoteSummary && nullNodeQuoteSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteSummary = null;
+            if (parseNode.GetChildNode("quoteSummary") is null) { _explicitNullValueQuoteSummary = default!; _explicitNullProperties?.Remove("quoteSummary"); }
+            else if (parseNode.GetChildNode("quoteSummary") is { } nullNodeQuoteSummary && nullNodeQuoteSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteSummary = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The quoteSummary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuoteSummary? QuoteSummary { get => _explicitNullValueQuoteSummary; set { _explicitNullValueQuoteSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteSummary"); else _explicitNullProperties?.Remove("quoteSummary"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuoteSummary? QuoteSummary { get => _explicitNullValueQuoteSummary; set { _explicitNullValueQuoteSummary = value; AdditionalData?.Remove("quoteSummary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteSummary"); else _explicitNullProperties?.Remove("quoteSummary"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuoteSummary? _explicitNullValueQuoteSummary = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuoteSummary QuoteSummary { get => _explicitNullValueQuoteSummary; set { _explicitNullValueQuoteSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteSummary"); else _explicitNullProperties?.Remove("quoteSummary"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuoteSummary QuoteSummary { get => _explicitNullValueQuoteSummary; set { _explicitNullValueQuoteSummary = value; AdditionalData?.Remove("quoteSummary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteSummary"); else _explicitNullProperties?.Remove("quoteSummary"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuoteSummary _explicitNullValueQuoteSummary = default!;
 #endif
         /// <summary>

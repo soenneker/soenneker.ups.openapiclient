@@ -18,104 +18,114 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("exceptionCreatedDate") is { } nullNodeExceptionCreatedDate && nullNodeExceptionCreatedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionCreatedDate = null;
-            if (parseNode.GetChildNode("exceptionCreatedDateGmt") is { } nullNodeExceptionCreatedDateGmt && nullNodeExceptionCreatedDateGmt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionCreatedDateGmt = null;
-            if (parseNode.GetChildNode("exceptionCreatedDateGmtOffset") is { } nullNodeExceptionCreatedDateGmtOffset && nullNodeExceptionCreatedDateGmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionCreatedDateGmtOffset = null;
-            if (parseNode.GetChildNode("exceptionType") is { } nullNodeExceptionType && nullNodeExceptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionType = null;
-            if (parseNode.GetChildNode("reasonCode") is { } nullNodeReasonCode && nullNodeReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCode = null;
-            if (parseNode.GetChildNode("reasonDescription") is { } nullNodeReasonDescription && nullNodeReasonDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonDescription = null;
-            if (parseNode.GetChildNode("resolutionCode") is { } nullNodeResolutionCode && nullNodeResolutionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionCode = null;
-            if (parseNode.GetChildNode("resolutionDescription") is { } nullNodeResolutionDescription && nullNodeResolutionDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionDescription = null;
-            if (parseNode.GetChildNode("statusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
-            if (parseNode.GetChildNode("statusDescription") is { } nullNodeStatusDescription && nullNodeStatusDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusDescription = null;
+            if (parseNode.GetChildNode("exceptionCreatedDate") is null) { _explicitNullValueExceptionCreatedDate = default!; _explicitNullProperties?.Remove("exceptionCreatedDate"); }
+            else if (parseNode.GetChildNode("exceptionCreatedDate") is { } nullNodeExceptionCreatedDate && nullNodeExceptionCreatedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionCreatedDate = null;
+            if (parseNode.GetChildNode("exceptionCreatedDateGmt") is null) { _explicitNullValueExceptionCreatedDateGmt = default!; _explicitNullProperties?.Remove("exceptionCreatedDateGmt"); }
+            else if (parseNode.GetChildNode("exceptionCreatedDateGmt") is { } nullNodeExceptionCreatedDateGmt && nullNodeExceptionCreatedDateGmt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionCreatedDateGmt = null;
+            if (parseNode.GetChildNode("exceptionCreatedDateGmtOffset") is null) { _explicitNullValueExceptionCreatedDateGmtOffset = default!; _explicitNullProperties?.Remove("exceptionCreatedDateGmtOffset"); }
+            else if (parseNode.GetChildNode("exceptionCreatedDateGmtOffset") is { } nullNodeExceptionCreatedDateGmtOffset && nullNodeExceptionCreatedDateGmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionCreatedDateGmtOffset = null;
+            if (parseNode.GetChildNode("exceptionType") is null) { _explicitNullValueExceptionType = default!; _explicitNullProperties?.Remove("exceptionType"); }
+            else if (parseNode.GetChildNode("exceptionType") is { } nullNodeExceptionType && nullNodeExceptionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionType = null;
+            if (parseNode.GetChildNode("reasonCode") is null) { _explicitNullValueReasonCode = default!; _explicitNullProperties?.Remove("reasonCode"); }
+            else if (parseNode.GetChildNode("reasonCode") is { } nullNodeReasonCode && nullNodeReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCode = null;
+            if (parseNode.GetChildNode("reasonDescription") is null) { _explicitNullValueReasonDescription = default!; _explicitNullProperties?.Remove("reasonDescription"); }
+            else if (parseNode.GetChildNode("reasonDescription") is { } nullNodeReasonDescription && nullNodeReasonDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonDescription = null;
+            if (parseNode.GetChildNode("resolutionCode") is null) { _explicitNullValueResolutionCode = default!; _explicitNullProperties?.Remove("resolutionCode"); }
+            else if (parseNode.GetChildNode("resolutionCode") is { } nullNodeResolutionCode && nullNodeResolutionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionCode = null;
+            if (parseNode.GetChildNode("resolutionDescription") is null) { _explicitNullValueResolutionDescription = default!; _explicitNullProperties?.Remove("resolutionDescription"); }
+            else if (parseNode.GetChildNode("resolutionDescription") is { } nullNodeResolutionDescription && nullNodeResolutionDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionDescription = null;
+            if (parseNode.GetChildNode("statusCode") is null) { _explicitNullValueStatusCode = default!; _explicitNullProperties?.Remove("statusCode"); }
+            else if (parseNode.GetChildNode("statusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+            if (parseNode.GetChildNode("statusDescription") is null) { _explicitNullValueStatusDescription = default!; _explicitNullProperties?.Remove("statusDescription"); }
+            else if (parseNode.GetChildNode("statusDescription") is { } nullNodeStatusDescription && nullNodeStatusDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusDescription = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The exceptionCreatedDate property</summary>
-        public DateTimeOffset? ExceptionCreatedDate { get => _explicitNullValueExceptionCreatedDate; set { _explicitNullValueExceptionCreatedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCreatedDate"); else _explicitNullProperties?.Remove("exceptionCreatedDate"); } }
+        public DateTimeOffset? ExceptionCreatedDate { get => _explicitNullValueExceptionCreatedDate; set { _explicitNullValueExceptionCreatedDate = value; AdditionalData?.Remove("exceptionCreatedDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCreatedDate"); else _explicitNullProperties?.Remove("exceptionCreatedDate"); } }
         private DateTimeOffset? _explicitNullValueExceptionCreatedDate = default!;
         /// <summary>The exceptionCreatedDateGmt property</summary>
-        public DateTimeOffset? ExceptionCreatedDateGmt { get => _explicitNullValueExceptionCreatedDateGmt; set { _explicitNullValueExceptionCreatedDateGmt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCreatedDateGmt"); else _explicitNullProperties?.Remove("exceptionCreatedDateGmt"); } }
+        public DateTimeOffset? ExceptionCreatedDateGmt { get => _explicitNullValueExceptionCreatedDateGmt; set { _explicitNullValueExceptionCreatedDateGmt = value; AdditionalData?.Remove("exceptionCreatedDateGmt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCreatedDateGmt"); else _explicitNullProperties?.Remove("exceptionCreatedDateGmt"); } }
         private DateTimeOffset? _explicitNullValueExceptionCreatedDateGmt = default!;
         /// <summary>The exceptionCreatedDateGmtOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExceptionCreatedDateGmtOffset { get => _explicitNullValueExceptionCreatedDateGmtOffset; set { _explicitNullValueExceptionCreatedDateGmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCreatedDateGmtOffset"); else _explicitNullProperties?.Remove("exceptionCreatedDateGmtOffset"); } }
+        public string? ExceptionCreatedDateGmtOffset { get => _explicitNullValueExceptionCreatedDateGmtOffset; set { _explicitNullValueExceptionCreatedDateGmtOffset = value; AdditionalData?.Remove("exceptionCreatedDateGmtOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCreatedDateGmtOffset"); else _explicitNullProperties?.Remove("exceptionCreatedDateGmtOffset"); } }
         private string? _explicitNullValueExceptionCreatedDateGmtOffset = default!;
 #nullable restore
 #else
-        public string ExceptionCreatedDateGmtOffset { get => _explicitNullValueExceptionCreatedDateGmtOffset; set { _explicitNullValueExceptionCreatedDateGmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCreatedDateGmtOffset"); else _explicitNullProperties?.Remove("exceptionCreatedDateGmtOffset"); } }
+        public string ExceptionCreatedDateGmtOffset { get => _explicitNullValueExceptionCreatedDateGmtOffset; set { _explicitNullValueExceptionCreatedDateGmtOffset = value; AdditionalData?.Remove("exceptionCreatedDateGmtOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionCreatedDateGmtOffset"); else _explicitNullProperties?.Remove("exceptionCreatedDateGmtOffset"); } }
         private string _explicitNullValueExceptionCreatedDateGmtOffset = default!;
 #endif
         /// <summary>This field is used to provide type of exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExceptionType { get => _explicitNullValueExceptionType; set { _explicitNullValueExceptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionType"); else _explicitNullProperties?.Remove("exceptionType"); } }
+        public string? ExceptionType { get => _explicitNullValueExceptionType; set { _explicitNullValueExceptionType = value; AdditionalData?.Remove("exceptionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionType"); else _explicitNullProperties?.Remove("exceptionType"); } }
         private string? _explicitNullValueExceptionType = default!;
 #nullable restore
 #else
-        public string ExceptionType { get => _explicitNullValueExceptionType; set { _explicitNullValueExceptionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionType"); else _explicitNullProperties?.Remove("exceptionType"); } }
+        public string ExceptionType { get => _explicitNullValueExceptionType; set { _explicitNullValueExceptionType = value; AdditionalData?.Remove("exceptionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exceptionType"); else _explicitNullProperties?.Remove("exceptionType"); } }
         private string _explicitNullValueExceptionType = default!;
 #endif
         /// <summary>This field is used to provide reason code of exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonCode"); else _explicitNullProperties?.Remove("reasonCode"); } }
+        public string? ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; AdditionalData?.Remove("reasonCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonCode"); else _explicitNullProperties?.Remove("reasonCode"); } }
         private string? _explicitNullValueReasonCode = default!;
 #nullable restore
 #else
-        public string ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonCode"); else _explicitNullProperties?.Remove("reasonCode"); } }
+        public string ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; AdditionalData?.Remove("reasonCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonCode"); else _explicitNullProperties?.Remove("reasonCode"); } }
         private string _explicitNullValueReasonCode = default!;
 #endif
         /// <summary>This field is used to provide reason description of exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonDescription"); else _explicitNullProperties?.Remove("reasonDescription"); } }
+        public string? ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; AdditionalData?.Remove("reasonDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonDescription"); else _explicitNullProperties?.Remove("reasonDescription"); } }
         private string? _explicitNullValueReasonDescription = default!;
 #nullable restore
 #else
-        public string ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonDescription"); else _explicitNullProperties?.Remove("reasonDescription"); } }
+        public string ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; AdditionalData?.Remove("reasonDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasonDescription"); else _explicitNullProperties?.Remove("reasonDescription"); } }
         private string _explicitNullValueReasonDescription = default!;
 #endif
         /// <summary>This field is used to provide resolution code of exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResolutionCode { get => _explicitNullValueResolutionCode; set { _explicitNullValueResolutionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionCode"); else _explicitNullProperties?.Remove("resolutionCode"); } }
+        public string? ResolutionCode { get => _explicitNullValueResolutionCode; set { _explicitNullValueResolutionCode = value; AdditionalData?.Remove("resolutionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionCode"); else _explicitNullProperties?.Remove("resolutionCode"); } }
         private string? _explicitNullValueResolutionCode = default!;
 #nullable restore
 #else
-        public string ResolutionCode { get => _explicitNullValueResolutionCode; set { _explicitNullValueResolutionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionCode"); else _explicitNullProperties?.Remove("resolutionCode"); } }
+        public string ResolutionCode { get => _explicitNullValueResolutionCode; set { _explicitNullValueResolutionCode = value; AdditionalData?.Remove("resolutionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionCode"); else _explicitNullProperties?.Remove("resolutionCode"); } }
         private string _explicitNullValueResolutionCode = default!;
 #endif
         /// <summary>This field is used to provide resolution description of exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResolutionDescription { get => _explicitNullValueResolutionDescription; set { _explicitNullValueResolutionDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionDescription"); else _explicitNullProperties?.Remove("resolutionDescription"); } }
+        public string? ResolutionDescription { get => _explicitNullValueResolutionDescription; set { _explicitNullValueResolutionDescription = value; AdditionalData?.Remove("resolutionDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionDescription"); else _explicitNullProperties?.Remove("resolutionDescription"); } }
         private string? _explicitNullValueResolutionDescription = default!;
 #nullable restore
 #else
-        public string ResolutionDescription { get => _explicitNullValueResolutionDescription; set { _explicitNullValueResolutionDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionDescription"); else _explicitNullProperties?.Remove("resolutionDescription"); } }
+        public string ResolutionDescription { get => _explicitNullValueResolutionDescription; set { _explicitNullValueResolutionDescription = value; AdditionalData?.Remove("resolutionDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionDescription"); else _explicitNullProperties?.Remove("resolutionDescription"); } }
         private string _explicitNullValueResolutionDescription = default!;
 #endif
         /// <summary>This field is used to provide status code of exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
+        public string? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("statusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
         private string? _explicitNullValueStatusCode = default!;
 #nullable restore
 #else
-        public string StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
+        public string StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("statusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
         private string _explicitNullValueStatusCode = default!;
 #endif
         /// <summary>This field is used to provide status description of exception</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusDescription { get => _explicitNullValueStatusDescription; set { _explicitNullValueStatusDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusDescription"); else _explicitNullProperties?.Remove("statusDescription"); } }
+        public string? StatusDescription { get => _explicitNullValueStatusDescription; set { _explicitNullValueStatusDescription = value; AdditionalData?.Remove("statusDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusDescription"); else _explicitNullProperties?.Remove("statusDescription"); } }
         private string? _explicitNullValueStatusDescription = default!;
 #nullable restore
 #else
-        public string StatusDescription { get => _explicitNullValueStatusDescription; set { _explicitNullValueStatusDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusDescription"); else _explicitNullProperties?.Remove("statusDescription"); } }
+        public string StatusDescription { get => _explicitNullValueStatusDescription; set { _explicitNullValueStatusDescription = value; AdditionalData?.Remove("statusDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusDescription"); else _explicitNullProperties?.Remove("statusDescription"); } }
         private string _explicitNullValueStatusDescription = default!;
 #endif
         /// <summary>

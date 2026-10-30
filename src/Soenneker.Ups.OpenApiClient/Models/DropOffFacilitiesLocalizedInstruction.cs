@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Last50ftInstruction") is { } nullNodeLast50ftInstruction && nullNodeLast50ftInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Last50ftInstruction = null;
-            if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("Last50ftInstruction") is null) { _explicitNullValueLast50ftInstruction = default!; _explicitNullProperties?.Remove("Last50ftInstruction"); }
+            else if (parseNode.GetChildNode("Last50ftInstruction") is { } nullNodeLast50ftInstruction && nullNodeLast50ftInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Last50ftInstruction = null;
+            if (parseNode.GetChildNode("Locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("Locale"); }
+            else if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Last 50ft instructions that relates to an available facility and depend on the locale passing in request.Last 50 feet instruction in the language asked in request or the English for that country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Last50ftInstruction { get => _explicitNullValueLast50ftInstruction; set { _explicitNullValueLast50ftInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Last50ftInstruction"); else _explicitNullProperties?.Remove("Last50ftInstruction"); } }
+        public string? Last50ftInstruction { get => _explicitNullValueLast50ftInstruction; set { _explicitNullValueLast50ftInstruction = value; AdditionalData?.Remove("Last50ftInstruction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Last50ftInstruction"); else _explicitNullProperties?.Remove("Last50ftInstruction"); } }
         private string? _explicitNullValueLast50ftInstruction = default!;
 #nullable restore
 #else
-        public string Last50ftInstruction { get => _explicitNullValueLast50ftInstruction; set { _explicitNullValueLast50ftInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Last50ftInstruction"); else _explicitNullProperties?.Remove("Last50ftInstruction"); } }
+        public string Last50ftInstruction { get => _explicitNullValueLast50ftInstruction; set { _explicitNullValueLast50ftInstruction = value; AdditionalData?.Remove("Last50ftInstruction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Last50ftInstruction"); else _explicitNullProperties?.Remove("Last50ftInstruction"); } }
         private string _explicitNullValueLast50ftInstruction = default!;
 #endif
         /// <summary>Locale. Example: en_US</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>

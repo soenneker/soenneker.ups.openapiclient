@@ -18,45 +18,84 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AdditionalDocumentIndicator") is { } nullNodeAdditionalDocumentIndicator && nullNodeAdditionalDocumentIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDocumentIndicator = null;
-            if (parseNode.GetChildNode("BlanketPeriod") is { } nullNodeBlanketPeriod && nullNodeBlanketPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlanketPeriod = null;
-            if (parseNode.GetChildNode("CarrierID") is { } nullNodeCarrierID && nullNodeCarrierID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierID = null;
-            if (parseNode.GetChildNode("CN22Form") is { } nullNodeCN22Form && nullNodeCN22Form.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22Form = null;
-            if (parseNode.GetChildNode("Comments") is { } nullNodeComments && nullNodeComments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comments = null;
-            if (parseNode.GetChildNode("Contacts") is { } nullNodeContacts && nullNodeContacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contacts = null;
-            if (parseNode.GetChildNode("ContainerizedIndicator") is { } nullNodeContainerizedIndicator && nullNodeContainerizedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerizedIndicator = null;
-            if (parseNode.GetChildNode("CurrencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
-            if (parseNode.GetChildNode("DeclarationStatement") is { } nullNodeDeclarationStatement && nullNodeDeclarationStatement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclarationStatement = null;
-            if (parseNode.GetChildNode("Discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
-            if (parseNode.GetChildNode("EEIFilingOption") is { } nullNodeEEIFilingOption && nullNodeEEIFilingOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EEIFilingOption = null;
-            if (parseNode.GetChildNode("EntryNumber") is { } nullNodeEntryNumber && nullNodeEntryNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntryNumber = null;
-            if (parseNode.GetChildNode("ExportDate") is { } nullNodeExportDate && nullNodeExportDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportDate = null;
-            if (parseNode.GetChildNode("ExportingCarrier") is { } nullNodeExportingCarrier && nullNodeExportingCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportingCarrier = null;
-            if (parseNode.GetChildNode("FormGroupIdName") is { } nullNodeFormGroupIdName && nullNodeFormGroupIdName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormGroupIdName = null;
-            if (parseNode.GetChildNode("FormType") is { } nullNodeFormType && nullNodeFormType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormType = null;
-            if (parseNode.GetChildNode("FreightCharges") is { } nullNodeFreightCharges && nullNodeFreightCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightCharges = null;
-            if (parseNode.GetChildNode("HazardousMaterialsIndicator") is { } nullNodeHazardousMaterialsIndicator && nullNodeHazardousMaterialsIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazardousMaterialsIndicator = null;
-            if (parseNode.GetChildNode("InBondCode") is { } nullNodeInBondCode && nullNodeInBondCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InBondCode = null;
-            if (parseNode.GetChildNode("InsuranceCharges") is { } nullNodeInsuranceCharges && nullNodeInsuranceCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsuranceCharges = null;
-            if (parseNode.GetChildNode("InvoiceDate") is { } nullNodeInvoiceDate && nullNodeInvoiceDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceDate = null;
-            if (parseNode.GetChildNode("InvoiceNumber") is { } nullNodeInvoiceNumber && nullNodeInvoiceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceNumber = null;
-            if (parseNode.GetChildNode("LoadingPier") is { } nullNodeLoadingPier && nullNodeLoadingPier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoadingPier = null;
-            if (parseNode.GetChildNode("ModeOfTransport") is { } nullNodeModeOfTransport && nullNodeModeOfTransport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModeOfTransport = null;
-            if (parseNode.GetChildNode("OtherCharges") is { } nullNodeOtherCharges && nullNodeOtherCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherCharges = null;
-            if (parseNode.GetChildNode("OverridePaperlessIndicator") is { } nullNodeOverridePaperlessIndicator && nullNodeOverridePaperlessIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverridePaperlessIndicator = null;
-            if (parseNode.GetChildNode("PartiesToTransaction") is { } nullNodePartiesToTransaction && nullNodePartiesToTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartiesToTransaction = null;
-            if (parseNode.GetChildNode("PointOfOrigin") is { } nullNodePointOfOrigin && nullNodePointOfOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PointOfOrigin = null;
-            if (parseNode.GetChildNode("PointOfOriginType") is { } nullNodePointOfOriginType && nullNodePointOfOriginType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PointOfOriginType = null;
-            if (parseNode.GetChildNode("PortOfExport") is { } nullNodePortOfExport && nullNodePortOfExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortOfExport = null;
-            if (parseNode.GetChildNode("PortOfUnloading") is { } nullNodePortOfUnloading && nullNodePortOfUnloading.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortOfUnloading = null;
-            if (parseNode.GetChildNode("Product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
-            if (parseNode.GetChildNode("PurchaseOrderNumber") is { } nullNodePurchaseOrderNumber && nullNodePurchaseOrderNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseOrderNumber = null;
-            if (parseNode.GetChildNode("ReasonForExport") is { } nullNodeReasonForExport && nullNodeReasonForExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonForExport = null;
-            if (parseNode.GetChildNode("RoutedExportTransactionIndicator") is { } nullNodeRoutedExportTransactionIndicator && nullNodeRoutedExportTransactionIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutedExportTransactionIndicator = null;
-            if (parseNode.GetChildNode("ShipperMemo") is { } nullNodeShipperMemo && nullNodeShipperMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperMemo = null;
-            if (parseNode.GetChildNode("TermsOfShipment") is { } nullNodeTermsOfShipment && nullNodeTermsOfShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfShipment = null;
-            if (parseNode.GetChildNode("UPSPremiumCareForm") is { } nullNodeUPSPremiumCareForm && nullNodeUPSPremiumCareForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UPSPremiumCareForm = null;
-            if (parseNode.GetChildNode("UserCreatedForm") is { } nullNodeUserCreatedForm && nullNodeUserCreatedForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCreatedForm = null;
+            if (parseNode.GetChildNode("AdditionalDocumentIndicator") is null) { _explicitNullValueAdditionalDocumentIndicator = default!; _explicitNullProperties?.Remove("AdditionalDocumentIndicator"); }
+            else if (parseNode.GetChildNode("AdditionalDocumentIndicator") is { } nullNodeAdditionalDocumentIndicator && nullNodeAdditionalDocumentIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDocumentIndicator = null;
+            if (parseNode.GetChildNode("BlanketPeriod") is null) { _explicitNullValueBlanketPeriod = default!; _explicitNullProperties?.Remove("BlanketPeriod"); }
+            else if (parseNode.GetChildNode("BlanketPeriod") is { } nullNodeBlanketPeriod && nullNodeBlanketPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlanketPeriod = null;
+            if (parseNode.GetChildNode("CarrierID") is null) { _explicitNullValueCarrierID = default!; _explicitNullProperties?.Remove("CarrierID"); }
+            else if (parseNode.GetChildNode("CarrierID") is { } nullNodeCarrierID && nullNodeCarrierID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierID = null;
+            if (parseNode.GetChildNode("CN22Form") is null) { _explicitNullValueCN22Form = default!; _explicitNullProperties?.Remove("CN22Form"); }
+            else if (parseNode.GetChildNode("CN22Form") is { } nullNodeCN22Form && nullNodeCN22Form.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CN22Form = null;
+            if (parseNode.GetChildNode("Comments") is null) { _explicitNullValueComments = default!; _explicitNullProperties?.Remove("Comments"); }
+            else if (parseNode.GetChildNode("Comments") is { } nullNodeComments && nullNodeComments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comments = null;
+            if (parseNode.GetChildNode("Contacts") is null) { _explicitNullValueContacts = default!; _explicitNullProperties?.Remove("Contacts"); }
+            else if (parseNode.GetChildNode("Contacts") is { } nullNodeContacts && nullNodeContacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contacts = null;
+            if (parseNode.GetChildNode("ContainerizedIndicator") is null) { _explicitNullValueContainerizedIndicator = default!; _explicitNullProperties?.Remove("ContainerizedIndicator"); }
+            else if (parseNode.GetChildNode("ContainerizedIndicator") is { } nullNodeContainerizedIndicator && nullNodeContainerizedIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerizedIndicator = null;
+            if (parseNode.GetChildNode("CurrencyCode") is null) { _explicitNullValueCurrencyCode = default!; _explicitNullProperties?.Remove("CurrencyCode"); }
+            else if (parseNode.GetChildNode("CurrencyCode") is { } nullNodeCurrencyCode && nullNodeCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyCode = null;
+            if (parseNode.GetChildNode("DeclarationStatement") is null) { _explicitNullValueDeclarationStatement = default!; _explicitNullProperties?.Remove("DeclarationStatement"); }
+            else if (parseNode.GetChildNode("DeclarationStatement") is { } nullNodeDeclarationStatement && nullNodeDeclarationStatement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclarationStatement = null;
+            if (parseNode.GetChildNode("Discount") is null) { _explicitNullValueDiscount = default!; _explicitNullProperties?.Remove("Discount"); }
+            else if (parseNode.GetChildNode("Discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("EEIFilingOption") is null) { _explicitNullValueEEIFilingOption = default!; _explicitNullProperties?.Remove("EEIFilingOption"); }
+            else if (parseNode.GetChildNode("EEIFilingOption") is { } nullNodeEEIFilingOption && nullNodeEEIFilingOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EEIFilingOption = null;
+            if (parseNode.GetChildNode("EntryNumber") is null) { _explicitNullValueEntryNumber = default!; _explicitNullProperties?.Remove("EntryNumber"); }
+            else if (parseNode.GetChildNode("EntryNumber") is { } nullNodeEntryNumber && nullNodeEntryNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntryNumber = null;
+            if (parseNode.GetChildNode("ExportDate") is null) { _explicitNullValueExportDate = default!; _explicitNullProperties?.Remove("ExportDate"); }
+            else if (parseNode.GetChildNode("ExportDate") is { } nullNodeExportDate && nullNodeExportDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportDate = null;
+            if (parseNode.GetChildNode("ExportingCarrier") is null) { _explicitNullValueExportingCarrier = default!; _explicitNullProperties?.Remove("ExportingCarrier"); }
+            else if (parseNode.GetChildNode("ExportingCarrier") is { } nullNodeExportingCarrier && nullNodeExportingCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportingCarrier = null;
+            if (parseNode.GetChildNode("FormGroupIdName") is null) { _explicitNullValueFormGroupIdName = default!; _explicitNullProperties?.Remove("FormGroupIdName"); }
+            else if (parseNode.GetChildNode("FormGroupIdName") is { } nullNodeFormGroupIdName && nullNodeFormGroupIdName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormGroupIdName = null;
+            if (parseNode.GetChildNode("FormType") is null) { _explicitNullValueFormType = default!; _explicitNullProperties?.Remove("FormType"); }
+            else if (parseNode.GetChildNode("FormType") is { } nullNodeFormType && nullNodeFormType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormType = null;
+            if (parseNode.GetChildNode("FreightCharges") is null) { _explicitNullValueFreightCharges = default!; _explicitNullProperties?.Remove("FreightCharges"); }
+            else if (parseNode.GetChildNode("FreightCharges") is { } nullNodeFreightCharges && nullNodeFreightCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreightCharges = null;
+            if (parseNode.GetChildNode("HazardousMaterialsIndicator") is null) { _explicitNullValueHazardousMaterialsIndicator = default!; _explicitNullProperties?.Remove("HazardousMaterialsIndicator"); }
+            else if (parseNode.GetChildNode("HazardousMaterialsIndicator") is { } nullNodeHazardousMaterialsIndicator && nullNodeHazardousMaterialsIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazardousMaterialsIndicator = null;
+            if (parseNode.GetChildNode("InBondCode") is null) { _explicitNullValueInBondCode = default!; _explicitNullProperties?.Remove("InBondCode"); }
+            else if (parseNode.GetChildNode("InBondCode") is { } nullNodeInBondCode && nullNodeInBondCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InBondCode = null;
+            if (parseNode.GetChildNode("InsuranceCharges") is null) { _explicitNullValueInsuranceCharges = default!; _explicitNullProperties?.Remove("InsuranceCharges"); }
+            else if (parseNode.GetChildNode("InsuranceCharges") is { } nullNodeInsuranceCharges && nullNodeInsuranceCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsuranceCharges = null;
+            if (parseNode.GetChildNode("InvoiceDate") is null) { _explicitNullValueInvoiceDate = default!; _explicitNullProperties?.Remove("InvoiceDate"); }
+            else if (parseNode.GetChildNode("InvoiceDate") is { } nullNodeInvoiceDate && nullNodeInvoiceDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceDate = null;
+            if (parseNode.GetChildNode("InvoiceNumber") is null) { _explicitNullValueInvoiceNumber = default!; _explicitNullProperties?.Remove("InvoiceNumber"); }
+            else if (parseNode.GetChildNode("InvoiceNumber") is { } nullNodeInvoiceNumber && nullNodeInvoiceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceNumber = null;
+            if (parseNode.GetChildNode("LoadingPier") is null) { _explicitNullValueLoadingPier = default!; _explicitNullProperties?.Remove("LoadingPier"); }
+            else if (parseNode.GetChildNode("LoadingPier") is { } nullNodeLoadingPier && nullNodeLoadingPier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoadingPier = null;
+            if (parseNode.GetChildNode("ModeOfTransport") is null) { _explicitNullValueModeOfTransport = default!; _explicitNullProperties?.Remove("ModeOfTransport"); }
+            else if (parseNode.GetChildNode("ModeOfTransport") is { } nullNodeModeOfTransport && nullNodeModeOfTransport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModeOfTransport = null;
+            if (parseNode.GetChildNode("OtherCharges") is null) { _explicitNullValueOtherCharges = default!; _explicitNullProperties?.Remove("OtherCharges"); }
+            else if (parseNode.GetChildNode("OtherCharges") is { } nullNodeOtherCharges && nullNodeOtherCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherCharges = null;
+            if (parseNode.GetChildNode("OverridePaperlessIndicator") is null) { _explicitNullValueOverridePaperlessIndicator = default!; _explicitNullProperties?.Remove("OverridePaperlessIndicator"); }
+            else if (parseNode.GetChildNode("OverridePaperlessIndicator") is { } nullNodeOverridePaperlessIndicator && nullNodeOverridePaperlessIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverridePaperlessIndicator = null;
+            if (parseNode.GetChildNode("PartiesToTransaction") is null) { _explicitNullValuePartiesToTransaction = default!; _explicitNullProperties?.Remove("PartiesToTransaction"); }
+            else if (parseNode.GetChildNode("PartiesToTransaction") is { } nullNodePartiesToTransaction && nullNodePartiesToTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartiesToTransaction = null;
+            if (parseNode.GetChildNode("PointOfOrigin") is null) { _explicitNullValuePointOfOrigin = default!; _explicitNullProperties?.Remove("PointOfOrigin"); }
+            else if (parseNode.GetChildNode("PointOfOrigin") is { } nullNodePointOfOrigin && nullNodePointOfOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PointOfOrigin = null;
+            if (parseNode.GetChildNode("PointOfOriginType") is null) { _explicitNullValuePointOfOriginType = default!; _explicitNullProperties?.Remove("PointOfOriginType"); }
+            else if (parseNode.GetChildNode("PointOfOriginType") is { } nullNodePointOfOriginType && nullNodePointOfOriginType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PointOfOriginType = null;
+            if (parseNode.GetChildNode("PortOfExport") is null) { _explicitNullValuePortOfExport = default!; _explicitNullProperties?.Remove("PortOfExport"); }
+            else if (parseNode.GetChildNode("PortOfExport") is { } nullNodePortOfExport && nullNodePortOfExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortOfExport = null;
+            if (parseNode.GetChildNode("PortOfUnloading") is null) { _explicitNullValuePortOfUnloading = default!; _explicitNullProperties?.Remove("PortOfUnloading"); }
+            else if (parseNode.GetChildNode("PortOfUnloading") is { } nullNodePortOfUnloading && nullNodePortOfUnloading.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortOfUnloading = null;
+            if (parseNode.GetChildNode("Product") is null) { _explicitNullValueProduct = default!; _explicitNullProperties?.Remove("Product"); }
+            else if (parseNode.GetChildNode("Product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
+            if (parseNode.GetChildNode("PurchaseOrderNumber") is null) { _explicitNullValuePurchaseOrderNumber = default!; _explicitNullProperties?.Remove("PurchaseOrderNumber"); }
+            else if (parseNode.GetChildNode("PurchaseOrderNumber") is { } nullNodePurchaseOrderNumber && nullNodePurchaseOrderNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseOrderNumber = null;
+            if (parseNode.GetChildNode("ReasonForExport") is null) { _explicitNullValueReasonForExport = default!; _explicitNullProperties?.Remove("ReasonForExport"); }
+            else if (parseNode.GetChildNode("ReasonForExport") is { } nullNodeReasonForExport && nullNodeReasonForExport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonForExport = null;
+            if (parseNode.GetChildNode("RoutedExportTransactionIndicator") is null) { _explicitNullValueRoutedExportTransactionIndicator = default!; _explicitNullProperties?.Remove("RoutedExportTransactionIndicator"); }
+            else if (parseNode.GetChildNode("RoutedExportTransactionIndicator") is { } nullNodeRoutedExportTransactionIndicator && nullNodeRoutedExportTransactionIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutedExportTransactionIndicator = null;
+            if (parseNode.GetChildNode("ShipperMemo") is null) { _explicitNullValueShipperMemo = default!; _explicitNullProperties?.Remove("ShipperMemo"); }
+            else if (parseNode.GetChildNode("ShipperMemo") is { } nullNodeShipperMemo && nullNodeShipperMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperMemo = null;
+            if (parseNode.GetChildNode("TermsOfShipment") is null) { _explicitNullValueTermsOfShipment = default!; _explicitNullProperties?.Remove("TermsOfShipment"); }
+            else if (parseNode.GetChildNode("TermsOfShipment") is { } nullNodeTermsOfShipment && nullNodeTermsOfShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsOfShipment = null;
+            if (parseNode.GetChildNode("UPSPremiumCareForm") is null) { _explicitNullValueUPSPremiumCareForm = default!; _explicitNullProperties?.Remove("UPSPremiumCareForm"); }
+            else if (parseNode.GetChildNode("UPSPremiumCareForm") is { } nullNodeUPSPremiumCareForm && nullNodeUPSPremiumCareForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UPSPremiumCareForm = null;
+            if (parseNode.GetChildNode("UserCreatedForm") is null) { _explicitNullValueUserCreatedForm = default!; _explicitNullProperties?.Remove("UserCreatedForm"); }
+            else if (parseNode.GetChildNode("UserCreatedForm") is { } nullNodeUserCreatedForm && nullNodeUserCreatedForm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCreatedForm = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -64,391 +103,391 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Presence of the indicator means user will supply additional document, such as EEI, USMCA or CO.  This indicator should be set when the shipper intends to utilize UPS paperless invoice functionality AND the shipper has SELF-PREPARED other International Forms (EEI, CO, USMCA) to accompany the shipment. It is evaluated only when: 1. Account is paperless enabled. 2. Movement requires an invoice.3. Destination country or territory accepts paperless invoice. 4. Invoice data is supplied by the client and the data passes validation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdditionalDocumentIndicator { get => _explicitNullValueAdditionalDocumentIndicator; set { _explicitNullValueAdditionalDocumentIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalDocumentIndicator"); else _explicitNullProperties?.Remove("AdditionalDocumentIndicator"); } }
+        public string? AdditionalDocumentIndicator { get => _explicitNullValueAdditionalDocumentIndicator; set { _explicitNullValueAdditionalDocumentIndicator = value; AdditionalData?.Remove("AdditionalDocumentIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalDocumentIndicator"); else _explicitNullProperties?.Remove("AdditionalDocumentIndicator"); } }
         private string? _explicitNullValueAdditionalDocumentIndicator = default!;
 #nullable restore
 #else
-        public string AdditionalDocumentIndicator { get => _explicitNullValueAdditionalDocumentIndicator; set { _explicitNullValueAdditionalDocumentIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalDocumentIndicator"); else _explicitNullProperties?.Remove("AdditionalDocumentIndicator"); } }
+        public string AdditionalDocumentIndicator { get => _explicitNullValueAdditionalDocumentIndicator; set { _explicitNullValueAdditionalDocumentIndicator = value; AdditionalData?.Remove("AdditionalDocumentIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalDocumentIndicator"); else _explicitNullProperties?.Remove("AdditionalDocumentIndicator"); } }
         private string _explicitNullValueAdditionalDocumentIndicator = default!;
 #endif
         /// <summary>This field should be entered if the  USMCA Certificate covers multiple shipments of identical goods as described in the Description of Goods field that are imported into a USMCA country or territory for a specified period of up to one year (the blanket period). The importation of a good for which preferential treatment is claimed based on this certificate must occur between these dates.  Applies to USMCA form only. Required for USMCA.  This is not valid for a paperless shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod? BlanketPeriod { get => _explicitNullValueBlanketPeriod; set { _explicitNullValueBlanketPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlanketPeriod"); else _explicitNullProperties?.Remove("BlanketPeriod"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod? BlanketPeriod { get => _explicitNullValueBlanketPeriod; set { _explicitNullValueBlanketPeriod = value; AdditionalData?.Remove("BlanketPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlanketPeriod"); else _explicitNullProperties?.Remove("BlanketPeriod"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod? _explicitNullValueBlanketPeriod = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod BlanketPeriod { get => _explicitNullValueBlanketPeriod; set { _explicitNullValueBlanketPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlanketPeriod"); else _explicitNullProperties?.Remove("BlanketPeriod"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod BlanketPeriod { get => _explicitNullValueBlanketPeriod; set { _explicitNullValueBlanketPeriod = value; AdditionalData?.Remove("BlanketPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlanketPeriod"); else _explicitNullProperties?.Remove("BlanketPeriod"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsBlanketPeriod _explicitNullValueBlanketPeriod = default!;
 #endif
         /// <summary>The four-character Standard Carrier Alpha Code (SCAC) for vessel, rail, and truck shipments. For air shipment, enter the two or three character International Air Transport Association (IATA) code.  Applies to EEI forms only. No Validations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierID { get => _explicitNullValueCarrierID; set { _explicitNullValueCarrierID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CarrierID"); else _explicitNullProperties?.Remove("CarrierID"); } }
+        public string? CarrierID { get => _explicitNullValueCarrierID; set { _explicitNullValueCarrierID = value; AdditionalData?.Remove("CarrierID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CarrierID"); else _explicitNullProperties?.Remove("CarrierID"); } }
         private string? _explicitNullValueCarrierID = default!;
 #nullable restore
 #else
-        public string CarrierID { get => _explicitNullValueCarrierID; set { _explicitNullValueCarrierID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CarrierID"); else _explicitNullProperties?.Remove("CarrierID"); } }
+        public string CarrierID { get => _explicitNullValueCarrierID; set { _explicitNullValueCarrierID = value; AdditionalData?.Remove("CarrierID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CarrierID"); else _explicitNullProperties?.Remove("CarrierID"); } }
         private string _explicitNullValueCarrierID = default!;
 #endif
         /// <summary>Container for the CN22 form.  Required if the customer wants to use the UPS generated CN22.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form? CN22Form { get => _explicitNullValueCN22Form; set { _explicitNullValueCN22Form = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Form"); else _explicitNullProperties?.Remove("CN22Form"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form? CN22Form { get => _explicitNullValueCN22Form; set { _explicitNullValueCN22Form = value; AdditionalData?.Remove("CN22Form"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Form"); else _explicitNullProperties?.Remove("CN22Form"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form? _explicitNullValueCN22Form = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form CN22Form { get => _explicitNullValueCN22Form; set { _explicitNullValueCN22Form = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Form"); else _explicitNullProperties?.Remove("CN22Form"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form CN22Form { get => _explicitNullValueCN22Form; set { _explicitNullValueCN22Form = value; AdditionalData?.Remove("CN22Form"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Form"); else _explicitNullProperties?.Remove("CN22Form"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsCn22Form _explicitNullValueCN22Form = default!;
 #endif
         /// <summary>Any extra information about the current shipment.  Applies to Invoice and Partial Invoice forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comments"); else _explicitNullProperties?.Remove("Comments"); } }
+        public string? Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; AdditionalData?.Remove("Comments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comments"); else _explicitNullProperties?.Remove("Comments"); } }
         private string? _explicitNullValueComments = default!;
 #nullable restore
 #else
-        public string Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comments"); else _explicitNullProperties?.Remove("Comments"); } }
+        public string Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; AdditionalData?.Remove("Comments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Comments"); else _explicitNullProperties?.Remove("Comments"); } }
         private string _explicitNullValueComments = default!;
 #endif
         /// <summary>Holds the contact information of various parties.  Applicable for EEI and USMCA only. Required for USMCA and EEI. Ultimate consignee contact information is required for EEI.  Producer contact information is required for USMCA</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts? Contacts { get => _explicitNullValueContacts; set { _explicitNullValueContacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Contacts"); else _explicitNullProperties?.Remove("Contacts"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts? Contacts { get => _explicitNullValueContacts; set { _explicitNullValueContacts = value; AdditionalData?.Remove("Contacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Contacts"); else _explicitNullProperties?.Remove("Contacts"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts? _explicitNullValueContacts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts Contacts { get => _explicitNullValueContacts; set { _explicitNullValueContacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Contacts"); else _explicitNullProperties?.Remove("Contacts"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts Contacts { get => _explicitNullValueContacts; set { _explicitNullValueContacts = value; AdditionalData?.Remove("Contacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Contacts"); else _explicitNullProperties?.Remove("Contacts"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsContacts _explicitNullValueContacts = default!;
 #endif
         /// <summary>If present indicates that the goods are containerized. This applies to vessel shipments only.  Applies to EEI forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainerizedIndicator { get => _explicitNullValueContainerizedIndicator; set { _explicitNullValueContainerizedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContainerizedIndicator"); else _explicitNullProperties?.Remove("ContainerizedIndicator"); } }
+        public string? ContainerizedIndicator { get => _explicitNullValueContainerizedIndicator; set { _explicitNullValueContainerizedIndicator = value; AdditionalData?.Remove("ContainerizedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContainerizedIndicator"); else _explicitNullProperties?.Remove("ContainerizedIndicator"); } }
         private string? _explicitNullValueContainerizedIndicator = default!;
 #nullable restore
 #else
-        public string ContainerizedIndicator { get => _explicitNullValueContainerizedIndicator; set { _explicitNullValueContainerizedIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContainerizedIndicator"); else _explicitNullProperties?.Remove("ContainerizedIndicator"); } }
+        public string ContainerizedIndicator { get => _explicitNullValueContainerizedIndicator; set { _explicitNullValueContainerizedIndicator = value; AdditionalData?.Remove("ContainerizedIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContainerizedIndicator"); else _explicitNullProperties?.Remove("ContainerizedIndicator"); } }
         private string _explicitNullValueContainerizedIndicator = default!;
 #endif
         /// <summary>Currency code for all the monetary values of the Invoice form.  Applies to Invoice and Partial Invoice forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrencyCode"); else _explicitNullProperties?.Remove("CurrencyCode"); } }
+        public string? CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("CurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrencyCode"); else _explicitNullProperties?.Remove("CurrencyCode"); } }
         private string? _explicitNullValueCurrencyCode = default!;
 #nullable restore
 #else
-        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrencyCode"); else _explicitNullProperties?.Remove("CurrencyCode"); } }
+        public string CurrencyCode { get => _explicitNullValueCurrencyCode; set { _explicitNullValueCurrencyCode = value; AdditionalData?.Remove("CurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrencyCode"); else _explicitNullProperties?.Remove("CurrencyCode"); } }
         private string _explicitNullValueCurrencyCode = default!;
 #endif
         /// <summary>This is the legal explanation, used by Customs, for the delivering of this shipment. It must be identical to the set of declarations actually used by Customs. Examples of declarations that might be entered in this field are: I hereby certify that the goods covered by this shipment qualify as originating goods for purposes of preferential tariff treatment under the USMCA. I hereby certify that the information on this invoice is true and correct and the contents and value of this shipment is as stated above.  EEA statement:  The exporter of the products covered by this document declares that except where otherwise clearly indicated these products are of EEA preferential origin.  Applies to Invoice and Partial Invoice forms only. On the invoice for return shipment, the verbiage is as follows (user input is ignored): The exporter of the products covered by this document declares that except where otherwise clearly indicated these products are of EEA preferential origin</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeclarationStatement { get => _explicitNullValueDeclarationStatement; set { _explicitNullValueDeclarationStatement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeclarationStatement"); else _explicitNullProperties?.Remove("DeclarationStatement"); } }
+        public string? DeclarationStatement { get => _explicitNullValueDeclarationStatement; set { _explicitNullValueDeclarationStatement = value; AdditionalData?.Remove("DeclarationStatement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeclarationStatement"); else _explicitNullProperties?.Remove("DeclarationStatement"); } }
         private string? _explicitNullValueDeclarationStatement = default!;
 #nullable restore
 #else
-        public string DeclarationStatement { get => _explicitNullValueDeclarationStatement; set { _explicitNullValueDeclarationStatement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeclarationStatement"); else _explicitNullProperties?.Remove("DeclarationStatement"); } }
+        public string DeclarationStatement { get => _explicitNullValueDeclarationStatement; set { _explicitNullValueDeclarationStatement = value; AdditionalData?.Remove("DeclarationStatement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeclarationStatement"); else _explicitNullProperties?.Remove("DeclarationStatement"); } }
         private string _explicitNullValueDeclarationStatement = default!;
 #endif
         /// <summary>Container tag that holds the discount.  Applies to Invoice and Partial Invoice forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Discount"); else _explicitNullProperties?.Remove("Discount"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("Discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Discount"); else _explicitNullProperties?.Remove("Discount"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount? _explicitNullValueDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Discount"); else _explicitNullProperties?.Remove("Discount"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("Discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Discount"); else _explicitNullProperties?.Remove("Discount"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsDiscount _explicitNullValueDiscount = default!;
 #endif
         /// <summary>EEI Filing option.  Applicable for EEI form and is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption? EEIFilingOption { get => _explicitNullValueEEIFilingOption; set { _explicitNullValueEEIFilingOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIFilingOption"); else _explicitNullProperties?.Remove("EEIFilingOption"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption? EEIFilingOption { get => _explicitNullValueEEIFilingOption; set { _explicitNullValueEEIFilingOption = value; AdditionalData?.Remove("EEIFilingOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIFilingOption"); else _explicitNullProperties?.Remove("EEIFilingOption"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption? _explicitNullValueEEIFilingOption = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption EEIFilingOption { get => _explicitNullValueEEIFilingOption; set { _explicitNullValueEEIFilingOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIFilingOption"); else _explicitNullProperties?.Remove("EEIFilingOption"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption EEIFilingOption { get => _explicitNullValueEEIFilingOption; set { _explicitNullValueEEIFilingOption = value; AdditionalData?.Remove("EEIFilingOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EEIFilingOption"); else _explicitNullProperties?.Remove("EEIFilingOption"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsEeiFilingOption _explicitNullValueEEIFilingOption = default!;
 #endif
         /// <summary>The Import Entry Number when the export transaction is used as proof of export for import transactions (examples: In Bond, Temporary Import Bond or Drawbacks).  Applies to EEI forms only. Conditionally Required for EEI forms when In bond code value is other than 70 (Not In Bond)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EntryNumber { get => _explicitNullValueEntryNumber; set { _explicitNullValueEntryNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EntryNumber"); else _explicitNullProperties?.Remove("EntryNumber"); } }
+        public string? EntryNumber { get => _explicitNullValueEntryNumber; set { _explicitNullValueEntryNumber = value; AdditionalData?.Remove("EntryNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EntryNumber"); else _explicitNullProperties?.Remove("EntryNumber"); } }
         private string? _explicitNullValueEntryNumber = default!;
 #nullable restore
 #else
-        public string EntryNumber { get => _explicitNullValueEntryNumber; set { _explicitNullValueEntryNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EntryNumber"); else _explicitNullProperties?.Remove("EntryNumber"); } }
+        public string EntryNumber { get => _explicitNullValueEntryNumber; set { _explicitNullValueEntryNumber = value; AdditionalData?.Remove("EntryNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EntryNumber"); else _explicitNullProperties?.Remove("EntryNumber"); } }
         private string _explicitNullValueEntryNumber = default!;
 #endif
         /// <summary>The date the goods will be exiting the country or territory.  Applies to CO and EEI forms only. Required for CO and EEI forms. Format is yyyyMMdd.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportDate { get => _explicitNullValueExportDate; set { _explicitNullValueExportDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportDate"); else _explicitNullProperties?.Remove("ExportDate"); } }
+        public string? ExportDate { get => _explicitNullValueExportDate; set { _explicitNullValueExportDate = value; AdditionalData?.Remove("ExportDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportDate"); else _explicitNullProperties?.Remove("ExportDate"); } }
         private string? _explicitNullValueExportDate = default!;
 #nullable restore
 #else
-        public string ExportDate { get => _explicitNullValueExportDate; set { _explicitNullValueExportDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportDate"); else _explicitNullProperties?.Remove("ExportDate"); } }
+        public string ExportDate { get => _explicitNullValueExportDate; set { _explicitNullValueExportDate = value; AdditionalData?.Remove("ExportDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportDate"); else _explicitNullProperties?.Remove("ExportDate"); } }
         private string _explicitNullValueExportDate = default!;
 #endif
         /// <summary>The name of the carrier that is exporting the shipment. The vessels flag number should also be entered, if the carrier is a vessel.If value is empty, it will be set to default value as &apos;UPS&apos; for EEI forms.  Applies to CO and EEI forms only. Required for CO forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExportingCarrier { get => _explicitNullValueExportingCarrier; set { _explicitNullValueExportingCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportingCarrier"); else _explicitNullProperties?.Remove("ExportingCarrier"); } }
+        public string? ExportingCarrier { get => _explicitNullValueExportingCarrier; set { _explicitNullValueExportingCarrier = value; AdditionalData?.Remove("ExportingCarrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportingCarrier"); else _explicitNullProperties?.Remove("ExportingCarrier"); } }
         private string? _explicitNullValueExportingCarrier = default!;
 #nullable restore
 #else
-        public string ExportingCarrier { get => _explicitNullValueExportingCarrier; set { _explicitNullValueExportingCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportingCarrier"); else _explicitNullProperties?.Remove("ExportingCarrier"); } }
+        public string ExportingCarrier { get => _explicitNullValueExportingCarrier; set { _explicitNullValueExportingCarrier = value; AdditionalData?.Remove("ExportingCarrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExportingCarrier"); else _explicitNullProperties?.Remove("ExportingCarrier"); } }
         private string _explicitNullValueExportingCarrier = default!;
 #endif
         /// <summary>Contains description text which identifies the group of International forms. This element does not appear on the forms.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FormGroupIdName { get => _explicitNullValueFormGroupIdName; set { _explicitNullValueFormGroupIdName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormGroupIdName"); else _explicitNullProperties?.Remove("FormGroupIdName"); } }
+        public string? FormGroupIdName { get => _explicitNullValueFormGroupIdName; set { _explicitNullValueFormGroupIdName = value; AdditionalData?.Remove("FormGroupIdName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormGroupIdName"); else _explicitNullProperties?.Remove("FormGroupIdName"); } }
         private string? _explicitNullValueFormGroupIdName = default!;
 #nullable restore
 #else
-        public string FormGroupIdName { get => _explicitNullValueFormGroupIdName; set { _explicitNullValueFormGroupIdName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormGroupIdName"); else _explicitNullProperties?.Remove("FormGroupIdName"); } }
+        public string FormGroupIdName { get => _explicitNullValueFormGroupIdName; set { _explicitNullValueFormGroupIdName = value; AdditionalData?.Remove("FormGroupIdName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormGroupIdName"); else _explicitNullProperties?.Remove("FormGroupIdName"); } }
         private string _explicitNullValueFormGroupIdName = default!;
 #endif
         /// <summary>Indicates the name of the International Form requested.Valid values:- 01 - Invoice- 03 - CO- 04 - USMCA- 05 - Partial Invoice- 06 - Packinglist- 07 - Customer Generated Forms- 08 – Air Freight Packing List- 09 - CN22 Form- 10 – UPS Premium Care Form- 11 - EEIFor shipment with return service, 05 or 10 are the only valid values.Note: 01 and 05 are mutually exclusive and 05 are only valid for return shipments only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormType"); else _explicitNullProperties?.Remove("FormType"); } }
+        public List<string>? FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; AdditionalData?.Remove("FormType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormType"); else _explicitNullProperties?.Remove("FormType"); } }
         private List<string>? _explicitNullValueFormType = default!;
 #nullable restore
 #else
-        public List<string> FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormType"); else _explicitNullProperties?.Remove("FormType"); } }
+        public List<string> FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; AdditionalData?.Remove("FormType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormType"); else _explicitNullProperties?.Remove("FormType"); } }
         private List<string> _explicitNullValueFormType = default!;
 #endif
         /// <summary>Container tag that holds the Freight Charges.  Applies to Invoice and Partial Invoice forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsFreightCharges? FreightCharges { get => _explicitNullValueFreightCharges; set { _explicitNullValueFreightCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightCharges"); else _explicitNullProperties?.Remove("FreightCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsFreightCharges? FreightCharges { get => _explicitNullValueFreightCharges; set { _explicitNullValueFreightCharges = value; AdditionalData?.Remove("FreightCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightCharges"); else _explicitNullProperties?.Remove("FreightCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsFreightCharges? _explicitNullValueFreightCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsFreightCharges FreightCharges { get => _explicitNullValueFreightCharges; set { _explicitNullValueFreightCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightCharges"); else _explicitNullProperties?.Remove("FreightCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsFreightCharges FreightCharges { get => _explicitNullValueFreightCharges; set { _explicitNullValueFreightCharges = value; AdditionalData?.Remove("FreightCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FreightCharges"); else _explicitNullProperties?.Remove("FreightCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsFreightCharges _explicitNullValueFreightCharges = default!;
 #endif
         /// <summary>This is an empty tag. Presence of the indicator for EEI form means shipment contains hazardous material.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HazardousMaterialsIndicator { get => _explicitNullValueHazardousMaterialsIndicator; set { _explicitNullValueHazardousMaterialsIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardousMaterialsIndicator"); else _explicitNullProperties?.Remove("HazardousMaterialsIndicator"); } }
+        public string? HazardousMaterialsIndicator { get => _explicitNullValueHazardousMaterialsIndicator; set { _explicitNullValueHazardousMaterialsIndicator = value; AdditionalData?.Remove("HazardousMaterialsIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardousMaterialsIndicator"); else _explicitNullProperties?.Remove("HazardousMaterialsIndicator"); } }
         private string? _explicitNullValueHazardousMaterialsIndicator = default!;
 #nullable restore
 #else
-        public string HazardousMaterialsIndicator { get => _explicitNullValueHazardousMaterialsIndicator; set { _explicitNullValueHazardousMaterialsIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardousMaterialsIndicator"); else _explicitNullProperties?.Remove("HazardousMaterialsIndicator"); } }
+        public string HazardousMaterialsIndicator { get => _explicitNullValueHazardousMaterialsIndicator; set { _explicitNullValueHazardousMaterialsIndicator = value; AdditionalData?.Remove("HazardousMaterialsIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardousMaterialsIndicator"); else _explicitNullProperties?.Remove("HazardousMaterialsIndicator"); } }
         private string _explicitNullValueHazardousMaterialsIndicator = default!;
 #endif
         /// <summary>The two-character In Bond Code.  Applies to EEI forms only. Required for EEI forms. Valid values for EEI are: 70: Not in bond; 67: IE from a FTZ; 68: T&amp;E from a FTZ.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InBondCode { get => _explicitNullValueInBondCode; set { _explicitNullValueInBondCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InBondCode"); else _explicitNullProperties?.Remove("InBondCode"); } }
+        public string? InBondCode { get => _explicitNullValueInBondCode; set { _explicitNullValueInBondCode = value; AdditionalData?.Remove("InBondCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InBondCode"); else _explicitNullProperties?.Remove("InBondCode"); } }
         private string? _explicitNullValueInBondCode = default!;
 #nullable restore
 #else
-        public string InBondCode { get => _explicitNullValueInBondCode; set { _explicitNullValueInBondCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InBondCode"); else _explicitNullProperties?.Remove("InBondCode"); } }
+        public string InBondCode { get => _explicitNullValueInBondCode; set { _explicitNullValueInBondCode = value; AdditionalData?.Remove("InBondCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InBondCode"); else _explicitNullProperties?.Remove("InBondCode"); } }
         private string _explicitNullValueInBondCode = default!;
 #endif
         /// <summary>Container tag that holds the Insurance Charges.  Applies to Invoice and Partial Invoice forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsInsuranceCharges? InsuranceCharges { get => _explicitNullValueInsuranceCharges; set { _explicitNullValueInsuranceCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InsuranceCharges"); else _explicitNullProperties?.Remove("InsuranceCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsInsuranceCharges? InsuranceCharges { get => _explicitNullValueInsuranceCharges; set { _explicitNullValueInsuranceCharges = value; AdditionalData?.Remove("InsuranceCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InsuranceCharges"); else _explicitNullProperties?.Remove("InsuranceCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsInsuranceCharges? _explicitNullValueInsuranceCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsInsuranceCharges InsuranceCharges { get => _explicitNullValueInsuranceCharges; set { _explicitNullValueInsuranceCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InsuranceCharges"); else _explicitNullProperties?.Remove("InsuranceCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsInsuranceCharges InsuranceCharges { get => _explicitNullValueInsuranceCharges; set { _explicitNullValueInsuranceCharges = value; AdditionalData?.Remove("InsuranceCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InsuranceCharges"); else _explicitNullProperties?.Remove("InsuranceCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsInsuranceCharges _explicitNullValueInsuranceCharges = default!;
 #endif
         /// <summary>Date when the Invoice is created. Ideally this is the same as the ship date.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and optional for Partial Invoice. Required for Invoice form for forward shipments. For shipment with return service, the user input will be ignored, and the field will be blank on the invoice. Format is yyyyMMdd.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceDate { get => _explicitNullValueInvoiceDate; set { _explicitNullValueInvoiceDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceDate"); else _explicitNullProperties?.Remove("InvoiceDate"); } }
+        public string? InvoiceDate { get => _explicitNullValueInvoiceDate; set { _explicitNullValueInvoiceDate = value; AdditionalData?.Remove("InvoiceDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceDate"); else _explicitNullProperties?.Remove("InvoiceDate"); } }
         private string? _explicitNullValueInvoiceDate = default!;
 #nullable restore
 #else
-        public string InvoiceDate { get => _explicitNullValueInvoiceDate; set { _explicitNullValueInvoiceDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceDate"); else _explicitNullProperties?.Remove("InvoiceDate"); } }
+        public string InvoiceDate { get => _explicitNullValueInvoiceDate; set { _explicitNullValueInvoiceDate = value; AdditionalData?.Remove("InvoiceDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceDate"); else _explicitNullProperties?.Remove("InvoiceDate"); } }
         private string _explicitNullValueInvoiceDate = default!;
 #endif
         /// <summary>Commercial Invoice number assigned by the exporter.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and optional for Partial Invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceNumber { get => _explicitNullValueInvoiceNumber; set { _explicitNullValueInvoiceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceNumber"); else _explicitNullProperties?.Remove("InvoiceNumber"); } }
+        public string? InvoiceNumber { get => _explicitNullValueInvoiceNumber; set { _explicitNullValueInvoiceNumber = value; AdditionalData?.Remove("InvoiceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceNumber"); else _explicitNullProperties?.Remove("InvoiceNumber"); } }
         private string? _explicitNullValueInvoiceNumber = default!;
 #nullable restore
 #else
-        public string InvoiceNumber { get => _explicitNullValueInvoiceNumber; set { _explicitNullValueInvoiceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceNumber"); else _explicitNullProperties?.Remove("InvoiceNumber"); } }
+        public string InvoiceNumber { get => _explicitNullValueInvoiceNumber; set { _explicitNullValueInvoiceNumber = value; AdditionalData?.Remove("InvoiceNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceNumber"); else _explicitNullProperties?.Remove("InvoiceNumber"); } }
         private string _explicitNullValueInvoiceNumber = default!;
 #endif
         /// <summary>Pier where goods are loaded. For vessel shipments only.  Applies to EEI forms only. No validation is performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoadingPier { get => _explicitNullValueLoadingPier; set { _explicitNullValueLoadingPier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadingPier"); else _explicitNullProperties?.Remove("LoadingPier"); } }
+        public string? LoadingPier { get => _explicitNullValueLoadingPier; set { _explicitNullValueLoadingPier = value; AdditionalData?.Remove("LoadingPier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadingPier"); else _explicitNullProperties?.Remove("LoadingPier"); } }
         private string? _explicitNullValueLoadingPier = default!;
 #nullable restore
 #else
-        public string LoadingPier { get => _explicitNullValueLoadingPier; set { _explicitNullValueLoadingPier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadingPier"); else _explicitNullProperties?.Remove("LoadingPier"); } }
+        public string LoadingPier { get => _explicitNullValueLoadingPier; set { _explicitNullValueLoadingPier = value; AdditionalData?.Remove("LoadingPier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadingPier"); else _explicitNullProperties?.Remove("LoadingPier"); } }
         private string _explicitNullValueLoadingPier = default!;
 #endif
         /// <summary>Mode of transport by which the goods are exported. Valid values: Air, AirContainerized, Auto, FixedTransportInstallations, Mail, PassengerHandcarried, Pedestrian, Rail, Rail, Containerized, RoadOther, SeaBarge, SeaContainerized, SeaNoncontainerized, Truck, TruckContainerized.  Applies to EEI forms only.  Required for EEI.  Only allowed values can be entered. Only 10 Characters can appear on the form. Anything greater than 10 characters will be truncated on the form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModeOfTransport { get => _explicitNullValueModeOfTransport; set { _explicitNullValueModeOfTransport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModeOfTransport"); else _explicitNullProperties?.Remove("ModeOfTransport"); } }
+        public string? ModeOfTransport { get => _explicitNullValueModeOfTransport; set { _explicitNullValueModeOfTransport = value; AdditionalData?.Remove("ModeOfTransport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModeOfTransport"); else _explicitNullProperties?.Remove("ModeOfTransport"); } }
         private string? _explicitNullValueModeOfTransport = default!;
 #nullable restore
 #else
-        public string ModeOfTransport { get => _explicitNullValueModeOfTransport; set { _explicitNullValueModeOfTransport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModeOfTransport"); else _explicitNullProperties?.Remove("ModeOfTransport"); } }
+        public string ModeOfTransport { get => _explicitNullValueModeOfTransport; set { _explicitNullValueModeOfTransport = value; AdditionalData?.Remove("ModeOfTransport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ModeOfTransport"); else _explicitNullProperties?.Remove("ModeOfTransport"); } }
         private string _explicitNullValueModeOfTransport = default!;
 #endif
         /// <summary>Container tag that holds the information of amount that covers additional charges not already listed on the invoice.  Applies to Invoice and Partial Invoice forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsOtherCharges? OtherCharges { get => _explicitNullValueOtherCharges; set { _explicitNullValueOtherCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OtherCharges"); else _explicitNullProperties?.Remove("OtherCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsOtherCharges? OtherCharges { get => _explicitNullValueOtherCharges; set { _explicitNullValueOtherCharges = value; AdditionalData?.Remove("OtherCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OtherCharges"); else _explicitNullProperties?.Remove("OtherCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsOtherCharges? _explicitNullValueOtherCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsOtherCharges OtherCharges { get => _explicitNullValueOtherCharges; set { _explicitNullValueOtherCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OtherCharges"); else _explicitNullProperties?.Remove("OtherCharges"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsOtherCharges OtherCharges { get => _explicitNullValueOtherCharges; set { _explicitNullValueOtherCharges = value; AdditionalData?.Remove("OtherCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OtherCharges"); else _explicitNullProperties?.Remove("OtherCharges"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsOtherCharges _explicitNullValueOtherCharges = default!;
 #endif
         /// <summary>The application will automatically provide a copy of the invoice or USMCA with each response regardless of whether the user has enabled Paperless account. The user now has the option to print or ignore the copy provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverridePaperlessIndicator { get => _explicitNullValueOverridePaperlessIndicator; set { _explicitNullValueOverridePaperlessIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverridePaperlessIndicator"); else _explicitNullProperties?.Remove("OverridePaperlessIndicator"); } }
+        public string? OverridePaperlessIndicator { get => _explicitNullValueOverridePaperlessIndicator; set { _explicitNullValueOverridePaperlessIndicator = value; AdditionalData?.Remove("OverridePaperlessIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverridePaperlessIndicator"); else _explicitNullProperties?.Remove("OverridePaperlessIndicator"); } }
         private string? _explicitNullValueOverridePaperlessIndicator = default!;
 #nullable restore
 #else
-        public string OverridePaperlessIndicator { get => _explicitNullValueOverridePaperlessIndicator; set { _explicitNullValueOverridePaperlessIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverridePaperlessIndicator"); else _explicitNullProperties?.Remove("OverridePaperlessIndicator"); } }
+        public string OverridePaperlessIndicator { get => _explicitNullValueOverridePaperlessIndicator; set { _explicitNullValueOverridePaperlessIndicator = value; AdditionalData?.Remove("OverridePaperlessIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OverridePaperlessIndicator"); else _explicitNullProperties?.Remove("OverridePaperlessIndicator"); } }
         private string _explicitNullValueOverridePaperlessIndicator = default!;
 #endif
         /// <summary>Information about parties to transaction. Use Related, if the parties to the transaction are related. A related party is an export from a U.S. businessperson or business to a foreign business or from a U.S. business to a foreign person or business where the person has at least 10 percent of the voting shares of the business during the fiscal year. If unincorporated, then an equivalent interest in the business.  Applies to EEI forms only.Valid values:- R - Related- N - Non-related.Parties to transaction is required if EEIFilingOption Code is 3 and if valid UPSFiled POA Code present in request.Default will be set to N - Non-related if invalid code present with length of one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartiesToTransaction { get => _explicitNullValuePartiesToTransaction; set { _explicitNullValuePartiesToTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PartiesToTransaction"); else _explicitNullProperties?.Remove("PartiesToTransaction"); } }
+        public string? PartiesToTransaction { get => _explicitNullValuePartiesToTransaction; set { _explicitNullValuePartiesToTransaction = value; AdditionalData?.Remove("PartiesToTransaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PartiesToTransaction"); else _explicitNullProperties?.Remove("PartiesToTransaction"); } }
         private string? _explicitNullValuePartiesToTransaction = default!;
 #nullable restore
 #else
-        public string PartiesToTransaction { get => _explicitNullValuePartiesToTransaction; set { _explicitNullValuePartiesToTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PartiesToTransaction"); else _explicitNullProperties?.Remove("PartiesToTransaction"); } }
+        public string PartiesToTransaction { get => _explicitNullValuePartiesToTransaction; set { _explicitNullValuePartiesToTransaction = value; AdditionalData?.Remove("PartiesToTransaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PartiesToTransaction"); else _explicitNullProperties?.Remove("PartiesToTransaction"); } }
         private string _explicitNullValuePartiesToTransaction = default!;
 #endif
         /// <summary>Contains one of the following:  The two-digit U.S. Postal Service abbreviation for the state from which the goods were shipped to the port of export. The state that is the source for the good with the highest value. The state of consolidation. The Foreign Trade Zone number of the zone from where the exports are leaving.  If the goods were shipped from Puerto Rico, enter PR.  Applies to EEI forms only. Required for EEI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PointOfOrigin { get => _explicitNullValuePointOfOrigin; set { _explicitNullValuePointOfOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PointOfOrigin"); else _explicitNullProperties?.Remove("PointOfOrigin"); } }
+        public string? PointOfOrigin { get => _explicitNullValuePointOfOrigin; set { _explicitNullValuePointOfOrigin = value; AdditionalData?.Remove("PointOfOrigin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PointOfOrigin"); else _explicitNullProperties?.Remove("PointOfOrigin"); } }
         private string? _explicitNullValuePointOfOrigin = default!;
 #nullable restore
 #else
-        public string PointOfOrigin { get => _explicitNullValuePointOfOrigin; set { _explicitNullValuePointOfOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PointOfOrigin"); else _explicitNullProperties?.Remove("PointOfOrigin"); } }
+        public string PointOfOrigin { get => _explicitNullValuePointOfOrigin; set { _explicitNullValuePointOfOrigin = value; AdditionalData?.Remove("PointOfOrigin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PointOfOrigin"); else _explicitNullProperties?.Remove("PointOfOrigin"); } }
         private string _explicitNullValuePointOfOrigin = default!;
 #endif
         /// <summary>Valid values are : S (for state postal code abbreviation) , F : FTZ Identifier  Applies EEI forms only. Required for EEI form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PointOfOriginType { get => _explicitNullValuePointOfOriginType; set { _explicitNullValuePointOfOriginType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PointOfOriginType"); else _explicitNullProperties?.Remove("PointOfOriginType"); } }
+        public string? PointOfOriginType { get => _explicitNullValuePointOfOriginType; set { _explicitNullValuePointOfOriginType = value; AdditionalData?.Remove("PointOfOriginType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PointOfOriginType"); else _explicitNullProperties?.Remove("PointOfOriginType"); } }
         private string? _explicitNullValuePointOfOriginType = default!;
 #nullable restore
 #else
-        public string PointOfOriginType { get => _explicitNullValuePointOfOriginType; set { _explicitNullValuePointOfOriginType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PointOfOriginType"); else _explicitNullProperties?.Remove("PointOfOriginType"); } }
+        public string PointOfOriginType { get => _explicitNullValuePointOfOriginType; set { _explicitNullValuePointOfOriginType = value; AdditionalData?.Remove("PointOfOriginType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PointOfOriginType"); else _explicitNullProperties?.Remove("PointOfOriginType"); } }
         private string _explicitNullValuePointOfOriginType = default!;
 #endif
         /// <summary>Should be one of the following-Overland: The U.S. Customs port where the carrier crosses the U.S. border, Vessel and Air: The U.S. Customs port where the goods are loaded on the carrier to be exported from the U.S., Postal: The U.S. Postal Office from where the goods are mailed.  Applies to EEI forms only. No validation is performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortOfExport { get => _explicitNullValuePortOfExport; set { _explicitNullValuePortOfExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfExport"); else _explicitNullProperties?.Remove("PortOfExport"); } }
+        public string? PortOfExport { get => _explicitNullValuePortOfExport; set { _explicitNullValuePortOfExport = value; AdditionalData?.Remove("PortOfExport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfExport"); else _explicitNullProperties?.Remove("PortOfExport"); } }
         private string? _explicitNullValuePortOfExport = default!;
 #nullable restore
 #else
-        public string PortOfExport { get => _explicitNullValuePortOfExport; set { _explicitNullValuePortOfExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfExport"); else _explicitNullProperties?.Remove("PortOfExport"); } }
+        public string PortOfExport { get => _explicitNullValuePortOfExport; set { _explicitNullValuePortOfExport = value; AdditionalData?.Remove("PortOfExport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfExport"); else _explicitNullProperties?.Remove("PortOfExport"); } }
         private string _explicitNullValuePortOfExport = default!;
 #endif
         /// <summary>The country or territory and the port where the goods will be unloaded from the exporting carrier. For vessel and air shipments only.  Applies to EEI forms only. No validation is performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortOfUnloading { get => _explicitNullValuePortOfUnloading; set { _explicitNullValuePortOfUnloading = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfUnloading"); else _explicitNullProperties?.Remove("PortOfUnloading"); } }
+        public string? PortOfUnloading { get => _explicitNullValuePortOfUnloading; set { _explicitNullValuePortOfUnloading = value; AdditionalData?.Remove("PortOfUnloading"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfUnloading"); else _explicitNullProperties?.Remove("PortOfUnloading"); } }
         private string? _explicitNullValuePortOfUnloading = default!;
 #nullable restore
 #else
-        public string PortOfUnloading { get => _explicitNullValuePortOfUnloading; set { _explicitNullValuePortOfUnloading = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfUnloading"); else _explicitNullProperties?.Remove("PortOfUnloading"); } }
+        public string PortOfUnloading { get => _explicitNullValuePortOfUnloading; set { _explicitNullValuePortOfUnloading = value; AdditionalData?.Remove("PortOfUnloading"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PortOfUnloading"); else _explicitNullProperties?.Remove("PortOfUnloading"); } }
         private string _explicitNullValuePortOfUnloading = default!;
 #endif
         /// <summary>The Product property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProduct>? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Product"); else _explicitNullProperties?.Remove("Product"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProduct>? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; AdditionalData?.Remove("Product"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Product"); else _explicitNullProperties?.Remove("Product"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProduct>? _explicitNullValueProduct = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProduct> Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Product"); else _explicitNullProperties?.Remove("Product"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProduct> Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; AdditionalData?.Remove("Product"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Product"); else _explicitNullProperties?.Remove("Product"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsProduct> _explicitNullValueProduct = default!;
 #endif
         /// <summary>The customer&apos;s order reference number.  Applies to Invoice and Partial Invoice forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurchaseOrderNumber { get => _explicitNullValuePurchaseOrderNumber; set { _explicitNullValuePurchaseOrderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PurchaseOrderNumber"); else _explicitNullProperties?.Remove("PurchaseOrderNumber"); } }
+        public string? PurchaseOrderNumber { get => _explicitNullValuePurchaseOrderNumber; set { _explicitNullValuePurchaseOrderNumber = value; AdditionalData?.Remove("PurchaseOrderNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PurchaseOrderNumber"); else _explicitNullProperties?.Remove("PurchaseOrderNumber"); } }
         private string? _explicitNullValuePurchaseOrderNumber = default!;
 #nullable restore
 #else
-        public string PurchaseOrderNumber { get => _explicitNullValuePurchaseOrderNumber; set { _explicitNullValuePurchaseOrderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PurchaseOrderNumber"); else _explicitNullProperties?.Remove("PurchaseOrderNumber"); } }
+        public string PurchaseOrderNumber { get => _explicitNullValuePurchaseOrderNumber; set { _explicitNullValuePurchaseOrderNumber = value; AdditionalData?.Remove("PurchaseOrderNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PurchaseOrderNumber"); else _explicitNullProperties?.Remove("PurchaseOrderNumber"); } }
         private string _explicitNullValuePurchaseOrderNumber = default!;
 #endif
         /// <summary>A reason to export the current international shipment.Valid values: SALE, GIFT, SAMPLE, RETURN, REPAIR, INTERCOMPANYDATA, Any other reason.  Applies to Invoice and Partial Invoice forms only. Required for Invoice forms and Optional for Partial Invoice. Required for EU Inbound shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonForExport { get => _explicitNullValueReasonForExport; set { _explicitNullValueReasonForExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReasonForExport"); else _explicitNullProperties?.Remove("ReasonForExport"); } }
+        public string? ReasonForExport { get => _explicitNullValueReasonForExport; set { _explicitNullValueReasonForExport = value; AdditionalData?.Remove("ReasonForExport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReasonForExport"); else _explicitNullProperties?.Remove("ReasonForExport"); } }
         private string? _explicitNullValueReasonForExport = default!;
 #nullable restore
 #else
-        public string ReasonForExport { get => _explicitNullValueReasonForExport; set { _explicitNullValueReasonForExport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReasonForExport"); else _explicitNullProperties?.Remove("ReasonForExport"); } }
+        public string ReasonForExport { get => _explicitNullValueReasonForExport; set { _explicitNullValueReasonForExport = value; AdditionalData?.Remove("ReasonForExport"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReasonForExport"); else _explicitNullProperties?.Remove("ReasonForExport"); } }
         private string _explicitNullValueReasonForExport = default!;
 #endif
         /// <summary>If Present, indicates that it is a routed export transaction. A routed export transaction is one, where the foreign principal party in interest authorizes a U.S. forwarding (or other) agent to export the merchandise outside the U.S.  Applies to EEI forms only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoutedExportTransactionIndicator { get => _explicitNullValueRoutedExportTransactionIndicator; set { _explicitNullValueRoutedExportTransactionIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutedExportTransactionIndicator"); else _explicitNullProperties?.Remove("RoutedExportTransactionIndicator"); } }
+        public string? RoutedExportTransactionIndicator { get => _explicitNullValueRoutedExportTransactionIndicator; set { _explicitNullValueRoutedExportTransactionIndicator = value; AdditionalData?.Remove("RoutedExportTransactionIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutedExportTransactionIndicator"); else _explicitNullProperties?.Remove("RoutedExportTransactionIndicator"); } }
         private string? _explicitNullValueRoutedExportTransactionIndicator = default!;
 #nullable restore
 #else
-        public string RoutedExportTransactionIndicator { get => _explicitNullValueRoutedExportTransactionIndicator; set { _explicitNullValueRoutedExportTransactionIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutedExportTransactionIndicator"); else _explicitNullProperties?.Remove("RoutedExportTransactionIndicator"); } }
+        public string RoutedExportTransactionIndicator { get => _explicitNullValueRoutedExportTransactionIndicator; set { _explicitNullValueRoutedExportTransactionIndicator = value; AdditionalData?.Remove("RoutedExportTransactionIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutedExportTransactionIndicator"); else _explicitNullProperties?.Remove("RoutedExportTransactionIndicator"); } }
         private string _explicitNullValueRoutedExportTransactionIndicator = default!;
 #endif
         /// <summary>Text for the shipper to add additional information.  Forward shipment only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperMemo { get => _explicitNullValueShipperMemo; set { _explicitNullValueShipperMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperMemo"); else _explicitNullProperties?.Remove("ShipperMemo"); } }
+        public string? ShipperMemo { get => _explicitNullValueShipperMemo; set { _explicitNullValueShipperMemo = value; AdditionalData?.Remove("ShipperMemo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperMemo"); else _explicitNullProperties?.Remove("ShipperMemo"); } }
         private string? _explicitNullValueShipperMemo = default!;
 #nullable restore
 #else
-        public string ShipperMemo { get => _explicitNullValueShipperMemo; set { _explicitNullValueShipperMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperMemo"); else _explicitNullProperties?.Remove("ShipperMemo"); } }
+        public string ShipperMemo { get => _explicitNullValueShipperMemo; set { _explicitNullValueShipperMemo = value; AdditionalData?.Remove("ShipperMemo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperMemo"); else _explicitNullProperties?.Remove("ShipperMemo"); } }
         private string _explicitNullValueShipperMemo = default!;
 #endif
         /// <summary>Indicates the rights to the seller from the buyer. Also, it refers to Terms of Sale.  Applies to Invoice and Partial Invoice forms only. Valid values: CFR: Cost and Freight CIF: Cost Insurance and Freight CIP: Carriage and Insurance Paid CPT: Carriage Paid To DAF: Delivered at Frontier DDP: Delivery Duty Paid DAP: Delivery at Place DEQ: Delivered Ex Quay DES: Delivered Ex Ship EXW: Ex Works FAS: Free Alongside Ship FCA: Free Carrier FOB: Free On Board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TermsOfShipment { get => _explicitNullValueTermsOfShipment; set { _explicitNullValueTermsOfShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TermsOfShipment"); else _explicitNullProperties?.Remove("TermsOfShipment"); } }
+        public string? TermsOfShipment { get => _explicitNullValueTermsOfShipment; set { _explicitNullValueTermsOfShipment = value; AdditionalData?.Remove("TermsOfShipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TermsOfShipment"); else _explicitNullProperties?.Remove("TermsOfShipment"); } }
         private string? _explicitNullValueTermsOfShipment = default!;
 #nullable restore
 #else
-        public string TermsOfShipment { get => _explicitNullValueTermsOfShipment; set { _explicitNullValueTermsOfShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TermsOfShipment"); else _explicitNullProperties?.Remove("TermsOfShipment"); } }
+        public string TermsOfShipment { get => _explicitNullValueTermsOfShipment; set { _explicitNullValueTermsOfShipment = value; AdditionalData?.Remove("TermsOfShipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TermsOfShipment"); else _explicitNullProperties?.Remove("TermsOfShipment"); } }
         private string _explicitNullValueTermsOfShipment = default!;
 #endif
         /// <summary>UPS Premium Care Form is required if UPS Premium Care Indicator is present on a package.  Valid only for Canada to Canada movements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm? UPSPremiumCareForm { get => _explicitNullValueUPSPremiumCareForm; set { _explicitNullValueUPSPremiumCareForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremiumCareForm"); else _explicitNullProperties?.Remove("UPSPremiumCareForm"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm? UPSPremiumCareForm { get => _explicitNullValueUPSPremiumCareForm; set { _explicitNullValueUPSPremiumCareForm = value; AdditionalData?.Remove("UPSPremiumCareForm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremiumCareForm"); else _explicitNullProperties?.Remove("UPSPremiumCareForm"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm? _explicitNullValueUPSPremiumCareForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm UPSPremiumCareForm { get => _explicitNullValueUPSPremiumCareForm; set { _explicitNullValueUPSPremiumCareForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremiumCareForm"); else _explicitNullProperties?.Remove("UPSPremiumCareForm"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm UPSPremiumCareForm { get => _explicitNullValueUPSPremiumCareForm; set { _explicitNullValueUPSPremiumCareForm = value; AdditionalData?.Remove("UPSPremiumCareForm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPSPremiumCareForm"); else _explicitNullProperties?.Remove("UPSPremiumCareForm"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUpsPremiumCareForm _explicitNullValueUPSPremiumCareForm = default!;
 #endif
         /// <summary>Data container for DocumentID(s).  Required if Form Type is 07.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm? UserCreatedForm { get => _explicitNullValueUserCreatedForm; set { _explicitNullValueUserCreatedForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedForm"); else _explicitNullProperties?.Remove("UserCreatedForm"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm? UserCreatedForm { get => _explicitNullValueUserCreatedForm; set { _explicitNullValueUserCreatedForm = value; AdditionalData?.Remove("UserCreatedForm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedForm"); else _explicitNullProperties?.Remove("UserCreatedForm"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm? _explicitNullValueUserCreatedForm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm UserCreatedForm { get => _explicitNullValueUserCreatedForm; set { _explicitNullValueUserCreatedForm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedForm"); else _explicitNullProperties?.Remove("UserCreatedForm"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm UserCreatedForm { get => _explicitNullValueUserCreatedForm; set { _explicitNullValueUserCreatedForm = value; AdditionalData?.Remove("UserCreatedForm"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserCreatedForm"); else _explicitNullProperties?.Remove("UserCreatedForm"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InternationalFormsUserCreatedForm _explicitNullValueUserCreatedForm = default!;
 #endif
         /// <summary>

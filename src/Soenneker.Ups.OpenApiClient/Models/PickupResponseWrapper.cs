@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PickupRateResponse") is { } nullNodePickupRateResponse && nullNodePickupRateResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupRateResponse = null;
+            if (parseNode.GetChildNode("PickupRateResponse") is null) { _explicitNullValuePickupRateResponse = default!; _explicitNullProperties?.Remove("PickupRateResponse"); }
+            else if (parseNode.GetChildNode("PickupRateResponse") is { } nullNodePickupRateResponse && nullNodePickupRateResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupRateResponse = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The response of rating on-callpickup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponse? PickupRateResponse { get => _explicitNullValuePickupRateResponse; set { _explicitNullValuePickupRateResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupRateResponse"); else _explicitNullProperties?.Remove("PickupRateResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponse? PickupRateResponse { get => _explicitNullValuePickupRateResponse; set { _explicitNullValuePickupRateResponse = value; AdditionalData?.Remove("PickupRateResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupRateResponse"); else _explicitNullProperties?.Remove("PickupRateResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponse? _explicitNullValuePickupRateResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponse PickupRateResponse { get => _explicitNullValuePickupRateResponse; set { _explicitNullValuePickupRateResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupRateResponse"); else _explicitNullProperties?.Remove("PickupRateResponse"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponse PickupRateResponse { get => _explicitNullValuePickupRateResponse; set { _explicitNullValuePickupRateResponse = value; AdditionalData?.Remove("PickupRateResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupRateResponse"); else _explicitNullProperties?.Remove("PickupRateResponse"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateResponse _explicitNullValuePickupRateResponse = default!;
 #endif
         /// <summary>

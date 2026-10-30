@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("rates") is { } nullNodeRates && nullNodeRates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rates = null;
+            if (parseNode.GetChildNode("rates") is null) { _explicitNullValueRates = default!; _explicitNullProperties?.Remove("rates"); }
+            else if (parseNode.GetChildNode("rates") is { } nullNodeRates && nullNodeRates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rates = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Unbounded list of calculated rates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem>? Rates { get => _explicitNullValueRates; set { _explicitNullValueRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rates"); else _explicitNullProperties?.Remove("rates"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem>? Rates { get => _explicitNullValueRates; set { _explicitNullValueRates = value; AdditionalData?.Remove("rates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rates"); else _explicitNullProperties?.Remove("rates"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem>? _explicitNullValueRates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem> Rates { get => _explicitNullValueRates; set { _explicitNullValueRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rates"); else _explicitNullProperties?.Remove("rates"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem> Rates { get => _explicitNullValueRates; set { _explicitNullValueRates = value; AdditionalData?.Remove("rates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rates"); else _explicitNullProperties?.Remove("rates"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateResponseV1ResponseRatesItem> _explicitNullValueRates = default!;
 #endif
         /// <summary>

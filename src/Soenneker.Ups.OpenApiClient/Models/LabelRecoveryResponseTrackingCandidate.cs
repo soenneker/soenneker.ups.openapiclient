@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DestinationCountryCode") is { } nullNodeDestinationCountryCode && nullNodeDestinationCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationCountryCode = null;
-            if (parseNode.GetChildNode("DestinationPostalCode") is { } nullNodeDestinationPostalCode && nullNodeDestinationPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationPostalCode = null;
-            if (parseNode.GetChildNode("PickupDateRange") is { } nullNodePickupDateRange && nullNodePickupDateRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDateRange = null;
-            if (parseNode.GetChildNode("TrackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("DestinationCountryCode") is null) { _explicitNullValueDestinationCountryCode = default!; _explicitNullProperties?.Remove("DestinationCountryCode"); }
+            else if (parseNode.GetChildNode("DestinationCountryCode") is { } nullNodeDestinationCountryCode && nullNodeDestinationCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationCountryCode = null;
+            if (parseNode.GetChildNode("DestinationPostalCode") is null) { _explicitNullValueDestinationPostalCode = default!; _explicitNullProperties?.Remove("DestinationPostalCode"); }
+            else if (parseNode.GetChildNode("DestinationPostalCode") is { } nullNodeDestinationPostalCode && nullNodeDestinationPostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationPostalCode = null;
+            if (parseNode.GetChildNode("PickupDateRange") is null) { _explicitNullValuePickupDateRange = default!; _explicitNullProperties?.Remove("PickupDateRange"); }
+            else if (parseNode.GetChildNode("PickupDateRange") is { } nullNodePickupDateRange && nullNodePickupDateRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDateRange = null;
+            if (parseNode.GetChildNode("TrackingNumber") is null) { _explicitNullValueTrackingNumber = default!; _explicitNullProperties?.Remove("TrackingNumber"); }
+            else if (parseNode.GetChildNode("TrackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Destination country or territory code candidate, like US = USA, CA = Canada  Must be valid ups country or territory code. This is required, if MasterEUConsolidationIndicator is &quot;1&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationCountryCode { get => _explicitNullValueDestinationCountryCode; set { _explicitNullValueDestinationCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationCountryCode"); else _explicitNullProperties?.Remove("DestinationCountryCode"); } }
+        public string? DestinationCountryCode { get => _explicitNullValueDestinationCountryCode; set { _explicitNullValueDestinationCountryCode = value; AdditionalData?.Remove("DestinationCountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationCountryCode"); else _explicitNullProperties?.Remove("DestinationCountryCode"); } }
         private string? _explicitNullValueDestinationCountryCode = default!;
 #nullable restore
 #else
-        public string DestinationCountryCode { get => _explicitNullValueDestinationCountryCode; set { _explicitNullValueDestinationCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationCountryCode"); else _explicitNullProperties?.Remove("DestinationCountryCode"); } }
+        public string DestinationCountryCode { get => _explicitNullValueDestinationCountryCode; set { _explicitNullValueDestinationCountryCode = value; AdditionalData?.Remove("DestinationCountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationCountryCode"); else _explicitNullProperties?.Remove("DestinationCountryCode"); } }
         private string _explicitNullValueDestinationCountryCode = default!;
 #endif
         /// <summary>Destination postal code candidate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationPostalCode { get => _explicitNullValueDestinationPostalCode; set { _explicitNullValueDestinationPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationPostalCode"); else _explicitNullProperties?.Remove("DestinationPostalCode"); } }
+        public string? DestinationPostalCode { get => _explicitNullValueDestinationPostalCode; set { _explicitNullValueDestinationPostalCode = value; AdditionalData?.Remove("DestinationPostalCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationPostalCode"); else _explicitNullProperties?.Remove("DestinationPostalCode"); } }
         private string? _explicitNullValueDestinationPostalCode = default!;
 #nullable restore
 #else
-        public string DestinationPostalCode { get => _explicitNullValueDestinationPostalCode; set { _explicitNullValueDestinationPostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationPostalCode"); else _explicitNullProperties?.Remove("DestinationPostalCode"); } }
+        public string DestinationPostalCode { get => _explicitNullValueDestinationPostalCode; set { _explicitNullValueDestinationPostalCode = value; AdditionalData?.Remove("DestinationPostalCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DestinationPostalCode"); else _explicitNullProperties?.Remove("DestinationPostalCode"); } }
         private string _explicitNullValueDestinationPostalCode = default!;
 #endif
         /// <summary>A range of time the package was picked up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.TrackingCandidatePickupDateRange? PickupDateRange { get => _explicitNullValuePickupDateRange; set { _explicitNullValuePickupDateRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDateRange"); else _explicitNullProperties?.Remove("PickupDateRange"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingCandidatePickupDateRange? PickupDateRange { get => _explicitNullValuePickupDateRange; set { _explicitNullValuePickupDateRange = value; AdditionalData?.Remove("PickupDateRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDateRange"); else _explicitNullProperties?.Remove("PickupDateRange"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TrackingCandidatePickupDateRange? _explicitNullValuePickupDateRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.TrackingCandidatePickupDateRange PickupDateRange { get => _explicitNullValuePickupDateRange; set { _explicitNullValuePickupDateRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDateRange"); else _explicitNullProperties?.Remove("PickupDateRange"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.TrackingCandidatePickupDateRange PickupDateRange { get => _explicitNullValuePickupDateRange; set { _explicitNullValuePickupDateRange = value; AdditionalData?.Remove("PickupDateRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDateRange"); else _explicitNullProperties?.Remove("PickupDateRange"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.TrackingCandidatePickupDateRange _explicitNullValuePickupDateRange = default!;
 #endif
         /// <summary>Packaging Tracking Number  Only supported for the web small package shipment so only supported 18 digit</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("TrackingNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
         private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("TrackingNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrackingNumber"); else _explicitNullProperties?.Remove("TrackingNumber"); } }
         private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>

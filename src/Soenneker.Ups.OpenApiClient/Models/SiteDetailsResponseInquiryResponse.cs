@@ -18,10 +18,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
-            if (parseNode.GetChildNode("recordsPerPage") is { } nullNodeRecordsPerPage && nullNodeRecordsPerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsPerPage = null;
-            if (parseNode.GetChildNode("totalRecords") is { } nullNodeTotalRecords && nullNodeTotalRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRecords = null;
-            if (parseNode.GetChildNode("transactionref") is { } nullNodeTransactionref && nullNodeTransactionref.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transactionref = null;
+            if (parseNode.GetChildNode("offset") is null) { _explicitNullValueOffset = default!; _explicitNullProperties?.Remove("offset"); }
+            else if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("recordsPerPage") is null) { _explicitNullValueRecordsPerPage = default!; _explicitNullProperties?.Remove("recordsPerPage"); }
+            else if (parseNode.GetChildNode("recordsPerPage") is { } nullNodeRecordsPerPage && nullNodeRecordsPerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsPerPage = null;
+            if (parseNode.GetChildNode("totalRecords") is null) { _explicitNullValueTotalRecords = default!; _explicitNullProperties?.Remove("totalRecords"); }
+            else if (parseNode.GetChildNode("totalRecords") is { } nullNodeTotalRecords && nullNodeTotalRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRecords = null;
+            if (parseNode.GetChildNode("transactionref") is null) { _explicitNullValueTransactionref = default!; _explicitNullProperties?.Remove("transactionref"); }
+            else if (parseNode.GetChildNode("transactionref") is { } nullNodeTransactionref && nullNodeTransactionref.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transactionref = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The offset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        public string? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; AdditionalData?.Remove("offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
         private string? _explicitNullValueOffset = default!;
 #nullable restore
 #else
-        public string Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        public string Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; AdditionalData?.Remove("offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
         private string _explicitNullValueOffset = default!;
 #endif
         /// <summary>The recordsPerPage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordsPerPage { get => _explicitNullValueRecordsPerPage; set { _explicitNullValueRecordsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordsPerPage"); else _explicitNullProperties?.Remove("recordsPerPage"); } }
+        public string? RecordsPerPage { get => _explicitNullValueRecordsPerPage; set { _explicitNullValueRecordsPerPage = value; AdditionalData?.Remove("recordsPerPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordsPerPage"); else _explicitNullProperties?.Remove("recordsPerPage"); } }
         private string? _explicitNullValueRecordsPerPage = default!;
 #nullable restore
 #else
-        public string RecordsPerPage { get => _explicitNullValueRecordsPerPage; set { _explicitNullValueRecordsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordsPerPage"); else _explicitNullProperties?.Remove("recordsPerPage"); } }
+        public string RecordsPerPage { get => _explicitNullValueRecordsPerPage; set { _explicitNullValueRecordsPerPage = value; AdditionalData?.Remove("recordsPerPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordsPerPage"); else _explicitNullProperties?.Remove("recordsPerPage"); } }
         private string _explicitNullValueRecordsPerPage = default!;
 #endif
         /// <summary>The totalRecords property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalRecords { get => _explicitNullValueTotalRecords; set { _explicitNullValueTotalRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRecords"); else _explicitNullProperties?.Remove("totalRecords"); } }
+        public string? TotalRecords { get => _explicitNullValueTotalRecords; set { _explicitNullValueTotalRecords = value; AdditionalData?.Remove("totalRecords"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRecords"); else _explicitNullProperties?.Remove("totalRecords"); } }
         private string? _explicitNullValueTotalRecords = default!;
 #nullable restore
 #else
-        public string TotalRecords { get => _explicitNullValueTotalRecords; set { _explicitNullValueTotalRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRecords"); else _explicitNullProperties?.Remove("totalRecords"); } }
+        public string TotalRecords { get => _explicitNullValueTotalRecords; set { _explicitNullValueTotalRecords = value; AdditionalData?.Remove("totalRecords"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRecords"); else _explicitNullProperties?.Remove("totalRecords"); } }
         private string _explicitNullValueTotalRecords = default!;
 #endif
         /// <summary>Transaction reference details used to correlate API requests and responses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref? Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref? Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; AdditionalData?.Remove("transactionref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref? _explicitNullValueTransactionref = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref Transactionref { get => _explicitNullValueTransactionref; set { _explicitNullValueTransactionref = value; AdditionalData?.Remove("transactionref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactionref"); else _explicitNullProperties?.Remove("transactionref"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.InquiryResponseEnvelopeTransactionref _explicitNullValueTransactionref = default!;
 #endif
         /// <summary>

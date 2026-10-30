@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Alert") is { } nullNodeAlert && nullNodeAlert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alert = null;
-            if (parseNode.GetChildNode("ResponseStatus") is { } nullNodeResponseStatus && nullNodeResponseStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseStatus = null;
-            if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
+            if (parseNode.GetChildNode("Alert") is null) { _explicitNullValueAlert = default!; _explicitNullProperties?.Remove("Alert"); }
+            else if (parseNode.GetChildNode("Alert") is { } nullNodeAlert && nullNodeAlert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alert = null;
+            if (parseNode.GetChildNode("ResponseStatus") is null) { _explicitNullValueResponseStatus = default!; _explicitNullProperties?.Remove("ResponseStatus"); }
+            else if (parseNode.GetChildNode("ResponseStatus") is { } nullNodeResponseStatus && nullNodeResponseStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseStatus = null;
+            if (parseNode.GetChildNode("TransactionReference") is null) { _explicitNullValueTransactionReference = default!; _explicitNullProperties?.Remove("TransactionReference"); }
+            else if (parseNode.GetChildNode("TransactionReference") is { } nullNodeTransactionReference && nullNodeTransactionReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The Alert property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert>? Alert { get => _explicitNullValueAlert; set { _explicitNullValueAlert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Alert"); else _explicitNullProperties?.Remove("Alert"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert>? Alert { get => _explicitNullValueAlert; set { _explicitNullValueAlert = value; AdditionalData?.Remove("Alert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Alert"); else _explicitNullProperties?.Remove("Alert"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert>? _explicitNullValueAlert = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert> Alert { get => _explicitNullValueAlert; set { _explicitNullValueAlert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Alert"); else _explicitNullProperties?.Remove("Alert"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert> Alert { get => _explicitNullValueAlert; set { _explicitNullValueAlert = value; AdditionalData?.Remove("Alert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Alert"); else _explicitNullProperties?.Remove("Alert"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ShippingResponseAlert> _explicitNullValueAlert = default!;
 #endif
         /// <summary>Response Status container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus? ResponseStatus { get => _explicitNullValueResponseStatus; set { _explicitNullValueResponseStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatus"); else _explicitNullProperties?.Remove("ResponseStatus"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus? ResponseStatus { get => _explicitNullValueResponseStatus; set { _explicitNullValueResponseStatus = value; AdditionalData?.Remove("ResponseStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatus"); else _explicitNullProperties?.Remove("ResponseStatus"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus? _explicitNullValueResponseStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus ResponseStatus { get => _explicitNullValueResponseStatus; set { _explicitNullValueResponseStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatus"); else _explicitNullProperties?.Remove("ResponseStatus"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus ResponseStatus { get => _explicitNullValueResponseStatus; set { _explicitNullValueResponseStatus = value; AdditionalData?.Remove("ResponseStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResponseStatus"); else _explicitNullProperties?.Remove("ResponseStatus"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LrResponseResponseStatus _explicitNullValueResponseStatus = default!;
 #endif
         /// <summary>Transaction Reference Container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference? TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; AdditionalData?.Remove("TransactionReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference? _explicitNullValueTransactionReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference TransactionReference { get => _explicitNullValueTransactionReference; set { _explicitNullValueTransactionReference = value; AdditionalData?.Remove("TransactionReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransactionReference"); else _explicitNullProperties?.Remove("TransactionReference"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LrResponseTransactionReference _explicitNullValueTransactionReference = default!;
 #endif
         /// <summary>

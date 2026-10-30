@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("harmonizedCommodityCode") is { } nullNodeHarmonizedCommodityCode && nullNodeHarmonizedCommodityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HarmonizedCommodityCode = null;
-            if (parseNode.GetChildNode("shipmentExportCountryCode") is { } nullNodeShipmentExportCountryCode && nullNodeShipmentExportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentExportCountryCode = null;
-            if (parseNode.GetChildNode("specialInstructions") is { } nullNodeSpecialInstructions && nullNodeSpecialInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialInstructions = null;
+            if (parseNode.GetChildNode("harmonizedCommodityCode") is null) { _explicitNullValueHarmonizedCommodityCode = default!; _explicitNullProperties?.Remove("harmonizedCommodityCode"); }
+            else if (parseNode.GetChildNode("harmonizedCommodityCode") is { } nullNodeHarmonizedCommodityCode && nullNodeHarmonizedCommodityCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HarmonizedCommodityCode = null;
+            if (parseNode.GetChildNode("shipmentExportCountryCode") is null) { _explicitNullValueShipmentExportCountryCode = default!; _explicitNullProperties?.Remove("shipmentExportCountryCode"); }
+            else if (parseNode.GetChildNode("shipmentExportCountryCode") is { } nullNodeShipmentExportCountryCode && nullNodeShipmentExportCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentExportCountryCode = null;
+            if (parseNode.GetChildNode("specialInstructions") is null) { _explicitNullValueSpecialInstructions = default!; _explicitNullProperties?.Remove("specialInstructions"); }
+            else if (parseNode.GetChildNode("specialInstructions") is { } nullNodeSpecialInstructions && nullNodeSpecialInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialInstructions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Harmonized commodity code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HarmonizedCommodityCode { get => _explicitNullValueHarmonizedCommodityCode; set { _explicitNullValueHarmonizedCommodityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("harmonizedCommodityCode"); else _explicitNullProperties?.Remove("harmonizedCommodityCode"); } }
+        public string? HarmonizedCommodityCode { get => _explicitNullValueHarmonizedCommodityCode; set { _explicitNullValueHarmonizedCommodityCode = value; AdditionalData?.Remove("harmonizedCommodityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("harmonizedCommodityCode"); else _explicitNullProperties?.Remove("harmonizedCommodityCode"); } }
         private string? _explicitNullValueHarmonizedCommodityCode = default!;
 #nullable restore
 #else
-        public string HarmonizedCommodityCode { get => _explicitNullValueHarmonizedCommodityCode; set { _explicitNullValueHarmonizedCommodityCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("harmonizedCommodityCode"); else _explicitNullProperties?.Remove("harmonizedCommodityCode"); } }
+        public string HarmonizedCommodityCode { get => _explicitNullValueHarmonizedCommodityCode; set { _explicitNullValueHarmonizedCommodityCode = value; AdditionalData?.Remove("harmonizedCommodityCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("harmonizedCommodityCode"); else _explicitNullProperties?.Remove("harmonizedCommodityCode"); } }
         private string _explicitNullValueHarmonizedCommodityCode = default!;
 #endif
         /// <summary>Export country code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentExportCountryCode { get => _explicitNullValueShipmentExportCountryCode; set { _explicitNullValueShipmentExportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentExportCountryCode"); else _explicitNullProperties?.Remove("shipmentExportCountryCode"); } }
+        public string? ShipmentExportCountryCode { get => _explicitNullValueShipmentExportCountryCode; set { _explicitNullValueShipmentExportCountryCode = value; AdditionalData?.Remove("shipmentExportCountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentExportCountryCode"); else _explicitNullProperties?.Remove("shipmentExportCountryCode"); } }
         private string? _explicitNullValueShipmentExportCountryCode = default!;
 #nullable restore
 #else
-        public string ShipmentExportCountryCode { get => _explicitNullValueShipmentExportCountryCode; set { _explicitNullValueShipmentExportCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentExportCountryCode"); else _explicitNullProperties?.Remove("shipmentExportCountryCode"); } }
+        public string ShipmentExportCountryCode { get => _explicitNullValueShipmentExportCountryCode; set { _explicitNullValueShipmentExportCountryCode = value; AdditionalData?.Remove("shipmentExportCountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipmentExportCountryCode"); else _explicitNullProperties?.Remove("shipmentExportCountryCode"); } }
         private string _explicitNullValueShipmentExportCountryCode = default!;
 #endif
         /// <summary>Special handling instructions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
+        public string? SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; AdditionalData?.Remove("specialInstructions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
         private string? _explicitNullValueSpecialInstructions = default!;
 #nullable restore
 #else
-        public string SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
+        public string SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; AdditionalData?.Remove("specialInstructions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
         private string _explicitNullValueSpecialInstructions = default!;
 #endif
         /// <summary>

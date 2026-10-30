@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("FormType") is { } nullNodeFormType && nullNodeFormType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormType = null;
+            if (parseNode.GetChildNode("FormType") is null) { _explicitNullValueFormType = default!; _explicitNullProperties?.Remove("FormType"); }
+            else if (parseNode.GetChildNode("FormType") is { } nullNodeFormType && nullNodeFormType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates the name of the International form requested to NOT have product information.  Possible Values are 04 – USMCA.  Please note that if this is used and you DO NOT have the corresponding form type requested this will be IGNORED.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormType"); else _explicitNullProperties?.Remove("FormType"); } }
+        public List<string>? FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; AdditionalData?.Remove("FormType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormType"); else _explicitNullProperties?.Remove("FormType"); } }
         private List<string>? _explicitNullValueFormType = default!;
 #nullable restore
 #else
-        public List<string> FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormType"); else _explicitNullProperties?.Remove("FormType"); } }
+        public List<string> FormType { get => _explicitNullValueFormType; set { _explicitNullValueFormType = value; AdditionalData?.Remove("FormType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FormType"); else _explicitNullProperties?.Remove("FormType"); } }
         private List<string> _explicitNullValueFormType = default!;
 #endif
         /// <summary>

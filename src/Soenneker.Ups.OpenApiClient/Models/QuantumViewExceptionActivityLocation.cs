@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AddressArtifactFormat") is { } nullNodeAddressArtifactFormat && nullNodeAddressArtifactFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressArtifactFormat = null;
+            if (parseNode.GetChildNode("AddressArtifactFormat") is null) { _explicitNullValueAddressArtifactFormat = default!; _explicitNullProperties?.Remove("AddressArtifactFormat"); }
+            else if (parseNode.GetChildNode("AddressArtifactFormat") is { } nullNodeAddressArtifactFormat && nullNodeAddressArtifactFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressArtifactFormat = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Information that specifies a physical location where package delivery activity occurs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewActivityLocationAddressArtifactFormat? AddressArtifactFormat { get => _explicitNullValueAddressArtifactFormat; set { _explicitNullValueAddressArtifactFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressArtifactFormat"); else _explicitNullProperties?.Remove("AddressArtifactFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewActivityLocationAddressArtifactFormat? AddressArtifactFormat { get => _explicitNullValueAddressArtifactFormat; set { _explicitNullValueAddressArtifactFormat = value; AdditionalData?.Remove("AddressArtifactFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressArtifactFormat"); else _explicitNullProperties?.Remove("AddressArtifactFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewActivityLocationAddressArtifactFormat? _explicitNullValueAddressArtifactFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewActivityLocationAddressArtifactFormat AddressArtifactFormat { get => _explicitNullValueAddressArtifactFormat; set { _explicitNullValueAddressArtifactFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressArtifactFormat"); else _explicitNullProperties?.Remove("AddressArtifactFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.QuantumViewActivityLocationAddressArtifactFormat AddressArtifactFormat { get => _explicitNullValueAddressArtifactFormat; set { _explicitNullValueAddressArtifactFormat = value; AdditionalData?.Remove("AddressArtifactFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddressArtifactFormat"); else _explicitNullProperties?.Remove("AddressArtifactFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.QuantumViewActivityLocationAddressArtifactFormat _explicitNullValueAddressArtifactFormat = default!;
 #endif
         /// <summary>

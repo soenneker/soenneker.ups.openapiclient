@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DCISType") is { } nullNodeDCISType && nullNodeDCISType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DCISType = null;
+            if (parseNode.GetChildNode("DCISType") is null) { _explicitNullValueDCISType = default!; _explicitNullProperties?.Remove("DCISType"); }
+            else if (parseNode.GetChildNode("DCISType") is { } nullNodeDCISType && nullNodeDCISType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DCISType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Type of delivery confirmation.  Valid values: 1 - Delivery Confirmation Signature Required 2 - Delivery Confirmation Adult Signature Required</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DCISType { get => _explicitNullValueDCISType; set { _explicitNullValueDCISType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCISType"); else _explicitNullProperties?.Remove("DCISType"); } }
+        public string? DCISType { get => _explicitNullValueDCISType; set { _explicitNullValueDCISType = value; AdditionalData?.Remove("DCISType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCISType"); else _explicitNullProperties?.Remove("DCISType"); } }
         private string? _explicitNullValueDCISType = default!;
 #nullable restore
 #else
-        public string DCISType { get => _explicitNullValueDCISType; set { _explicitNullValueDCISType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCISType"); else _explicitNullProperties?.Remove("DCISType"); } }
+        public string DCISType { get => _explicitNullValueDCISType; set { _explicitNullValueDCISType = value; AdditionalData?.Remove("DCISType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCISType"); else _explicitNullProperties?.Remove("DCISType"); } }
         private string _explicitNullValueDCISType = default!;
 #endif
         /// <summary>

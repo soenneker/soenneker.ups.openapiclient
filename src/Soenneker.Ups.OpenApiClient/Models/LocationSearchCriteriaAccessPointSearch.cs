@@ -18,33 +18,40 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AccessPointStatus") is { } nullNodeAccessPointStatus && nullNodeAccessPointStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessPointStatus = null;
-            if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
-            if (parseNode.GetChildNode("ExactMatchIndicator") is { } nullNodeExactMatchIndicator && nullNodeExactMatchIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExactMatchIndicator = null;
-            if (parseNode.GetChildNode("ExcludeFromResult") is { } nullNodeExcludeFromResult && nullNodeExcludeFromResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeFromResult = null;
-            if (parseNode.GetChildNode("ExistIndicator") is { } nullNodeExistIndicator && nullNodeExistIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistIndicator = null;
-            if (parseNode.GetChildNode("IncludeCriteria") is { } nullNodeIncludeCriteria && nullNodeIncludeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeCriteria = null;
-            if (parseNode.GetChildNode("PublicAccessPointID") is { } nullNodePublicAccessPointID && nullNodePublicAccessPointID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicAccessPointID = null;
+            if (parseNode.GetChildNode("AccessPointStatus") is null) { _explicitNullValueAccessPointStatus = default!; _explicitNullProperties?.Remove("AccessPointStatus"); }
+            else if (parseNode.GetChildNode("AccessPointStatus") is { } nullNodeAccessPointStatus && nullNodeAccessPointStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessPointStatus = null;
+            if (parseNode.GetChildNode("AccountNumber") is null) { _explicitNullValueAccountNumber = default!; _explicitNullProperties?.Remove("AccountNumber"); }
+            else if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("ExactMatchIndicator") is null) { _explicitNullValueExactMatchIndicator = default!; _explicitNullProperties?.Remove("ExactMatchIndicator"); }
+            else if (parseNode.GetChildNode("ExactMatchIndicator") is { } nullNodeExactMatchIndicator && nullNodeExactMatchIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExactMatchIndicator = null;
+            if (parseNode.GetChildNode("ExcludeFromResult") is null) { _explicitNullValueExcludeFromResult = default!; _explicitNullProperties?.Remove("ExcludeFromResult"); }
+            else if (parseNode.GetChildNode("ExcludeFromResult") is { } nullNodeExcludeFromResult && nullNodeExcludeFromResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeFromResult = null;
+            if (parseNode.GetChildNode("ExistIndicator") is null) { _explicitNullValueExistIndicator = default!; _explicitNullProperties?.Remove("ExistIndicator"); }
+            else if (parseNode.GetChildNode("ExistIndicator") is { } nullNodeExistIndicator && nullNodeExistIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistIndicator = null;
+            if (parseNode.GetChildNode("IncludeCriteria") is null) { _explicitNullValueIncludeCriteria = default!; _explicitNullProperties?.Remove("IncludeCriteria"); }
+            else if (parseNode.GetChildNode("IncludeCriteria") is { } nullNodeIncludeCriteria && nullNodeIncludeCriteria.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeCriteria = null;
+            if (parseNode.GetChildNode("PublicAccessPointID") is null) { _explicitNullValuePublicAccessPointID = default!; _explicitNullProperties?.Remove("PublicAccessPointID"); }
+            else if (parseNode.GetChildNode("PublicAccessPointID") is { } nullNodePublicAccessPointID && nullNodePublicAccessPointID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicAccessPointID = null;
         }
 
         /// <summary>Status of UPS Access Point. Valid values are: 01-Active-available07-Active-unavailable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessPointStatus { get => _explicitNullValueAccessPointStatus; set { _explicitNullValueAccessPointStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointStatus"); else _explicitNullProperties?.Remove("AccessPointStatus"); } }
+        public string? AccessPointStatus { get => _explicitNullValueAccessPointStatus; set { _explicitNullValueAccessPointStatus = value; AdditionalData?.Remove("AccessPointStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointStatus"); else _explicitNullProperties?.Remove("AccessPointStatus"); } }
         private string? _explicitNullValueAccessPointStatus = default!;
 #nullable restore
 #else
-        public string AccessPointStatus { get => _explicitNullValueAccessPointStatus; set { _explicitNullValueAccessPointStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointStatus"); else _explicitNullProperties?.Remove("AccessPointStatus"); } }
+        public string AccessPointStatus { get => _explicitNullValueAccessPointStatus; set { _explicitNullValueAccessPointStatus = value; AdditionalData?.Remove("AccessPointStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessPointStatus"); else _explicitNullProperties?.Remove("AccessPointStatus"); } }
         private string _explicitNullValueAccessPointStatus = default!;
 #endif
         /// <summary>The account number to use for UPS Access Point Search in the country or territory. Used to locate a private network for the account. Once this parameter is present any access point address or geocode search is ignored. It cannot be combined with PublicAccessPointID search parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("AccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
         private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("AccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
         private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -52,51 +59,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Presence of this tag represents that &quot;AccessPointSearchByAddress&quot; service is requested. The value of this tag is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExactMatchIndicator { get => _explicitNullValueExactMatchIndicator; set { _explicitNullValueExactMatchIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExactMatchIndicator"); else _explicitNullProperties?.Remove("ExactMatchIndicator"); } }
+        public string? ExactMatchIndicator { get => _explicitNullValueExactMatchIndicator; set { _explicitNullValueExactMatchIndicator = value; AdditionalData?.Remove("ExactMatchIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExactMatchIndicator"); else _explicitNullProperties?.Remove("ExactMatchIndicator"); } }
         private string? _explicitNullValueExactMatchIndicator = default!;
 #nullable restore
 #else
-        public string ExactMatchIndicator { get => _explicitNullValueExactMatchIndicator; set { _explicitNullValueExactMatchIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExactMatchIndicator"); else _explicitNullProperties?.Remove("ExactMatchIndicator"); } }
+        public string ExactMatchIndicator { get => _explicitNullValueExactMatchIndicator; set { _explicitNullValueExactMatchIndicator = value; AdditionalData?.Remove("ExactMatchIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExactMatchIndicator"); else _explicitNullProperties?.Remove("ExactMatchIndicator"); } }
         private string _explicitNullValueExactMatchIndicator = default!;
 #endif
         /// <summary>This contains elements to exclude from UPS Access Point address or geocode search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult? ExcludeFromResult { get => _explicitNullValueExcludeFromResult; set { _explicitNullValueExcludeFromResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExcludeFromResult"); else _explicitNullProperties?.Remove("ExcludeFromResult"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult? ExcludeFromResult { get => _explicitNullValueExcludeFromResult; set { _explicitNullValueExcludeFromResult = value; AdditionalData?.Remove("ExcludeFromResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExcludeFromResult"); else _explicitNullProperties?.Remove("ExcludeFromResult"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult? _explicitNullValueExcludeFromResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult ExcludeFromResult { get => _explicitNullValueExcludeFromResult; set { _explicitNullValueExcludeFromResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExcludeFromResult"); else _explicitNullProperties?.Remove("ExcludeFromResult"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult ExcludeFromResult { get => _explicitNullValueExcludeFromResult; set { _explicitNullValueExcludeFromResult = value; AdditionalData?.Remove("ExcludeFromResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExcludeFromResult"); else _explicitNullProperties?.Remove("ExcludeFromResult"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchExcludeFromResult _explicitNullValueExcludeFromResult = default!;
 #endif
         /// <summary>Presence of this tag represents that &quot;AccessPointAvailability&quot; service is requested. The value of this tag is ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExistIndicator { get => _explicitNullValueExistIndicator; set { _explicitNullValueExistIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExistIndicator"); else _explicitNullProperties?.Remove("ExistIndicator"); } }
+        public string? ExistIndicator { get => _explicitNullValueExistIndicator; set { _explicitNullValueExistIndicator = value; AdditionalData?.Remove("ExistIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExistIndicator"); else _explicitNullProperties?.Remove("ExistIndicator"); } }
         private string? _explicitNullValueExistIndicator = default!;
 #nullable restore
 #else
-        public string ExistIndicator { get => _explicitNullValueExistIndicator; set { _explicitNullValueExistIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExistIndicator"); else _explicitNullProperties?.Remove("ExistIndicator"); } }
+        public string ExistIndicator { get => _explicitNullValueExistIndicator; set { _explicitNullValueExistIndicator = value; AdditionalData?.Remove("ExistIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExistIndicator"); else _explicitNullProperties?.Remove("ExistIndicator"); } }
         private string _explicitNullValueExistIndicator = default!;
 #endif
         /// <summary>This contains elements to refine (include) UPS Access point address or geocode Search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchIncludeCriteria? IncludeCriteria { get => _explicitNullValueIncludeCriteria; set { _explicitNullValueIncludeCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeCriteria"); else _explicitNullProperties?.Remove("IncludeCriteria"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchIncludeCriteria? IncludeCriteria { get => _explicitNullValueIncludeCriteria; set { _explicitNullValueIncludeCriteria = value; AdditionalData?.Remove("IncludeCriteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeCriteria"); else _explicitNullProperties?.Remove("IncludeCriteria"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchIncludeCriteria? _explicitNullValueIncludeCriteria = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchIncludeCriteria IncludeCriteria { get => _explicitNullValueIncludeCriteria; set { _explicitNullValueIncludeCriteria = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeCriteria"); else _explicitNullProperties?.Remove("IncludeCriteria"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchIncludeCriteria IncludeCriteria { get => _explicitNullValueIncludeCriteria; set { _explicitNullValueIncludeCriteria = value; AdditionalData?.Remove("IncludeCriteria"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludeCriteria"); else _explicitNullProperties?.Remove("IncludeCriteria"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AccessPointSearchIncludeCriteria _explicitNullValueIncludeCriteria = default!;
 #endif
         /// <summary>The Public Access Point ID to use for UPS Access Point Search. Once this parameter is present , address or geocode search is ignored. It cannot be combined with AccountNumber search parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PublicAccessPointID { get => _explicitNullValuePublicAccessPointID; set { _explicitNullValuePublicAccessPointID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PublicAccessPointID"); else _explicitNullProperties?.Remove("PublicAccessPointID"); } }
+        public string? PublicAccessPointID { get => _explicitNullValuePublicAccessPointID; set { _explicitNullValuePublicAccessPointID = value; AdditionalData?.Remove("PublicAccessPointID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PublicAccessPointID"); else _explicitNullProperties?.Remove("PublicAccessPointID"); } }
         private string? _explicitNullValuePublicAccessPointID = default!;
 #nullable restore
 #else
-        public string PublicAccessPointID { get => _explicitNullValuePublicAccessPointID; set { _explicitNullValuePublicAccessPointID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PublicAccessPointID"); else _explicitNullProperties?.Remove("PublicAccessPointID"); } }
+        public string PublicAccessPointID { get => _explicitNullValuePublicAccessPointID; set { _explicitNullValuePublicAccessPointID = value; AdditionalData?.Remove("PublicAccessPointID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PublicAccessPointID"); else _explicitNullProperties?.Remove("PublicAccessPointID"); } }
         private string _explicitNullValuePublicAccessPointID = default!;
 #endif
         /// <summary>

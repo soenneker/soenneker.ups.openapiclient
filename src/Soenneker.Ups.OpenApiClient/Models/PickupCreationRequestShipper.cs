@@ -18,18 +18,20 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
-            if (parseNode.GetChildNode("ChargeCard") is { } nullNodeChargeCard && nullNodeChargeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeCard = null;
+            if (parseNode.GetChildNode("Account") is null) { _explicitNullValueAccount = default!; _explicitNullProperties?.Remove("Account"); }
+            else if (parseNode.GetChildNode("Account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
+            if (parseNode.GetChildNode("ChargeCard") is null) { _explicitNullValueChargeCard = default!; _explicitNullProperties?.Remove("ChargeCard"); }
+            else if (parseNode.GetChildNode("ChargeCard") is { } nullNodeChargeCard && nullNodeChargeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeCard = null;
         }
 
         /// <summary>Shipper account information. Must provide when choose to pay the pickup by shipper account number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipperAccount? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Account"); else _explicitNullProperties?.Remove("Account"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipperAccount? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("Account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Account"); else _explicitNullProperties?.Remove("Account"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipperAccount? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipperAccount Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Account"); else _explicitNullProperties?.Remove("Account"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipperAccount Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("Account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Account"); else _explicitNullProperties?.Remove("Account"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipperAccount _explicitNullValueAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,11 +39,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for Charge Card payment method  Required if Payment method is 03. Credit/Charge card payment is valid for US, CA, PR and GB origin pickups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipperChargeCard? ChargeCard { get => _explicitNullValueChargeCard; set { _explicitNullValueChargeCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChargeCard"); else _explicitNullProperties?.Remove("ChargeCard"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipperChargeCard? ChargeCard { get => _explicitNullValueChargeCard; set { _explicitNullValueChargeCard = value; AdditionalData?.Remove("ChargeCard"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChargeCard"); else _explicitNullProperties?.Remove("ChargeCard"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipperChargeCard? _explicitNullValueChargeCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipperChargeCard ChargeCard { get => _explicitNullValueChargeCard; set { _explicitNullValueChargeCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChargeCard"); else _explicitNullProperties?.Remove("ChargeCard"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipperChargeCard ChargeCard { get => _explicitNullValueChargeCard; set { _explicitNullValueChargeCard = value; AdditionalData?.Remove("ChargeCard"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChargeCard"); else _explicitNullProperties?.Remove("ChargeCard"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ShipperChargeCard _explicitNullValueChargeCard = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("serviceTypes") is { } nullNodeServiceTypes && nullNodeServiceTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceTypes = null;
+            if (parseNode.GetChildNode("serviceTypes") is null) { _explicitNullValueServiceTypes = default!; _explicitNullProperties?.Remove("serviceTypes"); }
+            else if (parseNode.GetChildNode("serviceTypes") is { } nullNodeServiceTypes && nullNodeServiceTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>List of available service types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceTypeInfo>? ServiceTypes { get => _explicitNullValueServiceTypes; set { _explicitNullValueServiceTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceTypes"); else _explicitNullProperties?.Remove("serviceTypes"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceTypeInfo>? ServiceTypes { get => _explicitNullValueServiceTypes; set { _explicitNullValueServiceTypes = value; AdditionalData?.Remove("serviceTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceTypes"); else _explicitNullProperties?.Remove("serviceTypes"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceTypeInfo>? _explicitNullValueServiceTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceTypeInfo> ServiceTypes { get => _explicitNullValueServiceTypes; set { _explicitNullValueServiceTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceTypes"); else _explicitNullProperties?.Remove("serviceTypes"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ServiceTypeInfo> ServiceTypes { get => _explicitNullValueServiceTypes; set { _explicitNullValueServiceTypes = value; AdditionalData?.Remove("serviceTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceTypes"); else _explicitNullProperties?.Remove("serviceTypes"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.ServiceTypeInfo> _explicitNullValueServiceTypes = default!;
 #endif
         /// <summary>

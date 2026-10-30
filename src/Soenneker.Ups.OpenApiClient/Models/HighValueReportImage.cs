@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("GraphicImage") is { } nullNodeGraphicImage && nullNodeGraphicImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GraphicImage = null;
-            if (parseNode.GetChildNode("ImageFormat") is { } nullNodeImageFormat && nullNodeImageFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageFormat = null;
+            if (parseNode.GetChildNode("GraphicImage") is null) { _explicitNullValueGraphicImage = default!; _explicitNullProperties?.Remove("GraphicImage"); }
+            else if (parseNode.GetChildNode("GraphicImage") is { } nullNodeGraphicImage && nullNodeGraphicImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GraphicImage = null;
+            if (parseNode.GetChildNode("ImageFormat") is null) { _explicitNullValueImageFormat = default!; _explicitNullProperties?.Remove("ImageFormat"); }
+            else if (parseNode.GetChildNode("ImageFormat") is { } nullNodeImageFormat && nullNodeImageFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageFormat = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Base 64 encoded High Value Report image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GraphicImage { get => _explicitNullValueGraphicImage; set { _explicitNullValueGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImage"); else _explicitNullProperties?.Remove("GraphicImage"); } }
+        public string? GraphicImage { get => _explicitNullValueGraphicImage; set { _explicitNullValueGraphicImage = value; AdditionalData?.Remove("GraphicImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImage"); else _explicitNullProperties?.Remove("GraphicImage"); } }
         private string? _explicitNullValueGraphicImage = default!;
 #nullable restore
 #else
-        public string GraphicImage { get => _explicitNullValueGraphicImage; set { _explicitNullValueGraphicImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImage"); else _explicitNullProperties?.Remove("GraphicImage"); } }
+        public string GraphicImage { get => _explicitNullValueGraphicImage; set { _explicitNullValueGraphicImage = value; AdditionalData?.Remove("GraphicImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GraphicImage"); else _explicitNullProperties?.Remove("GraphicImage"); } }
         private string _explicitNullValueGraphicImage = default!;
 #endif
         /// <summary>Container for the High Value Report image format information for Import Control Shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.HighValueReportImageImageFormat? ImageFormat { get => _explicitNullValueImageFormat; set { _explicitNullValueImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ImageFormat"); else _explicitNullProperties?.Remove("ImageFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.HighValueReportImageImageFormat? ImageFormat { get => _explicitNullValueImageFormat; set { _explicitNullValueImageFormat = value; AdditionalData?.Remove("ImageFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ImageFormat"); else _explicitNullProperties?.Remove("ImageFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.HighValueReportImageImageFormat? _explicitNullValueImageFormat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.HighValueReportImageImageFormat ImageFormat { get => _explicitNullValueImageFormat; set { _explicitNullValueImageFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ImageFormat"); else _explicitNullProperties?.Remove("ImageFormat"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.HighValueReportImageImageFormat ImageFormat { get => _explicitNullValueImageFormat; set { _explicitNullValueImageFormat = value; AdditionalData?.Remove("ImageFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ImageFormat"); else _explicitNullProperties?.Remove("ImageFormat"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.HighValueReportImageImageFormat _explicitNullValueImageFormat = default!;
 #endif
         /// <summary>

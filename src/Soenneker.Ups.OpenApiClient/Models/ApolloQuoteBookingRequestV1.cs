@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pickupDetails") is { } nullNodePickupDetails && nullNodePickupDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDetails = null;
-            if (parseNode.GetChildNode("quoteId") is { } nullNodeQuoteId && nullNodeQuoteId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteId = null;
-            if (parseNode.GetChildNode("requestType") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
-            if (parseNode.GetChildNode("specialInstructions") is { } nullNodeSpecialInstructions && nullNodeSpecialInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialInstructions = null;
+            if (parseNode.GetChildNode("pickupDetails") is null) { _explicitNullValuePickupDetails = default!; _explicitNullProperties?.Remove("pickupDetails"); }
+            else if (parseNode.GetChildNode("pickupDetails") is { } nullNodePickupDetails && nullNodePickupDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDetails = null;
+            if (parseNode.GetChildNode("quoteId") is null) { _explicitNullValueQuoteId = default!; _explicitNullProperties?.Remove("quoteId"); }
+            else if (parseNode.GetChildNode("quoteId") is { } nullNodeQuoteId && nullNodeQuoteId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuoteId = null;
+            if (parseNode.GetChildNode("requestType") is null) { _explicitNullValueRequestType = default!; _explicitNullProperties?.Remove("requestType"); }
+            else if (parseNode.GetChildNode("requestType") is { } nullNodeRequestType && nullNodeRequestType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestType = null;
+            if (parseNode.GetChildNode("specialInstructions") is null) { _explicitNullValueSpecialInstructions = default!; _explicitNullProperties?.Remove("specialInstructions"); }
+            else if (parseNode.GetChildNode("specialInstructions") is { } nullNodeSpecialInstructions && nullNodeSpecialInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialInstructions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The pickupDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AirOceanPickupDetail? PickupDetails { get => _explicitNullValuePickupDetails; set { _explicitNullValuePickupDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDetails"); else _explicitNullProperties?.Remove("pickupDetails"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AirOceanPickupDetail? PickupDetails { get => _explicitNullValuePickupDetails; set { _explicitNullValuePickupDetails = value; AdditionalData?.Remove("pickupDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDetails"); else _explicitNullProperties?.Remove("pickupDetails"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AirOceanPickupDetail? _explicitNullValuePickupDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AirOceanPickupDetail PickupDetails { get => _explicitNullValuePickupDetails; set { _explicitNullValuePickupDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDetails"); else _explicitNullProperties?.Remove("pickupDetails"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AirOceanPickupDetail PickupDetails { get => _explicitNullValuePickupDetails; set { _explicitNullValuePickupDetails = value; AdditionalData?.Remove("pickupDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickupDetails"); else _explicitNullProperties?.Remove("pickupDetails"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AirOceanPickupDetail _explicitNullValuePickupDetails = default!;
 #endif
         /// <summary>The quote identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QuoteId { get => _explicitNullValueQuoteId; set { _explicitNullValueQuoteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteId"); else _explicitNullProperties?.Remove("quoteId"); } }
+        public string? QuoteId { get => _explicitNullValueQuoteId; set { _explicitNullValueQuoteId = value; AdditionalData?.Remove("quoteId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteId"); else _explicitNullProperties?.Remove("quoteId"); } }
         private string? _explicitNullValueQuoteId = default!;
 #nullable restore
 #else
-        public string QuoteId { get => _explicitNullValueQuoteId; set { _explicitNullValueQuoteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteId"); else _explicitNullProperties?.Remove("quoteId"); } }
+        public string QuoteId { get => _explicitNullValueQuoteId; set { _explicitNullValueQuoteId = value; AdditionalData?.Remove("quoteId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quoteId"); else _explicitNullProperties?.Remove("quoteId"); } }
         private string _explicitNullValueQuoteId = default!;
 #endif
         /// <summary>The type of the request (i.e, Air or Ocean).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestType"); else _explicitNullProperties?.Remove("requestType"); } }
+        public string? RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; AdditionalData?.Remove("requestType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestType"); else _explicitNullProperties?.Remove("requestType"); } }
         private string? _explicitNullValueRequestType = default!;
 #nullable restore
 #else
-        public string RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestType"); else _explicitNullProperties?.Remove("requestType"); } }
+        public string RequestType { get => _explicitNullValueRequestType; set { _explicitNullValueRequestType = value; AdditionalData?.Remove("requestType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestType"); else _explicitNullProperties?.Remove("requestType"); } }
         private string _explicitNullValueRequestType = default!;
 #endif
         /// <summary>Any special instructions for the booking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
+        public string? SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; AdditionalData?.Remove("specialInstructions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
         private string? _explicitNullValueSpecialInstructions = default!;
 #nullable restore
 #else
-        public string SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
+        public string SpecialInstructions { get => _explicitNullValueSpecialInstructions; set { _explicitNullValueSpecialInstructions = value; AdditionalData?.Remove("specialInstructions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialInstructions"); else _explicitNullProperties?.Remove("specialInstructions"); } }
         private string _explicitNullValueSpecialInstructions = default!;
 #endif
         /// <summary>

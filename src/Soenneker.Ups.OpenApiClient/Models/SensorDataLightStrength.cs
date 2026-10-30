@@ -18,43 +18,48 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("gmtDateTime") is { } nullNodeGmtDateTime && nullNodeGmtDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtDateTime = null;
-            if (parseNode.GetChildNode("gmtOffset") is { } nullNodeGmtOffset && nullNodeGmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtOffset = null;
-            if (parseNode.GetChildNode("light") is { } nullNodeLight && nullNodeLight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Light = null;
-            if (parseNode.GetChildNode("lightUOM") is { } nullNodeLightUOM && nullNodeLightUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LightUOM = null;
-            if (parseNode.GetChildNode("localDateTime") is { } nullNodeLocalDateTime && nullNodeLocalDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalDateTime = null;
+            if (parseNode.GetChildNode("gmtDateTime") is null) { _explicitNullValueGmtDateTime = default!; _explicitNullProperties?.Remove("gmtDateTime"); }
+            else if (parseNode.GetChildNode("gmtDateTime") is { } nullNodeGmtDateTime && nullNodeGmtDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtDateTime = null;
+            if (parseNode.GetChildNode("gmtOffset") is null) { _explicitNullValueGmtOffset = default!; _explicitNullProperties?.Remove("gmtOffset"); }
+            else if (parseNode.GetChildNode("gmtOffset") is { } nullNodeGmtOffset && nullNodeGmtOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmtOffset = null;
+            if (parseNode.GetChildNode("light") is null) { _explicitNullValueLight = default!; _explicitNullProperties?.Remove("light"); }
+            else if (parseNode.GetChildNode("light") is { } nullNodeLight && nullNodeLight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Light = null;
+            if (parseNode.GetChildNode("lightUOM") is null) { _explicitNullValueLightUOM = default!; _explicitNullProperties?.Remove("lightUOM"); }
+            else if (parseNode.GetChildNode("lightUOM") is { } nullNodeLightUOM && nullNodeLightUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LightUOM = null;
+            if (parseNode.GetChildNode("localDateTime") is null) { _explicitNullValueLocalDateTime = default!; _explicitNullProperties?.Remove("localDateTime"); }
+            else if (parseNode.GetChildNode("localDateTime") is { } nullNodeLocalDateTime && nullNodeLocalDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalDateTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The gmtDateTime property</summary>
-        public DateTimeOffset? GmtDateTime { get => _explicitNullValueGmtDateTime; set { _explicitNullValueGmtDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtDateTime"); else _explicitNullProperties?.Remove("gmtDateTime"); } }
+        public DateTimeOffset? GmtDateTime { get => _explicitNullValueGmtDateTime; set { _explicitNullValueGmtDateTime = value; AdditionalData?.Remove("gmtDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtDateTime"); else _explicitNullProperties?.Remove("gmtDateTime"); } }
         private DateTimeOffset? _explicitNullValueGmtDateTime = default!;
         /// <summary>The gmtOffset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
+        public string? GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; AdditionalData?.Remove("gmtOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
         private string? _explicitNullValueGmtOffset = default!;
 #nullable restore
 #else
-        public string GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
+        public string GmtOffset { get => _explicitNullValueGmtOffset; set { _explicitNullValueGmtOffset = value; AdditionalData?.Remove("gmtOffset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmtOffset"); else _explicitNullProperties?.Remove("gmtOffset"); } }
         private string _explicitNullValueGmtOffset = default!;
 #endif
         /// <summary>Light sensor</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Light { get => _explicitNullValueLight; set { _explicitNullValueLight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("light"); else _explicitNullProperties?.Remove("light"); } }
+        public string? Light { get => _explicitNullValueLight; set { _explicitNullValueLight = value; AdditionalData?.Remove("light"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("light"); else _explicitNullProperties?.Remove("light"); } }
         private string? _explicitNullValueLight = default!;
 #nullable restore
 #else
-        public string Light { get => _explicitNullValueLight; set { _explicitNullValueLight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("light"); else _explicitNullProperties?.Remove("light"); } }
+        public string Light { get => _explicitNullValueLight; set { _explicitNullValueLight = value; AdditionalData?.Remove("light"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("light"); else _explicitNullProperties?.Remove("light"); } }
         private string _explicitNullValueLight = default!;
 #endif
         /// <summary>The lightUOM property</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.LightStrengthLightUom? LightUOM { get => _explicitNullValueLightUOM; set { _explicitNullValueLightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lightUOM"); else _explicitNullProperties?.Remove("lightUOM"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.LightStrengthLightUom? LightUOM { get => _explicitNullValueLightUOM; set { _explicitNullValueLightUOM = value; AdditionalData?.Remove("lightUOM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lightUOM"); else _explicitNullProperties?.Remove("lightUOM"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.LightStrengthLightUom? _explicitNullValueLightUOM = default!;
         /// <summary>The localDateTime property</summary>
-        public DateTimeOffset? LocalDateTime { get => _explicitNullValueLocalDateTime; set { _explicitNullValueLocalDateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localDateTime"); else _explicitNullProperties?.Remove("localDateTime"); } }
+        public DateTimeOffset? LocalDateTime { get => _explicitNullValueLocalDateTime; set { _explicitNullValueLocalDateTime = value; AdditionalData?.Remove("localDateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localDateTime"); else _explicitNullProperties?.Remove("localDateTime"); } }
         private DateTimeOffset? _explicitNullValueLocalDateTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.SensorDataLightStrength"/> and sets the default values.
@@ -84,7 +89,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "gmtDateTime", n => { GmtDateTime = n.GetDateTimeOffsetValue(); } },
                 { "gmtOffset", n => { GmtOffset = n.GetStringValue(); } },
                 { "light", n => { Light = n.GetStringValue(); } },
-                { "lightUOM", n => { LightUOM = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LightStrengthLightUom>(); } },
+                { "lightUOM", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LightStrengthLightUom>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLightUOM = default; _explicitNullProperties?.Remove("lightUOM"); AdditionalData["lightUOM"] = unknown; } else { LightUOM = parsed; AdditionalData.Remove("lightUOM"); } } },
                 { "localDateTime", n => { LocalDateTime = n.GetDateTimeOffsetValue(); } },
             };
         }

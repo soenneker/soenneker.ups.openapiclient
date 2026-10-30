@@ -17,256 +17,276 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accessorialCharge") is { } nullNodeAccessorialCharge && nullNodeAccessorialCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessorialCharge = null;
-            if (parseNode.GetChildNode("additionalHandlingIndicator") is { } nullNodeAdditionalHandlingIndicator && nullNodeAdditionalHandlingIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalHandlingIndicator = null;
-            if (parseNode.GetChildNode("chargeCurrency") is { } nullNodeChargeCurrency && nullNodeChargeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeCurrency = null;
-            if (parseNode.GetChildNode("chargesPaidByThirdPartyShipper") is { } nullNodeChargesPaidByThirdPartyShipper && nullNodeChargesPaidByThirdPartyShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargesPaidByThirdPartyShipper = null;
-            if (parseNode.GetChildNode("displayShipperPaidInterceptCharges") is { } nullNodeDisplayShipperPaidInterceptCharges && nullNodeDisplayShipperPaidInterceptCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayShipperPaidInterceptCharges = null;
-            if (parseNode.GetChildNode("displayShipperPaidTransportationCharges") is { } nullNodeDisplayShipperPaidTransportationCharges && nullNodeDisplayShipperPaidTransportationCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayShipperPaidTransportationCharges = null;
-            if (parseNode.GetChildNode("downgradeServiceCode") is { } nullNodeDowngradeServiceCode && nullNodeDowngradeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DowngradeServiceCode = null;
-            if (parseNode.GetChildNode("estDeliveryDate") is { } nullNodeEstDeliveryDate && nullNodeEstDeliveryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstDeliveryDate = null;
-            if (parseNode.GetChildNode("interceptCharge") is { } nullNodeInterceptCharge && nullNodeInterceptCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptCharge = null;
-            if (parseNode.GetChildNode("interceptChargeDetail") is { } nullNodeInterceptChargeDetail && nullNodeInterceptChargeDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptChargeDetail = null;
-            if (parseNode.GetChildNode("oversizeCode") is { } nullNodeOversizeCode && nullNodeOversizeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OversizeCode = null;
-            if (parseNode.GetChildNode("packageWeight") is { } nullNodePackageWeight && nullNodePackageWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageWeight = null;
-            if (parseNode.GetChildNode("packageWeightUOM") is { } nullNodePackageWeightUOM && nullNodePackageWeightUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageWeightUOM = null;
-            if (parseNode.GetChildNode("packagingType") is { } nullNodePackagingType && nullNodePackagingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingType = null;
-            if (parseNode.GetChildNode("preTaxTotalCharge") is { } nullNodePreTaxTotalCharge && nullNodePreTaxTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreTaxTotalCharge = null;
-            if (parseNode.GetChildNode("residentialIndicator") is { } nullNodeResidentialIndicator && nullNodeResidentialIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResidentialIndicator = null;
-            if (parseNode.GetChildNode("serviceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
-            if (parseNode.GetChildNode("serviceDesc") is { } nullNodeServiceDesc && nullNodeServiceDesc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDesc = null;
-            if (parseNode.GetChildNode("shipperName") is { } nullNodeShipperName && nullNodeShipperName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperName = null;
-            if (parseNode.GetChildNode("shipperPaidInterceptCharges") is { } nullNodeShipperPaidInterceptCharges && nullNodeShipperPaidInterceptCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperPaidInterceptCharges = null;
-            if (parseNode.GetChildNode("shipperPaidTransportationCharges") is { } nullNodeShipperPaidTransportationCharges && nullNodeShipperPaidTransportationCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperPaidTransportationCharges = null;
-            if (parseNode.GetChildNode("taxDisclaimerIndicator") is { } nullNodeTaxDisclaimerIndicator && nullNodeTaxDisclaimerIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxDisclaimerIndicator = null;
-            if (parseNode.GetChildNode("taxes") is { } nullNodeTaxes && nullNodeTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Taxes = null;
-            if (parseNode.GetChildNode("totalCharge") is { } nullNodeTotalCharge && nullNodeTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCharge = null;
-            if (parseNode.GetChildNode("totalTax") is { } nullNodeTotalTax && nullNodeTotalTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTax = null;
-            if (parseNode.GetChildNode("trackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
-            if (parseNode.GetChildNode("transportationCharge") is { } nullNodeTransportationCharge && nullNodeTransportationCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportationCharge = null;
+            if (parseNode.GetChildNode("accessorialCharge") is null) { _explicitNullValueAccessorialCharge = default!; _explicitNullProperties?.Remove("accessorialCharge"); }
+            else if (parseNode.GetChildNode("accessorialCharge") is { } nullNodeAccessorialCharge && nullNodeAccessorialCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessorialCharge = null;
+            if (parseNode.GetChildNode("additionalHandlingIndicator") is null) { _explicitNullValueAdditionalHandlingIndicator = default!; _explicitNullProperties?.Remove("additionalHandlingIndicator"); }
+            else if (parseNode.GetChildNode("additionalHandlingIndicator") is { } nullNodeAdditionalHandlingIndicator && nullNodeAdditionalHandlingIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalHandlingIndicator = null;
+            if (parseNode.GetChildNode("chargeCurrency") is null) { _explicitNullValueChargeCurrency = default!; _explicitNullProperties?.Remove("chargeCurrency"); }
+            else if (parseNode.GetChildNode("chargeCurrency") is { } nullNodeChargeCurrency && nullNodeChargeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeCurrency = null;
+            if (parseNode.GetChildNode("chargesPaidByThirdPartyShipper") is null) { _explicitNullValueChargesPaidByThirdPartyShipper = default!; _explicitNullProperties?.Remove("chargesPaidByThirdPartyShipper"); }
+            else if (parseNode.GetChildNode("chargesPaidByThirdPartyShipper") is { } nullNodeChargesPaidByThirdPartyShipper && nullNodeChargesPaidByThirdPartyShipper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargesPaidByThirdPartyShipper = null;
+            if (parseNode.GetChildNode("displayShipperPaidInterceptCharges") is null) { _explicitNullValueDisplayShipperPaidInterceptCharges = default!; _explicitNullProperties?.Remove("displayShipperPaidInterceptCharges"); }
+            else if (parseNode.GetChildNode("displayShipperPaidInterceptCharges") is { } nullNodeDisplayShipperPaidInterceptCharges && nullNodeDisplayShipperPaidInterceptCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayShipperPaidInterceptCharges = null;
+            if (parseNode.GetChildNode("displayShipperPaidTransportationCharges") is null) { _explicitNullValueDisplayShipperPaidTransportationCharges = default!; _explicitNullProperties?.Remove("displayShipperPaidTransportationCharges"); }
+            else if (parseNode.GetChildNode("displayShipperPaidTransportationCharges") is { } nullNodeDisplayShipperPaidTransportationCharges && nullNodeDisplayShipperPaidTransportationCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayShipperPaidTransportationCharges = null;
+            if (parseNode.GetChildNode("downgradeServiceCode") is null) { _explicitNullValueDowngradeServiceCode = default!; _explicitNullProperties?.Remove("downgradeServiceCode"); }
+            else if (parseNode.GetChildNode("downgradeServiceCode") is { } nullNodeDowngradeServiceCode && nullNodeDowngradeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DowngradeServiceCode = null;
+            if (parseNode.GetChildNode("estDeliveryDate") is null) { _explicitNullValueEstDeliveryDate = default!; _explicitNullProperties?.Remove("estDeliveryDate"); }
+            else if (parseNode.GetChildNode("estDeliveryDate") is { } nullNodeEstDeliveryDate && nullNodeEstDeliveryDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstDeliveryDate = null;
+            if (parseNode.GetChildNode("interceptCharge") is null) { _explicitNullValueInterceptCharge = default!; _explicitNullProperties?.Remove("interceptCharge"); }
+            else if (parseNode.GetChildNode("interceptCharge") is { } nullNodeInterceptCharge && nullNodeInterceptCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptCharge = null;
+            if (parseNode.GetChildNode("interceptChargeDetail") is null) { _explicitNullValueInterceptChargeDetail = default!; _explicitNullProperties?.Remove("interceptChargeDetail"); }
+            else if (parseNode.GetChildNode("interceptChargeDetail") is { } nullNodeInterceptChargeDetail && nullNodeInterceptChargeDetail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptChargeDetail = null;
+            if (parseNode.GetChildNode("oversizeCode") is null) { _explicitNullValueOversizeCode = default!; _explicitNullProperties?.Remove("oversizeCode"); }
+            else if (parseNode.GetChildNode("oversizeCode") is { } nullNodeOversizeCode && nullNodeOversizeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OversizeCode = null;
+            if (parseNode.GetChildNode("packageWeight") is null) { _explicitNullValuePackageWeight = default!; _explicitNullProperties?.Remove("packageWeight"); }
+            else if (parseNode.GetChildNode("packageWeight") is { } nullNodePackageWeight && nullNodePackageWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageWeight = null;
+            if (parseNode.GetChildNode("packageWeightUOM") is null) { _explicitNullValuePackageWeightUOM = default!; _explicitNullProperties?.Remove("packageWeightUOM"); }
+            else if (parseNode.GetChildNode("packageWeightUOM") is { } nullNodePackageWeightUOM && nullNodePackageWeightUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageWeightUOM = null;
+            if (parseNode.GetChildNode("packagingType") is null) { _explicitNullValuePackagingType = default!; _explicitNullProperties?.Remove("packagingType"); }
+            else if (parseNode.GetChildNode("packagingType") is { } nullNodePackagingType && nullNodePackagingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingType = null;
+            if (parseNode.GetChildNode("preTaxTotalCharge") is null) { _explicitNullValuePreTaxTotalCharge = default!; _explicitNullProperties?.Remove("preTaxTotalCharge"); }
+            else if (parseNode.GetChildNode("preTaxTotalCharge") is { } nullNodePreTaxTotalCharge && nullNodePreTaxTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreTaxTotalCharge = null;
+            if (parseNode.GetChildNode("residentialIndicator") is null) { _explicitNullValueResidentialIndicator = default!; _explicitNullProperties?.Remove("residentialIndicator"); }
+            else if (parseNode.GetChildNode("residentialIndicator") is { } nullNodeResidentialIndicator && nullNodeResidentialIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResidentialIndicator = null;
+            if (parseNode.GetChildNode("serviceCode") is null) { _explicitNullValueServiceCode = default!; _explicitNullProperties?.Remove("serviceCode"); }
+            else if (parseNode.GetChildNode("serviceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("serviceDesc") is null) { _explicitNullValueServiceDesc = default!; _explicitNullProperties?.Remove("serviceDesc"); }
+            else if (parseNode.GetChildNode("serviceDesc") is { } nullNodeServiceDesc && nullNodeServiceDesc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDesc = null;
+            if (parseNode.GetChildNode("shipperName") is null) { _explicitNullValueShipperName = default!; _explicitNullProperties?.Remove("shipperName"); }
+            else if (parseNode.GetChildNode("shipperName") is { } nullNodeShipperName && nullNodeShipperName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperName = null;
+            if (parseNode.GetChildNode("shipperPaidInterceptCharges") is null) { _explicitNullValueShipperPaidInterceptCharges = default!; _explicitNullProperties?.Remove("shipperPaidInterceptCharges"); }
+            else if (parseNode.GetChildNode("shipperPaidInterceptCharges") is { } nullNodeShipperPaidInterceptCharges && nullNodeShipperPaidInterceptCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperPaidInterceptCharges = null;
+            if (parseNode.GetChildNode("shipperPaidTransportationCharges") is null) { _explicitNullValueShipperPaidTransportationCharges = default!; _explicitNullProperties?.Remove("shipperPaidTransportationCharges"); }
+            else if (parseNode.GetChildNode("shipperPaidTransportationCharges") is { } nullNodeShipperPaidTransportationCharges && nullNodeShipperPaidTransportationCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperPaidTransportationCharges = null;
+            if (parseNode.GetChildNode("taxDisclaimerIndicator") is null) { _explicitNullValueTaxDisclaimerIndicator = default!; _explicitNullProperties?.Remove("taxDisclaimerIndicator"); }
+            else if (parseNode.GetChildNode("taxDisclaimerIndicator") is { } nullNodeTaxDisclaimerIndicator && nullNodeTaxDisclaimerIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxDisclaimerIndicator = null;
+            if (parseNode.GetChildNode("taxes") is null) { _explicitNullValueTaxes = default!; _explicitNullProperties?.Remove("taxes"); }
+            else if (parseNode.GetChildNode("taxes") is { } nullNodeTaxes && nullNodeTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Taxes = null;
+            if (parseNode.GetChildNode("totalCharge") is null) { _explicitNullValueTotalCharge = default!; _explicitNullProperties?.Remove("totalCharge"); }
+            else if (parseNode.GetChildNode("totalCharge") is { } nullNodeTotalCharge && nullNodeTotalCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCharge = null;
+            if (parseNode.GetChildNode("totalTax") is null) { _explicitNullValueTotalTax = default!; _explicitNullProperties?.Remove("totalTax"); }
+            else if (parseNode.GetChildNode("totalTax") is { } nullNodeTotalTax && nullNodeTotalTax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTax = null;
+            if (parseNode.GetChildNode("trackingNumber") is null) { _explicitNullValueTrackingNumber = default!; _explicitNullProperties?.Remove("trackingNumber"); }
+            else if (parseNode.GetChildNode("trackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("transportationCharge") is null) { _explicitNullValueTransportationCharge = default!; _explicitNullProperties?.Remove("transportationCharge"); }
+            else if (parseNode.GetChildNode("transportationCharge") is { } nullNodeTransportationCharge && nullNodeTransportationCharge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportationCharge = null;
         }
 
         /// <summary>The accessorialCharge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessorialCharge { get => _explicitNullValueAccessorialCharge; set { _explicitNullValueAccessorialCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorialCharge"); else _explicitNullProperties?.Remove("accessorialCharge"); } }
+        public string? AccessorialCharge { get => _explicitNullValueAccessorialCharge; set { _explicitNullValueAccessorialCharge = value; AdditionalData?.Remove("accessorialCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorialCharge"); else _explicitNullProperties?.Remove("accessorialCharge"); } }
         private string? _explicitNullValueAccessorialCharge = default!;
 #nullable restore
 #else
-        public string AccessorialCharge { get => _explicitNullValueAccessorialCharge; set { _explicitNullValueAccessorialCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorialCharge"); else _explicitNullProperties?.Remove("accessorialCharge"); } }
+        public string AccessorialCharge { get => _explicitNullValueAccessorialCharge; set { _explicitNullValueAccessorialCharge = value; AdditionalData?.Remove("accessorialCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessorialCharge"); else _explicitNullProperties?.Remove("accessorialCharge"); } }
         private string _explicitNullValueAccessorialCharge = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Additional handling indicator. May be set by NRF during rating.</summary>
-        public bool? AdditionalHandlingIndicator { get => _explicitNullValueAdditionalHandlingIndicator; set { _explicitNullValueAdditionalHandlingIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalHandlingIndicator"); else _explicitNullProperties?.Remove("additionalHandlingIndicator"); } }
+        public bool? AdditionalHandlingIndicator { get => _explicitNullValueAdditionalHandlingIndicator; set { _explicitNullValueAdditionalHandlingIndicator = value; AdditionalData?.Remove("additionalHandlingIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additionalHandlingIndicator"); else _explicitNullProperties?.Remove("additionalHandlingIndicator"); } }
         private bool? _explicitNullValueAdditionalHandlingIndicator = default!;
         /// <summary>The &lt;a href=&quot;https://www.iso.org/iso-4217-currency-codes.html&quot; target=&quot;_blank&quot;&gt;ISO 4217&lt;/a&gt; currency code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChargeCurrency { get => _explicitNullValueChargeCurrency; set { _explicitNullValueChargeCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeCurrency"); else _explicitNullProperties?.Remove("chargeCurrency"); } }
+        public string? ChargeCurrency { get => _explicitNullValueChargeCurrency; set { _explicitNullValueChargeCurrency = value; AdditionalData?.Remove("chargeCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeCurrency"); else _explicitNullProperties?.Remove("chargeCurrency"); } }
         private string? _explicitNullValueChargeCurrency = default!;
 #nullable restore
 #else
-        public string ChargeCurrency { get => _explicitNullValueChargeCurrency; set { _explicitNullValueChargeCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeCurrency"); else _explicitNullProperties?.Remove("chargeCurrency"); } }
+        public string ChargeCurrency { get => _explicitNullValueChargeCurrency; set { _explicitNullValueChargeCurrency = value; AdditionalData?.Remove("chargeCurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeCurrency"); else _explicitNullProperties?.Remove("chargeCurrency"); } }
         private string _explicitNullValueChargeCurrency = default!;
 #endif
         /// <summary>Indicates if the charges were paid by a third-party shipper and must be supplied by trusted end clients only.| CODE  | DESCRIPTION                                     || :--:  | :--                                             || TRUE  | the charges were paid by a third-party shipper. || FALSE | the charges were paid by the original shipper.  |</summary>
-        public bool? ChargesPaidByThirdPartyShipper { get => _explicitNullValueChargesPaidByThirdPartyShipper; set { _explicitNullValueChargesPaidByThirdPartyShipper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargesPaidByThirdPartyShipper"); else _explicitNullProperties?.Remove("chargesPaidByThirdPartyShipper"); } }
+        public bool? ChargesPaidByThirdPartyShipper { get => _explicitNullValueChargesPaidByThirdPartyShipper; set { _explicitNullValueChargesPaidByThirdPartyShipper = value; AdditionalData?.Remove("chargesPaidByThirdPartyShipper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargesPaidByThirdPartyShipper"); else _explicitNullProperties?.Remove("chargesPaidByThirdPartyShipper"); } }
         private bool? _explicitNullValueChargesPaidByThirdPartyShipper = default!;
         /// <summary>Indicates if a message should be displayed that the shipper has paid for the charges related to the intercept</summary>
-        public bool? DisplayShipperPaidInterceptCharges { get => _explicitNullValueDisplayShipperPaidInterceptCharges; set { _explicitNullValueDisplayShipperPaidInterceptCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayShipperPaidInterceptCharges"); else _explicitNullProperties?.Remove("displayShipperPaidInterceptCharges"); } }
+        public bool? DisplayShipperPaidInterceptCharges { get => _explicitNullValueDisplayShipperPaidInterceptCharges; set { _explicitNullValueDisplayShipperPaidInterceptCharges = value; AdditionalData?.Remove("displayShipperPaidInterceptCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayShipperPaidInterceptCharges"); else _explicitNullProperties?.Remove("displayShipperPaidInterceptCharges"); } }
         private bool? _explicitNullValueDisplayShipperPaidInterceptCharges = default!;
         /// <summary>Indicates if a message should be displayed that the shipper has paid for the charges related to transportation. Applicable only for Redirect to Another Address and Redirect to UPS Location intercepts. TRUE - display a messagethat the shipper has paid the transportation charges.</summary>
-        public bool? DisplayShipperPaidTransportationCharges { get => _explicitNullValueDisplayShipperPaidTransportationCharges; set { _explicitNullValueDisplayShipperPaidTransportationCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayShipperPaidTransportationCharges"); else _explicitNullProperties?.Remove("displayShipperPaidTransportationCharges"); } }
+        public bool? DisplayShipperPaidTransportationCharges { get => _explicitNullValueDisplayShipperPaidTransportationCharges; set { _explicitNullValueDisplayShipperPaidTransportationCharges = value; AdditionalData?.Remove("displayShipperPaidTransportationCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayShipperPaidTransportationCharges"); else _explicitNullProperties?.Remove("displayShipperPaidTransportationCharges"); } }
         private bool? _explicitNullValueDisplayShipperPaidTransportationCharges = default!;
         /// <summary>Downgraded service code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DowngradeServiceCode { get => _explicitNullValueDowngradeServiceCode; set { _explicitNullValueDowngradeServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downgradeServiceCode"); else _explicitNullProperties?.Remove("downgradeServiceCode"); } }
+        public string? DowngradeServiceCode { get => _explicitNullValueDowngradeServiceCode; set { _explicitNullValueDowngradeServiceCode = value; AdditionalData?.Remove("downgradeServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downgradeServiceCode"); else _explicitNullProperties?.Remove("downgradeServiceCode"); } }
         private string? _explicitNullValueDowngradeServiceCode = default!;
 #nullable restore
 #else
-        public string DowngradeServiceCode { get => _explicitNullValueDowngradeServiceCode; set { _explicitNullValueDowngradeServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downgradeServiceCode"); else _explicitNullProperties?.Remove("downgradeServiceCode"); } }
+        public string DowngradeServiceCode { get => _explicitNullValueDowngradeServiceCode; set { _explicitNullValueDowngradeServiceCode = value; AdditionalData?.Remove("downgradeServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downgradeServiceCode"); else _explicitNullProperties?.Remove("downgradeServiceCode"); } }
         private string _explicitNullValueDowngradeServiceCode = default!;
 #endif
         /// <summary>Provides the future dates available for delivery</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EstDeliveryDate { get => _explicitNullValueEstDeliveryDate; set { _explicitNullValueEstDeliveryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estDeliveryDate"); else _explicitNullProperties?.Remove("estDeliveryDate"); } }
+        public string? EstDeliveryDate { get => _explicitNullValueEstDeliveryDate; set { _explicitNullValueEstDeliveryDate = value; AdditionalData?.Remove("estDeliveryDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estDeliveryDate"); else _explicitNullProperties?.Remove("estDeliveryDate"); } }
         private string? _explicitNullValueEstDeliveryDate = default!;
 #nullable restore
 #else
-        public string EstDeliveryDate { get => _explicitNullValueEstDeliveryDate; set { _explicitNullValueEstDeliveryDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estDeliveryDate"); else _explicitNullProperties?.Remove("estDeliveryDate"); } }
+        public string EstDeliveryDate { get => _explicitNullValueEstDeliveryDate; set { _explicitNullValueEstDeliveryDate = value; AdditionalData?.Remove("estDeliveryDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estDeliveryDate"); else _explicitNullProperties?.Remove("estDeliveryDate"); } }
         private string _explicitNullValueEstDeliveryDate = default!;
 #endif
         /// <summary>The interceptCharge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InterceptCharge { get => _explicitNullValueInterceptCharge; set { _explicitNullValueInterceptCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptCharge"); else _explicitNullProperties?.Remove("interceptCharge"); } }
+        public string? InterceptCharge { get => _explicitNullValueInterceptCharge; set { _explicitNullValueInterceptCharge = value; AdditionalData?.Remove("interceptCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptCharge"); else _explicitNullProperties?.Remove("interceptCharge"); } }
         private string? _explicitNullValueInterceptCharge = default!;
 #nullable restore
 #else
-        public string InterceptCharge { get => _explicitNullValueInterceptCharge; set { _explicitNullValueInterceptCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptCharge"); else _explicitNullProperties?.Remove("interceptCharge"); } }
+        public string InterceptCharge { get => _explicitNullValueInterceptCharge; set { _explicitNullValueInterceptCharge = value; AdditionalData?.Remove("interceptCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptCharge"); else _explicitNullProperties?.Remove("interceptCharge"); } }
         private string _explicitNullValueInterceptCharge = default!;
 #endif
         /// <summary>Unbounded array of intercept charges details, available only for intercept option AL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2>? InterceptChargeDetail { get => _explicitNullValueInterceptChargeDetail; set { _explicitNullValueInterceptChargeDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptChargeDetail"); else _explicitNullProperties?.Remove("interceptChargeDetail"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2>? InterceptChargeDetail { get => _explicitNullValueInterceptChargeDetail; set { _explicitNullValueInterceptChargeDetail = value; AdditionalData?.Remove("interceptChargeDetail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptChargeDetail"); else _explicitNullProperties?.Remove("interceptChargeDetail"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2>? _explicitNullValueInterceptChargeDetail = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2> InterceptChargeDetail { get => _explicitNullValueInterceptChargeDetail; set { _explicitNullValueInterceptChargeDetail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptChargeDetail"); else _explicitNullProperties?.Remove("interceptChargeDetail"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2> InterceptChargeDetail { get => _explicitNullValueInterceptChargeDetail; set { _explicitNullValueInterceptChargeDetail = value; AdditionalData?.Remove("interceptChargeDetail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptChargeDetail"); else _explicitNullProperties?.Remove("interceptChargeDetail"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2> _explicitNullValueInterceptChargeDetail = default!;
 #endif
         /// <summary>Oversize indicator. May be set by NRF during rating LPK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OversizeCode { get => _explicitNullValueOversizeCode; set { _explicitNullValueOversizeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oversizeCode"); else _explicitNullProperties?.Remove("oversizeCode"); } }
+        public string? OversizeCode { get => _explicitNullValueOversizeCode; set { _explicitNullValueOversizeCode = value; AdditionalData?.Remove("oversizeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oversizeCode"); else _explicitNullProperties?.Remove("oversizeCode"); } }
         private string? _explicitNullValueOversizeCode = default!;
 #nullable restore
 #else
-        public string OversizeCode { get => _explicitNullValueOversizeCode; set { _explicitNullValueOversizeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oversizeCode"); else _explicitNullProperties?.Remove("oversizeCode"); } }
+        public string OversizeCode { get => _explicitNullValueOversizeCode; set { _explicitNullValueOversizeCode = value; AdditionalData?.Remove("oversizeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oversizeCode"); else _explicitNullProperties?.Remove("oversizeCode"); } }
         private string _explicitNullValueOversizeCode = default!;
 #endif
         /// <summary>Package weight. May also be changed by NRF during rating to billable weight.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageWeight"); else _explicitNullProperties?.Remove("packageWeight"); } }
+        public string? PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; AdditionalData?.Remove("packageWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageWeight"); else _explicitNullProperties?.Remove("packageWeight"); } }
         private string? _explicitNullValuePackageWeight = default!;
 #nullable restore
 #else
-        public string PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageWeight"); else _explicitNullProperties?.Remove("packageWeight"); } }
+        public string PackageWeight { get => _explicitNullValuePackageWeight; set { _explicitNullValuePackageWeight = value; AdditionalData?.Remove("packageWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageWeight"); else _explicitNullProperties?.Remove("packageWeight"); } }
         private string _explicitNullValuePackageWeight = default!;
 #endif
         /// <summary>Package weight unit of measure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom? PackageWeightUOM { get => _explicitNullValuePackageWeightUOM; set { _explicitNullValuePackageWeightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageWeightUOM"); else _explicitNullProperties?.Remove("packageWeightUOM"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom? _explicitNullValuePackageWeightUOM = default!;
+        public string? PackageWeightUOM { get => _explicitNullValuePackageWeightUOM; set { _explicitNullValuePackageWeightUOM = value; AdditionalData?.Remove("packageWeightUOM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageWeightUOM"); else _explicitNullProperties?.Remove("packageWeightUOM"); } }
+        private string? _explicitNullValuePackageWeightUOM = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom PackageWeightUOM { get => _explicitNullValuePackageWeightUOM; set { _explicitNullValuePackageWeightUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageWeightUOM"); else _explicitNullProperties?.Remove("packageWeightUOM"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom _explicitNullValuePackageWeightUOM = default!;
+        public string PackageWeightUOM { get => _explicitNullValuePackageWeightUOM; set { _explicitNullValuePackageWeightUOM = value; AdditionalData?.Remove("packageWeightUOM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageWeightUOM"); else _explicitNullProperties?.Remove("packageWeightUOM"); } }
+        private string _explicitNullValuePackageWeightUOM = default!;
 #endif
         /// <summary>Packaging Type code. Refer to the Packaging Types document for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagingType { get => _explicitNullValuePackagingType; set { _explicitNullValuePackagingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packagingType"); else _explicitNullProperties?.Remove("packagingType"); } }
+        public string? PackagingType { get => _explicitNullValuePackagingType; set { _explicitNullValuePackagingType = value; AdditionalData?.Remove("packagingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packagingType"); else _explicitNullProperties?.Remove("packagingType"); } }
         private string? _explicitNullValuePackagingType = default!;
 #nullable restore
 #else
-        public string PackagingType { get => _explicitNullValuePackagingType; set { _explicitNullValuePackagingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packagingType"); else _explicitNullProperties?.Remove("packagingType"); } }
+        public string PackagingType { get => _explicitNullValuePackagingType; set { _explicitNullValuePackagingType = value; AdditionalData?.Remove("packagingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packagingType"); else _explicitNullProperties?.Remove("packagingType"); } }
         private string _explicitNullValuePackagingType = default!;
 #endif
         /// <summary>The preTaxTotalCharge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreTaxTotalCharge { get => _explicitNullValuePreTaxTotalCharge; set { _explicitNullValuePreTaxTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preTaxTotalCharge"); else _explicitNullProperties?.Remove("preTaxTotalCharge"); } }
+        public string? PreTaxTotalCharge { get => _explicitNullValuePreTaxTotalCharge; set { _explicitNullValuePreTaxTotalCharge = value; AdditionalData?.Remove("preTaxTotalCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preTaxTotalCharge"); else _explicitNullProperties?.Remove("preTaxTotalCharge"); } }
         private string? _explicitNullValuePreTaxTotalCharge = default!;
 #nullable restore
 #else
-        public string PreTaxTotalCharge { get => _explicitNullValuePreTaxTotalCharge; set { _explicitNullValuePreTaxTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preTaxTotalCharge"); else _explicitNullProperties?.Remove("preTaxTotalCharge"); } }
+        public string PreTaxTotalCharge { get => _explicitNullValuePreTaxTotalCharge; set { _explicitNullValuePreTaxTotalCharge = value; AdditionalData?.Remove("preTaxTotalCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preTaxTotalCharge"); else _explicitNullProperties?.Remove("preTaxTotalCharge"); } }
         private string _explicitNullValuePreTaxTotalCharge = default!;
 #endif
         /// <summary>Ship to residential indicator.</summary>
-        public bool? ResidentialIndicator { get => _explicitNullValueResidentialIndicator; set { _explicitNullValueResidentialIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("residentialIndicator"); else _explicitNullProperties?.Remove("residentialIndicator"); } }
+        public bool? ResidentialIndicator { get => _explicitNullValueResidentialIndicator; set { _explicitNullValueResidentialIndicator = value; AdditionalData?.Remove("residentialIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("residentialIndicator"); else _explicitNullProperties?.Remove("residentialIndicator"); } }
         private bool? _explicitNullValueResidentialIndicator = default!;
         /// <summary>Original service code. Refer to the Service Codes document for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
+        public string? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("serviceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
         private string? _explicitNullValueServiceCode = default!;
 #nullable restore
 #else
-        public string ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
+        public string ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("serviceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceCode"); else _explicitNullProperties?.Remove("serviceCode"); } }
         private string _explicitNullValueServiceCode = default!;
 #endif
         /// <summary>Original service description. Refer to the Service Codes document for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceDesc { get => _explicitNullValueServiceDesc; set { _explicitNullValueServiceDesc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDesc"); else _explicitNullProperties?.Remove("serviceDesc"); } }
+        public string? ServiceDesc { get => _explicitNullValueServiceDesc; set { _explicitNullValueServiceDesc = value; AdditionalData?.Remove("serviceDesc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDesc"); else _explicitNullProperties?.Remove("serviceDesc"); } }
         private string? _explicitNullValueServiceDesc = default!;
 #nullable restore
 #else
-        public string ServiceDesc { get => _explicitNullValueServiceDesc; set { _explicitNullValueServiceDesc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDesc"); else _explicitNullProperties?.Remove("serviceDesc"); } }
+        public string ServiceDesc { get => _explicitNullValueServiceDesc; set { _explicitNullValueServiceDesc = value; AdditionalData?.Remove("serviceDesc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDesc"); else _explicitNullProperties?.Remove("serviceDesc"); } }
         private string _explicitNullValueServiceDesc = default!;
 #endif
         /// <summary>Name of the shipper Applicable for  Intercept options FD,AA,UR etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipperName { get => _explicitNullValueShipperName; set { _explicitNullValueShipperName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperName"); else _explicitNullProperties?.Remove("shipperName"); } }
+        public string? ShipperName { get => _explicitNullValueShipperName; set { _explicitNullValueShipperName = value; AdditionalData?.Remove("shipperName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperName"); else _explicitNullProperties?.Remove("shipperName"); } }
         private string? _explicitNullValueShipperName = default!;
 #nullable restore
 #else
-        public string ShipperName { get => _explicitNullValueShipperName; set { _explicitNullValueShipperName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperName"); else _explicitNullProperties?.Remove("shipperName"); } }
+        public string ShipperName { get => _explicitNullValueShipperName; set { _explicitNullValueShipperName = value; AdditionalData?.Remove("shipperName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperName"); else _explicitNullProperties?.Remove("shipperName"); } }
         private string _explicitNullValueShipperName = default!;
 #endif
         /// <summary>Indicates if charges related to the intercept are paid by the shipper.</summary>
-        public bool? ShipperPaidInterceptCharges { get => _explicitNullValueShipperPaidInterceptCharges; set { _explicitNullValueShipperPaidInterceptCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperPaidInterceptCharges"); else _explicitNullProperties?.Remove("shipperPaidInterceptCharges"); } }
+        public bool? ShipperPaidInterceptCharges { get => _explicitNullValueShipperPaidInterceptCharges; set { _explicitNullValueShipperPaidInterceptCharges = value; AdditionalData?.Remove("shipperPaidInterceptCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperPaidInterceptCharges"); else _explicitNullProperties?.Remove("shipperPaidInterceptCharges"); } }
         private bool? _explicitNullValueShipperPaidInterceptCharges = default!;
         /// <summary>Indicates if charges related to transportation are paid by the shipper. Applicable only for Redirect to Another Address.</summary>
-        public bool? ShipperPaidTransportationCharges { get => _explicitNullValueShipperPaidTransportationCharges; set { _explicitNullValueShipperPaidTransportationCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperPaidTransportationCharges"); else _explicitNullProperties?.Remove("shipperPaidTransportationCharges"); } }
+        public bool? ShipperPaidTransportationCharges { get => _explicitNullValueShipperPaidTransportationCharges; set { _explicitNullValueShipperPaidTransportationCharges = value; AdditionalData?.Remove("shipperPaidTransportationCharges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipperPaidTransportationCharges"); else _explicitNullProperties?.Remove("shipperPaidTransportationCharges"); } }
         private bool? _explicitNullValueShipperPaidTransportationCharges = default!;
         /// <summary>Indicates if a tax disclaimer message should be displayed.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator? TaxDisclaimerIndicator { get => _explicitNullValueTaxDisclaimerIndicator; set { _explicitNullValueTaxDisclaimerIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxDisclaimerIndicator"); else _explicitNullProperties?.Remove("taxDisclaimerIndicator"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator? TaxDisclaimerIndicator { get => _explicitNullValueTaxDisclaimerIndicator; set { _explicitNullValueTaxDisclaimerIndicator = value; AdditionalData?.Remove("taxDisclaimerIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxDisclaimerIndicator"); else _explicitNullProperties?.Remove("taxDisclaimerIndicator"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator? _explicitNullValueTaxDisclaimerIndicator = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator TaxDisclaimerIndicator { get => _explicitNullValueTaxDisclaimerIndicator; set { _explicitNullValueTaxDisclaimerIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxDisclaimerIndicator"); else _explicitNullProperties?.Remove("taxDisclaimerIndicator"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator _explicitNullValueTaxDisclaimerIndicator = default!;
-#endif
         /// <summary>Taxes for EU/Mexico/Canada  country  movement. This array is unbounded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem>? Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem>? Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; AdditionalData?.Remove("taxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem>? _explicitNullValueTaxes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem> Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem> Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; AdditionalData?.Remove("taxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem> _explicitNullValueTaxes = default!;
 #endif
         /// <summary>The totalCharge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
+        public string? TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; AdditionalData?.Remove("totalCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
         private string? _explicitNullValueTotalCharge = default!;
 #nullable restore
 #else
-        public string TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
+        public string TotalCharge { get => _explicitNullValueTotalCharge; set { _explicitNullValueTotalCharge = value; AdditionalData?.Remove("totalCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCharge"); else _explicitNullProperties?.Remove("totalCharge"); } }
         private string _explicitNullValueTotalCharge = default!;
 #endif
         /// <summary>The totalTax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalTax { get => _explicitNullValueTotalTax; set { _explicitNullValueTotalTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalTax"); else _explicitNullProperties?.Remove("totalTax"); } }
+        public string? TotalTax { get => _explicitNullValueTotalTax; set { _explicitNullValueTotalTax = value; AdditionalData?.Remove("totalTax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalTax"); else _explicitNullProperties?.Remove("totalTax"); } }
         private string? _explicitNullValueTotalTax = default!;
 #nullable restore
 #else
-        public string TotalTax { get => _explicitNullValueTotalTax; set { _explicitNullValueTotalTax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalTax"); else _explicitNullProperties?.Remove("totalTax"); } }
+        public string TotalTax { get => _explicitNullValueTotalTax; set { _explicitNullValueTotalTax = value; AdditionalData?.Remove("totalTax"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalTax"); else _explicitNullProperties?.Remove("totalTax"); } }
         private string _explicitNullValueTotalTax = default!;
 #endif
         /// <summary>The trackingNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("trackingNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
         private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("trackingNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
         private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>The transportationCharge property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransportationCharge { get => _explicitNullValueTransportationCharge; set { _explicitNullValueTransportationCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transportationCharge"); else _explicitNullProperties?.Remove("transportationCharge"); } }
+        public string? TransportationCharge { get => _explicitNullValueTransportationCharge; set { _explicitNullValueTransportationCharge = value; AdditionalData?.Remove("transportationCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transportationCharge"); else _explicitNullProperties?.Remove("transportationCharge"); } }
         private string? _explicitNullValueTransportationCharge = default!;
 #nullable restore
 #else
-        public string TransportationCharge { get => _explicitNullValueTransportationCharge; set { _explicitNullValueTransportationCharge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transportationCharge"); else _explicitNullProperties?.Remove("transportationCharge"); } }
+        public string TransportationCharge { get => _explicitNullValueTransportationCharge; set { _explicitNullValueTransportationCharge = value; AdditionalData?.Remove("transportationCharge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transportationCharge"); else _explicitNullProperties?.Remove("transportationCharge"); } }
         private string _explicitNullValueTransportationCharge = default!;
 #endif
         /// <summary>
@@ -313,7 +333,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "interceptChargeDetail", n => { InterceptChargeDetail = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "oversizeCode", n => { OversizeCode = n.GetStringValue(); } },
                 { "packageWeight", n => { PackageWeight = n.GetStringValue(); } },
-                { "packageWeightUOM", n => { PackageWeightUOM = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom.CreateFromDiscriminatorValue); } },
+                { "packageWeightUOM", n => { PackageWeightUOM = n.GetStringValue(); } },
                 { "packagingType", n => { PackagingType = n.GetStringValue(); } },
                 { "preTaxTotalCharge", n => { PreTaxTotalCharge = n.GetStringValue(); } },
                 { "residentialIndicator", n => { ResidentialIndicator = n.GetBoolValue(); } },
@@ -322,7 +342,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "shipperName", n => { ShipperName = n.GetStringValue(); } },
                 { "shipperPaidInterceptCharges", n => { ShipperPaidInterceptCharges = n.GetBoolValue(); } },
                 { "shipperPaidTransportationCharges", n => { ShipperPaidTransportationCharges = n.GetBoolValue(); } },
-                { "taxDisclaimerIndicator", n => { TaxDisclaimerIndicator = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator.CreateFromDiscriminatorValue); } },
+                { "taxDisclaimerIndicator", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTaxDisclaimerIndicator = default; _explicitNullProperties?.Remove("taxDisclaimerIndicator"); AdditionalData["taxDisclaimerIndicator"] = unknown; } else { TaxDisclaimerIndicator = parsed; AdditionalData.Remove("taxDisclaimerIndicator"); } } },
                 { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "totalCharge", n => { TotalCharge = n.GetStringValue(); } },
                 { "totalTax", n => { TotalTax = n.GetStringValue(); } },
@@ -349,7 +369,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargeDetailV2>("interceptChargeDetail", InterceptChargeDetail);
             writer.WriteStringValue("oversizeCode", OversizeCode);
             writer.WriteStringValue("packageWeight", PackageWeight);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemPackageWeightUom>("packageWeightUOM", PackageWeightUOM);
+            writer.WriteStringValue("packageWeightUOM", PackageWeightUOM);
             writer.WriteStringValue("packagingType", PackagingType);
             writer.WriteStringValue("preTaxTotalCharge", PreTaxTotalCharge);
             writer.WriteBoolValue("residentialIndicator", ResidentialIndicator);
@@ -358,7 +378,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("shipperName", ShipperName);
             writer.WriteBoolValue("shipperPaidInterceptCharges", ShipperPaidInterceptCharges);
             writer.WriteBoolValue("shipperPaidTransportationCharges", ShipperPaidTransportationCharges);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator>("taxDisclaimerIndicator", TaxDisclaimerIndicator);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxDisclaimerIndicator>("taxDisclaimerIndicator", TaxDisclaimerIndicator);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesResponseV2ResponseAllOf2ChargeInfoItemTaxesItem>("taxes", Taxes);
             writer.WriteStringValue("totalCharge", TotalCharge);
             writer.WriteStringValue("totalTax", TotalTax);

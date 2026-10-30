@@ -17,10 +17,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AdjustedHeight") is { } nullNodeAdjustedHeight && nullNodeAdjustedHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjustedHeight = null;
-            if (parseNode.GetChildNode("Dimensions") is { } nullNodeDimensions && nullNodeDimensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dimensions = null;
-            if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("AdjustedHeight") is null) { _explicitNullValueAdjustedHeight = default!; _explicitNullProperties?.Remove("AdjustedHeight"); }
+            else if (parseNode.GetChildNode("AdjustedHeight") is { } nullNodeAdjustedHeight && nullNodeAdjustedHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdjustedHeight = null;
+            if (parseNode.GetChildNode("Dimensions") is null) { _explicitNullValueDimensions = default!; _explicitNullProperties?.Remove("Dimensions"); }
+            else if (parseNode.GetChildNode("Dimensions") is { } nullNodeDimensions && nullNodeDimensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dimensions = null;
+            if (parseNode.GetChildNode("Quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("Quantity"); }
+            else if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("Type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("Type"); }
+            else if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container to hold Adjusted Height information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsAdjustedHeight? AdjustedHeight { get => _explicitNullValueAdjustedHeight; set { _explicitNullValueAdjustedHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdjustedHeight"); else _explicitNullProperties?.Remove("AdjustedHeight"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsAdjustedHeight? AdjustedHeight { get => _explicitNullValueAdjustedHeight; set { _explicitNullValueAdjustedHeight = value; AdditionalData?.Remove("AdjustedHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdjustedHeight"); else _explicitNullProperties?.Remove("AdjustedHeight"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsAdjustedHeight? _explicitNullValueAdjustedHeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsAdjustedHeight AdjustedHeight { get => _explicitNullValueAdjustedHeight; set { _explicitNullValueAdjustedHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdjustedHeight"); else _explicitNullProperties?.Remove("AdjustedHeight"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsAdjustedHeight AdjustedHeight { get => _explicitNullValueAdjustedHeight; set { _explicitNullValueAdjustedHeight = value; AdditionalData?.Remove("AdjustedHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdjustedHeight"); else _explicitNullProperties?.Remove("AdjustedHeight"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsAdjustedHeight _explicitNullValueAdjustedHeight = default!;
 #endif
         /// <summary>Dimension of the HandlingUnit container for density based pricing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsDimensions? Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dimensions"); else _explicitNullProperties?.Remove("Dimensions"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsDimensions? Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; AdditionalData?.Remove("Dimensions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dimensions"); else _explicitNullProperties?.Remove("Dimensions"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsDimensions? _explicitNullValueDimensions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsDimensions Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dimensions"); else _explicitNullProperties?.Remove("Dimensions"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsDimensions Dimensions { get => _explicitNullValueDimensions; set { _explicitNullValueDimensions = value; AdditionalData?.Remove("Dimensions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Dimensions"); else _explicitNullProperties?.Remove("Dimensions"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsDimensions _explicitNullValueDimensions = default!;
 #endif
         /// <summary>Handling Unit Quantity for Density based rating.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("Quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
         private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("Quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
         private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>Handling Unit Type for Density based rating.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsType? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsType Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsType Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsType _explicitNullValueType = default!;
 #endif
         /// <summary>

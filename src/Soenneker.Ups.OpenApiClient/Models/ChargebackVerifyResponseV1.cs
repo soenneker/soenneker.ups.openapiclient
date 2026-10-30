@@ -17,9 +17,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("categoryScores") is { } nullNodeCategoryScores && nullNodeCategoryScores.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryScores = null;
-            if (parseNode.GetChildNode("decision") is { } nullNodeDecision && nullNodeDecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Decision = null;
-            if (parseNode.GetChildNode("superScore") is { } nullNodeSuperScore && nullNodeSuperScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuperScore = null;
+            if (parseNode.GetChildNode("categoryScores") is null) { _explicitNullValueCategoryScores = default!; _explicitNullProperties?.Remove("categoryScores"); }
+            else if (parseNode.GetChildNode("categoryScores") is { } nullNodeCategoryScores && nullNodeCategoryScores.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryScores = null;
+            if (parseNode.GetChildNode("decision") is null) { _explicitNullValueDecision = default!; _explicitNullProperties?.Remove("decision"); }
+            else if (parseNode.GetChildNode("decision") is { } nullNodeDecision && nullNodeDecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Decision = null;
+            if (parseNode.GetChildNode("superScore") is null) { _explicitNullValueSuperScore = default!; _explicitNullProperties?.Remove("superScore"); }
+            else if (parseNode.GetChildNode("superScore") is { } nullNodeSuperScore && nullNodeSuperScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuperScore = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Detailed category risk scores</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores? CategoryScores { get => _explicitNullValueCategoryScores; set { _explicitNullValueCategoryScores = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryScores"); else _explicitNullProperties?.Remove("categoryScores"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores? CategoryScores { get => _explicitNullValueCategoryScores; set { _explicitNullValueCategoryScores = value; AdditionalData?.Remove("categoryScores"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryScores"); else _explicitNullProperties?.Remove("categoryScores"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores? _explicitNullValueCategoryScores = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores CategoryScores { get => _explicitNullValueCategoryScores; set { _explicitNullValueCategoryScores = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryScores"); else _explicitNullProperties?.Remove("categoryScores"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores CategoryScores { get => _explicitNullValueCategoryScores; set { _explicitNullValueCategoryScores = value; AdditionalData?.Remove("categoryScores"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryScores"); else _explicitNullProperties?.Remove("categoryScores"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores _explicitNullValueCategoryScores = default!;
 #endif
         /// <summary>Risk decision—whether to reject, review, or undecided</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision? Decision { get => _explicitNullValueDecision; set { _explicitNullValueDecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decision"); else _explicitNullProperties?.Remove("decision"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision? Decision { get => _explicitNullValueDecision; set { _explicitNullValueDecision = value; AdditionalData?.Remove("decision"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decision"); else _explicitNullProperties?.Remove("decision"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision? _explicitNullValueDecision = default!;
         /// <summary>Overall risk score from 0 (lowest) to 999 (highest risk)</summary>
-        public double? SuperScore { get => _explicitNullValueSuperScore; set { _explicitNullValueSuperScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("superScore"); else _explicitNullProperties?.Remove("superScore"); } }
+        public double? SuperScore { get => _explicitNullValueSuperScore; set { _explicitNullValueSuperScore = value; AdditionalData?.Remove("superScore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("superScore"); else _explicitNullProperties?.Remove("superScore"); } }
         private double? _explicitNullValueSuperScore = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1"/> and sets the default values.
@@ -66,7 +69,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "categoryScores", n => { CategoryScores = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores>(global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1CategoryScores.CreateFromDiscriminatorValue); } },
-                { "decision", n => { Decision = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision>(); } },
+                { "decision", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ChargebackVerifyResponseV1Decision>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDecision = default; _explicitNullProperties?.Remove("decision"); AdditionalData["decision"] = unknown; } else { Decision = parsed; AdditionalData.Remove("decision"); } } },
                 { "superScore", n => { SuperScore = n.GetDoubleValue(); } },
             };
         }

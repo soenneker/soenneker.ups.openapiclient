@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DropoffAtUPSFacilityIndicator") is { } nullNodeDropoffAtUPSFacilityIndicator && nullNodeDropoffAtUPSFacilityIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropoffAtUPSFacilityIndicator = null;
-            if (parseNode.GetChildNode("HoldForPickupIndicator") is { } nullNodeHoldForPickupIndicator && nullNodeHoldForPickupIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldForPickupIndicator = null;
-            if (parseNode.GetChildNode("OriginLiftGateIndicator") is { } nullNodeOriginLiftGateIndicator && nullNodeOriginLiftGateIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginLiftGateIndicator = null;
+            if (parseNode.GetChildNode("DropoffAtUPSFacilityIndicator") is null) { _explicitNullValueDropoffAtUPSFacilityIndicator = default!; _explicitNullProperties?.Remove("DropoffAtUPSFacilityIndicator"); }
+            else if (parseNode.GetChildNode("DropoffAtUPSFacilityIndicator") is { } nullNodeDropoffAtUPSFacilityIndicator && nullNodeDropoffAtUPSFacilityIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropoffAtUPSFacilityIndicator = null;
+            if (parseNode.GetChildNode("HoldForPickupIndicator") is null) { _explicitNullValueHoldForPickupIndicator = default!; _explicitNullProperties?.Remove("HoldForPickupIndicator"); }
+            else if (parseNode.GetChildNode("HoldForPickupIndicator") is { } nullNodeHoldForPickupIndicator && nullNodeHoldForPickupIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldForPickupIndicator = null;
+            if (parseNode.GetChildNode("OriginLiftGateIndicator") is null) { _explicitNullValueOriginLiftGateIndicator = default!; _explicitNullProperties?.Remove("OriginLiftGateIndicator"); }
+            else if (parseNode.GetChildNode("OriginLiftGateIndicator") is { } nullNodeOriginLiftGateIndicator && nullNodeOriginLiftGateIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginLiftGateIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Identifies service center location information for Origin List of UPS Facilities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DropoffAtUPSFacilityIndicator { get => _explicitNullValueDropoffAtUPSFacilityIndicator; set { _explicitNullValueDropoffAtUPSFacilityIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DropoffAtUPSFacilityIndicator"); else _explicitNullProperties?.Remove("DropoffAtUPSFacilityIndicator"); } }
+        public string? DropoffAtUPSFacilityIndicator { get => _explicitNullValueDropoffAtUPSFacilityIndicator; set { _explicitNullValueDropoffAtUPSFacilityIndicator = value; AdditionalData?.Remove("DropoffAtUPSFacilityIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DropoffAtUPSFacilityIndicator"); else _explicitNullProperties?.Remove("DropoffAtUPSFacilityIndicator"); } }
         private string? _explicitNullValueDropoffAtUPSFacilityIndicator = default!;
 #nullable restore
 #else
-        public string DropoffAtUPSFacilityIndicator { get => _explicitNullValueDropoffAtUPSFacilityIndicator; set { _explicitNullValueDropoffAtUPSFacilityIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DropoffAtUPSFacilityIndicator"); else _explicitNullProperties?.Remove("DropoffAtUPSFacilityIndicator"); } }
+        public string DropoffAtUPSFacilityIndicator { get => _explicitNullValueDropoffAtUPSFacilityIndicator; set { _explicitNullValueDropoffAtUPSFacilityIndicator = value; AdditionalData?.Remove("DropoffAtUPSFacilityIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DropoffAtUPSFacilityIndicator"); else _explicitNullProperties?.Remove("DropoffAtUPSFacilityIndicator"); } }
         private string _explicitNullValueDropoffAtUPSFacilityIndicator = default!;
 #endif
         /// <summary>Identifies service center location information for Destination of UPS Facilities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickupIndicator"); else _explicitNullProperties?.Remove("HoldForPickupIndicator"); } }
+        public string? HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; AdditionalData?.Remove("HoldForPickupIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickupIndicator"); else _explicitNullProperties?.Remove("HoldForPickupIndicator"); } }
         private string? _explicitNullValueHoldForPickupIndicator = default!;
 #nullable restore
 #else
-        public string HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickupIndicator"); else _explicitNullProperties?.Remove("HoldForPickupIndicator"); } }
+        public string HoldForPickupIndicator { get => _explicitNullValueHoldForPickupIndicator; set { _explicitNullValueHoldForPickupIndicator = value; AdditionalData?.Remove("HoldForPickupIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HoldForPickupIndicator"); else _explicitNullProperties?.Remove("HoldForPickupIndicator"); } }
         private string _explicitNullValueHoldForPickupIndicator = default!;
 #endif
         /// <summary>Presence indicates OriginLiftGateRequiredIndicator is present.  Conditionally requirements. Must not be present if DropOffAtUPSFacilityIndicator is true</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginLiftGateIndicator { get => _explicitNullValueOriginLiftGateIndicator; set { _explicitNullValueOriginLiftGateIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLiftGateIndicator"); else _explicitNullProperties?.Remove("OriginLiftGateIndicator"); } }
+        public string? OriginLiftGateIndicator { get => _explicitNullValueOriginLiftGateIndicator; set { _explicitNullValueOriginLiftGateIndicator = value; AdditionalData?.Remove("OriginLiftGateIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLiftGateIndicator"); else _explicitNullProperties?.Remove("OriginLiftGateIndicator"); } }
         private string? _explicitNullValueOriginLiftGateIndicator = default!;
 #nullable restore
 #else
-        public string OriginLiftGateIndicator { get => _explicitNullValueOriginLiftGateIndicator; set { _explicitNullValueOriginLiftGateIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLiftGateIndicator"); else _explicitNullProperties?.Remove("OriginLiftGateIndicator"); } }
+        public string OriginLiftGateIndicator { get => _explicitNullValueOriginLiftGateIndicator; set { _explicitNullValueOriginLiftGateIndicator = value; AdditionalData?.Remove("OriginLiftGateIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLiftGateIndicator"); else _explicitNullProperties?.Remove("OriginLiftGateIndicator"); } }
         private string _explicitNullValueOriginLiftGateIndicator = default!;
 #endif
         /// <summary>

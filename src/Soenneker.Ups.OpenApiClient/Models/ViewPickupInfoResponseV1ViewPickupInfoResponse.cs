@@ -17,25 +17,34 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
-            if (parseNode.GetChildNode("ContactInfo") is { } nullNodeContactInfo && nullNodeContactInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactInfo = null;
-            if (parseNode.GetChildNode("PickUpInfo") is { } nullNodePickUpInfo && nullNodePickUpInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpInfo = null;
-            if (parseNode.GetChildNode("PickUpNotifyTime") is { } nullNodePickUpNotifyTime && nullNodePickUpNotifyTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpNotifyTime = null;
-            if (parseNode.GetChildNode("PickUpPendingStatusIndicator") is { } nullNodePickUpPendingStatusIndicator && nullNodePickUpPendingStatusIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpPendingStatusIndicator = null;
-            if (parseNode.GetChildNode("PickUpTypeCode") is { } nullNodePickUpTypeCode && nullNodePickUpTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpTypeCode = null;
-            if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
-            if (parseNode.GetChildNode("SundayPickUpNotifyTime") is { } nullNodeSundayPickUpNotifyTime && nullNodeSundayPickUpNotifyTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SundayPickUpNotifyTime = null;
-            if (parseNode.GetChildNode("WeekEndPickUpNotifyTime") is { } nullNodeWeekEndPickUpNotifyTime && nullNodeWeekEndPickUpNotifyTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekEndPickUpNotifyTime = null;
+            if (parseNode.GetChildNode("AccountNumber") is null) { _explicitNullValueAccountNumber = default!; _explicitNullProperties?.Remove("AccountNumber"); }
+            else if (parseNode.GetChildNode("AccountNumber") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("ContactInfo") is null) { _explicitNullValueContactInfo = default!; _explicitNullProperties?.Remove("ContactInfo"); }
+            else if (parseNode.GetChildNode("ContactInfo") is { } nullNodeContactInfo && nullNodeContactInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactInfo = null;
+            if (parseNode.GetChildNode("PickUpInfo") is null) { _explicitNullValuePickUpInfo = default!; _explicitNullProperties?.Remove("PickUpInfo"); }
+            else if (parseNode.GetChildNode("PickUpInfo") is { } nullNodePickUpInfo && nullNodePickUpInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpInfo = null;
+            if (parseNode.GetChildNode("PickUpNotifyTime") is null) { _explicitNullValuePickUpNotifyTime = default!; _explicitNullProperties?.Remove("PickUpNotifyTime"); }
+            else if (parseNode.GetChildNode("PickUpNotifyTime") is { } nullNodePickUpNotifyTime && nullNodePickUpNotifyTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpNotifyTime = null;
+            if (parseNode.GetChildNode("PickUpPendingStatusIndicator") is null) { _explicitNullValuePickUpPendingStatusIndicator = default!; _explicitNullProperties?.Remove("PickUpPendingStatusIndicator"); }
+            else if (parseNode.GetChildNode("PickUpPendingStatusIndicator") is { } nullNodePickUpPendingStatusIndicator && nullNodePickUpPendingStatusIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpPendingStatusIndicator = null;
+            if (parseNode.GetChildNode("PickUpTypeCode") is null) { _explicitNullValuePickUpTypeCode = default!; _explicitNullProperties?.Remove("PickUpTypeCode"); }
+            else if (parseNode.GetChildNode("PickUpTypeCode") is { } nullNodePickUpTypeCode && nullNodePickUpTypeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickUpTypeCode = null;
+            if (parseNode.GetChildNode("Response") is null) { _explicitNullValueResponse = default!; _explicitNullProperties?.Remove("Response"); }
+            else if (parseNode.GetChildNode("Response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("SundayPickUpNotifyTime") is null) { _explicitNullValueSundayPickUpNotifyTime = default!; _explicitNullProperties?.Remove("SundayPickUpNotifyTime"); }
+            else if (parseNode.GetChildNode("SundayPickUpNotifyTime") is { } nullNodeSundayPickUpNotifyTime && nullNodeSundayPickUpNotifyTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SundayPickUpNotifyTime = null;
+            if (parseNode.GetChildNode("WeekEndPickUpNotifyTime") is null) { _explicitNullValueWeekEndPickUpNotifyTime = default!; _explicitNullProperties?.Remove("WeekEndPickUpNotifyTime"); }
+            else if (parseNode.GetChildNode("WeekEndPickUpNotifyTime") is { } nullNodeWeekEndPickUpNotifyTime && nullNodeWeekEndPickUpNotifyTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeekEndPickUpNotifyTime = null;
         }
 
         /// <summary>UPS Account Number. Must be an existing UPS account number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("AccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
         private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; AdditionalData?.Remove("AccountNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountNumber"); else _explicitNullProperties?.Remove("AccountNumber"); } }
         private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,81 +52,74 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>To obtain the pickup Address details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo? ContactInfo { get => _explicitNullValueContactInfo; set { _explicitNullValueContactInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactInfo"); else _explicitNullProperties?.Remove("ContactInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo? ContactInfo { get => _explicitNullValueContactInfo; set { _explicitNullValueContactInfo = value; AdditionalData?.Remove("ContactInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactInfo"); else _explicitNullProperties?.Remove("ContactInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo? _explicitNullValueContactInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo ContactInfo { get => _explicitNullValueContactInfo; set { _explicitNullValueContactInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactInfo"); else _explicitNullProperties?.Remove("ContactInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo ContactInfo { get => _explicitNullValueContactInfo; set { _explicitNullValueContactInfo = value; AdditionalData?.Remove("ContactInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContactInfo"); else _explicitNullProperties?.Remove("ContactInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2ContactInfo _explicitNullValueContactInfo = default!;
 #endif
         /// <summary>The PickUpInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo? PickUpInfo { get => _explicitNullValuePickUpInfo; set { _explicitNullValuePickUpInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpInfo"); else _explicitNullProperties?.Remove("PickUpInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo? PickUpInfo { get => _explicitNullValuePickUpInfo; set { _explicitNullValuePickUpInfo = value; AdditionalData?.Remove("PickUpInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpInfo"); else _explicitNullProperties?.Remove("PickUpInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo? _explicitNullValuePickUpInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo PickUpInfo { get => _explicitNullValuePickUpInfo; set { _explicitNullValuePickUpInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpInfo"); else _explicitNullProperties?.Remove("PickUpInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo PickUpInfo { get => _explicitNullValuePickUpInfo; set { _explicitNullValuePickUpInfo = value; AdditionalData?.Remove("PickUpInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpInfo"); else _explicitNullProperties?.Remove("PickUpInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo _explicitNullValuePickUpInfo = default!;
 #endif
         /// <summary>The PickUpNotifyTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickUpNotifyTime { get => _explicitNullValuePickUpNotifyTime; set { _explicitNullValuePickUpNotifyTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpNotifyTime"); else _explicitNullProperties?.Remove("PickUpNotifyTime"); } }
+        public string? PickUpNotifyTime { get => _explicitNullValuePickUpNotifyTime; set { _explicitNullValuePickUpNotifyTime = value; AdditionalData?.Remove("PickUpNotifyTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpNotifyTime"); else _explicitNullProperties?.Remove("PickUpNotifyTime"); } }
         private string? _explicitNullValuePickUpNotifyTime = default!;
 #nullable restore
 #else
-        public string PickUpNotifyTime { get => _explicitNullValuePickUpNotifyTime; set { _explicitNullValuePickUpNotifyTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpNotifyTime"); else _explicitNullProperties?.Remove("PickUpNotifyTime"); } }
+        public string PickUpNotifyTime { get => _explicitNullValuePickUpNotifyTime; set { _explicitNullValuePickUpNotifyTime = value; AdditionalData?.Remove("PickUpNotifyTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpNotifyTime"); else _explicitNullProperties?.Remove("PickUpNotifyTime"); } }
         private string _explicitNullValuePickUpNotifyTime = default!;
 #endif
         /// <summary>Available when existing PickupTypeCode changes are pending.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PickUpPendingStatusIndicator { get => _explicitNullValuePickUpPendingStatusIndicator; set { _explicitNullValuePickUpPendingStatusIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpPendingStatusIndicator"); else _explicitNullProperties?.Remove("PickUpPendingStatusIndicator"); } }
+        public string? PickUpPendingStatusIndicator { get => _explicitNullValuePickUpPendingStatusIndicator; set { _explicitNullValuePickUpPendingStatusIndicator = value; AdditionalData?.Remove("PickUpPendingStatusIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpPendingStatusIndicator"); else _explicitNullProperties?.Remove("PickUpPendingStatusIndicator"); } }
         private string? _explicitNullValuePickUpPendingStatusIndicator = default!;
 #nullable restore
 #else
-        public string PickUpPendingStatusIndicator { get => _explicitNullValuePickUpPendingStatusIndicator; set { _explicitNullValuePickUpPendingStatusIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpPendingStatusIndicator"); else _explicitNullProperties?.Remove("PickUpPendingStatusIndicator"); } }
+        public string PickUpPendingStatusIndicator { get => _explicitNullValuePickUpPendingStatusIndicator; set { _explicitNullValuePickUpPendingStatusIndicator = value; AdditionalData?.Remove("PickUpPendingStatusIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpPendingStatusIndicator"); else _explicitNullProperties?.Remove("PickUpPendingStatusIndicator"); } }
         private string _explicitNullValuePickUpPendingStatusIndicator = default!;
 #endif
         /// <summary>Type of Pickup. Note: Pickup changes are not allowed when PickupType code is 97.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode? PickUpTypeCode { get => _explicitNullValuePickUpTypeCode; set { _explicitNullValuePickUpTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTypeCode"); else _explicitNullProperties?.Remove("PickUpTypeCode"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode? PickUpTypeCode { get => _explicitNullValuePickUpTypeCode; set { _explicitNullValuePickUpTypeCode = value; AdditionalData?.Remove("PickUpTypeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTypeCode"); else _explicitNullProperties?.Remove("PickUpTypeCode"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode? _explicitNullValuePickUpTypeCode = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode PickUpTypeCode { get => _explicitNullValuePickUpTypeCode; set { _explicitNullValuePickUpTypeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickUpTypeCode"); else _explicitNullProperties?.Remove("PickUpTypeCode"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode _explicitNullValuePickUpTypeCode = default!;
-#endif
         /// <summary>The generic response container</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("Response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Response"); else _explicitNullProperties?.Remove("Response"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response _explicitNullValueResponse = default!;
 #endif
         /// <summary>The SundayPickUpNotifyTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SundayPickUpNotifyTime { get => _explicitNullValueSundayPickUpNotifyTime; set { _explicitNullValueSundayPickUpNotifyTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayPickUpNotifyTime"); else _explicitNullProperties?.Remove("SundayPickUpNotifyTime"); } }
+        public string? SundayPickUpNotifyTime { get => _explicitNullValueSundayPickUpNotifyTime; set { _explicitNullValueSundayPickUpNotifyTime = value; AdditionalData?.Remove("SundayPickUpNotifyTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayPickUpNotifyTime"); else _explicitNullProperties?.Remove("SundayPickUpNotifyTime"); } }
         private string? _explicitNullValueSundayPickUpNotifyTime = default!;
 #nullable restore
 #else
-        public string SundayPickUpNotifyTime { get => _explicitNullValueSundayPickUpNotifyTime; set { _explicitNullValueSundayPickUpNotifyTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayPickUpNotifyTime"); else _explicitNullProperties?.Remove("SundayPickUpNotifyTime"); } }
+        public string SundayPickUpNotifyTime { get => _explicitNullValueSundayPickUpNotifyTime; set { _explicitNullValueSundayPickUpNotifyTime = value; AdditionalData?.Remove("SundayPickUpNotifyTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SundayPickUpNotifyTime"); else _explicitNullProperties?.Remove("SundayPickUpNotifyTime"); } }
         private string _explicitNullValueSundayPickUpNotifyTime = default!;
 #endif
         /// <summary>The WeekEndPickUpNotifyTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WeekEndPickUpNotifyTime { get => _explicitNullValueWeekEndPickUpNotifyTime; set { _explicitNullValueWeekEndPickUpNotifyTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekEndPickUpNotifyTime"); else _explicitNullProperties?.Remove("WeekEndPickUpNotifyTime"); } }
+        public string? WeekEndPickUpNotifyTime { get => _explicitNullValueWeekEndPickUpNotifyTime; set { _explicitNullValueWeekEndPickUpNotifyTime = value; AdditionalData?.Remove("WeekEndPickUpNotifyTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekEndPickUpNotifyTime"); else _explicitNullProperties?.Remove("WeekEndPickUpNotifyTime"); } }
         private string? _explicitNullValueWeekEndPickUpNotifyTime = default!;
 #nullable restore
 #else
-        public string WeekEndPickUpNotifyTime { get => _explicitNullValueWeekEndPickUpNotifyTime; set { _explicitNullValueWeekEndPickUpNotifyTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekEndPickUpNotifyTime"); else _explicitNullProperties?.Remove("WeekEndPickUpNotifyTime"); } }
+        public string WeekEndPickUpNotifyTime { get => _explicitNullValueWeekEndPickUpNotifyTime; set { _explicitNullValueWeekEndPickUpNotifyTime = value; AdditionalData?.Remove("WeekEndPickUpNotifyTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WeekEndPickUpNotifyTime"); else _explicitNullProperties?.Remove("WeekEndPickUpNotifyTime"); } }
         private string _explicitNullValueWeekEndPickUpNotifyTime = default!;
 #endif
         /// <summary>
@@ -150,7 +152,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "PickUpInfo", n => { PickUpInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo.CreateFromDiscriminatorValue); } },
                 { "PickUpNotifyTime", n => { PickUpNotifyTime = n.GetStringValue(); } },
                 { "PickUpPendingStatusIndicator", n => { PickUpPendingStatusIndicator = n.GetStringValue(); } },
-                { "PickUpTypeCode", n => { PickUpTypeCode = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode>(global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode.CreateFromDiscriminatorValue); } },
+                { "PickUpTypeCode", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePickUpTypeCode = default; _explicitNullProperties?.Remove("PickUpTypeCode"); AdditionalData["PickUpTypeCode"] = unknown; } else { PickUpTypeCode = parsed; AdditionalData.Remove("PickUpTypeCode"); } } },
                 { "Response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response.CreateFromDiscriminatorValue); } },
                 { "SundayPickUpNotifyTime", n => { SundayPickUpNotifyTime = n.GetStringValue(); } },
                 { "WeekEndPickUpNotifyTime", n => { WeekEndPickUpNotifyTime = n.GetStringValue(); } },
@@ -168,7 +170,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpInfo>("PickUpInfo", PickUpInfo);
             writer.WriteStringValue("PickUpNotifyTime", PickUpNotifyTime);
             writer.WriteStringValue("PickUpPendingStatusIndicator", PickUpPendingStatusIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode>("PickUpTypeCode", PickUpTypeCode);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ViewPickupInfoResponseV1ViewPickupInfoResponseAllOf2PickUpTypeCode>("PickUpTypeCode", PickUpTypeCode);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoResponseV1Response>("Response", Response);
             writer.WriteStringValue("SundayPickUpNotifyTime", SundayPickUpNotifyTime);
             writer.WriteStringValue("WeekEndPickUpNotifyTime", WeekEndPickUpNotifyTime);

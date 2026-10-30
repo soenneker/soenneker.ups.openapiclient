@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PrimeCode") is { } nullNodePrimeCode && nullNodePrimeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimeCode = null;
-            if (parseNode.GetChildNode("SubCode") is { } nullNodeSubCode && nullNodeSubCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubCode = null;
+            if (parseNode.GetChildNode("PrimeCode") is null) { _explicitNullValuePrimeCode = default!; _explicitNullProperties?.Remove("PrimeCode"); }
+            else if (parseNode.GetChildNode("PrimeCode") is { } nullNodePrimeCode && nullNodePrimeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimeCode = null;
+            if (parseNode.GetChildNode("SubCode") is null) { _explicitNullValueSubCode = default!; _explicitNullProperties?.Remove("SubCode"); }
+            else if (parseNode.GetChildNode("SubCode") is { } nullNodeSubCode && nullNodeSubCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Specifies the Commodity&apos;s NMFC prime code.  Required if NMFC Container is present.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimeCode { get => _explicitNullValuePrimeCode; set { _explicitNullValuePrimeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimeCode"); else _explicitNullProperties?.Remove("PrimeCode"); } }
+        public string? PrimeCode { get => _explicitNullValuePrimeCode; set { _explicitNullValuePrimeCode = value; AdditionalData?.Remove("PrimeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimeCode"); else _explicitNullProperties?.Remove("PrimeCode"); } }
         private string? _explicitNullValuePrimeCode = default!;
 #nullable restore
 #else
-        public string PrimeCode { get => _explicitNullValuePrimeCode; set { _explicitNullValuePrimeCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimeCode"); else _explicitNullProperties?.Remove("PrimeCode"); } }
+        public string PrimeCode { get => _explicitNullValuePrimeCode; set { _explicitNullValuePrimeCode = value; AdditionalData?.Remove("PrimeCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PrimeCode"); else _explicitNullProperties?.Remove("PrimeCode"); } }
         private string _explicitNullValuePrimeCode = default!;
 #endif
         /// <summary>Specifies the Commodity&apos;s NMFC sub code.  Needs to be provided when the SubCode associated with the PrimeCode is other than 00. UPS defaults the sub value to 00 if not provided. If provided the Sub Code should be associated with the PrimeCode of the NMFC.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubCode { get => _explicitNullValueSubCode; set { _explicitNullValueSubCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubCode"); else _explicitNullProperties?.Remove("SubCode"); } }
+        public string? SubCode { get => _explicitNullValueSubCode; set { _explicitNullValueSubCode = value; AdditionalData?.Remove("SubCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubCode"); else _explicitNullProperties?.Remove("SubCode"); } }
         private string? _explicitNullValueSubCode = default!;
 #nullable restore
 #else
-        public string SubCode { get => _explicitNullValueSubCode; set { _explicitNullValueSubCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubCode"); else _explicitNullProperties?.Remove("SubCode"); } }
+        public string SubCode { get => _explicitNullValueSubCode; set { _explicitNullValueSubCode = value; AdditionalData?.Remove("SubCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubCode"); else _explicitNullProperties?.Remove("SubCode"); } }
         private string _explicitNullValueSubCode = default!;
 #endif
         /// <summary>

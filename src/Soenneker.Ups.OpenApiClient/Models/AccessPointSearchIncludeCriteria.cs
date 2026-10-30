@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("MerchantAccountNumberList") is { } nullNodeMerchantAccountNumberList && nullNodeMerchantAccountNumberList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountNumberList = null;
-            if (parseNode.GetChildNode("SearchFilter") is { } nullNodeSearchFilter && nullNodeSearchFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchFilter = null;
-            if (parseNode.GetChildNode("ServiceOfferingList") is { } nullNodeServiceOfferingList && nullNodeServiceOfferingList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceOfferingList = null;
+            if (parseNode.GetChildNode("MerchantAccountNumberList") is null) { _explicitNullValueMerchantAccountNumberList = default!; _explicitNullProperties?.Remove("MerchantAccountNumberList"); }
+            else if (parseNode.GetChildNode("MerchantAccountNumberList") is { } nullNodeMerchantAccountNumberList && nullNodeMerchantAccountNumberList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantAccountNumberList = null;
+            if (parseNode.GetChildNode("SearchFilter") is null) { _explicitNullValueSearchFilter = default!; _explicitNullProperties?.Remove("SearchFilter"); }
+            else if (parseNode.GetChildNode("SearchFilter") is { } nullNodeSearchFilter && nullNodeSearchFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchFilter = null;
+            if (parseNode.GetChildNode("ServiceOfferingList") is null) { _explicitNullValueServiceOfferingList = default!; _explicitNullProperties?.Remove("ServiceOfferingList"); }
+            else if (parseNode.GetChildNode("ServiceOfferingList") is { } nullNodeServiceOfferingList && nullNodeServiceOfferingList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceOfferingList = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>This contains the list of Merchant Account numbers to be used for finding private network access points.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaMerchantAccountNumberList? MerchantAccountNumberList { get => _explicitNullValueMerchantAccountNumberList; set { _explicitNullValueMerchantAccountNumberList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MerchantAccountNumberList"); else _explicitNullProperties?.Remove("MerchantAccountNumberList"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaMerchantAccountNumberList? MerchantAccountNumberList { get => _explicitNullValueMerchantAccountNumberList; set { _explicitNullValueMerchantAccountNumberList = value; AdditionalData?.Remove("MerchantAccountNumberList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MerchantAccountNumberList"); else _explicitNullProperties?.Remove("MerchantAccountNumberList"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaMerchantAccountNumberList? _explicitNullValueMerchantAccountNumberList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaMerchantAccountNumberList MerchantAccountNumberList { get => _explicitNullValueMerchantAccountNumberList; set { _explicitNullValueMerchantAccountNumberList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MerchantAccountNumberList"); else _explicitNullProperties?.Remove("MerchantAccountNumberList"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaMerchantAccountNumberList MerchantAccountNumberList { get => _explicitNullValueMerchantAccountNumberList; set { _explicitNullValueMerchantAccountNumberList = value; AdditionalData?.Remove("MerchantAccountNumberList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MerchantAccountNumberList"); else _explicitNullProperties?.Remove("MerchantAccountNumberList"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaMerchantAccountNumberList _explicitNullValueMerchantAccountNumberList = default!;
 #endif
         /// <summary>Container to hold one or more search criteria for UPS Access Points that allow DCR, Shipping and ClickAndCollect access. Only applicable when the UPS access point candidate list is obtained in search by address or geocode search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter? SearchFilter { get => _explicitNullValueSearchFilter; set { _explicitNullValueSearchFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchFilter"); else _explicitNullProperties?.Remove("SearchFilter"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter? SearchFilter { get => _explicitNullValueSearchFilter; set { _explicitNullValueSearchFilter = value; AdditionalData?.Remove("SearchFilter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchFilter"); else _explicitNullProperties?.Remove("SearchFilter"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter? _explicitNullValueSearchFilter = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter SearchFilter { get => _explicitNullValueSearchFilter; set { _explicitNullValueSearchFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchFilter"); else _explicitNullProperties?.Remove("SearchFilter"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter SearchFilter { get => _explicitNullValueSearchFilter; set { _explicitNullValueSearchFilter = value; AdditionalData?.Remove("SearchFilter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchFilter"); else _explicitNullProperties?.Remove("SearchFilter"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaSearchFilter _explicitNullValueSearchFilter = default!;
 #endif
         /// <summary>Container to hold end point service offering List for UPS Access point. Applicable only when a UPS Access Point candidate list is obtained in search by address or geocode search.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaServiceOfferingList? ServiceOfferingList { get => _explicitNullValueServiceOfferingList; set { _explicitNullValueServiceOfferingList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOfferingList"); else _explicitNullProperties?.Remove("ServiceOfferingList"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaServiceOfferingList? ServiceOfferingList { get => _explicitNullValueServiceOfferingList; set { _explicitNullValueServiceOfferingList = value; AdditionalData?.Remove("ServiceOfferingList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOfferingList"); else _explicitNullProperties?.Remove("ServiceOfferingList"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaServiceOfferingList? _explicitNullValueServiceOfferingList = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaServiceOfferingList ServiceOfferingList { get => _explicitNullValueServiceOfferingList; set { _explicitNullValueServiceOfferingList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOfferingList"); else _explicitNullProperties?.Remove("ServiceOfferingList"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaServiceOfferingList ServiceOfferingList { get => _explicitNullValueServiceOfferingList; set { _explicitNullValueServiceOfferingList = value; AdditionalData?.Remove("ServiceOfferingList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceOfferingList"); else _explicitNullProperties?.Remove("ServiceOfferingList"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.IncludeCriteriaServiceOfferingList _explicitNullValueServiceOfferingList = default!;
 #endif
         /// <summary>

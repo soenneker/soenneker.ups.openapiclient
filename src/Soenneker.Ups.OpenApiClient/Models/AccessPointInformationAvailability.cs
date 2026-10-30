@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DCRAvailability") is { } nullNodeDCRAvailability && nullNodeDCRAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DCRAvailability = null;
-            if (parseNode.GetChildNode("ShippingAvailability") is { } nullNodeShippingAvailability && nullNodeShippingAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAvailability = null;
+            if (parseNode.GetChildNode("DCRAvailability") is null) { _explicitNullValueDCRAvailability = default!; _explicitNullProperties?.Remove("DCRAvailability"); }
+            else if (parseNode.GetChildNode("DCRAvailability") is { } nullNodeDCRAvailability && nullNodeDCRAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DCRAvailability = null;
+            if (parseNode.GetChildNode("ShippingAvailability") is null) { _explicitNullValueShippingAvailability = default!; _explicitNullProperties?.Remove("ShippingAvailability"); }
+            else if (parseNode.GetChildNode("ShippingAvailability") is { } nullNodeShippingAvailability && nullNodeShippingAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAvailability = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Holds status of DCR/DCO availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability? DCRAvailability { get => _explicitNullValueDCRAvailability; set { _explicitNullValueDCRAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCRAvailability"); else _explicitNullProperties?.Remove("DCRAvailability"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability? DCRAvailability { get => _explicitNullValueDCRAvailability; set { _explicitNullValueDCRAvailability = value; AdditionalData?.Remove("DCRAvailability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCRAvailability"); else _explicitNullProperties?.Remove("DCRAvailability"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability? _explicitNullValueDCRAvailability = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability DCRAvailability { get => _explicitNullValueDCRAvailability; set { _explicitNullValueDCRAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCRAvailability"); else _explicitNullProperties?.Remove("DCRAvailability"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability DCRAvailability { get => _explicitNullValueDCRAvailability; set { _explicitNullValueDCRAvailability = value; AdditionalData?.Remove("DCRAvailability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DCRAvailability"); else _explicitNullProperties?.Remove("DCRAvailability"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AvailabilityDcrAvailability _explicitNullValueDCRAvailability = default!;
 #endif
         /// <summary>Holds status of shipping availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability? ShippingAvailability { get => _explicitNullValueShippingAvailability; set { _explicitNullValueShippingAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingAvailability"); else _explicitNullProperties?.Remove("ShippingAvailability"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability? ShippingAvailability { get => _explicitNullValueShippingAvailability; set { _explicitNullValueShippingAvailability = value; AdditionalData?.Remove("ShippingAvailability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingAvailability"); else _explicitNullProperties?.Remove("ShippingAvailability"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability? _explicitNullValueShippingAvailability = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability ShippingAvailability { get => _explicitNullValueShippingAvailability; set { _explicitNullValueShippingAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingAvailability"); else _explicitNullProperties?.Remove("ShippingAvailability"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability ShippingAvailability { get => _explicitNullValueShippingAvailability; set { _explicitNullValueShippingAvailability = value; AdditionalData?.Remove("ShippingAvailability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShippingAvailability"); else _explicitNullProperties?.Remove("ShippingAvailability"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.AvailabilityShippingAvailability _explicitNullValueShippingAvailability = default!;
 #endif
         /// <summary>

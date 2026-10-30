@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
-            if (parseNode.GetChildNode("HandlingInstructions") is { } nullNodeHandlingInstructions && nullNodeHandlingInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingInstructions = null;
-            if (parseNode.GetChildNode("SensorID") is { } nullNodeSensorID && nullNodeSensorID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SensorID = null;
+            if (parseNode.GetChildNode("Category") is null) { _explicitNullValueCategory = default!; _explicitNullProperties?.Remove("Category"); }
+            else if (parseNode.GetChildNode("Category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("HandlingInstructions") is null) { _explicitNullValueHandlingInstructions = default!; _explicitNullProperties?.Remove("HandlingInstructions"); }
+            else if (parseNode.GetChildNode("HandlingInstructions") is { } nullNodeHandlingInstructions && nullNodeHandlingInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandlingInstructions = null;
+            if (parseNode.GetChildNode("SensorID") is null) { _explicitNullValueSensorID = default!; _explicitNullProperties?.Remove("SensorID"); }
+            else if (parseNode.GetChildNode("SensorID") is { } nullNodeSensorID && nullNodeSensorID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SensorID = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>UPS Premier Category.  Valid values are 01,02,03 UPS Premier Silver -01UPS Premier Gold - 02UPS Premier Platinum - 03</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Category"); else _explicitNullProperties?.Remove("Category"); } }
+        public string? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("Category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Category"); else _explicitNullProperties?.Remove("Category"); } }
         private string? _explicitNullValueCategory = default!;
 #nullable restore
 #else
-        public string Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Category"); else _explicitNullProperties?.Remove("Category"); } }
+        public string Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("Category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Category"); else _explicitNullProperties?.Remove("Category"); } }
         private string _explicitNullValueCategory = default!;
 #endif
         /// <summary>The HandlingInstructions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsPremierHandlingInstructions>? HandlingInstructions { get => _explicitNullValueHandlingInstructions; set { _explicitNullValueHandlingInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingInstructions"); else _explicitNullProperties?.Remove("HandlingInstructions"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsPremierHandlingInstructions>? HandlingInstructions { get => _explicitNullValueHandlingInstructions; set { _explicitNullValueHandlingInstructions = value; AdditionalData?.Remove("HandlingInstructions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingInstructions"); else _explicitNullProperties?.Remove("HandlingInstructions"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.UpsPremierHandlingInstructions>? _explicitNullValueHandlingInstructions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsPremierHandlingInstructions> HandlingInstructions { get => _explicitNullValueHandlingInstructions; set { _explicitNullValueHandlingInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingInstructions"); else _explicitNullProperties?.Remove("HandlingInstructions"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.UpsPremierHandlingInstructions> HandlingInstructions { get => _explicitNullValueHandlingInstructions; set { _explicitNullValueHandlingInstructions = value; AdditionalData?.Remove("HandlingInstructions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HandlingInstructions"); else _explicitNullProperties?.Remove("HandlingInstructions"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.UpsPremierHandlingInstructions> _explicitNullValueHandlingInstructions = default!;
 #endif
         /// <summary>SensorID is RFID for UPS Premier Silver. SensorID is MeshID for UPS Premier Gold or UPS Premier Platinum Package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SensorID { get => _explicitNullValueSensorID; set { _explicitNullValueSensorID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SensorID"); else _explicitNullProperties?.Remove("SensorID"); } }
+        public string? SensorID { get => _explicitNullValueSensorID; set { _explicitNullValueSensorID = value; AdditionalData?.Remove("SensorID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SensorID"); else _explicitNullProperties?.Remove("SensorID"); } }
         private string? _explicitNullValueSensorID = default!;
 #nullable restore
 #else
-        public string SensorID { get => _explicitNullValueSensorID; set { _explicitNullValueSensorID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SensorID"); else _explicitNullProperties?.Remove("SensorID"); } }
+        public string SensorID { get => _explicitNullValueSensorID; set { _explicitNullValueSensorID = value; AdditionalData?.Remove("SensorID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SensorID"); else _explicitNullProperties?.Remove("SensorID"); } }
         private string _explicitNullValueSensorID = default!;
 #endif
         /// <summary>

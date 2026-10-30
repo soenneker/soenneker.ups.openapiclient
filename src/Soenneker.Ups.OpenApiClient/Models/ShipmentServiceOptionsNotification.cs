@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("EMail") is { } nullNodeEMail && nullNodeEMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMail = null;
-            if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("NotificationCode") is { } nullNodeNotificationCode && nullNodeNotificationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationCode = null;
-            if (parseNode.GetChildNode("TextMessage") is { } nullNodeTextMessage && nullNodeTextMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextMessage = null;
-            if (parseNode.GetChildNode("VoiceMessage") is { } nullNodeVoiceMessage && nullNodeVoiceMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceMessage = null;
+            if (parseNode.GetChildNode("EMail") is null) { _explicitNullValueEMail = default!; _explicitNullProperties?.Remove("EMail"); }
+            else if (parseNode.GetChildNode("EMail") is { } nullNodeEMail && nullNodeEMail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EMail = null;
+            if (parseNode.GetChildNode("Locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("Locale"); }
+            else if (parseNode.GetChildNode("Locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("NotificationCode") is null) { _explicitNullValueNotificationCode = default!; _explicitNullProperties?.Remove("NotificationCode"); }
+            else if (parseNode.GetChildNode("NotificationCode") is { } nullNodeNotificationCode && nullNodeNotificationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationCode = null;
+            if (parseNode.GetChildNode("TextMessage") is null) { _explicitNullValueTextMessage = default!; _explicitNullProperties?.Remove("TextMessage"); }
+            else if (parseNode.GetChildNode("TextMessage") is { } nullNodeTextMessage && nullNodeTextMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextMessage = null;
+            if (parseNode.GetChildNode("VoiceMessage") is null) { _explicitNullValueVoiceMessage = default!; _explicitNullProperties?.Remove("VoiceMessage"); }
+            else if (parseNode.GetChildNode("VoiceMessage") is { } nullNodeVoiceMessage && nullNodeVoiceMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceMessage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for Email Information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationEMail? EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.NotificationEMail? EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; AdditionalData?.Remove("EMail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.NotificationEMail? _explicitNullValueEMail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationEMail EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.NotificationEMail EMail { get => _explicitNullValueEMail; set { _explicitNullValueEMail = value; AdditionalData?.Remove("EMail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EMail"); else _explicitNullProperties?.Remove("EMail"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.NotificationEMail _explicitNullValueEMail = default!;
 #endif
         /// <summary>This container is used for providing Language and dialect details for Alternate Delivery Location notifications and UAP Shipper notifications.  Valid only for Alternate Delivery Location notification and UAP Shipper notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.NotificationLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.NotificationLocale? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationLocale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.NotificationLocale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("Locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Locale"); else _explicitNullProperties?.Remove("Locale"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.NotificationLocale _explicitNullValueLocale = default!;
 #endif
         /// <summary>The type of notification requested.Note:- QVN Exception notification and return notification are not applicable to GFP.- QV In-transit and Return Notifications are only valid for ImportControl and Return shipment.- QV In-transit Notification is allowed for return shipments only.- QV Ship Notification is allowed for forward moving shipments only.Valid values:- 5 - QV In-transit Notification- 6 - QV Ship Notification- 7 - QV Exception Notification- 8 - QV Delivery Notification- 2 - Return Notification or Label Creation Notification- 012 - Alternate Delivery Location Notification- 013 - UAP Shipper Notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationCode { get => _explicitNullValueNotificationCode; set { _explicitNullValueNotificationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationCode"); else _explicitNullProperties?.Remove("NotificationCode"); } }
+        public string? NotificationCode { get => _explicitNullValueNotificationCode; set { _explicitNullValueNotificationCode = value; AdditionalData?.Remove("NotificationCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationCode"); else _explicitNullProperties?.Remove("NotificationCode"); } }
         private string? _explicitNullValueNotificationCode = default!;
 #nullable restore
 #else
-        public string NotificationCode { get => _explicitNullValueNotificationCode; set { _explicitNullValueNotificationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationCode"); else _explicitNullProperties?.Remove("NotificationCode"); } }
+        public string NotificationCode { get => _explicitNullValueNotificationCode; set { _explicitNullValueNotificationCode = value; AdditionalData?.Remove("NotificationCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NotificationCode"); else _explicitNullProperties?.Remove("NotificationCode"); } }
         private string _explicitNullValueNotificationCode = default!;
 #endif
         /// <summary>TextMessage container is used for specifying phone number for receiving text Alternate Delivery Location notification and UAP Shipper notification.  Valid only for Alternate Delivery Location notification and UAP Shipper notification. VoiceMessage phone number or TextMessage phone number or email address is required for ADL notification and UAP Shipper notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationTextMessage? TextMessage { get => _explicitNullValueTextMessage; set { _explicitNullValueTextMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextMessage"); else _explicitNullProperties?.Remove("TextMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.NotificationTextMessage? TextMessage { get => _explicitNullValueTextMessage; set { _explicitNullValueTextMessage = value; AdditionalData?.Remove("TextMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextMessage"); else _explicitNullProperties?.Remove("TextMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.NotificationTextMessage? _explicitNullValueTextMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationTextMessage TextMessage { get => _explicitNullValueTextMessage; set { _explicitNullValueTextMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextMessage"); else _explicitNullProperties?.Remove("TextMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.NotificationTextMessage TextMessage { get => _explicitNullValueTextMessage; set { _explicitNullValueTextMessage = value; AdditionalData?.Remove("TextMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TextMessage"); else _explicitNullProperties?.Remove("TextMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.NotificationTextMessage _explicitNullValueTextMessage = default!;
 #endif
         /// <summary>VoiceMessage container is used for specifying phone number for receiving voice Alternate Delivery Location notification and UAP Shipper notification.  Valid only for Alternate Delivery Location notification and UAP Shipper notification. VoiceMessage phone number or TextMessage phone number or email address is required for ADL notification and UAP Shipper notification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationVoiceMessage? VoiceMessage { get => _explicitNullValueVoiceMessage; set { _explicitNullValueVoiceMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceMessage"); else _explicitNullProperties?.Remove("VoiceMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.NotificationVoiceMessage? VoiceMessage { get => _explicitNullValueVoiceMessage; set { _explicitNullValueVoiceMessage = value; AdditionalData?.Remove("VoiceMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceMessage"); else _explicitNullProperties?.Remove("VoiceMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.NotificationVoiceMessage? _explicitNullValueVoiceMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.NotificationVoiceMessage VoiceMessage { get => _explicitNullValueVoiceMessage; set { _explicitNullValueVoiceMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceMessage"); else _explicitNullProperties?.Remove("VoiceMessage"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.NotificationVoiceMessage VoiceMessage { get => _explicitNullValueVoiceMessage; set { _explicitNullValueVoiceMessage = value; AdditionalData?.Remove("VoiceMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VoiceMessage"); else _explicitNullProperties?.Remove("VoiceMessage"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.NotificationVoiceMessage _explicitNullValueVoiceMessage = default!;
 #endif
         /// <summary>

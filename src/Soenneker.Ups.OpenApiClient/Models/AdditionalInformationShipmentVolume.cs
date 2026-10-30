@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("uomCode") is { } nullNodeUomCode && nullNodeUomCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UomCode = null;
-            if (parseNode.GetChildNode("uomLabel") is { } nullNodeUomLabel && nullNodeUomLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UomLabel = null;
-            if (parseNode.GetChildNode("volume") is { } nullNodeVolume && nullNodeVolume.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Volume = null;
+            if (parseNode.GetChildNode("uomCode") is null) { _explicitNullValueUomCode = default!; _explicitNullProperties?.Remove("uomCode"); }
+            else if (parseNode.GetChildNode("uomCode") is { } nullNodeUomCode && nullNodeUomCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UomCode = null;
+            if (parseNode.GetChildNode("uomLabel") is null) { _explicitNullValueUomLabel = default!; _explicitNullProperties?.Remove("uomLabel"); }
+            else if (parseNode.GetChildNode("uomLabel") is { } nullNodeUomLabel && nullNodeUomLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UomLabel = null;
+            if (parseNode.GetChildNode("volume") is null) { _explicitNullValueVolume = default!; _explicitNullProperties?.Remove("volume"); }
+            else if (parseNode.GetChildNode("volume") is { } nullNodeVolume && nullNodeVolume.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Volume = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The unit of measurement code (e.g., CBM, CFT).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UomCode { get => _explicitNullValueUomCode; set { _explicitNullValueUomCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uomCode"); else _explicitNullProperties?.Remove("uomCode"); } }
+        public string? UomCode { get => _explicitNullValueUomCode; set { _explicitNullValueUomCode = value; AdditionalData?.Remove("uomCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uomCode"); else _explicitNullProperties?.Remove("uomCode"); } }
         private string? _explicitNullValueUomCode = default!;
 #nullable restore
 #else
-        public string UomCode { get => _explicitNullValueUomCode; set { _explicitNullValueUomCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uomCode"); else _explicitNullProperties?.Remove("uomCode"); } }
+        public string UomCode { get => _explicitNullValueUomCode; set { _explicitNullValueUomCode = value; AdditionalData?.Remove("uomCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uomCode"); else _explicitNullProperties?.Remove("uomCode"); } }
         private string _explicitNullValueUomCode = default!;
 #endif
         /// <summary>The descriptive label for the unit of measurement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UomLabel { get => _explicitNullValueUomLabel; set { _explicitNullValueUomLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uomLabel"); else _explicitNullProperties?.Remove("uomLabel"); } }
+        public string? UomLabel { get => _explicitNullValueUomLabel; set { _explicitNullValueUomLabel = value; AdditionalData?.Remove("uomLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uomLabel"); else _explicitNullProperties?.Remove("uomLabel"); } }
         private string? _explicitNullValueUomLabel = default!;
 #nullable restore
 #else
-        public string UomLabel { get => _explicitNullValueUomLabel; set { _explicitNullValueUomLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uomLabel"); else _explicitNullProperties?.Remove("uomLabel"); } }
+        public string UomLabel { get => _explicitNullValueUomLabel; set { _explicitNullValueUomLabel = value; AdditionalData?.Remove("uomLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uomLabel"); else _explicitNullProperties?.Remove("uomLabel"); } }
         private string _explicitNullValueUomLabel = default!;
 #endif
         /// <summary>The volume value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Volume { get => _explicitNullValueVolume; set { _explicitNullValueVolume = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volume"); else _explicitNullProperties?.Remove("volume"); } }
+        public string? Volume { get => _explicitNullValueVolume; set { _explicitNullValueVolume = value; AdditionalData?.Remove("volume"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volume"); else _explicitNullProperties?.Remove("volume"); } }
         private string? _explicitNullValueVolume = default!;
 #nullable restore
 #else
-        public string Volume { get => _explicitNullValueVolume; set { _explicitNullValueVolume = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volume"); else _explicitNullProperties?.Remove("volume"); } }
+        public string Volume { get => _explicitNullValueVolume; set { _explicitNullValueVolume = value; AdditionalData?.Remove("volume"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volume"); else _explicitNullProperties?.Remove("volume"); } }
         private string _explicitNullValueVolume = default!;
 #endif
         /// <summary>

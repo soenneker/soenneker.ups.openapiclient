@@ -18,11 +18,16 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("deliveryPhoto") is { } nullNodeDeliveryPhoto && nullNodeDeliveryPhoto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryPhoto = null;
-            if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
-            if (parseNode.GetChildNode("pod") is { } nullNodePod && nullNodePod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pod = null;
-            if (parseNode.GetChildNode("receivedBy") is { } nullNodeReceivedBy && nullNodeReceivedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedBy = null;
-            if (parseNode.GetChildNode("signature") is { } nullNodeSignature && nullNodeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signature = null;
+            if (parseNode.GetChildNode("deliveryPhoto") is null) { _explicitNullValueDeliveryPhoto = default!; _explicitNullProperties?.Remove("deliveryPhoto"); }
+            else if (parseNode.GetChildNode("deliveryPhoto") is { } nullNodeDeliveryPhoto && nullNodeDeliveryPhoto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryPhoto = null;
+            if (parseNode.GetChildNode("location") is null) { _explicitNullValueLocation = default!; _explicitNullProperties?.Remove("location"); }
+            else if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
+            if (parseNode.GetChildNode("pod") is null) { _explicitNullValuePod = default!; _explicitNullProperties?.Remove("pod"); }
+            else if (parseNode.GetChildNode("pod") is { } nullNodePod && nullNodePod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pod = null;
+            if (parseNode.GetChildNode("receivedBy") is null) { _explicitNullValueReceivedBy = default!; _explicitNullProperties?.Remove("receivedBy"); }
+            else if (parseNode.GetChildNode("receivedBy") is { } nullNodeReceivedBy && nullNodeReceivedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivedBy = null;
+            if (parseNode.GetChildNode("signature") is null) { _explicitNullValueSignature = default!; _explicitNullProperties?.Remove("signature"); }
+            else if (parseNode.GetChildNode("signature") is { } nullNodeSignature && nullNodeSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signature = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container with all information related to the delivery photo of the package.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto? DeliveryPhoto { get => _explicitNullValueDeliveryPhoto; set { _explicitNullValueDeliveryPhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryPhoto"); else _explicitNullProperties?.Remove("deliveryPhoto"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto? DeliveryPhoto { get => _explicitNullValueDeliveryPhoto; set { _explicitNullValueDeliveryPhoto = value; AdditionalData?.Remove("deliveryPhoto"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryPhoto"); else _explicitNullProperties?.Remove("deliveryPhoto"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto? _explicitNullValueDeliveryPhoto = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto DeliveryPhoto { get => _explicitNullValueDeliveryPhoto; set { _explicitNullValueDeliveryPhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryPhoto"); else _explicitNullProperties?.Remove("deliveryPhoto"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto DeliveryPhoto { get => _explicitNullValueDeliveryPhoto; set { _explicitNullValueDeliveryPhoto = value; AdditionalData?.Remove("deliveryPhoto"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deliveryPhoto"); else _explicitNullProperties?.Remove("deliveryPhoto"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryPhoto _explicitNullValueDeliveryPhoto = default!;
 #endif
         /// <summary>The location where the package was dropped off. For example: &apos;Front Door&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        public string? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
         private string? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public string Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        public string Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
         private string _explicitNullValueLocation = default!;
 #endif
         /// <summary>Container which contains Proof of Delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod? Pod { get => _explicitNullValuePod; set { _explicitNullValuePod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pod"); else _explicitNullProperties?.Remove("pod"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod? Pod { get => _explicitNullValuePod; set { _explicitNullValuePod = value; AdditionalData?.Remove("pod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pod"); else _explicitNullProperties?.Remove("pod"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod? _explicitNullValuePod = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod Pod { get => _explicitNullValuePod; set { _explicitNullValuePod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pod"); else _explicitNullProperties?.Remove("pod"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod Pod { get => _explicitNullValuePod; set { _explicitNullValuePod = value; AdditionalData?.Remove("pod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pod"); else _explicitNullProperties?.Remove("pod"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInformationPod _explicitNullValuePod = default!;
 #endif
         /// <summary>The individual who took possession of the package at delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReceivedBy { get => _explicitNullValueReceivedBy; set { _explicitNullValueReceivedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receivedBy"); else _explicitNullProperties?.Remove("receivedBy"); } }
+        public string? ReceivedBy { get => _explicitNullValueReceivedBy; set { _explicitNullValueReceivedBy = value; AdditionalData?.Remove("receivedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receivedBy"); else _explicitNullProperties?.Remove("receivedBy"); } }
         private string? _explicitNullValueReceivedBy = default!;
 #nullable restore
 #else
-        public string ReceivedBy { get => _explicitNullValueReceivedBy; set { _explicitNullValueReceivedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receivedBy"); else _explicitNullProperties?.Remove("receivedBy"); } }
+        public string ReceivedBy { get => _explicitNullValueReceivedBy; set { _explicitNullValueReceivedBy = value; AdditionalData?.Remove("receivedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receivedBy"); else _explicitNullProperties?.Remove("receivedBy"); } }
         private string _explicitNullValueReceivedBy = default!;
 #endif
         /// <summary>Container with all the signature information associated to the package being delivered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Signature? Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.Signature? Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.Signature? _explicitNullValueSignature = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Signature Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.Signature Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.Signature _explicitNullValueSignature = default!;
 #endif
         /// <summary>

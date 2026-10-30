@@ -19,21 +19,9 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1? SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2? SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 { get; set; }
-#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -44,6 +32,14 @@ namespace Soenneker.Ups.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDay();
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue0 && ("01".Equals(unionEnumValue0.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1>() is global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 smartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1Value)
+            {
+                result.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 = smartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1Value;
+            }
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString unionEnumValue1 && ("02".Equals(unionEnumValue1.GetValue(), global::System.StringComparison.OrdinalIgnoreCase)) && parseNode.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2>() is global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 smartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2Value)
+            {
+                result.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 = smartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2Value;
+            }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
             if (result.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 == null && result.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 == null) result.UnrecognizedValue = unionPayload;
@@ -55,14 +51,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 != null)
-            {
-                return SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1.GetFieldDeserializers();
-            }
-            else if(SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 != null)
-            {
-                return SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2.GetFieldDeserializers();
-            }
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -77,13 +67,11 @@ return result;
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 != null)
             {
-                if (SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1>(null, SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1>(null, SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf1);
             }
             else if(SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 != null)
             {
-                if (SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2>(null, SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2);
+                writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2>(null, SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItemWeekEndPickUpDayOneOf2);
             }
         }
     }

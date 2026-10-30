@@ -18,17 +18,19 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("airService") is { } nullNodeAirService && nullNodeAirService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AirService = null;
-            if (parseNode.GetChildNode("groundService") is { } nullNodeGroundService && nullNodeGroundService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroundService = null;
+            if (parseNode.GetChildNode("airService") is null) { _explicitNullValueAirService = default!; _explicitNullProperties?.Remove("airService"); }
+            else if (parseNode.GetChildNode("airService") is { } nullNodeAirService && nullNodeAirService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AirService = null;
+            if (parseNode.GetChildNode("groundService") is null) { _explicitNullValueGroundService = default!; _explicitNullProperties?.Remove("groundService"); }
+            else if (parseNode.GetChildNode("groundService") is { } nullNodeGroundService && nullNodeGroundService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroundService = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of packages for air service. If groundService is 0, this must be at least 1.</summary>
-        public int? AirService { get => _explicitNullValueAirService; set { _explicitNullValueAirService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airService"); else _explicitNullProperties?.Remove("airService"); } }
+        public int? AirService { get => _explicitNullValueAirService; set { _explicitNullValueAirService = value; AdditionalData?.Remove("airService"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("airService"); else _explicitNullProperties?.Remove("airService"); } }
         private int? _explicitNullValueAirService = default!;
         /// <summary>Number of packages for ground service. If airService is 0, this must be at least 1.</summary>
-        public int? GroundService { get => _explicitNullValueGroundService; set { _explicitNullValueGroundService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groundService"); else _explicitNullProperties?.Remove("groundService"); } }
+        public int? GroundService { get => _explicitNullValueGroundService; set { _explicitNullValueGroundService = value; AdditionalData?.Remove("groundService"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groundService"); else _explicitNullProperties?.Remove("groundService"); } }
         private int? _explicitNullValueGroundService = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsTransportationService"/> and sets the default values.

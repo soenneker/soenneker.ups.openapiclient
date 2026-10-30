@@ -18,15 +18,24 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Arrival") is { } nullNodeArrival && nullNodeArrival.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arrival = null;
-            if (parseNode.GetChildNode("BusinessDaysInTransit") is { } nullNodeBusinessDaysInTransit && nullNodeBusinessDaysInTransit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessDaysInTransit = null;
-            if (parseNode.GetChildNode("CustomerCenterCutoff") is { } nullNodeCustomerCenterCutoff && nullNodeCustomerCenterCutoff.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerCenterCutoff = null;
-            if (parseNode.GetChildNode("DayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
-            if (parseNode.GetChildNode("DelayCount") is { } nullNodeDelayCount && nullNodeDelayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayCount = null;
-            if (parseNode.GetChildNode("HolidayCount") is { } nullNodeHolidayCount && nullNodeHolidayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HolidayCount = null;
-            if (parseNode.GetChildNode("Pickup") is { } nullNodePickup && nullNodePickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pickup = null;
-            if (parseNode.GetChildNode("RestDays") is { } nullNodeRestDays && nullNodeRestDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestDays = null;
-            if (parseNode.GetChildNode("TotalTransitDays") is { } nullNodeTotalTransitDays && nullNodeTotalTransitDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTransitDays = null;
+            if (parseNode.GetChildNode("Arrival") is null) { _explicitNullValueArrival = default!; _explicitNullProperties?.Remove("Arrival"); }
+            else if (parseNode.GetChildNode("Arrival") is { } nullNodeArrival && nullNodeArrival.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arrival = null;
+            if (parseNode.GetChildNode("BusinessDaysInTransit") is null) { _explicitNullValueBusinessDaysInTransit = default!; _explicitNullProperties?.Remove("BusinessDaysInTransit"); }
+            else if (parseNode.GetChildNode("BusinessDaysInTransit") is { } nullNodeBusinessDaysInTransit && nullNodeBusinessDaysInTransit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessDaysInTransit = null;
+            if (parseNode.GetChildNode("CustomerCenterCutoff") is null) { _explicitNullValueCustomerCenterCutoff = default!; _explicitNullProperties?.Remove("CustomerCenterCutoff"); }
+            else if (parseNode.GetChildNode("CustomerCenterCutoff") is { } nullNodeCustomerCenterCutoff && nullNodeCustomerCenterCutoff.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerCenterCutoff = null;
+            if (parseNode.GetChildNode("DayOfWeek") is null) { _explicitNullValueDayOfWeek = default!; _explicitNullProperties?.Remove("DayOfWeek"); }
+            else if (parseNode.GetChildNode("DayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
+            if (parseNode.GetChildNode("DelayCount") is null) { _explicitNullValueDelayCount = default!; _explicitNullProperties?.Remove("DelayCount"); }
+            else if (parseNode.GetChildNode("DelayCount") is { } nullNodeDelayCount && nullNodeDelayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayCount = null;
+            if (parseNode.GetChildNode("HolidayCount") is null) { _explicitNullValueHolidayCount = default!; _explicitNullProperties?.Remove("HolidayCount"); }
+            else if (parseNode.GetChildNode("HolidayCount") is { } nullNodeHolidayCount && nullNodeHolidayCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HolidayCount = null;
+            if (parseNode.GetChildNode("Pickup") is null) { _explicitNullValuePickup = default!; _explicitNullProperties?.Remove("Pickup"); }
+            else if (parseNode.GetChildNode("Pickup") is { } nullNodePickup && nullNodePickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pickup = null;
+            if (parseNode.GetChildNode("RestDays") is null) { _explicitNullValueRestDays = default!; _explicitNullProperties?.Remove("RestDays"); }
+            else if (parseNode.GetChildNode("RestDays") is { } nullNodeRestDays && nullNodeRestDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestDays = null;
+            if (parseNode.GetChildNode("TotalTransitDays") is null) { _explicitNullValueTotalTransitDays = default!; _explicitNullProperties?.Remove("TotalTransitDays"); }
+            else if (parseNode.GetChildNode("TotalTransitDays") is { } nullNodeTotalTransitDays && nullNodeTotalTransitDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTransitDays = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,91 +43,91 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Container for the Time-In-Transit arrival information by service. This is the most accurate delivery information available via the Rating API and will reflect changes in delivery schedules due to peak business seasons or holidays.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalArrival? Arrival { get => _explicitNullValueArrival; set { _explicitNullValueArrival = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Arrival"); else _explicitNullProperties?.Remove("Arrival"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalArrival? Arrival { get => _explicitNullValueArrival; set { _explicitNullValueArrival = value; AdditionalData?.Remove("Arrival"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Arrival"); else _explicitNullProperties?.Remove("Arrival"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalArrival? _explicitNullValueArrival = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalArrival Arrival { get => _explicitNullValueArrival; set { _explicitNullValueArrival = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Arrival"); else _explicitNullProperties?.Remove("Arrival"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalArrival Arrival { get => _explicitNullValueArrival; set { _explicitNullValueArrival = value; AdditionalData?.Remove("Arrival"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Arrival"); else _explicitNullProperties?.Remove("Arrival"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalArrival _explicitNullValueArrival = default!;
 #endif
         /// <summary>Number of business days from Origin to Destination Locations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
+        public string? BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; AdditionalData?.Remove("BusinessDaysInTransit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
         private string? _explicitNullValueBusinessDaysInTransit = default!;
 #nullable restore
 #else
-        public string BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
+        public string BusinessDaysInTransit { get => _explicitNullValueBusinessDaysInTransit; set { _explicitNullValueBusinessDaysInTransit = value; AdditionalData?.Remove("BusinessDaysInTransit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BusinessDaysInTransit"); else _explicitNullProperties?.Remove("BusinessDaysInTransit"); } }
         private string _explicitNullValueBusinessDaysInTransit = default!;
 #endif
         /// <summary>Customer Service call time. Returned for domestic as well as international requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerCenterCutoff { get => _explicitNullValueCustomerCenterCutoff; set { _explicitNullValueCustomerCenterCutoff = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerCenterCutoff"); else _explicitNullProperties?.Remove("CustomerCenterCutoff"); } }
+        public string? CustomerCenterCutoff { get => _explicitNullValueCustomerCenterCutoff; set { _explicitNullValueCustomerCenterCutoff = value; AdditionalData?.Remove("CustomerCenterCutoff"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerCenterCutoff"); else _explicitNullProperties?.Remove("CustomerCenterCutoff"); } }
         private string? _explicitNullValueCustomerCenterCutoff = default!;
 #nullable restore
 #else
-        public string CustomerCenterCutoff { get => _explicitNullValueCustomerCenterCutoff; set { _explicitNullValueCustomerCenterCutoff = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerCenterCutoff"); else _explicitNullProperties?.Remove("CustomerCenterCutoff"); } }
+        public string CustomerCenterCutoff { get => _explicitNullValueCustomerCenterCutoff; set { _explicitNullValueCustomerCenterCutoff = value; AdditionalData?.Remove("CustomerCenterCutoff"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomerCenterCutoff"); else _explicitNullProperties?.Remove("CustomerCenterCutoff"); } }
         private string _explicitNullValueCustomerCenterCutoff = default!;
 #endif
         /// <summary>Day of week for arrival. Valid values are: MONTUEWEDTHUFRISAT</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
+        public string? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("DayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
         private string? _explicitNullValueDayOfWeek = default!;
 #nullable restore
 #else
-        public string DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
+        public string DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("DayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DayOfWeek"); else _explicitNullProperties?.Remove("DayOfWeek"); } }
         private string _explicitNullValueDayOfWeek = default!;
 #endif
         /// <summary>Number of days delayed at customs. Returned for International requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DelayCount { get => _explicitNullValueDelayCount; set { _explicitNullValueDelayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DelayCount"); else _explicitNullProperties?.Remove("DelayCount"); } }
+        public string? DelayCount { get => _explicitNullValueDelayCount; set { _explicitNullValueDelayCount = value; AdditionalData?.Remove("DelayCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DelayCount"); else _explicitNullProperties?.Remove("DelayCount"); } }
         private string? _explicitNullValueDelayCount = default!;
 #nullable restore
 #else
-        public string DelayCount { get => _explicitNullValueDelayCount; set { _explicitNullValueDelayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DelayCount"); else _explicitNullProperties?.Remove("DelayCount"); } }
+        public string DelayCount { get => _explicitNullValueDelayCount; set { _explicitNullValueDelayCount = value; AdditionalData?.Remove("DelayCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DelayCount"); else _explicitNullProperties?.Remove("DelayCount"); } }
         private string _explicitNullValueDelayCount = default!;
 #endif
         /// <summary>Number of National holidays during transit. Returned for International requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HolidayCount { get => _explicitNullValueHolidayCount; set { _explicitNullValueHolidayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HolidayCount"); else _explicitNullProperties?.Remove("HolidayCount"); } }
+        public string? HolidayCount { get => _explicitNullValueHolidayCount; set { _explicitNullValueHolidayCount = value; AdditionalData?.Remove("HolidayCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HolidayCount"); else _explicitNullProperties?.Remove("HolidayCount"); } }
         private string? _explicitNullValueHolidayCount = default!;
 #nullable restore
 #else
-        public string HolidayCount { get => _explicitNullValueHolidayCount; set { _explicitNullValueHolidayCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HolidayCount"); else _explicitNullProperties?.Remove("HolidayCount"); } }
+        public string HolidayCount { get => _explicitNullValueHolidayCount; set { _explicitNullValueHolidayCount = value; AdditionalData?.Remove("HolidayCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HolidayCount"); else _explicitNullProperties?.Remove("HolidayCount"); } }
         private string _explicitNullValueHolidayCount = default!;
 #endif
         /// <summary>The date and pick up time container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalPickup? Pickup { get => _explicitNullValuePickup; set { _explicitNullValuePickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pickup"); else _explicitNullProperties?.Remove("Pickup"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalPickup? Pickup { get => _explicitNullValuePickup; set { _explicitNullValuePickup = value; AdditionalData?.Remove("Pickup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pickup"); else _explicitNullProperties?.Remove("Pickup"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalPickup? _explicitNullValuePickup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalPickup Pickup { get => _explicitNullValuePickup; set { _explicitNullValuePickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pickup"); else _explicitNullProperties?.Remove("Pickup"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalPickup Pickup { get => _explicitNullValuePickup; set { _explicitNullValuePickup = value; AdditionalData?.Remove("Pickup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Pickup"); else _explicitNullProperties?.Remove("Pickup"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalPickup _explicitNullValuePickup = default!;
 #endif
         /// <summary>Number of rest days, i.e. non movement. Returned for International requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RestDays { get => _explicitNullValueRestDays; set { _explicitNullValueRestDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RestDays"); else _explicitNullProperties?.Remove("RestDays"); } }
+        public string? RestDays { get => _explicitNullValueRestDays; set { _explicitNullValueRestDays = value; AdditionalData?.Remove("RestDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RestDays"); else _explicitNullProperties?.Remove("RestDays"); } }
         private string? _explicitNullValueRestDays = default!;
 #nullable restore
 #else
-        public string RestDays { get => _explicitNullValueRestDays; set { _explicitNullValueRestDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RestDays"); else _explicitNullProperties?.Remove("RestDays"); } }
+        public string RestDays { get => _explicitNullValueRestDays; set { _explicitNullValueRestDays = value; AdditionalData?.Remove("RestDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RestDays"); else _explicitNullProperties?.Remove("RestDays"); } }
         private string _explicitNullValueRestDays = default!;
 #endif
         /// <summary>The total number of days in transit from one location to the next. Returned for International requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalTransitDays { get => _explicitNullValueTotalTransitDays; set { _explicitNullValueTotalTransitDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTransitDays"); else _explicitNullProperties?.Remove("TotalTransitDays"); } }
+        public string? TotalTransitDays { get => _explicitNullValueTotalTransitDays; set { _explicitNullValueTotalTransitDays = value; AdditionalData?.Remove("TotalTransitDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTransitDays"); else _explicitNullProperties?.Remove("TotalTransitDays"); } }
         private string? _explicitNullValueTotalTransitDays = default!;
 #nullable restore
 #else
-        public string TotalTransitDays { get => _explicitNullValueTotalTransitDays; set { _explicitNullValueTotalTransitDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTransitDays"); else _explicitNullProperties?.Remove("TotalTransitDays"); } }
+        public string TotalTransitDays { get => _explicitNullValueTotalTransitDays; set { _explicitNullValueTotalTransitDays = value; AdditionalData?.Remove("TotalTransitDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTransitDays"); else _explicitNullProperties?.Remove("TotalTransitDays"); } }
         private string _explicitNullValueTotalTransitDays = default!;
 #endif
         /// <summary>

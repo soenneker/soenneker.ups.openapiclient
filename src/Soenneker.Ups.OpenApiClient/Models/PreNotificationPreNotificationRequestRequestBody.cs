@@ -18,7 +18,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PreNotificationRequest") is { } nullNodePreNotificationRequest && nullNodePreNotificationRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreNotificationRequest = null;
+            if (parseNode.GetChildNode("PreNotificationRequest") is null) { _explicitNullValuePreNotificationRequest = default!; _explicitNullProperties?.Remove("PreNotificationRequest"); }
+            else if (parseNode.GetChildNode("PreNotificationRequest") is { } nullNodePreNotificationRequest && nullNodePreNotificationRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreNotificationRequest = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Pre-Notification Request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequest? PreNotificationRequest { get => _explicitNullValuePreNotificationRequest; set { _explicitNullValuePreNotificationRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreNotificationRequest"); else _explicitNullProperties?.Remove("PreNotificationRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequest? PreNotificationRequest { get => _explicitNullValuePreNotificationRequest; set { _explicitNullValuePreNotificationRequest = value; AdditionalData?.Remove("PreNotificationRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreNotificationRequest"); else _explicitNullProperties?.Remove("PreNotificationRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequest? _explicitNullValuePreNotificationRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequest PreNotificationRequest { get => _explicitNullValuePreNotificationRequest; set { _explicitNullValuePreNotificationRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreNotificationRequest"); else _explicitNullProperties?.Remove("PreNotificationRequest"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequest PreNotificationRequest { get => _explicitNullValuePreNotificationRequest; set { _explicitNullValuePreNotificationRequest = value; AdditionalData?.Remove("PreNotificationRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreNotificationRequest"); else _explicitNullProperties?.Remove("PreNotificationRequest"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PreNotificationPreNotificationRequest _explicitNullValuePreNotificationRequest = default!;
 #endif
         /// <summary>

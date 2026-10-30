@@ -17,7 +17,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("interceptOption") is { } nullNodeInterceptOption && nullNodeInterceptOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptOption = null;
+            if (parseNode.GetChildNode("interceptOption") is null) { _explicitNullValueInterceptOption = default!; _explicitNullProperties?.Remove("interceptOption"); }
+            else if (parseNode.GetChildNode("interceptOption") is { } nullNodeInterceptOption && nullNodeInterceptOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InterceptOption = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Intercept option to be mentioned to find the charges</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOption? InterceptOption { get => _explicitNullValueInterceptOption; set { _explicitNullValueInterceptOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptOption"); else _explicitNullProperties?.Remove("interceptOption"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOption? InterceptOption { get => _explicitNullValueInterceptOption; set { _explicitNullValueInterceptOption = value; AdditionalData?.Remove("interceptOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptOption"); else _explicitNullProperties?.Remove("interceptOption"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOption? _explicitNullValueInterceptOption = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOption InterceptOption { get => _explicitNullValueInterceptOption; set { _explicitNullValueInterceptOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptOption"); else _explicitNullProperties?.Remove("interceptOption"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOption InterceptOption { get => _explicitNullValueInterceptOption; set { _explicitNullValueInterceptOption = value; AdditionalData?.Remove("interceptOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interceptOption"); else _explicitNullProperties?.Remove("interceptOption"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptChargesRequestV2RatingRequestItemTrackInfoInterceptOption _explicitNullValueInterceptOption = default!;
 #endif
         /// <summary>

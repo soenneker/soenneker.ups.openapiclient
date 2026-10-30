@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AgentRole") is { } nullNodeAgentRole && nullNodeAgentRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentRole = null;
-            if (parseNode.GetChildNode("TaxIdentificationNumber") is { } nullNodeTaxIdentificationNumber && nullNodeTaxIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdentificationNumber = null;
+            if (parseNode.GetChildNode("AgentRole") is null) { _explicitNullValueAgentRole = default!; _explicitNullProperties?.Remove("AgentRole"); }
+            else if (parseNode.GetChildNode("AgentRole") is { } nullNodeAgentRole && nullNodeAgentRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentRole = null;
+            if (parseNode.GetChildNode("TaxIdentificationNumber") is null) { _explicitNullValueTaxIdentificationNumber = default!; _explicitNullProperties?.Remove("TaxIdentificationNumber"); }
+            else if (parseNode.GetChildNode("TaxIdentificationNumber") is { } nullNodeTaxIdentificationNumber && nullNodeTaxIdentificationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxIdentificationNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>When the value passed to the AgentRole parameter is 30, the value passed to the IDNumberTypeCode parameter must be 1002, 1005 or 0005. (SHIP_FROM=20, CONSIGNEE=30)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentRole { get => _explicitNullValueAgentRole; set { _explicitNullValueAgentRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AgentRole"); else _explicitNullProperties?.Remove("AgentRole"); } }
+        public string? AgentRole { get => _explicitNullValueAgentRole; set { _explicitNullValueAgentRole = value; AdditionalData?.Remove("AgentRole"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AgentRole"); else _explicitNullProperties?.Remove("AgentRole"); } }
         private string? _explicitNullValueAgentRole = default!;
 #nullable restore
 #else
-        public string AgentRole { get => _explicitNullValueAgentRole; set { _explicitNullValueAgentRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AgentRole"); else _explicitNullProperties?.Remove("AgentRole"); } }
+        public string AgentRole { get => _explicitNullValueAgentRole; set { _explicitNullValueAgentRole = value; AdditionalData?.Remove("AgentRole"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AgentRole"); else _explicitNullProperties?.Remove("AgentRole"); } }
         private string _explicitNullValueAgentRole = default!;
 #endif
         /// <summary>The TaxIdentificationNumber property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber>? TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber>? TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; AdditionalData?.Remove("TaxIdentificationNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber>? _explicitNullValueTaxIdentificationNumber = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber> TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
+        public List<global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber> TaxIdentificationNumber { get => _explicitNullValueTaxIdentificationNumber; set { _explicitNullValueTaxIdentificationNumber = value; AdditionalData?.Remove("TaxIdentificationNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxIdentificationNumber"); else _explicitNullProperties?.Remove("TaxIdentificationNumber"); } }
         private List<global::Soenneker.Ups.OpenApiClient.Models.AgentTaxIdentificationNumberTaxIdentificationNumber> _explicitNullValueTaxIdentificationNumber = default!;
 #endif
         /// <summary>

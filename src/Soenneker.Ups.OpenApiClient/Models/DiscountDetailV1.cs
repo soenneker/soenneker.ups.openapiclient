@@ -17,47 +17,53 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
-            if (parseNode.GetChildNode("discountAdjustedFor") is { } nullNodeDiscountAdjustedFor && nullNodeDiscountAdjustedFor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAdjustedFor = null;
-            if (parseNode.GetChildNode("discountPercent") is { } nullNodeDiscountPercent && nullNodeDiscountPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountPercent = null;
-            if (parseNode.GetChildNode("discountValidTill") is { } nullNodeDiscountValidTill && nullNodeDiscountValidTill.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountValidTill = null;
-            if (parseNode.GetChildNode("eligibleDiscount") is { } nullNodeEligibleDiscount && nullNodeEligibleDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleDiscount = null;
-            if (parseNode.GetChildNode("eligibleDiscountPercent") is { } nullNodeEligibleDiscountPercent && nullNodeEligibleDiscountPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleDiscountPercent = null;
+            if (parseNode.GetChildNode("discount") is null) { _explicitNullValueDiscount = default!; _explicitNullProperties?.Remove("discount"); }
+            else if (parseNode.GetChildNode("discount") is { } nullNodeDiscount && nullNodeDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discount = null;
+            if (parseNode.GetChildNode("discountAdjustedFor") is null) { _explicitNullValueDiscountAdjustedFor = default!; _explicitNullProperties?.Remove("discountAdjustedFor"); }
+            else if (parseNode.GetChildNode("discountAdjustedFor") is { } nullNodeDiscountAdjustedFor && nullNodeDiscountAdjustedFor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountAdjustedFor = null;
+            if (parseNode.GetChildNode("discountPercent") is null) { _explicitNullValueDiscountPercent = default!; _explicitNullProperties?.Remove("discountPercent"); }
+            else if (parseNode.GetChildNode("discountPercent") is { } nullNodeDiscountPercent && nullNodeDiscountPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountPercent = null;
+            if (parseNode.GetChildNode("discountValidTill") is null) { _explicitNullValueDiscountValidTill = default!; _explicitNullProperties?.Remove("discountValidTill"); }
+            else if (parseNode.GetChildNode("discountValidTill") is { } nullNodeDiscountValidTill && nullNodeDiscountValidTill.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscountValidTill = null;
+            if (parseNode.GetChildNode("eligibleDiscount") is null) { _explicitNullValueEligibleDiscount = default!; _explicitNullProperties?.Remove("eligibleDiscount"); }
+            else if (parseNode.GetChildNode("eligibleDiscount") is { } nullNodeEligibleDiscount && nullNodeEligibleDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleDiscount = null;
+            if (parseNode.GetChildNode("eligibleDiscountPercent") is null) { _explicitNullValueEligibleDiscountPercent = default!; _explicitNullProperties?.Remove("eligibleDiscountPercent"); }
+            else if (parseNode.GetChildNode("eligibleDiscountPercent") is { } nullNodeEligibleDiscountPercent && nullNodeEligibleDiscountPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleDiscountPercent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The discount property</summary>
-        public double? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
+        public double? Discount { get => _explicitNullValueDiscount; set { _explicitNullValueDiscount = value; AdditionalData?.Remove("discount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discount"); else _explicitNullProperties?.Remove("discount"); } }
         private double? _explicitNullValueDiscount = default!;
         /// <summary>The discountAdjustedFor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscountAdjustedFor { get => _explicitNullValueDiscountAdjustedFor; set { _explicitNullValueDiscountAdjustedFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountAdjustedFor"); else _explicitNullProperties?.Remove("discountAdjustedFor"); } }
+        public string? DiscountAdjustedFor { get => _explicitNullValueDiscountAdjustedFor; set { _explicitNullValueDiscountAdjustedFor = value; AdditionalData?.Remove("discountAdjustedFor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountAdjustedFor"); else _explicitNullProperties?.Remove("discountAdjustedFor"); } }
         private string? _explicitNullValueDiscountAdjustedFor = default!;
 #nullable restore
 #else
-        public string DiscountAdjustedFor { get => _explicitNullValueDiscountAdjustedFor; set { _explicitNullValueDiscountAdjustedFor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountAdjustedFor"); else _explicitNullProperties?.Remove("discountAdjustedFor"); } }
+        public string DiscountAdjustedFor { get => _explicitNullValueDiscountAdjustedFor; set { _explicitNullValueDiscountAdjustedFor = value; AdditionalData?.Remove("discountAdjustedFor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountAdjustedFor"); else _explicitNullProperties?.Remove("discountAdjustedFor"); } }
         private string _explicitNullValueDiscountAdjustedFor = default!;
 #endif
         /// <summary>The discountPercent property</summary>
-        public double? DiscountPercent { get => _explicitNullValueDiscountPercent; set { _explicitNullValueDiscountPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountPercent"); else _explicitNullProperties?.Remove("discountPercent"); } }
+        public double? DiscountPercent { get => _explicitNullValueDiscountPercent; set { _explicitNullValueDiscountPercent = value; AdditionalData?.Remove("discountPercent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountPercent"); else _explicitNullProperties?.Remove("discountPercent"); } }
         private double? _explicitNullValueDiscountPercent = default!;
         /// <summary>The discountValidTill property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscountValidTill { get => _explicitNullValueDiscountValidTill; set { _explicitNullValueDiscountValidTill = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountValidTill"); else _explicitNullProperties?.Remove("discountValidTill"); } }
+        public string? DiscountValidTill { get => _explicitNullValueDiscountValidTill; set { _explicitNullValueDiscountValidTill = value; AdditionalData?.Remove("discountValidTill"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountValidTill"); else _explicitNullProperties?.Remove("discountValidTill"); } }
         private string? _explicitNullValueDiscountValidTill = default!;
 #nullable restore
 #else
-        public string DiscountValidTill { get => _explicitNullValueDiscountValidTill; set { _explicitNullValueDiscountValidTill = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountValidTill"); else _explicitNullProperties?.Remove("discountValidTill"); } }
+        public string DiscountValidTill { get => _explicitNullValueDiscountValidTill; set { _explicitNullValueDiscountValidTill = value; AdditionalData?.Remove("discountValidTill"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discountValidTill"); else _explicitNullProperties?.Remove("discountValidTill"); } }
         private string _explicitNullValueDiscountValidTill = default!;
 #endif
         /// <summary>The eligibleDiscount property</summary>
-        public double? EligibleDiscount { get => _explicitNullValueEligibleDiscount; set { _explicitNullValueEligibleDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibleDiscount"); else _explicitNullProperties?.Remove("eligibleDiscount"); } }
+        public double? EligibleDiscount { get => _explicitNullValueEligibleDiscount; set { _explicitNullValueEligibleDiscount = value; AdditionalData?.Remove("eligibleDiscount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibleDiscount"); else _explicitNullProperties?.Remove("eligibleDiscount"); } }
         private double? _explicitNullValueEligibleDiscount = default!;
         /// <summary>The eligibleDiscountPercent property</summary>
-        public double? EligibleDiscountPercent { get => _explicitNullValueEligibleDiscountPercent; set { _explicitNullValueEligibleDiscountPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibleDiscountPercent"); else _explicitNullProperties?.Remove("eligibleDiscountPercent"); } }
+        public double? EligibleDiscountPercent { get => _explicitNullValueEligibleDiscountPercent; set { _explicitNullValueEligibleDiscountPercent = value; AdditionalData?.Remove("eligibleDiscountPercent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligibleDiscountPercent"); else _explicitNullProperties?.Remove("eligibleDiscountPercent"); } }
         private double? _explicitNullValueEligibleDiscountPercent = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DiscountDetailV1"/> and sets the default values.

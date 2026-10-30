@@ -18,25 +18,44 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AdditionalDescription") is { } nullNodeAdditionalDescription && nullNodeAdditionalDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDescription = null;
-            if (parseNode.GetChildNode("AllPackedInOneIndicator") is { } nullNodeAllPackedInOneIndicator && nullNodeAllPackedInOneIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllPackedInOneIndicator = null;
-            if (parseNode.GetChildNode("ChemicalRecordIdentifier") is { } nullNodeChemicalRecordIdentifier && nullNodeChemicalRecordIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalRecordIdentifier = null;
-            if (parseNode.GetChildNode("ClassDivisionNumber") is { } nullNodeClassDivisionNumber && nullNodeClassDivisionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClassDivisionNumber = null;
-            if (parseNode.GetChildNode("CommodityRegulatedLevelCode") is { } nullNodeCommodityRegulatedLevelCode && nullNodeCommodityRegulatedLevelCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityRegulatedLevelCode = null;
-            if (parseNode.GetChildNode("HazardLabelRequired") is { } nullNodeHazardLabelRequired && nullNodeHazardLabelRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazardLabelRequired = null;
-            if (parseNode.GetChildNode("IDNumber") is { } nullNodeIDNumber && nullNodeIDNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumber = null;
-            if (parseNode.GetChildNode("PackagingGroupType") is { } nullNodePackagingGroupType && nullNodePackagingGroupType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingGroupType = null;
-            if (parseNode.GetChildNode("PackagingInstructionCode") is { } nullNodePackagingInstructionCode && nullNodePackagingInstructionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingInstructionCode = null;
-            if (parseNode.GetChildNode("PackagingType") is { } nullNodePackagingType && nullNodePackagingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingType = null;
-            if (parseNode.GetChildNode("PackagingTypeQuantity") is { } nullNodePackagingTypeQuantity && nullNodePackagingTypeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingTypeQuantity = null;
-            if (parseNode.GetChildNode("ProperShippingName") is { } nullNodeProperShippingName && nullNodeProperShippingName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProperShippingName = null;
-            if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("ReportableQuantity") is { } nullNodeReportableQuantity && nullNodeReportableQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportableQuantity = null;
-            if (parseNode.GetChildNode("SubRiskClass") is { } nullNodeSubRiskClass && nullNodeSubRiskClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubRiskClass = null;
-            if (parseNode.GetChildNode("TechnicalName") is { } nullNodeTechnicalName && nullNodeTechnicalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TechnicalName = null;
-            if (parseNode.GetChildNode("TransportCategory") is { } nullNodeTransportCategory && nullNodeTransportCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportCategory = null;
-            if (parseNode.GetChildNode("TunnelRestrictionCode") is { } nullNodeTunnelRestrictionCode && nullNodeTunnelRestrictionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TunnelRestrictionCode = null;
-            if (parseNode.GetChildNode("UOM") is { } nullNodeUOM && nullNodeUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UOM = null;
+            if (parseNode.GetChildNode("AdditionalDescription") is null) { _explicitNullValueAdditionalDescription = default!; _explicitNullProperties?.Remove("AdditionalDescription"); }
+            else if (parseNode.GetChildNode("AdditionalDescription") is { } nullNodeAdditionalDescription && nullNodeAdditionalDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalDescription = null;
+            if (parseNode.GetChildNode("AllPackedInOneIndicator") is null) { _explicitNullValueAllPackedInOneIndicator = default!; _explicitNullProperties?.Remove("AllPackedInOneIndicator"); }
+            else if (parseNode.GetChildNode("AllPackedInOneIndicator") is { } nullNodeAllPackedInOneIndicator && nullNodeAllPackedInOneIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllPackedInOneIndicator = null;
+            if (parseNode.GetChildNode("ChemicalRecordIdentifier") is null) { _explicitNullValueChemicalRecordIdentifier = default!; _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); }
+            else if (parseNode.GetChildNode("ChemicalRecordIdentifier") is { } nullNodeChemicalRecordIdentifier && nullNodeChemicalRecordIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChemicalRecordIdentifier = null;
+            if (parseNode.GetChildNode("ClassDivisionNumber") is null) { _explicitNullValueClassDivisionNumber = default!; _explicitNullProperties?.Remove("ClassDivisionNumber"); }
+            else if (parseNode.GetChildNode("ClassDivisionNumber") is { } nullNodeClassDivisionNumber && nullNodeClassDivisionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClassDivisionNumber = null;
+            if (parseNode.GetChildNode("CommodityRegulatedLevelCode") is null) { _explicitNullValueCommodityRegulatedLevelCode = default!; _explicitNullProperties?.Remove("CommodityRegulatedLevelCode"); }
+            else if (parseNode.GetChildNode("CommodityRegulatedLevelCode") is { } nullNodeCommodityRegulatedLevelCode && nullNodeCommodityRegulatedLevelCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommodityRegulatedLevelCode = null;
+            if (parseNode.GetChildNode("HazardLabelRequired") is null) { _explicitNullValueHazardLabelRequired = default!; _explicitNullProperties?.Remove("HazardLabelRequired"); }
+            else if (parseNode.GetChildNode("HazardLabelRequired") is { } nullNodeHazardLabelRequired && nullNodeHazardLabelRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HazardLabelRequired = null;
+            if (parseNode.GetChildNode("IDNumber") is null) { _explicitNullValueIDNumber = default!; _explicitNullProperties?.Remove("IDNumber"); }
+            else if (parseNode.GetChildNode("IDNumber") is { } nullNodeIDNumber && nullNodeIDNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IDNumber = null;
+            if (parseNode.GetChildNode("PackagingGroupType") is null) { _explicitNullValuePackagingGroupType = default!; _explicitNullProperties?.Remove("PackagingGroupType"); }
+            else if (parseNode.GetChildNode("PackagingGroupType") is { } nullNodePackagingGroupType && nullNodePackagingGroupType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingGroupType = null;
+            if (parseNode.GetChildNode("PackagingInstructionCode") is null) { _explicitNullValuePackagingInstructionCode = default!; _explicitNullProperties?.Remove("PackagingInstructionCode"); }
+            else if (parseNode.GetChildNode("PackagingInstructionCode") is { } nullNodePackagingInstructionCode && nullNodePackagingInstructionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingInstructionCode = null;
+            if (parseNode.GetChildNode("PackagingType") is null) { _explicitNullValuePackagingType = default!; _explicitNullProperties?.Remove("PackagingType"); }
+            else if (parseNode.GetChildNode("PackagingType") is { } nullNodePackagingType && nullNodePackagingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingType = null;
+            if (parseNode.GetChildNode("PackagingTypeQuantity") is null) { _explicitNullValuePackagingTypeQuantity = default!; _explicitNullProperties?.Remove("PackagingTypeQuantity"); }
+            else if (parseNode.GetChildNode("PackagingTypeQuantity") is { } nullNodePackagingTypeQuantity && nullNodePackagingTypeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagingTypeQuantity = null;
+            if (parseNode.GetChildNode("ProperShippingName") is null) { _explicitNullValueProperShippingName = default!; _explicitNullProperties?.Remove("ProperShippingName"); }
+            else if (parseNode.GetChildNode("ProperShippingName") is { } nullNodeProperShippingName && nullNodeProperShippingName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProperShippingName = null;
+            if (parseNode.GetChildNode("Quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("Quantity"); }
+            else if (parseNode.GetChildNode("Quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("ReportableQuantity") is null) { _explicitNullValueReportableQuantity = default!; _explicitNullProperties?.Remove("ReportableQuantity"); }
+            else if (parseNode.GetChildNode("ReportableQuantity") is { } nullNodeReportableQuantity && nullNodeReportableQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportableQuantity = null;
+            if (parseNode.GetChildNode("SubRiskClass") is null) { _explicitNullValueSubRiskClass = default!; _explicitNullProperties?.Remove("SubRiskClass"); }
+            else if (parseNode.GetChildNode("SubRiskClass") is { } nullNodeSubRiskClass && nullNodeSubRiskClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubRiskClass = null;
+            if (parseNode.GetChildNode("TechnicalName") is null) { _explicitNullValueTechnicalName = default!; _explicitNullProperties?.Remove("TechnicalName"); }
+            else if (parseNode.GetChildNode("TechnicalName") is { } nullNodeTechnicalName && nullNodeTechnicalName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TechnicalName = null;
+            if (parseNode.GetChildNode("TransportCategory") is null) { _explicitNullValueTransportCategory = default!; _explicitNullProperties?.Remove("TransportCategory"); }
+            else if (parseNode.GetChildNode("TransportCategory") is { } nullNodeTransportCategory && nullNodeTransportCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransportCategory = null;
+            if (parseNode.GetChildNode("TunnelRestrictionCode") is null) { _explicitNullValueTunnelRestrictionCode = default!; _explicitNullProperties?.Remove("TunnelRestrictionCode"); }
+            else if (parseNode.GetChildNode("TunnelRestrictionCode") is { } nullNodeTunnelRestrictionCode && nullNodeTunnelRestrictionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TunnelRestrictionCode = null;
+            if (parseNode.GetChildNode("UOM") is null) { _explicitNullValueUOM = default!; _explicitNullProperties?.Remove("UOM"); }
+            else if (parseNode.GetChildNode("UOM") is { } nullNodeUOM && nullNodeUOM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UOM = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -44,191 +63,191 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Additional remarks or special provision information. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.Additional information that may be required by regulation about a hazardous material, such as, “Limited Quantity”, DOT-SP numbers, EX numbers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdditionalDescription { get => _explicitNullValueAdditionalDescription; set { _explicitNullValueAdditionalDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalDescription"); else _explicitNullProperties?.Remove("AdditionalDescription"); } }
+        public string? AdditionalDescription { get => _explicitNullValueAdditionalDescription; set { _explicitNullValueAdditionalDescription = value; AdditionalData?.Remove("AdditionalDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalDescription"); else _explicitNullProperties?.Remove("AdditionalDescription"); } }
         private string? _explicitNullValueAdditionalDescription = default!;
 #nullable restore
 #else
-        public string AdditionalDescription { get => _explicitNullValueAdditionalDescription; set { _explicitNullValueAdditionalDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalDescription"); else _explicitNullProperties?.Remove("AdditionalDescription"); } }
+        public string AdditionalDescription { get => _explicitNullValueAdditionalDescription; set { _explicitNullValueAdditionalDescription = value; AdditionalData?.Remove("AdditionalDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AdditionalDescription"); else _explicitNullProperties?.Remove("AdditionalDescription"); } }
         private string _explicitNullValueAdditionalDescription = default!;
 #endif
         /// <summary>Indicates the hazmat shipment/package is all packed in one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
+        public string? AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; AdditionalData?.Remove("AllPackedInOneIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
         private string? _explicitNullValueAllPackedInOneIndicator = default!;
 #nullable restore
 #else
-        public string AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
+        public string AllPackedInOneIndicator { get => _explicitNullValueAllPackedInOneIndicator; set { _explicitNullValueAllPackedInOneIndicator = value; AdditionalData?.Remove("AllPackedInOneIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllPackedInOneIndicator"); else _explicitNullProperties?.Remove("AllPackedInOneIndicator"); } }
         private string _explicitNullValueAllPackedInOneIndicator = default!;
 #endif
         /// <summary>Identifies the Chemcial Record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChemicalRecordIdentifier { get => _explicitNullValueChemicalRecordIdentifier; set { _explicitNullValueChemicalRecordIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordIdentifier"); else _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); } }
+        public string? ChemicalRecordIdentifier { get => _explicitNullValueChemicalRecordIdentifier; set { _explicitNullValueChemicalRecordIdentifier = value; AdditionalData?.Remove("ChemicalRecordIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordIdentifier"); else _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); } }
         private string? _explicitNullValueChemicalRecordIdentifier = default!;
 #nullable restore
 #else
-        public string ChemicalRecordIdentifier { get => _explicitNullValueChemicalRecordIdentifier; set { _explicitNullValueChemicalRecordIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordIdentifier"); else _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); } }
+        public string ChemicalRecordIdentifier { get => _explicitNullValueChemicalRecordIdentifier; set { _explicitNullValueChemicalRecordIdentifier = value; AdditionalData?.Remove("ChemicalRecordIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ChemicalRecordIdentifier"); else _explicitNullProperties?.Remove("ChemicalRecordIdentifier"); } }
         private string _explicitNullValueChemicalRecordIdentifier = default!;
 #endif
         /// <summary>This is the hazard class associated to the specified commodity.Required if CommodityRegulatedLevelCode is &apos;LQ&apos; or &apos;FR&apos;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClassDivisionNumber { get => _explicitNullValueClassDivisionNumber; set { _explicitNullValueClassDivisionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClassDivisionNumber"); else _explicitNullProperties?.Remove("ClassDivisionNumber"); } }
+        public string? ClassDivisionNumber { get => _explicitNullValueClassDivisionNumber; set { _explicitNullValueClassDivisionNumber = value; AdditionalData?.Remove("ClassDivisionNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClassDivisionNumber"); else _explicitNullProperties?.Remove("ClassDivisionNumber"); } }
         private string? _explicitNullValueClassDivisionNumber = default!;
 #nullable restore
 #else
-        public string ClassDivisionNumber { get => _explicitNullValueClassDivisionNumber; set { _explicitNullValueClassDivisionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClassDivisionNumber"); else _explicitNullProperties?.Remove("ClassDivisionNumber"); } }
+        public string ClassDivisionNumber { get => _explicitNullValueClassDivisionNumber; set { _explicitNullValueClassDivisionNumber = value; AdditionalData?.Remove("ClassDivisionNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClassDivisionNumber"); else _explicitNullProperties?.Remove("ClassDivisionNumber"); } }
         private string _explicitNullValueClassDivisionNumber = default!;
 #endif
         /// <summary>Indicates the type of commodity.  Valid values: LR, FR, LQ, EQFR = Fully RegulatedLQ = Limited QuantityEQ = Excepted QuantityLR = Lightly Regulated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommodityRegulatedLevelCode { get => _explicitNullValueCommodityRegulatedLevelCode; set { _explicitNullValueCommodityRegulatedLevelCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommodityRegulatedLevelCode"); else _explicitNullProperties?.Remove("CommodityRegulatedLevelCode"); } }
+        public string? CommodityRegulatedLevelCode { get => _explicitNullValueCommodityRegulatedLevelCode; set { _explicitNullValueCommodityRegulatedLevelCode = value; AdditionalData?.Remove("CommodityRegulatedLevelCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommodityRegulatedLevelCode"); else _explicitNullProperties?.Remove("CommodityRegulatedLevelCode"); } }
         private string? _explicitNullValueCommodityRegulatedLevelCode = default!;
 #nullable restore
 #else
-        public string CommodityRegulatedLevelCode { get => _explicitNullValueCommodityRegulatedLevelCode; set { _explicitNullValueCommodityRegulatedLevelCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommodityRegulatedLevelCode"); else _explicitNullProperties?.Remove("CommodityRegulatedLevelCode"); } }
+        public string CommodityRegulatedLevelCode { get => _explicitNullValueCommodityRegulatedLevelCode; set { _explicitNullValueCommodityRegulatedLevelCode = value; AdditionalData?.Remove("CommodityRegulatedLevelCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CommodityRegulatedLevelCode"); else _explicitNullProperties?.Remove("CommodityRegulatedLevelCode"); } }
         private string _explicitNullValueCommodityRegulatedLevelCode = default!;
 #endif
         /// <summary>Defines the type of label that is required on the package for the commodity. Not applicable if CommodityRegulatedLevelCode = LR or EQ.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HazardLabelRequired { get => _explicitNullValueHazardLabelRequired; set { _explicitNullValueHazardLabelRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardLabelRequired"); else _explicitNullProperties?.Remove("HazardLabelRequired"); } }
+        public string? HazardLabelRequired { get => _explicitNullValueHazardLabelRequired; set { _explicitNullValueHazardLabelRequired = value; AdditionalData?.Remove("HazardLabelRequired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardLabelRequired"); else _explicitNullProperties?.Remove("HazardLabelRequired"); } }
         private string? _explicitNullValueHazardLabelRequired = default!;
 #nullable restore
 #else
-        public string HazardLabelRequired { get => _explicitNullValueHazardLabelRequired; set { _explicitNullValueHazardLabelRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardLabelRequired"); else _explicitNullProperties?.Remove("HazardLabelRequired"); } }
+        public string HazardLabelRequired { get => _explicitNullValueHazardLabelRequired; set { _explicitNullValueHazardLabelRequired = value; AdditionalData?.Remove("HazardLabelRequired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HazardLabelRequired"); else _explicitNullProperties?.Remove("HazardLabelRequired"); } }
         private string _explicitNullValueHazardLabelRequired = default!;
 #endif
         /// <summary>This is the ID number (UN/NA/ID) for the specified commodity. Required if CommodityRegulatedLevelCode = LR, LQ or FR and if the field applies to the material by regulation. UN/NA/ID Identification Number assigned to the specified regulated good. (Include the UN/NA/ID as part of the entry).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IDNumber { get => _explicitNullValueIDNumber; set { _explicitNullValueIDNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumber"); else _explicitNullProperties?.Remove("IDNumber"); } }
+        public string? IDNumber { get => _explicitNullValueIDNumber; set { _explicitNullValueIDNumber = value; AdditionalData?.Remove("IDNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumber"); else _explicitNullProperties?.Remove("IDNumber"); } }
         private string? _explicitNullValueIDNumber = default!;
 #nullable restore
 #else
-        public string IDNumber { get => _explicitNullValueIDNumber; set { _explicitNullValueIDNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumber"); else _explicitNullProperties?.Remove("IDNumber"); } }
+        public string IDNumber { get => _explicitNullValueIDNumber; set { _explicitNullValueIDNumber = value; AdditionalData?.Remove("IDNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IDNumber"); else _explicitNullProperties?.Remove("IDNumber"); } }
         private string _explicitNullValueIDNumber = default!;
 #endif
         /// <summary>This is the packing group category associated to the specified commodity. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. Must be shown in Roman Numerals.  Valid values are: IIIIII blank</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagingGroupType { get => _explicitNullValuePackagingGroupType; set { _explicitNullValuePackagingGroupType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingGroupType"); else _explicitNullProperties?.Remove("PackagingGroupType"); } }
+        public string? PackagingGroupType { get => _explicitNullValuePackagingGroupType; set { _explicitNullValuePackagingGroupType = value; AdditionalData?.Remove("PackagingGroupType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingGroupType"); else _explicitNullProperties?.Remove("PackagingGroupType"); } }
         private string? _explicitNullValuePackagingGroupType = default!;
 #nullable restore
 #else
-        public string PackagingGroupType { get => _explicitNullValuePackagingGroupType; set { _explicitNullValuePackagingGroupType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingGroupType"); else _explicitNullProperties?.Remove("PackagingGroupType"); } }
+        public string PackagingGroupType { get => _explicitNullValuePackagingGroupType; set { _explicitNullValuePackagingGroupType = value; AdditionalData?.Remove("PackagingGroupType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingGroupType"); else _explicitNullProperties?.Remove("PackagingGroupType"); } }
         private string _explicitNullValuePackagingGroupType = default!;
 #endif
         /// <summary>The packing instructions related to the chemical record. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
+        public string? PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; AdditionalData?.Remove("PackagingInstructionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
         private string? _explicitNullValuePackagingInstructionCode = default!;
 #nullable restore
 #else
-        public string PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
+        public string PackagingInstructionCode { get => _explicitNullValuePackagingInstructionCode; set { _explicitNullValuePackagingInstructionCode = value; AdditionalData?.Remove("PackagingInstructionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingInstructionCode"); else _explicitNullProperties?.Remove("PackagingInstructionCode"); } }
         private string _explicitNullValuePackagingInstructionCode = default!;
 #endif
         /// <summary>The package type code identifying the type of packaging used for the commodity. (Ex: Fiberboard Box). Required if CommodityRegulatedLevelCode = LQ or FR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagingType { get => _explicitNullValuePackagingType; set { _explicitNullValuePackagingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingType"); else _explicitNullProperties?.Remove("PackagingType"); } }
+        public string? PackagingType { get => _explicitNullValuePackagingType; set { _explicitNullValuePackagingType = value; AdditionalData?.Remove("PackagingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingType"); else _explicitNullProperties?.Remove("PackagingType"); } }
         private string? _explicitNullValuePackagingType = default!;
 #nullable restore
 #else
-        public string PackagingType { get => _explicitNullValuePackagingType; set { _explicitNullValuePackagingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingType"); else _explicitNullProperties?.Remove("PackagingType"); } }
+        public string PackagingType { get => _explicitNullValuePackagingType; set { _explicitNullValuePackagingType = value; AdditionalData?.Remove("PackagingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingType"); else _explicitNullProperties?.Remove("PackagingType"); } }
         private string _explicitNullValuePackagingType = default!;
 #endif
         /// <summary>The number of pieces of the specific commodity. Required if CommodityRegulatedLevelCode = LQ or FR.  Valid values: 1 to 999</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackagingTypeQuantity { get => _explicitNullValuePackagingTypeQuantity; set { _explicitNullValuePackagingTypeQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingTypeQuantity"); else _explicitNullProperties?.Remove("PackagingTypeQuantity"); } }
+        public string? PackagingTypeQuantity { get => _explicitNullValuePackagingTypeQuantity; set { _explicitNullValuePackagingTypeQuantity = value; AdditionalData?.Remove("PackagingTypeQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingTypeQuantity"); else _explicitNullProperties?.Remove("PackagingTypeQuantity"); } }
         private string? _explicitNullValuePackagingTypeQuantity = default!;
 #nullable restore
 #else
-        public string PackagingTypeQuantity { get => _explicitNullValuePackagingTypeQuantity; set { _explicitNullValuePackagingTypeQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingTypeQuantity"); else _explicitNullProperties?.Remove("PackagingTypeQuantity"); } }
+        public string PackagingTypeQuantity { get => _explicitNullValuePackagingTypeQuantity; set { _explicitNullValuePackagingTypeQuantity = value; AdditionalData?.Remove("PackagingTypeQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PackagingTypeQuantity"); else _explicitNullProperties?.Remove("PackagingTypeQuantity"); } }
         private string _explicitNullValuePackagingTypeQuantity = default!;
 #endif
         /// <summary>The Proper Shipping Name assigned by ADR, CFR or IATA. Required if CommodityRegulatedLevelCode = LR, LQ or FR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProperShippingName { get => _explicitNullValueProperShippingName; set { _explicitNullValueProperShippingName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingName"); else _explicitNullProperties?.Remove("ProperShippingName"); } }
+        public string? ProperShippingName { get => _explicitNullValueProperShippingName; set { _explicitNullValueProperShippingName = value; AdditionalData?.Remove("ProperShippingName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingName"); else _explicitNullProperties?.Remove("ProperShippingName"); } }
         private string? _explicitNullValueProperShippingName = default!;
 #nullable restore
 #else
-        public string ProperShippingName { get => _explicitNullValueProperShippingName; set { _explicitNullValueProperShippingName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingName"); else _explicitNullProperties?.Remove("ProperShippingName"); } }
+        public string ProperShippingName { get => _explicitNullValueProperShippingName; set { _explicitNullValueProperShippingName = value; AdditionalData?.Remove("ProperShippingName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ProperShippingName"); else _explicitNullProperties?.Remove("ProperShippingName"); } }
         private string _explicitNullValueProperShippingName = default!;
 #endif
         /// <summary>Required if CommodityRegulatedLevelCode = LQ or FR. The numerical value of the mass capacity of the regulated good.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        public string? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("Quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
         private string? _explicitNullValueQuantity = default!;
 #nullable restore
 #else
-        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
+        public string Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("Quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Quantity"); else _explicitNullProperties?.Remove("Quantity"); } }
         private string _explicitNullValueQuantity = default!;
 #endif
         /// <summary>Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation. If reportable quantity is met, RQ should be entered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReportableQuantity { get => _explicitNullValueReportableQuantity; set { _explicitNullValueReportableQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReportableQuantity"); else _explicitNullProperties?.Remove("ReportableQuantity"); } }
+        public string? ReportableQuantity { get => _explicitNullValueReportableQuantity; set { _explicitNullValueReportableQuantity = value; AdditionalData?.Remove("ReportableQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReportableQuantity"); else _explicitNullProperties?.Remove("ReportableQuantity"); } }
         private string? _explicitNullValueReportableQuantity = default!;
 #nullable restore
 #else
-        public string ReportableQuantity { get => _explicitNullValueReportableQuantity; set { _explicitNullValueReportableQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReportableQuantity"); else _explicitNullProperties?.Remove("ReportableQuantity"); } }
+        public string ReportableQuantity { get => _explicitNullValueReportableQuantity; set { _explicitNullValueReportableQuantity = value; AdditionalData?.Remove("ReportableQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReportableQuantity"); else _explicitNullProperties?.Remove("ReportableQuantity"); } }
         private string _explicitNullValueReportableQuantity = default!;
 #endif
         /// <summary>Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.Secondary hazardous characteristics of a package. (There can be more than one – separate each with a comma).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubRiskClass { get => _explicitNullValueSubRiskClass; set { _explicitNullValueSubRiskClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubRiskClass"); else _explicitNullProperties?.Remove("SubRiskClass"); } }
+        public string? SubRiskClass { get => _explicitNullValueSubRiskClass; set { _explicitNullValueSubRiskClass = value; AdditionalData?.Remove("SubRiskClass"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubRiskClass"); else _explicitNullProperties?.Remove("SubRiskClass"); } }
         private string? _explicitNullValueSubRiskClass = default!;
 #nullable restore
 #else
-        public string SubRiskClass { get => _explicitNullValueSubRiskClass; set { _explicitNullValueSubRiskClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubRiskClass"); else _explicitNullProperties?.Remove("SubRiskClass"); } }
+        public string SubRiskClass { get => _explicitNullValueSubRiskClass; set { _explicitNullValueSubRiskClass = value; AdditionalData?.Remove("SubRiskClass"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SubRiskClass"); else _explicitNullProperties?.Remove("SubRiskClass"); } }
         private string _explicitNullValueSubRiskClass = default!;
 #endif
         /// <summary>The technical name (when required) for the specified commodity. Required if CommodityRegulatedLevelCode = LQ or FR and if the field applies to the material by regulation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TechnicalName { get => _explicitNullValueTechnicalName; set { _explicitNullValueTechnicalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TechnicalName"); else _explicitNullProperties?.Remove("TechnicalName"); } }
+        public string? TechnicalName { get => _explicitNullValueTechnicalName; set { _explicitNullValueTechnicalName = value; AdditionalData?.Remove("TechnicalName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TechnicalName"); else _explicitNullProperties?.Remove("TechnicalName"); } }
         private string? _explicitNullValueTechnicalName = default!;
 #nullable restore
 #else
-        public string TechnicalName { get => _explicitNullValueTechnicalName; set { _explicitNullValueTechnicalName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TechnicalName"); else _explicitNullProperties?.Remove("TechnicalName"); } }
+        public string TechnicalName { get => _explicitNullValueTechnicalName; set { _explicitNullValueTechnicalName = value; AdditionalData?.Remove("TechnicalName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TechnicalName"); else _explicitNullProperties?.Remove("TechnicalName"); } }
         private string _explicitNullValueTechnicalName = default!;
 #endif
         /// <summary>Transport Category.  Valid values: 0 to 4</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
+        public string? TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; AdditionalData?.Remove("TransportCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
         private string? _explicitNullValueTransportCategory = default!;
 #nullable restore
 #else
-        public string TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
+        public string TransportCategory { get => _explicitNullValueTransportCategory; set { _explicitNullValueTransportCategory = value; AdditionalData?.Remove("TransportCategory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TransportCategory"); else _explicitNullProperties?.Remove("TransportCategory"); } }
         private string _explicitNullValueTransportCategory = default!;
 #endif
         /// <summary>Defines what is restricted to pass through a tunnel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
+        public string? TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; AdditionalData?.Remove("TunnelRestrictionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
         private string? _explicitNullValueTunnelRestrictionCode = default!;
 #nullable restore
 #else
-        public string TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
+        public string TunnelRestrictionCode { get => _explicitNullValueTunnelRestrictionCode; set { _explicitNullValueTunnelRestrictionCode = value; AdditionalData?.Remove("TunnelRestrictionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TunnelRestrictionCode"); else _explicitNullProperties?.Remove("TunnelRestrictionCode"); } }
         private string _explicitNullValueTunnelRestrictionCode = default!;
 #endif
         /// <summary>Required if CommodityRegulatedLevelCode = LQ or FR. The unit of measure used for the mass capacity of the regulated good.   Example: ml, L, g, mg, kg, cylinder, pound, pint, quart, gallon, ounce etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
+        public string? UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; AdditionalData?.Remove("UOM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
         private string? _explicitNullValueUOM = default!;
 #nullable restore
 #else
-        public string UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
+        public string UOM { get => _explicitNullValueUOM; set { _explicitNullValueUOM = value; AdditionalData?.Remove("UOM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UOM"); else _explicitNullProperties?.Remove("UOM"); } }
         private string _explicitNullValueUOM = default!;
 #endif
         /// <summary>

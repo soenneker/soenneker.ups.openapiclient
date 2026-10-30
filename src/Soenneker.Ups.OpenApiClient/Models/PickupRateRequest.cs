@@ -18,15 +18,24 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AlternateAddressIndicator") is { } nullNodeAlternateAddressIndicator && nullNodeAlternateAddressIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlternateAddressIndicator = null;
-            if (parseNode.GetChildNode("PickupAddress") is { } nullNodePickupAddress && nullNodePickupAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupAddress = null;
-            if (parseNode.GetChildNode("PickupDateInfo") is { } nullNodePickupDateInfo && nullNodePickupDateInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDateInfo = null;
-            if (parseNode.GetChildNode("RateChartType") is { } nullNodeRateChartType && nullNodeRateChartType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateChartType = null;
-            if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
-            if (parseNode.GetChildNode("ServiceDateOption") is { } nullNodeServiceDateOption && nullNodeServiceDateOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDateOption = null;
-            if (parseNode.GetChildNode("ShipperAccount") is { } nullNodeShipperAccount && nullNodeShipperAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccount = null;
-            if (parseNode.GetChildNode("TaxInformationIndicator") is { } nullNodeTaxInformationIndicator && nullNodeTaxInformationIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxInformationIndicator = null;
-            if (parseNode.GetChildNode("UserLevelDiscountIndicator") is { } nullNodeUserLevelDiscountIndicator && nullNodeUserLevelDiscountIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLevelDiscountIndicator = null;
+            if (parseNode.GetChildNode("AlternateAddressIndicator") is null) { _explicitNullValueAlternateAddressIndicator = default!; _explicitNullProperties?.Remove("AlternateAddressIndicator"); }
+            else if (parseNode.GetChildNode("AlternateAddressIndicator") is { } nullNodeAlternateAddressIndicator && nullNodeAlternateAddressIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlternateAddressIndicator = null;
+            if (parseNode.GetChildNode("PickupAddress") is null) { _explicitNullValuePickupAddress = default!; _explicitNullProperties?.Remove("PickupAddress"); }
+            else if (parseNode.GetChildNode("PickupAddress") is { } nullNodePickupAddress && nullNodePickupAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupAddress = null;
+            if (parseNode.GetChildNode("PickupDateInfo") is null) { _explicitNullValuePickupDateInfo = default!; _explicitNullProperties?.Remove("PickupDateInfo"); }
+            else if (parseNode.GetChildNode("PickupDateInfo") is { } nullNodePickupDateInfo && nullNodePickupDateInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickupDateInfo = null;
+            if (parseNode.GetChildNode("RateChartType") is null) { _explicitNullValueRateChartType = default!; _explicitNullProperties?.Remove("RateChartType"); }
+            else if (parseNode.GetChildNode("RateChartType") is { } nullNodeRateChartType && nullNodeRateChartType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateChartType = null;
+            if (parseNode.GetChildNode("Request") is null) { _explicitNullValueRequest = default!; _explicitNullProperties?.Remove("Request"); }
+            else if (parseNode.GetChildNode("Request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("ServiceDateOption") is null) { _explicitNullValueServiceDateOption = default!; _explicitNullProperties?.Remove("ServiceDateOption"); }
+            else if (parseNode.GetChildNode("ServiceDateOption") is { } nullNodeServiceDateOption && nullNodeServiceDateOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDateOption = null;
+            if (parseNode.GetChildNode("ShipperAccount") is null) { _explicitNullValueShipperAccount = default!; _explicitNullProperties?.Remove("ShipperAccount"); }
+            else if (parseNode.GetChildNode("ShipperAccount") is { } nullNodeShipperAccount && nullNodeShipperAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipperAccount = null;
+            if (parseNode.GetChildNode("TaxInformationIndicator") is null) { _explicitNullValueTaxInformationIndicator = default!; _explicitNullProperties?.Remove("TaxInformationIndicator"); }
+            else if (parseNode.GetChildNode("TaxInformationIndicator") is { } nullNodeTaxInformationIndicator && nullNodeTaxInformationIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxInformationIndicator = null;
+            if (parseNode.GetChildNode("UserLevelDiscountIndicator") is null) { _explicitNullValueUserLevelDiscountIndicator = default!; _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); }
+            else if (parseNode.GetChildNode("UserLevelDiscountIndicator") is { } nullNodeUserLevelDiscountIndicator && nullNodeUserLevelDiscountIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLevelDiscountIndicator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,91 +43,91 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Indicates if the pickup address is different than the address specified in the customer&apos;s profile.  Valid values:Y = Alternate addressN = Original pickup address (default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AlternateAddressIndicator { get => _explicitNullValueAlternateAddressIndicator; set { _explicitNullValueAlternateAddressIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlternateAddressIndicator"); else _explicitNullProperties?.Remove("AlternateAddressIndicator"); } }
+        public string? AlternateAddressIndicator { get => _explicitNullValueAlternateAddressIndicator; set { _explicitNullValueAlternateAddressIndicator = value; AdditionalData?.Remove("AlternateAddressIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlternateAddressIndicator"); else _explicitNullProperties?.Remove("AlternateAddressIndicator"); } }
         private string? _explicitNullValueAlternateAddressIndicator = default!;
 #nullable restore
 #else
-        public string AlternateAddressIndicator { get => _explicitNullValueAlternateAddressIndicator; set { _explicitNullValueAlternateAddressIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlternateAddressIndicator"); else _explicitNullProperties?.Remove("AlternateAddressIndicator"); } }
+        public string AlternateAddressIndicator { get => _explicitNullValueAlternateAddressIndicator; set { _explicitNullValueAlternateAddressIndicator = value; AdditionalData?.Remove("AlternateAddressIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AlternateAddressIndicator"); else _explicitNullProperties?.Remove("AlternateAddressIndicator"); } }
         private string _explicitNullValueAlternateAddressIndicator = default!;
 #endif
         /// <summary>The address to pickup the packages</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress? PickupAddress { get => _explicitNullValuePickupAddress; set { _explicitNullValuePickupAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupAddress"); else _explicitNullProperties?.Remove("PickupAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress? PickupAddress { get => _explicitNullValuePickupAddress; set { _explicitNullValuePickupAddress = value; AdditionalData?.Remove("PickupAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupAddress"); else _explicitNullProperties?.Remove("PickupAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress? _explicitNullValuePickupAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress PickupAddress { get => _explicitNullValuePickupAddress; set { _explicitNullValuePickupAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupAddress"); else _explicitNullProperties?.Remove("PickupAddress"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress PickupAddress { get => _explicitNullValuePickupAddress; set { _explicitNullValuePickupAddress = value; AdditionalData?.Remove("PickupAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupAddress"); else _explicitNullProperties?.Remove("PickupAddress"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupAddress _explicitNullValuePickupAddress = default!;
 #endif
         /// <summary>Required if the ServiceDateOption is: 03 A Specific-Day Pickup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo? PickupDateInfo { get => _explicitNullValuePickupDateInfo; set { _explicitNullValuePickupDateInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDateInfo"); else _explicitNullProperties?.Remove("PickupDateInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo? PickupDateInfo { get => _explicitNullValuePickupDateInfo; set { _explicitNullValuePickupDateInfo = value; AdditionalData?.Remove("PickupDateInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDateInfo"); else _explicitNullProperties?.Remove("PickupDateInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo? _explicitNullValuePickupDateInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo PickupDateInfo { get => _explicitNullValuePickupDateInfo; set { _explicitNullValuePickupDateInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDateInfo"); else _explicitNullProperties?.Remove("PickupDateInfo"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo PickupDateInfo { get => _explicitNullValuePickupDateInfo; set { _explicitNullValuePickupDateInfo = value; AdditionalData?.Remove("PickupDateInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PickupDateInfo"); else _explicitNullProperties?.Remove("PickupDateInfo"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestPickupDateInfo _explicitNullValuePickupDateInfo = default!;
 #endif
         /// <summary>Rate Type with which pickup is rated. Possible RateChart values for different regions will be:US 48 origin:1 – Daily Rates3 – Standard List Rates4 – Retail Rates. Alaska/Hawaii origin:1 – Daily Rates3 – Standard List Rates4 – Retail Rates.All Other origins:1 – Rates5 - Regional Rates6 - General List Rates.3 and 4 do not apply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RateChartType { get => _explicitNullValueRateChartType; set { _explicitNullValueRateChartType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateChartType"); else _explicitNullProperties?.Remove("RateChartType"); } }
+        public string? RateChartType { get => _explicitNullValueRateChartType; set { _explicitNullValueRateChartType = value; AdditionalData?.Remove("RateChartType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateChartType"); else _explicitNullProperties?.Remove("RateChartType"); } }
         private string? _explicitNullValueRateChartType = default!;
 #nullable restore
 #else
-        public string RateChartType { get => _explicitNullValueRateChartType; set { _explicitNullValueRateChartType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateChartType"); else _explicitNullProperties?.Remove("RateChartType"); } }
+        public string RateChartType { get => _explicitNullValueRateChartType; set { _explicitNullValueRateChartType = value; AdditionalData?.Remove("RateChartType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RateChartType"); else _explicitNullProperties?.Remove("RateChartType"); } }
         private string _explicitNullValueRateChartType = default!;
 #endif
         /// <summary>Common element for all services</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; AdditionalData?.Remove("Request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Request"); else _explicitNullProperties?.Remove("Request"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestRequest _explicitNullValueRequest = default!;
 #endif
         /// <summary>Indicates the pickup timeframe.- 01 = Same-Day Pickup- 02 = Future-Day Pickup- 03 = A Specific-Day PickupIf 03 is selected, then PickupDate, EarliestReadyTime, and LatestClosetime must be specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceDateOption { get => _explicitNullValueServiceDateOption; set { _explicitNullValueServiceDateOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceDateOption"); else _explicitNullProperties?.Remove("ServiceDateOption"); } }
+        public string? ServiceDateOption { get => _explicitNullValueServiceDateOption; set { _explicitNullValueServiceDateOption = value; AdditionalData?.Remove("ServiceDateOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceDateOption"); else _explicitNullProperties?.Remove("ServiceDateOption"); } }
         private string? _explicitNullValueServiceDateOption = default!;
 #nullable restore
 #else
-        public string ServiceDateOption { get => _explicitNullValueServiceDateOption; set { _explicitNullValueServiceDateOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceDateOption"); else _explicitNullProperties?.Remove("ServiceDateOption"); } }
+        public string ServiceDateOption { get => _explicitNullValueServiceDateOption; set { _explicitNullValueServiceDateOption = value; AdditionalData?.Remove("ServiceDateOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceDateOption"); else _explicitNullProperties?.Remove("ServiceDateOption"); } }
         private string _explicitNullValueServiceDateOption = default!;
 #endif
         /// <summary>Shipper account information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount? ShipperAccount { get => _explicitNullValueShipperAccount; set { _explicitNullValueShipperAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperAccount"); else _explicitNullProperties?.Remove("ShipperAccount"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount? ShipperAccount { get => _explicitNullValueShipperAccount; set { _explicitNullValueShipperAccount = value; AdditionalData?.Remove("ShipperAccount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperAccount"); else _explicitNullProperties?.Remove("ShipperAccount"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount? _explicitNullValueShipperAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount ShipperAccount { get => _explicitNullValueShipperAccount; set { _explicitNullValueShipperAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperAccount"); else _explicitNullProperties?.Remove("ShipperAccount"); } }
+        public global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount ShipperAccount { get => _explicitNullValueShipperAccount; set { _explicitNullValueShipperAccount = value; AdditionalData?.Remove("ShipperAccount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShipperAccount"); else _explicitNullProperties?.Remove("ShipperAccount"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.PickupRateRequestShipperAccount _explicitNullValueShipperAccount = default!;
 #endif
         /// <summary>Indicates whether to return detailed taxes for on-callpickups.Valid values:- Y = Rate this pickup with taxes- N = Do not rate this pickup with taxes (default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxInformationIndicator { get => _explicitNullValueTaxInformationIndicator; set { _explicitNullValueTaxInformationIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxInformationIndicator"); else _explicitNullProperties?.Remove("TaxInformationIndicator"); } }
+        public string? TaxInformationIndicator { get => _explicitNullValueTaxInformationIndicator; set { _explicitNullValueTaxInformationIndicator = value; AdditionalData?.Remove("TaxInformationIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxInformationIndicator"); else _explicitNullProperties?.Remove("TaxInformationIndicator"); } }
         private string? _explicitNullValueTaxInformationIndicator = default!;
 #nullable restore
 #else
-        public string TaxInformationIndicator { get => _explicitNullValueTaxInformationIndicator; set { _explicitNullValueTaxInformationIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxInformationIndicator"); else _explicitNullProperties?.Remove("TaxInformationIndicator"); } }
+        public string TaxInformationIndicator { get => _explicitNullValueTaxInformationIndicator; set { _explicitNullValueTaxInformationIndicator = value; AdditionalData?.Remove("TaxInformationIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxInformationIndicator"); else _explicitNullProperties?.Remove("TaxInformationIndicator"); } }
         private string _explicitNullValueTaxInformationIndicator = default!;
 #endif
         /// <summary>Indicates whether to return user level promo discount for the on-callpickups. Valid values:Y = Rate this pickup with user level promo discountN = Do not rate this pickup with user level promo discount(default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserLevelDiscountIndicator { get => _explicitNullValueUserLevelDiscountIndicator; set { _explicitNullValueUserLevelDiscountIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserLevelDiscountIndicator"); else _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); } }
+        public string? UserLevelDiscountIndicator { get => _explicitNullValueUserLevelDiscountIndicator; set { _explicitNullValueUserLevelDiscountIndicator = value; AdditionalData?.Remove("UserLevelDiscountIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserLevelDiscountIndicator"); else _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); } }
         private string? _explicitNullValueUserLevelDiscountIndicator = default!;
 #nullable restore
 #else
-        public string UserLevelDiscountIndicator { get => _explicitNullValueUserLevelDiscountIndicator; set { _explicitNullValueUserLevelDiscountIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserLevelDiscountIndicator"); else _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); } }
+        public string UserLevelDiscountIndicator { get => _explicitNullValueUserLevelDiscountIndicator; set { _explicitNullValueUserLevelDiscountIndicator = value; AdditionalData?.Remove("UserLevelDiscountIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserLevelDiscountIndicator"); else _explicitNullProperties?.Remove("UserLevelDiscountIndicator"); } }
         private string _explicitNullValueUserLevelDiscountIndicator = default!;
 #endif
         /// <summary>

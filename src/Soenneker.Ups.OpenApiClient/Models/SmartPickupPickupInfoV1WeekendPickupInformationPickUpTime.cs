@@ -18,9 +18,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("EarliestTime") is { } nullNodeEarliestTime && nullNodeEarliestTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EarliestTime = null;
-            if (parseNode.GetChildNode("LatestTime") is { } nullNodeLatestTime && nullNodeLatestTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestTime = null;
-            if (parseNode.GetChildNode("PreferredTime") is { } nullNodePreferredTime && nullNodePreferredTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredTime = null;
+            if (parseNode.GetChildNode("EarliestTime") is null) { _explicitNullValueEarliestTime = default!; _explicitNullProperties?.Remove("EarliestTime"); }
+            else if (parseNode.GetChildNode("EarliestTime") is { } nullNodeEarliestTime && nullNodeEarliestTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EarliestTime = null;
+            if (parseNode.GetChildNode("LatestTime") is null) { _explicitNullValueLatestTime = default!; _explicitNullProperties?.Remove("LatestTime"); }
+            else if (parseNode.GetChildNode("LatestTime") is { } nullNodeLatestTime && nullNodeLatestTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestTime = null;
+            if (parseNode.GetChildNode("PreferredTime") is null) { _explicitNullValuePreferredTime = default!; _explicitNullProperties?.Remove("PreferredTime"); }
+            else if (parseNode.GetChildNode("PreferredTime") is { } nullNodePreferredTime && nullNodePreferredTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The EarliestTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EarliestTime { get => _explicitNullValueEarliestTime; set { _explicitNullValueEarliestTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarliestTime"); else _explicitNullProperties?.Remove("EarliestTime"); } }
+        public string? EarliestTime { get => _explicitNullValueEarliestTime; set { _explicitNullValueEarliestTime = value; AdditionalData?.Remove("EarliestTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarliestTime"); else _explicitNullProperties?.Remove("EarliestTime"); } }
         private string? _explicitNullValueEarliestTime = default!;
 #nullable restore
 #else
-        public string EarliestTime { get => _explicitNullValueEarliestTime; set { _explicitNullValueEarliestTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarliestTime"); else _explicitNullProperties?.Remove("EarliestTime"); } }
+        public string EarliestTime { get => _explicitNullValueEarliestTime; set { _explicitNullValueEarliestTime = value; AdditionalData?.Remove("EarliestTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EarliestTime"); else _explicitNullProperties?.Remove("EarliestTime"); } }
         private string _explicitNullValueEarliestTime = default!;
 #endif
         /// <summary>The LatestTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LatestTime { get => _explicitNullValueLatestTime; set { _explicitNullValueLatestTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestTime"); else _explicitNullProperties?.Remove("LatestTime"); } }
+        public string? LatestTime { get => _explicitNullValueLatestTime; set { _explicitNullValueLatestTime = value; AdditionalData?.Remove("LatestTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestTime"); else _explicitNullProperties?.Remove("LatestTime"); } }
         private string? _explicitNullValueLatestTime = default!;
 #nullable restore
 #else
-        public string LatestTime { get => _explicitNullValueLatestTime; set { _explicitNullValueLatestTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestTime"); else _explicitNullProperties?.Remove("LatestTime"); } }
+        public string LatestTime { get => _explicitNullValueLatestTime; set { _explicitNullValueLatestTime = value; AdditionalData?.Remove("LatestTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LatestTime"); else _explicitNullProperties?.Remove("LatestTime"); } }
         private string _explicitNullValueLatestTime = default!;
 #endif
         /// <summary>The PreferredTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreferredTime { get => _explicitNullValuePreferredTime; set { _explicitNullValuePreferredTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreferredTime"); else _explicitNullProperties?.Remove("PreferredTime"); } }
+        public string? PreferredTime { get => _explicitNullValuePreferredTime; set { _explicitNullValuePreferredTime = value; AdditionalData?.Remove("PreferredTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreferredTime"); else _explicitNullProperties?.Remove("PreferredTime"); } }
         private string? _explicitNullValuePreferredTime = default!;
 #nullable restore
 #else
-        public string PreferredTime { get => _explicitNullValuePreferredTime; set { _explicitNullValuePreferredTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreferredTime"); else _explicitNullProperties?.Remove("PreferredTime"); } }
+        public string PreferredTime { get => _explicitNullValuePreferredTime; set { _explicitNullValuePreferredTime = value; AdditionalData?.Remove("PreferredTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreferredTime"); else _explicitNullProperties?.Remove("PreferredTime"); } }
         private string _explicitNullValuePreferredTime = default!;
 #endif
         /// <summary>

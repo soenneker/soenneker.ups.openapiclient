@@ -18,8 +18,10 @@ namespace Soenneker.Ups.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("GeoPoliticalUnit") is { } nullNodeGeoPoliticalUnit && nullNodeGeoPoliticalUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoPoliticalUnit = null;
-            if (parseNode.GetChildNode("ServiceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
+            if (parseNode.GetChildNode("GeoPoliticalUnit") is null) { _explicitNullValueGeoPoliticalUnit = default!; _explicitNullProperties?.Remove("GeoPoliticalUnit"); }
+            else if (parseNode.GetChildNode("GeoPoliticalUnit") is { } nullNodeGeoPoliticalUnit && nullNodeGeoPoliticalUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoPoliticalUnit = null;
+            if (parseNode.GetChildNode("ServiceCode") is null) { _explicitNullValueServiceCode = default!; _explicitNullProperties?.Remove("ServiceCode"); }
+            else if (parseNode.GetChildNode("ServiceCode") is { } nullNodeServiceCode && nullNodeServiceCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>GeoPoliticalUnit. Required if ServiceGeoUnit container present.Valid value is &apos;002&apos; .</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GeoPoliticalUnit { get => _explicitNullValueGeoPoliticalUnit; set { _explicitNullValueGeoPoliticalUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoPoliticalUnit"); else _explicitNullProperties?.Remove("GeoPoliticalUnit"); } }
+        public string? GeoPoliticalUnit { get => _explicitNullValueGeoPoliticalUnit; set { _explicitNullValueGeoPoliticalUnit = value; AdditionalData?.Remove("GeoPoliticalUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoPoliticalUnit"); else _explicitNullProperties?.Remove("GeoPoliticalUnit"); } }
         private string? _explicitNullValueGeoPoliticalUnit = default!;
 #nullable restore
 #else
-        public string GeoPoliticalUnit { get => _explicitNullValueGeoPoliticalUnit; set { _explicitNullValueGeoPoliticalUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoPoliticalUnit"); else _explicitNullProperties?.Remove("GeoPoliticalUnit"); } }
+        public string GeoPoliticalUnit { get => _explicitNullValueGeoPoliticalUnit; set { _explicitNullValueGeoPoliticalUnit = value; AdditionalData?.Remove("GeoPoliticalUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoPoliticalUnit"); else _explicitNullProperties?.Remove("GeoPoliticalUnit"); } }
         private string _explicitNullValueGeoPoliticalUnit = default!;
 #endif
         /// <summary>Service Code. Required if ServiceGeoUnit Container present. Valid value is &apos;096&apos; .</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
+        public string? ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("ServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
         private string? _explicitNullValueServiceCode = default!;
 #nullable restore
 #else
-        public string ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
+        public string ServiceCode { get => _explicitNullValueServiceCode; set { _explicitNullValueServiceCode = value; AdditionalData?.Remove("ServiceCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServiceCode"); else _explicitNullProperties?.Remove("ServiceCode"); } }
         private string _explicitNullValueServiceCode = default!;
 #endif
         /// <summary>
