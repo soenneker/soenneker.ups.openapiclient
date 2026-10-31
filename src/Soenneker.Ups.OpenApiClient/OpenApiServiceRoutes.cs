@@ -6,8 +6,10 @@ internal static class OpenApiServiceRoutes
     private static readonly global::System.Collections.Generic.HashSet<string> KnownServers = new(global::System.StringComparer.OrdinalIgnoreCase) { "https://onlinetools.ups.com", "https://onlinetools.ups.com/api", "https://onlinetools.ups.com/api/account/pickup-info/v1", "https://onlinetools.ups.com/api/brokerage/v1", "https://onlinetools.ups.com/api/deliverydefense/external/v1.0", "https://onlinetools.ups.com/api/deliveryintercept/v2", "https://onlinetools.ups.com/api/digital-experience/preferences/v1", "https://onlinetools.ups.com/api/export-assure/v1", "https://onlinetools.ups.com/api/pin-mgmt-sys/v1", "https://onlinetools.ups.com/api/ship/tradedirect/v1", "https://onlinetools.ups.com/api/ship/v1", "https://onlinetools.ups.com/api/uppmanage/v1", "https://onlinetools.ups.com/inventory/v1", "https://onlinetools.ups.com/logistics/v1", "https://onlinetools.ups.com/security", "https://www.onlinetools.ups.com", "https://www.onlinetools.ups.com/api/forwarding/v1", "https://www.onlinetoolsuat.ups.com", "https://www.onlinetoolsuat.ups.com/api/forwarding/v1", "https://wwwcie.ups.com", "https://wwwcie.ups.com/api", "https://wwwcie.ups.com/api/account/pickup-info/v1", "https://wwwcie.ups.com/api/brokerage/v1", "https://wwwcie.ups.com/api/deliverydefense/external/v1.0", "https://wwwcie.ups.com/api/deliveryintercept/v2", "https://wwwcie.ups.com/api/digital-experience/preferences/v1", "https://wwwcie.ups.com/api/export-assure/v1", "https://wwwcie.ups.com/api/ship/v1", "https://wwwcie.ups.com/inventory/v1", "https://wwwcie.ups.com/logistics/v1", "https://wwwcie.ups.com/security" };
     internal static string Resolve(string template, string? configuredBaseUrl, string server, string path, bool rawUrl)
     {
-        var queryMatch = global::System.Text.RegularExpressions.Regex.Match(template, @"\{[?&]|\?");
-        int query = queryMatch.Success ? queryMatch.Index : -1;
+        int query = template.IndexOf('?');
+        if (query > 0 && template[query - 1] == '{') query--;
+        int continuation = template.IndexOf("{&", global::System.StringComparison.Ordinal);
+        if (continuation >= 0 && (query < 0 || continuation < query)) query = continuation;
         string suffix = query >= 0 ? template.Substring(query) : "";
         bool useService = server.Length > 0 && (string.IsNullOrEmpty(configuredBaseUrl) || KnownServers.Contains(configuredBaseUrl.TrimEnd('/')));
         if (useService && !rawUrl && server.Contains('{'))
