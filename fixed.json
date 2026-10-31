@@ -42799,6 +42799,80 @@
           "500": {
             "description": "Internal Server Error - Unexpected system error",
             "$ref": "#/components/responses/InternalServerError"
+          },
+          "200": {
+            "description": "Successful in creation of new order",
+            "headers": {
+              "BkndTransId": {
+                "$ref": "#/components/headers/UPSPickupPoints_BkndTransId"
+              },
+              "transactionSrc": {
+                "$ref": "#/components/headers/UPSPickupPoints_transactionSrc"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickupPointOrderResponse"
+                },
+                "examples": {
+                  "confirmPickupOrderSuccess": {
+                    "summary": "Successful pickup order confirmation",
+                    "value": {
+                      "response": {
+                        "transactionref": {
+                          "transactionID": "2a9f0f7a-6db4-4e37-8e24-a2cb9ea72c5d",
+                          "client": "xolt-ipc:XOLT",
+                          "locale": "en_US",
+                          "informationSourceCode": "GG",
+                          "sessionID": "5f9f4f5b-1be7-4c2d-8fca-3fcb0d6af46e"
+                        }
+                      },
+                      "pickupPoint": {
+                        "locationIdentifier": "123456789",
+                        "locationIdentifierCategoryCode": "01",
+                        "daySpecificDetails": [
+                          {
+                            "date": "2026-04-20",
+                            "dayOfWeek": "MONDAY",
+                            "pickupOption": "01",
+                            "scheduledPickupTime": "15:30:00",
+                            "closeHour": "18:00:00",
+                            "pickupRequestOrderType": "02",
+                            "pickupRequestStatus": "AP",
+                            "pickupRequestOrderAction": "PENDING_PICKUP",
+                            "pickupStatusDisplayCode": "01",
+                            "pickupStatusDisplayText": "Accepted",
+                            "howServicedDisplayCode": "01",
+                            "howServicedDisplayText": "Driver Pickup",
+                            "timeZoneNameShort": "EST",
+                            "timeZoneNameFull": "Eastern Standard Time"
+                          }
+                        ],
+                        "pickupPointAddress": {
+                          "pickupPointName": "UPS Access Point Example",
+                          "streetAddress": "123 Main St",
+                          "city": "Atlanta",
+                          "state": "GA",
+                          "postalCode": "30301",
+                          "country": "US"
+                        },
+                        "pickupPointType": "STD",
+                        "pickupPointClassificationCode": "001",
+                        "pickupPointStatus": "OP",
+                        "gmtOffset": -5,
+                        "daylightSavingsTimeIndicator": "Y",
+                        "timeZoneShort": "EST",
+                        "timeZoneLong": "Eastern Standard Time",
+                        "numberOfTrackingIds": 0
+                      },
+                      "prn": "41234567890123456789"
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -45064,6 +45138,29 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Request accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostResponse"
+                },
+                "examples": {
+                  "CloseOutResponse": {
+                    "value": {
+                      "transId": "4ce27ff5-8e17-4797-a8c1-089796db",
+                      "label": {
+                        "opTyp": "PNG",
+                        "lblNmbr": "MVpJU1VTMDE2NzIzODc4Mjc3",
+                        "lblData": "asdfhkjuiovrtyuiopfghjkxcv"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
