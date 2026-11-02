@@ -74,15 +74,15 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper Shipper { get => _explicitNullValueShipper; set { _explicitNullValueShipper = value; AdditionalData?.Remove("shipper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipper"); else _explicitNullProperties?.Remove("shipper"); } }
         private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper _explicitNullValueShipper = default!;
 #endif
-        /// <summary>The thirdParty property</summary>
+        /// <summary>Party information (shipper, consignee, or third party).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1? ThirdParty { get => _explicitNullValueThirdParty; set { _explicitNullValueThirdParty = value; AdditionalData?.Remove("thirdParty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdParty"); else _explicitNullProperties?.Remove("thirdParty"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1? _explicitNullValueThirdParty = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ThirdParty? ThirdParty { get => _explicitNullValueThirdParty; set { _explicitNullValueThirdParty = value; AdditionalData?.Remove("thirdParty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdParty"); else _explicitNullProperties?.Remove("thirdParty"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ThirdParty? _explicitNullValueThirdParty = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1 ThirdParty { get => _explicitNullValueThirdParty; set { _explicitNullValueThirdParty = value; AdditionalData?.Remove("thirdParty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdParty"); else _explicitNullProperties?.Remove("thirdParty"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1 _explicitNullValueThirdParty = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ThirdParty ThirdParty { get => _explicitNullValueThirdParty; set { _explicitNullValueThirdParty = value; AdditionalData?.Remove("thirdParty"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thirdParty"); else _explicitNullProperties?.Remove("thirdParty"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ThirdParty _explicitNullValueThirdParty = default!;
 #endif
         /// <summary>Unique transaction ID for debugging and tracking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,7 +123,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment.CreateFromDiscriminatorValue); } },
                 { "shipper", n => { Shipper = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper.CreateFromDiscriminatorValue); } },
-                { "thirdParty", n => { ThirdParty = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1>(global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1.CreateFromDiscriminatorValue); } },
+                { "thirdParty", n => { ThirdParty = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ThirdParty>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ThirdParty.CreateFromDiscriminatorValue); } },
                 { "transactionId", n => { TransactionId = n.GetStringValue(); } },
             };
         }
@@ -138,7 +138,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("language", Language);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipment>("shipment", Shipment);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1Shipper>("shipper", Shipper);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloPartyV1>("thirdParty", ThirdParty);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirFreightRateRequestV1ThirdParty>("thirdParty", ThirdParty);
             writer.WriteStringValue("transactionId", TransactionId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

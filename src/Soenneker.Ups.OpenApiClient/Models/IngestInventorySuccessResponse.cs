@@ -33,12 +33,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Array of errors (empty on success)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItemProperty2>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
-        private List<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItemProperty2>? _explicitNullValueErrors = default!;
+        public List<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItem>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItem>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItemProperty2> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
-        private List<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItemProperty2> _explicitNullValueErrors = default!;
+        public List<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItem> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItem> _explicitNullValueErrors = default!;
 #endif
         /// <summary>Indicates if the operation completed</summary>
         public bool? IsCompleted { get => _explicitNullValueIsCompleted; set { _explicitNullValueIsCompleted = value; AdditionalData?.Remove("isCompleted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isCompleted"); else _explicitNullProperties?.Remove("isCompleted"); } }
@@ -81,7 +81,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItemProperty2>(global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItemProperty2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItem>(global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "isCompleted", n => { IsCompleted = n.GetBoolValue(); } },
                 { "isFaulted", n => { IsFaulted = n.GetBoolValue(); } },
                 { "result", n => { Result = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InventoryResult>(global::Soenneker.Ups.OpenApiClient.Models.InventoryResult.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -94,7 +94,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItemProperty2>("errors", Errors);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.IngestInventorySuccessResponseErrorsItem>("errors", Errors);
             writer.WriteBoolValue("isCompleted", IsCompleted);
             writer.WriteBoolValue("isFaulted", IsFaulted);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.InventoryResult>("result", Result);

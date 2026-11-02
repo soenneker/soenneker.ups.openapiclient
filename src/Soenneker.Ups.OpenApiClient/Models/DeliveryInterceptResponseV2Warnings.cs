@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Ups.OpenApiClient.Models
 {
+    /// <summary>
+    /// A map containing warning codes and descriptions as key/value pairs.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class ApolloAirShipResponseV1ResponseProperty2 : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class DeliveryInterceptResponseV2Warnings : IAdditionalDataHolder, IParsable
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -22,21 +23,21 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings"/> and sets the default values.
         /// </summary>
-        public ApolloAirShipResponseV1ResponseProperty2()
+        public DeliveryInterceptResponseV2Warnings()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -30,12 +30,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A list of label detail fields and values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; AdditionalData?.Remove("details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2? _explicitNullValueDetails = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetails? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; AdditionalData?.Remove("details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetails? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2 Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; AdditionalData?.Remove("details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2 _explicitNullValueDetails = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetails Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; AdditionalData?.Remove("details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetails _explicitNullValueDetails = default!;
 #endif
         /// <summary>The output format for the label (e.g., PDF, ZPL, SVG).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2>(global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetails>(global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetails.CreateFromDiscriminatorValue); } },
                 { "format", n => { Format = n.GetStringValue(); } },
                 { "layout", n => { Layout = n.GetStringValue(); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetailsProperty2>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelRequestDetails>("details", Details);
             writer.WriteStringValue("format", Format);
             writer.WriteStringValue("layout", Layout);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

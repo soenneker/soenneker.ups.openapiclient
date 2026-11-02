@@ -91,12 +91,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>A map containing warning codes and descriptions as key/value pairs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty2? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty2? _explicitNullValueWarnings = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty2 Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty2 _explicitNullValueWarnings = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings _explicitNullValueWarnings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2"/> and sets the default values.
@@ -130,7 +130,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "subStatusCode", n => { SubStatusCode = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
                 { "transactionId", n => { TransactionId = n.GetStringValue(); } },
-                { "warnings", n => { Warnings = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty2>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty2.CreateFromDiscriminatorValue); } },
+                { "warnings", n => { Warnings = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings>(global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -146,7 +146,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("subStatusCode", SubStatusCode);
             writer.WriteBoolValue("success", Success);
             writer.WriteStringValue("transactionId", TransactionId);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2WarningsProperty2>("warnings", Warnings);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptResponseV2Warnings>("warnings", Warnings);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

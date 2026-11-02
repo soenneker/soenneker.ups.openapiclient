@@ -35,12 +35,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>* The Street field is required.* The City field is required.* The State field is required.* The ZipCode field is required.* Invalid Address.* Please enter address in appropriate format.* Invalid ZipCode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Error400ErrorsProperty2? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.Error400ErrorsProperty2? _explicitNullValueErrors = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.Error400Errors? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.Error400Errors? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Error400ErrorsProperty2 Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.Error400ErrorsProperty2 _explicitNullValueErrors = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.Error400Errors Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.Error400Errors _explicitNullValueErrors = default!;
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
@@ -102,7 +102,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Error400ErrorsProperty2>(global::Soenneker.Ups.OpenApiClient.Models.Error400ErrorsProperty2.CreateFromDiscriminatorValue); } },
+                { "errors", n => { Errors = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Error400Errors>(global::Soenneker.Ups.OpenApiClient.Models.Error400Errors.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetIntValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
@@ -116,7 +116,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Error400ErrorsProperty2>("errors", Errors);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Error400Errors>("errors", Errors);
             writer.WriteIntValue("status", Status);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("traceId", TraceId);

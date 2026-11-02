@@ -124,12 +124,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2? _explicitNullValueResponse = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1Response? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1Response? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2 Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2 _explicitNullValueResponse = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1Response Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; AdditionalData?.Remove("response"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1Response _explicitNullValueResponse = default!;
 #endif
         /// <summary>The shipment number associated with the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -174,7 +174,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "prqNumber", n => { PrqNumber = n.GetStringValue(); } },
                 { "prqStatus", n => { PrqStatus = n.GetStringValue(); } },
                 { "rates", n => { Rates = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateDetail>(global::Soenneker.Ups.OpenApiClient.Models.RateDetail.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2.CreateFromDiscriminatorValue); } },
+                { "response", n => { Response = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1Response>(global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1Response.CreateFromDiscriminatorValue); } },
                 { "shipmentNumber", n => { ShipmentNumber = n.GetStringValue(); } },
             };
         }
@@ -193,7 +193,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("prqNumber", PrqNumber);
             writer.WriteStringValue("prqStatus", PrqStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateDetail>("rates", Rates);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1ResponseProperty2>("response", Response);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloAirShipResponseV1Response>("response", Response);
             writer.WriteStringValue("shipmentNumber", ShipmentNumber);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

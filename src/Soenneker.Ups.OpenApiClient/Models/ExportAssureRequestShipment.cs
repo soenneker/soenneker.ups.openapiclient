@@ -112,8 +112,8 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public decimal? GrossWeight { get => _explicitNullValueGrossWeight; set { _explicitNullValueGrossWeight = value; AdditionalData?.Remove("grossWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grossWeight"); else _explicitNullProperties?.Remove("grossWeight"); } }
         private decimal? _explicitNullValueGrossWeight = default!;
         /// <summary>Gross weight unit. Only required if there is a value for `grossWeight`; If `grossWeight` is not specified, this value must equal `null`.</summary>
-        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnit? GrossWeightUnit { get => _explicitNullValueGrossWeightUnit; set { _explicitNullValueGrossWeightUnit = value; AdditionalData?.Remove("grossWeightUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grossWeightUnit"); else _explicitNullProperties?.Remove("grossWeightUnit"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnit? _explicitNullValueGrossWeightUnit = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnitAnyOf1? GrossWeightUnit { get => _explicitNullValueGrossWeightUnit; set { _explicitNullValueGrossWeightUnit = value; AdditionalData?.Remove("grossWeightUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grossWeightUnit"); else _explicitNullProperties?.Remove("grossWeightUnit"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnitAnyOf1? _explicitNullValueGrossWeightUnit = default!;
         /// <summary>A unique identifier assigned to the shipment as part of the API&apos;s compliance review process.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -234,7 +234,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "exporterName", n => { ExporterName = n.GetStringValue(); } },
                 { "exporterZipcode", n => { ExporterZipcode = n.GetStringValue(); } },
                 { "grossWeight", n => { GrossWeight = n.GetDecimalValue(); } },
-                { "grossWeightUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueGrossWeightUnit = default; _explicitNullProperties?.Remove("grossWeightUnit"); AdditionalData["grossWeightUnit"] = unknown; } else { GrossWeightUnit = parsed; AdditionalData.Remove("grossWeightUnit"); } } },
+                { "grossWeightUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnitAnyOf1>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueGrossWeightUnit = default; _explicitNullProperties?.Remove("grossWeightUnit"); AdditionalData["grossWeightUnit"] = unknown; } else { GrossWeightUnit = parsed; AdditionalData.Remove("grossWeightUnit"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "importCountryCode", n => { ImportCountryCode = n.GetStringValue(); } },
                 { "importerAccountNumber", n => { ImporterAccountNumber = n.GetStringValue(); } },
@@ -261,7 +261,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("exporterName", ExporterName);
             writer.WriteStringValue("exporterZipcode", ExporterZipcode);
             writer.WriteDecimalValue("grossWeight", GrossWeight);
-            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnit>("grossWeightUnit", GrossWeightUnit);
+            writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentRequestGrossWeightUnitAnyOf1>("grossWeightUnit", GrossWeightUnit);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("importCountryCode", ImportCountryCode);
             writer.WriteStringValue("importerAccountNumber", ImporterAccountNumber);
