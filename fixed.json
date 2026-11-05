@@ -84848,7 +84848,7 @@
         "properties": {
           "NotificationCode": {
             "maximum": 1,
-            "maxLength": 1,
+            "maxLength": 3,
             "minLength": 1,
             "type": "string",
             "description": "The type of notification requested.\n\nNote:\n- QVN Exception notification and return notification are not applicable to GFP.\n- QV In-transit and Return Notifications are only valid for ImportControl and Return shipment.\n- QV In-transit Notification is allowed for return shipments only.\n- QV Ship Notification is allowed for forward moving shipments only.\n\nValid values:\n- 5 - QV In-transit Notification\n- 6 - QV Ship Notification\n- 7 - QV Exception Notification\n- 8 - QV Delivery Notification\n- 2 - Return Notification or Label Creation Notification\n- 012 - Alternate Delivery Location Notification\n- 013 - UAP Shipper Notification."
@@ -87279,7 +87279,7 @@
               "SecurePINType"
             ],
             "type": "string",
-            "description": "Specifies the type of Secure PIN. Valid value is 2, which represents VDS (Shipper Generated PIN). This field is required."
+            "description": "Specifies the type of Secure PIN. This field is required. \u003Cbr/\u003EValid values:\u003Cbr/\u003E1 - VDU(UPS Generated PIN) \u003Cbr/\u003E2 - VDS(Shipper Generated PIN)"
           },
           "TokenValue": {
             "maximum": 1,
@@ -87300,7 +87300,7 @@
             "maxLength": 15,
             "minLength": 1,
             "type": "string",
-            "description": "Recipient phone number for notifications. Valid characters are digits (0-9) only. This field is optional."
+            "description": "Recipient phone number for notifications. Valid characters are digits (0-9) only. Required when the destination country is within the Europe region, otherwise optional."
           }
         },
         "description": "Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.",

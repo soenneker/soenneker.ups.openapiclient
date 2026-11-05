@@ -40,7 +40,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string RecipientEmail { get => _explicitNullValueRecipientEmail; set { _explicitNullValueRecipientEmail = value; AdditionalData?.Remove("RecipientEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecipientEmail"); else _explicitNullProperties?.Remove("RecipientEmail"); } }
         private string _explicitNullValueRecipientEmail = default!;
 #endif
-        /// <summary>Recipient phone number for notifications. Valid characters are digits (0-9) only. This field is optional.</summary>
+        /// <summary>Recipient phone number for notifications. Valid characters are digits (0-9) only. Required when the destination country is within the Europe region, otherwise optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecipientPhone { get => _explicitNullValueRecipientPhone; set { _explicitNullValueRecipientPhone = value; AdditionalData?.Remove("RecipientPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecipientPhone"); else _explicitNullProperties?.Remove("RecipientPhone"); } }
@@ -50,7 +50,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string RecipientPhone { get => _explicitNullValueRecipientPhone; set { _explicitNullValueRecipientPhone = value; AdditionalData?.Remove("RecipientPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecipientPhone"); else _explicitNullProperties?.Remove("RecipientPhone"); } }
         private string _explicitNullValueRecipientPhone = default!;
 #endif
-        /// <summary>Specifies the type of Secure PIN. Valid value is 2, which represents VDS (Shipper Generated PIN). This field is required.</summary>
+        /// <summary>Specifies the type of Secure PIN. This field is required. &lt;br/&gt;Valid values:&lt;br/&gt;1 - VDU(UPS Generated PIN) &lt;br/&gt;2 - VDS(Shipper Generated PIN)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SecurePINType { get => _explicitNullValueSecurePINType; set { _explicitNullValueSecurePINType = value; AdditionalData?.Remove("SecurePINType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurePINType"); else _explicitNullProperties?.Remove("SecurePINType"); } }
