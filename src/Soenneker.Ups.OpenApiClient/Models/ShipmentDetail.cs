@@ -129,12 +129,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ItemValue>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
-        private List<global::Soenneker.Ups.OpenApiClient.Models.ItemValue>? _explicitNullValueItems = default!;
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ForwardingItemValue>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ForwardingItemValue>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.ItemValue> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
-        private List<global::Soenneker.Ups.OpenApiClient.Models.ItemValue> _explicitNullValueItems = default!;
+        public List<global::Soenneker.Ups.OpenApiClient.Models.ForwardingItemValue> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.ForwardingItemValue> _explicitNullValueItems = default!;
 #endif
         /// <summary>Description of the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -227,7 +227,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "dropoffTime", n => { DropoffTime = n.GetStringValue(); } },
                 { "freightType", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailFreightType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFreightType = default; _explicitNullProperties?.Remove("freightType"); AdditionalData["freightType"] = unknown; } else { FreightType = parsed; AdditionalData.Remove("freightType"); } } },
                 { "isMetric", n => { IsMetric = n.GetBoolValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ItemValue>(global::Soenneker.Ups.OpenApiClient.Models.ItemValue.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ForwardingItemValue>(global::Soenneker.Ups.OpenApiClient.Models.ForwardingItemValue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "orderDescription", n => { OrderDescription = n.GetStringValue(); } },
                 { "paymentType", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPaymentType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePaymentType = default; _explicitNullProperties?.Remove("paymentType"); AdditionalData["paymentType"] = unknown; } else { PaymentType = parsed; AdditionalData.Remove("paymentType"); } } },
                 { "pickupDate", n => { PickupDate = n.GetDateValue(); } },
@@ -255,7 +255,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("dropoffTime", DropoffTime);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailFreightType>("freightType", FreightType);
             writer.WriteBoolValue("isMetric", IsMetric);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ItemValue>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ForwardingItemValue>("items", Items);
             writer.WriteStringValue("orderDescription", OrderDescription);
             writer.WriteEnumValue<global::Soenneker.Ups.OpenApiClient.Models.ShipmentDetailPaymentType>("paymentType", PaymentType);
             writer.WriteDateValue("pickupDate", PickupDate);

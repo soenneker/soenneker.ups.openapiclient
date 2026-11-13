@@ -42,12 +42,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The package property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Package>? Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; AdditionalData?.Remove("package"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package"); else _explicitNullProperties?.Remove("package"); } }
-        private List<global::Soenneker.Ups.OpenApiClient.Models.Package>? _explicitNullValuePackage = default!;
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyPackage>? Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; AdditionalData?.Remove("package"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package"); else _explicitNullProperties?.Remove("package"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyPackage>? _explicitNullValuePackage = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Ups.OpenApiClient.Models.Package> Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; AdditionalData?.Remove("package"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package"); else _explicitNullProperties?.Remove("package"); } }
-        private List<global::Soenneker.Ups.OpenApiClient.Models.Package> _explicitNullValuePackage = default!;
+        public List<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyPackage> Package { get => _explicitNullValuePackage; set { _explicitNullValuePackage = value; AdditionalData?.Remove("package"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package"); else _explicitNullProperties?.Remove("package"); } }
+        private List<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyPackage> _explicitNullValuePackage = default!;
 #endif
         /// <summary>The relationship of the user to the package(s) in the shipment. No value means that the user has no relationship to the package. Note that this check is only done when the request contains the &apos;Username&apos; and package rights checking is performed. Valid values:&lt;br /&gt;&apos;MYC_HOME&apos; - My Choice for Home&lt;br /&gt;&apos;MYC_BUS_OUTBOUND&apos; - My Choice for Business Outbound&lt;br /&gt;&apos;MYC_BUS_INBOUND&apos; - My Choice for Business Inbound&lt;br /&gt;&apos;SHIPPER&apos; - Shipper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "inquiryNumber", n => { InquiryNumber = n.GetStringValue(); } },
-                { "package", n => { Package = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Package>(global::Soenneker.Ups.OpenApiClient.Models.Package.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "package", n => { Package = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyPackage>(global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyPackage.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "userRelation", n => { UserRelation = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "warnings", n => { Warnings = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Warning>(global::Soenneker.Ups.OpenApiClient.Models.Warning.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -108,7 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("inquiryNumber", InquiryNumber);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Package>("package", Package);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.TrackingReadyPackage>("package", Package);
             writer.WriteCollectionOfPrimitiveValues<string>("userRelation", UserRelation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Warning>("warnings", Warnings);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

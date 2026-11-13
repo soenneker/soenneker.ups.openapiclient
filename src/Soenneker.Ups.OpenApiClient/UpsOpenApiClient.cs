@@ -12,15 +12,20 @@ using Soenneker.Ups.OpenApiClient.CommerceGuard;
 using Soenneker.Ups.OpenApiClient.CustomsDetailV2;
 using Soenneker.Ups.OpenApiClient.DangerousGoods;
 using Soenneker.Ups.OpenApiClient.DangerousGoodsReady;
+using Soenneker.Ups.OpenApiClient.DeliveryAPIs;
 using Soenneker.Ups.OpenApiClient.DeliveryDefense;
 using Soenneker.Ups.OpenApiClient.DeliveryDefenseReady;
 using Soenneker.Ups.OpenApiClient.DeliveryIntercept;
+using Soenneker.Ups.OpenApiClient.EligibilityAPIs;
 using Soenneker.Ups.OpenApiClient.Forwarding;
 using Soenneker.Ups.OpenApiClient.GlobalCheckout;
 using Soenneker.Ups.OpenApiClient.InteractiveDescriptionGuidance;
 using Soenneker.Ups.OpenApiClient.LandedCost;
 using Soenneker.Ups.OpenApiClient.LandedCostReady;
+using Soenneker.Ups.OpenApiClient.LocationAPI;
 using Soenneker.Ups.OpenApiClient.Locator;
+using Soenneker.Ups.OpenApiClient.LynksAPIs;
+using Soenneker.Ups.OpenApiClient.LynkupWorkflowSolutionsAPIs;
 using Soenneker.Ups.OpenApiClient.OAuthAuthCode;
 using Soenneker.Ups.OpenApiClient.OAuthAuthCodeReady;
 using Soenneker.Ups.OpenApiClient.OAuthClientCredentials;
@@ -28,18 +33,24 @@ using Soenneker.Ups.OpenApiClient.OAuthClientCredentialsReady;
 using Soenneker.Ups.OpenApiClient.Paperless;
 using Soenneker.Ups.OpenApiClient.PaperlessReady;
 using Soenneker.Ups.OpenApiClient.Pickup;
+using Soenneker.Ups.OpenApiClient.PickupAPI;
 using Soenneker.Ups.OpenApiClient.PickupNotificationPreferences;
 using Soenneker.Ups.OpenApiClient.PreNotification;
 using Soenneker.Ups.OpenApiClient.PreNotificationReady;
 using Soenneker.Ups.OpenApiClient.ProtectedDeliveryToken;
 using Soenneker.Ups.OpenApiClient.QuantumView;
 using Soenneker.Ups.OpenApiClient.QuantumViewReady;
+using Soenneker.Ups.OpenApiClient.RatesAPI;
 using Soenneker.Ups.OpenApiClient.Rating;
+using Soenneker.Ups.OpenApiClient.ReturnsAPI;
+using Soenneker.Ups.OpenApiClient.ReturnsInvoiceAPI;
 using Soenneker.Ups.OpenApiClient.SCSIngestInventory;
 using Soenneker.Ups.OpenApiClient.SCSIngestLogistics;
 using Soenneker.Ups.OpenApiClient.Shipping;
+using Soenneker.Ups.OpenApiClient.ShippingOrderAPI;
 using Soenneker.Ups.OpenApiClient.SmartPickupAccountManagement;
 using Soenneker.Ups.OpenApiClient.TimeInTransit;
+using Soenneker.Ups.OpenApiClient.TrackerAPI;
 using Soenneker.Ups.OpenApiClient.Tracking;
 using Soenneker.Ups.OpenApiClient.TrackingReady;
 using Soenneker.Ups.OpenApiClient.TradeDirect;
@@ -93,6 +104,11 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.DangerousGoodsReady.DangerousGoodsReadyRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The DeliveryAPIs property</summary>
+        public global::Soenneker.Ups.OpenApiClient.DeliveryAPIs.DeliveryAPIsRequestBuilder DeliveryAPIs
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.DeliveryAPIs.DeliveryAPIsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The DeliveryDefense property</summary>
         public global::Soenneker.Ups.OpenApiClient.DeliveryDefense.DeliveryDefenseRequestBuilder DeliveryDefense
         {
@@ -107,6 +123,11 @@ namespace Soenneker.Ups.OpenApiClient
         public global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.DeliveryInterceptRequestBuilder DeliveryIntercept
         {
             get => new global::Soenneker.Ups.OpenApiClient.DeliveryIntercept.DeliveryInterceptRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The EligibilityAPIs property</summary>
+        public global::Soenneker.Ups.OpenApiClient.EligibilityAPIs.EligibilityAPIsRequestBuilder EligibilityAPIs
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.EligibilityAPIs.EligibilityAPIsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The Forwarding property</summary>
         public global::Soenneker.Ups.OpenApiClient.Forwarding.ForwardingRequestBuilder Forwarding
@@ -133,10 +154,25 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.LandedCostReady.LandedCostReadyRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The LocationAPI property</summary>
+        public global::Soenneker.Ups.OpenApiClient.LocationAPI.LocationAPIRequestBuilder LocationAPI
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.LocationAPI.LocationAPIRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The Locator property</summary>
         public global::Soenneker.Ups.OpenApiClient.Locator.LocatorRequestBuilder Locator
         {
             get => new global::Soenneker.Ups.OpenApiClient.Locator.LocatorRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The LynksAPIs property</summary>
+        public global::Soenneker.Ups.OpenApiClient.LynksAPIs.LynksAPIsRequestBuilder LynksAPIs
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.LynksAPIs.LynksAPIsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The LynkupWorkflowSolutionsAPIs property</summary>
+        public global::Soenneker.Ups.OpenApiClient.LynkupWorkflowSolutionsAPIs.LynkupWorkflowSolutionsAPIsRequestBuilder LynkupWorkflowSolutionsAPIs
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.LynkupWorkflowSolutionsAPIs.LynkupWorkflowSolutionsAPIsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The OAuthAuthCode property</summary>
         public global::Soenneker.Ups.OpenApiClient.OAuthAuthCode.OAuthAuthCodeRequestBuilder OAuthAuthCode
@@ -173,6 +209,11 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.Pickup.PickupRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The PickupAPI property</summary>
+        public global::Soenneker.Ups.OpenApiClient.PickupAPI.PickupAPIRequestBuilder PickupAPI
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.PickupAPI.PickupAPIRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The PickupNotificationPreferences property</summary>
         public global::Soenneker.Ups.OpenApiClient.PickupNotificationPreferences.PickupNotificationPreferencesRequestBuilder PickupNotificationPreferences
         {
@@ -203,10 +244,25 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.QuantumViewReady.QuantumViewReadyRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The RatesAPI property</summary>
+        public global::Soenneker.Ups.OpenApiClient.RatesAPI.RatesAPIRequestBuilder RatesAPI
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.RatesAPI.RatesAPIRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The Rating property</summary>
         public global::Soenneker.Ups.OpenApiClient.Rating.RatingRequestBuilder Rating
         {
             get => new global::Soenneker.Ups.OpenApiClient.Rating.RatingRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ReturnsAPI property</summary>
+        public global::Soenneker.Ups.OpenApiClient.ReturnsAPI.ReturnsAPIRequestBuilder ReturnsAPI
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.ReturnsAPI.ReturnsAPIRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The ReturnsInvoiceAPI property</summary>
+        public global::Soenneker.Ups.OpenApiClient.ReturnsInvoiceAPI.ReturnsInvoiceAPIRequestBuilder ReturnsInvoiceAPI
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.ReturnsInvoiceAPI.ReturnsInvoiceAPIRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The SCSIngestInventory property</summary>
         public global::Soenneker.Ups.OpenApiClient.SCSIngestInventory.SCSIngestInventoryRequestBuilder SCSIngestInventory
@@ -223,6 +279,11 @@ namespace Soenneker.Ups.OpenApiClient
         {
             get => new global::Soenneker.Ups.OpenApiClient.Shipping.ShippingRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The ShippingOrderAPI property</summary>
+        public global::Soenneker.Ups.OpenApiClient.ShippingOrderAPI.ShippingOrderAPIRequestBuilder ShippingOrderAPI
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.ShippingOrderAPI.ShippingOrderAPIRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The SmartPickupAccountManagement property</summary>
         public global::Soenneker.Ups.OpenApiClient.SmartPickupAccountManagement.SmartPickupAccountManagementRequestBuilder SmartPickupAccountManagement
         {
@@ -232,6 +293,11 @@ namespace Soenneker.Ups.OpenApiClient
         public global::Soenneker.Ups.OpenApiClient.TimeInTransit.TimeInTransitRequestBuilder TimeInTransit
         {
             get => new global::Soenneker.Ups.OpenApiClient.TimeInTransit.TimeInTransitRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The TrackerAPI property</summary>
+        public global::Soenneker.Ups.OpenApiClient.TrackerAPI.TrackerAPIRequestBuilder TrackerAPI
+        {
+            get => new global::Soenneker.Ups.OpenApiClient.TrackerAPI.TrackerAPIRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The Tracking property</summary>
         public global::Soenneker.Ups.OpenApiClient.Tracking.TrackingRequestBuilder Tracking

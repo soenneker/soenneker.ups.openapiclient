@@ -42,12 +42,12 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <summary>The address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.Address? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.Address? _explicitNullValueAddress = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.ForwardingAddress? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ForwardingAddress? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Ups.OpenApiClient.Models.Address Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.Address _explicitNullValueAddress = default!;
+        public global::Soenneker.Ups.OpenApiClient.Models.ForwardingAddress Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Ups.OpenApiClient.Models.ForwardingAddress _explicitNullValueAddress = default!;
 #endif
         /// <summary>The contactDetail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "accountNumber", n => { AccountNumber = n.GetStringValue(); } },
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Address>(global::Soenneker.Ups.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ForwardingAddress>(global::Soenneker.Ups.OpenApiClient.Models.ForwardingAddress.CreateFromDiscriminatorValue); } },
                 { "contactDetail", n => { ContactDetail = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactDetail>(global::Soenneker.Ups.OpenApiClient.Models.ContactDetail.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -108,7 +108,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("accountNumber", AccountNumber);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.Address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ForwardingAddress>("address", Address);
             writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ContactDetail>("contactDetail", ContactDetail);
             writer.WriteStringValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
