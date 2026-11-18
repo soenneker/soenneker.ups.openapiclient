@@ -91,7 +91,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "docFormat", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestDocFormat>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDocFormat = default; _explicitNullProperties?.Remove("docFormat"); AdditionalData["docFormat"] = unknown; } else { DocFormat = parsed; AdditionalData.Remove("docFormat"); } } },
                 { "requestedDoc", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DocumentRequestRequestedDoc>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRequestedDoc = default; _explicitNullProperties?.Remove("requestedDoc"); AdditionalData["requestedDoc"] = unknown; } else { RequestedDoc = parsed; AdditionalData.Remove("requestedDoc"); } } },

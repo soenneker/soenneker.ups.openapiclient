@@ -84,7 +84,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "cancelEligibility", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCancelEligibility = default; _explicitNullProperties?.Remove("cancelEligibility"); AdditionalData["cancelEligibility"] = unknown; } else { CancelEligibility = parsed; AdditionalData.Remove("cancelEligibility"); } } },
                 { "createEligibility", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.DeliveryInterceptEligibilityValueV2>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCreateEligibility = default; _explicitNullProperties?.Remove("createEligibility"); AdditionalData["createEligibility"] = unknown; } else { CreateEligibility = parsed; AdditionalData.Remove("createEligibility"); } } },

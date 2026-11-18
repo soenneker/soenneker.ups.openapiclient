@@ -544,7 +544,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(44)
             {
                 { "actualDeliveryTime", n => { ActualDeliveryTime = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LynkupDeliveryResponseV1ActualDeliveryTime>(global::Soenneker.Ups.OpenApiClient.Models.LynkupDeliveryResponseV1ActualDeliveryTime.CreateFromDiscriminatorValue); } },
                 { "actualPickupTime", n => { ActualPickupTime = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LynkupDeliveryResponseV1ActualPickupTime>(global::Soenneker.Ups.OpenApiClient.Models.LynkupDeliveryResponseV1ActualPickupTime.CreateFromDiscriminatorValue); } },

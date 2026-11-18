@@ -117,7 +117,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "AddressClassification", n => { AddressClassification = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavResponseAddressClassification>(global::Soenneker.Ups.OpenApiClient.Models.AddressValidationXavResponseAddressClassification.CreateFromDiscriminatorValue); } },
                 { "AmbiguousAddressIndicator", n => { AmbiguousAddressIndicator = n.GetStringValue(); } },

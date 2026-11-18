@@ -93,7 +93,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "DiscountAmount", n => { DiscountAmount = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TransportationChargesDiscountAmount>(global::Soenneker.Ups.OpenApiClient.Models.TransportationChargesDiscountAmount.CreateFromDiscriminatorValue); } },
                 { "DiscountPercentage", n => { DiscountPercentage = n.GetStringValue(); } },

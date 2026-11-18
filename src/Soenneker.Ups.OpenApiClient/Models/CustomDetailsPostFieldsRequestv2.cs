@@ -183,7 +183,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "actionType", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2ActionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueActionType = default; _explicitNullProperties?.Remove("actionType"); AdditionalData["actionType"] = unknown; } else { ActionType = parsed; AdditionalData.Remove("actionType"); } } },
                 { "commerceModel", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.CustomDetailsPostFieldsRequestv2CommerceModel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCommerceModel = default; _explicitNullProperties?.Remove("commerceModel"); AdditionalData["commerceModel"] = unknown; } else { CommerceModel = parsed; AdditionalData.Remove("commerceModel"); } } },

@@ -117,7 +117,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "Form", n => { Form = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelResultsForm>(global::Soenneker.Ups.OpenApiClient.Models.LabelResultsForm.CreateFromDiscriminatorValue); } },
                 { "LabelImage", n => { LabelImage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage>(global::Soenneker.Ups.OpenApiClient.Models.LabelResultsLabelImage.CreateFromDiscriminatorValue); } },

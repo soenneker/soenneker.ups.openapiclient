@@ -110,7 +110,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "additionalProperties", n => { AdditionalProperties = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "gcTotal", n => { GcTotal = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse>(global::Soenneker.Ups.OpenApiClient.Models.BsisV1TotalResponse.CreateFromDiscriminatorValue)?.AsList(); } },

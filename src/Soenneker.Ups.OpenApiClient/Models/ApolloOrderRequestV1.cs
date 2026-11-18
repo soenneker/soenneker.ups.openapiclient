@@ -129,7 +129,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "consignee", n => { Consignee = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Consignee.CreateFromDiscriminatorValue); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label>(global::Soenneker.Ups.OpenApiClient.Models.ApolloOrderRequestV1Label.CreateFromDiscriminatorValue); } },

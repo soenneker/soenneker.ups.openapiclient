@@ -158,7 +158,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "createdAt", n => { CreatedAt = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ListPickupsRequestCreatedAt>(global::Soenneker.Ups.OpenApiClient.Models.ListPickupsRequestCreatedAt.CreateFromDiscriminatorValue); } },
                 { "deliveryTime", n => { DeliveryTime = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ListPickupsRequestDeliveryTime>(global::Soenneker.Ups.OpenApiClient.Models.ListPickupsRequestDeliveryTime.CreateFromDiscriminatorValue); } },

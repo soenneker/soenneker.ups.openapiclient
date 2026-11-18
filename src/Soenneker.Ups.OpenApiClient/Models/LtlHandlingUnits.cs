@@ -91,7 +91,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "Dimensions", n => { Dimensions = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.LtlDimensions>(global::Soenneker.Ups.OpenApiClient.Models.LtlDimensions.CreateFromDiscriminatorValue); } },
                 { "FreightClass", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.LtlHandlingUnitsFreightClass>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFreightClass = default; _explicitNullProperties?.Remove("FreightClass"); AdditionalData["FreightClass"] = unknown; } else { FreightClass = parsed; AdditionalData.Remove("FreightClass"); } } },

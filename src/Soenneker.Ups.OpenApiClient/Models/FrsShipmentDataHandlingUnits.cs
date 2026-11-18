@@ -92,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "AdjustedHeight", n => { AdjustedHeight = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsAdjustedHeight>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsAdjustedHeight.CreateFromDiscriminatorValue); } },
                 { "Dimensions", n => { Dimensions = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsDimensions>(global::Soenneker.Ups.OpenApiClient.Models.HandlingUnitsDimensions.CreateFromDiscriminatorValue); } },

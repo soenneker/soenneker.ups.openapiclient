@@ -141,7 +141,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "Address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipperAddress>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewShipperAddress.CreateFromDiscriminatorValue); } },
                 { "AttentionName", n => { AttentionName = n.GetStringValue(); } },

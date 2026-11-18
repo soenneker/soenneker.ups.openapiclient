@@ -98,7 +98,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "controlDetails", n => { ControlDetails = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ControlDetails>(global::Soenneker.Ups.OpenApiClient.Models.ControlDetails.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "controlType", n => { ControlType = n.GetStringValue(); } },

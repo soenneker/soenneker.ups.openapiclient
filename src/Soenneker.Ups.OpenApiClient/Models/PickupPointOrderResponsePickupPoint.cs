@@ -199,7 +199,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "communicationMediaTypeList", n => { CommunicationMediaTypeList = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.CommunicationMediaType>(global::Soenneker.Ups.OpenApiClient.Models.CommunicationMediaType.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "daySpecificDetails", n => { DaySpecificDetails = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DaySpecificDetail>(global::Soenneker.Ups.OpenApiClient.Models.DaySpecificDetail.CreateFromDiscriminatorValue)?.AsList(); } },

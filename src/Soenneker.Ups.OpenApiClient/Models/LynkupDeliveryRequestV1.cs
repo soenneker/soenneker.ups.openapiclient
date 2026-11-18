@@ -261,7 +261,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(21)
             {
                 { "content", n => { Content = n.GetCollectionOfEnumValues<global::Soenneker.Ups.OpenApiClient.Models.LynkupDeliveryRequestV1ContentItem>()?.AsList(); } },
                 { "createdDate", n => { CreatedDate = n.GetDoubleValue(); } },

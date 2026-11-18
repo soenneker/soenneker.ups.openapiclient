@@ -181,7 +181,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(16)
             {
                 { "alVersion", n => { AlVersion = n.GetIntValue(); } },
                 { "brokerageFeeItems", n => { BrokerageFeeItems = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems>(global::Soenneker.Ups.OpenApiClient.Models.BrokerageFeeItems.CreateFromDiscriminatorValue)?.AsList(); } },

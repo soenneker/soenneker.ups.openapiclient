@@ -79,7 +79,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "DeliveryOptions", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationDeliveryOptions>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDeliveryOptions = default; _explicitNullProperties?.Remove("DeliveryOptions"); AdditionalData["DeliveryOptions"] = unknown; } else { DeliveryOptions = parsed; AdditionalData.Remove("DeliveryOptions"); } } },
                 { "PickUpDate", n => { PickUpDate = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItem>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupPickupInfoV1WeekendPickupInformationPickUpDateItem.CreateFromDiscriminatorValue)?.AsList(); } },

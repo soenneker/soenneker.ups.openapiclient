@@ -104,7 +104,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "quoteData", n => { QuoteData = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.QuoteData>(global::Soenneker.Ups.OpenApiClient.Models.QuoteData.CreateFromDiscriminatorValue); } },
                 { "requestType", n => { RequestType = n.GetStringValue(); } },

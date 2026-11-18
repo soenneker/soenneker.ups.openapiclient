@@ -165,7 +165,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "ChargeDetail", n => { ChargeDetail = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.RateResultChargeDetail>(global::Soenneker.Ups.OpenApiClient.Models.RateResultChargeDetail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "CurrencyCode", n => { CurrencyCode = n.GetStringValue(); } },

@@ -131,7 +131,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.BoundaryRequestBoundariesItemAddress>(global::Soenneker.Ups.OpenApiClient.Models.BoundaryRequestBoundariesItemAddress.CreateFromDiscriminatorValue); } },
                 { "boundary", n => { Boundary = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.BoundaryRequestBoundariesItemBoundaryItem>(global::Soenneker.Ups.OpenApiClient.Models.BoundaryRequestBoundariesItemBoundaryItem.CreateFromDiscriminatorValue)?.AsList(); } },

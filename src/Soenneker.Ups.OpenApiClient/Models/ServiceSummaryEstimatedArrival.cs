@@ -153,7 +153,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "Arrival", n => { Arrival = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalArrival>(global::Soenneker.Ups.OpenApiClient.Models.EstimatedArrivalArrival.CreateFromDiscriminatorValue); } },
                 { "BusinessDaysInTransit", n => { BusinessDaysInTransit = n.GetStringValue(); } },

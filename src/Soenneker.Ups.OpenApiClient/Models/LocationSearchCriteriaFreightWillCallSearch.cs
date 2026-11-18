@@ -105,7 +105,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "DayOfWeekCode", n => { DayOfWeekCode = n.GetStringValue(); } },
                 { "FacilityAddress", n => { FacilityAddress = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.FreightWillCallSearchFacilityAddress>(global::Soenneker.Ups.OpenApiClient.Models.FreightWillCallSearchFacilityAddress.CreateFromDiscriminatorValue)?.AsList(); } },

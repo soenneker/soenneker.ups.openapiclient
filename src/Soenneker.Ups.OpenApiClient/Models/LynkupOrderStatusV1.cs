@@ -92,7 +92,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "orderId", n => { OrderId = n.GetStringValue(); } },
                 { "orderStatus", n => { OrderStatus = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.LynkupOrderStatusV1OrderStatusItem>(global::Soenneker.Ups.OpenApiClient.Models.LynkupOrderStatusV1OrderStatusItem.CreateFromDiscriminatorValue)?.AsList(); } },

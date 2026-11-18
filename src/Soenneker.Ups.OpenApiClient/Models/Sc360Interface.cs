@@ -156,7 +156,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "docFlow", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.Sc360InterfaceDocFlow>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDocFlow = default; _explicitNullProperties?.Remove("docFlow"); AdditionalData["docFlow"] = unknown; } else { DocFlow = parsed; AdditionalData.Remove("docFlow"); } } },
                 { "docId", n => { DocId = n.GetStringValue(); } },

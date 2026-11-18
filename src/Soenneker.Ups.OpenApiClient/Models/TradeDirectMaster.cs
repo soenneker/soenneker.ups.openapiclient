@@ -110,7 +110,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "NotificationBeforeDelivery", n => { NotificationBeforeDelivery = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDelivery>(global::Soenneker.Ups.OpenApiClient.Models.TradeDirectNotificationBeforeDelivery.CreateFromDiscriminatorValue); } },
                 { "Pickup", n => { Pickup = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.MasterPickup>(global::Soenneker.Ups.OpenApiClient.Models.MasterPickup.CreateFromDiscriminatorValue); } },

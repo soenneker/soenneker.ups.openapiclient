@@ -129,7 +129,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "CN22Content", n => { CN22Content = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content>(global::Soenneker.Ups.OpenApiClient.Models.Cn22FormCn22Content.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "CN22OtherDescription", n => { CN22OtherDescription = n.GetStringValue(); } },

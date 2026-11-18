@@ -117,7 +117,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "BaseServiceCharge", n => { BaseServiceCharge = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.NegotiatedRateChargesBaseServiceCharge>(global::Soenneker.Ups.OpenApiClient.Models.NegotiatedRateChargesBaseServiceCharge.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "ItemizedCharges", n => { ItemizedCharges = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.NegotiatedRateChargesItemizedCharges>(global::Soenneker.Ups.OpenApiClient.Models.NegotiatedRateChargesItemizedCharges.CreateFromDiscriminatorValue)?.AsList(); } },

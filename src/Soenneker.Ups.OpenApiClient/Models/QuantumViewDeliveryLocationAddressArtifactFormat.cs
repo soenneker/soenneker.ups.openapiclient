@@ -225,7 +225,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "AddressExtendedInformation", n => { AddressExtendedInformation = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.QuantumViewAddressArtifactFormatAddressExtendedInformation>(global::Soenneker.Ups.OpenApiClient.Models.QuantumViewAddressArtifactFormatAddressExtendedInformation.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "BuildingName", n => { BuildingName = n.GetStringValue(); } },

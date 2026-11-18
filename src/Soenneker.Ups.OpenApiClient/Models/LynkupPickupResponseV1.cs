@@ -350,7 +350,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(29)
             {
                 { "actualPickupTime", n => { ActualPickupTime = n.GetDoubleValue(); } },
                 { "alternatePickupPerson", n => { AlternatePickupPerson = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PickupApiCustomer>(global::Soenneker.Ups.OpenApiClient.Models.PickupApiCustomer.CreateFromDiscriminatorValue); } },

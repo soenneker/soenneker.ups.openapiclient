@@ -93,7 +93,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "Alert", n => { Alert = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsReadyResponseAlert>(global::Soenneker.Ups.OpenApiClient.Models.DangerousGoodsReadyResponseAlert.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "AlertDetail", n => { AlertDetail = n.GetCollectionOfObjectValues<global::Soenneker.Ups.OpenApiClient.Models.ResponseAlertDetail>(global::Soenneker.Ups.OpenApiClient.Models.ResponseAlertDetail.CreateFromDiscriminatorValue)?.AsList(); } },

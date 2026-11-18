@@ -72,7 +72,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "AccountInfo", n => { AccountInfo = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo>(global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAccountInfo.CreateFromDiscriminatorValue); } },
                 { "Action", n => { var parsed = n.GetEnumValue<global::Soenneker.Ups.OpenApiClient.Models.SmartPickupRequestV1SmartPickupRequestAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("Action"); AdditionalData["Action"] = unknown; } else { Action = parsed; AdditionalData.Remove("Action"); } } },

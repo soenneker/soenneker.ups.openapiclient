@@ -93,7 +93,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "EMailMessage", n => { EMailMessage = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationEMailMessage>(global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationEMailMessage.CreateFromDiscriminatorValue); } },
                 { "Locale", n => { Locale = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationLocale>(global::Soenneker.Ups.OpenApiClient.Models.PreAlertNotificationLocale.CreateFromDiscriminatorValue); } },
