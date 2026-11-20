@@ -70,8 +70,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             else if (parseNode.GetChildNode("SDLShipmentIndicator") is { } nullNodeSDLShipmentIndicator && nullNodeSDLShipmentIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SDLShipmentIndicator = null;
             if (parseNode.GetChildNode("UPScarbonneutralIndicator") is null) { _explicitNullValueUPScarbonneutralIndicator = default!; _explicitNullProperties?.Remove("UPScarbonneutralIndicator"); }
             else if (parseNode.GetChildNode("UPScarbonneutralIndicator") is { } nullNodeUPScarbonneutralIndicator && nullNodeUPScarbonneutralIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UPScarbonneutralIndicator = null;
-            if (parseNode.GetChildNode("VerifiedDelivery") is null) { _explicitNullValueVerifiedDelivery = default!; _explicitNullProperties?.Remove("VerifiedDelivery"); }
-            else if (parseNode.GetChildNode("VerifiedDelivery") is { } nullNodeVerifiedDelivery && nullNodeVerifiedDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedDelivery = null;
         }
 
         /// <summary>Access Point COD indicates COD is requested for a shipment.  Valid only for &quot;01 - Hold For Pickup At UPS Access Point&quot; Shipment Indication type. Shipment Access Point COD is valid only for countries or territories within E.U. Not valid with (Shipment) COD. Not available to shipment with return service.</summary>
@@ -336,16 +334,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string UPScarbonneutralIndicator { get => _explicitNullValueUPScarbonneutralIndicator; set { _explicitNullValueUPScarbonneutralIndicator = value; AdditionalData?.Remove("UPScarbonneutralIndicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UPScarbonneutralIndicator"); else _explicitNullProperties?.Remove("UPScarbonneutralIndicator"); } }
         private string _explicitNullValueUPScarbonneutralIndicator = default!;
 #endif
-        /// <summary>Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery? VerifiedDelivery { get => _explicitNullValueVerifiedDelivery; set { _explicitNullValueVerifiedDelivery = value; AdditionalData?.Remove("VerifiedDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerifiedDelivery"); else _explicitNullProperties?.Remove("VerifiedDelivery"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery? _explicitNullValueVerifiedDelivery = default!;
-#nullable restore
-#else
-        public global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery VerifiedDelivery { get => _explicitNullValueVerifiedDelivery; set { _explicitNullValueVerifiedDelivery = value; AdditionalData?.Remove("VerifiedDelivery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerifiedDelivery"); else _explicitNullProperties?.Remove("VerifiedDelivery"); } }
-        private global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery _explicitNullValueVerifiedDelivery = default!;
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentShipmentServiceOptions"/> and sets the default values.
         /// </summary>
@@ -369,7 +357,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(27)
+            return new Dictionary<string, Action<IParseNode>>(26)
             {
                 { "AccessPointCOD", n => { AccessPointCOD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCod>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsAccessPointCod.CreateFromDiscriminatorValue); } },
                 { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCod>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsCod.CreateFromDiscriminatorValue); } },
@@ -397,7 +385,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
                 { "SaturdayDeliveryIndicator", n => { SaturdayDeliveryIndicator = n.GetStringValue(); } },
                 { "SaturdayPickupIndicator", n => { SaturdayPickupIndicator = n.GetStringValue(); } },
                 { "UPScarbonneutralIndicator", n => { UPScarbonneutralIndicator = n.GetStringValue(); } },
-                { "VerifiedDelivery", n => { VerifiedDelivery = n.GetObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery>(global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -433,7 +420,6 @@ namespace Soenneker.Ups.OpenApiClient.Models
             writer.WriteStringValue("SaturdayPickupIndicator", SaturdayPickupIndicator);
             writer.WriteStringValue("SDLShipmentIndicator", SDLShipmentIndicator);
             writer.WriteStringValue("UPScarbonneutralIndicator", UPScarbonneutralIndicator);
-            writer.WriteObjectValue<global::Soenneker.Ups.OpenApiClient.Models.ShippingShipmentServiceOptionsVerifiedDelivery>("VerifiedDelivery", VerifiedDelivery);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

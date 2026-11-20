@@ -114946,9 +114946,6 @@
             "maximum": 1,
             "type": "string",
             "description": "Presence/Absence indicator. True if present; false otherwise. Any value is ignored. If present, indicates that the customer would like items disposed.  Shippers account needs to have a valid contract for Heavy Goods Service."
-          },
-          "VerifiedDelivery": {
-            "$ref": "#/components/schemas/ShippingShipmentServiceOptionsVerifiedDelivery"
           }
         },
         "description": "Container for Shipment Service Options.",
@@ -115282,7 +115279,7 @@
             "$ref": "#/components/schemas/InternationalFormsContacts"
           },
           "Product": {
-            "maximum": 50,
+            "maximum": 1000,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/InternationalFormsProduct"
@@ -115517,6 +115514,8 @@
         "properties": {
           "ShipmentDate": {
             "maximum": 1,
+            "maxLength": 8,
+            "minLength": 8,
             "type": "string",
             "description": "Shipment Date associated with UPS Premium Care Shipment.   Valid Format: yyyyMMdd"
           },
@@ -115587,8 +115586,8 @@
         "properties": {
           "LabelSize": {
             "maximum": 1,
-            "maxLength": 2,
-            "minLength": 2,
+            "maxLength": 1,
+            "minLength": 1,
             "type": "string",
             "description": "Provide the valid values: \n6 = 4X6\n1 = 8.5X11\n  Required if the CN22 form container is present."
           },
@@ -115602,7 +115601,7 @@
           "LabelPrintType": {
             "maximum": 1,
             "maxLength": 4,
-            "minLength": 1,
+            "minLength": 3,
             "type": "string",
             "description": "Valid Values are pdf, png, gif, zpl, star, epl2 and spl.\n  Required if the CN22 form container is present."
           },
@@ -115616,16 +115615,16 @@
           "CN22OtherDescription": {
             "maximum": 1,
             "maxLength": 20,
-            "minLength": 20,
+            "minLength": 1,
             "type": "string",
             "description": "Required if CN22Type is OTHER.  Required if the CN22 form container is present."
           },
           "FoldHereText": {
             "maximum": 1,
             "maxLength": 35,
-            "minLength": 35,
+            "minLength": 1,
             "type": "string",
-            "description": "String will replace default \u0022Fold Here\u0022 text displayed on the label."
+            "description": "String will replace default \u0022Fold Here\u0022 text displayed on the label and its optional."
           },
           "CN22Content": {
             "maximum": 3,
@@ -115670,7 +115669,7 @@
           "CN22ContentTotalValue": {
             "maximum": 1,
             "maxLength": 9,
-            "minLength": 9,
+            "minLength": 1,
             "type": "string",
             "description": "Total value of the items associated with this content.  Required if the CN22 form container is present."
           },
@@ -115691,7 +115690,7 @@
           "CN22ContentTariffNumber": {
             "maximum": 1,
             "maxLength": 40,
-            "minLength": 40,
+            "minLength": 1,
             "type": "string",
             "description": "The tariff number associated with the CN22 contents."
           },
@@ -115730,7 +115729,7 @@
           "Weight": {
             "maximum": 1,
             "maxLength": 7,
-            "minLength": 7,
+            "minLength": 1,
             "type": "string",
             "description": "Total weight of the content. Pounds and Ounces are allowed up to 2 decimals.  Required if the CN22 form container is present."
           }
@@ -115750,7 +115749,7 @@
           "Code": {
             "maximum": 1,
             "maxLength": 3,
-            "minLength": 1,
+            "minLength": 3,
             "type": "string",
             "description": "Required if weight is provided, valid values are lbs. and ozs.  Required if weight is provided."
           },
@@ -115877,14 +115876,14 @@
           "PreDepartureITNNumber": {
             "maximum": 1,
             "maxLength": 17,
-            "minLength": 17,
+            "minLength": 1,
             "type": "string",
             "description": "Input for Shipper Filed option A and AES Direct. The format is available from AESDirect website.  Valid and Required for Shipper Filed option A. EEI form only."
           },
           "ExemptionLegend": {
             "maximum": 1,
             "maxLength": 20,
-            "minLength": 20,
+            "minLength": 5,
             "type": "string",
             "description": "Input for Shipper Filed option B. 30.2(d)(2), 30.26(a), 30.36, 30.37(a), 30.37(b), 30.37(c), 30.37(d), 30.37(e), 30.37(f), 30.37(h), 30.37(i), 30.30(j), 30.37(k), 30.37(i), 30.37(j), 30.37(k), 30.37(l), 30.37(m), 30.37(n), 30.37(o), 30.37(p), 30.37(q), 30.37(r), 30.37(s), 30.37(t), 30.37(u), 30.37(x), 30.37(y)(1), 30.37(y)(2), 30.37(y)(3), 30.37(y)(4), 30.37(y)(5), 30.37(y)(6), 30.39, 30.40(a), 30.40(b), 30.40(c), 30.40(d), 30.8(b)  Valid and Required for Shipper Filed option B. EEI form only."
           },
@@ -116421,7 +116420,7 @@
           "AccountNumber": {
             "maximum": 1,
             "maxLength": 6,
-            "minLength": 1,
+            "minLength": 6,
             "type": "string",
             "description": "SoldTo AccountNumber"
           }
@@ -116527,10 +116526,10 @@
         "properties": {
           "Description": {
             "maximum": 3,
-            "maxLength": 35,
-            "minLength": 1,
             "type": "array",
             "items": {
+              "maxLength": 35,
+              "minLength": 1,
               "type": "string"
             },
             "description": "Description of the product.  Applies to all International Forms. Optional for Partial Invoice. Must be present at least once and can occur for a maximum of 3 times."
@@ -116811,7 +116810,7 @@
           "Code": {
             "maximum": 1,
             "maxLength": 3,
-            "minLength": 1,
+            "minLength": 3,
             "type": "string",
             "description": "Code for unit of Measurement of weight.  Applies to CO and EEI forms only.  Valid values:\n- KGS\n- LBS\n"
           },
@@ -116901,10 +116900,10 @@
         "type": "object",
         "properties": {
           "FormType": {
-            "maxLength": 2,
-            "minLength": 1,
             "type": "array",
             "items": {
+              "maxLength": 2,
+              "minLength": 2,
               "type": "string"
             },
             "description": "Indicates the name of the International form requested to NOT have product information.  Possible Values are 04 \u2013 USMCA.  Please note that if this is used and you DO NOT have the corresponding form type requested this will be IGNORED."
@@ -116954,6 +116953,9 @@
             "description": "Amount of Product associated with a package.  Required for packaging list and Air Freight Packing list."
           },
           "ProductNote": {
+            "maximum": 35,
+            "maxLength": 35,
+            "minLength": 1,
             "type": "string",
             "description": "Product Note."
           }
@@ -117104,10 +117106,14 @@
         "type": "object",
         "properties": {
           "Code": {
+            "maxLength": 3,
+            "minLength": 3,
             "type": "string",
             "description": "Required for EEI form. Unit of measurement code. The two or three (3) alpha unit of measurement for the article being shipped. For example: BAG/BG - bags  Applies to EEI form only.  It is required for EEIFilingOption code 1A and 3."
           },
           "Description": {
+            "maxLength": 15,
+            "minLength": 1,
             "type": "string",
             "description": "Description for Unit of Measurement.  Applies to EEI form only."
           }
@@ -117458,52 +117464,6 @@
         "description": "Restricted Articles container.",
         "xml": {
           "name": "RestrictedArticles"
-        }
-      },
-      "ShippingShipmentServiceOptionsVerifiedDelivery": {
-        "maximum": 1,
-        "required": [
-          "SecurePINType",
-          "TokenValue",
-          "RecipientEmail"
-        ],
-        "type": "object",
-        "properties": {
-          "SecurePINType": {
-            "maximum": 1,
-            "maxLength": 1,
-            "minLength": 1,
-            "required": [
-              "SecurePINType"
-            ],
-            "type": "string",
-            "description": "Specifies the type of Secure PIN. This field is required. \u003Cbr/\u003EValid values:\u003Cbr/\u003E1 - VDU(UPS Generated PIN) \u003Cbr/\u003E2 - VDS(Shipper Generated PIN)"
-          },
-          "TokenValue": {
-            "maximum": 1,
-            "maxLength": 32,
-            "minLength": 32,
-            "type": "string",
-            "description": "This field is required and must contain a 32-character hexadecimal string, using only the characters 0-9 and A-F (case-insensitive)."
-          },
-          "RecipientEmail": {
-            "maximum": 1,
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string",
-            "description": "Specifies the recipient\u0027s email address for delivery notifications. This field is required."
-          },
-          "RecipientPhone": {
-            "maximum": 1,
-            "maxLength": 15,
-            "minLength": 1,
-            "type": "string",
-            "description": "Recipient phone number for notifications. Valid characters are digits (0-9) only. Required when the destination country is within the Europe region, otherwise optional."
-          }
-        },
-        "description": "Protected Delivery container required for Secure Pin Delivery. Protected Delivery will offer shippers extra security to ensure their packages are delivered to the intended recipient.",
-        "xml": {
-          "name": "VerifiedDelivery"
         }
       },
       "ShippingShipmentPackage": {

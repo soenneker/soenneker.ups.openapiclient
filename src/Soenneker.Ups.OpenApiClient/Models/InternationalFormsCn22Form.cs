@@ -66,7 +66,7 @@ namespace Soenneker.Ups.OpenApiClient.Models
         public string CN22Type { get => _explicitNullValueCN22Type; set { _explicitNullValueCN22Type = value; AdditionalData?.Remove("CN22Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CN22Type"); else _explicitNullProperties?.Remove("CN22Type"); } }
         private string _explicitNullValueCN22Type = default!;
 #endif
-        /// <summary>String will replace default &quot;Fold Here&quot; text displayed on the label.</summary>
+        /// <summary>String will replace default &quot;Fold Here&quot; text displayed on the label and its optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FoldHereText { get => _explicitNullValueFoldHereText; set { _explicitNullValueFoldHereText = value; AdditionalData?.Remove("FoldHereText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FoldHereText"); else _explicitNullProperties?.Remove("FoldHereText"); } }
